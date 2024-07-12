@@ -16,7 +16,6 @@ const Sucursales = () => {
         <TitleH2 title={'León'} />
       </BorderLeft>
       <CityCardGenerator city={'León'} />
-
     </PageLayout>
   )
 }

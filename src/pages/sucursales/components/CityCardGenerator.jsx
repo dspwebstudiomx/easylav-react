@@ -23,8 +23,8 @@ const CityCardGenerator = ({ city }) => {
     </article>
   )
 }
-CityCardGenerator.proptypes = {
-  city: PropTypes.string.isRequired,
+CityCardGenerator.propTypes = {
+  city: PropTypes.string
 }
 
 export default CityCardGenerator

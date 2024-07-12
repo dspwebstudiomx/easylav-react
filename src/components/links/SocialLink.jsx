@@ -14,7 +14,7 @@ SocialLink.propTypes = {
   title: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
+  size: PropTypes.number,
   circleBorder: PropTypes.string,
   hover: PropTypes.string,
   icono: PropTypes.object,

@@ -44,7 +44,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover }) => {
 }
 SocialLinks.propTypes = {
   color: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.number,
   circleBorder: PropTypes.string,
   gap: PropTypes.string,
   hover: PropTypes.string

@@ -1,12 +1,9 @@
-import { Link } from 'react-router-dom'
 import Button from './Button'
 import PropTypes from 'prop-types'
 
-const ButtonPrimary = ({ title, href, border, ...props }) => {
+const ButtonPrimary = ({ title, href, border }) => {
   return (
-    <Link href={href} {...props}>
-      <Button themeButton={'bg-primary hover:bg-primary_light'} title={title} border={border} />
-    </Link>
+    <Button themeButton={'bg-primary hover:bg-primary_light'} title={title} border={border} href={href} />
   )
 }
 ButtonPrimary.propTypes = {

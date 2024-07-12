@@ -1,11 +1,11 @@
 'use client'
-import { APIProvider, Map, Marker, Pin } from '@vis.gl/react-google-maps'
+import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps'
 import PropTypes from 'prop-types'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { FaPhone, FaRegClock } from 'react-icons/fa6'
 import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
-const SucursalCard = ({ title, id, position, gmap, serviceday1, serviceday2, servicehour1, servicehour2, place, phoneNumber }) => {
+const SucursalCard = ({ title, id, position, serviceday1, serviceday2, servicehour1, servicehour2, place, phoneNumber }) => {
   return (
     <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
       <APIProvider apiKey='AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik'>
@@ -13,19 +13,18 @@ const SucursalCard = ({ title, id, position, gmap, serviceday1, serviceday2, ser
         {/* mapa */}
         <div className='h-[180px] rounded-lg'>
           <Map center={position} zoom={17} id={`gmap-${title}`}>
-            <Marker position={position}>
+            <AdvancedMarker position={position}>
               <Pin background={'#FBBC04'} glyphColor={'#000'} borderColor={'#000'} />
-            </Marker>
+            </AdvancedMarker>
           </Map>
         </div>
         {/* mapa */}
         {/* Dirección */}
-        <a href={gmap} target="_blank" rel="noopener noreferrer" className='mt-3'>
-          <p className='w-full mx-auto text-pretty flex gap-3 items-center'>
-            <span className='text-secondary text-xl'><FaMapMarkerAlt /></span>
-            <p>{place}</p>
-          </p>
-        </a>
+
+        <p className='w-full mx-auto text-pretty flex gap-3 items-center'>
+          <span className='text-secondary text-xl'><FaMapMarkerAlt /></span>
+          <p>{place}</p>
+        </p>
         {/* Dirección */}
         {/* Horario */}
         <div className='w-full mx-auto text-pretty flex gap-4 items-center'>
@@ -53,7 +52,7 @@ const SucursalCard = ({ title, id, position, gmap, serviceday1, serviceday2, ser
 SucursalCard.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
-  position: PropTypes.array,
+  position: PropTypes.string,
   gmap: PropTypes.string,
   serviceday1: PropTypes.string,
   serviceday2: PropTypes.string,

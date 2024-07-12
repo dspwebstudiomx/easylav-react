@@ -1,0 +1,29 @@
+<!-- 	created with www.mysitemapgenerator.com	 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://easylav-react.netlify.app/</loc>
+<lastmod>2024-15-06T13:12:30+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://easylav-react.netlify.app/franqucias</loc>
+<lastmod>2024-15-06T13:12:30+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://easylav-react.netlify.app/politica-privacidad</loc>
+<lastmod>2024-15-06T13:12:30+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://easylav-react.netlify.app/terminos-condiciones</loc>
+<lastmod>2024-15-06T13:12:30+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<url>
+<loc>https://easylav-react.netlify.app/contacto</loc>
+<lastmod>2024-15-06T13:12:30+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+</urlset>
