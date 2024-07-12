@@ -1,0 +1,43 @@
+export const localservices = [
+  {
+    id: 1,
+    title: "Madero Oriente",
+    gmap: "https://maps.app.goo.gl/RcutaqdJ2Hzw7d5JA",
+    position: { lat: 19.70764, lng: -101.17192 },
+    place:
+      "Av Francisco I. Madero Ote 2162, Isaac Arriaga, 58210 Morelia, Mich.",
+    serviceday1: "Lunes-Sabado:",
+    servicehour1: "8:00 a.m a 8:30 p.m",
+    serviceday2: "Domingo:",
+    servicehour2: "8:30 a.m a 8:00 p.m",
+    city: "Morelia",
+    phoneNumber: "+524330000000",
+  },
+  {
+    id: 2,
+    title: "Nueva Chapultepec",
+    gmap: "https://maps.app.goo.gl/Ugj6Rhvkj3ZDtTyo7",
+    position: { lat: 19.68546, lng: -101.16852 },
+    place: "Av Solidaridad 1167-A, Nueva Chapultepec, 58280 Morelia, Mich.",
+    serviceday1: "Lunes-Sabado:",
+    servicehour1: "7:00 a.m a 9:00 p.m",
+    serviceday2: "Domingo:",
+    servicehour2: "7:00 a.m a 9:00 p.m",
+    city: "Morelia",
+    phoneNumber: "+524330000000",
+  },
+  {
+    id: 3,
+    title: "Jardines de Jerez",
+    gmap: "https://maps.app.goo.gl/HM8vj9rCzMDhekKo7",
+    position: { lat: 21.1024, lng: -101.63745 },
+    place:
+      "Blvd. Paseo de Jerez Sur 229-LOCAL 5, Jardines de Jerez, 37530 León de los Aldama, Gto.",
+    serviceday1: "Lunes-Sabado:",
+    servicehour1: "7:30 a.m a 9:30 p.m",
+    serviceday2: "Domingo:",
+    servicehour2: "7:30 a.m a 9:30 p.m",
+    city: "León",
+    phoneNumber: "+524420000000",
+  },
+];
