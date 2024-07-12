@@ -2,12 +2,12 @@ import PropTypes from 'prop-types'
 
 const Button = ({ themeButton, title, width, border, icon, type, onClick, href }) => {
   return (
-    <button onClick={onClick} type={type} className={`flex items-center justify-center ${themeButton} ${width} h-[80px] md:h-[80px] text-light  text-xl font-semibold rounded-xl ${border}`}>
-      <a href={href}>
+    <a href={href}>
+      <button onClick={onClick} type={type} className={`flex items-center justify-center ${themeButton} ${width} h-[80px] md:h-[80px] text-light  text-xl font-semibold rounded-xl ${border}`}>
         <span className='mr-3'>{icon}</span>
         {title}
-      </a>
-    </button>
+      </button>
+    </a>
   )
 }
 Button.propTypes = {
