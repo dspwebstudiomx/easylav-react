@@ -17,7 +17,7 @@
 [[redirects]]
   from = "/franquicias"
   to = "/franquicias"
-  status = 301
+  status = 200
   force = false
   query = {path = ":path"}
   conditions = {Language = ["es"], Country = ["MX"]}
@@ -25,7 +25,7 @@
 [[redirects]]
   from = "/politica-privacidad"
   to = "/politica-privacidad"
-  status = 301
+  status = 200
   force = false
   query = {path = ":path"}
   conditions = {Language = ["es"], Country = ["MX"]}
@@ -33,7 +33,7 @@
 [[redirects]]
   from = "/terminos-condiciones"
   to = "/terminos-condiciones"
-  status = 301
+  status = 200
   force = false
   query = {path = ":path"}
   conditions = {Language = ["es"], Country = ["MX"]}
