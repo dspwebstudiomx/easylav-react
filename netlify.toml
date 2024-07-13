@@ -1,0 +1,41 @@
+[[redirects]]
+  from = "/contacto"
+  to = "/contacto"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["es"], Country = ["MX"]}
+
+[[redirects]]
+  from = "/sucursales"
+  to = "/sucursales"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["es"], Country = ["MX"]}
+
+[[redirects]]
+  from = "/franquicias"
+  to = "/franquicias"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["es"], Country = ["MX"]}
+
+[[redirects]]
+  from = "/politica-privacidad"
+  to = "/politica-privacidad"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["es"], Country = ["MX"]}
+
+[[redirects]]
+  from = "/terminos-condiciones"
+  to = "/terminos-condiciones"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["es"], Country = ["MX"]}
+
+
