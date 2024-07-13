@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { HashRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
 // import 'animate.css'
 // import '../node_modules/animate.css/animate.css'
@@ -16,7 +16,7 @@ const TerminosCondiciones = lazy(() => import('./pages/terminos-condiciones/Term
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -28,6 +28,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-    </HashRouter >
+    </BrowserRouter >
   )
 }
