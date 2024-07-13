@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /sucursales /sucursales
 /franquicias /franquicias
 /politica-privacidad /politica-privacidad
 /terminos-y-condiciones /terminos-y-condiciones
+=======
+# Redirects from what the browser requests to what we serve
+/franquicia  /franquicia
+/contacto   /contacto
+/politica-privacidad   /politica-privacidad
+/terminos-condiciones /terminos-condiciones
+>>>>>>> b37e39bc35f1026a8038dcb789907cfe780d1198
