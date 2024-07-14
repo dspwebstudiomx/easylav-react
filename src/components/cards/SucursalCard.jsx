@@ -23,7 +23,7 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
       {/* mapa */}
       {/* Dirección */}
 
-      <p className='w-full mx-auto text-pretty flex gap-3 items-center'>
+      <p className='w-full mx-auto text-pretty flex gap-3 items-center text-sm'>
         <span className='text-secondary text-xl'><FaMapMarkerAlt /></span>
         <span>{place}</span>
       </p>
@@ -32,11 +32,11 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
       <div className='w-full mx-auto text-pretty flex gap-4 items-center'>
         <span className='text-secondary'><FaRegClock /></span>
         <div className='flex flex-col gap-3 xl:gap-1'>
-          <div className='flex gap-1 flex-col lg:flex-row'>
+          <div className='flex gap-1 flex-col lg:flex-row text-sm'>
             <p>{serviceday1}</p>
             <p>{servicehour1}</p>
           </div>
-          <div className='flex flex-col gap-1 lg:flex-row'>
+          <div className='flex flex-col gap-1 lg:flex-row text-sm'>
             <p>{serviceday2}</p>
             <p>{servicehour2}</p>
           </div>

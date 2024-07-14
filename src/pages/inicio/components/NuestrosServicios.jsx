@@ -43,7 +43,7 @@ const NuestrosServicios = () => {
                 <li key={service.id} className='flex flex-col gap-8 items-center justify-center'>
                   <img src={service.image} alt="alt" width={210} className='mx-auto' />
                   <h3 className='text-3xl sm:text-2xl text-center font-semibold'>{service.title}</h3>
-                  <p className='w-3/4 sm:w-full mx-auto text-pretty text-lg sm:text-base'>{service.description}</p>
+                  <p className='w-3/4 sm:w-full mx-auto text-pretty text-lg sm:text-xl'>{service.description}</p>
                 </li>
               )
             })

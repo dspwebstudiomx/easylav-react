@@ -7,7 +7,7 @@ const HeroInicio = () => {
   return (
     <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-25'} opacityColor={'bg-dark'}>
       <h1 className='text-5xl font-semibold'><span className='text-primary'>Easy</span><span className='text-secondary'>lav</span></h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magni rem voluptatum a explicabo voluptate accusantium ipsam mollitia distinctio nam! Temporibus consequuntur saepe, rerum debitis est molestias. Voluptate, asperiores consequuntur!</p>
+      <p className='text-'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magni rem voluptatum a explicabo voluptate accusantium ipsam mollitia distinctio nam! Temporibus consequuntur saepe, rerum debitis est molestias. Voluptate, asperiores consequuntur!</p>
       <ButtonContainer>
         <ButtonSecondary title={'Nuestros Servicios'} width={'w-[320px] md:w-[280px]'} href={'/#servicios'} />
       </ButtonContainer>
