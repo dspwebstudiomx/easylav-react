@@ -10,12 +10,12 @@ const PageLayout = ({ children, id }) => {
     <>
       <Header />
       <main id='contenido' className='sm:mt-24 xl:mt-12'>
-        <Section id={id} className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={''}>
+        <Section id={id} className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={''}>
             {children}
           </Container>
+          <Spacing height={'h-24'} />
         </Section>
-        <Spacing height={'h-24'} />
       </main>
       <Footer />
     </>

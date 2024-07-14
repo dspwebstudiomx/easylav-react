@@ -5,6 +5,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 import { FaPhone, FaRegClock } from 'react-icons/fa6'
 import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
+
 const SucursalCard = ({ title, id, position, serviceday1, serviceday2, servicehour1, servicehour2, place, phoneNumber }) => {
   return (
     <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
@@ -45,7 +46,7 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
       {/* Horario */}
 
       <ButtonContainer position={'justify-center'}>
-        <ButtonSecondary title={'Llámame'} href={phoneNumber} border={'border-2 border-primary'} icon={<FaPhone />} width={'w-[210px]'} />
+        <ButtonSecondary title={'Llámame'} href={`tel:+52${phoneNumber}`} border={'border-2 border-primary'} icon={<FaPhone />} width={'w-[210px]'} />
       </ButtonContainer>
     </article>
   )
@@ -58,9 +59,9 @@ SucursalCard.propTypes = {
   serviceday1: PropTypes.string,
   serviceday2: PropTypes.string,
   servicehour1: PropTypes.string,
+  phoneNumber: PropTypes.number,
   servicehour2: PropTypes.string,
   place: PropTypes.string,
-  phoneNumber: PropTypes.string
 }
 
 export default SucursalCard
