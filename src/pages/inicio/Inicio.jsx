@@ -1,6 +1,6 @@
 import HomeLayout from "../../components/layout/HomeLayout"
 import SobreNosotros from "./components/SobreNosotros"
-// import NuestrasSucursales from "./components/NuestrasSucursales"
+import NuestrasSucursales from "./components/NuestrasSucursales"
 import NuestrosServicios from "./components/NuestrosServicios"
 import Testimonios from "./components/Testimonios"
 import Contacto from "../../components/contacto/Contacto"
@@ -18,7 +18,7 @@ const Inicio = () => {
       <HeroInicio />
       <SobreNosotros />
       <NuestrosServicios />
-      {/* <NuestrasSucursales /> */}
+      <NuestrasSucursales />
       <Testimonios />
       <Contacto />
     </HomeLayout>
