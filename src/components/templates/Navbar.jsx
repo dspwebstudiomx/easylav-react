@@ -2,7 +2,6 @@ import { useState } from 'react'
 import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
 import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
-import ButtonPrimary from '../buttons/ButtonPrimary'
 import Container from '../containers/Container'
 
 const navlinks = [
@@ -53,8 +52,10 @@ const Navbar = () => {
               <ul id='navlinks-mobile' className="flex flex-col gap-8 mt-28">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id}>
-                      <ButtonPrimary href={navlink.href} onClick={toggleNav} title={navlink.name} />
+                    <li key={navlink.id} className='border-2 border-primary_light text-2xl p-3 items-center flex justify-center'>
+                      <a href={navlink.href} onClick={toggleNav}>
+                        <button className='text-light '>{navlink.name}</button>
+                      </a>
                     </li>
                   )
                 })}

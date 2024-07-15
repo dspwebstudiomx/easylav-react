@@ -8,6 +8,7 @@ import HeroInicio from "./components/HeroInicio"
 import { Helmet } from "react-helmet"
 import Container from "../../components/containers/Container"
 import ScrollToTopButton from "../../components/buttons/ScrollToTopButton"
+import Section from "../../components/templates/Section"
 
 const Inicio = () => {
   return (
@@ -23,9 +24,11 @@ const Inicio = () => {
         <NuestrosServicios />
         <NuestrasSucursales />
         <Testimonios />
-        <Container>
-          <Contacto />
-        </Container>
+        <Section>
+          <Container>
+            <Contacto />
+          </Container>
+        </Section>
       </HomeLayout>
       <ScrollToTopButton />
     </>
