@@ -7,6 +7,7 @@ import Container from '../../../components/containers/Container'
 import ButtonContainer from '../../../components/containers/ButtonContainer'
 import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
 import TitleH2 from '../../../components/title/TitleH2'
+import BorderButtom from '../../../components/borders/BorderButtom'
 
 const services = [
   {
@@ -33,9 +34,9 @@ const NuestrosServicios = () => {
   return (
     <Section id={'servicios'}>
       <Container >
-        <div className='grid place-content-center'>
+        <BorderButtom justify={'mx-auto'}>
           <TitleH2 title='Nuestros Servicios' />
-        </div>
+        </BorderButtom>
         <div className='grid place-content-center gap-8'>
           <ul className='grid sm:grid-cols-3 gap-20'>
             {services.map((service) => {

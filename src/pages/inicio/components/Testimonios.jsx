@@ -1,6 +1,7 @@
 import { FaStar, FaStarHalf } from "react-icons/fa6";
 import Section from "../../../components/templates/Section";
 import Container from "../../../components/containers/Container";
+import BorderButtom from "../../../components/borders/BorderButtom"
 import TitleH2 from "../../../components/title/TitleH2";
 
 const testimonios = [
@@ -82,9 +83,9 @@ const Testimonios = () => {
   return (
     <Section id={'testimonios'}>
       <Container >
-        <div className='grid place-content-center'>
+        <BorderButtom justify={'mx-auto'} >
           <TitleH2 title="Testimonios" />
-        </div>
+        </BorderButtom>
         <div className='grid place-content-center'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12 w-[100%] mx-auto'>
             {testimonios.map((testimonio) => {

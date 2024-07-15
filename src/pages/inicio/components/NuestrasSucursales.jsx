@@ -6,14 +6,15 @@ import SucursalCard from '../../../components/cards/SucursalCard';
 import { localservices } from '../../../data/sucursales'
 import { FaEnvelope } from 'react-icons/fa6';
 import TitleH2 from '../../../components/title/TitleH2';
+import BorderButtom from '../../../components/borders/BorderButtom';
 
 const NuestrasSucursales = () => {
   return (
     <Section id="nuestras-sucursales">
       <Container >
-        <div className='grid place-content-center'>
-          <TitleH2 title='Sucursales' />
-        </div>
+        <BorderButtom justify={'mx-auto'} >
+          <TitleH2 title="Sucursales" />
+        </BorderButtom>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12 mx-auto place-content-center'>
           {localservices.map(localservice => {
             return (
