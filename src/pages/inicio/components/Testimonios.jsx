@@ -1,5 +1,4 @@
-import { FaQuoteRight, FaStar } from "react-icons/fa6";
-import { FaStarHalf } from "react-icons/fa6";
+import { FaStar, FaStarHalf } from "react-icons/fa6";
 import Section from "../../../components/templates/Section";
 import Container from "../../../components/containers/Container";
 import TitleH2 from "../../../components/title/TitleH2";
