@@ -46,10 +46,10 @@ const Footer = () => {
           {/* Footer Privacy & Terms */}
 
           {/* Footer Logo */}
-          <div id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center'>
+          <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
             <img src={logo} alt='logo' className='w-[230px] h-auto mx-auto sm:mr-auto' />
             <SocialLinks color={'text-light'} size={24} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
-          </div>
+          </a>
           {/* Footer Logo */}
 
         </Container>

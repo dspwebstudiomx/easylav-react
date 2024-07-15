@@ -32,7 +32,7 @@ const Navbar = () => {
               {navlinks.map((navlink) => {
                 return (
                   <li key={navlink.id} >
-                    <a className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-primary navlink' href={navlink.href}>{navlink.name}</a>
+                    <a className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' href={navlink.href}>{navlink.name}</a>
                   </li>
                 )
               })}

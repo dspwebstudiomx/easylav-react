@@ -1,9 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
-// import 'animate.css'
-// import '../node_modules/animate.css/animate.css'
-// import ScrollToTop from './Functions/ScrolltoTop'
+import '../node_modules/animate.css/animate.css'
 import Loading from './components/Loading'
 const Inicio = lazy(() => import('./pages/inicio/Inicio'))
 const Sucursales = lazy(() => import('./pages/sucursales/Sucursales'))

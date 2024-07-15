@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Section from '../templates/Section'
 import Container from '../containers/Container'
 import Spacing from './Spacing'
+import ScrollToTopButton from '../buttons/ScrollToTopButton'
 
 const PageLayout = ({ children, id }) => {
   return (
@@ -18,6 +19,7 @@ const PageLayout = ({ children, id }) => {
         </Section>
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   )
 }
