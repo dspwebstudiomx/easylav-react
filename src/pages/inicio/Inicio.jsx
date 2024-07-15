@@ -6,6 +6,7 @@ import Testimonios from "./components/Testimonios"
 import Contacto from "../../components/contacto/Contacto"
 import HeroInicio from "./components/HeroInicio"
 import { Helmet } from "react-helmet"
+import Container from "../../components/containers/Container"
 
 const Inicio = () => {
   return (
@@ -20,7 +21,9 @@ const Inicio = () => {
       <NuestrosServicios />
       <NuestrasSucursales />
       <Testimonios />
-      <Contacto />
+      <Container>
+        <Contacto />
+      </Container>
     </HomeLayout>
   )
 }
