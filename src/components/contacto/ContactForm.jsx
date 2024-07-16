@@ -170,6 +170,7 @@ export default function ContactForm() {
                 icon={<FaRegEnvelope />}
                 type={'submit'}
                 width={'w-[240px]'}
+                border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'}
               />
             </ButtonContainer>
             {/* Submit Button */}
@@ -183,6 +184,7 @@ export default function ContactForm() {
                   iconRight={<IoMdExit />}
                   onclick={() => setShowModal(false)}
                   type={'button'}
+                  themeButton={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'}
                 />
               </Modal>
             }

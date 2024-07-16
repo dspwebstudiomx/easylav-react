@@ -50,14 +50,14 @@ const Footer = () => {
             <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
               <img src={logo} alt='logo' className='w-[230px] h-auto mx-auto  2xl:mr-0' />
             </a>
-            <SocialLinks color={'text-light'} size={24} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
+            <SocialLinks position={'justify-end'} color={'text-light'} size={24} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
           </div>
           {/* Footer Logo */}
 
         </Container>
       </Section >
       <div className='text-dark bg-primary py-6'>
-        <div className='flex justify-between 2xl:max-w-screen-2xl xl:max-w-screen-xl mx-auto w-[80%] flex-col sm:flex-row gap-4 text-center sm:text-left text-sm'>
+        <div className='flex justify-between 2xl:max-w-screen-2xl xl:max-w-screen-xl mx-auto w-[65vw] flex-col sm:flex-row gap-4 text-center sm:text-left text-sm'>
           <h3>Derechos Reservados 2024</h3>
           <h3>Diseñado y Desarrollado por: <a href='https://dspwebstudio.com' target='_blank' className='text-secondary font-semibold ml-2'>dspwebstudio.com</a></h3>
         </div>

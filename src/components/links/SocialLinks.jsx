@@ -8,9 +8,9 @@ const classes = {
   Link: 'text-blue-900  hover:scale-110 dark:text-blue-500 text-xl ',
 }
 
-const SocialLinks = ({ color, size, circleBorder, gap, hover }) => {
+const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
   return (
-    <div className={`flex ${gap} items-center justify-center xl:justify-end`}>
+    <div className={`flex ${gap} ${position}`}>
       <SocialLink
         href={'https://www.facebook.com/dspwebstudio'}
         icono={<FiFacebook size={size} className={classes.Link} />}
@@ -46,6 +46,7 @@ SocialLinks.propTypes = {
   color: PropTypes.string,
   size: PropTypes.number,
   circleBorder: PropTypes.string,
+  position: PropTypes.string,
   gap: PropTypes.string,
   hover: PropTypes.string
 }
