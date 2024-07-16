@@ -179,12 +179,13 @@ export default function ContactForm() {
             {showModal &&
               <Modal>
                 <h1 className='text-center sm:text-[16px] font-semibold leading-snug text-xl mb-6'>Mensaje enviado<br></br>satisfactoriamente</h1>
-                <Button
-                  texto='Cerrar'
-                  iconRight={<IoMdExit />}
-                  onclick={() => setShowModal(false)}
-                  type={'button'}
-                  themeButton={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'}
+                <ButtonSecondary
+                  title={'Enviar mensaje'}
+                  icon={<oMdExit />}
+                  type={'submit'}
+                  width={'w-[240px]'}
+                  border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'}
+                  onClick={() => setShowModal(false)}
                 />
               </Modal>
             }
