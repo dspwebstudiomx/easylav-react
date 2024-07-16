@@ -34,7 +34,7 @@ const NuestrasSucursales = () => {
           })}
         </div>
         <ButtonContainer position={'justify-center'} distance={'mt-16'}>
-          <ButtonSecondary title={'Contáctanos'} href={'/contacto'} width={'w-[240px]'} border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'} icon={<FaEnvelope />} />
+          <ButtonSecondary title={'Contáctanos'} href={'/contacto'} width={'w-[240px]'} icon={<FaEnvelope />} />
         </ButtonContainer>
       </Container>
     </Section >

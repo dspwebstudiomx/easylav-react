@@ -12,11 +12,6 @@ const ContactoPagina = () => {
         <title>Contacto | Easylav</title>
         <link rel="canonical" href="https://easylav-react.netlify.app/contacto" />
       </Helmet>
-      <div className="mx-auto mb-20">
-        <BorderCenter>
-          <TitleH1 title="Contacto" />
-        </BorderCenter>
-      </div>
       <Contacto />
     </PageLayout>
   )

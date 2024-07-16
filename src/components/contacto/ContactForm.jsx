@@ -4,7 +4,7 @@ import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
 import { IoMdExit } from "react-icons/io";
-import Button from '../buttons/Button';
+
 import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
 
@@ -12,8 +12,9 @@ import ButtonContainer from '../containers/ButtonContainer';
 export default function ContactForm() {
 
   const form = useRef();
-  const [showModal, setShowModal] = useState(false)
-  const sendEmail = (e) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const sendEmail = (e, { resetForm }) => {
     e.preventDefault();
     emailjs
       .sendForm('service_easylav', 'template_easylav', form.current, {
@@ -21,20 +22,20 @@ export default function ContactForm() {
       })
       .then(
         () => {
-          console.log("SUCCESS!")
-          setShowModal(true)
+          console.log("SUCCESS!");
+          setShowModal(true);
+          resetForm();
         },
         (error) => {
           console.log('FAILED...', error.text);
         },
       );
-    // e.target.reset();
   };
-  if (showModal) {
-    document.body.classList.add('modal-active')
-  } else {
-    document.body.classList.remove('modal-active')
-  }
+  // if (showModal) {
+  //   document.body.classList.add('modal-active')
+  // } else {
+  //   document.body.classList.remove('modal-active')
+  // }
 
 
   return (
@@ -42,7 +43,7 @@ export default function ContactForm() {
       <Formik
         initialValues={{
           user_name: '',
-          user_surname: '',
+          user_city: '',
           user_email: '',
           user_phone: '',
           message: ''
@@ -91,7 +92,6 @@ export default function ContactForm() {
           }
         }
         onSubmit={() => {
-
         }}
       >
         {({ errors, touched }) => (
@@ -170,7 +170,6 @@ export default function ContactForm() {
                 icon={<FaRegEnvelope />}
                 type={'submit'}
                 width={'w-[240px]'}
-                border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'}
               />
             </ButtonContainer>
             {/* Submit Button */}
@@ -180,11 +179,10 @@ export default function ContactForm() {
               <Modal>
                 <h1 className='text-center sm:text-[16px] font-semibold leading-snug text-xl mb-6'>Mensaje enviado<br></br>satisfactoriamente</h1>
                 <ButtonSecondary
-                  title={'Enviar mensaje'}
-                  icon={<oMdExit />}
-                  type={'submit'}
+                  title={'Cerrar'}
+                  icon={<IoMdExit />}
+                  type={'button'}
                   width={'w-[240px]'}
-                  border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'}
                   onClick={() => setShowModal(false)}
                 />
               </Modal>

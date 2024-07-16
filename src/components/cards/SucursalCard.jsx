@@ -47,7 +47,7 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
         </div>
         {/* Horario */}
         <ButtonContainer position={'justify-center'}>
-          <ButtonSecondary title={'Llámame'} href={`tel:+52${phoneNumber}`} border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'} icon={<FaPhone />} width={'w-[210px]'} type={'button'} />
+          <ButtonSecondary title={'Llámame'} href={`tel:+52${phoneNumber}`} icon={<FaPhone />} width={'w-[210px]'} type={'button'} />
         </ButtonContainer>
       </div>
 
