@@ -1,25 +1,32 @@
 import { useState } from 'react'
 import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
 import { FaBars } from "react-icons/fa"
-import { FaXmark } from "react-icons/fa6"
+import { GrCoatCheck, GrHome, GrIndicator, GrUser, GrMailOption, GrGroup } from "react-icons/gr";
+
+
 import Container from '../containers/Container'
+import { FaXmark } from 'react-icons/fa6';
 
 const navlinks = [
-  { id: '1', name: 'Inicio', href: '/' },
-  { id: '2', name: 'Quienes Somos', href: '/#nosotros' },
-  { id: '3', name: 'Servicios', href: '/#servicios' },
-  { id: '4', name: 'Sucursales', href: '/sucursales' },
-  { id: '5', name: 'Contacto', href: '/contacto' },
+  { id: '1', name: 'Inicio', href: '/', icon: GrHome },
+  { id: '2', name: 'Quienes Somos', href: '/#nosotros', icon: GrUser },
+  { id: '3', name: 'Servicios', href: '/#servicios', icon: GrCoatCheck },
+  { id: '4', name: 'Sucursales', href: '/sucursales', icon: GrIndicator },
+  { id: '5', name: 'Contacto', href: '/contacto', icon: GrMailOption },
 ]
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const toggleNav = () => setNav(!nav);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleNav = () => {
+    setNav(!nav);
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <>
       <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl'>
-        <Container className={'flex justify-between px-8 md:px-0 mx-auto'}>
+        <Container className={'flex justify-between px-8 sm:px-12 md:px-0 mx-auto z-50'}>
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
               <a href="/">
@@ -28,7 +35,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop menu */}
-            <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4'>
+            <ul id='navlinks-desktop' className='hidden sm:flex gap-8 xl:gap-4'>
               {navlinks.map((navlink) => {
                 return (
                   <li key={navlink.id} >
@@ -44,25 +51,29 @@ const Navbar = () => {
 
             {/* Menu button */}
             <div id='menu-button' onClick={toggleNav} className="sm:hidden z-40 flex gap-8 items-center w-[7%]">
-              {!nav ? <FaBars size={30} className="text-secondary z-40" /> : <FaXmark size={32} className="animate__animated animate__fadeInRight absolute top-[160px] right-[40px] text-light dark:text-slate-100 z-30" />}
+              {!nav ? <FaBars size={30} className="text-secondary z-40" /> : <FaXmark size={36} className=" text-secondary dark:text-slate-100 z-30" />}
             </div>
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-secondary opacity-[99%] z-20 gap-4 animate__animated animate__fadeInRight"}>
-              <ul id='navlinks-mobile' className="flex flex-col gap-8 mt-28">
+            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-primary opacity-[99%] z-20 gap-4 animate__animated animate__fadeInDown p-12 py-0 z-30"}>
+              <ul id='navlinks-mobile' className="grid grid-cols-2 gap-8 mt-28">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id} className='border-2 border-primary_light text-2xl py-6 rounded-lg items-center flex justify-center w-[80vw]'>
-                      <a href={navlink.href} onClick={toggleNav}>
-                        <button className='text-light '>{navlink.name}</button>
+                    <li key={navlink.id} className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light h-[180px] '>
+                      <a href={navlink.href} onClick={toggleNav} className='grid gap-2 w-full h-full'>
+                        <div className='flex items-center justify-center'>
+                          {navlink.icon && <navlink.icon size={50} className='text-secondary' />}
+                        </div>
+                        <button className='text-dark font-semibold uppercase tracking-wide'>{navlink.name}</button>
                       </a>
                     </li>
                   )
                 })}
-                <li className='border-2 border-primary_light text-2xl py-6 rounded-lg items-center flex justify-center w-[80vw]'>
-                  <a href='/franquicias' onClick={toggleNav}>
-                    <button className='text-light '>Franquicias</button>
+                <li className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light h-[180px] '>
+                  <a href='/franquicias' onClick={toggleNav} className='grid w-full h-full py-4'>
+                    <GrGroup size={50} className='text-secondary mx-auto' />
+                    <button className='text-dark font-semibold uppercase tracking-wide'>Franquicias</button>
                   </a>
                 </li>
               </ul>
@@ -77,6 +88,15 @@ const Navbar = () => {
           })}
         </ul>
         {/* Tablet menu */}
+        {menuOpen && (
+          <style>
+            {`
+          body {
+            overflow-y: hidden;
+          }
+        `}
+          </style>
+        )}
       </nav >
 
       <div className='bg-gradient-to-r from-primary to-secondary h-1 '></div>
