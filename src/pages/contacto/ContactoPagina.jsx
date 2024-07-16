@@ -1,7 +1,5 @@
 import PageLayout from "../../components/layout/PageLayout"
 import Contacto from "../../components/contacto/Contacto"
-import TitleH1 from "../../components/title/TitleH1"
-import BorderCenter from "../../components/borders/BorderCenter"
 import { Helmet } from "react-helmet"
 
 const ContactoPagina = () => {
