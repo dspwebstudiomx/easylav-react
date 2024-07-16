@@ -15,10 +15,11 @@ const navlinks = [
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const toggleNav = () => setNav(!nav);
+
   return (
     <>
       <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl'>
-        <Container className={'flex justify-between px-8 md:px-0'}>
+        <Container className={'flex justify-between px-8 md:px-0 mx-auto'}>
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
               <a href="/">
@@ -43,22 +44,27 @@ const Navbar = () => {
 
             {/* Menu button */}
             <div id='menu-button' onClick={toggleNav} className="sm:hidden z-40 flex gap-8 items-center w-[7%]">
-              {!nav ? <FaBars size={30} className="text-secondary z-40" /> : <FaXmark size={32} className="absolute top-[160px] right-[40px] text-light dark:text-slate-100 z-30" />}
+              {!nav ? <FaBars size={30} className="text-secondary z-40" /> : <FaXmark size={32} className="animate__animated animate__fadeInRight absolute top-[160px] right-[40px] text-light dark:text-slate-100 z-30" />}
             </div>
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-secondary opacity-[99%] z-20 gap-4 animate_animated animate__fadeInRight"}>
+            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-secondary opacity-[99%] z-20 gap-4 animate__animated animate__fadeInRight"}>
               <ul id='navlinks-mobile' className="flex flex-col gap-8 mt-28">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id} className='border-2 border-primary_light text-2xl p-3 items-center flex justify-center'>
+                    <li key={navlink.id} className='border-2 border-primary_light text-2xl py-6 rounded-lg items-center flex justify-center w-[80vw]'>
                       <a href={navlink.href} onClick={toggleNav}>
                         <button className='text-light '>{navlink.name}</button>
                       </a>
                     </li>
                   )
                 })}
+                <li className='border-2 border-primary_light text-2xl py-6 rounded-lg items-center flex justify-center w-[80vw]'>
+                  <a href='/franquicias' onClick={toggleNav}>
+                    <button className='text-light '>Franquicias</button>
+                  </a>
+                </li>
               </ul>
             </div>
             {/* Mobile menu */}

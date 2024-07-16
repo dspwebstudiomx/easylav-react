@@ -10,8 +10,8 @@ import BorderButtom from '../../../components/borders/BorderButtom';
 
 const NuestrasSucursales = () => {
   return (
-    <Section id="nuestras-sucursales">
-      <Container >
+    <Section id="nuestras-sucursales" backgroundColor={''} height={''} className={''}>
+      <Container className={'mx-auto'}>
         <BorderButtom justify={'mx-auto'} >
           <TitleH2 title="Sucursales" />
         </BorderButtom>
@@ -34,7 +34,7 @@ const NuestrasSucursales = () => {
           })}
         </div>
         <ButtonContainer position={'justify-center'} distance={'mt-16'}>
-          <ButtonSecondary title={'Contáctanos'} href={'/contacto'} width={'w-[240px]'} border={'border-primary border-4'} icon={<FaEnvelope />} />
+          <ButtonSecondary title={'Contáctanos'} href={'/contacto'} width={'w-[240px]'} border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'} icon={<FaEnvelope />} />
         </ButtonContainer>
       </Container>
     </Section >

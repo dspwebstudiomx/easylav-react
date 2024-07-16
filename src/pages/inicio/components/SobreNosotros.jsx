@@ -7,7 +7,7 @@ import BorderLeft from '../../../components/borders/BorderLeft'
 const SobreNosotros = () => {
   return (
     <Section id={'nosotros'}>
-      <Container >
+      <Container className={'mx-auto'}>
         <div className='grid sm:grid-cols-2 gap-x-20 gap-y-16'>
           <div className='grid place-content-center gap-8'>
             <BorderLeft>

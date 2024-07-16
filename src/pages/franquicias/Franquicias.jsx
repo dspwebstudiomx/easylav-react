@@ -8,8 +8,10 @@ import Image_2 from "../../assets/images/images/Placeholder.webp"
 const Franquicias = () => {
   return (
     <PageLayout>
-      <div className="grid lg:grid-cols-2 gap-12">
-        <div id="columma-1" className="flex flex-col gap-12">
+      <div className="grid lg:grid-cols-2 gap-0">
+
+        {/* Columna 1 */}
+        <div id="columma-1" className="flex flex-col gap-12 items-start">
           <BorderLeft>
             <TitleH1 title="¿Quieres una Franquícia?" />
           </BorderLeft>
@@ -73,7 +75,10 @@ const Franquicias = () => {
           </ul>
           <p className="bg-primary_light text-2xl p-8 rounded-xl text-dark border-2 border-secondary">En resumen, invertir en la franquicia de Lavanderías Easylav representa una oportunidad estratégica y rentable en un mercado en crecimiento, respaldada por un modelo de negocio comprobado, una marca reconocida y un soporte integral.</p>
         </div>
-        <div id="columma-2" className="grid sm:grid-cols-2 lg:grid-cols-1 bg-red-100 gap-20 sm:gap-32 mt-24 place-items-center justify-start md:p-12 lg:p-0">
+        {/* Columna 2 */}
+
+        {/* Columna 2 */}
+        <div id="columma-2" className="grid sm:grid-cols-2 lg:grid-cols-1 bg-red-100 gap-20 sm:gap-32 mt-24 md:p-12 lg:p-0 place-items-end mr-9">
           <div className="rotate-[25deg] bg-secondary h-auto w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px]">
             <img src={Image_1} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>
@@ -87,6 +92,8 @@ const Franquicias = () => {
             <img src={Image_2} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>
         </div>
+        {/* Columna 2 */}
+
       </div>
     </PageLayout>
   )

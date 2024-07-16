@@ -6,12 +6,12 @@ import Container from '../../../components/containers/Container'
 
 const HeroInicio = () => {
   return (
-    <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-25'} opacityColor={'bg-dark'}>
-      <Container>
+    <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-45'} opacityColor={'bg-dark'}>
+      <Container className={'items-start sm:w-[80vw]'}>
         <h1 className='text-5xl font-semibold'><span className='text-primary'>Easy</span><span className='text-secondary'>lav</span></h1>
         <p className='text-2xl'>Tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto</p>
         <ButtonContainer>
-          <ButtonSecondary title={'Nuestros Servicios'} width={'w-[320px] md:w-[280px]'} href={'/#servicios'} />
+          <ButtonSecondary title={'Nuestros Servicios'} width={'w-[320px] md:w-[280px]'} href={'/#servicios'} border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'} />
         </ButtonContainer>
       </Container>
     </Hero>

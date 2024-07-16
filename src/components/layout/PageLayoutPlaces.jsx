@@ -5,27 +5,32 @@ import Section from '../templates/Section'
 import Container from '../containers/Container'
 import Spacing from './Spacing'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
+import Hero from '../hero/Hero'
 
-const PageLayout = ({ children, id }) => {
+const PageLayoutPlaces = ({ children, id, image }) => {
   return (
     <>
       <Header />
       <main id='contenido' className='sm:mt-24 xl:mt-12'>
+        <Hero backgroundImage={image} opacity={'opacity-25'} height={'h-20'}>
+          <h1>Morelia</h1>
+        </Hero>
         <Section id={id} className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
-          <Container className={'mx-auto'}>
+          <Container className={''}>
             {children}
           </Container>
           <Spacing height={'h-24'} />
         </Section>
-      </main>
+      </main >
       <Footer />
       <ScrollToTopButton />
     </>
   )
 }
-PageLayout.propTypes = {
+PageLayoutPlaces.propTypes = {
   children: PropTypes.node.isRequired,
-  id: PropTypes.string
+  id: PropTypes.string,
+  image: PropTypes.string,
 }
 
-export default PageLayout
+export default PageLayoutPlaces

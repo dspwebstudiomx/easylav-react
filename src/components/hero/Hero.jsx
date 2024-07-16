@@ -11,7 +11,7 @@ const Hero = ({ children, backgroundColor, backgroundImage, height, titleSection
         <img src={backgroundImage} alt={titleSection} className='h-full object-cover w-full' />
       </div>
       <div id={`opacidad-${titleSection}`} className={`${opacity} absolute inset-0 -z-10 ${opacityColor}`}></div>
-      <Container id={`contenido-${titleSection}`} className={'ml-0'}>
+      <Container id={`contenido-${titleSection}`}>
         {children}
       </Container>
     </Section>

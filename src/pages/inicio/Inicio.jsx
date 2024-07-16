@@ -25,7 +25,7 @@ const Inicio = () => {
         <NuestrasSucursales />
         <Testimonios />
         <Section>
-          <Container>
+          <Container className={'mx-auto'}>
             <Contacto />
           </Container>
         </Section>

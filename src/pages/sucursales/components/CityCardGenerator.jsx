@@ -5,7 +5,7 @@ import { localservices } from '../../../data/sucursales'
 const CityCardGenerator = ({ city }) => {
   const ciudad = localservices.filter(localservice => localservice.city === city)
   return (
-    <article className='grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 items-center justify-center'>
+    <article className='grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-12 items-center justify-center'>
       {
         ciudad.map((localservice) =>
           <SucursalCard

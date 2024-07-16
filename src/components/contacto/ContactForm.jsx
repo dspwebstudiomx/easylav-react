@@ -16,8 +16,8 @@ export default function ContactForm() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_sitioweb', 'template_dspwebstudio', form.current, {
-        publicKey: '6zZtQ17TWIZUgres6',
+      .sendForm('service_easylav', 'template_easylav', form.current, {
+        publicKey: 'dO-yqTYETkfD9vvLv',
       })
       .then(
         () => {

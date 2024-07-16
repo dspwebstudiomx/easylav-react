@@ -82,7 +82,7 @@ const testimonios = [
 const Testimonios = () => {
   return (
     <Section id={'testimonios'}>
-      <Container >
+      <Container className={'mx-auto'} >
         <BorderButtom justify={'mx-auto'} >
           <TitleH2 title="Testimonios" />
         </BorderButtom>

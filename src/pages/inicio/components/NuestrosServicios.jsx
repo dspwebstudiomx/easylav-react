@@ -33,7 +33,7 @@ const services = [
 const NuestrosServicios = () => {
   return (
     <Section id={'servicios'}>
-      <Container >
+      <Container className={'mx-auto'}>
         <BorderButtom justify={'mx-auto'}>
           <TitleH2 title='Nuestros Servicios' />
         </BorderButtom>
@@ -51,7 +51,7 @@ const NuestrosServicios = () => {
             }
           </ul>
           <ButtonContainer position={'justify-center'} distance={'mt-16'}>
-            <ButtonSecondary title={'Conoce nuestras Sucursales'} href={'/sucursales'} width={'w-[320px] md:w-[380px] xl:w-[340px]'} border={'border-primary border-4'} />
+            <ButtonSecondary title={'Conoce nuestras Sucursales'} href={'/sucursales'} width={'w-[320px] md:w-[380px] xl:w-[340px]'} border={'border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark'} />
           </ButtonContainer>
         </div>
       </Container>
