@@ -10,7 +10,7 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
   return (
     <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
       <div>
-        <h3 className='text-center font-semibold text-2xl xl:text-xl uppercase py-4'>{title}</h3>
+        <h3 className='text-center font-semibold text-xl uppercase py-4'>{title}</h3>
         {/* mapa */}
         <div className='h-[180px] rounded-lg '>
           <APIProvider apiKey='AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik'>
