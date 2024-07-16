@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer id='footer'>
       <Section backgroundColor={'bg-secondary'} id={'footer-sections'} className={'py-24'} height={'h-auto'} >
-        <Container className='text-light grid grid-cols-2 lg:grid-cols-4 justify-between'>
+        <Container className='text-light grid grid-cols-2 lg:grid-cols-4 justify-between mx-auto w-[80vw]'>
 
           {/* Footer Sections */}
           <div id='footer-sections' className='flex flex-col gap-8 w-full'>
@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Footer Logo */}
           <div className='flex flex-col gap-8'>
             <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
-              <img src={logo} alt='logo' className='w-[230px] h-auto mx-auto' />
+              <img src={logo} alt='logo' className='w-[230px] h-auto mx-auto  2xl:mr-0' />
             </a>
             <SocialLinks color={'text-light'} size={24} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
           </div>

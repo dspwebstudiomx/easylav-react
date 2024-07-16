@@ -10,7 +10,7 @@ const classes = {
 
 const SocialLinks = ({ color, size, circleBorder, gap, hover }) => {
   return (
-    <div className={`flex ${gap} items-center justify-center xl:justify-start`}>
+    <div className={`flex ${gap} items-center justify-center xl:justify-end`}>
       <SocialLink
         href={'https://www.facebook.com/dspwebstudio'}
         icono={<FiFacebook size={size} className={classes.Link} />}
