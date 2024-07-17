@@ -31,7 +31,7 @@ const Navbar = () => {
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
               <a href="/">
-                <img alt='logo' src={logoImage} className='w-[180px] md:w-[210px] lg:w-[240px] 2xl:w-[260px]' />
+                <img alt='logo' src={logoImage} className='w-[240px] 2xl:w-[260px]' />
               </a>
             </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
               <ul id='navlinks-mobile' className="grid grid-cols-2 gap-8 mt-28">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id} className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light h-[180px] border-2 border-primary_dark '>
+                    <li key={navlink.id} className='shadow-xl text-xl p-6 rounded-2xl items-center flex justify-center bg-light h-[180px] border-2 border-primary_dark '>
                       <a href={navlink.href} onClick={toggleNav} className='grid gap-2 w-full h-full'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={50} className='text-secondary' />}
@@ -74,7 +74,7 @@ const Navbar = () => {
                 <li className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light border-2 border-primary_dark h-[180px] '>
                   <a href='/franquicias' onClick={toggleNav} className='grid w-full h-full py-4'>
                     <GrGroup size={50} className='text-secondary mx-auto' />
-                    <button className='text-secondary font-semibold uppercase tracking-wide'>Franquicias</button>
+                    <button className='text-secondary_dark font-semibold uppercase tracking-wide'>Franquicias</button>
                   </a>
                 </li>
               </ul>
