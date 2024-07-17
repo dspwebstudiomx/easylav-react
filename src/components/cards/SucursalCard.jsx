@@ -62,7 +62,7 @@ SucursalCard.propTypes = {
   serviceday1: PropTypes.string,
   serviceday2: PropTypes.string,
   servicehour1: PropTypes.string,
-  phoneNumber: PropTypes.string,
+  phoneNumber: PropTypes.number,
   servicehour2: PropTypes.string,
   place: PropTypes.string,
 }

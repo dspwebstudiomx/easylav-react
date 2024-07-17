@@ -11,7 +11,7 @@ export const localservices = [
     serviceday2: "Domingo:",
     servicehour2: "8:30 a.m a 8:00 p.m",
     city: "Morelia",
-    phoneNumber: "4330000000",
+    phoneNumber: 4337654321,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const localservices = [
     serviceday2: "Domingo:",
     servicehour2: "7:00 a.m a 9:00 p.m",
     city: "Morelia",
-    phoneNumber: "4330000000",
+    phoneNumber: 4331234567,
   },
   {
     id: 3,
@@ -38,6 +38,6 @@ export const localservices = [
     serviceday2: "Domingo:",
     servicehour2: "7:30 a.m a 9:30 p.m",
     city: "León",
-    phoneNumber: "4420000000",
+    phoneNumber: 4420000000,
   },
 ];
