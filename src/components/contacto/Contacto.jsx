@@ -8,7 +8,7 @@ const Contacto = () => {
       <div className="grid gap-8">
         <TitleH2 title={'¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.'} />
         <p>Nuestra forma de contacto es fácil y rápida. Puedes llenar el formulario en línea con tus preguntas o sugerencias, y nos pondremos en contacto contigo enseguida. <strong>¡Esperamos saber de ti pronto!</strong></p>
-        <div className="mb-32 mt-12 sm:mb-8 md:mb-0 md:mt-0 mx-auto sm:mr-0">
+        <div className="mt-12 mb-24 sm:mb-24 mx-auto md:ml-0 md:mb-0">
           <SocialLinks color={'text-secondary'} size={54} gap={'gap-8'} />
         </div>
       </div>

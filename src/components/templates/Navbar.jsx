@@ -28,7 +28,7 @@ const Navbar = () => {
     <>
       <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl'>
         <Container className={'flex justify-between px-8 sm:px-12 md:px-0 mx-auto z-50'}>
-          <div id='navbar' className='flex justify-between items-center h-[120px]'>
+          <div id='navbar' className='flex justify-between items-center h-[120px] sm:px-2 md:px-0'>
             <div id='logo'>
               <a href="/">
                 <img alt='logo' src={logoImage} className='w-[240px] 2xl:w-[260px]' />
@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop menu */}
-            <ul id='navlinks-desktop' className='hidden sm:flex gap-8 xl:gap-4'>
+            <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4'>
               {navlinks.map((navlink) => {
                 return (
                   <li key={navlink.id} >
@@ -51,7 +51,7 @@ const Navbar = () => {
             {/* Desktop menu */}
 
             {/* Menu button */}
-            <div id='menu-button' onClick={toggleNav} className="sm:hidden z-40 flex gap-8 items-center w-[7%]">
+            <div id='menu-button' onClick={toggleNav} className="md:hidden z-40 flex gap-8 items-center w-[7%]">
               {!nav ? <FaBars size={30} className="text-secondary z-40" /> : <FaXmark size={36} className=" text-secondary dark:text-slate-100 z-30" />}
             </div>
             {/* Menu button */}
@@ -84,10 +84,10 @@ const Navbar = () => {
         </Container>
 
         {/* Tablet menu */}
-        <ul id='navlinks-tablet' className='hidden sm:flex xl:hidden gap-8 bg-primary justify-evenly py-5'>
+        <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly py-5'>
           {navlinks.map((navlink) => {
             return (
-              <a className='uppercase font-semibold text-md text-secondary_light  hover:text-secondary' key={navlink.id} href={navlink.href}>{navlink.name}</a>
+              <a className='uppercase font-semibold text-md text-light  hover:text-secondary' key={navlink.id} href={navlink.href}>{navlink.name}</a>
             )
           })}
         </ul>

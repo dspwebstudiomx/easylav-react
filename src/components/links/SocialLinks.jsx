@@ -12,7 +12,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
   return (
     <div className={`flex ${gap} ${position}`}>
       <SocialLink
-        href={'https://www.facebook.com/dspwebstudio'}
+        href={'https://www.facebook.com/easylavmx'}
         icono={<FiFacebook size={size} className={classes.Link} />}
         ariaLabel={'Accede a mi  cuenta de Facebook'}
         title={'Visita mi página en Facebook'}
@@ -21,7 +21,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         hover={hover}
       />
       <SocialLink
-        href={'https://www.instagram.com/dspwebstudio'}
+        href={'https://www.instagram.com/easylavmx'}
         icono={<FaInstagram size={size} className={classes.Link} />}
         ariaLabel={'Accede a mi  cuenta de Instagram'}
         title="Visita mi perfil de Instagram"
@@ -30,7 +30,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         hover={hover}
       />
       <SocialLink
-        href={'mailto:contacto@dspwebstudio.com'}
+        href={'mailto:sitioweb@easylav.mx'}
         icono={<FaRegEnvelope size={size = size + 1} className={classes.Link} />}
         ariaLabel={'Envia un correo electrónico para contactarme'}
         title="Envía un Correo Electrónico"
