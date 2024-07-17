@@ -1,10 +1,17 @@
 import Section from './Section'
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import Container from '../containers/Container'
 import logo from '../../assets/images/logos/horizontal/logo-blanco.png'
 import { TbPoint } from 'react-icons/tb';
 import SocialLinks from '../links/SocialLinks'
 
 const Footer = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer id='footer' className='text-xl'>
       <Section backgroundColor={'bg-secondary'} id={'footer-sections'} className={'py-24'} height={'h-auto'}>
@@ -17,9 +24,9 @@ const Footer = () => {
               <li><a href='/' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Inicio</span></a></li>
               <li><a href='/#nosotros' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Quienes Somos</span></a></li>
               <li><a href='/#servicios' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Servicios</span></a></li>
-              <li><a href='/sucursales' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Sucursales</span></a></li>
-              <li><a href='/contacto' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Contacto</span></a></li>
-              <li><a href='/franquicias' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Franquicias</span></a></li>
+              <li><Link onClick={scrollToTop} to='/sucursales' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Sucursales</span></Link></li>
+              <li><Link onClick={scrollToTop} to='/contacto' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Contacto</span></Link></li>
+              <li><Link onClick={scrollToTop} to='/franquicias' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Franquicias</span></Link></li>
             </ul>
           </div>
           {/* Footer Sections */}
@@ -28,9 +35,9 @@ const Footer = () => {
           <div id='footer-services' className='flex flex-col gap-8 w-full'>
             <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Servicios</h3>
             <ul className='flex flex-col gap-3'>
-              <li><a href='/#servicios' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Regular</span></a></li>
-              <li><a href='/#servicios' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Especializado</span></a></li>
-              <li><a href='/#servicios' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Planchado y Doblez</span></a></li>
+              <li><HashLink to='/#lavado-regular' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Regular</span></HashLink></li>
+              <li><HashLink to='/#lavado-especializado' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Especializado</span></HashLink></li>
+              <li><HashLink to='/#planchado-doblez' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Planchado y Doblez</span></HashLink></li>
             </ul>
           </div>
           {/* Footer Services */}
@@ -39,8 +46,8 @@ const Footer = () => {
           <div id='footer-privacy-terms' className='flex flex-col gap-8 w-full xl:w-full'>
             <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Políticas y Términos</h3>
             <ul className='flex flex-col gap-3'>
-              <li><a href='/politica-privacidad' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Política de Privacidad</span></a></li>
-              <li><a href='/terminos-condiciones' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Términos y Condiciones</span></a></li>
+              <li><Link onClick={scrollToTop} to='/politica-privacidad' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Política de Privacidad</span></Link></li>
+              <li><Link onClick={scrollToTop} to='/terminos-condiciones' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Términos y Condiciones</span></Link></li>
             </ul>
           </div>
           {/* Footer Privacy & Terms */}

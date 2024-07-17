@@ -21,6 +21,7 @@ const Navbar = () => {
   const toggleNav = () => {
     setNav(!nav);
     setMenuOpen(!menuOpen);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -56,24 +57,24 @@ const Navbar = () => {
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-primary opacity-[99%] z-20 gap-4 animate__animated animate__fadeInDown p-12 py-0 z-30"}>
+            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-primary border-t-4 border-t-primary opacity-[99%] z-20 gap-4 animate__animated animate__fadeInDown p-12 py-0 z-30"}>
               <ul id='navlinks-mobile' className="grid grid-cols-2 gap-8 mt-28">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id} className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light h-[180px] '>
+                    <li key={navlink.id} className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light h-[180px] border-2 border-primary_dark '>
                       <a href={navlink.href} onClick={toggleNav} className='grid gap-2 w-full h-full'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={50} className='text-secondary' />}
                         </div>
-                        <button className='text-dark font-semibold uppercase tracking-wide'>{navlink.name}</button>
+                        <button className='text-secondary font-semibold uppercase tracking-wide'>{navlink.name}</button>
                       </a>
                     </li>
                   )
                 })}
-                <li className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light h-[180px] '>
+                <li className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light border-2 border-primary_dark h-[180px] '>
                   <a href='/franquicias' onClick={toggleNav} className='grid w-full h-full py-4'>
                     <GrGroup size={50} className='text-secondary mx-auto' />
-                    <button className='text-dark font-semibold uppercase tracking-wide'>Franquicias</button>
+                    <button className='text-secondary font-semibold uppercase tracking-wide'>Franquicias</button>
                   </a>
                 </li>
               </ul>
@@ -81,10 +82,13 @@ const Navbar = () => {
             {/* Mobile menu */}
           </div>
         </Container>
+
         {/* Tablet menu */}
         <ul id='navlinks-tablet' className='hidden sm:flex xl:hidden gap-8 bg-primary justify-evenly py-5'>
           {navlinks.map((navlink) => {
-            return <a className='uppercase font-semibold text-md text-secondary  hover:text-secondary' key={navlink.id} href={navlink.href}>{navlink.name}</a>
+            return (
+              <a className='uppercase font-semibold text-md text-secondary_light  hover:text-secondary' key={navlink.id} href={navlink.href}>{navlink.name}</a>
+            )
           })}
         </ul>
         {/* Tablet menu */}
