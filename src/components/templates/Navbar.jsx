@@ -28,7 +28,7 @@ const Navbar = () => {
     <>
       <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl'>
         <Container className={'flex justify-between px-8 sm:px-12 md:px-0 mx-auto z-50'}>
-          <div id='navbar' className='flex justify-between items-center h-[120px] sm:px-2 md:px-0'>
+          <div id='navbar' className='flex justify-between items-center h-[120px] sm:px-16 2xl:px-0'>
             <div id='logo'>
               <a href="/">
                 <img alt='logo' src={logoImage} className='w-[240px] 2xl:w-[260px]' />
@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop menu */}
-            <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4'>
+            <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
               {navlinks.map((navlink) => {
                 return (
                   <li key={navlink.id} >
@@ -57,24 +57,24 @@ const Navbar = () => {
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[89vh] overflow-hidden flex flex-col items-center bg-primary border-t-4 border-t-primary opacity-[99%] z-20 gap-4 animate__animated animate__fadeInDown p-12 py-0 z-30"}>
-              <ul id='navlinks-mobile' className="grid grid-cols-2 gap-8 mt-28">
+            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[85vh] sm:h-[55vh] overflow-hidden flex flex-col bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8 py-20"}>
+              <ul id='navlinks-mobile' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 w-full h-full justify-center items-center py-12 gap-6">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id} className='shadow-xl text-xl p-6 rounded-2xl items-center flex justify-center bg-light h-[180px] border-2 border-primary_dark '>
-                      <a href={navlink.href} onClick={toggleNav} className='grid gap-2 w-full h-full'>
+                    <li key={navlink.id} className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
+                      <a href={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-6 items-center justify-center gap-4'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={50} className='text-secondary' />}
                         </div>
-                        <button className='text-secondary font-semibold uppercase tracking-wide'>{navlink.name}</button>
+                        <button className='text-secondary text-xl font-bold uppercase tracking-wide'>{navlink.name}</button>
                       </a>
                     </li>
                   )
                 })}
-                <li className='shadow-xl text-xl p-6 rounded-lg items-center flex justify-center bg-light border-2 border-primary_dark h-[180px] '>
-                  <a href='/franquicias' onClick={toggleNav} className='grid w-full h-full py-4'>
+                <li className='shadow-xl text-base p-6 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
+                  <a href='/franquicias' onClick={toggleNav} className='flex flex-col w-full h-full py-6 items-center justify-between'>
                     <GrGroup size={50} className='text-secondary mx-auto' />
-                    <button className='text-secondary_dark font-semibold uppercase tracking-wide'>Franquicias</button>
+                    <button className='text-secondary text-xl font-bold uppercase tracking-wide'>Franquicias</button>
                   </a>
                 </li>
               </ul>
@@ -84,12 +84,15 @@ const Navbar = () => {
         </Container>
 
         {/* Tablet menu */}
-        <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly py-5'>
+        <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
           {navlinks.map((navlink) => {
             return (
               <a className='uppercase font-semibold text-md text-light  hover:text-secondary' key={navlink.id} href={navlink.href}>{navlink.name}</a>
             )
           })}
+          <li>
+            <a className='uppercase font-semibold text-base xl:text-md text-secondary  hover:text-secondary_dark' href='/franquicias'>Franquicias</a>
+          </li>
         </ul>
         {/* Tablet menu */}
         {menuOpen && (
