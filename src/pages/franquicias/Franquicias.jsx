@@ -78,7 +78,7 @@ const Franquicias = () => {
         {/* Columna 2 */}
 
         {/* Columna 2 */}
-        <div id="columma-2" className="grid sm:grid-cols-2 lg:grid-cols-1 bg-red-100 gap-20 sm:gap-32 mt-24 md:p-12 lg:p-0 place-items-end mr-9">
+        <div id="columma-2" className="grid sm:grid-cols-2 lg:grid-cols-1 bg-red-100 gap-20 sm:gap-32 mt-24 md:p-12 lg:p-0 place-items-end sm:mr-9 mx-auto">
           <div className="rotate-[25deg] bg-secondary h-auto w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px]">
             <img src={Image_1} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>

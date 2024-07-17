@@ -29,7 +29,6 @@ const services = [
     title: 'Planchado y Doblez',
     description: 'El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.',
     image: imageService3,
-    idLink: '#planchado-y-doblez'
   },
 ]
 
@@ -45,9 +44,9 @@ const NuestrosServicios = () => {
             {services.map((service) => {
               return (
                 <li key={service.id} id={service.idLink} className='flex flex-col gap-8 items-center justify-center'>
-                  <img src={service.image} alt="alt" width={210} className='mx-auto' />
-                  <h3 className='text-3xl sm:text-2xl text-center font-semibold'>{service.title}</h3>
-                  <p className='w-3/4 sm:w-full mx-auto text-pretty text-lg sm:text-xl'>{service.description}</p>
+                  <img src={service.image} alt="alt" width={210} className='mx-auto sm:w-24' />
+                  <h3 className='text-3xl sm:text-xl text-center font-semibold'>{service.title}</h3>
+                  <p className='w-3/4 sm:w-full mx-auto text-pretty lg:text-lg sm:text-base'>{service.description}</p>
                 </li>
               )
             })
