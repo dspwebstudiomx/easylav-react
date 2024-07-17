@@ -4,10 +4,16 @@ import TitleH1 from "../../components/title/TitleH1"
 import BorderLeft from "../../components/borders/BorderLeft"
 import Image_1 from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
 import Image_2 from "../../assets/images/images/Placeholder.webp"
+import { Helmet } from "react-helmet"
 
 const Franquicias = () => {
   return (
     <PageLayout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Franquicias | Easylav</title>
+        <link rel="canonical" href="https://easylav-react.netlify.app/sucursales" />
+      </Helmet>
       <div className="grid lg:grid-cols-2 gap-0">
 
         {/* Columna 1 */}
