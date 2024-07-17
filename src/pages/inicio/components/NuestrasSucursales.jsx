@@ -29,6 +29,7 @@ const NuestrasSucursales = () => {
                 serviceday2={localservice.serviceday2}
                 servicehour2={localservice.servicehour2}
                 ciudad={localservices.ciudad}
+                phoneNumber={localservices.phoneNumber}
               />
             )
           })}
