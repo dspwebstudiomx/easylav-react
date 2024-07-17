@@ -14,7 +14,7 @@ export default function ContactForm() {
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
 
-  const sendEmail = (e, { resetForm }) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     emailjs
       .sendForm('service_easylav', 'template_easylav', form.current, {
@@ -24,7 +24,7 @@ export default function ContactForm() {
         () => {
           console.log("SUCCESS!");
           setShowModal(true);
-          resetForm();
+
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -94,7 +94,7 @@ export default function ContactForm() {
         onSubmit={() => {
         }}
       >
-        {({ errors, touched }) => (
+        {({ errors, touched, resetForm }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
             <h2 className="text-3xl mb-2 text-center lg:hidden">Formulario</h2>
 
@@ -177,13 +177,17 @@ export default function ContactForm() {
             {/* Modal */}
             {showModal &&
               <Modal>
-                <h1 className='text-center sm:text-[16px] font-semibold leading-snug text-xl mb-6'>Mensaje enviado<br></br>satisfactoriamente</h1>
+                <h1 className='text-center font-medium leading-snug'>Mensaje enviado<br></br>satisfactoriamente</h1>
                 <ButtonSecondary
                   title={'Cerrar'}
                   icon={<IoMdExit />}
                   type={'button'}
                   width={'w-[240px]'}
-                  onClick={() => setShowModal(false)}
+                  onClick={() => {
+                    setShowModal(false);
+                    resetForm()
+                  }
+                  }
                 />
               </Modal>
             }

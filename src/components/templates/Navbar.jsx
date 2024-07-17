@@ -21,7 +21,7 @@ const Navbar = () => {
   const toggleNav = () => {
     setNav(!nav);
     setMenuOpen(!menuOpen);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ behavior: 'smooth' });
   };
 
   return (
