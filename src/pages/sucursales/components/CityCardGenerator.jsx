@@ -18,7 +18,7 @@ const CityCardGenerator = ({ city }) => {
             serviceday2={localservice.serviceday2}
             servicehour1={localservice.servicehour1}
             servicehour2={localservice.servicehour2}
-            phoneNumber={localservice.phoneNumber}
+            email={localservice.email}
           />)
       }
     </article>

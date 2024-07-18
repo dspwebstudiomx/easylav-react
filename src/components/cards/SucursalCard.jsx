@@ -1,12 +1,12 @@
 'use client'
 import { APIProvider, Map } from '@vis.gl/react-google-maps'
 import PropTypes from 'prop-types'
-import { FaMapMarkerAlt } from 'react-icons/fa'
-import { FaPhone, FaRegClock } from 'react-icons/fa6'
+import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaRegClock } from 'react-icons/fa6'
 import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
 
-const SucursalCard = ({ title, id, position, serviceday1, serviceday2, servicehour1, servicehour2, place, phoneNumber }) => {
+const SucursalCard = ({ title, id, position, serviceday1, serviceday2, servicehour1, servicehour2, place, email }) => {
   return (
     <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
       <div>
@@ -47,7 +47,7 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
         </div>
         {/* Horario */}
         <ButtonContainer position={'justify-center'}>
-          <ButtonSecondary title={'Llámame'} href={`tel:+52${phoneNumber}`} icon={<FaPhone />} width={'w-[210px]'} type={'button'} />
+          <ButtonSecondary title={'Enviar correo'} href={`mailto:${email}`} icon={<FaEnvelope />} width={'w-[210px]'} type={'button'} />
         </ButtonContainer>
       </div>
 
@@ -62,7 +62,7 @@ SucursalCard.propTypes = {
   serviceday1: PropTypes.string,
   serviceday2: PropTypes.string,
   servicehour1: PropTypes.string,
-  phoneNumber: PropTypes.number,
+  email: PropTypes.string,
   servicehour2: PropTypes.string,
   place: PropTypes.string,
 }

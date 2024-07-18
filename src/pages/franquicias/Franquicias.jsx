@@ -5,8 +5,18 @@ import BorderLeft from "../../components/borders/BorderLeft"
 import Image_1 from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
 import Image_2 from "../../assets/images/images/Placeholder.webp"
 import { Helmet } from "react-helmet"
+import ButtonContainer from "../../components/containers/ButtonContainer"
+import ButtonSecondary from "../../components/buttons/ButtonSecondary"
+import { useState } from "react"
+import Modal from "../../components/contacto/Modal"
+import ContactFormFranquicias from "../../components/contacto/ContactFormFranquicias"
+import { FaInfoCircle } from "react-icons/fa";
+
 
 const Franquicias = () => {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <PageLayout>
       <Helmet>
@@ -80,6 +90,9 @@ const Franquicias = () => {
             </li>
           </ul>
           <p className="bg-primary_light text-2xl p-8 rounded-xl text-dark border-2 border-secondary">En resumen, invertir en la franquicia de Lavanderías Easylav representa una oportunidad estratégica y rentable en un mercado en crecimiento, respaldada por un modelo de negocio comprobado, una marca reconocida y un soporte integral.</p>
+          <ButtonContainer position={'justify-center sm:justify-start'}>
+            <ButtonSecondary title={'Mas información'} width={'w-[240px]'} onClick={() => setShowModal(true)} icon={<FaInfoCircle />} />
+          </ButtonContainer>
         </div>
         {/* Columna 2 */}
 
@@ -99,6 +112,13 @@ const Franquicias = () => {
           </div>
         </div>
         {/* Columna 2 */}
+
+        {showModal &&
+          <Modal>
+            <TitleH1 title="Formulario" />
+            <ContactFormFranquicias />
+          </Modal>
+        }
 
       </div>
     </PageLayout>

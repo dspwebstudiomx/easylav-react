@@ -9,7 +9,7 @@ import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
 
 
-export default function ContactForm() {
+export default function ContactFormFran() {
 
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
@@ -17,7 +17,7 @@ export default function ContactForm() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_Contacto', 'template_contacto', form.current, {
+      .sendForm('service_Franquicias', 'template_franquicias', form.current, {
         publicKey: 'dO-yqTYETkfD9vvLv',
       })
       .then(
