@@ -1,15 +1,15 @@
 import { useRef, useState } from 'react';
-import { FaRegEnvelope } from "react-icons/fa6"
+import { FaRegEnvelope } from 'react-icons/fa6'
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
-import { IoMdExit } from "react-icons/io";
-
+import { IoMdExit } from 'react-icons/io';
+import PropTypes from 'prop-types'
 import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
 
 
-export default function ContactFormFran() {
+export default function ContactFormFranquicias() {
 
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +22,7 @@ export default function ContactFormFran() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          console.log('SUCCESS!');
           setShowModal(true);
 
         },
@@ -37,9 +37,8 @@ export default function ContactFormFran() {
   //   document.body.classList.remove('modal-active')
   // }
 
-
   return (
-    <article id="formulario" className="border-4  border-primary_dark rounded-2xl px-8 py-10 pb-14 bg-primary_light dark:bg-slate-700  text-slate-100 w-full ">
+    <article id='formulario' className='border-4  border-primary_dark rounded-2xl bg-primary_light w-full text-sm p-4 h-auto'>
       <Formik
         initialValues={{
           user_name: '',
@@ -81,9 +80,9 @@ export default function ContactFormFran() {
             if (!values.user_phone) {
               errors.user_phone = 'Solo se aceptan números y símbolo + al comienzo'
             } else if (!/^[+]+[0-9]+$/.test(values.user_phone)) {
-              errors.user_phone = "Hace falta el simbolo de + al comienzo"
+              errors.user_phone = 'Hace falta el simbolo de + al comienzo'
             } else if (/^[+]+[0-9]+$/.test(values.user_phone)) {
-              errors.user_phone = "Número telefónico correcto"
+              errors.user_phone = 'Número telefónico correcto'
             }
             if (!values.message) {
               errors.message = 'Mensaje requerido'
@@ -95,67 +94,69 @@ export default function ContactFormFran() {
         }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
-            <h2 className="text-3xl mb-2 text-center lg:hidden">Formulario</h2>
-
+          <Form ref={form} onSubmit={sendEmail} className='flex flex-col gap-8 p-6 text-base'>
             {/* Fields */}
-            <div className="flex flex-wrap justify-between gap-3">
-              <div className="flex flex-col xl:w-[50%] w-full">
-                <label htmlFor='user_name' className="mb-2">Nombre<span className='text-required ml-1'>*</span></label>
+            <div className='flex flex-wrap justify-between gap-3'>
+              <div className='flex flex-col xl:w-[50%] w-full'>
+                <label htmlFor='user_name' className='mb-2'>Nombre<span className='text-required ml-1'>*</span></label>
                 <Field
-                  id="user_name"
-                  name="user_name"
-                  className="rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary xl:p-2 outline-none"
-                  type="text"
+                  id='user_name'
+                  name='user_name'
+                  className='rounded-md text-slate-900 bg-slate-200 p-2 border-2 border-primary xl:p-2 outline-none'
+                  type='text'
+                  placeholder='Nombre Completo'
                   required
                 />
                 {touched.user_name && errors.user_name && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_name}</span></p>}
               </div>
-              <div className="flex flex-col xl:w-[45%] w-full">
-                <label htmlFor='user_city' className="mb-2">Ciudad<span className='text-required ml-1'>*</span></label>
+              <div className='flex flex-col xl:w-[45%] w-full'>
+                <label htmlFor='user_city' className='mb-2'>Ciudad<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
-                  id="user_city"
-                  name="user_city"
+                  className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
+                  id='user_city'
+                  name='user_city'
+                  placeholder='Ciudad'
                   required
                 />
                 {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
 
               </div>
             </div>
-            <div className="flex flex-wrap justify-between gap-3">
-              <div className="flex flex-col xl:w-[50%] w-full">
-                <label htmlFor="user_email" className="mb-2">Correo Electrónico<span className='text-required ml-1'>*</span></label>
+            <div className='flex flex-wrap justify-between gap-3'>
+              <div className='flex flex-col xl:w-[50%] w-full'>
+                <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
-                  id="user_email"
-                  name="user_email"
-                  type="email"
+                  className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
+                  id='user_email'
+                  name='user_email'
+                  type='email'
+                  placeholder='Correo electrónico'
                   required
                 />
                 {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
 
               </div>
-              <div className="flex flex-col xl:w-[45%] w-full">
-                <label htmlFor="user_phone" className="mb-2">Número Telefónico<span className='text-required ml-1'>*</span></label>
+              <div className='flex flex-col xl:w-[45%] w-full'>
+                <label htmlFor='user_phone' className='mb-2'>Número Telefónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
-                  type="text"
-                  name="user_phone"
-                  id="user_phone"
+                  className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
+                  type='text'
+                  name='user_phone'
+                  id='user_phone'
+                  placeholder='Número telefónico'
                   required
                 />
                 {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
 
               </div>
             </div>
-            <div className="flex flex-col w-full">
-              <label htmlFor="message" className="mb-2">Mensaje<span className='text-required ml-1'>*</span></label>
+            <div className='flex flex-col w-full'>
+              <label htmlFor='message' className='mb-2'>Mensaje<span className='text-required ml-1'>*</span></label>
               <textarea
-                type="text"
-                name="message"
-                id="message"
-                className="rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary h-40 max-h-32 min-h-32 outline-none"
+                type='text'
+                name='message'
+                id='message'
+                className='rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary h-40 max-h-32 min-h-32 outline-none'
                 required
               />
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
@@ -194,9 +195,11 @@ export default function ContactFormFran() {
             {/* Modal */}
 
           </Form>
-        )
-        }
+        )}
       </Formik >
     </article >
   )
+}
+ContactFormFranquicias.propTypes = {
+  onClose: PropTypes.func
 }

@@ -35,9 +35,9 @@ const Footer = () => {
           <div id='footer-services' className='flex flex-col gap-8 w-full'>
             <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Servicios</h3>
             <ul className='flex flex-col gap-3'>
-              <li><HashLink to='/#lavado-regular' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Regular</span></HashLink></li>
-              <li><HashLink to='/#lavado-especializado' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Especializado</span></HashLink></li>
-              <li><HashLink to='/#planchado-doblez' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Planchado y Doblez</span></HashLink></li>
+              <li><HashLink smooth to='/#lavado-regular' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Regular</span></HashLink></li>
+              <li><HashLink smooth to='/#lavado-especializado' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Especializado</span></HashLink></li>
+              <li><HashLink smooth to='/#planchado-doblez' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Planchado y Doblez</span></HashLink></li>
             </ul>
           </div>
           {/* Footer Services */}

@@ -11,11 +11,24 @@ import { useState } from "react"
 import Modal from "../../components/contacto/Modal"
 import ContactFormFranquicias from "../../components/contacto/ContactFormFranquicias"
 import { FaInfoCircle } from "react-icons/fa";
-
+import { FaXmark } from "react-icons/fa6"
+import TitleH2 from "../../components/title/TitleH2"
 
 const Franquicias = () => {
 
   const [showModal, setShowModal] = useState(false);
+
+  const handleModalOpen = () => {
+    document.body.classList.add("no-scroll");
+    document.body.style.overflow = 'hidden';
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    document.body.classList.remove("no-scroll");
+    document.body.style.overflow = 'auto';
+    setShowModal(false);
+  };
 
   return (
     <PageLayout>
@@ -90,8 +103,8 @@ const Franquicias = () => {
             </li>
           </ul>
           <p className="bg-primary_light text-2xl p-8 rounded-xl text-dark border-2 border-secondary">En resumen, invertir en la franquicia de Lavanderías Easylav representa una oportunidad estratégica y rentable en un mercado en crecimiento, respaldada por un modelo de negocio comprobado, una marca reconocida y un soporte integral.</p>
-          <ButtonContainer position={'justify-center sm:justify-start'}>
-            <ButtonSecondary title={'Mas información'} width={'w-[240px]'} onClick={() => setShowModal(true)} icon={<FaInfoCircle />} />
+          <ButtonContainer position={'justify-center sm:justify-center my-12 sm:my-6'}>
+            <ButtonSecondary title={'Solicita más información'} width={'w-[340px]'} onClick={() => setShowModal(true)} icon={<FaInfoCircle />} />
           </ButtonContainer>
         </div>
         {/* Columna 2 */}
@@ -115,7 +128,12 @@ const Franquicias = () => {
 
         {showModal &&
           <Modal>
-            <TitleH1 title="Formulario" />
+            <div id='menu-button' className='relative z-40 flex gap-3 w-full'>
+              <button onClick={() => setShowModal(false)}>
+                <FaXmark size={36} className=' text-secondary z-30 absolute right-0 top-0' />
+              </button>
+            </div>
+            <TitleH2 title="Formulario" />
             <ContactFormFranquicias />
           </Modal>
         }

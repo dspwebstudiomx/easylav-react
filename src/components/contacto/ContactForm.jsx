@@ -96,8 +96,6 @@ export default function ContactForm() {
       >
         {({ errors, touched, resetForm }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
-            <h2 className="text-3xl mb-2 text-center lg:hidden">Formulario</h2>
-
             {/* Fields */}
             <div className="flex flex-wrap justify-between gap-3">
               <div className="flex flex-col xl:w-[50%] w-full">
