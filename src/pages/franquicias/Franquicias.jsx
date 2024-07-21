@@ -18,18 +18,6 @@ const Franquicias = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleModalOpen = () => {
-    document.body.classList.add("no-scroll");
-    document.body.style.overflow = 'hidden';
-    setShowModal(true);
-  };
-
-  const handleModalClose = () => {
-    document.body.classList.remove("no-scroll");
-    document.body.style.overflow = 'auto';
-    setShowModal(false);
-  };
-
   return (
     <PageLayout>
       <Helmet>

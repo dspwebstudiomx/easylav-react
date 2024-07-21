@@ -1,10 +1,11 @@
 import Section from './Section'
-import { HashLink } from 'react-router-hash-link';
+import { NavHashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import Container from '../containers/Container'
 import logo from '../../assets/images/logos/horizontal/logo-blanco.png'
 import { TbPoint } from 'react-icons/tb';
 import SocialLinks from '../links/SocialLinks'
+import { navlinks, otrosLinks, linksServicios } from '../../data/Navlinks'
 
 const Footer = () => {
 
@@ -21,11 +22,15 @@ const Footer = () => {
           <div id='footer-sections' className='flex flex-col gap-8 w-full'>
             <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Secciones</h3>
             <ul className='flex flex-col gap-3'>
-              <li><a href='/' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Inicio</span></a></li>
-              <li><a href='/#nosotros' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Quienes Somos</span></a></li>
-              <li><a href='/#servicios' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Servicios</span></a></li>
-              <li><Link onClick={scrollToTop} to='/sucursales' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Sucursales</span></Link></li>
-              <li><Link onClick={scrollToTop} to='/contacto' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Contacto</span></Link></li>
+              {navlinks.map(navlink => {
+                return (
+                  <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
+                    <NavHashLink id={`footer-link-${navlink.linkId}`} to={navlink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' />
+                      <span className='ml-2'>{navlink.name}</span>
+                    </NavHashLink>
+                  </li>
+                )
+              })}
               <li><Link onClick={scrollToTop} to='/franquicias' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Franquicias</span></Link></li>
             </ul>
           </div>
@@ -35,19 +40,32 @@ const Footer = () => {
           <div id='footer-services' className='flex flex-col gap-8 w-full'>
             <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Servicios</h3>
             <ul className='flex flex-col gap-3'>
-              <li><HashLink smooth to='/#lavado-regular' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Regular</span></HashLink></li>
-              <li><HashLink smooth to='/#lavado-especializado' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Lavado Especializado</span></HashLink></li>
-              <li><HashLink smooth to='/#planchado-doblez' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Planchado y Doblez</span></HashLink></li>
+              {linksServicios.map(linkServicio => {
+                return (
+                  <li key={linkServicio.id} id={`footer-navlink-${linkServicio.linkId}`}>
+                    <NavHashLink id={`footer-link-${linkServicio.linkId}`} to={linkServicio.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' />
+                      <span className='ml-2'>{linkServicio.name}</span>
+                    </NavHashLink>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           {/* Footer Services */}
 
           {/* Footer Privacy & Terms */}
           <div id='footer-privacy-terms' className='flex flex-col gap-8 w-full xl:w-full'>
-            <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Políticas y Términos</h3>
+            <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Políticas de Privacidad, Términos y Condiciones, Preguntas Frecuentes</h3>
             <ul className='flex flex-col gap-3'>
-              <li><Link onClick={scrollToTop} to='/politica-privacidad' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Política de Privacidad</span></Link></li>
-              <li><Link onClick={scrollToTop} to='/terminos-condiciones' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Términos y Condiciones</span></Link></li>
+              {otrosLinks.map(otroLink => {
+                return (
+                  <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
+                    <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' />
+                      <span className='ml-2'>{otroLink.name}</span>
+                    </NavHashLink>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           {/* Footer Privacy & Terms */}
@@ -57,7 +75,7 @@ const Footer = () => {
             <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
               <img src={logo} alt='logo' className='w-[260px] h-auto mx-auto  2xl:mr-0' />
             </a>
-            <SocialLinks position={'justify-end'} color={'text-light'} size={24} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
+            <SocialLinks position={'justify-end'} color={'text-light'} size={32} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
           </div>
           {/* Footer Logo */}
 

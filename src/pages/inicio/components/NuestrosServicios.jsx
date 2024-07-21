@@ -29,7 +29,7 @@ const services = [
     title: 'Planchado y Doblez',
     description: 'El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.',
     image: imageService3,
-    idLink: 'planchado-doblez'
+    idLink: 'planchado-y-doblez'
   },
 ]
 
@@ -63,4 +63,4 @@ const NuestrosServicios = () => {
   )
 }
 
-export default NuestrosServicios
+export default NuestrosServicios;

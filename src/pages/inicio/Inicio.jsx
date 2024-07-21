@@ -1,18 +1,20 @@
 import HomeLayout from "../../components/layout/HomeLayout"
-import SobreNosotros from "./components/SobreNosotros"
-import NuestrasSucursales from "./components/NuestrasSucursales"
-import NuestrosServicios from "./components/NuestrosServicios"
-import Testimonios from "./components/Testimonios"
-import Contacto from "../../components/contacto/Contacto"
 import HeroInicio from "./components/HeroInicio"
 import { Helmet } from "react-helmet"
 import Container from "../../components/containers/Container"
 import ScrollToTopButton from "../../components/buttons/ScrollToTopButton"
 import Section from "../../components/templates/Section"
+import { lazy, Suspense } from "react"
+import Loading from "../../components/Loading"
+const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
+const NuestrasSucursales = lazy(() => import("./components/NuestrasSucursales"))
+const NuestrosServicios = lazy(() => import("./components/NuestrosServicios"))
+const Testimonios = lazy(() => import("./components/Testimonios"))
+const Contacto = lazy(() => import("../../components/contacto/Contacto"))
 
 const Inicio = () => {
   return (
-    <>
+    <Suspense fallback={<Loading />} >
       <HomeLayout>
         <Helmet>
           <meta charSet="utf-8" />
@@ -31,7 +33,7 @@ const Inicio = () => {
         </Section>
       </HomeLayout>
       <ScrollToTopButton />
-    </>
+    </Suspense>
 
   )
 }

@@ -30,7 +30,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         hover={hover}
       />
       <SocialLink
-        href={'mailto:sitioweb@easylav.mx'}
+        href={'mailto:contacto@easylav.mx'}
         icono={<FaRegEnvelope size={size = size + 1} className={classes.Link} />}
         ariaLabel={'Envia un correo electrónico para contactarme'}
         title="Envía un Correo Electrónico"

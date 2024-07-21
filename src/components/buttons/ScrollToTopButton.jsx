@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+
 
 const ScrollToTopButton = () => {
   const [visible, setVisible] = useState(false);
@@ -30,7 +31,7 @@ const ScrollToTopButton = () => {
       className={`animate__animated animate__fadeIn animate__slow shadow-2xl rounded-xl fixed bg-primary w-20 h-20 right-10 bottom-20 z-40 grid place-content-center border-l-4 border-t-4 border-l-primary_dark border-t-primary_light hover:bg-primary_dark hover:border-l-primary ${visible ? 'block' : 'hidden'
         }`}
     >
-      <FaArrowUp className='text-primary_light' size={32} />
+      <HiOutlineChevronDoubleUp className='text-primary_light' size={38} />
     </button>
   );
 };

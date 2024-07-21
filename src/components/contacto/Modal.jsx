@@ -15,7 +15,6 @@ Modal.propTypes = {
   children: PropTypes.node,
   width: PropTypes.string,
   height: PropTypes.string,
-  setShowModal: PropTypes.any,
 }
 
 export default Modal

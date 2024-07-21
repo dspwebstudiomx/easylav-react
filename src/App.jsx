@@ -10,6 +10,7 @@ const Franquicias = lazy(() => import('./pages/franquicias/Franquicias'))
 const NotFound = lazy(() => import('./pages/404/NotFound'))
 const PoliticaPrivacidad = lazy(() => import('./pages/politica-privacidad/PoliticaPrivacidad'))
 const TerminosCondiciones = lazy(() => import('./pages/terminos-condiciones/TerminosCondiciones'))
+const PreguntasFrecuentes = lazy(() => import('./pages/preguntas-frecuentes/PreguntasFrecuentes'))
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/franquicias" element={<Franquicias />} />
           <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
+          <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

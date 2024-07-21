@@ -1,19 +1,12 @@
 import { useState } from 'react'
 import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
 import { FaBars } from "react-icons/fa"
-import { GrCoatCheck, GrHome, GrIndicator, GrUser, GrMailOption, GrGroup } from "react-icons/gr";
-
-
 import Container from '../containers/Container'
 import { FaXmark } from 'react-icons/fa6';
-
-const navlinks = [
-  { id: '1', name: 'Inicio', href: '/', icon: GrHome },
-  { id: '2', name: 'Quienes Somos', href: '/#nosotros', icon: GrUser },
-  { id: '3', name: 'Servicios', href: '/#servicios', icon: GrCoatCheck },
-  { id: '4', name: 'Sucursales', href: '/sucursales', icon: GrIndicator },
-  { id: '5', name: 'Contacto', href: '/contacto', icon: GrMailOption },
-]
+import { NavHashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
+import { navlinks } from '../../data/Navlinks';
+import { GrGroup } from 'react-icons/gr';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -39,13 +32,13 @@ const Navbar = () => {
             <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
               {navlinks.map((navlink) => {
                 return (
-                  <li key={navlink.id} >
-                    <a className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' href={navlink.href}>{navlink.name}</a>
+                  <li key={navlink.id} id={`navlink-${navlink.linkId}`} >
+                    <NavHashLink id={`link-${navlink.linkId}`} activeClassName='text-primary' className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
                   </li>
                 )
               })}
               <li>
-                <a className='uppercase font-semibold text-base xl:text-md text-primary  hover:text-primary' href='/franquicias'>Franquicias</a>
+                <NavLink className='uppercase font-semibold text-base xl:text-md text-primary  hover:text-primary' to='/franquicias'>Franquicias</NavLink>
               </li>
             </ul>
             {/* Desktop menu */}
@@ -61,21 +54,21 @@ const Navbar = () => {
               <ul id='navlinks-mobile' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 w-full h-full justify-center items-center py-12 gap-6">
                 {navlinks.map((navlink) => {
                   return (
-                    <li key={navlink.id} className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
-                      <a href={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-6 items-center justify-center gap-4'>
+                    <li id={`navlink-${navlink.linkId}`} key={navlink.id} className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
+                      <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-6 items-center justify-center gap-4'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={50} className='text-secondary' />}
                         </div>
                         <button className='text-secondary text-xl font-bold uppercase tracking-wide'>{navlink.name}</button>
-                      </a>
+                      </NavHashLink>
                     </li>
                   )
                 })}
-                <li className='shadow-xl text-base p-6 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
-                  <a href='/franquicias' onClick={toggleNav} className='flex flex-col w-full h-full py-6 items-center justify-between'>
+                <li id='navlink-franquicias' className='shadow-xl text-base p-6 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
+                  <NavLink id='link-franquicias' to='/franquicias' onClick={toggleNav} className='flex flex-col w-full h-full py-6 items-center justify-between'>
                     <GrGroup size={50} className='text-secondary mx-auto' />
                     <button className='text-secondary text-xl font-bold uppercase tracking-wide'>Franquicias</button>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -87,11 +80,13 @@ const Navbar = () => {
         <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
           {navlinks.map((navlink) => {
             return (
-              <a className='uppercase font-semibold text-md text-light  hover:text-secondary' key={navlink.id} href={navlink.href}>{navlink.name}</a>
+              <li id={`navlink-${navlink.linkId}`} key={navlink.id}>
+                <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} className='uppercase font-semibold text-md text-light hover:text-secondary'>{navlink.name}</NavHashLink>
+              </li>
             )
           })}
-          <li>
-            <a className='uppercase font-semibold text-base xl:text-md text-secondary  hover:text-secondary_dark' href='/franquicias'>Franquicias</a>
+          <li id={'navlink-franquicias'}>
+            <NavLink id='link-franquicias' className='uppercase font-semibold text-base xl:text-md text-secondary  hover:text-secondary_dark' to='/franquicias'>Franquicias</NavLink>
           </li>
         </ul>
         {/* Tablet menu */}
