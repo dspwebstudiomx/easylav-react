@@ -12,11 +12,16 @@ import Modal from "../../components/contacto/Modal"
 import ContactFormFranquicias from "../../components/contacto/ContactFormFranquicias"
 import { FaInfoCircle } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6"
-import TitleH2 from "../../components/title/TitleH2"
+
 
 const Franquicias = () => {
 
   const [showModal, setShowModal] = useState(false);
+
+  const handleModalToggle = () => {
+    setShowModal(!showModal);
+    document.body.style.overflow = showModal ? "auto" : "hidden";
+  };
 
   return (
     <PageLayout>
@@ -92,7 +97,7 @@ const Franquicias = () => {
           </ul>
           <p className="bg-primary_light text-2xl p-8 rounded-xl text-dark border-2 border-secondary">En resumen, invertir en la franquicia de Lavanderías Easylav representa una oportunidad estratégica y rentable en un mercado en crecimiento, respaldada por un modelo de negocio comprobado, una marca reconocida y un soporte integral.</p>
           <ButtonContainer position={'justify-center sm:justify-center my-12 sm:my-6'}>
-            <ButtonSecondary title={'Solicita más información'} width={'w-[340px]'} onClick={() => setShowModal(true)} icon={<FaInfoCircle />} />
+            <ButtonSecondary title={'Solicita más información'} width={'w-[340px]'} onClick={handleModalToggle} icon={<FaInfoCircle />} />
           </ButtonContainer>
         </div>
         {/* Columna 2 */}
@@ -116,13 +121,15 @@ const Franquicias = () => {
 
         {showModal &&
           <Modal>
-            <div id='menu-button' className='relative z-40 flex gap-3 w-full'>
-              <button onClick={() => setShowModal(false)}>
-                <FaXmark size={36} className=' text-secondary z-30 absolute right-0 top-0' />
+            <div id='menu-button' className='z-40 flex flex-col w-full'>
+              <button
+                id="button-close"
+                onClick={handleModalToggle}
+              >
+                <FaXmark size={36} className=' text-secondary z-30 ml-auto mb-3' />
               </button>
+              <ContactFormFranquicias />
             </div>
-            <TitleH2 title="Formulario" />
-            <ContactFormFranquicias />
           </Modal>
         }
 
