@@ -10,7 +10,7 @@ const Contacto = () => {
         <TitleH2 title={'¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.'} />
         <p>Nuestra forma de contacto es fácil y rápida. Puedes llenar el formulario en línea con tus preguntas o sugerencias, y nos pondremos en contacto contigo enseguida. <strong>¡Esperamos saber de ti pronto!</strong>
           <span className="ml-1">
-            o si gustas puedes visitar nuestra sección de
+            o si gustas, puedes visitar nuestra sección de
           </span>
           <span className="ml-1 text-secondary font-semibold italic">
             <Link to={'/preguntas-frecuentes'}>Preguntas Frecuentes</Link>

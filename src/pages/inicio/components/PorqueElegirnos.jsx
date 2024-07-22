@@ -1,12 +1,10 @@
-import React from 'react'
+
 import Section from '../templates/Section'
 import Container from '../containers/Container'
 import Image from 'next/image'
 import imageSection from '../../assets/images/images/Placeholder.webp'
 import { TbPoint } from 'react-icons/tb';
-import ButtonContainer from '../containers/ButtonContainer'
-import ButtonSecondary from '../buttons/ButtonSecondary'
-
+import PropTypes from 'prop-types'
 
 const PorqueElegirnos = ({ id }) => {
   return (
@@ -43,6 +41,9 @@ const PorqueElegirnos = ({ id }) => {
       </Container>
     </Section>
   )
+}
+PorqueElegirnos.propTypes = {
+  id: PropTypes.string.isRequired
 }
 
 export default PorqueElegirnos

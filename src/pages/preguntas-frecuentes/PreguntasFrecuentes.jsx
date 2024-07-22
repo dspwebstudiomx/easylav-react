@@ -5,7 +5,7 @@ import ButtonContainer from "../../components/containers/ButtonContainer";
 import ButtonSecondary from "../../components/buttons/ButtonSecondary";
 import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import { FaHome } from "react-icons/fa";
-import TitleH1 from "../../components/templates/title/TitleH1";
+import TitleH1 from "../../components/title/TitleH1";
 import { frequentQuestions } from "../../data/FrequentQuestions";
 import { FaRegBuilding } from "react-icons/fa6";
 import BorderLeft from "../../components/borders/BorderLeft"
@@ -31,24 +31,24 @@ const PreguntasFrecuentes = () => {
         {/* Questions */}
         <div className="w-full sm:grid grid-cols-2 gap-8 gap-y-2">
           <ul>
-            {frequentQuestions.map(question => {
+            {frequentQuestions.map(freqQuestion => {
               return (
-                <li key={question.id} id={`question-${question.id}`}>
+                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`}>
                   <AccordionItem
-                    header={question.question}
-                    text={question.answer}
+                    question={freqQuestion.question}
+                    answer={freqQuestion.answer}
                   />
                 </li>
               )
             }).slice(0, 3)}
           </ul>
           <ul>
-            {frequentQuestions.map(question => {
+            {frequentQuestions.map(freqQuestion => {
               return (
-                <li key={question.id} id={`question-${question.id}`}>
+                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`}>
                   <AccordionItem
-                    header={question.question}
-                    text={question.answer}
+                    question={freqQuestion.question}
+                    answer={freqQuestion.answer}
                   />
                 </li>
               )
@@ -66,7 +66,7 @@ const PreguntasFrecuentes = () => {
 };
 export default PreguntasFrecuentes;
 
-const AccordionItem = ({ header, text }) => {
+const AccordionItem = ({ question, answer }) => {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => {
@@ -98,7 +98,7 @@ const AccordionItem = ({ header, text }) => {
 
         <div className="w-full pr-5 xl:pr-16">
           <h4 className="mt-1 xl:text-xl font-semibold text-dark dark:text-white min-h-[100px] 2xl:min-h-[60px]">
-            {header}
+            {question}
           </h4>
         </div>
       </button>
@@ -108,13 +108,13 @@ const AccordionItem = ({ header, text }) => {
           }`}
       >
         <p className="py-3 text-lg text-body-color dark:text-dark-6 w-full pr-14">
-          {text}
+          {answer}
         </p>
       </div>
     </div>
   );
 };
 AccordionItem.propTypes = {
-  header: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  question: PropTypes.string,
+  answer: PropTypes.string,
 }
