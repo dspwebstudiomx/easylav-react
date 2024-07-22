@@ -13,7 +13,7 @@ export const navlinks = [
     name: "Quienes Somos",
     href: "/#nosotros",
     icon: GrUser,
-    linkId: "quienes-somos",
+    linkId: "Nosotros",
   },
   {
     id: "3",
@@ -47,7 +47,7 @@ export const linksServicios = [
   },
   {
     id: "2",
-    name: "Lavado Especializado",
+    name: "Lavado Especial",
     href: "/#lavado-especializado",
     linkId: "lavado-especializado",
   },

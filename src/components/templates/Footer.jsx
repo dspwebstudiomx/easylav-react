@@ -15,69 +15,75 @@ const Footer = () => {
 
   return (
     <footer id='footer' className='text-xl'>
+      <div className='bg-gradient-to-r from-primary to-secondary h-2 '></div>
       <Section backgroundColor={'bg-secondary'} id={'footer-sections'} className={'py-24'} height={'h-auto'}>
-        <Container className='text-light grid grid-cols-2 lg:grid-cols-4 justify-between mx-auto w-[80vw]'>
+        <Container className='text-light w-full grid xl:grid-cols-2'>
 
-          {/* Footer Sections */}
-          <div id='footer-sections' className='flex flex-col gap-8 w-full'>
-            <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Secciones</h3>
-            <ul className='flex flex-col gap-3'>
-              {navlinks.map(navlink => {
-                return (
-                  <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
-                    <NavHashLink id={`footer-link-${navlink.linkId}`} to={navlink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' />
-                      <span className='ml-2'>{navlink.name}</span>
-                    </NavHashLink>
-                  </li>
-                )
-              })}
-              <li><Link onClick={scrollToTop} to='/franquicias' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' /><span className='ml-2'>Franquicias</span></Link></li>
-            </ul>
-          </div>
-          {/* Footer Sections */}
+          <div className='grid grid-cols-2 gap-6'>
+            {/* Footer Sections */}
+            <div id='footer-sections' className='flex flex-col gap-8 w-full'>
+              <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Secciones</h3>
+              <ul className='flex flex-col gap-3'>
+                {navlinks.map(navlink => {
+                  return (
+                    <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
+                      <NavHashLink id={`footer-link-${navlink.linkId}`} to={navlink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} />
+                        <span className='ml-2'>{navlink.name}</span>
+                      </NavHashLink>
+                    </li>
+                  )
+                })}
+                <li><Link onClick={scrollToTop} to='/franquicias' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} /><span className='ml-2'>Franquicias</span></Link></li>
+              </ul>
+            </div>
+            {/* Footer Sections */}
 
-          {/* Footer Services */}
-          <div id='footer-services' className='flex flex-col gap-8 w-full'>
-            <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Servicios</h3>
-            <ul className='flex flex-col gap-3'>
-              {linksServicios.map(linkServicio => {
-                return (
-                  <li key={linkServicio.id} id={`footer-navlink-${linkServicio.linkId}`}>
-                    <NavHashLink id={`footer-link-${linkServicio.linkId}`} to={linkServicio.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' />
-                      <span className='ml-2'>{linkServicio.name}</span>
-                    </NavHashLink>
-                  </li>
-                )
-              })}
-            </ul>
+            {/* Footer Services */}
+            <div id='footer-services' className='flex flex-col gap-8 w-full'>
+              <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Servicios</h3>
+              <ul className='flex flex-col gap-4'>
+                {linksServicios.map(linkServicio => {
+                  return (
+                    <li key={linkServicio.id} id={`footer-navlink-${linkServicio.linkId}`}>
+                      <NavHashLink id={`footer-link-${linkServicio.linkId}`} to={linkServicio.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} />
+                        <span className='ml-0'>{linkServicio.name}</span>
+                      </NavHashLink>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            {/* Footer Services */}
           </div>
-          {/* Footer Services */}
 
-          {/* Footer Privacy & Terms */}
-          <div id='footer-privacy-terms' className='flex flex-col gap-8 w-full xl:w-full'>
-            <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Políticas de Privacidad, Términos y Condiciones, Preguntas Frecuentes</h3>
-            <ul className='flex flex-col gap-3'>
-              {otrosLinks.map(otroLink => {
-                return (
-                  <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
-                    <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' />
-                      <span className='ml-2'>{otroLink.name}</span>
-                    </NavHashLink>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-          {/* Footer Privacy & Terms */}
 
-          {/* Footer Logo */}
-          <div className='flex flex-col gap-8'>
-            <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
-              <img src={logo} alt='logo' className='w-[260px] h-auto mx-auto  2xl:mr-0' />
-            </a>
-            <SocialLinks position={'justify-end'} color={'text-light'} size={32} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
+          <div className='grid gap-12 md:grid-cols-2'>
+            {/* Footer Privacy & Terms */}
+            <div id='footer-privacy-terms' className='flex flex-col gap-8 w-full'>
+              <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Políticas de Privacidad, Términos y Condiciones, Preguntas Frecuentes</h3>
+              <ul className='flex flex-col gap-3'>
+                {otrosLinks.map(otroLink => {
+                  return (
+                    <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
+                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} />
+                        <span className='ml-2'>{otroLink.name}</span>
+                      </NavHashLink>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+            {/* Footer Privacy & Terms */}
+
+            {/* Footer Logo */}
+            <div className='flex flex-col gap-8'>
+              <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
+                <img src={logo} alt='logo' className='w-[260px] h-auto mx-auto  2xl:mr-0' />
+              </a>
+              <SocialLinks position={'justify-center md:justify-end'} color={'text-light'} size={32} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
+            </div>
+            {/* Footer Logo */}
           </div>
-          {/* Footer Logo */}
 
         </Container>
       </Section >

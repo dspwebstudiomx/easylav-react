@@ -19,21 +19,21 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl'>
-        <Container className={'flex justify-between px-8 sm:px-12 md:px-0 mx-auto z-50'}>
-          <div id='navbar' className='flex justify-between items-center h-[120px] sm:px-16 2xl:px-0'>
+      <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl md:px-12'>
+        <Container className={'flex justify-between px-8 sm:px-0 2xl:px-12 md:px-0 mx-auto z-50'}>
+          <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
               <a href="/">
-                <img alt='logo' src={logoImage} className='w-[240px] 2xl:w-[260px]' />
+                <img alt='logo' src={logoImage} className='w-[210px] 2xl:w-[260px]' />
               </a>
             </div>
 
             {/* Desktop menu */}
-            <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
+            <ul id='navlinks-desktop' className='hidden lg:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
               {navlinks.map((navlink) => {
                 return (
                   <li key={navlink.id} id={`navlink-${navlink.linkId}`} >
-                    <NavHashLink id={`link-${navlink.linkId}`} activeClassName='text-primary' className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
+                    <NavHashLink id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
                   </li>
                 )
               })}
@@ -50,12 +50,12 @@ const Navbar = () => {
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
-              <ul id='navlinks-mobile' className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 w-full p-12 gap-6">
+            <div className={!nav ? "hidden" : "absolute top-[124px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
+              <ul id='navlinks-mobile' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 w-full px-2 py-8 gap-3">
                 {navlinks.map((navlink) => {
                   return (
-                    <li id={`navlink-${navlink.linkId}`} key={navlink.id} className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-4 border-primary_dark py-4'>
-                      <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex w-full h-full py-2 items-center justify-center gap-4'>
+                    <li id={`navlink-${navlink.linkId}`} key={navlink.id} className='shadow-xl text-base rounded-2xl items-center flex justify-center bg-light h-[100%] border-4 border-primary_dark p-4'>
+                      <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-2 items-center justify-center gap-4'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={32} className='text-secondary' />}
                         </div>
@@ -64,9 +64,9 @@ const Navbar = () => {
                     </li>
                   )
                 })}
-                <li id='navlink-franquicia' className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-4 border-primary_dark '>
+                <li id='navlink-franquicias' className='shadow-xl text-base p-2 rounded-2xl items-center flex flex-col justify-center bg-light h-[100%] border-4 border-primary_dark '>
                   <NavHashLink id='link-franquicia' to='/franquicias'>
-                    <div className='flex items-center justify-center gap-5 py-4'>
+                    <div className='flex flex-col items-center justify-center gap-5 py-4'>
                       <GrGroup size={32} className='text-secondary' />
                       <button className='text-secondary text-base font-bold uppercase tracking-wide'>Franquicias</button>
                     </div>
@@ -78,32 +78,32 @@ const Navbar = () => {
           </div>
         </Container>
 
-        {/* Tablet menu */}
-        <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
-          {navlinks.map((navlink) => {
-            return (
-              <li id={`navlink-${navlink.linkId}`} key={navlink.id}>
-                <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} className='uppercase font-semibold text-md text-light hover:text-secondary'>{navlink.name}</NavHashLink>
-              </li>
-            )
-          })}
-          <li id={'navlink-franquicias'}>
-            <NavLink id='link-franquicias' className='uppercase font-semibold text-base xl:text-md text-secondary  hover:text-secondary_dark' to='/franquicias'>Franquicias</NavLink>
-          </li>
-        </ul>
-        {/* Tablet menu */}
         {menuOpen && (
           <style>
             {`
           body {
             overflow-y: hidden;
-          }
-        `}
+            }
+            `}
           </style>
         )}
       </nav >
 
       <div className='bg-gradient-to-r from-primary to-secondary h-1 '></div>
+      {/* Tablet menu */}
+      <ul id='navlinks-tablet' className='hidden md:flex lg:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
+        {navlinks.map((navlink) => {
+          return (
+            <li id={`navlink-${navlink.linkId}`} key={navlink.id}>
+              <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} className='uppercase font-semibold text-md text-light hover:text-secondary'>{navlink.name}</NavHashLink>
+            </li>
+          )
+        })}
+        <li id={'navlink-franquicias'}>
+          <NavLink id='link-franquicias' className='uppercase font-semibold text-base xl:text-md text-secondary  hover:text-secondary_dark' to='/franquicias'>Franquicias</NavLink>
+        </li>
+      </ul>
+      {/* Tablet menu */}
     </>
   )
 }

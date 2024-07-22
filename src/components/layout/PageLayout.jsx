@@ -10,7 +10,7 @@ const PageLayout = ({ children, id }) => {
   return (
     <>
       <Header />
-      <main id='contenido' className='sm:mt-12 md:mt-24 xl:mt-12'>
+      <main id='contenido' className='sm:mt-12 md:mt-0 xl:mt-12'>
         <Section id={id} className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={'mx-auto'}>
             {children}

@@ -5,14 +5,16 @@ import ButtonContainer from "../../components/containers/ButtonContainer";
 import ButtonSecondary from "../../components/buttons/ButtonSecondary";
 import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import { FaHome } from "react-icons/fa";
-import TitleH1 from "../../components/title/TitleH1";
+import TitleH1 from "../../components/templates/title/TitleH1";
 import { frequentQuestions } from "../../data/FrequentQuestions";
 import { FaRegBuilding } from "react-icons/fa6";
 import BorderLeft from "../../components/borders/BorderLeft"
+
 const PreguntasFrecuentes = () => {
   return (
     <PageLayout>
       <div className="-mx-4 flex flex-col sm:gap-12">
+        {/* Title */}
         <div className="w-full px-4">
           <div className="mx-auto mb-[60px] lg:mb-20 flex  flex-col gap-4">
             <h1 className="mb-2 block text-lg font-semibold text-primary">
@@ -21,9 +23,12 @@ const PreguntasFrecuentes = () => {
             <BorderLeft>
               <TitleH1 title=" Tienes alguna pregunta?" />
             </BorderLeft>
-            <span className="text-3xl">Puedes ver las preguntas más frecuentes:</span>
+            <span className="text-2xl w-full">Puedes ver las preguntas más frecuentes:</span>
           </div>
         </div>
+        {/* Title */}
+
+        {/* Questions */}
         <div className="w-full sm:grid grid-cols-2 gap-8 gap-y-2">
           <ul>
             {frequentQuestions.map(question => {
@@ -50,10 +55,11 @@ const PreguntasFrecuentes = () => {
             }).slice(3, 6)}
           </ul>
         </div>
+        {/* Questions */}
       </div>
       <ButtonContainer position={'justify-center'}>
-        <ButtonPrimary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} />
-        <ButtonSecondary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} />
+        <ButtonPrimary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'w-[240px]'} />
+        <ButtonSecondary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={'w-[240px]'} />
       </ButtonContainer>
     </PageLayout >
   );
@@ -90,8 +96,8 @@ const AccordionItem = ({ header, text }) => {
           </svg>
         </div>
 
-        <div className="w-full">
-          <h4 className="mt-1 text-lg font-semibold text-dark dark:text-white min-h-[100px] 2xl:min-h-[60px]">
+        <div className="w-full pr-5 xl:pr-16">
+          <h4 className="mt-1 xl:text-xl font-semibold text-dark dark:text-white min-h-[100px] 2xl:min-h-[60px]">
             {header}
           </h4>
         </div>
@@ -101,7 +107,7 @@ const AccordionItem = ({ header, text }) => {
         className={`pl-[62px] duration-200 w-full 2xl:w-[480px] ease-in-out ${active ? "block" : "hidden"
           }`}
       >
-        <p className="py-3 text-base leading-relaxed text-body-color dark:text-dark-6 w-full pr-14">
+        <p className="py-3 text-lg text-body-color dark:text-dark-6 w-full pr-14">
           {text}
         </p>
       </div>
