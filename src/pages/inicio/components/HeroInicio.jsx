@@ -6,7 +6,7 @@ import Container from '../../../components/containers/Container'
 
 const HeroInicio = () => {
   return (
-    <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-45'} opacityColor={'bg-dark'} height={'lg:h-[50vh]'}>
+    <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-45'} opacityColor={'bg-dark'} height={'2xl:h-[50vh]'}>
       <Container className={'items-start sm:w-[80vw]'}>
         {/* <h1 className='text-5xl font-extrabold uppercase'><span className='text-primary'>Easy</span><span className='text-secondary'>lav</span></h1> */}
         <p className='text-4xl sm:text-5xl sm:w-2/3 leading-[45px] sm:leading-[60px] font-semibold'>Tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto</p>

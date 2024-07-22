@@ -50,12 +50,12 @@ const Navbar = () => {
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[85vh] sm:h-[55vh] overflow-hidden flex flex-col bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
-              <ul id='navlinks-mobile' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 w-full h-full justify-center items-center py-12 gap-6">
+            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
+              <ul id='navlinks-mobile' className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 w-full p-12 gap-6">
                 {navlinks.map((navlink) => {
                   return (
-                    <li id={`navlink-${navlink.linkId}`} key={navlink.id} className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
-                      <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-2 items-center justify-center gap-4'>
+                    <li id={`navlink-${navlink.linkId}`} key={navlink.id} className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-4 border-primary_dark py-4'>
+                      <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex w-full h-full py-2 items-center justify-center gap-4'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={32} className='text-secondary' />}
                         </div>
@@ -64,11 +64,13 @@ const Navbar = () => {
                     </li>
                   )
                 })}
-                <li id='navlink-franquicias' className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-2 border-primary_dark '>
-                  <NavLink id='link-franquicias' to='/franquicias' onClick={toggleNav} className='flex flex-col w-full h-full py-7 items-center justify-between'>
-                    <GrGroup size={32} className='text-secondary mx-auto' />
-                    <button className='text-secondary text-base font-bold uppercase tracking-wide'>Franquicias</button>
-                  </NavLink>
+                <li id='navlink-franquicia' className='shadow-xl text-base p-2 rounded-2xl items-center flex justify-center bg-light h-[100%] border-4 border-primary_dark '>
+                  <NavHashLink id='link-franquicia' to='/franquicias'>
+                    <div className='flex items-center justify-center gap-5 py-4'>
+                      <GrGroup size={32} className='text-secondary' />
+                      <button className='text-secondary text-base font-bold uppercase tracking-wide'>Franquicias</button>
+                    </div>
+                  </NavHashLink>
                 </li>
               </ul>
             </div>
