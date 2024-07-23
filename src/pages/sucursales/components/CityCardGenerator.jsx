@@ -4,12 +4,13 @@ import { localservices } from '../../../data/sucursales'
 
 const CityCardGenerator = ({ city }) => {
   const ciudad = localservices.filter(localservice => localservice.city === city)
+  ciudad.sort((a, b) => a.title.localeCompare(b.title));
   return (
     <article className='grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-12 items-center justify-center'>
       {
         ciudad.map((localservice) =>
           <SucursalCard
-            key={localservice.id}
+            key={localservice.title}
             position={localservice.position}
             place={localservice.place}
             gmap={localservice.gmap}

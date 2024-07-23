@@ -6,7 +6,7 @@ import { FaRegClock } from 'react-icons/fa6'
 import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
 
-const SucursalCard = ({ title, id, position, serviceday1, serviceday2, servicehour1, servicehour2, place, email }) => {
+const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap }) => {
   return (
     <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
       <div>
@@ -26,10 +26,12 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
       </div>
       <div className='flex flex-col gap-5 items-start justify-center'>
         {/* Dirección */}
-        <p className='w-full mx-auto text-pretty flex gap-4 items-center text-base'>
-          <span className='text-secondary text-xl'><FaMapMarkerAlt /></span>
-          <span>{place}</span>
-        </p>
+        <a href={gmap} target="_blank" rel="noopener noreferrer">
+          <p className='w-full mx-auto text-pretty flex gap-4 items-center text-base'>
+            <span className='text-secondary text-xl'><FaMapMarkerAlt /></span>
+            <span>{place}</span>
+          </p>
+        </a>
         {/* Dirección */}
         {/* Horario */}
         <div className='w-full mx-auto text-pretty flex gap-4 items-center mb-2'>
@@ -39,10 +41,10 @@ const SucursalCard = ({ title, id, position, serviceday1, serviceday2, serviceho
               <p className='text-base'>{serviceday1}</p>
               <p className='text-base'>{servicehour1}</p>
             </div>
-            <div className='flex gap-2 flex-col  sm:flex-col lg:flex-row'>
+            {/* <div className='flex gap-2 flex-col  sm:flex-col lg:flex-row'>
               <p className='text-base'>{serviceday2}</p>
               <p className='text-base'>{servicehour2}</p>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Horario */}

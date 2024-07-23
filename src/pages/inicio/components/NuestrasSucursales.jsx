@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Container from '../../../components/containers/Container';
 import ButtonContainer from '../../../components/containers/ButtonContainer'
 import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
@@ -9,6 +10,17 @@ import TitleH2 from '../../../components/title/TitleH2';
 import BorderButtom from '../../../components/borders/BorderButtom';
 
 const NuestrasSucursales = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(3);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedLocalservices = localservices.slice(startIndex, endIndex);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
   return (
     <Section id="nuestras-sucursales" backgroundColor={''} height={''} className={''}>
       <Container className={'mx-auto'}>
@@ -16,7 +28,7 @@ const NuestrasSucursales = () => {
           <TitleH2 title="Sucursales" />
         </BorderButtom>
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12 mx-auto place-content-center'>
-          {localservices.map(localservice => {
+          {paginatedLocalservices.map(localservice => {
             return (
               <SucursalCard
                 key={localservice.id}
@@ -34,11 +46,23 @@ const NuestrasSucursales = () => {
             )
           })}
         </div>
+        <div className="mx-auto">
+          {Array(Math.ceil(localservices.length / itemsPerPage)).fill(0).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handlePageChange(index + 1)}
+              className={currentPage === index + 1 ? 'text-2xl text-primary px-2 font-semibold my-2' : 'text-2xl px-2 font-semibold mx-2'}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
         <ButtonContainer position={'justify-center'} distance={'mt-16'}>
           <ButtonSecondary title={'Contáctanos'} href={'/contacto'} width={'w-[240px]'} icon={<FaEnvelope />} />
         </ButtonContainer>
       </Container>
-    </Section >
+    </Section>
   )
 }
-export default NuestrasSucursales
+
+export default NuestrasSucursales;
