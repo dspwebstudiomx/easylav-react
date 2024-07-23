@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const Modal = ({ children, width, height }) => {
+const Modal = ({ children, height }) => {
   return (
     <div id='modal' className='fixed inset-0 animate__animated animate__fadeIn animate__slow grid place-items-center z-50'>
       <div id='modal-overlay' className='fixed inset-0 z-20 bg-dark opacity-40'></div>

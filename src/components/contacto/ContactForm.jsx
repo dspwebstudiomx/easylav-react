@@ -5,12 +5,13 @@ import emailjs from '@emailjs/browser';
 import ButtonContainer from '../containers/ButtonContainer';
 import ButtonSecondary from '../buttons/ButtonSecondary';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
-
+import EmailErrorModal from '../modals/EmailErrorModal';
 
 export default function ContactForm() {
 
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   useEffect(() => {
     if (showModal) {
@@ -22,6 +23,16 @@ export default function ContactForm() {
     }
   }, [showModal]);
 
+  useEffect(() => {
+    if (showErrorModal) {
+      document.body.classList.add('modal-active');
+      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+    } else {
+      document.body.classList.remove('modal-active');
+      document.body.style.overflow = 'unset'; // Reset the overflow style
+    }
+  }, [showErrorModal]);
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -30,12 +41,11 @@ export default function ContactForm() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
           setShowModal(true);
-
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setShowErrorModal(true);
         },
       );
   };
@@ -186,6 +196,13 @@ export default function ContactForm() {
                 onClick={() => {
                   setShowModal(false);
                   resetForm()
+                }}
+              />
+            }
+            {showErrorModal &&
+              <EmailErrorModal
+                onClick={() => {
+                  setShowErrorModal(false);
                 }}
               />
             }
