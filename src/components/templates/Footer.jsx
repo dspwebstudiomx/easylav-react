@@ -17,7 +17,7 @@ const Footer = () => {
     <footer id='footer' className='text-xl'>
       <div className='bg-gradient-to-r from-primary to-secondary h-2 '></div>
       <Section backgroundColor={'bg-secondary'} id={'footer-sections'} className={'py-24'} height={'h-auto'}>
-        <Container className='text-light w-full grid xl:grid-cols-2'>
+        <Container className='text-light w-full grid xl:grid-cols-2 mx-auto'>
 
           <div className='grid grid-cols-2 gap-6'>
             {/* Footer Sections */}

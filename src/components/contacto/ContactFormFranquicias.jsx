@@ -2,11 +2,10 @@ import { useRef, useState } from 'react';
 import { FaRegEnvelope } from 'react-icons/fa6'
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
-import Modal from './Modal';
-import { IoMdExit } from 'react-icons/io';
 import PropTypes from 'prop-types'
 import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
+import EmailSuccessModal from '../modals/EmailSuccessModal';
 
 
 export default function ContactFormFranquicias() {
@@ -177,20 +176,12 @@ export default function ContactFormFranquicias() {
 
             {/* Modal */}
             {showModal &&
-              <Modal>
-                <h1 className='text-center font-medium leading-snug'>Mensaje enviado<br></br>satisfactoriamente</h1>
-                <ButtonSecondary
-                  title={'Cerrar'}
-                  icon={<IoMdExit />}
-                  type={'button'}
-                  width={'w-[240px]'}
-                  onClick={() => {
-                    setShowModal(false);
-                    resetForm()
-                  }
-                  }
-                />
-              </Modal>
+              <EmailSuccessModal
+                onClick={() => {
+                  setShowModal(false);
+                  resetForm()
+                }}
+              />
             }
             {/* Modal */}
 

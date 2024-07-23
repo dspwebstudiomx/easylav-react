@@ -68,12 +68,18 @@ export const otrosLinks = [
   },
   {
     id: "2",
+    name: "Política de Cookies",
+    href: "/politica-cookies",
+    linkId: "politica-cookies",
+  },
+  {
+    id: "3",
     name: "Términos y Condiciones",
     href: "/terminos-condiciones",
     linkId: "terminos-condiciones",
   },
   {
-    id: "3",
+    id: "4",
     name: "Preguntas Frecuentes",
     href: "/preguntas-frecuentes",
     linkId: "preguntas-frecuentes",

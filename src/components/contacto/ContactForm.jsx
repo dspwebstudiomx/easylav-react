@@ -1,18 +1,26 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { FaRegEnvelope } from "react-icons/fa6"
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
-import Modal from './Modal';
-import { IoMdExit } from "react-icons/io";
-
-import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
+import ButtonSecondary from '../buttons/ButtonSecondary';
+import EmailSuccessModal from '../modals/EmailSuccessModal';
 
 
 export default function ContactForm() {
 
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.classList.add('modal-active');
+      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+    } else {
+      document.body.classList.remove('modal-active');
+      document.body.style.overflow = 'unset'; // Reset the overflow style
+    }
+  }, [showModal]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -174,20 +182,12 @@ export default function ContactForm() {
 
             {/* Modal */}
             {showModal &&
-              <Modal>
-                <h1 className='text-center font-medium leading-snug'>Mensaje enviado<br></br>satisfactoriamente</h1>
-                <ButtonSecondary
-                  title={'Cerrar'}
-                  icon={<IoMdExit />}
-                  type={'button'}
-                  width={'w-[240px]'}
-                  onClick={() => {
-                    setShowModal(false);
-                    resetForm()
-                  }
-                  }
-                />
-              </Modal>
+              <EmailSuccessModal
+                onClick={() => {
+                  setShowModal(false);
+                  resetForm()
+                }}
+              />
             }
             {/* Modal */}
 

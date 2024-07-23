@@ -95,12 +95,12 @@ const Franquicias = () => {
               </span>
             </li>
           </ul>
-          <p className="bg-primary_light text-2xl p-8 rounded-xl text-dark border-2 border-secondary">En resumen, invertir en la franquicia de Lavanderías Easylav representa una oportunidad estratégica y rentable en un mercado en crecimiento, respaldada por un modelo de negocio comprobado, una marca reconocida y un soporte integral.</p>
+          <p className="bg-primary_light text-2xl p-8 rounded-xl text-dark border-2 border-primary_dark">En resumen, invertir en la franquicia de Lavanderías Easylav representa una oportunidad estratégica y rentable en un mercado en crecimiento, respaldada por un modelo de negocio comprobado, una marca reconocida y un soporte integral.</p>
           <ButtonContainer position={'justify-center sm:justify-center my-12 sm:my-6'}>
             <ButtonSecondary title={'Solicita más información'} width={'w-[340px]'} onClick={handleModalToggle} icon={<FaInfoCircle />} />
           </ButtonContainer>
         </div>
-        {/* Columna 2 */}
+        {/* Columna 1 */}
 
         {/* Columna 2 */}
         <div id="columma-2" className="grid sm:grid-cols-2 lg:grid-cols-1 bg-red-100 gap-20 sm:gap-32 mt-24 md:p-12 lg:p-0 place-items-end sm:mr-9 mx-auto">
@@ -121,7 +121,7 @@ const Franquicias = () => {
 
         {showModal &&
           <Modal>
-            <div id='menu-button' className='z-40 flex flex-col w-full'>
+            <div id='franquicias-formualario' className='z-40 flex flex-col w-[90%] bg-light p-8 rounded-xl border-4 border-primary mx-auto'>
               <button
                 id="button-close"
                 onClick={handleModalToggle}
