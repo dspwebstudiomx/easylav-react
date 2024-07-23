@@ -190,7 +190,7 @@ export default function ContactForm() {
             </ButtonContainer>
             {/* Submit Button */}
 
-            {/* Modal */}
+            {/* Modals */}
             {showModal &&
               <EmailSuccessModal
                 onClick={() => {
@@ -206,7 +206,7 @@ export default function ContactForm() {
                 }}
               />
             }
-            {/* Modal */}
+            {/* Modals */}
 
           </Form>
         )

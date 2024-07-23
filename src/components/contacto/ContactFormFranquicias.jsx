@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { FaRegEnvelope } from 'react-icons/fa6'
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
@@ -6,12 +6,32 @@ import PropTypes from 'prop-types'
 import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
-
-
+import EmailErrorModal from '../modals/EmailErrorModal';
 export default function ContactFormFranquicias() {
 
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.classList.add('modal-active');
+      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+    } else {
+      document.body.classList.remove('modal-active');
+      document.body.style.overflow = 'unset'; // Reset the overflow style
+    }
+  }, [showModal]);
+
+  useEffect(() => {
+    if (showErrorModal) {
+      document.body.classList.add('modal-active');
+      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+    } else {
+      document.body.classList.remove('modal-active');
+      document.body.style.overflow = 'unset'; // Reset the overflow style
+    }
+  }, [showErrorModal]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,6 +47,7 @@ export default function ContactFormFranquicias() {
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setShowErrorModal(true);
         },
       );
   };
@@ -180,6 +201,13 @@ export default function ContactFormFranquicias() {
                 onClick={() => {
                   setShowModal(false);
                   resetForm()
+                }}
+              />
+            }
+            {showErrorModal &&
+              <EmailErrorModal
+                onClick={() => {
+                  setShowErrorModal(false);
                 }}
               />
             }
