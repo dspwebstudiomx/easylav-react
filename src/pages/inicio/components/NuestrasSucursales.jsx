@@ -8,6 +8,7 @@ import { localservices } from '../../../data/sucursales'
 import { FaEnvelope } from 'react-icons/fa6';
 import TitleH2 from '../../../components/title/TitleH2';
 import BorderButtom from '../../../components/borders/BorderButtom';
+import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
 
 const NuestrasSucursales = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,6 +20,18 @@ const NuestrasSucursales = () => {
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < Math.ceil(localservices.length / itemsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   return (
@@ -46,16 +59,27 @@ const NuestrasSucursales = () => {
             )
           })}
         </div>
-        <div className="mx-auto">
+        <div className="mx-auto flex justify-center items-center gap-7">
+          <button
+            onClick={handlePrevPage}
+          >
+            <BiChevronLeftCircle className='px-2 text-primary hover:text-secondary_light' size={55} />
+          </button>
           {Array(Math.ceil(localservices.length / itemsPerPage)).fill(0).map((_, index) => (
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={currentPage === index + 1 ? 'text-2xl text-primary px-2 font-semibold my-2' : 'text-2xl px-2 font-semibold mx-2'}
+              className={currentPage === index + 1 ? 'text-2xl font-bold border-b-2 border-b-primary_dark hover:text-secondary_light font-semibold ' : 'text-2xl font-semibold  hover:text-secondary_light'}
             >
               {index + 1}
             </button>
           ))}
+          <button
+            onClick={handleNextPage}
+            className="text-2xl px-2 font-semibold mx-2"
+          >
+            <BiChevronRightCircle className='px-2 text-primary hover:text-secondary_light' size={55} />
+          </button>
         </div>
         <ButtonContainer position={'justify-center'} distance={'mt-16'}>
           <ButtonSecondary title={'Contáctanos'} href={'/contacto'} width={'w-[240px]'} icon={<FaEnvelope />} />
