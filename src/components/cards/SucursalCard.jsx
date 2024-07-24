@@ -7,13 +7,16 @@ import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
 
 const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap }) => {
+
+  const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
+
   return (
     <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
       <div>
         <h3 className='text-center font-semibold text-xl uppercase py-4'>{title}</h3>
         {/* mapa */}
         <div className='h-[180px] rounded-lg '>
-          <APIProvider apiKey='AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik'>
+          <APIProvider apiKey={googleAPIKey}>
             <Map
               defaultCenter={position}
               zoom={17}
