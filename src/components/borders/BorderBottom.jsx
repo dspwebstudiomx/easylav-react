@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 
 const BorderBottom = ({ children, justify }) => {
   return (
-    <div className={` border-b-primary border-b-4 flex ${justify} w-[120px]`}>
-      <span className='py-3'>
+    <div className={` border-b-primary border-b-4 flex ${justify} text-center`}>
+      <span className='py-3 mx-auto'>
         {children}
       </span>
     </div>

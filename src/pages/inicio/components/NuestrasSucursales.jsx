@@ -45,7 +45,7 @@ const NuestrasSucursales = () => {
         <BorderBottom justify={'mx-auto'} >
           <TitleH2 title="Sucursales" />
         </BorderBottom>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-12 mx-auto place-content-center'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12 mx-auto place-content-center'>
           {paginatedLocalservices.map(localservice => {
             return (
               <SucursalCard
