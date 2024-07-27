@@ -11,9 +11,9 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`${width} flex flex-col gap-8 border-2 p-8 border-primary rounded-xl`}>
+    <article id={`sucursal-${title}`} key={id} className={`${width} flex flex-col justify-between gap-8 border-2 p-8 border-primary rounded-xl min-h-[570px]`}>
       <div>
-        <h3 className='text-center font-semibold text-xl uppercase py-4'>{title}</h3>
+        <h3 className='text-center font-semibold text-xl uppercase pb-4'>{title}</h3>
         {/* mapa */}
         <div className='h-[180px] rounded-lg '>
           <APIProvider apiKey={googleAPIKey}>
@@ -41,7 +41,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         <div className='w-full mx-auto text-pretty flex gap-4 items-center mb-2'>
           <span className='text-secondary'><FaRegClock /></span>
           <div className='flex flex-col gap-3 xl:gap-2'>
-            <div className='flex gap-2 flex-col  sm:flex-col lg:flex-row'>
+            <div className='flex gap-1 flex-col  sm:flex-col'>
               <p className='text-base'>{serviceday1}</p>
               <p className='text-base'>{servicehour1}</p>
             </div>
@@ -52,10 +52,10 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
           </div>
         </div>
         {/* Horario */}
-        <ButtonContainer position={'justify-center'}>
-          <ButtonSecondary title={'Enviar correo'} href={`mailto:${email}`} icon={<FaEnvelope />} width={'lg:w-[210px] 2xl:w-[325px]'} type={'button'} />
-        </ButtonContainer>
       </div>
+      <ButtonContainer position={'justify-center'}>
+        <ButtonSecondary title={'Enviar correo'} href={`mailto:${email}`} icon={<FaEnvelope />} width={'lg:w-[210px] 2xl:w-[280px]'} type={'button'} />
+      </ButtonContainer>
 
     </article>
   )

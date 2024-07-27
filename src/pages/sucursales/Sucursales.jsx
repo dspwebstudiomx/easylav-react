@@ -13,12 +13,12 @@ const Sucursales = () => {
         <title>Sucursales | Easylav</title>
         <link rel="canonical" href="https://easylav-react.netlify.app/sucursales" />
       </Helmet>
-      <BorderLeft position={'mx-auto sm:ml-0'}>
+      <BorderLeft position={'mx-auto'}>
         <TitleH2 title={'Morelia'} />
       </BorderLeft>
       < CityCardGenerator city={'Morelia'} />
       <Spacing height={'h-12'} />
-      <BorderLeft position={'mx-auto sm:ml-0'}>
+      <BorderLeft position={'mx-auto'}>
         <TitleH2 title={'León'} />
       </BorderLeft>
       <CityCardGenerator city={'León'} />

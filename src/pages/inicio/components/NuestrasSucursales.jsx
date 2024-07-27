@@ -9,11 +9,11 @@ import { FaEnvelope } from 'react-icons/fa6';
 import TitleH2 from '../../../components/title/TitleH2';
 import BorderBottom from '../../../components/borders/BorderBottom';
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
-import SucursalCardCopy from '../../../components/cards/SucursalCardCopy';
+import SucursalCard from '../../../components/cards/SucursalCard';
 
 const NuestrasSucursales = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(2);
+  const [itemsPerPage] = useState(4);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -45,10 +45,10 @@ const NuestrasSucursales = () => {
         <BorderBottom justify={'mx-auto'} >
           <TitleH2 title="Sucursales" />
         </BorderBottom>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-12 mx-auto place-content-center'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-12 mx-auto place-content-center'>
           {paginatedLocalservices.map(localservice => {
             return (
-              <SucursalCardCopy
+              <SucursalCard
                 key={localservice.id}
                 title={localservice.title}
                 gmap={localservice.gmap}
@@ -68,7 +68,7 @@ const NuestrasSucursales = () => {
           <button
             onClick={handlePrevPage}
           >
-            <BiChevronLeftCircle className='px-2 text-primary hover:text-secondary_light' size={55} />
+            <BiChevronLeftCircle className='mr-2 text-primary hover:text-secondary_light' size={45} />
           </button>
           {Array(Math.ceil(localservices.length / itemsPerPage)).fill(0).map((_, index) => (
             <button
@@ -81,9 +81,8 @@ const NuestrasSucursales = () => {
           ))}
           <button
             onClick={handleNextPage}
-            className="text-2xl px-2 font-semibold mx-2"
           >
-            <BiChevronRightCircle className='px-2 text-primary hover:text-secondary_light' size={55} />
+            <BiChevronRightCircle className='ml-2 text-primary hover:text-secondary_light' size={45} />
           </button>
         </div>
         <ButtonContainer position={'justify-center'} distance={'mt-16'}>
