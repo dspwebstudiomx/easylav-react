@@ -6,12 +6,12 @@ import { FaRegClock } from 'react-icons/fa6'
 import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
 
-const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap }) => {
+const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width }) => {
 
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
   return (
-    <article id={`sucursal-${title}`} key={id} className='flex flex-col gap-8 border-2 p-8 border-primary rounded-xl'>
+    <article id={`sucursal-${title}`} key={id} className={`${width} flex flex-col gap-8 border-2 p-8 border-primary rounded-xl`}>
       <div>
         <h3 className='text-center font-semibold text-xl uppercase py-4'>{title}</h3>
         {/* mapa */}
@@ -22,6 +22,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
               zoom={17}
               gestureHandling={'greedy'}
               disableDefaultUI={true}
+              mapTypeControl={false}
             />
           </APIProvider>
         </div>
@@ -62,6 +63,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
 SucursalCard.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
+  width: PropTypes.string,
   position: PropTypes.object,
   gmap: PropTypes.string,
   serviceday1: PropTypes.string,

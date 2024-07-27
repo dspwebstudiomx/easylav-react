@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+
 import '../node_modules/animate.css/animate.css'
 import Loading from './components/Loading'
 const Inicio = lazy(() => import('./pages/inicio/Inicio'))
@@ -18,14 +19,14 @@ export default function App() {
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/contacto" element={<ContactoPagina />} />
-          <Route path="/sucursales" element={<Sucursales />} />
-          <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
-          <Route path="/franquicias" element={<Franquicias />} />
-          <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
-          <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path='/' element={<Inicio />} />
+          <Route path='/contacto' element={<ContactoPagina />} />
+          <Route path='/sucursales' element={<Sucursales />} />
+          <Route path='/politica-privacidad' element={<PoliticaPrivacidad />} />
+          <Route path='/franquicias' element={<Franquicias />} />
+          <Route path='/terminos-condiciones' element={<TerminosCondiciones />} />
+          <Route path='/preguntas-frecuentes' element={<PreguntasFrecuentes />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter >

@@ -1,7 +1,7 @@
 import { FaStar, FaStarHalf } from "react-icons/fa6";
 import Section from "../../../components/templates/Section";
 import Container from "../../../components/containers/Container";
-import BorderButtom from "../../../components/borders/BorderButtom"
+import BorderButtom from "../../../components/borders/BorderBottom"
 import TitleH2 from "../../../components/title/TitleH2";
 
 const testimonios = [

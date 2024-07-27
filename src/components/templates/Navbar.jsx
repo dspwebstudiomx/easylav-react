@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop menu */}
-            <ul id='navlinks-desktop' className='hidden lg:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
+            <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
               {navlinks.map((navlink) => {
                 return (
                   <li key={navlink.id} id={`navlink-${navlink.linkId}`} >
@@ -91,7 +91,7 @@ const Navbar = () => {
 
       <div className='bg-gradient-to-r from-primary to-secondary h-1 '></div>
       {/* Tablet menu */}
-      <ul id='navlinks-tablet' className='hidden md:flex lg:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
+      <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
         {navlinks.map((navlink) => {
           return (
             <li id={`navlink-${navlink.linkId}`} key={navlink.id}>

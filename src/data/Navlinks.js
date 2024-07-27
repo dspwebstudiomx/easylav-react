@@ -7,7 +7,13 @@ import {
 } from "react-icons/gr";
 
 export const navlinks = [
-  { id: "1", name: "Inicio", href: "/", icon: GrHome, linkId: "inicio" },
+  {
+    id: "1",
+    name: "Inicio",
+    href: "/",
+    icon: GrHome,
+    linkId: "inicio",
+  },
   {
     id: "2",
     name: "Quienes Somos",

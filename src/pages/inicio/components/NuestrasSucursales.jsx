@@ -3,20 +3,23 @@ import Container from '../../../components/containers/Container';
 import ButtonContainer from '../../../components/containers/ButtonContainer'
 import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
 import Section from '../../../components/templates/Section'
-import SucursalCard from '../../../components/cards/SucursalCard';
+// import SucursalCard from '../../../components/cards/SucursalCard';
 import { localservices } from '../../../data/sucursales'
 import { FaEnvelope } from 'react-icons/fa6';
 import TitleH2 from '../../../components/title/TitleH2';
-import BorderButtom from '../../../components/borders/BorderButtom';
+import BorderBottom from '../../../components/borders/BorderBottom';
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
+import SucursalCardCopy from '../../../components/cards/SucursalCardCopy';
 
 const NuestrasSucursales = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(3);
+  const [itemsPerPage] = useState(2);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedLocalservices = localservices.slice(startIndex, endIndex);
+  const section = document.getElementById('nuestras-sucursales');
+
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -25,25 +28,27 @@ const NuestrasSucursales = () => {
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
     }
   };
 
   const handleNextPage = () => {
     if (currentPage < Math.ceil(localservices.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
+      window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
     }
   };
 
   return (
     <Section id="nuestras-sucursales" backgroundColor={''} height={''} className={''}>
       <Container className={'mx-auto'}>
-        <BorderButtom justify={'mx-auto'} >
+        <BorderBottom justify={'mx-auto'} >
           <TitleH2 title="Sucursales" />
-        </BorderButtom>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12 mx-auto place-content-center'>
+        </BorderBottom>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-12 mx-auto place-content-center'>
           {paginatedLocalservices.map(localservice => {
             return (
-              <SucursalCard
+              <SucursalCardCopy
                 key={localservice.id}
                 title={localservice.title}
                 gmap={localservice.gmap}

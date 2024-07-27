@@ -10,8 +10,8 @@ import { navlinks, otrosLinks, linksServicios } from '../../data/Navlinks'
 const Footer = () => {
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <footer id='footer' className='text-xl'>
@@ -27,7 +27,7 @@ const Footer = () => {
                 {navlinks.map(navlink => {
                   return (
                     <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
-                      <NavHashLink id={`footer-link-${navlink.linkId}`} to={navlink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} />
+                      <NavHashLink id={`footer-link-${navlink.linkId}`} to={navlink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} onClick={scrollToTop} />
                         <span className='ml-2'>{navlink.name}</span>
                       </NavHashLink>
                     </li>

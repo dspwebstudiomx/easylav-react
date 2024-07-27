@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const BorderButtom = ({ children, justify }) => {
+const BorderBottom = ({ children, justify }) => {
   return (
     <div className={` border-b-primary border-b-4 flex ${justify}`}>
       <span className='py-3'>
@@ -9,9 +9,9 @@ const BorderButtom = ({ children, justify }) => {
     </div>
   )
 }
-BorderButtom.propTypes = {
+BorderBottom.propTypes = {
   children: PropTypes.node.isRequired,
   justify: PropTypes.string,
 }
 
-export default BorderButtom
+export default BorderBottom

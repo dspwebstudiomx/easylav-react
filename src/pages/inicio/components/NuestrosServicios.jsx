@@ -7,7 +7,7 @@ import Container from '../../../components/containers/Container'
 import ButtonContainer from '../../../components/containers/ButtonContainer'
 import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
 import TitleH2 from '../../../components/title/TitleH2'
-import BorderButtom from '../../../components/borders/BorderButtom'
+import BorderButtom from '../../../components/borders/BorderBottom'
 
 const services = [
   {
