@@ -15,24 +15,19 @@ import SucursalCard from '../../../components/cards/SucursalCard';
 const NuestrasSucursales = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(3);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLandscape, setIsLandscape] = useState(false);
 
-  const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-  const isSmartphoneLandscape = useMediaQuery({ query: '(min-width: 480px) and (max-width: 767px) and (orientation: landscape)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 1025px) and (max-width: 1240px)' });
 
   useEffect(() => {
-    if (isSmartphoneLandscape) {
-      setItemsPerPage(2);
-      setIsLandscape(true);
-    } else if (!isTabletOrDesktop) {
+    if (isMobile) {
       setItemsPerPage(1);
-      setIsMobile(true);
-    } else {
+    } else if (isTablet) {
+      setItemsPerPage(2);
+    } else
       setItemsPerPage(3);
-      setIsMobile(false);
-    }
-  }, [isTabletOrDesktop, isSmartphoneLandscape]);
+  }, [isMobile, isTablet]);
+
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -65,7 +60,7 @@ const NuestrasSucursales = () => {
         <BorderBottom justify={'mx-auto'} >
           <TitleH2 title="Sucursales" />
         </BorderBottom>
-        <div className={`grid ${isMobile ? 'grid-cols-1' : isLandscape ? 'grid-cols-2' : 'grid-cols-3'} gap-12 mx-auto place-content-center`}>
+        <div className={`grid ${isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-2' : 'grid-cols-3'} gap-12 mx-auto place-content-center`}>
           {paginatedLocalservices.map(localservice => {
             return (
               <SucursalCard
@@ -80,7 +75,7 @@ const NuestrasSucursales = () => {
                 servicehour2={localservice.servicehour2}
                 ciudad={localservice.ciudad}
                 email={localservice.email}
-                width={'w-[350px] sm:w-[240px]'}
+                width={'w-[350px] w-[320px]'}
               />
             )
           })}
