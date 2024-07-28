@@ -54,7 +54,7 @@ const NuestrosServicios = () => {
             }
           </ul>
           <ButtonContainer position={'justify-center'} distance={'mt-16'}>
-            <ButtonSecondary title={'Conoce nuestras Sucursales'} href={'/sucursales'} width={'w-[320px] xl:w-[340px]'} />
+            <ButtonSecondary title={'Conoce nuestras Sucursales'} href={'/sucursales'} width={'w-[320px] xl:w-[340px]'} height={'h-[100px]'} />
           </ButtonContainer>
         </div>
       </Container>
