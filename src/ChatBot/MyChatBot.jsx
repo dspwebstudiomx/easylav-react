@@ -1,11 +1,8 @@
-import { useState } from "react";
-import ChatBot from "react-chatbotify";
-// import icon from "../assets/images/favicon/favicon.png"
-
+import { useState } from 'react';
+import ChatBot from 'react-chatbotify';
 
 const MyChatBot = () => {
 
-	const icon = "🤖"
 
 	// settings
 	const settings = {
@@ -18,44 +15,61 @@ const MyChatBot = () => {
 			embedded: false,
 		},
 		header: {
-			title: "Easylav ChatBot"
+			title: 'Easylav ChatBot'
 		},
 		audio: {
-			disabled: true,
+			disabled: false,
 		},
 		chatHistory: {
-			disabled: true,
-			storageKey: "concepts_settings"
+			disabled: false,
+			storageKey: 'concepts_settings'
 		},
-		chatButton: {
-			icon: icon,
-		},
+		// chatButton: {
+		// 	icon: '🤖'
+		// },
 		tooltip: {
-			mode: 'never'
-		}
+			text: '¿Tienes dudas?',
+		},
+		enabledPlaceholderText: 'Escribe tu mensaje...'
 	}
 
 	// styles here
 	const styles = {
 		headerStyle: {
-			background: '#622a77',
+			background: '#55C3B9',
 			color: '#ffffff',
-			padding: '10px',
 			fontWeight: 'bold',
-			letterSpacing: '1px'
+			letterSpacing: '1px',
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'between'
 		},
 		chatWindowStyle: {
 			backgroundColor: '#f2f2f2',
 		},
-		chatButton: {
+		chatButtonStyle: {
 			backgroundColor: '#622a77',
+		},
+		tooltipStyle: {
+			backgroundColor: '#55C3B9',
+			border: '1px solid #f2f2f2'
+		},
+		botBubbleStyle: {
+			backgroundColor: '#622a77'
+		},
+		userBubbleStyle: {
+			backgroundColor: '#975CDA'
+		},
+		bodyStyle: {
+			padding: '1.1em'
 		}
 	}
+
 	const [form, setForm] = useState({});
 	const formStyle = {
 		marginTop: 10,
 		marginLeft: 20,
-		border: "1px solid #491d8d",
+		border: '1px solid #491d8d',
 		padding: 10,
 		borderRadius: 5,
 		maxWidth: 300
@@ -64,36 +78,36 @@ const MyChatBot = () => {
 
 	const flow = {
 		start: {
-			message: "Hola! Como estás?",
+			message: 'Hola! Como estás?',
 			function: (params) => setForm({ ...form, name: params.userInput }),
-			path: "ask_age"
+			path: 'ask_age'
 		},
 		ask_age: {
 			message: (params) => `Nice to meet you ${params.userInput}, what is your age?`,
 			function: (params) => setForm({ ...form, age: params.userInput }),
-			path: "ask_pet"
+			path: 'ask_pet'
 		},
 		ask_pet: {
-			message: "Do you own any pets?",
-			options: ["Yes", "No"],
+			message: 'Do you own any pets?',
+			options: ['Yes', 'No'],
 			chatDisabled: true,
 			function: (params) => setForm({ ...form, pet_ownership: params.userInput }),
-			path: "ask_choice"
+			path: 'ask_choice'
 		},
 		ask_choice: {
-			message: "Select at least 2 pets that you are comfortable to work with:",
-			checkboxes: { items: ["Dog", "Cat", "Rabbit", "Hamster"], min: 2 },
+			message: 'Select at least 2 pets that you are comfortable to work with:',
+			checkboxes: { items: ['Dog', 'Cat', 'Rabbit', 'Hamster'], min: 2 },
 			chatDisabled: true,
 			function: (params) => setForm({ ...form, pet_choices: params.userInput }),
-			path: "ask_work_days"
+			path: 'ask_work_days'
 		},
 		ask_work_days: {
-			message: "How many days can you work per week?",
+			message: 'How many days can you work per week?',
 			function: (params) => setForm({ ...form, num_work_days: params.userInput }),
-			path: "end"
+			path: 'end'
 		},
 		end: {
-			message: "Thank you for your interest, we will get back to you shortly!",
+			message: 'Thank you for your interest, we will get back to you shortly!',
 			component: (
 				<div style={formStyle}>
 					<p>Name: {form.name}</p>
@@ -103,13 +117,13 @@ const MyChatBot = () => {
 					<p>Num Work Days: {form.num_work_days}</p>
 				</div>
 			),
-			options: ["New Application"],
+			options: ['New Application'],
 			chatDisabled: true,
-			path: "start"
+			path: 'start'
 		},
 	}
 	return (
-		<div className="fixed bottom-24 right-20">
+		<div className='fixed bottom-24 right-20'>
 			<ChatBot
 				styles={styles}
 				settings={settings}
