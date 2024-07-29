@@ -13,7 +13,6 @@ const PoliticaPrivacidad = lazy(() => import('./pages/politica-privacidad/Politi
 const TerminosCondiciones = lazy(() => import('./pages/terminos-condiciones/TerminosCondiciones'))
 const PreguntasFrecuentes = lazy(() => import('./pages/preguntas-frecuentes/PreguntasFrecuentes'))
 
-
 export default function App() {
   return (
     <BrowserRouter>

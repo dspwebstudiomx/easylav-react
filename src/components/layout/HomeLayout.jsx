@@ -2,6 +2,8 @@ import Header from '../templates/Header'
 import Footer from '../templates/Footer'
 import PropTypes from 'prop-types'
 import Spacing from './Spacing'
+import MyChatBot from '../../ChatBot/MyChatBot'
+import ScrollToTopButton from '../buttons/ScrollToTopButton';
 
 const MainLayout = ({ children }) => {
   return (
@@ -12,6 +14,8 @@ const MainLayout = ({ children }) => {
         <Spacing height={'h-24'} />
       </main>
       <Footer />
+      <ScrollToTopButton />
+      <MyChatBot />
     </>
   )
 }

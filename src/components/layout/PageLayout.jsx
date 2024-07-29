@@ -5,6 +5,8 @@ import Section from '../templates/Section'
 import Container from '../containers/Container'
 import Spacing from './Spacing'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
+import MyChatBot from '../../ChatBot/MyChatBot'
+
 
 const PageLayout = ({ children, id }) => {
   return (
@@ -20,6 +22,7 @@ const PageLayout = ({ children, id }) => {
       </main>
       <Footer />
       <ScrollToTopButton />
+      <MyChatBot />
     </>
   )
 }

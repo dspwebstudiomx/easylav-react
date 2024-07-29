@@ -32,16 +32,16 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         {/* Dirección */}
         <a href={gmap} target="_blank" rel="noopener noreferrer">
           <p className='w-full mx-auto text-pretty flex gap-4 items-center text-base'>
-            <span className='text-secondary text-xl'><FaMapMarkerAlt /></span>
+            <span className='text-secondary text-xl'><FaMapMarkerAlt size={25} /></span>
             <span>{place}</span>
           </p>
         </a>
         {/* Dirección */}
         {/* Horario */}
         <div className='w-full mx-auto text-pretty flex gap-4 items-center mb-2'>
-          <span className='text-secondary'><FaRegClock /></span>
-          <div className='flex flex-col gap-3 xl:gap-2'>
-            <div className='flex gap-1 flex-col  sm:flex-col'>
+          <span className='text-secondary'><FaRegClock size={22} /></span>
+          <div className='flex gap-3 xl:gap-2'>
+            <div className='flex gap-4'>
               <p className='text-base'>{serviceday1}</p>
               <p className='text-base'>{servicehour1}</p>
             </div>

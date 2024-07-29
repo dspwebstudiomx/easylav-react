@@ -2,7 +2,6 @@ import HomeLayout from "../../components/layout/HomeLayout"
 import HeroInicio from "./components/HeroInicio"
 import { Helmet } from "react-helmet"
 import Container from "../../components/containers/Container"
-import ScrollToTopButton from "../../components/buttons/ScrollToTopButton"
 import Section from "../../components/templates/Section"
 import { lazy, Suspense } from "react"
 import Loading from "../../components/Loading"
@@ -33,7 +32,7 @@ const Inicio = () => {
           </Container>
         </Section>
       </HomeLayout>
-      <ScrollToTopButton />
+
     </Suspense>
 
   )
