@@ -7,6 +7,7 @@ import { lazy, Suspense } from "react"
 import Loading from "../../components/Loading"
 // import NuestrasSucursalesCopy from "./components/NuestrasSucursalesCopy"
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
+const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
 const NuestrasSucursales = lazy(() => import("./components/NuestrasSucursales"))
 const NuestrosServicios = lazy(() => import("./components/NuestrosServicios"))
 const Testimonios = lazy(() => import("./components/Testimonios"))
@@ -24,6 +25,7 @@ const Inicio = () => {
         <HeroInicio />
         <SobreNosotros />
         <NuestrosServicios />
+        <PorqueElegirnos />
         <NuestrasSucursales />
         <Testimonios />
         <Section>

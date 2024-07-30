@@ -80,3 +80,9 @@ p {
   width: 100%;
   height: 100%;
 }
+
+.shadow-image {
+  --tw-shadow: 10px 10px 0px 0px #35d5c4;
+  --tw-shadow-colored: 10px 10px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

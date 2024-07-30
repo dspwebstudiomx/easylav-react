@@ -18,10 +18,10 @@ const MyChatBot = () => {
 			title: 'Easylav ChatBot'
 		},
 		audio: {
-			disabled: false,
+			disabled: true,
 		},
 		chatHistory: {
-			disabled: false,
+			disabled: true,
 			storageKey: 'concepts_settings'
 		},
 		// chatButton: {
@@ -30,7 +30,9 @@ const MyChatBot = () => {
 		tooltip: {
 			text: '¿Tienes dudas?',
 		},
-		enabledPlaceholderText: 'Escribe tu mensaje...'
+		enabledPlaceholderText: {
+			text: 'Escribe tu mensaje...'
+		},
 	}
 
 	// styles here
@@ -58,7 +60,7 @@ const MyChatBot = () => {
 			backgroundColor: '#622a77'
 		},
 		userBubbleStyle: {
-			backgroundColor: '#975CDA'
+			backgroundColor: '#55C3B9'
 		},
 		bodyStyle: {
 			padding: '1.1em'

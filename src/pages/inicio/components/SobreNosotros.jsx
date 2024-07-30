@@ -1,4 +1,4 @@
-import imageSection from '../../../assets/images/images/Placeholder.webp'
+import imageSection from '../../../assets/images/images/laundrylady.webp'
 import Container from '../../../components/containers/Container'
 import Section from '../../../components/templates/Section'
 import TitleH2 from '../../../components/title/TitleH2'
@@ -18,7 +18,7 @@ const SobreNosotros = () => {
             </p>
           </div>
           <div className='justify-end items-center'>
-            <img src={imageSection} alt="alt" width={520} className='shadow-image rounded' />
+            <img src={imageSection} alt="alt" width={520} className='shadow-image' />
           </div>
         </div>
       </Container>
