@@ -1,10 +1,11 @@
 import HomeLayout from "../../components/layout/HomeLayout"
 import HeroInicio from "./components/HeroInicio"
-import { Helmet } from "react-helmet"
 import Container from "../../components/containers/Container"
 import Section from "../../components/templates/Section"
 import { lazy, Suspense } from "react"
 import Loading from "../../components/Loading"
+import SEOFriendly from "../../components/SEOFriendly"
+import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
 // import NuestrasSucursalesCopy from "./components/NuestrasSucursalesCopy"
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
 const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
@@ -17,11 +18,15 @@ const Inicio = () => {
   return (
     <Suspense fallback={<Loading />} >
       <HomeLayout>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Inicio | Easylav</title>
-          <link rel="canonical" href="https://easylav-react.netlify.app/" />
-        </Helmet>
+        <SEOFriendly
+          title="Inicio | Easylav"
+          description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
+          author="dspwebstudio"
+          keywords="lavandería Morelia, planchado Morelia"
+          ogImage={image}
+          ogImageAlt="canasta verde con ropa sucia"
+          url="easylav-react.netlify.app"
+        />
         <HeroInicio />
         <SobreNosotros />
         <NuestrosServicios />
