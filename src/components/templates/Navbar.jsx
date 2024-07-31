@@ -7,7 +7,6 @@ import { FaBars } from "react-icons/fa"
 import { FaXmark } from 'react-icons/fa6';
 import { GrGroup } from 'react-icons/gr';
 import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
