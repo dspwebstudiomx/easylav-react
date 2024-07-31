@@ -48,6 +48,7 @@ export const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "Morelia",
     email: "cincodefebrero@easylav.mx",
+    titleMailto: "Enviar correo a 5 de Febrero",
   },
   {
     id: 4,
@@ -59,6 +60,7 @@ export const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "Morelia",
     email: "sierradeveracruz@easylav.mx",
+    titleMailto: "Enviar correo a sucursal Sierra de Veracruz",
   },
   {
     id: 5,
@@ -71,6 +73,7 @@ export const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "Morelia",
     email: "maderooriente@easylav.mx",
+    titleMailto: "Enviar correo a sucursal Madero Oriente",
   },
   {
     id: 7,
@@ -82,6 +85,7 @@ export const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "Morelia",
     email: "solidaridad@easylav.mx",
+    titleMailto: "Enviar correo a sucursal Solidaridad",
   },
   {
     id: 8,
@@ -94,6 +98,7 @@ export const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "Morelia",
     email: "adolfolopezmateos@easylav.mx",
+    titleMailto: "Enviar correo a sucursal Adolfo López Mateos",
   },
   {
     id: 9,
@@ -105,5 +110,6 @@ export const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "León",
     email: "delta@easylav.mx",
+    titleMailto: "Enviar correo a sucursal a Delta",
   },
 ];

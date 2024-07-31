@@ -4,11 +4,11 @@ import Container from '../containers/Container'
 
 
 
-const Hero = ({ children, backgroundColor, backgroundImage, height, titleSection, opacity, opacityColor, textColor }) => {
+const Hero = ({ children, backgroundColor, backgroundImage, height, titleSection, opacity, opacityColor, textColor, imageAlt }) => {
   return (
     <Section id={titleSection} backgroundImage={backgroundImage} height={height} backgroundColor={backgroundColor} className={`${textColor} relative overflow-hidden z-0 flex items-center justify-center`}>
       <div id={`imagen-${titleSection}`} className='inset-0 -z-20 h-full object-cover object-center absolute top:0'>
-        <img src={backgroundImage} alt={titleSection} className='h-full object-cover w-full' />
+        <img src={backgroundImage} alt={imageAlt} className='h-full object-cover w-full' title={imageAlt} />
       </div>
       <div id={`opacidad-${titleSection}`} className={`${opacity} absolute inset-0 -z-10 ${opacityColor}`}></div>
       <Container id={`contenido-${titleSection}`}>
@@ -25,7 +25,8 @@ Hero.propTypes = {
   titleSection: PropTypes.string,
   opacity: PropTypes.string,
   opacityColor: PropTypes.string,
-  textColor: PropTypes.string
+  textColor: PropTypes.string,
+  imageAlt: PropTypes.string.isRequired
 }
 
 export default Hero

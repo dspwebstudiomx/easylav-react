@@ -76,6 +76,7 @@ const NuestrasSucursales = () => {
                 ciudad={localservice.ciudad}
                 email={localservice.email}
                 width={'w-[350px] w-[320px]'}
+                titleMailto={localservice.titleMailto}
               />
             )
           })}

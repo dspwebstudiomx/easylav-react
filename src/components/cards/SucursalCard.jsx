@@ -6,8 +6,7 @@ import { FaRegClock } from 'react-icons/fa6'
 import ButtonContainer from '../containers/ButtonContainer'
 import ButtonSecondary from '../buttons/ButtonSecondary'
 
-const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width }) => {
-
+const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto }) => {
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
   return (
@@ -30,7 +29,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
       </div>
       <div className='flex flex-col gap-5 items-start justify-center'>
         {/* Dirección */}
-        <a href={gmap} target="_blank" rel="noopener noreferrer">
+        <a href={gmap} target="_blank" rel="noopener noreferrer" title={`sucursal ${title}`}>
           <p className='w-full mx-auto text-pretty flex gap-4 items-center text-base'>
             <span className='text-secondary text-xl'><FaMapMarkerAlt size={25} /></span>
             <span>{place}</span>
@@ -54,7 +53,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         {/* Horario */}
       </div>
       <ButtonContainer position={'justify-center'}>
-        <ButtonSecondary title={'Enviar correo'} href={`mailto:${email}`} icon={<FaEnvelope />} width={'w-[320px] lg:w-[210px] 2xl:w-[280px] h-[80px]'} type={'button'} />
+        <ButtonSecondary title={`Enviar correo`} href={`mailto:${email}`} icon={<FaEnvelope />} width={'w-[320px] lg:w-[210px] 2xl:w-[280px] h-[80px]'} type={'button'} titleMailto={titleMailto} />
       </ButtonContainer>
 
     </article>
@@ -72,6 +71,7 @@ SucursalCard.propTypes = {
   email: PropTypes.string,
   servicehour2: PropTypes.string,
   place: PropTypes.string,
+  titleMailto: PropTypes.string,
 }
 
 export default SucursalCard

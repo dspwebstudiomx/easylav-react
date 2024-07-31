@@ -5,6 +5,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
   return (
     <Helmet>
       <title>{title}</title>
+      <link rel="canonical" href="{url}" />
       <meta name='description' content={description} />
       <meta name="author" content={author} />
       <meta name="keywords" content={keywords} />

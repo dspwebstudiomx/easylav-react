@@ -10,7 +10,7 @@ export const navlinks = [
   {
     id: "1",
     name: "Inicio",
-    href: "/",
+    href: "/#inicio",
     icon: GrHome,
     linkId: "inicio",
   },

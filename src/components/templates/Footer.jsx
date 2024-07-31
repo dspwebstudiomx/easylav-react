@@ -9,9 +9,15 @@ import { navlinks, otrosLinks, linksServicios } from '../../data/Navlinks'
 
 const Footer = () => {
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+  const scrollWithOffset = (element, offset) => {
+    const elementPosition = element.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth",
+    });
   }
+
 
   return (
     <footer id='footer' className='text-xl'>
@@ -27,13 +33,34 @@ const Footer = () => {
                 {navlinks.map(navlink => {
                   return (
                     <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
-                      <NavHashLink id={`footer-link-${navlink.linkId}`} to={navlink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} onClick={scrollToTop} />
+                      <NavHashLink
+                        id={`footer-link-${navlink.linkId}`}
+                        to={navlink.href}
+                        className='text-white hover:text-primary flex items-center'
+                        scroll={element => scrollWithOffset(element, 120)}
+                      >
+                        <TbPoint className='text-primary text-2xl' size={32} />
                         <span className='ml-2'>{navlink.name}</span>
                       </NavHashLink>
                     </li>
                   )
                 })}
-                <li><Link onClick={scrollToTop} to='/franquicias' className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} /><span className='ml-2'>Franquicias</span></Link></li>
+                <li>
+                  <Link
+                    to='/franquicias'
+                    className='text-white hover:text-primary flex items-center'
+                    scroll={element => scrollWithOffset(element, 120)}
+                  >
+                    <TbPoint
+                      className='text-primary text-2xl'
+                      size={32}
+                    />
+                    <span
+                      className='ml-2'
+                    >Franquicias
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </div>
             {/* Footer Sections */}
@@ -45,7 +72,15 @@ const Footer = () => {
                 {linksServicios.map(linkServicio => {
                   return (
                     <li key={linkServicio.id} id={`footer-navlink-${linkServicio.linkId}`}>
-                      <NavHashLink id={`footer-link-${linkServicio.linkId}`} to={linkServicio.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} />
+                      <NavHashLink
+                        id={`footer-link-${linkServicio.linkId}`}
+                        to={linkServicio.href}
+                        className='text-white hover:text-primary flex items-center'
+                        scroll={element => scrollWithOffset(element, 160)}
+                      >
+                        <TbPoint
+                          className='text-primary text-2xl' size={32}
+                        />
                         <span className='ml-0'>{linkServicio.name}</span>
                       </NavHashLink>
                     </li>
@@ -65,7 +100,7 @@ const Footer = () => {
                 {otrosLinks.map(otroLink => {
                   return (
                     <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
-                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} />
+                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} scroll={element => scrollWithOffset(element, 120)} />
                         <span className='ml-2'>{otroLink.name}</span>
                       </NavHashLink>
                     </li>
@@ -78,7 +113,7 @@ const Footer = () => {
             {/* Footer Logo */}
             <div className='flex flex-col gap-8'>
               <a id='footer-logo' className='sm:w-full flex flex-col gap-8 items-center' href='/'>
-                <img src={logo} alt='logo' className='w-[260px] h-auto mx-auto  2xl:mr-0' />
+                <img src={logo} alt='logo easylav blanco' className='w-[260px] h-auto mx-auto  2xl:mr-0' title='logo easylav blanco' />
               </a>
               <SocialLinks position={'justify-center md:justify-end'} color={'text-light'} size={32} circleBorder={'border-2 rounded-[100px] border-light p-3'} gap={'gap-4'} hover={'hover:text-primary hover:border-primary'} />
             </div>
@@ -93,7 +128,7 @@ const Footer = () => {
           <h3>Diseñado y Desarrollado por: <a href='https://dspwebstudio.com' target='_blank' className='text-secondary font-semibold ml-2'>dspwebstudio.com</a></h3>
         </div>
       </div>
-    </footer>
+    </footer >
   )
 }
 export default Footer

@@ -34,7 +34,7 @@ const PorqueElegirnos = () => {
             </div>
           </div>
           <div className='justify-end items-center'>
-            <img src={imageSection} alt="alt" width={520} className='shadow-image rounded' />
+            <img src={imageSection} alt='placeholder imagen' width={520} className='shadow-image rounded' title='placeholder imagen' />
           </div>
         </article>
       </Container>

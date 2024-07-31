@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
-const Button = ({ themeButton, title, width, border, icon, type, onClick, href, height }) => {
+const Button = ({ themeButton, title, width, border, icon, type, onClick, href, height, titleMailto }) => {
   return (
     <a href={href}>
-      <button onClick={onClick} type={type} className={`flex items-center justify-center ${themeButton} ${width} ${height} text-light  text-xl font-semibold rounded-xl ${border}`}>
+      <button onClick={onClick} type={type} className={`flex items-center justify-center ${themeButton} ${width} ${height} text-light  text-xl font-semibold rounded-xl ${border}`} title={titleMailto} >
         <span className='mr-3'>{icon}</span>
         {title}
       </button>
@@ -19,7 +19,8 @@ Button.propTypes = {
   border: PropTypes.string,
   icon: PropTypes.element,
   type: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  titleMailto: PropTypes.string
 }
 
 export default Button

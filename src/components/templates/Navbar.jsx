@@ -32,13 +32,12 @@ const Navbar = () => {
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
               <a href="/">
-                <img alt='logo' src={logoImage} className='w-[210px] 2xl:w-[260px]' />
+                <img alt='logo easylav a color' src={logoImage} className='w-[210px] 2xl:w-[260px]' title='logo easylav a color' />
               </a>
             </div>
 
             {/* Desktop menu */}
             <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
-              {/* <Link className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={'/'}>Inicio</Link> */}
               {navlinks.map((navlink) => {
                 return (
                   <NavHashLink scroll={element => scrollWithOffset(element, 120)} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
