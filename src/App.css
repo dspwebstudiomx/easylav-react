@@ -24,10 +24,6 @@ p {
   background: none;
 }
 
-.active {
-  color: #2BAC9F;
-}
-
 .loader,
 .loader:before,
 .loader:after {
