@@ -26,7 +26,7 @@ const Inicio = () => {
           ogImage={image}
           ogImageAlt="canasta verde con ropa sucia"
           url="easylav-react.netlify.app"
-          ogType="image/jpg"
+          ogType="website"
         />
         <HeroInicio />
         <SobreNosotros />

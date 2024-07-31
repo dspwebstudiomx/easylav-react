@@ -10,17 +10,19 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta name="keywords" content={keywords} />
       {/* <meta name="robots" content="index" /> */}
       {/* <meta name="robots" content="follow" /> */}
-      <meta property="og:title" content={title} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="400" />
       <meta property="og:image:height" content="300" />
       <meta property="og:image:alt" content={ogImageAlt} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   )
 }
