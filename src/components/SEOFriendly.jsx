@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 
-const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogImageAlt }) => {
+const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogImageAlt, ogType }) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -11,7 +11,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       {/* <meta name="robots" content="index" /> */}
       {/* <meta name="robots" content="follow" /> */}
       <meta property="og:title" content={title} />
-      <meta property="og:type" content='image.webp' />
+      <meta property="og:type" content={ogType} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="400" />
@@ -31,7 +31,8 @@ SEOFriendly.propTypes = {
   author: PropTypes.string.isRequired,
   keywords: PropTypes.string.isRequired,
   ogImage: PropTypes.string.isRequired,
-  ogImageAlt: PropTypes.string.isRequired
+  ogImageAlt: PropTypes.string.isRequired,
+  ogType: PropTypes.string.isRequired,
 }
 
 export default SEOFriendly
