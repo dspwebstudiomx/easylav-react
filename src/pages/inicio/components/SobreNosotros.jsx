@@ -18,7 +18,7 @@ const SobreNosotros = () => {
             </p>
           </div>
           <div className='justify-end items-center'>
-            <img src={imageSection} alt="alt" width={520} className='shadow-image' />
+            <img src={imageSection} alt="mujer en servicio de lavado" width={520} className='shadow-image' title='mujer en servicio de lavado' />
           </div>
         </div>
       </Container>
