@@ -31,9 +31,9 @@ const Navbar = () => {
         <Container className={'flex justify-between px-8 sm:px-0 md:px-0 mx-auto z-50'}>
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
-              <a href="/">
+              <NavLink to="/" scroll={element => scrollWithOffset(element, 120)}>
                 <img alt='logo easylav a color' src={logoImage} className='w-[210px] 2xl:w-[260px]' title='logo easylav a color' />
-              </a>
+              </NavLink>
             </div>
 
             {/* Desktop menu */}
