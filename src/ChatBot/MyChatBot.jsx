@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import ChatBot from 'react-chatbotify';
-
+import icon from '../assets/images/logos/horizontal/logo-blanco.png'
 const MyChatBot = () => {
 
 
 	// settings
 	const settings = {
 		isOpen: false,
-		emoji: true,
+
+		emoji: {
+			disabled: 'false'
+		},
 		general: {
 			primaryColor: '#42b0c5',
 			secondaryColor: '#491d8d',
@@ -24,40 +27,53 @@ const MyChatBot = () => {
 			disabled: true,
 			storageKey: 'concepts_settings'
 		},
-		// chatButton: {
-		// 	icon: '🤖'
-		// },
+		chatButton: {
+			icon: icon
+		},
 		tooltip: {
 			text: '¿Tienes dudas?',
 		},
-		enabledPlaceholderText: {
-			text: 'Escribe tu mensaje...'
+		chatInput: {
+			enabledPlaceholderText: 'Escribe tu mensaje...'
 		},
+		botBubble: {
+			showAvatar: true
+		},
+		fileAttachment: {
+			disabled: true
+		},
+		footer: {
+			text: 'Lavanderías EASYLAV'
+		}
 	}
-
 	// styles here
 	const styles = {
 		headerStyle: {
 			background: '#55C3B9',
 			color: '#ffffff',
-			fontWeight: 'bold',
 			letterSpacing: '1px',
 			display: 'flex',
 			alignItems: 'center',
-			justifyContent: 'between'
+			justifyContent: 'between',
+			fontSize: '21px'
 		},
 		chatWindowStyle: {
 			backgroundColor: '#f2f2f2',
 		},
 		chatButtonStyle: {
 			backgroundColor: '#622a77',
+			fontSize: '14px'
+		},
+		icon: {
+			width: '32px'
 		},
 		tooltipStyle: {
 			backgroundColor: '#55C3B9',
 			border: '1px solid #f2f2f2'
 		},
 		botBubbleStyle: {
-			backgroundColor: '#622a77'
+			backgroundColor: '#622a77',
+			fontSize: '18px'
 		},
 		userBubbleStyle: {
 			backgroundColor: '#55C3B9'
@@ -66,7 +82,6 @@ const MyChatBot = () => {
 			padding: '1.1em'
 		}
 	}
-
 	const [form, setForm] = useState({});
 	const formStyle = {
 		marginTop: 10,
@@ -80,14 +95,14 @@ const MyChatBot = () => {
 
 	const flow = {
 		start: {
-			message: 'Hola! Como estás?',
+			message: 'Hola, Bienvenido! 😎 ¿Cuál es tu nombre?',
 			function: (params) => setForm({ ...form, name: params.userInput }),
-			path: 'ask_age'
+			path: 'preguntar_opciones'
 		},
-		ask_age: {
-			message: (params) => `Nice to meet you ${params.userInput}, what is your age?`,
-			function: (params) => setForm({ ...form, age: params.userInput }),
-			path: 'ask_pet'
+		preguntar_duda: {
+			message: (params) => `Mucho gusto ${params.userInput}, en que puedo ayudarte?`,
+			function: (params) => setForm({ ...form, name: params.preguntar_opciones }),
+			path: 'preguntar_opciones'
 		},
 		ask_pet: {
 			message: 'Do you own any pets?',
@@ -96,9 +111,13 @@ const MyChatBot = () => {
 			function: (params) => setForm({ ...form, pet_ownership: params.userInput }),
 			path: 'ask_choice'
 		},
-		ask_choice: {
-			message: 'Select at least 2 pets that you are comfortable to work with:',
-			checkboxes: { items: ['Dog', 'Cat', 'Rabbit', 'Hamster'], min: 2 },
+		preguntar_opciones: {
+			message: (params) => `Mucho gusto ${params.userInput}, en que puedo ayudarte?`,
+			options: [
+				{ value: 1, label: 'Number 1', path: '1' },
+				{ value: 2, label: 'Number 2', path: '2' },
+				{ value: 3, label: 'Number 3', path: '3' },
+			],
 			chatDisabled: true,
 			function: (params) => setForm({ ...form, pet_choices: params.userInput }),
 			path: 'ask_work_days'
@@ -125,12 +144,11 @@ const MyChatBot = () => {
 		},
 	}
 	return (
-		<div className='fixed bottom-24 right-20'>
+		<div className='fixed bottom-24 right-20 z-50'>
 			<ChatBot
 				styles={styles}
 				settings={settings}
 				flow={flow}
-
 			/>
 		</div>
 	);

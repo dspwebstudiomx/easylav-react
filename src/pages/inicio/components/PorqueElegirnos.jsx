@@ -2,14 +2,13 @@ import Section from '../../../components/templates/Section'
 import Container from '../../../components/containers/Container'
 import imageSection from '../../../assets/images/images/Placeholder.webp'
 import { TbPoint } from 'react-icons/tb';
-import PropTypes from 'prop-types'
 import BorderLeft from '../../../components/borders/BorderLeft';
 import TitleH2 from '../../../components/title/TitleH2';
 
 const PorqueElegirnos = () => {
   return (
-    <Section id={'seccion-porquelegirnos'}>
-      <Container className={'mx-auto'}>
+    <Section id={'porque-elegirnos'} className={''} height={'h-auto'} backgroundColor={''}>
+      <Container className={'mx-auto'} >
         <article className='grid sm:grid-cols-2 gap-x-20 gap-y-16 mx-auto'>
           <div className='grid place-content-center gap-12'>
             <BorderLeft>
@@ -42,8 +41,4 @@ const PorqueElegirnos = () => {
     </Section>
   )
 }
-PorqueElegirnos.propTypes = {
-  id: PropTypes.string.isRequired
-}
-
 export default PorqueElegirnos

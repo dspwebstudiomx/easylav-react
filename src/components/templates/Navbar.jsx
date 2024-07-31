@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
-import { FaBars } from "react-icons/fa"
-import Container from '../containers/Container'
-import { FaXmark } from 'react-icons/fa6';
-import { NavHashLink } from 'react-router-hash-link';
 import { NavLink } from 'react-router-dom';
+import { useState } from 'react'
+import { NavHashLink } from 'react-router-hash-link';
 import { navlinks } from '../../data/Navlinks';
+import Container from '../containers/Container'
+import { FaBars } from "react-icons/fa"
+import { FaXmark } from 'react-icons/fa6';
 import { GrGroup } from 'react-icons/gr';
+import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -14,12 +15,20 @@ const Navbar = () => {
   const toggleNav = () => {
     setNav(!nav);
     setMenuOpen(!menuOpen);
-    window.scrollTo({ behavior: 'smooth' });
   };
+  const scrollWithOffset = (element, offset) => {
+    const elementPosition = element.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <>
-      <nav id='nav' className='w-full h-[120px] mx-auto bg-light z-50  shadow-xl md:px-12 xl:px-0'>
+      {/* Navbar */}
+      <nav id='nav' className='fixed top-0 w-full h-[120px] mx-auto bg-light z-50  shadow-xl md:px-12 xl:px-0'>
         <Container className={'flex justify-between px-8 sm:px-0 md:px-0 mx-auto z-50'}>
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
@@ -30,11 +39,10 @@ const Navbar = () => {
 
             {/* Desktop menu */}
             <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
+              {/* <Link className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={'/'}>Inicio</Link> */}
               {navlinks.map((navlink) => {
                 return (
-                  <li key={navlink.id} id={`navlink-${navlink.linkId}`} >
-                    <NavHashLink id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
-                  </li>
+                  <NavHashLink scroll={element => scrollWithOffset(element, 120)} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
                 )
               })}
               <li>
@@ -55,7 +63,7 @@ const Navbar = () => {
                 {navlinks.map((navlink) => {
                   return (
                     <li id={`navlink-${navlink.linkId}`} key={navlink.id} className='shadow-xl text-base rounded-2xl items-center flex justify-center bg-light h-[100%] border-4 border-primary_dark p-4'>
-                      <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-2 items-center justify-center gap-4'>
+                      <NavHashLink scroll={element => scrollWithOffset(element, 98)} id={`link-${navlink.linkId}`} to={navlink.href} onClick={toggleNav} className='flex flex-col w-full h-full py-2 items-center justify-center gap-4'>
                         <div className='flex items-center justify-center'>
                           {navlink.icon && <navlink.icon size={32} className='text-secondary' />}
                         </div>
@@ -88,15 +96,17 @@ const Navbar = () => {
           </style>
         )}
       </nav >
+      {/* Navbar */}
 
+      {/* Line */}
       <div className='bg-gradient-to-r from-primary to-secondary h-1 '></div>
+      {/* Line */}
+
       {/* Tablet menu */}
-      <ul id='navlinks-tablet' className='hidden md:flex xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
+      <ul id='navlinks-tablet' className='hidden md:flex fixed top-[120px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
         {navlinks.map((navlink) => {
           return (
-            <li id={`navlink-${navlink.linkId}`} key={navlink.id}>
-              <NavHashLink id={`link-${navlink.linkId}`} to={navlink.href} className='uppercase font-semibold text-md text-light hover:text-secondary'>{navlink.name}</NavHashLink>
-            </li>
+            <NavHashLink scroll={element => scrollWithOffset(element, 160)} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
           )
         })}
         <li id={'navlink-franquicias'}>

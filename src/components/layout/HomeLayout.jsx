@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className='md:mt-14 lg:mt-0'>
+      <main className='mt-[100px] sm:mt-[160px] lg:mt-[100px]'>
         {children}
         <Spacing height={'h-24'} />
       </main>
