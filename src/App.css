@@ -16,9 +16,9 @@ p {
   font-size: 21px;
 }
 
-*::selection {
+/* *::selection {
   background: none;
-}
+} */
 
 *::-moz-selection {
   background: none;
