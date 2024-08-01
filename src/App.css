@@ -20,9 +20,9 @@ p {
   background: none;
 } */
 
-*::-moz-selection {
+/* *::-moz-selection {
   background: none;
-}
+} */
 
 .loader,
 .loader:before,
