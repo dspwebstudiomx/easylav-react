@@ -3,27 +3,36 @@ import { styles } from './styles'
 import { settings } from './settings'
 
 const MyChatBot = () => {
-	const helpOptions = ["Quickstart", "API Docs", "Examples", "Github", "Discord"];
+	const helpOptions = [
+		"¿Qué tipos de prendas se pueden lavar en el servicio de lavandería?",
+		"¿Cuánto tiempo tarda en completarse el servicio de lavandería?",
+		"¿Cómo se determinan los precios del servicio de lavandería?",
+	];
+	const exitOptions = ["Si", "No"]
+
 	const flow = {
 		start: {
-			message: "Hello, I am Tan Jin 👋! Welcome to React ChatBotify, I'm excited that you are using our " +
-				"chatbot 😊!",
+			message: "Hola! Bienvenido a Easylav " +
+				"chatbot !",
 			transition: { duration: 1000 },
-			path: "show_options"
+			path: "show_question_options",
+			chatDisabled: true,
 		},
-		show_options: {
-			message: "It looks like you have not set up a conversation flow yet. No worries! Here are a few helpful " +
-				"things you can check out to get started:",
+		show_question_options: {
+			message: "A continuación te mostraré las preguntan más frecuentes:",
 			options: helpOptions,
-			path: "process_options"
+			path: "process_options",
+			chatDisabled: true,
 		},
 		prompt_again: {
-			message: "Do you need any other help?",
-			options: helpOptions,
-			path: "process_options"
+			message: "¿Tiene otra duda?",
+			options: exitOptions,
+			path: "process_exit",
+			chatDisabled: true,
+
 		},
 		unknown_input: {
-			message: "Sorry, I do not understand your message 😢! If you require further assistance, you may click on " +
+			message: "Sorry, I do not understand your message ! If you require further assistance, you may click on " +
 				"the Github option and open an issue there or visit our discord.",
 			options: helpOptions,
 			path: "process_options"
@@ -34,33 +43,51 @@ const MyChatBot = () => {
 			path: async (params) => {
 				let link = "";
 				switch (params.userInput) {
-					case "Quickstart":
-						link = "https://react-chatbotify.com/docs/introduction/quickstart/";
+					case "¿Qué tipos de prendas se pueden lavar en el servicio de lavandería?":
+						await params.injectMessage("Puedes lavar prendas de ropa, como camisas, pantalones, etc.");
 						break;
-					case "API Docs":
-						link = "https://react-chatbotify.com/docs/api/settings";
+					case "¿Cuánto tiempo tarda en completarse el servicio de lavandería?":
+						await params.injectMessage("El tiempo de procesamiento puede variar según la carga de trabajo y el tipo de prendas.");
+						await params.injectMessage("Generalmente, podemos completar el lavado y secado estándar en un plazo de 24 a 48 horas.");
 						break;
-					case "Examples":
-						link = "https://react-chatbotify.com/docs/examples/basic_form";
-						break;
-					case "Github":
-						link = "https://github.com/tjtanjin/react-chatbotify/";
-						break;
-					case "Discord":
-						link = "https://discord.gg/6R4DK4G5Zh";
+					case "¿Cómo se determinan los precios del servicio de lavandería?":
+						await params.injectMessage("Los precios se basan principalmente en el peso total de la ropa a lavar. Ofrecemos tarifas competitivas por libra/kilo y también tenemos opciones especiales para prendas delicadas o que requieren un tratamiento especial.");
 						break;
 					default:
 						return "unknown_input";
 				}
-				await params.injectMessage("Sit tight! I'll send you right there!");
-				setTimeout(() => {
-					window.open(link);
-				}, 1000)
+				if (link !== "") {
+					await params.injectMessage("Sit tight! I'll send you right there!");
+					setTimeout(() => {
+						window.open(link);
+					}, 1000)
+				}
 				return "repeat"
 			},
 		},
+		process_exit: {
+			transition: { duration: 0 },
+			chatDisabled: true,
+			path: async (params) => {
+				switch (params.userInput) {
+					case "Si":
+						return "process_options";
+					case "No":
+						return "exit";
+					default:
+						return "unknown_input";
+				}
+			},
+		},
+		exit: {
+			message: 'Muchas gracias por utilizar nuestro chatbot.',
+			chatDisabled: true,
+			isOpen: {
+				openChat: false
+			}
+		},
 		repeat: {
-			transition: { duration: 3000 },
+			transition: { duration: 5000 },
 			path: "prompt_again"
 		},
 	}

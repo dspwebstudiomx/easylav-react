@@ -8,7 +8,7 @@ export const settings = {
   },
   general: {
     primaryColor: "#42b0c5",
-    secondaryColor: "#491d8d",
+    secondaryColor: "#622A77",
     fontFamily: "Arial, sans-serif",
     embedded: false,
   },
@@ -29,6 +29,7 @@ export const settings = {
     text: "¿Tienes dudas?",
   },
   chatInput: {
+    disabled: true,
     enabledPlaceholderText: "Escribe tu mensaje...",
   },
   botBubble: {

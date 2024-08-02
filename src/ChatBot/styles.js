@@ -1,5 +1,5 @@
 const PRIMARY_COLOR = "#42b0c5";
-const SECONDARY_COLOR = "#491d8d";
+const SECONDARY_COLOR = "#622A77";
 const LIGHT_COLOR = "#FAFAFA";
 
 export const styles = {
@@ -32,6 +32,7 @@ export const styles = {
   },
   userBubbleStyle: {
     backgroundColor: PRIMARY_COLOR,
+    fontSize: "18px",
   },
   bodyStyle: {
     padding: "1.1em",
