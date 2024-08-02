@@ -63,11 +63,11 @@ const MyChatBot = () => {
 			path: async (params) => {
 				switch (params.userInput) {
 					case "Si":
-						return "process_options";
+						return "show_question_options";
 					case "No":
 						return "exit";
 					default:
-						return "process_options";
+						return "show_question_options";
 				}
 			},
 		},
