@@ -31,12 +31,6 @@ const MyChatBot = () => {
 			chatDisabled: true,
 
 		},
-		unknown_input: {
-			message: "Sorry, I do not understand your message ! If you require further assistance, you may click on " +
-				"the Github option and open an issue there or visit our discord.",
-			options: helpOptions,
-			path: "process_options"
-		},
 		process_options: {
 			transition: { duration: 0 },
 			chatDisabled: true,
@@ -53,8 +47,6 @@ const MyChatBot = () => {
 					case "¿Cómo se determinan los precios del servicio de lavandería?":
 						await params.injectMessage("Los precios se basan principalmente en el peso total de la ropa a lavar. Ofrecemos tarifas competitivas por libra/kilo y también tenemos opciones especiales para prendas delicadas o que requieren un tratamiento especial.");
 						break;
-					default:
-						return "unknown_input";
 				}
 				if (link !== "") {
 					await params.injectMessage("Sit tight! I'll send you right there!");
@@ -72,17 +64,16 @@ const MyChatBot = () => {
 				switch (params.userInput) {
 					case "Si":
 						return "process_options";
+						break;
 					case "No":
 						return "exit";
+						break;
 				}
 			},
 		},
 		exit: {
 			message: 'Muchas gracias por utilizar nuestro chatbot.',
 			chatDisabled: true,
-			isOpen: {
-				openChat: false
-			}
 		},
 		repeat: {
 			transition: { duration: 5000 },
