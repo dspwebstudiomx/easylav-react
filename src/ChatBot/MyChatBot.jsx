@@ -64,10 +64,10 @@ const MyChatBot = () => {
 				switch (params.userInput) {
 					case "Si":
 						return "process_options";
-						break;
 					case "No":
 						return "exit";
-						break;
+					default:
+						return "process_options";
 				}
 			},
 		},
