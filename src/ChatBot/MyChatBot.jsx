@@ -74,8 +74,6 @@ const MyChatBot = () => {
 						return "process_options";
 					case "No":
 						return "exit";
-					default:
-						return "unknown_input";
 				}
 			},
 		},
