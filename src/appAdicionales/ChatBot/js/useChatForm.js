@@ -69,7 +69,7 @@ const useChatForm = () => {
       },
     },
     prompt_again: {
-      message: "¿Tiene otra duda?",
+      message: "¿Tiene alguna otra duda?",
       options: exitOptions,
       path: "process_exit",
       chatDisabled: true,
@@ -123,7 +123,7 @@ const useChatForm = () => {
       },
     },
     exit: {
-      message: "Muchas gracias por utilizar nuestro chatbot.",
+      message: "Muchas gracias por utilizar nuestro ChatBot.",
       chatDisabled: true,
     },
     repeat: {

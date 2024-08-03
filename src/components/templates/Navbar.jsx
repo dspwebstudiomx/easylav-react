@@ -40,11 +40,19 @@ const Navbar = () => {
             <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
               {navlinks.map((navlink) => {
                 return (
-                  <NavHashLink scroll={element => scrollWithOffset(element, 120)} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
+                  <NavHashLink
+                    scroll={element => scrollWithOffset(element, 120)}
+                    key={navlink.id}
+                    id={`link-${navlink.linkId}`}
+                    className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink'
+                    to={navlink.href}
+                  >
+                    {navlink.name}
+                  </NavHashLink>
                 )
               })}
               <li>
-                <NavLink className='uppercase font-semibold text-base xl:text-md text-primary  hover:text-primary' to='/franquicias'>Franquicias</NavLink>
+                <NavHashLink className='uppercase font-semibold text-base xl:text-md text-primary  hover:text-primary' to='/franquicias'>Franquicias</NavHashLink>
               </li>
             </ul>
             {/* Desktop menu */}

@@ -7,7 +7,7 @@ import Header from '../templates/Header';
 import Footer from '../templates/Footer';
 import Section from '../templates/Section';
 import ScrollToTopButton from '../buttons/ScrollToTopButton';
-import MyChatBot from '../../ChatBot/MyChatBot';
+import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot';
 import ScrollToTop from '../../functions/ScrollToTop';
 import Container from '../containers/Container';
 import Spacing from './Spacing';

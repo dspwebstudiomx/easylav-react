@@ -1,4 +1,4 @@
-import icon from "../../assets/images/logos/horizontal/logo-blanco.png";
+import icon from "../../../assets/images/logos/horizontal/logo-blanco.png";
 
 const primaryColor = "#42b0c5";
 const secondaryColor = "#622A77";
