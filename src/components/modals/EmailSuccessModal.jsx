@@ -1,7 +1,7 @@
+import PropTypes from "prop-types"
 import { IoMdExit } from "react-icons/io"
 import Button from "../buttons/Button"
 import Modal from "../contacto/Modal"
-import PropTypes from "prop-types"
 
 const EmailSuccessModal = ({ onClick }) => {
   return (

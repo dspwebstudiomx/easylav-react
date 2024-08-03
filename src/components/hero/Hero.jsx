@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import Section from '../templates/Section'
 import Container from '../containers/Container'
+import Section from '../templates/Section'
 
 
 

@@ -1,11 +1,11 @@
-import Header from '../templates/Header'
-import Footer from '../templates/Footer'
 import PropTypes from 'prop-types'
-import Section from '../templates/Section'
-import Container from '../containers/Container'
-import Spacing from './Spacing'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
+import Container from '../containers/Container'
 import Hero from '../hero/Hero'
+import Footer from '../templates/Footer'
+import Header from '../templates/Header'
+import Section from '../templates/Section'
+import Spacing from './Spacing'
 
 const PageLayoutPlaces = ({ children, id, image }) => {
   return (

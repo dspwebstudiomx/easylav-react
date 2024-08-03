@@ -1,5 +1,5 @@
-import Button from './Button'
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const ButtonCard = ({ title, href, width, border, icon, type, onClick, height }) => {
   return (

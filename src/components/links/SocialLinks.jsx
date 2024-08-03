@@ -1,8 +1,8 @@
 
-import { FaRegEnvelope, FaInstagram } from 'react-icons/fa6';
+import PropTypes from 'prop-types';
+import { FaInstagram, FaRegEnvelope } from 'react-icons/fa6';
 import { FiFacebook } from 'react-icons/fi';
 import SocialLink from '../links/SocialLink';
-import PropTypes from 'prop-types'
 
 const classes = {
   Link: 'text-blue-900  hover:scale-110 dark:text-blue-500 text-xl ',

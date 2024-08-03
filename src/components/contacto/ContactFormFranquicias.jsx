@@ -1,12 +1,12 @@
-import { useRef, useState, useEffect } from 'react';
-import { FaRegEnvelope } from 'react-icons/fa6'
-import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
-import PropTypes from 'prop-types'
+import { Field, Form, Formik } from 'formik';
+import PropTypes from 'prop-types';
+import { useEffect, useRef, useState } from 'react';
+import { FaRegEnvelope } from 'react-icons/fa6';
 import ButtonSecondary from '../buttons/ButtonSecondary';
 import ButtonContainer from '../containers/ButtonContainer';
-import EmailSuccessModal from '../modals/EmailSuccessModal';
 import EmailErrorModal from '../modals/EmailErrorModal';
+import EmailSuccessModal from '../modals/EmailSuccessModal';
 export default function ContactFormFranquicias() {
 
   const form = useRef();

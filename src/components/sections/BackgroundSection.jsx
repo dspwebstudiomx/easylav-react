@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const BackgroundSection = ({ id, background, opacity, children, className }) => {
   return (

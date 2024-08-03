@@ -1,5 +1,5 @@
-import Button from './Button'
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const ButtonSecondary = ({ title, href, width, height, border, icon, type, onClick, titleMailto }) => {
   return (

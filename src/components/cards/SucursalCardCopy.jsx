@@ -3,8 +3,8 @@ import { APIProvider, Map } from '@vis.gl/react-google-maps'
 import PropTypes from 'prop-types'
 import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { FaRegClock } from 'react-icons/fa6'
-import ButtonContainer from '../containers/ButtonContainer'
 import ButtonCard from '../buttons/ButtonCard'
+import ButtonContainer from '../containers/ButtonContainer'
 
 const SucursalCardCopy = ({ title, id, position, serviceday1, servicehour1, place, email, gmap }) => {
 

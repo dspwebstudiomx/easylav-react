@@ -1,11 +1,11 @@
-import Section from './Section'
-import { NavHashLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
-import Container from '../containers/Container'
-import logo from '../../assets/images/logos/horizontal/logo-blanco.png'
 import { TbPoint } from 'react-icons/tb';
-import SocialLinks from '../links/SocialLinks'
-import { navlinks, otrosLinks, linksServicios } from '../../data/Navlinks'
+import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
+import logo from '../../assets/images/logos/horizontal/logo-blanco.png';
+import { linksServicios, navlinks, otrosLinks } from '../../data/Navlinks';
+import Container from '../containers/Container';
+import SocialLinks from '../links/SocialLinks';
+import Section from './Section';
 
 const Footer = () => {
 

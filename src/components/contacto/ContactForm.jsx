@@ -1,11 +1,11 @@
-import { useRef, useState, useEffect } from 'react';
-import { FaRegEnvelope } from "react-icons/fa6"
-import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
-import ButtonContainer from '../containers/ButtonContainer';
+import { Field, Form, Formik } from 'formik';
+import { useEffect, useRef, useState } from 'react';
+import { FaRegEnvelope } from "react-icons/fa6";
 import ButtonSecondary from '../buttons/ButtonSecondary';
-import EmailSuccessModal from '../modals/EmailSuccessModal';
+import ButtonContainer from '../containers/ButtonContainer';
 import EmailErrorModal from '../modals/EmailErrorModal';
+import EmailSuccessModal from '../modals/EmailSuccessModal';
 
 export default function ContactForm() {
 
