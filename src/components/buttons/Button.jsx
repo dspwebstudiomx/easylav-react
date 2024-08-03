@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
-const Button = ({ themeButton, title, width, border, icon, type, onClick, href, height, titleMailto }) => {
+const Button = ({ themeButton, title, border, icon, type, onClick, href, titleMailto }) => {
   return (
     <a href={href}>
-      <button onClick={onClick} type={type} className={`flex items-center justify-center ${themeButton} ${width} ${height} text-light  text-xl font-semibold rounded-xl ${border}`} title={titleMailto} >
+      <button onClick={onClick} type={type} className={`flex items-center justify-center ${themeButton} px-6 py-4 text-light  text-xl font-semibold rounded-xl ${border}`} title={titleMailto} >
         <span className='mr-3'>{icon}</span>
         {title}
       </button>

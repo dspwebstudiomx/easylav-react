@@ -2,12 +2,12 @@
 import imageService1 from '../../../assets/images/gif/lavadero.gif'
 import imageService2 from '../../../assets/images/gif/lavar-la-ropa.gif'
 import imageService3 from '../../../assets/images/gif/planchar.gif'
-import Section from '../../../components/templates/Section'
-import Container from '../../../components/containers/Container'
-import ButtonContainer from '../../../components/containers/ButtonContainer'
-import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
-import TitleH2 from '../../../components/title/TitleH2'
 import BorderButtom from '../../../components/borders/BorderBottom'
+import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
+import ButtonContainer from '../../../components/containers/ButtonContainer'
+import Container from '../../../components/containers/Container'
+import Section from '../../../components/templates/Section'
+import TitleH2 from '../../../components/title/TitleH2'
 
 const services = [
   {
@@ -57,7 +57,7 @@ const NuestrosServicios = () => {
             }
           </ul>
           <ButtonContainer position={'justify-center'} distance={'mt-16'}>
-            <ButtonSecondary title={'Conoce nuestras Sucursales'} href={'/sucursales'} width={'w-[280px] xl:w-[340px] px-4'} height={'h-[80px]'} />
+            <ButtonSecondary title={'Conoce nuestras Sucursales'} href={'/sucursales'} />
           </ButtonContainer>
         </div>
       </Container>

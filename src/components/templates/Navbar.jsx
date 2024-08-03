@@ -27,12 +27,12 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav id='nav' className='fixed top-0 w-full h-[120px] mx-auto bg-light z-50  shadow-xl md:px-12 xl:px-0'>
-        <Container className={'flex justify-between px-8 sm:px-0 md:px-0 mx-auto z-50'}>
+      <nav id='nav' className='fixed top-0 w-full h-[100px] mx-auto bg-light z-50  shadow-xl md:px-12 xl:px-0'>
+        <Container className={'flex justify-center px-8 sm:px-0 md:px-0 mx-auto z-50'}>
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
               <NavHashLink to="/#inicio" scroll={element => scrollWithOffset(element, 120)}>
-                <img alt='logo easylav a color' src={logoImage} className='w-[210px] 2xl:w-[260px]' title='logo easylav a color' />
+                <img alt='logo easylav a color' src={logoImage} className='w-[210px] 2xl:w-[160px]' title='logo easylav a color' />
               </NavHashLink>
             </div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
                     scroll={element => scrollWithOffset(element, 120)}
                     key={navlink.id}
                     id={`link-${navlink.linkId}`}
-                    className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink'
+                    className='uppercase font-semibold text-sm text-dark  hover:text-secondary_light navlink'
                     to={navlink.href}
                   >
                     {navlink.name}
@@ -64,7 +64,7 @@ const Navbar = () => {
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
+            <div className={!nav ? "hidden" : "absolute top-[100px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
               <ul id='navlinks-mobile' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 w-full px-2 py-8 gap-3">
                 {navlinks.map((navlink) => {
                   return (
@@ -105,11 +105,11 @@ const Navbar = () => {
       {/* Navbar */}
 
       {/* Line */}
-      <div className='z-10 fixed top-[120px] w-full bg-gradient-to-r from-primary to-secondary h-1 '></div>
+      <div className='z-10 fixed top-[100px] w-full bg-gradient-to-r from-primary to-secondary h-1 '></div>
       {/* Line */}
 
       {/* Tablet menu */}
-      <ul id='navlinks-tablet' className='hidden md:flex fixed top-[120px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
+      <ul id='navlinks-tablet' className='hidden md:flex fixed top-[100px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
         {navlinks.map((navlink) => {
           return (
             <NavHashLink scroll={element => scrollWithOffset(element, 160)} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>

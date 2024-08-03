@@ -53,7 +53,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         {/* Horario */}
       </div>
       <ButtonContainer position={'justify-center'}>
-        <ButtonSecondary title={`Enviar correo`} href={`mailto:${email}`} icon={<FaEnvelope />} width={'w-[320px] lg:w-[210px] 2xl:w-[280px] h-[80px]'} type={'button'} titleMailto={titleMailto} />
+        <ButtonSecondary title={`Enviar correo`} href={`mailto:${email}`} icon={<FaEnvelope />} type={'button'} titleMailto={titleMailto} />
       </ButtonContainer>
 
     </article>

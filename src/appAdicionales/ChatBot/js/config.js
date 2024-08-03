@@ -70,14 +70,15 @@ const styles = {
   tooltipStyle: {
     backgroundColor: primaryColor,
     border: `1px solid ${lightColor}`,
+    fontSize: "16px",
   },
   botBubbleStyle: {
     backgroundColor: secondaryColor,
-    fontSize: "18px",
+    fontSize: "14px",
   },
   userBubbleStyle: {
     backgroundColor: primaryColor,
-    fontSize: "18px",
+    fontSize: "14px",
   },
   bodyStyle: {
     padding: "1.1em",

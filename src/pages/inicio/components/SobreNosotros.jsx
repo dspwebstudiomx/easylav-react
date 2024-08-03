@@ -1,8 +1,8 @@
 import imageSection from '../../../assets/images/images/laundrylady.webp'
+import BorderLeft from '../../../components/borders/BorderLeft'
 import Container from '../../../components/containers/Container'
 import Section from '../../../components/templates/Section'
 import TitleH2 from '../../../components/title/TitleH2'
-import BorderLeft from '../../../components/borders/BorderLeft'
 
 const SobreNosotros = () => {
   return (
@@ -13,7 +13,7 @@ const SobreNosotros = () => {
             <BorderLeft>
               <TitleH2 title={'Sobre Nosotros'} />
             </BorderLeft>
-            <p className='text-balance 2xl:text-2xl'>
+            <p className='text-balance 2xl:text-xl'>
               En <span className='text-secondary font-semibold'>Easylav</span>, somos un equipo apasionado por el cuidado de la ropa. Con muchos años de experiencia, hemos perfeccionado nuestra técnica para asegurarnos de que cada prenda se vea y se sienta como nueva. Usamos solo los mejores equipos y productos porque creemos que tu ropa merece lo mejor.
             </p>
           </div>

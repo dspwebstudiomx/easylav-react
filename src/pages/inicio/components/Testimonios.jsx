@@ -1,7 +1,7 @@
 import { FaStar, FaStarHalf } from "react-icons/fa6";
-import Section from "../../../components/templates/Section";
+import BorderButtom from "../../../components/borders/BorderBottom";
 import Container from "../../../components/containers/Container";
-import BorderButtom from "../../../components/borders/BorderBottom"
+import Section from "../../../components/templates/Section";
 import TitleH2 from "../../../components/title/TitleH2";
 
 const testimonios = [
@@ -91,7 +91,7 @@ const Testimonios = () => {
             {testimonios.map((testimonio) => {
               return (
                 <article className='shadow-lg p-12 flex flex-col justify-between' key={testimonio.id}>
-                  <p className='text-pretty'><span></span>{testimonio.testimonio}</p>
+                  <p className='text-pretty text-base'><span></span>{testimonio.testimonio}</p>
                   <div className='flex mt-6 gap-2 justify-between items-center'>
                     <h3 className='font-semibold text-lg'>{testimonio.nombre}</h3>
                     <div className='text-dark'>

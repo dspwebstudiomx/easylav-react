@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import ButtonContainer from '../../../../components/containers/ButtonContainer';
-import ButtonSecondary from '../../../../components/buttons/ButtonSecondary';
-import Section from '../../../../components/templates/Section';
-import SucursalCard from '../../../../components/cards/SucursalCard';
-import { localservices } from '../../../../data/sucursales';
-import { FaEnvelope } from 'react-icons/fa6';
-import TitleH2 from '../../../../components/title/TitleH2';
-import BorderBottom from '../../../../components/borders/BorderBottom';
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
+import { FaEnvelope } from 'react-icons/fa6';
+import BorderBottom from '../../../../components/borders/BorderBottom';
+import ButtonSecondary from '../../../../components/buttons/ButtonSecondary';
+import SucursalCard from '../../../../components/cards/SucursalCard';
+import ButtonContainer from '../../../../components/containers/ButtonContainer';
 import Container from '../../../../components/containers/Container';
+import Section from '../../../../components/templates/Section';
+import TitleH2 from '../../../../components/title/TitleH2';
+import { localservices } from '../../../../data/sucursales';
 import usePagination from './UsePagination';
 
 const NuestrasSucursales = () => {
@@ -79,7 +79,7 @@ const NuestrasSucursales = () => {
           </button>
         </div>
         <ButtonContainer position="justify-center" distance="mt-16">
-          <ButtonSecondary title="Contáctanos" href="/contacto" width="w-[320px]" icon={<FaEnvelope />} height="h-[80px]" />
+          <ButtonSecondary title="Contáctanos" href="/contacto" icon={<FaEnvelope />} />
         </ButtonContainer>
       </Container>
     </Section>
