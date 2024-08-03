@@ -6,7 +6,7 @@ import Container from '../../../components/containers/Container'
 
 const HeroInicio = () => {
   return (
-    <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-45'} opacityColor={'bg-dark'} height={'2xl:h-auto'} titleSection={'inicio'} imageAlt='canasta de ropa verde con ropa sucia de color con fondo blanco'  >
+    <Hero backgroundImage={image} textColor={'text-light'} opacity={'opacity-45'} opacityColor={'bg-dark'} height={'2xl:h-[60vh]'} titleSection={'inicio'} imageAlt='canasta de ropa verde con ropa sucia de color con fondo blanco'  >
       <Container className={'items-start w-[80vw]'}>
         <h1 className='hidden'>en Easylav uu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto</h1>
         {/* <h1 className='hidden text-5xl font-extrabold uppercase'><span className='text-primary'>Easy</span><span className='text-secondary'>lav</span></h1> */}

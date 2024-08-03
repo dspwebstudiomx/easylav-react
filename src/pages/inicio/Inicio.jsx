@@ -9,7 +9,7 @@ import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-
 // import NuestrasSucursalesCopy from "./components/NuestrasSucursalesCopy"
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
 const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
-const NuestrasSucursales = lazy(() => import("./components/NuestrasSucursales"))
+const NuestrasSucursales = lazy(() => import("./components/NuestrasSucursales/NuestrasSucursales"))
 const NuestrosServicios = lazy(() => import("./components/NuestrosServicios"))
 const Testimonios = lazy(() => import("./components/Testimonios"))
 const Contacto = lazy(() => import("../../components/contacto/Contacto"))
