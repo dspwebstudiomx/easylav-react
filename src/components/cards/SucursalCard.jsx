@@ -10,7 +10,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`tarjeta ${width} flex flex-col justify-between gap-8 border-2 p-8 border-primary rounded-xl min-h-[570px]`}>
+    <article id={`sucursal-${title}`} key={id} className={`tarjeta ${width} flex flex-col justify-between gap-8 border-2 p-8 border-primary rounded-xl min-h-[590px]`}>
       <div>
         <h3 className='text-center font-semibold text-xl uppercase pb-4'>{title}</h3>
         {/* mapa */}
