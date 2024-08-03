@@ -1,12 +1,12 @@
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react'
-import { NavHashLink } from 'react-router-hash-link';
-import { navlinks } from '../../data/Navlinks';
-import Container from '../containers/Container'
-import { FaBars } from "react-icons/fa"
+import { useState } from 'react';
+import { FaBars } from "react-icons/fa";
 import { FaXmark } from 'react-icons/fa6';
 import { GrGroup } from 'react-icons/gr';
-import logoImage from '../../assets/images/logos/horizontal/logo-color.png'
+import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
+import logoImage from '../../assets/images/logos/horizontal/logo-color.png';
+import { navlinks } from '../../data/Navlinks';
+import Container from '../containers/Container';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -31,9 +31,9 @@ const Navbar = () => {
         <Container className={'flex justify-between px-8 sm:px-0 md:px-0 mx-auto z-50'}>
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <div id='logo'>
-              <NavLink to="/" scroll={element => scrollWithOffset(element, 120)}>
+              <NavHashLink to="/#inicio" scroll={element => scrollWithOffset(element, 120)}>
                 <img alt='logo easylav a color' src={logoImage} className='w-[210px] 2xl:w-[260px]' title='logo easylav a color' />
-              </NavLink>
+              </NavHashLink>
             </div>
 
             {/* Desktop menu */}
@@ -64,7 +64,7 @@ const Navbar = () => {
             {/* Menu button */}
 
             {/* Mobile menu */}
-            <div className={!nav ? "hidden" : "absolute top-[124px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
+            <div className={!nav ? "hidden" : "absolute top-[120px] left-0 w-full h-[95vh] sm:h-[65vh] overflow-hidden flex flex-col items-center justify-start bg-primary border-t-4 border-t-primary opacity-[99%] z-20 animate__animated animate__fadeInDown z-30 px-8"}>
               <ul id='navlinks-mobile' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 w-full px-2 py-8 gap-3">
                 {navlinks.map((navlink) => {
                   return (
@@ -105,7 +105,7 @@ const Navbar = () => {
       {/* Navbar */}
 
       {/* Line */}
-      <div className='bg-gradient-to-r from-primary to-secondary h-1 '></div>
+      <div className='z-10 fixed top-[120px] w-full bg-gradient-to-r from-primary to-secondary h-1 '></div>
       {/* Line */}
 
       {/* Tablet menu */}

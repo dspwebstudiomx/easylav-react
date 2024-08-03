@@ -2,14 +2,14 @@
  * A layout component that wraps the main content of a page.
  * It includes a header, footer, scroll-to-top button, and chatbot.
  */
-import PropTypes from 'prop-types'
-import Header from '../templates/Header';
-import Footer from '../templates/Footer';
-import Section from '../templates/Section';
-import ScrollToTopButton from '../buttons/ScrollToTopButton';
+import PropTypes from 'prop-types';
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot';
 import ScrollToTop from '../../functions/ScrollToTop';
+import ScrollToTopButton from '../buttons/ScrollToTopButton';
 import Container from '../containers/Container';
+import Footer from '../templates/Footer';
+import Header from '../templates/Header';
+import Section from '../templates/Section';
 import Spacing from './Spacing';
 
 const PageLayout = ({ children }) => {

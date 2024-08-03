@@ -1,10 +1,10 @@
-import Header from '../templates/Header'
-import Footer from '../templates/Footer'
 import PropTypes from 'prop-types'
-import Spacing from './Spacing'
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot'
-import ScrollToTopButton from '../buttons/ScrollToTopButton';
 import ScrollToTop from '../../functions/ScrollToTop'
+import ScrollToTopButton from '../buttons/ScrollToTopButton'
+import Footer from '../templates/Footer'
+import Header from '../templates/Header'
+import Spacing from './Spacing'
 
 const MainLayout = ({ children }) => {
   return (
