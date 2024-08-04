@@ -36,11 +36,11 @@ const NuestrasSucursales = () => {
 
   return (
     <Section id="nuestras-sucursales">
-      <Container className="mx-auto">
+      <Container className="mx-auto w-4/5">
         <BorderBottom justify="mx-auto">
           <TitleH2 title="Sucursales" />
         </BorderBottom>
-        <div className={`grid ${isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-2' : isDesktop ? 'grid-cols-3' : 'grid-cols-3'} gap-12 mx-auto place-content-center`}>
+        <div className={`grid ${isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-2' : isDesktop ? 'grid-cols-3' : 'grid-cols-4'} gap-12 mx-auto place-content-center`}>
           {paginatedData.map((localservice) => (
             <SucursalCard
               key={localservice.id}
@@ -54,8 +54,9 @@ const NuestrasSucursales = () => {
               servicehour2={localservice.servicehour2}
               ciudad={localservice.ciudad}
               email={localservice.email}
-              width="w-[350px] w-[320px]"
+              width="w-[350px] 2xl:w-[280px]"
               titleMailto={localservice.titleMailto}
+              badge={localservice.badge}
             />
           ))}
         </div>

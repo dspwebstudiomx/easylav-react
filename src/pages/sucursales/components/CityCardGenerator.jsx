@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 // import SucursalCard from '../../../components/cards/SucursalCard'
-import { localservices } from '../../../data/sucursales'
 import SucursalCard from '../../../components/cards/SucursalCard'
+import { localservices } from '../../../data/sucursales'
 
 const CityCardGenerator = ({ city }) => {
   const ciudad = localservices.filter(localservice => localservice.city === city)
   ciudad.sort((a, b) => a.title.localeCompare(b.title));
   return (
-    <article className='grid sm:grid-cols-2 lg:grid-cols-3 gap-12 items-center justify-center'>
+    <article className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 items-center justify-center'>
       {
         ciudad.map((localservice) =>
           <SucursalCard
@@ -21,6 +21,7 @@ const CityCardGenerator = ({ city }) => {
             servicehour1={localservice.servicehour1}
             servicehour2={localservice.servicehour2}
             email={localservice.email}
+            badge={localservice.badge}
           />)
       }
     </article>
