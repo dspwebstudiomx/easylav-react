@@ -8,8 +8,24 @@ import Badge from '../badge/Badge'
 const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto, badge }) => {
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
+  // Obtenemos la hora actual
+  const currentTime = new Date()
+  const currentHour = currentTime.getHours()
+  const currentMinute = currentTime.getMinutes()
+
+  // Definimos el horario de servicio
+  const openHour = 7
+  const openMinute = 30
+  const closeHour = 21
+  const closeMinute = 30
+
+  // Comparamos la hora actual con el horario de servicio
+  const isOpen = (currentHour > openHour || (currentHour === openHour && currentMinute >= openMinute))
+    && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
+
+
   return (
-    <article id={`sucursal-${title}`} key={id} className={`tarjeta ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[490px] shadow-xl`}>
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[490px] shadow-xl`}>
 
       {/* mapa */}
       <div className='h-[180px] rounded-t-lg overflow-hidden'>
@@ -25,7 +41,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
       </div>
       {/* mapa */}
 
-      <div className='flex flex-col gap-3 justify-start px-6'>
+      <div className='relative flex flex-col gap-3 justify-start px-6'>
         <h3 className='text-center font-semibold text-base uppercase pb-4'>{title}</h3>
         {/* Dirección */}
         <a href={gmap} target="_blank" rel="noopener noreferrer" title={`sucursal ${title}`}>
@@ -43,10 +59,6 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
               <p className='text-sm'>{serviceday1}</p>
               <p className='text-sm'>{servicehour1}</p>
             </div>
-            {/* <div className='flex gap-2 flex-col  sm:flex-col lg:flex-row'>
-              <p className='text-base'>{serviceday2}</p>
-              <p className='text-base'>{servicehour2}</p>
-            </div> */}
           </div>
         </div>
         {/* Horario */}
@@ -69,6 +81,9 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
             </Badge>
           )
         }
+      </div>
+      <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
+        {isOpen ? <p className='text-sm text-green-500'>Abierto</p> : <p className='text-sm text-red-500'>Cerrado</p>}
       </div>
 
     </article>
