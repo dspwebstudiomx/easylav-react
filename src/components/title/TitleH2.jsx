@@ -2,7 +2,7 @@ import Proptypes from 'prop-types'
 
 const TitleH2 = ({ title }) => {
   return (
-    <h2 className='font-semibold text-2xl'>{title}</h2>
+    <h2 className='font-semibold text-3xl'>{title}</h2>
   )
 }
 TitleH2.propTypes = {

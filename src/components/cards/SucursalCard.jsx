@@ -9,7 +9,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`tarjeta ${width} flex flex-col justify-between gap-8 border-2 border-primary rounded-xl min-h-[490px]`}>
+    <article id={`sucursal-${title}`} key={id} className={`tarjeta ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[490px] shadow-xl`}>
 
       {/* mapa */}
       <div className='h-[180px] rounded-t-lg overflow-hidden'>
@@ -25,7 +25,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
       </div>
       {/* mapa */}
 
-      <div className='flex flex-col gap-3 justify-center px-6'>
+      <div className='flex flex-col gap-3 justify-start px-6'>
         <h3 className='text-center font-semibold text-base uppercase pb-4'>{title}</h3>
         {/* Dirección */}
         <a href={gmap} target="_blank" rel="noopener noreferrer" title={`sucursal ${title}`}>
@@ -51,22 +51,25 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         </div>
         {/* Horario */}
       </div>
-      {!badge && (
-        <Badge backgroundColor='bg-secondary'>
-          <a href={`mailto:${email}`} title={titleMailto} type={'button'} className='w-full flex items-center justify-center gap-3 text-lg'  >
-            <FaEnvelope />
-            <span className="">Enviar correo</span>
-          </a>
-        </Badge>
-
-      )
-      }
-      {badge && (
-        <Badge backgroundColor='bg-primary'>
-          <p>{badge}</p>
-        </Badge>
-      )
-      }
+      <div>
+        {
+          !badge && (
+            <Badge backgroundColor='bg-secondary'>
+              <a href={`mailto:${email}`} title={titleMailto} type={'button'} className='w-full flex items-center justify-center gap-3 text-lg'  >
+                <FaEnvelope />
+                <span className="">Enviar correo</span>
+              </a>
+            </Badge>
+          )
+        }
+        {
+          badge && (
+            <Badge backgroundColor='bg-secondary_light'>
+              <p>{badge}</p>
+            </Badge>
+          )
+        }
+      </div>
 
     </article>
   )

@@ -122,10 +122,10 @@ const Footer = () => {
 
         </Container>
       </Section >
-      <div className='text-dark bg-primary py-6'>
+      <div className='text-dark bg-primary_dark py-6'>
         <div className='flex justify-between 2xl:max-w-screen-2xl xl:max-w-screen-xl mx-auto w-[65vw] flex-col sm:flex-row gap-4 text-center sm:text-left text-sm'>
           <h3>Derechos Reservados 2024</h3>
-          <h3>Diseñado y Desarrollado por: <a href='https://dspwebstudio.com' target='_blank' className='text-secondary font-semibold ml-2'>dspwebstudio.com</a></h3>
+          <h3>Diseñado y Desarrollado por: <a href='https://dspwebstudio.com' target='_blank' className='text-secondary_dark font-semibold ml-2'>dspwebstudio.com</a></h3>
         </div>
       </div>
     </footer >
