@@ -4,13 +4,8 @@
  */
 import PropTypes from 'prop-types';
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot';
+import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from '../../components';
 import ScrollToTop from '../../functions/ScrollToTop';
-import ScrollToTopButton from '../buttons/ScrollToTopButton';
-import Container from '../containers/Container';
-import Footer from '../templates/Footer';
-import Header from '../templates/Header/Header';
-import Section from '../templates/Section';
-import Spacing from './Spacing';
 
 const PageLayout = ({ children }) => {
   return (

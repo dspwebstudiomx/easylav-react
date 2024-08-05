@@ -1,8 +1,5 @@
 import imageSection from '../../../assets/images/images/laundrylady.webp'
-import BorderLeft from '../../../components/borders/BorderLeft'
-import Container from '../../../components/containers/Container'
-import Section from '../../../components/templates/Section'
-import TitleH2 from '../../../components/title/TitleH2'
+import { BorderLeft, Container, Section, TitleH2 } from '../../../components/'
 
 const SobreNosotros = () => {
   return (
@@ -22,7 +19,6 @@ const SobreNosotros = () => {
           </div>
         </div>
       </Container>
-
     </Section>
   )
 }

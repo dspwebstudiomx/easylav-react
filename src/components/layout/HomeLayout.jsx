@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types'
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot'
+import { Footer, Header, ScrollToTopButton, Spacing } from '../../components'
 import ScrollToTop from '../../functions/ScrollToTop'
-import ScrollToTopButton from '../buttons/ScrollToTopButton'
-import Footer from '../templates/Footer'
-import Header from '../templates/Header/Header'
-import Spacing from './Spacing'
 
 const MainLayout = ({ children }) => {
   return (
