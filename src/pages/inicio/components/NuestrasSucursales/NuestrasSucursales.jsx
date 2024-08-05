@@ -1,12 +1,5 @@
 import { FaEnvelope } from 'react-icons/fa6';
-import BorderBottom from "../../../../components/borders/BorderBottom";
-import ButtonSecondary from '../../../../components/buttons/ButtonSecondary';
-import PaginatedSucursalCards from '../../../../components/cards/PaginatedSucursalCards';
-import ButtonContainer from '../../../../components/containers/ButtonContainer';
-import Container from '../../../../components/containers/Container';
-import Section from '../../../../components/templates/Section';
-import TitleH2 from '../../../../components/title/TitleH2';
-
+import { BorderBottom, ButtonSecondary, PaginatedSucursalCards, ButtonContainer, Container, Section, TitleH2 } from '../../../../components';
 
 const NuestrasSucursales = () => {
   return (
