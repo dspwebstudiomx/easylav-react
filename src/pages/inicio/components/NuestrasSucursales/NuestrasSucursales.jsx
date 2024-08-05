@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
 import { FaEnvelope } from 'react-icons/fa6';
 import BorderBottom from '../../../../components/borders/BorderBottom';
@@ -12,27 +9,12 @@ import Section from '../../../../components/templates/Section';
 import TitleH2 from '../../../../components/title/TitleH2';
 import { localservices } from '../../../../data/sucursales';
 import usePagination from './UsePagination';
+import useMediaQueries from './useMediaQueries';
 
 const NuestrasSucursales = () => {
 
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const { isMobile, isTablet, isDesktop, itemsPerPage } = useMediaQueries()
   const { paginatedData, handlePageChange, handlePrevPage, handleNextPage, currentPage } = usePagination(localservices, itemsPerPage);
-
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 1024px) and (max-width: 1920px)' });
-
-  useEffect(() => {
-    if (isMobile) {
-      setItemsPerPage(1);
-    } else if (isTablet) {
-      setItemsPerPage(2);
-    } else if (isDesktop) {
-      setItemsPerPage(3);
-    } else {
-      setItemsPerPage(3);
-    }
-  }, [isMobile, isTablet, isDesktop]);
 
   return (
     <Section id="nuestras-sucursales">
@@ -54,7 +36,7 @@ const NuestrasSucursales = () => {
               servicehour2={localservice.servicehour2}
               ciudad={localservice.ciudad}
               email={localservice.email}
-              width="w-[240px] 2xl:w-[280px]"
+              width="w-[320px]  sm:w-[240px] 2xl:w-[280px]"
               titleMailto={localservice.titleMailto}
               badge={localservice.badge}
             />
