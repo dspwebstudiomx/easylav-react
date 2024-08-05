@@ -23,7 +23,6 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
   const isOpen = (currentHour > openHour || (currentHour === openHour && currentMinute >= openMinute))
     && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
 
-
   return (
     <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[490px] shadow-xl overflow-hidden`}>
 
@@ -161,12 +160,12 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
       {/* Bubble */}
       {isOpen &&
         <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
-          <p>Abierto</p>
+          <p className='text-sm'>Abierto</p>
         </div>
       }
       {!isOpen &&
         <div className='absolute right-3 top-3 border-2 border-red_dark bg-red_light rounded-lg px-4 py-2 text-red_dark'>
-          <p>Cerrado</p>
+          <p className='text-sm'>Cerrado</p>
         </div>
       }
       {/* Buble */}
