@@ -1,8 +1,9 @@
+
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
-import SucursalCard from '../../../../components/cards/SucursalCard';
-import { localservices } from '../../../../data/sucursales';
-import usePagination from './UsePagination';
-import useMediaQueries from './useMediaQueries';
+import { localservices } from "../../data/sucursales";
+import useMediaQueries from '../../hooks/useMediaQueries';
+import usePagination from '../../hooks/usePagination';
+import SucursalCard from './SucursalCard';
 
 const PaginatedSucursalCards = () => {
   const { isMobile, isTablet, isDesktop, itemsPerPage } = useMediaQueries()

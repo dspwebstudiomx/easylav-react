@@ -1,5 +1,9 @@
-// components/index.js
+export { default as Badge } from "./badge/Badge.jsx";
 export { default as BorderBottom } from "./borders/BorderBottom";
+export { default as BorderCenter } from "./borders/BorderCenter.jsx";
+export { default as BorderLeft } from "./borders/BorderLeft.jsx";
+export { default as Button } from "./buttons/Button.jsx";
+export { default as ButtonCard } from "./buttons/ButtonCard.jsx";
 export { default as ButtonSecondary } from "./buttons/ButtonSecondary";
 export { default as PaginatedSucursalCards } from "./cards/PaginatedSucursalCards";
 export { default as ButtonContainer } from "./containers/ButtonContainer";
