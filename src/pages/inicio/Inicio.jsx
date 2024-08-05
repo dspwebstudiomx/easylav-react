@@ -1,16 +1,16 @@
-import HomeLayout from "../../components/layout/HomeLayout"
-import HeroInicio from "./components/HeroInicio"
-import Container from "../../components/containers/Container"
-import Section from "../../components/templates/Section"
 import { lazy, Suspense } from "react"
+import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
+import Container from "../../components/containers/Container"
+import HomeLayout from "../../components/layout/HomeLayout"
 import Loading from "../../components/Loading"
 import SEOFriendly from "../../components/SEOFriendly"
-import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
+import Section from "../../components/templates/Section"
+import HeroInicio from "./components/HeroInicio"
 // import NuestrasSucursalesCopy from "./components/NuestrasSucursalesCopy"
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
 const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
 const NuestrasSucursales = lazy(() => import("./components/NuestrasSucursales/NuestrasSucursales"))
-const NuestrosServicios = lazy(() => import("./components/NuestrosServicios"))
+const NuestrosServicios = lazy(() => import("./components/NuestrosServicios/NuestrosServicios"))
 const Testimonios = lazy(() => import("./components/Testimonios"))
 const Contacto = lazy(() => import("../../components/contacto/Contacto"))
 
