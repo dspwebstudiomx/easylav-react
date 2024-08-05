@@ -1,23 +1,12 @@
 import { TbPoint } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
+import { Container, Section, SocialLinks } from '..';
 import logo from '../../assets/images/logos/horizontal/logo-blanco.png';
 import { linksServicios, navlinks, otrosLinks } from '../../data/Navlinks';
-import Container from '../containers/Container';
-import SocialLinks from '../links/SocialLinks';
-import Section from './Section';
+import { scrollWithOffset } from '../../functions/scrollWithOffset';
 
 const Footer = () => {
-
-  const scrollWithOffset = (element, offset) => {
-    const elementPosition = element.offsetTop - offset;
-    window.scroll({
-      top: elementPosition,
-      left: 0,
-      behavior: "smooth",
-    });
-  }
-
 
   return (
     <footer id='footer' className='text-xl'>
@@ -37,7 +26,7 @@ const Footer = () => {
                         id={`footer-link-${navlink.linkId}`}
                         to={navlink.href}
                         className='text-white hover:text-primary flex items-center'
-                        scroll={element => scrollWithOffset(element, 120)}
+                        scroll={scrollWithOffset}
                       >
                         <TbPoint className='text-primary text-2xl' size={32} />
                         <span className='ml-2'>{navlink.name}</span>
@@ -49,7 +38,7 @@ const Footer = () => {
                   <Link
                     to='/franquicias'
                     className='text-white hover:text-primary flex items-center'
-                    scroll={element => scrollWithOffset(element, 120)}
+                    scroll={scrollWithOffset}
                   >
                     <TbPoint
                       className='text-primary text-2xl'
@@ -76,7 +65,7 @@ const Footer = () => {
                         id={`footer-link-${linkServicio.linkId}`}
                         to={linkServicio.href}
                         className='text-white hover:text-primary flex items-center'
-                        scroll={element => scrollWithOffset(element, 160)}
+                        scroll={scrollWithOffset}
                       >
                         <TbPoint
                           className='text-primary text-2xl' size={32}
@@ -100,7 +89,7 @@ const Footer = () => {
                 {otrosLinks.map(otroLink => {
                   return (
                     <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
-                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} scroll={element => scrollWithOffset(element, 120)} />
+                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} scroll={scrollWithOffset} />
                         <span className='ml-2'>{otroLink.name}</span>
                       </NavHashLink>
                     </li>

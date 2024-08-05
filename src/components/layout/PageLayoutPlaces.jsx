@@ -3,7 +3,7 @@ import ScrollToTopButton from '../buttons/ScrollToTopButton'
 import Container from '../containers/Container'
 import Hero from '../hero/Hero'
 import Footer from '../templates/Footer'
-import Header from '../templates/Header'
+import Header from '../templates/Header/Header'
 import Section from '../templates/Section'
 import Spacing from './Spacing'
 

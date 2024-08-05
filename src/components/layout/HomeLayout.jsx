@@ -3,7 +3,7 @@ import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot'
 import ScrollToTop from '../../functions/ScrollToTop'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
 import Footer from '../templates/Footer'
-import Header from '../templates/Header'
+import Header from '../templates/Header/Header'
 import Spacing from './Spacing'
 
 const MainLayout = ({ children }) => {
