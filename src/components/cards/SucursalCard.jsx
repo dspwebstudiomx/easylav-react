@@ -63,6 +63,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         </div>
         {/* Horario */}
       </div>
+      {/* Badge */}
       <div>
         {
           !badge && (
@@ -84,7 +85,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`Ir a ${title} en Waze`}
-                    className="w-auto flex items-center justify-center gap-3 text-lg"
+                    className="w-auto flex flex-col items-center justify-center gap-2 text-lg"
                   >
                     <FaWaze size={32} />
                     <span>Waze</span>
@@ -99,7 +100,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`Ir a ${title} en Google Maps`}
-                    className="w-auto flex items-center justify-center gap-3 text-lg"
+                    className="w-auto flex flex-col items-center justify-center gap-2 text-lg"
                   >
                     <FaMapMarkedAlt size={32} />
                     <span>Google Maps</span>
@@ -112,44 +113,64 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         }
         {
           badge && (
-            <>
+            <div className=''>
               <Badge backgroundColor='bg-secondary_light'>
-                <p>{badge}</p>
+                <p className='text-lg'>{badge}</p>
               </Badge>
-              <div className='block md:hidden'>
+
+              <div className='flex md:hidden'>
+                {/* Waze */}
                 <Badge backgroundColor='bg-secondary'>
                   <a
                     href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`Ir a ${title} en Waze`}
-                    className="w-full flex items-center justify-center gap-3 text-lg"
+                    className="w-auto flex flex-col items-center justify-center gap-3 text-lg"
                   >
                     <FaWaze size={32} />
-                    <span>Ir en Waze</span>
+                    <span>Waze</span>
                   </a>
                 </Badge>
+                {/* Waze */}
+
+                {/* Google Maps */}
                 <Badge backgroundColor='bg-secondary_dark'>
                   <a
                     href={gmap}
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`Ir a ${title} en Google Maps`}
-                    className="w-full flex items-center justify-center gap-3 text-lg"
+                    className="w-auto flex flex-col items-center justify-center gap-3 text-lg"
                   >
                     <FaMapMarkedAlt size={32} />
-                    <span>Ir en Google Maps</span>
+                    <span>Google Maps</span>
                   </a>
                 </Badge>
-
+                {/* Google Maps */}
               </div>
-            </>
+
+
+            </div>
           )
         }
       </div>
-      <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
-        {isOpen ? <p className='text-sm text-green-500'>Abierto</p> : <p className='text-sm text-red-500'>Cerrado</p>}
-      </div>
+      {/* Badge */}
+
+
+      {/* Bubble */}
+      {isOpen &&
+        <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
+          <p>Abierto</p>
+        </div>
+      }
+      {!isOpen &&
+        <div className='absolute right-3 top-3 border-2 border-red_dark bg-red_light rounded-lg px-4 py-2 text-red_dark'>
+          <p>Cerrado</p>
+        </div>
+      }
+      {/* Buble */}
+
 
     </article>
   )
