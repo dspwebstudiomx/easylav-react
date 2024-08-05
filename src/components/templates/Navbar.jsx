@@ -41,7 +41,7 @@ const Navbar = () => {
               {navlinks.map((navlink) => {
                 return (
                   <NavHashLink
-                    scroll={element => scrollWithOffset(element, 120)}
+                    scroll={element => scrollWithOffset(element, 100)}
                     key={navlink.id}
                     id={`link-${navlink.linkId}`}
                     className='uppercase font-semibold text-sm text-dark  hover:text-secondary_light navlink'
