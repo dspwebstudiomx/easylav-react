@@ -1,7 +1,7 @@
+import image from "assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
+import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components'
 import { lazy, Suspense } from "react"
-import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import { Container, HomeLayout, Loading, Section, SEOFriendly } from '../../components'
-import HeroInicio from './components/HeroInicio'
+const HeroInicio = lazy(() => import("./components/HeroInicio"))
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
 const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
 const NuestrasSucursales = lazy(() => import("./nuestrasSucursales/NuestrasSucursales"))

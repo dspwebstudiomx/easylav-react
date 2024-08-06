@@ -117,7 +117,7 @@ export default function ContactForm() {
             {/* Fields */}
             <div className="flex flex-wrap justify-between gap-3">
               <div className="flex flex-col xl:w-[50%] w-full">
-                <label htmlFor='user_name' className="mb-2">Nombre<span className='text-required ml-1'>*</span></label>
+                <label htmlFor='user_name' className="mb-2">Nombre Completo<span className='text-required ml-1'>*</span></label>
                 <Field
                   id="user_name"
                   name="user_name"

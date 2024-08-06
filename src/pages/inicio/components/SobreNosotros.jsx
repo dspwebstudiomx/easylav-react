@@ -1,5 +1,5 @@
-import imageSection from '../../../assets/images/images/laundrylady.webp'
-import { BorderLeft, Container, Section, TitleH2 } from '../../../components/'
+import { Placeholder } from 'assets'
+import { BorderLeft, Container, Section, TitleH2 } from 'components'
 
 const SobreNosotros = () => {
   return (
@@ -15,7 +15,7 @@ const SobreNosotros = () => {
             </p>
           </div>
           <div className='justify-end items-center'>
-            <img src={imageSection} alt="mujer en servicio de lavado" width={520} className='shadow-image' title='mujer en servicio de lavado' />
+            <img src={Placeholder} alt="mujer en servicio de lavado" width={520} className='shadow-image' title='mujer en servicio de lavado' />
           </div>
         </div>
       </Container>

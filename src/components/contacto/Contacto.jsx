@@ -1,7 +1,5 @@
+import { ContactForm, SocialLinks, TitleH2 } from "components"
 import { Link } from "react-router-dom"
-import ContactForm from "../contacto/ContactForm"
-import SocialLinks from "../links/SocialLinks"
-import TitleH2 from "../title/TitleH2"
 
 const Contacto = () => {
   return (

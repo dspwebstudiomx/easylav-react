@@ -1,4 +1,4 @@
-import { BorderBottom, Container, Section, TitleH2 } from '../../../components';
+import { BorderBottom, Container, Section, TitleH2 } from 'components';
 import TestimonialGenerator from './TestimonialGenerator';
 
 const Testimonios = () => {

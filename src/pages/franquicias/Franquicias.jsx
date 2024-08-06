@@ -1,17 +1,11 @@
-import { TbPoint } from "react-icons/tb"
-import PageLayout from "../../components/layout/PageLayout"
-import TitleH1 from "../../components/title/TitleH1"
-import BorderLeft from "../../components/borders/BorderLeft"
-import Image_1 from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import Image_2 from "../../assets/images/images/Placeholder.webp"
-import { Helmet } from "react-helmet"
-import ButtonContainer from "../../components/containers/ButtonContainer"
-import ButtonSecondary from "../../components/buttons/ButtonSecondary"
+import { Hero640, Placeholder } from 'assets'
+import { BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, Modal, PageLayout, TitleH1, } from "components"
 import { useState } from "react"
-import Modal from "../../components/contacto/Modal"
-import ContactFormFranquicias from "../../components/contacto/ContactFormFranquicias"
-import { FaInfoCircle } from "react-icons/fa";
+import { Helmet } from "react-helmet"
+import { FaInfoCircle } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
+import { TbPoint } from "react-icons/tb"
+
 
 
 const Franquicias = () => {
@@ -105,16 +99,16 @@ const Franquicias = () => {
         {/* Columna 2 */}
         <div id="columma-2" className="grid sm:grid-cols-2 lg:grid-cols-1 bg-red-100 gap-20 sm:gap-32 mt-24 md:p-12 lg:p-0 place-items-end sm:mr-9 mx-auto">
           <div className="rotate-[25deg] bg-secondary h-auto w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img src={Image_1} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
+            <img src={Hero640} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>
           <div className="rotate-[15deg] bg-secondary h-auto w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img src={Image_2} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
+            <img src={Placeholder} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>
           <div className="rotate-[-20deg] bg-secondary h-auto w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img src={Image_1} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
+            <img src={Hero640} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>
           <div className="rotate-[-35deg] bg-secondary h-auto w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img src={Image_2} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
+            <img src={Placeholder} alt="image" width={320} className="w-[250px] md:w-[280px] lg:w-[320px] xl:w-[380px] h-auto shadow-2xl" />
           </div>
         </div>
         {/* Columna 2 */}

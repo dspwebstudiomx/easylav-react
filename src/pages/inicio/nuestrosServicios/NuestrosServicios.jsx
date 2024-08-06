@@ -1,5 +1,5 @@
 
-import { BorderBottom, ButtonContainer, ButtonSecondary, Container, Section, TitleH2 } from '../../../components';
+import { BorderBottom, ButtonContainer, ButtonSecondary, Container, Section, TitleH2 } from 'components';
 import ServicesGenerator from './ServicesGenerator';
 
 const NuestrosServicios = () => {

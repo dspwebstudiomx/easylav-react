@@ -1,5 +1,5 @@
 import ChatBot from 'react-chatbotify';
-import { styles, settings } from './js/config'
+import { settings, styles } from './js/config';
 import useChatForm from './js/useChatForm';
 
 const MyChatBot = () => {
@@ -10,7 +10,8 @@ const MyChatBot = () => {
 			settings={settings}
 			styles={styles}
 			flow={flow}
-			form={form} />
+			form={form}
+		/>
 	);
 }
 export default MyChatBot

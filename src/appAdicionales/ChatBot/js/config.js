@@ -74,11 +74,11 @@ const styles = {
   },
   botBubbleStyle: {
     backgroundColor: secondaryColor,
-    fontSize: "14px",
+    fontSize: "16px",
   },
   userBubbleStyle: {
     backgroundColor: primaryColor,
-    fontSize: "14px",
+    fontSize: "16px",
   },
   bodyStyle: {
     padding: "1.1em",

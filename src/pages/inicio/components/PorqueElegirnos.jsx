@@ -1,6 +1,6 @@
+import { Placeholder } from 'assets';
+import { BorderLeft, Container, Section, TitleH2 } from 'components';
 import { TbPoint } from 'react-icons/tb';
-import { Placeholder } from '../../../assets';
-import { BorderLeft, Container, Section, TitleH2 } from '../../../components';
 
 const PorqueElegirnos = () => {
   return (

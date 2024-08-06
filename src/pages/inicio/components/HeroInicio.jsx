@@ -1,11 +1,11 @@
-import image from '../../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-1920.jpg';
+import image from 'assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-1920.jpg';
 import {
   ButtonContainer,
   ButtonSecondary,
   Container,
   Hero
-} from '../../../components';
-import { scrollWithOffset } from '../../../functions/scrollWithOffset';
+} from 'components';
+import { scrollWithOffset } from 'functions/scrollWithOffset';
 
 const HeroInicio = () => {
   return (
