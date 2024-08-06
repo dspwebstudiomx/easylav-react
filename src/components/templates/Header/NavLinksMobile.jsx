@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { GrGroup } from 'react-icons/gr';
 import { NavHashLink } from 'react-router-hash-link';
-import { navlinks } from '../../../data/Navlinks';
+import { navlinks } from '../../../data/navlinks';
 import { scrollWithOffset } from '../../../functions/scrollWithOffset';
 
 const NavLinksMobile = ({ toogleNav, onLinkClick }) => {

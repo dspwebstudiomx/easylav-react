@@ -1,6 +1,4 @@
-import {
-  BorderBottom, ButtonContainer, ButtonSecondary, Container, PaginatedSucursalCards, Section, TitleH2
-} from 'components';
+import { BorderBottom, ButtonContainer, ButtonSecondary, Container, PaginatedSucursalCards, Section, TitleH2 } from 'components';
 import { FaEnvelope } from 'react-icons/fa';
 
 const NuestrasSucursales = () => {

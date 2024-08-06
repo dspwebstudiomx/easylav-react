@@ -1,4 +1,4 @@
-export const localservicesbck = [
+const localservicesbck = [
   {
     id: 3,
     title: "Jardines de Jerez",
@@ -14,8 +14,7 @@ export const localservicesbck = [
     email: "easylavjerez@easylav.mx",
   },
 ];
-
-export const localservices = [
+const localservices = [
   {
     id: 1,
     title: "Pedregal",
@@ -140,3 +139,4 @@ export const localservices = [
     badge: "Próxima Apertura",
   },
 ];
+export { localservices, localservicesbck };

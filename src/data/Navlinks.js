@@ -6,7 +6,7 @@ import {
   GrUser,
 } from "react-icons/gr";
 
-export const navlinks = [
+const navlinks = [
   {
     id: "1",
     name: "Inicio",
@@ -44,7 +44,7 @@ export const navlinks = [
   },
 ];
 
-export const linksServicios = [
+const linksServicios = [
   {
     id: "1",
     name: "Lavado Regular",
@@ -65,7 +65,7 @@ export const linksServicios = [
   },
 ];
 
-export const otrosLinks = [
+const otrosLinks = [
   {
     id: "1",
     name: "Política de Privacidad",
@@ -91,3 +91,4 @@ export const otrosLinks = [
     linkId: "preguntas-frecuentes",
   },
 ];
+export { linksServicios, navlinks, otrosLinks };

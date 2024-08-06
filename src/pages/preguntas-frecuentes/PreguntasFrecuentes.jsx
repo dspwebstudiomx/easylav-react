@@ -1,3 +1,4 @@
+import { frequentQuestions } from "data";
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
@@ -8,7 +9,6 @@ import ButtonSecondary from "../../components/buttons/ButtonSecondary";
 import ButtonContainer from "../../components/containers/ButtonContainer";
 import PageLayout from "../../components/layout/PageLayout";
 import TitleH1 from "../../components/title/TitleH1";
-import { frequentQuestions } from "../../data/FrequentQuestions";
 
 const PreguntasFrecuentes = () => {
   return (

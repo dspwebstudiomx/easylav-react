@@ -1,9 +1,12 @@
 
 import { NavHashLink } from 'react-router-hash-link';
-import { navlinks } from '../../../data/Navlinks';
+import { navlinks } from '../../../data/navlinks';
 import { scrollWithOffset } from '../../../functions/scrollWithOffset';
 
 const NavLinksDesktop = () => {
+
+  const classes = 'uppercase font-semibold text-sm text-dark  hover:text-secondary_light navlink'
+
   return (
     <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0'>
       {navlinks.map((navlink) => {
@@ -12,7 +15,7 @@ const NavLinksDesktop = () => {
             scroll={scrollWithOffset}
             key={navlink.id}
             id={`link-${navlink.linkId}`}
-            className='uppercase font-semibold text-sm text-dark  hover:text-secondary_light navlink'
+            className={classes}
             to={navlink.href}
           >
             {navlink.name}
@@ -20,7 +23,7 @@ const NavLinksDesktop = () => {
         );
       })}
       <li>
-        <NavHashLink className='uppercase font-semibold text-base xl:text-md text-primary  hover:text-primary' to='/franquicias'>Franquicias</NavHashLink>
+        <NavHashLink className={classes} to='/franquicias'>Franquicias</NavHashLink>
       </li>
     </ul>
   );

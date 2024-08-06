@@ -3,9 +3,9 @@ import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components
 import { lazy, Suspense } from "react"
 const HeroInicio = lazy(() => import("./components/HeroInicio"))
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
+const NuestrosServicios = lazy(() => import("./nuestrosServicios/NuestrosServicios"))
 const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
 const NuestrasSucursales = lazy(() => import("./nuestrasSucursales/NuestrasSucursales"))
-const NuestrosServicios = lazy(() => import("./nuestrosServicios/NuestrosServicios"))
 const Testimonios = lazy(() => import("./Testimonios/Testimonios"))
 const Contacto = lazy(() => import("../../components/contacto/Contacto"))
 

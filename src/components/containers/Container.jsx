@@ -10,7 +10,7 @@ const Container = ({ id, children, className }) => {
 Container.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.node,
 }
 
 export default Container

@@ -5,7 +5,7 @@ import { TbPoint } from 'react-icons/tb';
 const PorqueElegirnos = () => {
   return (
     <Section id={'porque-elegirnos'} backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light'}>
-      <Container className={'mx-auto'} >
+      <Container className={'mx-auto'} id='porque-elegirnos-container'>
         <article className='grid sm:grid-cols-2 gap-x-20 gap-y-16 mx-auto'>
           <div className='grid place-content-center gap-12'>
             <BorderLeft>

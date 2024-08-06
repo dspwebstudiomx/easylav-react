@@ -1,7 +1,7 @@
 
 import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
-import { navlinks } from '../../../data/Navlinks';
+import { navlinks } from '../../../data/navlinks';
 
 const NavLinksTablet = () => {
 

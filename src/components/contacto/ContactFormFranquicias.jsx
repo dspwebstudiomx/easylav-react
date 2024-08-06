@@ -1,10 +1,9 @@
 import emailjs from '@emailjs/browser';
+import { ButtonContainer, ButtonSecondary } from 'components';
 import { Field, Form, Formik } from 'formik';
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 import { FaRegEnvelope } from 'react-icons/fa6';
-import ButtonSecondary from '../buttons/ButtonSecondary';
-import ButtonContainer from '../containers/ButtonContainer';
 import EmailErrorModal from '../modals/EmailErrorModal';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
 export default function ContactFormFranquicias() {
@@ -51,11 +50,11 @@ export default function ContactFormFranquicias() {
         },
       );
   };
-  // if (showModal) {
-  //   document.body.classList.add('modal-active')
-  // } else {
-  //   document.body.classList.remove('modal-active')
-  // }
+  if (showModal) {
+    document.body.classList.add('modal-active')
+  } else {
+    document.body.classList.remove('modal-active')
+  }
 
   return (
     <article id='formulario' className='border-4  border-primary_dark rounded-2xl bg-primary_light w-full text-sm p-4 h-auto'>

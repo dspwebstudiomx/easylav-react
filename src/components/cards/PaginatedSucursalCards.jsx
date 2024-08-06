@@ -1,13 +1,15 @@
 
+import { localservices } from "data/sucursales";
+import { useMediaQueries, usePagination } from 'hooks';
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
-import { localservices } from "../../data/sucursales";
-import useMediaQueries from '../../hooks/useMediaQueries';
-import usePagination from '../../hooks/usePagination';
 import SucursalCard from './SucursalCard';
 
 const PaginatedSucursalCards = () => {
+
   const { isMobile, isTablet, isDesktop, itemsPerPage } = useMediaQueries()
+
   const { paginatedData, handlePageChange, handlePrevPage, handleNextPage, currentPage } = usePagination(localservices, itemsPerPage);
+
   return (
     <>
       <div className={`grid ${isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-2' : isDesktop ? 'grid-cols-3' : 'grid-cols-4'} gap-12 mx-auto place-content-center`}>
