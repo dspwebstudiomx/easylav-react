@@ -1,17 +1,12 @@
 import { lazy, Suspense } from "react"
 import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import Container from "../../components/containers/Container"
-import HomeLayout from "../../components/layout/HomeLayout"
-import Loading from "../../components/Loading"
-import SEOFriendly from "../../components/SEOFriendly"
-import Section from "../../components/templates/Section"
-import HeroInicio from "./components/HeroInicio"
-// import NuestrasSucursalesCopy from "./components/NuestrasSucursalesCopy"
+import { Container, HomeLayout, Loading, Section, SEOFriendly } from '../../components'
+import HeroInicio from './components/HeroInicio'
 const SobreNosotros = lazy(() => import("./components/SobreNosotros"))
 const PorqueElegirnos = lazy(() => import("./components/PorqueElegirnos"))
-const NuestrasSucursales = lazy(() => import("./components/NuestrasSucursales/NuestrasSucursales"))
-const NuestrosServicios = lazy(() => import("./components/NuestrosServicios/NuestrosServicios"))
-const Testimonios = lazy(() => import("./components/Testimonios"))
+const NuestrasSucursales = lazy(() => import("./nuestrasSucursales/NuestrasSucursales"))
+const NuestrosServicios = lazy(() => import("./nuestrosServicios/NuestrosServicios"))
+const Testimonios = lazy(() => import("./Testimonios/Testimonios"))
 const Contacto = lazy(() => import("../../components/contacto/Contacto"))
 
 const Inicio = () => {
@@ -19,7 +14,7 @@ const Inicio = () => {
     <Suspense fallback={<Loading />} >
       <HomeLayout>
         <SEOFriendly
-          title="Sucursales | Easylav: Tu lavandería ideal"
+          title="Inicio | Easylav: Tu lavandería ideal"
           url="easylav-react.netlify.app"
           description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
           author="dspwebstudio"
@@ -34,15 +29,13 @@ const Inicio = () => {
         <PorqueElegirnos />
         <NuestrasSucursales />
         <Testimonios />
-        <Section>
+        <Section backgroundColor={'dark:bg-dark'} className={'dark:text-light'}>
           <Container className={'mx-auto'}>
             <Contacto />
           </Container>
         </Section>
       </HomeLayout>
-
     </Suspense>
-
   )
 }
 

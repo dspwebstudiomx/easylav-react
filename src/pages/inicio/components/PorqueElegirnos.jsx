@@ -1,13 +1,10 @@
-import Section from '../../../components/templates/Section'
-import Container from '../../../components/containers/Container'
-import imageSection from '../../../assets/images/images/Placeholder.webp'
 import { TbPoint } from 'react-icons/tb';
-import BorderLeft from '../../../components/borders/BorderLeft';
-import TitleH2 from '../../../components/title/TitleH2';
+import { Placeholder } from '../../../assets';
+import { BorderLeft, Container, Section, TitleH2 } from '../../../components';
 
 const PorqueElegirnos = () => {
   return (
-    <Section id={'porque-elegirnos'} className={''} height={'h-auto'} backgroundColor={''}>
+    <Section id={'porque-elegirnos'} backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light'}>
       <Container className={'mx-auto'} >
         <article className='grid sm:grid-cols-2 gap-x-20 gap-y-16 mx-auto'>
           <div className='grid place-content-center gap-12'>
@@ -34,7 +31,7 @@ const PorqueElegirnos = () => {
             </div>
           </div>
           <div className='justify-end items-center'>
-            <img src={imageSection} alt='placeholder imagen' width={520} className='shadow-image rounded' title='placeholder imagen' />
+            <img src={Placeholder} alt='placeholder imagen' width={520} className='shadow-image rounded' title='placeholder imagen' />
           </div>
         </article>
       </Container>

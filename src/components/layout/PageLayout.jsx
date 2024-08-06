@@ -13,7 +13,7 @@ const PageLayout = ({ children }) => {
       <ScrollToTop />
       <Header />
       <main className="mt-[100px]">
-        <Section className="flex flex-col gap-6" height="h-auto" backgroundColor="bg-light">
+        <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
           <Container className="mx-auto">
             {children}
           </Container>

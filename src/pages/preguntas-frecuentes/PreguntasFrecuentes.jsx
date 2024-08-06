@@ -1,14 +1,14 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
-import PropTypes from 'prop-types'
-import PageLayout from "../../components/layout/PageLayout";
-import ButtonContainer from "../../components/containers/ButtonContainer";
-import ButtonSecondary from "../../components/buttons/ButtonSecondary";
-import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import { FaHome } from "react-icons/fa";
+import { FaRegBuilding } from "react-icons/fa6";
+import BorderLeft from "../../components/borders/BorderLeft";
+import ButtonPrimary from "../../components/buttons/ButtonPrimary";
+import ButtonSecondary from "../../components/buttons/ButtonSecondary";
+import ButtonContainer from "../../components/containers/ButtonContainer";
+import PageLayout from "../../components/layout/PageLayout";
 import TitleH1 from "../../components/title/TitleH1";
 import { frequentQuestions } from "../../data/FrequentQuestions";
-import { FaRegBuilding } from "react-icons/fa6";
-import BorderLeft from "../../components/borders/BorderLeft"
 
 const PreguntasFrecuentes = () => {
   return (
@@ -33,7 +33,7 @@ const PreguntasFrecuentes = () => {
           <ul>
             {frequentQuestions.map(freqQuestion => {
               return (
-                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`}>
+                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`} className="bg-light text-dark">
                   <AccordionItem
                     question={freqQuestion.question}
                     answer={freqQuestion.answer}
@@ -45,7 +45,7 @@ const PreguntasFrecuentes = () => {
           <ul>
             {frequentQuestions.map(freqQuestion => {
               return (
-                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`}>
+                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`} className="bg-light text-dark">
                   <AccordionItem
                     question={freqQuestion.question}
                     answer={freqQuestion.answer}

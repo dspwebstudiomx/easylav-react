@@ -1,18 +1,11 @@
 import { FaEnvelope } from 'react-icons/fa';
-
 import {
-  BorderBottom,
-  ButtonContainer,
-  ButtonSecondary,
-  Container,
-  PaginatedSucursalCards,
-  Section,
-  TitleH2,
-} from '../../../../components';
+  BorderBottom, ButtonContainer, ButtonSecondary, Container, PaginatedSucursalCards, Section, TitleH2
+} from '../../../components';
 
 const NuestrasSucursales = () => {
   return (
-    <Section id="nuestras-sucursales">
+    <Section id="nuestras-sucursales" backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light'}>
       <Container className="mx-auto w-4/5">
         <BorderBottom justify="mx-auto">
           <TitleH2 title="Sucursales" />

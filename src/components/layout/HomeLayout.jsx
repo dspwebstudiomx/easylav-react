@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot'
-import { Footer, Header, ScrollToTopButton, Spacing } from '../../components'
+import { Footer, Header, ScrollToTopButton } from '../../components'
 import ScrollToTop from '../../functions/ScrollToTop'
 
 const MainLayout = ({ children }) => {
@@ -10,7 +10,6 @@ const MainLayout = ({ children }) => {
       <ScrollToTop />
       <main className='mt-[100px] sm:mt-[160px] lg:mt-[100px]'>
         {children}
-        <Spacing height={'h-24'} />
       </main>
       <Footer />
       <ScrollToTopButton />

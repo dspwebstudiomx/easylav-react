@@ -1,9 +1,5 @@
 import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import BorderLeft from "../../components/borders/BorderLeft"
-import PageLayout from "../../components/layout/PageLayout"
-import Spacing from "../../components/layout/Spacing"
-import SEOFriendly from "../../components/SEOFriendly"
-import TitleH2 from "../../components/title/TitleH2"
+import { PageLayout, SEOFriendly, BorderLeft, TitleH2, Spacing } from '../../components'
 import CityCardGenerator from "./components/CityCardGenerator"
 
 const Sucursales = () => {

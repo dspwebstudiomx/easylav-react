@@ -14,7 +14,7 @@ const Navbar = () => {
           <div id='navbar' className='flex justify-between items-center h-[120px]'>
             <Logo />
             <NavLinksDesktop />
-            <MenuButton toggleNav={toggleNav} />
+            <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} />
             {navigationLinks && <NavLinksMobile />}
           </div>
         </Container>
