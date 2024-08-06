@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { GrGroup } from 'react-icons/gr';
-import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { navlinks } from '../../../data/Navlinks';
 import { scrollWithOffset } from '../../../functions/scrollWithOffset';
@@ -28,7 +27,7 @@ const NavLinksMobile = ({ toogleNav, onLinkClick }) => {
           );
         })}
         <li id='navlink-franquicias' className='shadow-xl text-base p-2 rounded-2xl items-center flex flex-col justify-center bg-light h-[100%] border-4 border-primary_dark '>
-          <NavLink
+          <NavHashLink
             id='link-franquicia'
             to='/franquicias'
             onClick={() => {
@@ -39,7 +38,7 @@ const NavLinksMobile = ({ toogleNav, onLinkClick }) => {
               <GrGroup size={32} className='text-secondary' />
               <span className='text-secondary text-base font-bold uppercase tracking-wide'>Franquicias</span>
             </div>
-          </NavLink>
+          </NavHashLink>
         </li>
       </ul>
     </div>
