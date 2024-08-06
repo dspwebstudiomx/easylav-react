@@ -7,6 +7,10 @@ const Navbar = () => {
     setNavigationLinks(!navigationLinks);
   };
 
+  const handleLinkClick = () => {
+    toggleNav();
+  };
+
   return (
     <>
       <nav id='nav' className='fixed top-0 w-full h-[100px] bg-light z-50 shadow-xl'>
@@ -15,7 +19,11 @@ const Navbar = () => {
             <Logo />
             <NavLinksDesktop />
             <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} />
-            {navigationLinks && <NavLinksMobile />}
+            {navigationLinks && (
+              <NavLinksMobile
+                onLinkClick={handleLinkClick}
+              />
+            )}
           </div>
         </Container>
       </nav>
