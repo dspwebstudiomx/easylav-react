@@ -1,8 +1,4 @@
-/**
- * A layout component that wraps the main content of a page.
- * It includes a header, footer, scroll-to-top button, and chatbot.
- */
-import ScrollToTop from 'functions';
+// PageLayout.jsx
 import PropTypes from 'prop-types';
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot';
 import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from '../../components';
@@ -10,7 +6,6 @@ import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from '
 const PageLayout = ({ children }) => {
   return (
     <>
-      <ScrollToTop />
       <Header />
       <main className="mt-[60px] xl:mt-0">
         <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
