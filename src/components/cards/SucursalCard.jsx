@@ -24,7 +24,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
     && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[390px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl`}>
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[442px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl`}>
 
       {/* mapa */}
       <div className='h-[150px] rounded-t-lg overflow-hidden'>

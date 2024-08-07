@@ -6,7 +6,6 @@ import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from '
 const PageLayout = ({ children }) => {
   return (
     <>
-      <scrollToTop />
       <Header />
       <main className="mt-[120px]">
         <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
