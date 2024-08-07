@@ -6,7 +6,7 @@ import { navlinks } from '../../../data/navlinks';
 const NavLinksTablet = () => {
 
   const scrollWithOffset = (element) => {
-    const offset = 160;
+    const offset = 170;
     const elementPosition = element.offsetTop - offset;
     window.scroll({
       top: elementPosition,
@@ -15,7 +15,7 @@ const NavLinksTablet = () => {
     });
   };
   return (
-    <ul id='navlinks-tablet' className='hidden md:flex fixed top-[100px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
+    <ul id='navlinks-tablet' className='hidden md:flex fixed top-[100px] sm:relative sm:top-[0px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
       {navlinks.map((navlink) => {
         return (
           <NavHashLink scroll={scrollWithOffset} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>

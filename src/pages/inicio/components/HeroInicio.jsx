@@ -11,7 +11,7 @@ const HeroInicio = () => {
   return (
     <Hero
       backgroundImage={image}
-      textColor="text-light"
+      textColor="text-light dark:text-secondary"
       opacity="opacity-45"
       opacityColor="#030303"
       height="2xl:h-[60vh]"
@@ -20,7 +20,7 @@ const HeroInicio = () => {
     >
       <Container className="items-start w-[80vw]">
         <h1 className="sr-only">en Easylav uu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto</h1>
-        <p className="text-3xl sm:text-4xl sm:w-2/3 leading-[45px] sm:leading-[60px] font-semibold">
+        <p className="text-3xl sm:text-4xl sm:w-2/3 leading-[45px] sm:leading-[60px] font-semibold text-border">
           Tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto
         </p>
         <ButtonContainer>

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 const Testimonio = ({ testimonio }) => {
   return (
-    <article className='shadow-lg p-12 flex flex-col justify-between bg-light text-dark rounded-lg' key={testimonio.id}>
+    <article className='shadow-xl p-6 flex flex-col justify-between bg-light text-dark rounded-lg' key={testimonio.id}>
       <p className='text-pretty text-base'><span></span>{testimonio.testimonio}</p>
-      <div className='flex sm:flex-col lg:flex-row mt-6 gap-2 justify-between items-center'>
+      <div className='flex flex-col sm:flex-row lg:flex-row mt-6 gap-2 justify-between sm:items-center'>
         <h3 className='font-semibold text-lg'>{testimonio.nombre}</h3>
         <div className='text-dark'>
           <div className='flex gap-2 text-secondary'>

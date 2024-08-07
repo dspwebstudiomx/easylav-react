@@ -24,10 +24,10 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
     && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[490px] shadow-xl overflow-hidden bg-light dark:text-dark`}>
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[390px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl`}>
 
       {/* mapa */}
-      <div className='h-[200px] rounded-t-lg overflow-hidden'>
+      <div className='h-[150px] rounded-t-lg overflow-hidden'>
         <APIProvider apiKey={googleAPIKey}>
           <Map
             defaultCenter={position}
@@ -44,7 +44,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         <h3 className='text-center font-semibold text-xl sm:text-base uppercase pb-4'>{title}</h3>
         {/* Dirección */}
         <a href={gmap} target="_blank" rel="noopener noreferrer" title={`sucursal ${title}`}>
-          <p className='w-full mx-auto text-balance flex gap-4 items-center text-md sm:text-sm'>
+          <p className='w-full mx-auto text-balance flex gap-4 items-center text-md sm:text-xs'>
             <span className='text-secondary text-xl'><FaMapMarkerAlt size={25} /></span>
             <span>{place}</span>
           </p>
@@ -54,7 +54,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         <div className='w-full mx-auto text-pretty flex gap-4 items-center mb-2'>
           <span className='text-secondary'><FaRegClock size={22} /></span>
           <div className='flex gap-3 xl:gap-2'>
-            <div className='flex gap-1 flex-col'>
+            <div className='flex gap-1 flex-col text-xs'>
               <p className='text-md sm:text-sm'>{serviceday1}</p>
               <p className='text-md sm:text-sm'>{servicehour1}</p>
             </div>
@@ -134,7 +134,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
                 {/* Waze */}
 
                 {/* Google Maps */}
-                <Badge backgroundColor='bg-secondary_dark'>
+                <Badge backgroundColor='bg-secondary_dark mx-auto'>
                   <a
                     href={gmap}
                     target="_blank"
@@ -143,7 +143,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
                     className="w-auto flex flex-col items-center justify-center gap-3 text-lg"
                   >
                     <FaMapMarkedAlt size={32} />
-                    <span>Google Maps</span>
+                    <span className='text-center mx-auto'>Google Maps</span>
                   </a>
                 </Badge>
                 {/* Google Maps */}

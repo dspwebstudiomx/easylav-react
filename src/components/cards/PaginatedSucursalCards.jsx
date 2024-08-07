@@ -27,7 +27,7 @@ const PaginatedSucursalCards = () => {
               servicehour2={localservice.servicehour2}
               ciudad={localservice.ciudad}
               email={localservice.email}
-              width="w-[320px]  sm:w-[240px] 2xl:w-[280px]"
+              width="w-[100%]  sm:w-[240px] 2xl:w-[280px] mx-auto"
               titleMailto={localservice.titleMailto}
               badge={localservice.badge}
             />
