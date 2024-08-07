@@ -1,5 +1,5 @@
+import { Container, DarkModeButton, HeaderLine, Logo, MenuButton, NavLinksDesktop, NavLinksMobile, NavLinksTablet } from 'components';
 import { useState } from 'react';
-import { Container, DarkModeButton, HeaderLine, Logo, MenuButton, NavLinksDesktop, NavLinksMobile, NavLinksTablet } from '../../../components';
 
 const Navbar = () => {
   const [navigationLinks, setNavigationLinks] = useState(false);
