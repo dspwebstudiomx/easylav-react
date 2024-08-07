@@ -1,4 +1,4 @@
-export const scrollWithOffset = (element) => {
+export default function scrollWithOffset(element) {
   const offset = 100;
   const elementPosition = element.offsetTop - offset;
   window.scroll({
@@ -6,4 +6,4 @@ export const scrollWithOffset = (element) => {
     left: 0,
     behavior: "smooth",
   });
-};
+}

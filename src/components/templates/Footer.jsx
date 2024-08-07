@@ -1,10 +1,10 @@
 import { linksServicios, navlinks, otrosLinks } from 'data';
+import { scrollWithOffset } from 'functions';
 import { TbPoint } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { Container, Section, SocialLinks } from '..';
 import logo from '../../assets/images/logos/horizontal/logo-blanco.png';
-import { scrollWithOffset } from '../../functions/scrollWithOffset';
 
 const Footer = () => {
 
