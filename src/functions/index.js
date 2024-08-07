@@ -1,3 +1,2 @@
-import scrollToTop from "./scrollToTop";
-import scrollWithOffset from "./scrollWithOffset";
-export { scrollToTop, scrollWithOffset };
+export { default as scrollToTop } from "functions/scrollToTop";
+export { default as scrollWithOffset } from "functions/scrollWithOffset";

@@ -5,7 +5,7 @@ import { NavHashLink } from 'react-router-hash-link';
 
 const Logo = () => {
   return (
-    <NavHashLink to="/#inicio" scroll={scrollWithOffset}>
+    <NavHashLink to="/#inicio" scroll={el => scrollWithOffset(el)}>
       <img
         alt='logo easylav a color'
         src={LogoHorizontalColor}

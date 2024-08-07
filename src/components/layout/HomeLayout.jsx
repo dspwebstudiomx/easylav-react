@@ -1,7 +1,7 @@
+import { Footer, Header, ScrollToTopButton } from 'components'
+import ScrollToTop from 'functions'
 import PropTypes from 'prop-types'
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot'
-import { Footer, Header, ScrollToTopButton } from '../../components'
-import ScrollToTop from '../../functions/scrollToTop'
 
 const MainLayout = ({ children }) => {
   return (
