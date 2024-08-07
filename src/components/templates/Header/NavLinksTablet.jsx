@@ -1,19 +1,11 @@
 
+import { navlinks } from 'data';
+import { scrollWithOffset } from 'functions';
 import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
-import { navlinks } from '../../../data/navlinks';
 
 const NavLinksTablet = () => {
 
-  const scrollWithOffset = (element) => {
-    const offset = 170;
-    const elementPosition = element.offsetTop - offset;
-    window.scroll({
-      top: elementPosition,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
   return (
     <ul id='navlinks-tablet' className='hidden md:flex fixed top-[100px] sm:relative sm:top-[0px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
       {navlinks.map((navlink) => {
