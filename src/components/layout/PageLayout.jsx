@@ -12,9 +12,9 @@ const PageLayout = ({ children }) => {
     <>
       <ScrollToTop />
       <Header />
-      <main className="mt-[100px]">
+      <main className="mt-[100px] md:mt-[160px] xl:mt-0">
         <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
-          <Container className="mx-auto">
+          <Container className="mx-auto py-12">
             {children}
           </Container>
           <Spacing height="h-24" />

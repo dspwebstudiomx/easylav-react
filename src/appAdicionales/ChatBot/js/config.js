@@ -55,7 +55,8 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "between",
-    fontSize: "21px",
+    fontSize: "16px",
+    fontWeight: "bold",
   },
   chatWindowStyle: {
     backgroundColor: lightColor,

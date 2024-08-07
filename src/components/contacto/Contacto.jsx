@@ -10,13 +10,13 @@ const Contacto = () => {
           <span className="ml-1">
             o si gustas, puedes visitar nuestra sección de
           </span>
-          <span className="ml-1 text-secondary font-semibold italic">
+          <span className="ml-1 text-secondary dark:text-primary  font-semibold italic">
             <Link to={'/preguntas-frecuentes'}>Preguntas Frecuentes</Link>
           </span>
           .
         </p>
-        <div className="mt-12 mb-24 sm:mb-24 mx-auto md:ml-0 md:mb-0">
-          <SocialLinks color={'text-secondary'} size={54} gap={'gap-8'} />
+        <div className="mt-12 sm:mt-6 mb-24 sm:mb-24 mx-auto md:ml-0 md:mb-0">
+          <SocialLinks color={'text-secondary dark:text-primary'} size={54} gap={'gap-8'} />
         </div>
       </div>
       <div id="contactForm" className=" w-full mx-auto" >

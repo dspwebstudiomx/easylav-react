@@ -8,7 +8,7 @@ const MainLayout = ({ children }) => {
     <>
       <Header />
       <ScrollToTop />
-      <main className='mt-[100px] sm:mt-[160px] lg:mt-[100px]'>
+      <main className='mt-[100px] sm:mt-[160px] lg:mt-0'>
         {children}
       </main>
       <Footer />

@@ -13,7 +13,7 @@ const HeroInicio = () => {
       backgroundImage={image}
       textColor="text-light"
       opacity="opacity-45"
-      opacityColor="bg-dark"
+      opacityColor="#030303"
       height="2xl:h-[60vh]"
       titleSection="inicio"
       imageAlt="canasta de ropa verde con ropa sucia de color con fondo blanco"

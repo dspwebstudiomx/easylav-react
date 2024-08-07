@@ -1,34 +1,32 @@
 import emailjs from '@emailjs/browser';
-import { ButtonContainer, ButtonSecondary } from 'components';
-import { Field, Form, Formik } from 'formik';
-import PropTypes from 'prop-types';
-import { useEffect, useRef, useState } from 'react';
-import { FaRegEnvelope } from 'react-icons/fa6';
-import EmailErrorModal from '../modals/EmailErrorModal';
-import EmailSuccessModal from '../modals/EmailSuccessModal';
-export default function ContactFormFranquicias() {
+import { EmailErrorModal, EmailSuccessModal, SubmitButton } from 'components';
+import { Form, Formik } from 'formik';
+import React, { useEffect, useState } from 'react';
+import Fields from '../contacto/components/Form/Fields';
 
-  const form = useRef();
+
+export const ContactFormFranquicias = () => {
   const [showModal, setShowModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
+  const form = React.createRef();
 
   useEffect(() => {
     if (showModal) {
       document.body.classList.add('modal-active');
-      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+      document.body.style.overflow = 'hidden';
     } else {
       document.body.classList.remove('modal-active');
-      document.body.style.overflow = 'unset'; // Reset the overflow style
+      document.body.style.overflow = 'unset';
     }
   }, [showModal]);
 
   useEffect(() => {
     if (showErrorModal) {
       document.body.classList.add('modal-active');
-      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+      document.body.style.overflow = 'hidden';
     } else {
       document.body.classList.remove('modal-active');
-      document.body.style.overflow = 'unset'; // Reset the overflow style
+      document.body.style.overflow = 'unset';
     }
   }, [showErrorModal]);
 
@@ -42,7 +40,6 @@ export default function ContactFormFranquicias() {
         () => {
           console.log('SUCCESS!');
           setShowModal(true);
-
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -50,23 +47,18 @@ export default function ContactFormFranquicias() {
         },
       );
   };
-  if (showModal) {
-    document.body.classList.add('modal-active')
-  } else {
-    document.body.classList.remove('modal-active')
-  }
 
   return (
-    <article id='formulario' className='border-4  border-primary_dark rounded-2xl bg-primary_light w-full text-sm p-4 h-auto'>
+    <article id="formulario" className="border-4 border-primary_dark rounded-2xl bg-primary_light text-sm p-4 h-auto text-dark">
       <Formik
         initialValues={{
           user_name: '',
           user_city: '',
           user_email: '',
           user_phone: '',
-          message: ''
+          message: '',
         }}
-        validate={
+        validate={() => {
           values => {
             let errors = {};
             if (!values.user_name) {
@@ -108,116 +100,19 @@ export default function ContactFormFranquicias() {
             }
             return errors;
           }
-        }
-        onSubmit={() => {
+
         }}
+        onSubmit={() => { }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className='flex flex-col gap-8 p-6 text-base'>
-            {/* Fields */}
-            <div className='flex flex-wrap justify-between gap-3'>
-              <div className='flex flex-col xl:w-[50%] w-full'>
-                <label htmlFor='user_name' className='mb-2'>Nombre Completo<span className='text-required ml-1'>*</span></label>
-                <Field
-                  id='user_name'
-                  name='user_name'
-                  className='rounded-md text-slate-900 bg-slate-200 p-2 border-2 border-primary xl:p-2 outline-none'
-                  type='text'
-                  placeholder='Nombre Completo'
-                  required
-                />
-                {touched.user_name && errors.user_name && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_name}</span></p>}
-              </div>
-              <div className='flex flex-col xl:w-[45%] w-full'>
-                <label htmlFor='user_city' className='mb-2'>Ciudad<span className='text-required ml-1'>*</span></label>
-                <Field
-                  className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
-                  id='user_city'
-                  name='user_city'
-                  placeholder='Ciudad'
-                  required
-                />
-                {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
-
-              </div>
-            </div>
-            <div className='flex flex-wrap justify-between gap-3'>
-              <div className='flex flex-col xl:w-[50%] w-full'>
-                <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
-                <Field
-                  className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
-                  id='user_email'
-                  name='user_email'
-                  type='email'
-                  placeholder='Correo electrónico'
-                  required
-                />
-                {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
-
-              </div>
-              <div className='flex flex-col xl:w-[45%] w-full'>
-                <label htmlFor='user_phone' className='mb-2'>Número Telefónico<span className='text-required ml-1'>*</span></label>
-                <Field
-                  className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
-                  type='text'
-                  name='user_phone'
-                  id='user_phone'
-                  placeholder='Número telefónico'
-                  required
-                />
-                {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
-
-              </div>
-            </div>
-            <div className='flex flex-col w-full'>
-              <label htmlFor='message' className='mb-2'>Mensaje<span className='text-required ml-1'>*</span></label>
-              <textarea
-                type='text'
-                name='message'
-                id='message'
-                className='rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary h-40 max-h-32 min-h-32 outline-none'
-                required
-              />
-              {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
-
-            </div>
-            {/* Fields */}
-
-            {/* Submit Button */}
-            <ButtonContainer position={'justify-center'}>
-              <ButtonSecondary
-                title={'Enviar mensaje'}
-                icon={<FaRegEnvelope />}
-                type={'submit'}
-                width={'w-[240px]'}
-              />
-            </ButtonContainer>
-            {/* Submit Button */}
-
-            {/* Modal */}
-            {showModal &&
-              <EmailSuccessModal
-                onClick={() => {
-                  resetForm()
-                  setShowModal(false);
-                }}
-              />
-            }
-            {showErrorModal &&
-              <EmailErrorModal
-                onClick={() => {
-                  setShowErrorModal(false);
-                }}
-              />
-            }
-            {/* Modal */}
-
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 p-6 text-base">
+            <Fields errors={errors} touched={touched} />
+            <SubmitButton />
+            {showModal && <EmailSuccessModal onClick={() => resetForm() && setShowModal(false)} />}
+            {showErrorModal && <EmailErrorModal onClick={() => setShowErrorModal(false)} />}
           </Form>
         )}
-      </Formik >
-    </article >
-  )
-}
-ContactFormFranquicias.propTypes = {
-  onClose: PropTypes.func
-}
+      </Formik>
+    </article>
+  );
+};

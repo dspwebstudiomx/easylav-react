@@ -11,7 +11,7 @@ const SobreNosotros = () => {
               <TitleH2 title={'Sobre Nosotros'} />
             </BorderLeft>
             <p className='text-balance 2xl:text-xl'>
-              En <span className='text-secondary font-semibold'>Easylav</span>, somos un equipo apasionado por el cuidado de la ropa. Con muchos años de experiencia, hemos perfeccionado nuestra técnica para asegurarnos de que cada prenda se vea y se sienta como nueva. Usamos solo los mejores equipos y productos porque creemos que tu ropa merece lo mejor.
+              En <span className='text-secondary font-semibold dark:text-primary'>Easylav</span>, somos un equipo apasionado por el cuidado de la ropa. Con muchos años de experiencia, hemos perfeccionado nuestra técnica para asegurarnos de que cada prenda se vea y se sienta como nueva. Usamos solo los mejores equipos y productos porque creemos que tu ropa merece lo mejor.
             </p>
           </div>
           <div className='justify-end items-center'>
