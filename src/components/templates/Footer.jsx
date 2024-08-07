@@ -1,5 +1,5 @@
 import { linksServicios, navlinks, otrosLinks } from 'data';
-import { scrollWithOffset } from 'functions';
+import { scrollToTop, scrollWithOffset } from 'functions';
 import { TbPoint } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
@@ -26,7 +26,7 @@ const Footer = () => {
                         id={`footer-link-${navlink.linkId}`}
                         to={navlink.href}
                         className='text-white hover:text-primary flex items-center'
-                        onClick={scrollWithOffset}
+                        scroll={el => scrollWithOffset(el)}
                       >
                         <TbPoint className='text-primary text-2xl' size={32} />
                         <span className='ml-2'>{navlink.name}</span>
@@ -38,7 +38,7 @@ const Footer = () => {
                   <Link
                     to='/franquicias'
                     className='text-white hover:text-primary flex items-center'
-                    onClick={scrollWithOffset}
+                    onClick={scrollToTop}
                   >
                     <TbPoint
                       className='text-primary text-2xl'
@@ -65,7 +65,7 @@ const Footer = () => {
                         id={`footer-link-${linkServicio.linkId}`}
                         to={linkServicio.href}
                         className='text-white hover:text-primary flex items-center'
-                        onClick={scrollWithOffset}
+                        scroll={el => scrollWithOffset(el)}
                       >
                         <TbPoint
                           className='text-primary text-2xl' size={32}
@@ -89,7 +89,7 @@ const Footer = () => {
                 {otrosLinks.map(otroLink => {
                   return (
                     <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
-                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} onClick={scrollWithOffset} />
+                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} onClick={scrollToTop} />
                         <span className='ml-2'>{otroLink.name}</span>
                       </NavHashLink>
                     </li>
