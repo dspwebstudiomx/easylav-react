@@ -1,9 +1,6 @@
-export default function scrollWithOffset(element) {
-  const offset = 100;
-  const elementPosition = element.offsetTop - offset;
-  window.scroll({
-    top: elementPosition,
-    left: 0,
-    behavior: "smooth",
-  });
-}
+const scrollWithOffset = (el) => {
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = -80;
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};
+export default scrollWithOffset;

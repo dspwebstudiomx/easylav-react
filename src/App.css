@@ -8,6 +8,10 @@ body {
   background-color: #ecf5f3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .text-border {
   text-shadow: 0 0 1px #000;
 }

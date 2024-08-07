@@ -5,7 +5,7 @@ import {
   Container,
   Hero
 } from 'components';
-import { scrollWithOffset } from 'functions/scrollWithOffset';
+import { scrollWithOffset } from 'functions';
 
 const HeroInicio = () => {
   return (
