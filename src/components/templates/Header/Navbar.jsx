@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id='nav' className='fixed top-0 sm:relative w-full h-[100px] bg-light z-50 shadow-xl'>
+      <nav id='nav' className='fixed top-0 sm:relative xl:fixed w-full h-[100px] bg-light z-50 shadow-xl'>
         <Container className={'flex justify-between px-8 sm:px-0  md:px-12 xl:px-0 mx-auto'}>
           <div id='navbar' className='flex items-center justify-between h-[120px]'>
             <Logo />

@@ -1,5 +1,6 @@
 import { Hero640, Placeholder } from "assets"
 import { BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, Modal, PageLayout, TextWithBulletPoint, TitleH1 } from "components"
+import ScrollToTop from "functions/scrollToTop"
 import { useState } from "react"
 import { Helmet } from "react-helmet"
 import { FaInfoCircle } from "react-icons/fa"
@@ -22,6 +23,7 @@ const Franquicias = () => {
         <title>Franquicias | Easylav</title>
         <link rel="canonical" href="https://easylav-react.netlify.app/sucursales" />
       </Helmet>
+      <ScrollToTop />
       <div className="grid xl:grid-cols-2 gap-0">
 
         {/* Columna 1 */}

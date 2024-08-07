@@ -1,5 +1,6 @@
+import ScrollToTop from "functions/scrollToTop"
 import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import { PageLayout, SEOFriendly, BorderLeft, TitleH2, Spacing } from '../../components'
+import { BorderLeft, PageLayout, SEOFriendly, Spacing, TitleH2 } from '../../components'
 import CityCardGenerator from "./components/CityCardGenerator"
 
 const Sucursales = () => {
@@ -15,6 +16,7 @@ const Sucursales = () => {
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
+      <ScrollToTop />
       <BorderLeft position={'mx-auto'}>
         <TitleH2 title={'Morelia'} />
       </BorderLeft>

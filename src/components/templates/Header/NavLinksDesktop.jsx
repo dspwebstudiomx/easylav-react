@@ -1,6 +1,7 @@
 // NavLinksDesktop.jsx
 import { DarkModeButton } from 'components';
 import { navlinks } from 'data';
+import { scrollToTop, scrollWithOffset } from 'functions';
 // import { scrollWithOffset } from 'functions';
 import { NavHashLink } from 'react-router-hash-link';
 
@@ -18,14 +19,14 @@ const NavLinksDesktop = () => {
               id={`navlink-${navlink.name}`}
               className={classes}
               to={navlink.href}
-            // onClick={scrollWithOffset}
+              scroll={el => scrollWithOffset(el)}
             >
               {navlink.name}
             </NavHashLink>
           );
         })}
         <li>
-          <NavHashLink className={classes} to='/franquicias'>Franquicias</NavHashLink>
+          <NavHashLink className={classes} to='/franquicias' scroll={scrollToTop} >Franquicias</NavHashLink>
         </li>
         <DarkModeButton />
       </ul>
