@@ -17,11 +17,10 @@ const CityCardGenerator = ({ city }) => {
             gmap={localservice.gmap}
             title={localservice.title}
             serviceday1={localservice.serviceday1}
-            serviceday2={localservice.serviceday2}
             servicehour1={localservice.servicehour1}
-            servicehour2={localservice.servicehour2}
             email={localservice.email}
             badge={localservice.badge}
+            advertisement={localservice.advertisement}
           />)
       }
     </article>

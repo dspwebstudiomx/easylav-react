@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className='mt-[100px] sm:mt-[0px] lg:mt-[100px]'>
+      <main className='mt-[100px] sm:mt-[0px] xl:mt-[100px]'>
         {children}
       </main>
       <Footer />

@@ -1,11 +1,17 @@
-import { linksPoliticas, linksServicios, linksTerminos, navlinks } from 'data';
+import { Container } from 'components';
+import {
+  linksPoliticas,
+  linksServicios,
+  linksTerminos,
+  navLinksPages,
+  navLinksSections,
+} from 'data/navlinks';
 import { scrollToTop, scrollWithOffset } from 'functions';
 import { TbPoint } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { Section, SocialLinks } from '..';
 import logo from '../../assets/images/logos/horizontal/logo-blanco.png';
-import { Container } from 'components'
 
 const Footer = () => {
 
@@ -19,7 +25,7 @@ const Footer = () => {
           <div id='footer-sections' className='flex flex-col gap-6 w-full'>
             <h3 className='text-primary uppercase leading-6 text-lg font-medium'>Secciones</h3>
             <ul className='flex flex-col gap-0'>
-              {navlinks.map(navlink => {
+              {navLinksSections.map(navlink => {
                 return (
                   <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
                     <NavHashLink
@@ -34,22 +40,21 @@ const Footer = () => {
                   </li>
                 )
               })}
-              <li>
-                <Link
-                  to='/franquicias'
-                  className='text-white hover:text-primary flex items-center'
-                  onClick={scrollToTop}
-                >
-                  <TbPoint
-                    className='text-primary text-2xl'
-                    size={32}
-                  />
-                  <span
-                    className='ml-2'
-                  >Franquicias
-                  </span>
-                </Link>
-              </li>
+              {navLinksPages.map(navlink => {
+                return (
+                  <li key={navlink.id} id={`footer-navlink-${navlink.linkId}`}>
+                    <NavHashLink
+                      id={`footer-link-${navlink.linkId}`}
+                      to={navlink.href}
+                      className='text-white hover:text-primary flex items-center'
+                      scroll={el => scrollWithOffset(el)}
+                    >
+                      <TbPoint className='text-primary text-2xl' size={32} />
+                      <span className='ml-2'>{navlink.name}</span>
+                    </NavHashLink>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           {/* Footer Sections */}
@@ -86,9 +91,9 @@ const Footer = () => {
               {linksPoliticas.map(link => {
                 return (
                   <li key={link.id} id={`footer-navlink-${link.linkId}`}>
-                    <NavHashLink id={`footer-link-${link.linkId}`} to={link.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${link.name}`} onClick={scrollToTop} />
+                    <Link id={`footer-link-${link.linkId}`} to={link.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${link.name}`} onClick={scrollToTop} />
                       <span className='ml-2'>{link.name}</span>
-                    </NavHashLink>
+                    </Link>
                   </li>
                 )
               })}
@@ -104,9 +109,9 @@ const Footer = () => {
                 {linksTerminos.map(link => {
                   return (
                     <li key={link.id} id={`footer-navlink-${link.linkId}`}>
-                      <NavHashLink id={`footer-link-${link.linkId}`} to={link.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${link.name}`} onClick={scrollToTop} />
+                      <Link id={`footer-link-${link.linkId}`} to={link.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${link.name}`} onClick={scrollToTop} />
                         <span className='ml-2'>{link.name}</span>
-                      </NavHashLink>
+                      </Link>
                     </li>
                   )
                 })}

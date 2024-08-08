@@ -20,7 +20,7 @@ const Franquicias = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Franquicias | Easylav</title>
-        <link rel="canonical" href="https://easylav-react.netlify.app/sucursales" />
+        <link rel="canonical" href="https://easylav-react.netlify.app/franquicias" />
       </Helmet>
       <div className="grid xl:grid-cols-2 gap-0">
 

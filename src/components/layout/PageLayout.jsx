@@ -1,13 +1,15 @@
 // PageLayout.jsx
+import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from 'components';
+import scrollToTop from 'functions/scrollToTop';
 import PropTypes from 'prop-types';
 import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot';
-import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from '../../components';
 
 const PageLayout = ({ children }) => {
+  scrollToTop()
   return (
     <>
       <Header />
-      <main className="pt-[100px]">
+      <main className="mt-[100px] sm:mt-[0px] xl:mt-[100px]">
         <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
           <Container className="mx-auto py-0">
             {children}

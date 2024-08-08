@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"
 import logo from "../../assets/images/logos/horizontal/logo-color.png"
-import ButtonContainer from "../../components/containers/ButtonContainer"
 import ButtonSecondary from "../../components/buttons/ButtonSecondary"
+import ButtonContainer from "../../components/containers/ButtonContainer"
 
 const NotFound = () => {
   return (
@@ -8,11 +9,12 @@ const NotFound = () => {
       <img src={logo} alt="logo" className="mx-auto" />
       <p className="font-bold text-4xl text-center">Error 404: Sitio web no encontrado </p>
       <ButtonContainer position={'justify-center'}>
-        <ButtonSecondary
-          href={"/"}
-          title={'Regresar a inicio'}
-          width={'w-[240px]'}
-        />
+        <Link to="/">
+          <ButtonSecondary
+            title={'Regresar a inicio'}
+            width={'w-[240px]'}
+          />
+        </Link>
       </ButtonContainer>
     </section>
   )

@@ -1,11 +1,11 @@
 'use client'
 import { APIProvider, Map } from '@vis.gl/react-google-maps'
+import { Badge } from 'components'
 import PropTypes from 'prop-types'
 import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa'
 import { FaRegClock, FaWaze } from 'react-icons/fa6'
-import Badge from '../badge/Badge'
 
-const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto, badge }) => {
+const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto, badge, advertisement }) => {
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
 
   // Obtenemos la hora actual
@@ -24,7 +24,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
     && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 rounded-xl min-h-[442px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl`}>
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 lg:gap-0 rounded-xl min-h-[432px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl`}>
 
       {/* mapa */}
       <div className='h-[150px] rounded-t-lg overflow-hidden'>
@@ -39,7 +39,6 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         </APIProvider>
       </div>
       {/* mapa */}
-
       <div className='relative flex flex-col gap-3 justify-start px-6'>
         <h3 className='text-center font-semibold text-xl sm:text-base uppercase pb-4'>{title}</h3>
         {/* Dirección */}
@@ -158,20 +157,27 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
 
 
       {/* Bubble */}
-      {isOpen &&
+      {
+        isOpen &&
         <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
           <p className='text-sm'>Abierto</p>
         </div>
       }
-      {!isOpen &&
+      {
+        !isOpen &&
         <div className='absolute right-3 top-3 border-2 border-red_dark bg-red_light rounded-lg px-4 py-2 text-red_dark'>
           <p className='text-sm'>Cerrado</p>
+        </div>
+      }
+      {advertisement &&
+        <div className='absolute left-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
+          <p className='text-sm'>{advertisement}</p>
         </div>
       }
       {/* Buble */}
 
 
-    </article>
+    </article >
   )
 }
 SucursalCard.propTypes = {
@@ -188,6 +194,7 @@ SucursalCard.propTypes = {
   place: PropTypes.string,
   titleMailto: PropTypes.string,
   badge: PropTypes.string,
+  advertisement: PropTypes.string,
 }
 
 export default SucursalCard

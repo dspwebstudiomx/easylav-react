@@ -25,6 +25,7 @@ const localservices = [
     servicehour1: "7:30 a.m a 9:30 p.m",
     city: "Morelia",
     email: "pedregal@easylav.mx",
+    advertisement: "Promoción 2x1",
   },
   {
     id: 2,

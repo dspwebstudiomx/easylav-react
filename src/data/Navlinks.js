@@ -1,12 +1,13 @@
 import {
   GrCoatCheck,
+  GrGroup,
   GrHome,
   GrIndicator,
   GrMailOption,
   GrUser,
 } from "react-icons/gr";
 
-const navlinks = [
+const navLinksSections = [
   {
     id: "1",
     name: "Inicio",
@@ -28,19 +29,28 @@ const navlinks = [
     icon: GrCoatCheck,
     linkId: "servicios",
   },
+];
+const navLinksPages = [
   {
-    id: "4",
+    id: "1",
     name: "Sucursales",
     href: "/sucursales",
     icon: GrIndicator,
     linkId: "sucursales",
   },
   {
-    id: "5",
+    id: "2",
     name: "Contacto",
     href: "/contacto",
     icon: GrMailOption,
     linkId: "contacto",
+  },
+  {
+    id: "3",
+    name: "Franquicias",
+    href: "/franquicias",
+    icon: GrGroup,
+    linkId: "franquicias",
   },
 ];
 
@@ -93,4 +103,10 @@ const linksTerminos = [
     linkId: "preguntas-frecuentes",
   },
 ];
-export { linksPoliticas, linksServicios, linksTerminos, navlinks };
+export {
+  linksPoliticas,
+  linksServicios,
+  linksTerminos,
+  navLinksPages,
+  navLinksSections,
+};

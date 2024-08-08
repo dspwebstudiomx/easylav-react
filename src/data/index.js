@@ -4,7 +4,8 @@ export {
   linksPoliticas,
   linksServicios,
   linksTerminos,
-  navlinks,
+  navLinksPages,
+  navLinksSections,
 } from "data/navlinks";
 export { services } from "data/services";
 export { localservices, localservicesbck } from "data/sucursales";
