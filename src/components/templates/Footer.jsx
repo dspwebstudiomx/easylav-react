@@ -1,10 +1,11 @@
-import { linksServicios, navlinks, otrosLinks } from 'data';
+import { linksPoliticas, linksServicios, linksTerminos, navlinks } from 'data';
 import { scrollToTop, scrollWithOffset } from 'functions';
 import { TbPoint } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
-import { Container, Section, SocialLinks } from '..';
+import { Section, SocialLinks } from '..';
 import logo from '../../assets/images/logos/horizontal/logo-blanco.png';
+import { Container } from 'components'
 
 const Footer = () => {
 
@@ -12,8 +13,7 @@ const Footer = () => {
     <footer id='footer' className='text-base'>
       <div className='bg-gradient-to-r from-primary to-secondary h-2 '></div>
       <Section backgroundColor={'bg-secondary'} id={'footer-sections'} className={'py-24'} height={'h-auto'}>
-        <Container className='text-light grid xl:grid-cols-5 mx-auto'>
-
+        <Container className='text-light grid grid-cols-2 xl:grid-cols-5 mx-auto'>
 
           {/* Footer Sections */}
           <div id='footer-sections' className='flex flex-col gap-6 w-full'>
@@ -79,16 +79,15 @@ const Footer = () => {
           </div>
           {/* Footer Services */}
 
-
           {/* Footer Privacy */}
           <div id='footer-policies' className='flex flex-col gap-8 w-full'>
             <h3 className='text-primary uppercase leading-6 text-base font-medium'>Políticas de Privacidad, Política de Cookies</h3>
             <ul className='flex flex-col gap-0'>
-              {otrosLinks.map(otroLink => {
+              {linksPoliticas.map(link => {
                 return (
-                  <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
-                    <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} onClick={scrollToTop} />
-                      <span className='ml-2'>{otroLink.name}</span>
+                  <li key={link.id} id={`footer-navlink-${link.linkId}`}>
+                    <NavHashLink id={`footer-link-${link.linkId}`} to={link.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${link.name}`} onClick={scrollToTop} />
+                      <span className='ml-2'>{link.name}</span>
                     </NavHashLink>
                   </li>
                 )
@@ -102,11 +101,11 @@ const Footer = () => {
             <div id='footer-privacy-terms' className='flex flex-col gap-8 w-full'>
               <h3 className='text-primary uppercase leading-6 text-base font-medium'>Términos y Condiciones, Preguntas Frecuentes</h3>
               <ul className='flex flex-col gap-0'>
-                {otrosLinks.map(otroLink => {
+                {linksTerminos.map(link => {
                   return (
-                    <li key={otroLink.id} id={`footer-navlink-${otroLink.linkId}`}>
-                      <NavHashLink id={`footer-link-${otroLink.linkId}`} to={otroLink.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${otroLink.name}`} onClick={scrollToTop} />
-                        <span className='ml-2'>{otroLink.name}</span>
+                    <li key={link.id} id={`footer-navlink-${link.linkId}`}>
+                      <NavHashLink id={`footer-link-${link.linkId}`} to={link.href} className='text-white hover:text-primary flex items-center'><TbPoint className='text-primary text-2xl' size={32} title={`Visita ${link.name}`} onClick={scrollToTop} />
+                        <span className='ml-2'>{link.name}</span>
                       </NavHashLink>
                     </li>
                   )

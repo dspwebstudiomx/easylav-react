@@ -1,10 +1,11 @@
 // Logo.jsx
 import { LogoHorizontalColor } from 'assets';
+import { scrollWithOffset } from 'functions';
 import { NavHashLink } from 'react-router-hash-link';
 
 const Logo = () => {
   return (
-    <NavHashLink>
+    <NavHashLink to={'/#inicio'} scroll={el => scrollWithOffset(el)} >
       <img
         alt='logo easylav a color'
         src={LogoHorizontalColor}

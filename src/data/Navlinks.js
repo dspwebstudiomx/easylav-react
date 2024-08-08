@@ -65,7 +65,7 @@ const linksServicios = [
   },
 ];
 
-const otrosLinks = [
+const linksPoliticas = [
   {
     id: "1",
     name: "Política de Privacidad",
@@ -78,17 +78,19 @@ const otrosLinks = [
     href: "/politica-cookies",
     linkId: "politica-cookies",
   },
+];
+const linksTerminos = [
   {
-    id: "3",
+    id: "1",
     name: "Términos y Condiciones",
     href: "/terminos-condiciones",
     linkId: "terminos-condiciones",
   },
   {
-    id: "4",
+    id: "2",
     name: "Preguntas Frecuentes",
     href: "/preguntas-frecuentes",
     linkId: "preguntas-frecuentes",
   },
 ];
-export { linksServicios, navlinks, otrosLinks };
+export { linksPoliticas, linksServicios, linksTerminos, navlinks };
