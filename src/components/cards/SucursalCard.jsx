@@ -1,9 +1,8 @@
-'use client'
-import { APIProvider, Map } from '@vis.gl/react-google-maps'
-import { Badge } from 'components'
-import PropTypes from 'prop-types'
-import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa'
-import { FaRegClock, FaWaze } from 'react-icons/fa6'
+import { APIProvider, Map } from '@vis.gl/react-google-maps';
+import { Badge } from 'components';
+import PropTypes from 'prop-types';
+import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
 const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto, badge, advertisement }) => {
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY
@@ -24,7 +23,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
     && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 lg:gap-0 rounded-xl min-h-[432px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl animate__animated animate__bounceIn animate__slower`}>
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 lg:gap-0 rounded-xl min-h-[432px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl animate__animated animate__bounceIn animate__slower overflow-hidden`}>
 
       {/* mapa */}
       <div className='h-[150px] rounded-t-lg overflow-hidden'>
@@ -67,43 +66,43 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
           !badge && (
             <div className='w-full'>
               {/* Enviar Correo */}
-              <Badge backgroundColor='bg-secondary_light md:bg-secondary hover:bg-secondary_dark'>
-                <a href={`mailto:${email}`} title={titleMailto} type={'button'} className='w-full flex items-center justify-center gap-3 text-lg'  >
+              <a href={`mailto:${email}`} title={titleMailto} type={'button'} className='w-full flex items-center justify-center gap-3 text-lg'  >
+                <Badge backgroundColor='bg-secondary_light md:bg-secondary sm:hover:bg-secondary'>
                   <FaEnvelope />
                   <span className="">Enviar correo</span>
-                </a>
-              </Badge>
+                </Badge>
+              </a>
               {/* Enviar Correo */}
 
               <div className='flex md:hidden'>
                 {/* Waze */}
-                <Badge backgroundColor='bg-secondary'>
-                  <a
-                    href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`Ir a ${title} en Waze`}
-                    className="w-auto flex flex-col items-center justify-center gap-2 text-lg"
-                  >
+                <a
+                  href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Ir a ${title} en Waze`}
+                  className="w-auto flex flex-col items-center justify-center gap-2 text-lg bg-secondary w-full"
+                >
+                  <Badge backgroundColor='flex-col'>
                     <FaWaze size={32} />
                     <span>Waze</span>
-                  </a>
-                </Badge>
+                  </Badge>
+                </a>
                 {/* Waze */}
 
                 {/* Google Maps */}
-                <Badge backgroundColor='bg-secondary_dark'>
-                  <a
-                    href={gmap}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`Ir a ${title} en Google Maps`}
-                    className="w-auto flex flex-col items-center justify-center gap-2 text-lg"
-                  >
+                <a
+                  href={gmap}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Ir a ${title} en Google Maps`}
+                  className="w-auto flex flex-col items-center justify-center gap-2 text-lg bg-secondary_dark w-full"
+                >
+                  <Badge backgroundColor='flex-col'>
                     <FaMapMarkedAlt size={32} />
                     <span>Google Maps</span>
-                  </a>
-                </Badge>
+                  </Badge>
+                </a>
                 {/* Google Maps */}
               </div>
             </div>
@@ -118,33 +117,33 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
 
               <div className='flex md:hidden'>
                 {/* Waze */}
-                <Badge backgroundColor='bg-secondary'>
-                  <a
-                    href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`Ir a ${title} en Waze`}
-                    className="w-auto flex flex-col items-center justify-center gap-3 text-lg"
-                  >
+                <a
+                  href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Ir a ${title} en Waze`}
+                  className="w-auto flex flex-col items-center justify-center gap-3 text-lg bg-secondary w-full"
+                >
+                  <Badge backgroundColor='flex-col'>
                     <FaWaze size={32} />
                     <span>Waze</span>
-                  </a>
-                </Badge>
+                  </Badge>
+                </a>
                 {/* Waze */}
 
                 {/* Google Maps */}
-                <Badge backgroundColor='bg-secondary_dark mx-auto'>
-                  <a
-                    href={gmap}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`Ir a ${title} en Google Maps`}
-                    className="w-auto flex flex-col items-center justify-center gap-3 text-lg"
-                  >
+                <a
+                  href={gmap}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Ir a ${title} en Google Maps`}
+                  className="w-auto flex flex-col items-center justify-center gap-3 text-lg bg-secondary_dark w-full"
+                >
+                  <Badge backgroundColor='flex-col' >
                     <FaMapMarkedAlt size={32} />
                     <span className='text-center mx-auto'>Google Maps</span>
-                  </a>
-                </Badge>
+                  </Badge>
+                </a>
                 {/* Google Maps */}
               </div>
 
@@ -156,25 +155,29 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
       {/* Badge */}
 
 
-      {/* Bubble */}
+      {/* Bubbles */}
       {
-        isOpen &&
-        <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
-          <p className='text-sm'>Abierto</p>
-        </div>
+        isOpen && (
+          <div className='absolute right-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
+            <p className='text-sm'>Abierto</p>
+          </div>
+        )
       }
       {
-        !isOpen &&
-        <div className='absolute right-3 top-3 border-2 border-red_dark bg-red_light rounded-lg px-4 py-2 text-red_dark'>
-          <p className='text-sm'>Cerrado</p>
-        </div>
+        !isOpen && (
+          <div className='absolute right-3 top-3 border-2 border-red_dark bg-red_light rounded-lg px-4 py-2 text-red_dark'>
+            <p className='text-sm'>Cerrado</p>
+          </div>
+        )
       }
-      {advertisement &&
-        <div className='absolute left-3 top-3 border-2 border-secondary bg-secondary_light rounded-lg px-4 py-2 text-light'>
-          <p className='text-sm'>{advertisement}</p>
-        </div>
+      {
+        advertisement && (
+          <div className='absolute w-[280px] -left-14 top-0 border-2 border-secondary bg-secondary_light rounded-lg px-4 py-1 text-light rotate-[320deg] dark:bg-primary dark:border-primary_dark'>
+            <p className='text-sm ml-8'>{advertisement}</p>
+          </div>
+        )
       }
-      {/* Buble */}
+      {/* Bubbles */}
 
 
     </article >
@@ -187,10 +190,8 @@ SucursalCard.propTypes = {
   position: PropTypes.object,
   gmap: PropTypes.string,
   serviceday1: PropTypes.string,
-  serviceday2: PropTypes.string,
   servicehour1: PropTypes.string,
   email: PropTypes.string,
-  servicehour2: PropTypes.string,
   place: PropTypes.string,
   titleMailto: PropTypes.string,
   badge: PropTypes.string,

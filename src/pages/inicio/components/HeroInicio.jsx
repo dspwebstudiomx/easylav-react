@@ -26,7 +26,7 @@ const HeroInicio = () => {
             title="Nuestros Servicios"
             href="/#servicios"
             border="border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark"
-            onClick={scrollWithOffset}
+            onClick={el => scrollWithOffset(el)}
           />
         </ButtonContainer>
       </Container>
