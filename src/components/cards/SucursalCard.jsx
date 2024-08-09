@@ -24,7 +24,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
     && (currentHour < closeHour || (currentHour === closeHour && currentMinute < closeMinute))
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 lg:gap-0 rounded-xl min-h-[432px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl`}>
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} flex flex-col justify-between gap-8 lg:gap-0 rounded-xl min-h-[432px] shadow-xl overflow-hidden bg-light dark:text-dark shadow-xl animate__animated animate__bounceIn animate__slower`}>
 
       {/* mapa */}
       <div className='h-[150px] rounded-t-lg overflow-hidden'>
@@ -67,7 +67,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
           !badge && (
             <div className='w-full'>
               {/* Enviar Correo */}
-              <Badge backgroundColor='bg-secondary_light md:bg-secondary'>
+              <Badge backgroundColor='bg-secondary_light md:bg-secondary hover:bg-secondary_dark'>
                 <a href={`mailto:${email}`} title={titleMailto} type={'button'} className='w-full flex items-center justify-center gap-3 text-lg'  >
                   <FaEnvelope />
                   <span className="">Enviar correo</span>

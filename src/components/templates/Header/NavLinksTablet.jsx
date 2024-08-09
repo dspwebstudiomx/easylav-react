@@ -1,27 +1,42 @@
-import {
-  navLinksPages,
-  navLinksSections,
-} from 'data/navlinks';
-import { scrollWithOffset } from 'functions';
-import { NavLink } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
+import { navLinksPages, navLinksSections } from "data/navlinks";
+import { scrollWithOffset } from "functions";
+import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksTablet = () => {
-
   return (
-    <ul id='navlinks-tablet' className='hidden md:flex fixed top-[100px] sm:relative sm:top-[0px] w-full z-30 xl:hidden gap-8 bg-primary justify-evenly p-5 px-8'>
+    <ul
+      id="navlinks-tablet"
+      className="fixed top-[100px] z-30 hidden w-full justify-evenly gap-8 bg-primary p-5 px-8 sm:relative sm:top-[0px] md:flex xl:hidden"
+    >
       {navLinksSections.map((navlink) => {
         return (
-          <NavHashLink scroll={scrollWithOffset} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavHashLink>
-        )
+          <NavHashLink
+            scroll={scrollWithOffset}
+            key={navlink.id}
+            id={`link-${navlink.linkId}`}
+            className="xl:text-md navlink text-base font-semibold uppercase text-dark hover:text-secondary_light"
+            to={navlink.href}
+          >
+            {navlink.name}
+          </NavHashLink>
+        );
       })}
       {navLinksPages.map((navlink) => {
         return (
-          <NavLink scroll={scrollWithOffset} key={navlink.id} id={`link-${navlink.linkId}`} className='uppercase font-semibold text-base xl:text-md text-dark  hover:text-secondary_light navlink' to={navlink.href}>{navlink.name}</NavLink>
-        )
+          <NavLink
+            scroll={scrollWithOffset}
+            key={navlink.id}
+            id={`link-${navlink.linkId}`}
+            className="xl:text-md navlink text-base font-semibold uppercase text-dark hover:text-secondary_light"
+            to={navlink.href}
+          >
+            {navlink.name}
+          </NavLink>
+        );
       })}
     </ul>
-  )
-}
+  );
+};
 
-export default NavLinksTablet
+export default NavLinksTablet;

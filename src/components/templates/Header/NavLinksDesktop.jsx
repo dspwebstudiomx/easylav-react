@@ -1,20 +1,20 @@
 // NavLinksDesktop.jsx
-import { DarkModeButton } from 'components';
-import {
-  navLinksPages,
-  navLinksSections,
-} from 'data/navlinks';
-import { scrollToTop, scrollWithOffset } from 'functions';
-import { NavLink } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
+import { DarkModeButton } from "components";
+import { navLinksPages, navLinksSections } from "data/navlinks";
+import { scrollToTop, scrollWithOffset } from "functions";
+import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksDesktop = () => {
-
-  const classes = 'uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light'
+  const classes =
+    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light";
 
   return (
     <>
-      <ul id='navlinks-desktop' className='hidden xl:flex gap-8 xl:gap-4 px-6 2xl:px-0 items-center justify-between'>
+      <ul
+        id="navlinks-desktop"
+        className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0"
+      >
         {navLinksSections.map((navlink) => {
           return (
             <NavHashLink
@@ -22,8 +22,7 @@ const NavLinksDesktop = () => {
               id={`navlink-${navlink.name}`}
               className={classes}
               to={navlink.href}
-              scroll={
-                scrollWithOffset}
+              scroll={scrollWithOffset}
             >
               {navlink.name}
             </NavHashLink>
@@ -36,7 +35,7 @@ const NavLinksDesktop = () => {
               id={`navlink-${navlink.name}`}
               className={classes}
               to={navlink.href}
-              scroll={() => scrollToTop()}
+              scroll={scrollToTop}
             >
               {navlink.name}
             </NavLink>

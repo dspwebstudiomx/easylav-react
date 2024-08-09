@@ -31,7 +31,7 @@ const localservices = [
     id: 2,
     title: "Jesús del Monte",
     gmap: "https://maps.app.goo.gl/xDc196NMUJFJFMGm7",
-    position: { lat: 19.6619461, lng: -101.1649408 },
+    position: { lat: 19.6614939, lng: -101.1596168 },
     place: "José María Morelos 920-1, 58350 Jesús del Monte, Mich.",
     serviceday1: "Lunes a Domingo:",
     servicehour1: "7:30 a.m a 9:30 p.m",

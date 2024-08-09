@@ -1,11 +1,6 @@
-import image from 'assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-1920.jpg';
-import {
-  ButtonContainer,
-  ButtonSecondary,
-  Container,
-  Hero
-} from 'components';
-import { scrollWithOffset } from 'functions';
+import image from "assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-1920.jpg";
+import { ButtonContainer, ButtonSecondary, Container, Hero } from "components";
+import { scrollWithOffset } from "functions";
 
 const HeroInicio = () => {
   return (
@@ -18,9 +13,12 @@ const HeroInicio = () => {
       titleSection="inicio"
       imageAlt="canasta de ropa verde con ropa sucia de color con fondo blanco"
     >
-      <Container className="items-start w-[80vw]">
-        <h1 className="sr-only">en Easylav tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto</h1>
-        <p className="text-[42px] sm:text-4xl sm:w-2/3 leading-[55px] sm:leading-[60px] font-semibold text-border">
+      <Container className="w-[80vw] items-start">
+        <h1 className="sr-only">
+          en Easylav tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado
+          Perfecto
+        </h1>
+        <p className="text-border text-[42px] font-semibold leading-[55px] sm:w-2/3 sm:text-4xl sm:leading-[60px]">
           Tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto
         </p>
         <ButtonContainer>

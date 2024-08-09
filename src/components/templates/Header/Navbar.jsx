@@ -1,5 +1,13 @@
-import { Container, HeaderLine, Logo, MenuButton, NavLinksDesktop, NavLinksMobile, NavLinksTablet } from 'components';
-import { useState } from 'react';
+import {
+  Container,
+  HeaderLine,
+  Logo,
+  MenuButton,
+  NavLinksDesktop,
+  NavLinksMobile,
+  NavLinksTablet,
+} from "components";
+import { useState } from "react";
 
 const Navbar = () => {
   const [navigationLinks, setNavigationLinks] = useState(false);
@@ -13,16 +21,27 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id='nav' className='fixed top-0 sm:relative xl:fixed w-full h-[100px] bg-light z-50 shadow-xl'>
-        <Container className={'flex justify-between px-8 sm:px-0  md:px-12 xl:px-0 mx-auto'}>
-          <div id='navbar' className='flex items-center justify-between h-[120px]'>
+      <nav
+        id="nav"
+        className="fixed top-0 z-50 h-[100px] w-full bg-light shadow-xl sm:relative xl:fixed"
+      >
+        <Container
+          className={
+            "mx-auto flex justify-between px-8 sm:px-0 md:px-12 xl:px-0"
+          }
+        >
+          <div
+            id="navbar"
+            className="flex h-[120px] items-center justify-between"
+          >
             <Logo />
             <NavLinksDesktop />
-            <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} />
+            <MenuButton
+              toggleNav={toggleNav}
+              navigationLinks={navigationLinks}
+            />
             {navigationLinks && (
-              <NavLinksMobile
-                onLinkClick={handleLinkClick}
-              />
+              <NavLinksMobile onLinkClick={handleLinkClick} />
             )}
           </div>
         </Container>
