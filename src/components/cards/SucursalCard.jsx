@@ -170,7 +170,7 @@ const SucursalCard = ({ title, id, position, serviceday1, servicehour1, place, e
         </div>
       }
       {advertisement &&
-        <div className='absolute left-3 top-3 border-2 border-primary bg-primary_dark rounded-lg px-4 py-2 text-light'>
+        <div className='absolute left-3 top-3 border-2 border-secondary bg-secondary_light rounded-lg px-4 py-2 text-light'>
           <p className='text-sm'>{advertisement}</p>
         </div>
       }
