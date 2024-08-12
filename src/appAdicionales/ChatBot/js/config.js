@@ -20,7 +20,7 @@ const settings = {
     title: "Easylav ChatBot",
   },
   audio: {
-    disabled: true,
+    disabled: false,
   },
   chatHistory: {
     disabled: true,
@@ -83,6 +83,9 @@ const styles = {
   },
   bodyStyle: {
     padding: "1.1em",
+  },
+  notificationBadgeStyle: {
+    backgroundColor: secondaryColor,
   },
 };
 

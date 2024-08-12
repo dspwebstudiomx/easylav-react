@@ -3,7 +3,7 @@ import { FiMoon } from "react-icons/fi"
 import { IoSunnyOutline } from 'react-icons/io5'
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState()
   const toggleTheme = () => {
     setDarkMode(!darkMode)
     document.body.classList.toggle('dark')

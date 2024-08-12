@@ -1,4 +1,4 @@
-import { Hero640 } from "assets";
+import { canastaderopa_640 } from "assets";
 import {
   Container,
   HomeLayout,
@@ -29,7 +29,7 @@ const Inicio = () => {
           description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
           author="dspwebstudio"
           keywords="lavandería Morelia, planchado Morelia"
-          ogImage={Hero640}
+          ogImage={canastaderopa_640}
           ogImageAlt="canasta verde con ropa sucia"
           ogType="website"
         />

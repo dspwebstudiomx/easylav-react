@@ -13,8 +13,9 @@ const SEOFriendly = ({
 }) => {
   return (
     <Helmet>
+      <meta charset="UTF-8" />
       <title>{title}</title>
-      <link rel="canonical" href="{url}" />
+      <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       <meta name="author" content={author} />
       <meta name="keywords" content={keywords} />

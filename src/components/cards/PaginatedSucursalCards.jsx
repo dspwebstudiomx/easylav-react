@@ -1,6 +1,6 @@
-import { localservices } from "data/sucursales";
+import { Pager } from "components";
+import { localservices } from "data";
 import { useMediaQueries, usePagination } from "hooks";
-import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
 import SucursalCard from "./SucursalCard";
 
 const PaginatedSucursalCards = () => {
@@ -28,8 +28,6 @@ const PaginatedSucursalCards = () => {
             place={localservice.place}
             serviceday1={localservice.serviceday1}
             servicehour1={localservice.servicehour1}
-            serviceday2={localservice.serviceday2}
-            servicehour2={localservice.servicehour2}
             ciudad={localservice.ciudad}
             email={localservice.email}
             width="w-[100%]  sm:w-[240px] 2xl:w-[280px] mx-auto"
@@ -39,37 +37,14 @@ const PaginatedSucursalCards = () => {
           />
         ))}
       </div>
-      <div className="mx-auto flex items-center justify-center gap-7">
-        <button onClick={handlePrevPage}>
-          <BiChevronLeftCircle
-            className="mr-2 text-secondary hover:text-secondary_dark"
-            size={65}
-          />
-        </button>
-        <div className="hidden sm:flex">
-          {Array(Math.ceil(localservices.length / itemsPerPage))
-            .fill(0)
-            .map((_, index) => (
-              <button
-                key={index}
-                onClick={() => handlePageChange(index + 1)}
-                className={
-                  currentPage === index + 1
-                    ? "mx-2 border-b-2 border-b-primary_dark text-2xl font-bold font-semibold hover:text-secondary_light"
-                    : "mx-2 text-2xl font-semibold hover:text-secondary_light"
-                }
-              >
-                {index + 1}
-              </button>
-            ))}
-        </div>
-        <button onClick={handleNextPage}>
-          <BiChevronRightCircle
-            className="ml-2 text-secondary hover:text-secondary_dark"
-            size={65}
-          />
-        </button>
-      </div>
+      <Pager
+        handleNextPage={handleNextPage}
+        handlePageChange={handlePageChange}
+        handlePrevPage={handlePrevPage}
+        itemsPerPage={itemsPerPage}
+        localservices={localservices}
+        currentPage={currentPage}
+      />
     </>
   );
 };

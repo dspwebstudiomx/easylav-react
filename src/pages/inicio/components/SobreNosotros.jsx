@@ -1,5 +1,5 @@
-import { Placeholder } from "assets";
-import { BorderLeft, Container, Section, TitleH2 } from "components";
+import lottieImage from 'assets/images/lottie/Animation.json';
+import { BorderLeft, Container, LottieAnimationImage, Section, TitleH2 } from 'components';
 
 const SobreNosotros = () => {
   return (
@@ -28,13 +28,15 @@ const SobreNosotros = () => {
             </p>
           </div>
           <div className="items-center justify-end">
-            <img
-              src={Placeholder}
-              alt="mujer en servicio de lavado"
-              width={520}
-              className="shadow-image"
-              title="mujer en servicio de lavado"
-            />
+            {/* <ImageResponsive
+              src={img1}
+              className={"shadow-image"}
+              imageAlt={"Placeholder"}
+              image_640={img1}
+              image_1024={img1}
+              image_1920={img1}
+            /> */}
+            <LottieAnimationImage lottieImage={lottieImage} />
           </div>
         </div>
       </Container>

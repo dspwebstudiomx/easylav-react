@@ -30,7 +30,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                     <navlink.icon size={32} className="text-secondary" />
                   )}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wide text-secondary">
+                <span className="text-base font-bold uppercase tracking-wide text-secondary text-center">
                   {navlink.name}
                 </span>
               </NavHashLink>
@@ -56,7 +56,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                     <navlink.icon size={32} className="text-secondary" />
                   )}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wide text-secondary">
+                <span className="text-base font-bold uppercase tracking-wide text-secondary text-center">
                   {navlink.name}
                 </span>
               </NavLink>

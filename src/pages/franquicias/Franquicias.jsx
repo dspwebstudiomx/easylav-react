@@ -1,9 +1,10 @@
-import { Hero640, Placeholder } from "assets";
+import { canastaderopa_640, Placeholder } from "assets";
 import {
   BorderLeft,
   ButtonContainer,
   ButtonSecondary,
   ContactFormFranquicias,
+  ImageResponsive,
   Modal,
   PageLayout,
   TextWithBulletPoint,
@@ -22,6 +23,9 @@ const Franquicias = () => {
     setShowModal(!showModal);
     document.body.style.overflow = showModal ? "auto" : "hidden";
   };
+
+  const img1 = canastaderopa_640;
+  const img2 = Placeholder;
 
   return (
     <PageLayout>
@@ -71,38 +75,50 @@ const Franquicias = () => {
         {/* Columna 2 */}
         <div
           id="columma-2"
-          className="bg-red-100 mx-auto mt-24 grid place-items-end gap-20 sm:mr-9 sm:grid-cols-2 sm:gap-32 md:p-12 lg:grid-cols-2 lg:p-0 xl:grid-cols-1"
+          className="mx-auto mt-24 grid items-start gap-12 sm:mr-12 sm:grid-cols-2 md:p-12 lg:grid-cols-2 lg:p-0 xl:grid-cols-1 justify-end"
         >
-          <div className="h-auto w-[250px] rotate-[25deg] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img
-              src={Hero640}
-              alt="image"
+          <div className="h-auto rotate-[25deg]">
+            <ImageResponsive
+              src={img1}
+              className={"shadow-image"}
+              imageAlt={"Placeholder"}
+              image_640={img1}
+              image_1024={img1}
+              image_1920={img1}
               width={320}
-              className="animate__animated animate__zoomIn animate__slower h-auto w-[250px] shadow-2xl md:w-[280px] lg:w-[320px] xl:w-[380px]"
             />
           </div>
-          <div className="h-auto w-[250px] rotate-[15deg] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img
-              src={Placeholder}
-              alt="image"
+          <div className="h-auto rotate-[15deg]">
+            <ImageResponsive
+              src={img2}
+              className={"shadow-image"}
+              imageAlt={"Placeholder"}
+              image_640={img2}
+              image_1024={img2}
+              image_1920={img2}
               width={320}
-              className="animate__animated animate__zoomIn animate__slower h-auto w-[250px] shadow-2xl md:w-[280px] lg:w-[320px] xl:w-[380px]"
             />
           </div>
-          <div className="h-auto w-[250px] rotate-[-20deg] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img
-              src={Hero640}
-              alt="image"
+          <div className="h-auto rotate-[-20deg]">
+            <ImageResponsive
+              src={img1}
+              className={"shadow-image"}
+              imageAlt={"Placeholder"}
+              image_640={img1}
+              image_1024={img1}
+              image_1920={img1}
               width={320}
-              className="animate__animated animate__zoomIn animate__slower h-auto w-[250px] shadow-2xl md:w-[280px] lg:w-[320px] xl:w-[380px]"
             />
           </div>
-          <div className="h-auto w-[250px] rotate-[-35deg] md:w-[280px] lg:w-[320px] xl:w-[380px]">
-            <img
-              src={Placeholder}
-              alt="image"
+          <div className="h-auto rotate-[-35deg]">
+            <ImageResponsive
+              src={img2}
+              className={"shadow-image"}
+              imageAlt={"Placeholder"}
+              image_640={img2}
+              image_1024={img2}
+              image_1920={img2}
               width={320}
-              className="h-auto w-[250px] shadow-2xl md:w-[280px] lg:w-[320px] xl:w-[380px]"
             />
           </div>
         </div>

@@ -26,11 +26,11 @@ const Contacto = () => {
           </span>
           .
         </p>
-        <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 md:ml-0">
+        <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0">
           <SocialLinks
             color={"text-secondary dark:text-primary"}
             size={54}
-            gap={"gap-8"}
+            gap={"gap-10"}
           />
         </div>
       </div>

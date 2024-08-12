@@ -2,6 +2,7 @@ import { Placeholder } from "assets";
 import {
   BorderLeft,
   Container,
+  ImageResponsive,
   Section,
   TitleH2
 } from "components";
@@ -49,12 +50,13 @@ const PorqueElegirnos = () => {
             </div>
           </div>
           <div className="items-center justify-end">
-            <img
+            <ImageResponsive
               src={Placeholder}
-              alt="placeholder imagen"
-              width={520}
-              className="shadow-image rounded"
-              title="placeholder imagen"
+              imageAlt={'Placeholder'}
+              className={"shadow-image"}
+              image_640={Placeholder}
+              image_1024={Placeholder}
+              image_1920={Placeholder}
             />
           </div>
         </article>

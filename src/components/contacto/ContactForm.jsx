@@ -57,7 +57,7 @@ export default function ContactForm() {
 
 
   return (
-    <article id="formulario" className="border-4  border-primary_dark rounded-2xl px-8 py-10 pb-14 bg-primary_light dark:bg-slate-700  text-slate-100 w-full text-dark ">
+    <form id="formulario" className="border-4  border-primary_dark rounded-2xl px-8 py-10 pb-14 bg-primary_light dark:bg-slate-700  text-slate-100 w-full text-dark ">
       <Formik
         initialValues={{
           user_name: '',
@@ -113,10 +113,10 @@ export default function ContactForm() {
         }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm">
             {/* Fields */}
-            <div className="flex flex-wrap justify-between gap-3">
-              <div className="flex flex-col xl:w-[50%] w-full">
+            <div className="flex flex-wrap justify-between gap-3 text-sm">
+              <div id='formField_nombre' className="flex flex-col xl:w-[50%] w-full text-sm">
                 <label htmlFor='user_name' className="mb-2">Nombre Completo<span className='text-required ml-1'>*</span></label>
                 <Field
                   id="user_name"
@@ -127,8 +127,8 @@ export default function ContactForm() {
                 />
                 {touched.user_name && errors.user_name && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_name}</span></p>}
               </div>
-              <div className="flex flex-col xl:w-[45%] w-full">
-                <label htmlFor='user_city' className="mb-2">Ciudad<span className='text-required ml-1'>*</span></label>
+              <div id='formField_ciudad' className="flex flex-col xl:w-[45%] w-full">
+                <label htmlFor='user_city' className="mb-2 text-sm">Ciudad<span className='text-required ml-1'>*</span></label>
                 <Field
                   className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
                   id="user_city"
@@ -139,9 +139,9 @@ export default function ContactForm() {
 
               </div>
             </div>
-            <div className="flex flex-wrap justify-between gap-3">
-              <div className="flex flex-col xl:w-[50%] w-full">
-                <label htmlFor="user_email" className="mb-2">Correo Electrónico<span className='text-required ml-1'>*</span></label>
+            <div className="flex flex-wrap justify-between gap-2">
+              <div id='formField_email' className="flex flex-col xl:w-[50%] w-full">
+                <label htmlFor="user_email" className="mb-2 text-sm">Correo Electrónico<span className='text-required ml-1'>*</span></label>
                 <Field
                   className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
                   id="user_email"
@@ -152,10 +152,10 @@ export default function ContactForm() {
                 {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
 
               </div>
-              <div className="flex flex-col xl:w-[45%] w-full">
-                <label htmlFor="user_phone" className="mb-2">Número Telefónico<span className='text-required ml-1'>*</span></label>
+              <div id='formField_ numerotelefonico' className="flex flex-col xl:w-[45%] w-full">
+                <label htmlFor="user_phone" className="mb-2 text-sm">Número Telefónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
+                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 outline-none"
                   type="text"
                   name="user_phone"
                   id="user_phone"
@@ -165,13 +165,13 @@ export default function ContactForm() {
 
               </div>
             </div>
-            <div className="flex flex-col w-full">
+            <div id='formField_mensaje' className="flex flex-col w-full">
               <label htmlFor="message" className="mb-2">Mensaje<span className='text-required ml-1'>*</span></label>
               <textarea
                 type="text"
                 name="message"
                 id="message"
-                className="rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary h-40 max-h-32 min-h-32 outline-none"
+                className="rounded-md text-slate-900 bg-slate-200 p-2 border-2 border-primary h-40 max-h-20 min-h-20 outline-none"
                 required
               />
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
@@ -212,6 +212,6 @@ export default function ContactForm() {
         )
         }
       </Formik >
-    </article >
+    </form >
   )
 }

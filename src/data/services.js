@@ -1,4 +1,4 @@
-import { Lavadero, PilaToallas, Planchar } from "../assets";
+import { Lavadero, LavarRopa, Planchar } from "assets";
 
 export const services = [
   {
@@ -15,7 +15,7 @@ export const services = [
     title: "Lavado Especializado",
     description:
       "¿Tienes prendas delicadas o difíciles de limpiar? Nuestro servicio especializado está diseñado para manejar incluso los textiles más sensibles, asegurando resultados excepcionales",
-    image: PilaToallas,
+    image: LavarRopa,
     idLink: "lavado-especializado",
     alt: "playera lavandose a mano",
   },

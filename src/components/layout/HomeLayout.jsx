@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="mt-[100px] sm:mt-[0px] xl:mt-[100px]">{children}</main>
+      <main className="mt-[80px] sm:mt-[0px] xl:mt-[80px]">{children}</main>
       <Footer />
       <ScrollToTopButton />
       <MyChatBot />

@@ -5,11 +5,13 @@
 }
 
 body {
-  background-color: #ecf5f3;
+  /* background-color: #ecf5f3; */
+  background-color: #fafafa;
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark light;
 }
 
 .text-border {
