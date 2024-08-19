@@ -74,6 +74,7 @@ const localservices = [
     city: "Morelia",
     email: "maderooriente@easylav.mx",
     titleMailto: "Enviar correo a sucursal Madero Oriente",
+    advertisement: "😎 Genial!",
   },
   {
     id: 7,

@@ -8,7 +8,7 @@ const MenuButton = ({ navigationLinks, toggleNav }) => {
     <button
       id="menu-button"
       onClick={toggleNav}
-      className="z-40 flex w-[7%] items-center gap-8 md:hidden"
+      className="z-40 flex w-[32px] items-center gap-8 md:hidden"
       type="button"
     >
       {!navigationLinks ? (

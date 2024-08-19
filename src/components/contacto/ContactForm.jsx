@@ -121,7 +121,7 @@ export default function ContactForm() {
                 <Field
                   id="user_name"
                   name="user_name"
-                  className="rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary xl:p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 p-4 border-2 border-primary xl:p-2 outline-none"
                   type="text"
                   required
                 />
@@ -130,7 +130,7 @@ export default function ContactForm() {
               <div id='formField_ciudad' className="flex flex-col xl:w-[45%] w-full">
                 <label htmlFor='user_city' className="mb-2 text-sm">Ciudad<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
                   id="user_city"
                   name="user_city"
                   required
@@ -143,7 +143,7 @@ export default function ContactForm() {
               <div id='formField_email' className="flex flex-col xl:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2 text-sm">Correo Electrónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
                   id="user_email"
                   name="user_email"
                   type="email"
@@ -155,7 +155,7 @@ export default function ContactForm() {
               <div id='formField_ numerotelefonico' className="flex flex-col xl:w-[45%] w-full">
                 <label htmlFor="user_phone" className="mb-2 text-sm">Número Telefónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 border-2 border-primary p-2 outline-none"
                   type="text"
                   name="user_phone"
                   id="user_phone"
@@ -171,7 +171,7 @@ export default function ContactForm() {
                 type="text"
                 name="message"
                 id="message"
-                className="rounded-md text-slate-900 bg-slate-200 p-2 border-2 border-primary h-40 max-h-20 min-h-20 outline-none"
+                className="rounded-md bg-light text-slate-900 bg-slate-200 p-2 border-2 border-primary h-40 max-h-20 min-h-20 lg:min-h-40 lg:max-h-40 2xl:max-h-28 2xl:min-h-28 outline-none"
                 required
               />
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}

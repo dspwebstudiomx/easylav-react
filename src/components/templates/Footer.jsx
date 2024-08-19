@@ -16,7 +16,7 @@ const Footer = () => {
     <footer id="footer" className="text-base">
       <div className="h-2 bg-gradient-to-r from-primary to-secondary"></div>
       <Section
-        backgroundColor={"dark:bg-secondary bg-secondary_dark"}
+        backgroundColor={"bg-secondary_dark"}
         id={"footer-sections"}
         className={"py-24"}
         height={"h-auto"}

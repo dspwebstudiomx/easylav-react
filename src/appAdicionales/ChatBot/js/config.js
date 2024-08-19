@@ -1,6 +1,8 @@
-import icon from "../../../assets/images/logos/horizontal/logo-blanco.png";
+import { LogoHorizontalBlanco } from "assets";
 
 const primaryColor = "#42b0c5";
+// const primaryColorLight = "#ccfbf1";
+const primaryColorDark = "#2BAC9F";
 const secondaryColor = "#622A77";
 const lightColor = "#FAFAFA";
 
@@ -25,9 +27,6 @@ const settings = {
   chatHistory: {
     disabled: true,
     storageKey: "concepts_settings",
-  },
-  chatButton: {
-    icon: icon,
   },
   tooltip: {
     text: "¿Tienes dudas?",
@@ -62,8 +61,8 @@ const styles = {
     backgroundColor: lightColor,
   },
   chatButtonStyle: {
-    backgroundColor: secondaryColor,
-    fontSize: "14px",
+    background: `${primaryColorDark} url(${LogoHorizontalBlanco}) no-repeat center left`,
+    padding: "1em",
   },
   icon: {
     width: "32px",

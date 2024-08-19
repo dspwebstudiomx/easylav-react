@@ -1,5 +1,4 @@
 // NavLinksDesktop.jsx
-import { DarkModeButton } from "components";
 import { navLinksPages, navLinksSections } from "data/navlinks";
 import { scrollToTop, scrollWithOffset } from "functions";
 import { NavLink } from "react-router-dom";
@@ -7,7 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksDesktop = () => {
   const classes =
-    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light";
+    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light last:text-primary";
 
   return (
     <>
@@ -41,7 +40,6 @@ const NavLinksDesktop = () => {
             </NavLink>
           );
         })}
-        <DarkModeButton />
       </ul>
     </>
   );

@@ -1,23 +1,12 @@
-import { Container, Section } from "components";
-import ImageResponsive from "components/images/ImageResponsive";
+import { Container, ImageResponsive, Section } from "components";
 import PropTypes from "prop-types";
 
-const Hero = ({ ...props }) => {
+function Hero({ ...props }) {
   const {
-    children,
-    backgroundColor,
-    backgroundImage_640,
-    backgroundImage_1024,
-    backgroundImage_1920,
-    height,
-    titleSection,
-    opacity,
-    opacityColor,
-    textColor,
-    imageAlt,
+    children, backgroundColor, backgroundImage_640, backgroundImage_1024, backgroundImage_1920, height, titleSection, opacity, opacityColor, textColor, imageAlt,
   } = props;
 
-  const styles = {
+  const classes = {
     section: `${textColor} relative overflow-hidden z-0 flex items-center justify-center`,
     image: "h-full object-cover w-full",
     opacity: `${opacity} absolute inset-0 -z-10 ${opacityColor}`,
@@ -28,7 +17,7 @@ const Hero = ({ ...props }) => {
       id={titleSection}
       height={height}
       backgroundColor={backgroundColor}
-      className={styles.section}
+      className={classes.section}
     >
       <div
         id={`imagen-${titleSection}`}
@@ -37,17 +26,16 @@ const Hero = ({ ...props }) => {
         <ImageResponsive
           src={backgroundImage_640}
           imageAlt={imageAlt}
-          className={styles.image}
+          className={classes.image}
           image_640={backgroundImage_640}
           image_1024={backgroundImage_1024}
-          image_1920={backgroundImage_1920}
-        />
+          image_1920={backgroundImage_1920} />
       </div>
-      <div id={`opacidad-${titleSection}`} className={styles.opacity} />
+      <div id={`opacidad-${titleSection}`} className={classes.opacity} />
       <Container id={`contenido-${titleSection}`}>{children}</Container>
     </Section>
   );
-};
+}
 
 Hero.propTypes = {
   children: PropTypes.node,

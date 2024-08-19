@@ -10,8 +10,8 @@ const PageLayout = ({ children }) => {
     <>
       <Header />
       <main className="mt-[100px] sm:mt-[0px] xl:mt-[60px]">
-        <Section backgroundColor={'dark:bg-secondary_dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
-          <Container className="mx-auto py-0">
+        <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
+          <Container className="mx-auto py-0 2xl:py-20">
             {children}
           </Container>
           <Spacing height="h-24" />

@@ -2,13 +2,13 @@ import { canastaderopa_1920, canastaderopa_2400, canastaderopa_640 } from "asset
 import { ButtonContainer, ButtonSecondary, Container, Hero } from "components";
 import { scrollWithOffset } from "functions";
 
-const HeroInicio = () => {
+export default function HeroInicio() {
   return (
     <Hero
       textColor="text-light"
-      opacity="opacity-35"
+      opacity="opacity-45"
       opacityColor="bg-[#000]"
-      height="h-[85vh] sm:h-auto 2xl:h-[60vh]"
+      height="h-auto 2xl:h-[60vh]"
       titleSection="inicio"
       imageAlt="canasta de ropa verde con ropa sucia de color con fondo blanco"
       backgroundImage_640={canastaderopa_640}
@@ -28,12 +28,9 @@ const HeroInicio = () => {
             title="Nuestros Servicios"
             href="/#servicios"
             border="border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark"
-            onClick={el => scrollWithOffset(el)}
-          />
+            onClick={(el) => scrollWithOffset(el)} />
         </ButtonContainer>
       </Container>
     </Hero>
-  );
-};
-
-export default HeroInicio;
+  )
+}
