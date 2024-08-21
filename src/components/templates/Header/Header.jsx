@@ -1,11 +1,9 @@
-import Navbar from './navbar/Navbar'
+import { Navbar } from 'components'
 
-const Header = () => {
+export default function Header() {
   return (
     <header id='header'>
       <Navbar />
     </header>
   )
 }
-
-export default Header

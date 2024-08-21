@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { initialOptions, helpOptions, exitOptions } from "./optionsChat";
+import { exitOptions, helpOptions, initialOptions } from "./optionsChat";
 
 const useChatForm = () => {
   const [form, setForm] = useState({});
@@ -15,6 +15,7 @@ const useChatForm = () => {
       function: (params) => setForm({ ...form, question: params.userInput }),
       path: "ask_question",
       transition: { duration: 1000 },
+      chatDisabled: true,
     },
     ask_question: {
       message: "¿En que te podemos ayudar?",
@@ -76,26 +77,25 @@ const useChatForm = () => {
     },
     process_options: {
       transition: { duration: 0 },
-      chatDisabled: true,
       path: async (params) => {
         let link = "";
         switch (params.userInput) {
           case "¿Qué tipos de prendas se pueden lavar en el servicio de lavandería?":
             await params.injectMessage(
-              "En nuestro servicio de lavandería lavamos una amplia variedad de prendas, incluyendo ropa casual, de trabajo, de cama, toallas y prendas delicadas que requieren un cuidado especial."
+              "En nuestro servicio de lavandería lavamos una amplia variedad de prendas, incluyendo ropa casual, de trabajo, de cama, toallas y prendas delicadas que requieren un cuidado especial.",
             );
             break;
           case "¿Cuánto tiempo tarda en completarse el servicio de lavandería?":
             await params.injectMessage(
-              "El tiempo de procesamiento puede variar según la carga de trabajo y el tipo de prendas."
+              "El tiempo de procesamiento puede variar según la carga de trabajo y el tipo de prendas.",
             );
             await params.injectMessage(
-              "Generalmente, podemos completar el lavado y secado estándar en un plazo de 24 a 48 horas."
+              "Generalmente, podemos completar el lavado y secado estándar en un plazo de 24 a 48 horas.",
             );
             break;
           case "¿Cómo se determinan los precios del servicio de lavandería?":
             await params.injectMessage(
-              "Los precios se basan principalmente en el peso total de la ropa a lavar. Ofrecemos tarifas competitivas por libra/kilo y también tenemos opciones especiales para prendas delicadas o que requieren un tratamiento especial."
+              "Los precios se basan principalmente en el peso total de la ropa a lavar. Ofrecemos tarifas competitivas por libra/kilo y también tenemos opciones especiales para prendas delicadas o que requieren un tratamiento especial.",
             );
             break;
         }
@@ -107,7 +107,9 @@ const useChatForm = () => {
         }
         return "repeat";
       },
+      chatDisabled: true,
     },
+    chatDisabled: true,
     process_exit: {
       transition: { duration: 0 },
       chatDisabled: true,

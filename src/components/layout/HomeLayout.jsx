@@ -1,20 +1,23 @@
-import { Footer, Header, ScrollToTopButton } from "components";
-import PropTypes from "prop-types";
-import MyChatBot from "../../appAdicionales/ChatBot/MyChatBot";
+import MyChatBot from 'appAdicionales/ChatBot/MyChatBot';
+import { Footer, Header, ScrollToTopButton } from 'components';
+import PropTypes from 'prop-types';
 
-const MainLayout = ({ children }) => {
+export default function MainLayout({ children }) {
+
+  const classes = {
+    main: 'mt-[80px] sm:mt-[0px] xl:mt-[80px]'
+  }
+
   return (
     <>
       <Header />
-      <main className="mt-[80px] sm:mt-[0px] xl:mt-[80px]">{children}</main>
+      <main className={classes.main}>{children}</main>
       <Footer />
       <ScrollToTopButton />
       <MyChatBot />
     </>
   );
-};
+}
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-};
-
-export default MainLayout;
+}

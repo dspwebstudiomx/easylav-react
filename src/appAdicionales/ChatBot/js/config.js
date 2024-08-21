@@ -30,10 +30,12 @@ const settings = {
   },
   tooltip: {
     text: "¿Tienes dudas?",
+    mode: "never",
   },
   chatInput: {
     disabled: false,
     enabledPlaceholderText: "Escribe tu mensaje...",
+    blockSpam: "true",
   },
   botBubble: {
     showAvatar: true,
