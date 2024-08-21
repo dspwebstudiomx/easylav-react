@@ -6,19 +6,21 @@ const useChatForm = () => {
 
   const flow = {
     start: {
+      chatDisabled: false,
       message: "Hola! ¿Cuál es tu nombre?",
       function: (params) => setForm({ ...form, name: params.userInput }),
       path: "welcome",
     },
     welcome: {
       message: (params) => `Mucho gusto ${params.userInput}`,
+      chatDisabled: true,
       function: (params) => setForm({ ...form, question: params.userInput }),
       path: "ask_question",
       transition: { duration: 1000 },
-      chatDisabled: true,
     },
     ask_question: {
       message: "¿En que te podemos ayudar?",
+      chatDisabled: true,
       function: (params) => setForm({ ...form, question: params.userInput }),
       options: initialOptions,
       path: async (params) => {
@@ -33,17 +35,15 @@ const useChatForm = () => {
             return "ask_question";
         }
       },
-      chatDisabled: true,
     },
     show_question_options: {
       message: "A continuación te mostraré las preguntas más frecuentes:",
       options: helpOptions,
-      path: "process_options",
       chatDisabled: true,
+      path: "process_options",
     },
     show_link_sucursales: {
       transition: { duration: 1000 },
-      chatDisabled: true,
       path: async (params) => {
         let link = "https://easylav-react.netlify.app/sucursales";
         if (link !== "") {
@@ -57,7 +57,6 @@ const useChatForm = () => {
     },
     show_link_contacto: {
       transition: { duration: 1000 },
-      chatDisabled: true,
       path: async (params) => {
         let link = "/contacto";
         if (link !== "") {
@@ -70,15 +69,15 @@ const useChatForm = () => {
       },
     },
     prompt_again: {
+      chatDisabled: true,
       message: "¿Tiene alguna otra duda?",
       options: exitOptions,
       path: "process_exit",
-      chatDisabled: true,
     },
     process_options: {
-      transition: { duration: 0 },
+      transition: { duration: 1000 },
+      chatDisabled: true,
       path: async (params) => {
-        let link = "";
         switch (params.userInput) {
           case "¿Qué tipos de prendas se pueden lavar en el servicio de lavandería?":
             await params.injectMessage(
@@ -99,20 +98,12 @@ const useChatForm = () => {
             );
             break;
         }
-        if (link !== "") {
-          await params.injectMessage("Te dirijo al lugar solicitado...");
-          setTimeout(() => {
-            window.open(link);
-          }, 1000);
-        }
         return "repeat";
       },
-      chatDisabled: true,
     },
-    chatDisabled: true,
     process_exit: {
-      transition: { duration: 0 },
       chatDisabled: true,
+      transition: { duration: 0 },
       path: async (params) => {
         switch (params.userInput) {
           case "Si":
@@ -125,10 +116,12 @@ const useChatForm = () => {
       },
     },
     exit: {
-      message: "Muchas gracias por utilizar nuestro ChatBot.",
       chatDisabled: true,
+      message: "Muchas gracias por utilizar nuestro ChatBot.",
+      transition: { duration: 1000 },
     },
     repeat: {
+      chatDisabled: true,
       transition: { duration: 5000 },
       path: "prompt_again",
     },
