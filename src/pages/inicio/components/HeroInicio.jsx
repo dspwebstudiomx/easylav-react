@@ -8,7 +8,7 @@ export default function HeroInicio() {
       textColor="text-light"
       opacity="opacity-45"
       opacityColor="bg-[#000]"
-      height="h-auto 2xl:h-[60vh]"
+      height="h-[60vh]"
       titleSection="inicio"
       imageAlt="canasta de ropa verde con ropa sucia de color con fondo blanco"
       backgroundImage_640={canastaderopa_640}
@@ -20,7 +20,7 @@ export default function HeroInicio() {
           en Easylav tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado
           Perfecto
         </h1>
-        <p className="text-border text-[36px] font-semibold leading-[40px] sm:w-2/3 sm:text-4xl">
+        <p className="text-border text-[32px] font-semibold leading-[45px] sm:w-2/3 sm:text-4xl">
           Tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto
         </p>
         <ButtonContainer>

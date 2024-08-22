@@ -1,59 +1,35 @@
-import { Placeholder } from "assets";
-import {
-  BorderLeft,
-  Container,
-  ImageResponsive,
-  Section,
-  TitleH2
-} from "components";
-import { TbPoint } from "react-icons/tb";
+import { Placeholder } from 'assets';
+import { BorderLeft, Container, ImageResponsive, Section, TitleH2 } from 'components';
+import DescriptionWithBulletPoint from 'components/list/DescriptionWithBulletPoint';
+import { porqueElegirnosDescripciones } from 'data';
 
-const PorqueElegirnos = () => {
+export default function PorqueElegirnos() {
+
+  const classes = {
+    article: 'mx-au,to grid gap-x-20 gap-y-16 sm:grid-cols-2',
+    contenedorCaracteristicas: 'grid place-content-center gap-12',
+    caracteristica: 'flex flex-col gap-6 text-balance text-2xl',
+    contenedorImagen: 'items-center justify-end'
+  }
   return (
-    <Section
-      id={"porque-elegirnos"}
-      backgroundColor={"dark:bg-dark"}
-      height={"h-auto"}
-      className={"dark:text-light"}
-    >
-      <Container className={"mx-auto"} id="porque-elegirnos-container">
-        <article className="mx-auto grid gap-x-20 gap-y-16 sm:grid-cols-2">
-          <div className="grid place-content-center gap-12">
+    <Section id={'porque-elegirnos'} backgroundColor={''} height={'h-auto'} className={''} >
+      <Container className={'mx-auto'} id='porque-elegirnos-container'>
+        <article className={classes.article}>
+          <div id='contenedor-caracteristicas' className={classes.contenedorCaracteristicas}>
             <BorderLeft>
-              <TitleH2 title="Por qué Elegirnos" />
+              <TitleH2 title='Por qué Elegirnos' />
             </BorderLeft>
-            <div className="flex flex-col gap-6 text-balance text-2xl">
-              <div className="flex gap-2">
-                <span className="text-3xl text-primary">
-                  <TbPoint />
-                </span>
-                <span className="font-semibold">Compromiso con la Calidad</span>
-              </div>
-              <div className="ml-8 text-xl">
-                Utilizamos solo productos y técnicas de lavado <br></br> de
-                primera categoría.
-              </div>
-            </div>
-            <div className="flex flex-col gap-6 text-balance text-2xl">
-              <div className="flex gap-2">
-                <span className="text-3xl text-primary">
-                  <TbPoint />
-                </span>
-                <span className="font-semibold">
-                  Experiencia y Profesionalismo
-                </span>
-              </div>
-              <div className="ml-8 text-xl">
-                Nuestro equipo está altamente capacitado y comprometido con tu
-                satisfacción.
-              </div>
-            </div>
+            {porqueElegirnosDescripciones.map(descripcion => {
+              return (
+                <DescriptionWithBulletPoint key={descripcion.id} id={descripcion.id} titulo={descripcion.titulo} texto={descripcion.texto} />
+              )
+            })}
           </div>
-          <div className="items-center justify-end">
+          <div id='contenedor-imagen' className={classes.contenedorImagen}>
             <ImageResponsive
               src={Placeholder}
               imageAlt={'Placeholder'}
-              className={"shadow-image"}
+              className={'shadow-image'}
               image_640={Placeholder}
               image_1024={Placeholder}
               image_1920={Placeholder}
@@ -63,5 +39,4 @@ const PorqueElegirnos = () => {
       </Container>
     </Section>
   );
-};
-export default PorqueElegirnos;
+}

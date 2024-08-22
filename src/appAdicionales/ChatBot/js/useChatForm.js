@@ -40,7 +40,7 @@ const useChatForm = () => {
       message: "A continuación te mostraré las preguntas más frecuentes:",
       options: helpOptions,
       chatDisabled: true,
-      path: "process_options",
+      path: "frequent_questions",
     },
     show_link_sucursales: {
       transition: { duration: 1000 },
@@ -74,7 +74,7 @@ const useChatForm = () => {
       options: exitOptions,
       path: "process_exit",
     },
-    process_options: {
+    frequent_questions: {
       transition: { duration: 1000 },
       chatDisabled: true,
       path: async (params) => {
@@ -97,8 +97,24 @@ const useChatForm = () => {
               "Los precios se basan principalmente en el peso total de la ropa a lavar. Ofrecemos tarifas competitivas por libra/kilo y también tenemos opciones especiales para prendas delicadas o que requieren un tratamiento especial.",
             );
             break;
+          case "¿Ofrecen servicio de recogida y entrega a domicilio?":
+            await params.injectMessage(
+              "No, no ofrecemos servicio de recogida y entrega a domicilio.",
+            );
+            break;
+          case "¿Qué medidas toman para garantizar que las prendas no se mezclen o dañen durante el lavado?":
+            await params.injectMessage(
+              "Nuestro personal capacitado clasifica cuidadosamente las prendas antes de lavarlas, separando por colores, tipos de tejido y requisitos de lavado. Utilizamos productos de calidad y ajustamos los ciclos de lavado según las especificaciones de cada prenda.",
+            );
+            break;
+          case "¿Qué debo hacer si tengo una prenda con manchas difíciles o específicas?":
+            await params.injectMessage(
+              "Si tienes prendas con manchas difíciles, te recomendamos que nos lo indiques al dejar la ropa. Nuestro personal está entrenado para tratar diferentes tipos de manchas y utilizaremos métodos adecuados para maximizar la posibilidad de eliminación sin dañar la tela.",
+            );
+            break;
+          default:
+            return "repeat";
         }
-        return "repeat";
       },
     },
     process_exit: {

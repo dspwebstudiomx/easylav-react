@@ -7,9 +7,9 @@ import {
   ImageResponsive,
   Modal,
   PageLayout,
-  TextWithBulletPoint,
   TitleH1,
 } from "components";
+import DescriptionWithBulletPoint from "components/list/DescriptionWithBulletPoint";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaInfoCircle } from "react-icons/fa";
@@ -46,9 +46,10 @@ const Franquicias = () => {
           <ul className="flex flex-col gap-8 text-xl">
             {franquiciaDescripciones.map((descripcion) => {
               return (
-                <TextWithBulletPoint
+                <DescriptionWithBulletPoint
                   texto={descripcion.texto}
                   key={descripcion.id}
+                  id={descripcion.id}
                 />
               );
             })}

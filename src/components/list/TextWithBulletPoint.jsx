@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import { TbPoint } from "react-icons/tb"
-
-
-const TextWithBulletPoint = ({ ...props }) => {
+export default function TextWithBulletPoint({ ...props }) {
 
   const { texto, id } = props
 
@@ -21,5 +19,3 @@ TextWithBulletPoint.propTypes = {
   texto: PropTypes.string.isRequired,
   id: PropTypes.number,
 }
-
-export default TextWithBulletPoint

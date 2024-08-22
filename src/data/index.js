@@ -7,6 +7,7 @@ export {
   navLinksPages,
   navLinksSections,
 } from "data/navlinks";
+export { porqueElegirnosDescripciones } from "data/porqueElegirnosDescripciones";
 export { services } from "data/services";
-export { localservices, localservicesbck } from "data/sucursales";
+export { localservices } from "data/sucursales";
 export { testimonios } from "data/testimonios";

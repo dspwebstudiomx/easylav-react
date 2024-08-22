@@ -2,8 +2,11 @@ import { NextPageButton, PagePaginationIndex, PrevPageButton } from 'components'
 import PropTypes from 'prop-types'
 
 const Pager = ({ handleNextPage, handlePrevPage, handlePageChange, itemsPerPage, localservices, currentPage }) => {
+
+  const classes = 'mx-auto flex items-center justify-center gap-7'
+
   return (
-    <div className="mx-auto flex items-center justify-center gap-7">
+    <div className={classes} >
       <PrevPageButton handlePrevPage={handlePrevPage} />
       <PagePaginationIndex handlePageChange={handlePageChange} itemsPerPage={itemsPerPage} localservices={localservices} currentPage={currentPage} />
       <NextPageButton handleNextPage={handleNextPage} />

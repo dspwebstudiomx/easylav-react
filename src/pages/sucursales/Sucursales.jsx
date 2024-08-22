@@ -1,6 +1,6 @@
+import image from "assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
+import { BorderLeft, PageLayout, SEOFriendly, Spacing, TitleH2 } from 'components'
 import { scrollToTop } from "functions"
-import image from "../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import { BorderLeft, PageLayout, SEOFriendly, Spacing, TitleH2 } from '../../components'
 import CityCardGenerator from "./components/CityCardGenerator"
 
 const Sucursales = () => {
