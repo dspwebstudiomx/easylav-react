@@ -1,8 +1,9 @@
-// Testimonios.js
+// Testimonio.js
 import PropTypes from 'prop-types'
 
 const Testimonio = ({ testimonio }) => {
 
+  //Estilos TailwindCSS
   const classes = {
     article: 'shadow-xl p-6 flex flex-col justify-between bg-light text-dark rounded-lg',
     paragraph: 'text-pretty text-base text-lg',
@@ -11,9 +12,10 @@ const Testimonio = ({ testimonio }) => {
     contenedorNombreEstrella: 'text-dark',
     estrellasContenedor: 'flex items-center',
     estrellas: 'text-secondary dark:text-primary',
-    numero: "font-semibold text-lg text-[#0e0e0e]"
+    numero: "font-semibold text-lg text-dark"
   }
 
+  //Estructura
   return (
     <article id={`testimonio-${testimonio.nombre}`} className={classes.article} key={testimonio.id}>
       <p id={`testimonio-parrafo-${testimonio.nombre}`} className={classes.paragraph}>{testimonio.testimonio}</p>
