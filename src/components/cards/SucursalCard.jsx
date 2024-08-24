@@ -42,7 +42,7 @@ export default function SucursalCard({
     <article
       id={`sucursal-${title}`}
       key={id}
-      className={`relative ${width} animate__animated animate__bounceIn animate__slower flex min-h-[432px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-xl dark:text-dark`}
+      className={`relative ${width} animate__animated animate__bounceIn animate__slower flex min-h-[38px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-xl dark:text-dark`}
     >
       {/* mapa */}
       <div className='h-[150px] overflow-hidden rounded-t-lg w-full'>
@@ -57,8 +57,8 @@ export default function SucursalCard({
         </APIProvider>
       </div>
       {/* mapa */}
-      <div className='relative flex flex-col justify-start gap-3 p-8'>
-        <h3 className='pb-0 text-center text-xl font-semibold uppercase sm:text-base'>
+      <div className='relative flex flex-col justify-start gap-3 p-8 px-6'>
+        <h3 className='pb-0 text-center text-xl font-semibold uppercase sm:text-sm'>
           {title}
         </h3>
         {/* Dirección */}
@@ -71,21 +71,21 @@ export default function SucursalCard({
         >
           <p className='text-md mx-auto flex w-full items-center gap-4 text-balance'>
             <span className='text-secondary'>
-              <FaMapMarkerAlt size={20} />
+              <FaMapMarkerAlt size={18} />
             </span>
-            <span className='text-sm'>{place}</span>
+            <span className='text-xs'>{place}</span>
           </p>
         </a>
         {/* Dirección */}
         {/* Horario */}
         <div className='mx-auto mb-2 flex w-full items-center gap-4'>
           <span className='text-secondary'>
-            <FaRegClock size={18} />
+            <FaRegClock size={16} />
           </span>
           <div className='flex gap-3 xl:gap-2'>
             <div className='flex flex-col gap-1'>
-              <p className='text-sm'>{serviceday1}</p>
-              <p className='text-sm'>{servicehour1}</p>
+              <p className='text-xs'>{serviceday1}</p>
+              <p className='text-xs'>{servicehour1}</p>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function SucursalCard({
               href={`mailto:${email}`}
               title={titleMailto}
               type={'button'}
-              className='flex w-full items-center justify-center gap-3 text-lg'
+              className='flex w-full items-center justify-center gap-3 text-base'
             >
               <Badge flexDirection='flex-row' backgroundColor='bg-secondary_light md:bg-secondary sm:hover:bg-secondary dark:bg-primary dark:hover:bg-primary_dark'>
                 <FaEnvelope />
@@ -145,7 +145,7 @@ export default function SucursalCard({
         {badge && (
           <div className=''>
             <Badge backgroundColor='bg-secondary_light dark:bg-primary'>
-              <p className='text-lg'>{badge}</p>
+              <p className='text-base'>{badge}</p>
             </Badge>
             <div className='flex md:hidden'>
               {/* Waze */}
@@ -185,17 +185,17 @@ export default function SucursalCard({
 
       {/* Badge */}
       {isOpen && (
-        <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary'>
+        <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
           <p className=''>Abierto</p>
         </div>
       )}
       {!isOpen && (
-        <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark'>
+        <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
           <p className=''>Cerrado</p>
         </div>
       )}
       {advertisement && (
-        <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light dark:border-primary_dark dark:bg-primary flex items-center'>
+        <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light dark:border-primary_dark dark:bg-primary flex items-center text-sm'>
           <p className='ml-8 '>{advertisement}</p>
         </div>
       )}

@@ -7,7 +7,7 @@ const NavLinksTablet = () => {
   return (
     <ul
       id="navlinks-tablet"
-      className="fixed top-[100px] z-30 hidden w-full justify-evenly gap-8 bg-primary p-5 px-8 sm:relative sm:top-[0px] md:flex xl:hidden"
+      className="fixed top-[100px] z-30 hidden w-full justify-evenly gap-4 bg-primary p-5 px-8 sm:relative sm:top-[0px] sm:flex xl:hidden"
     >
       {navLinksSections.map((navlink) => {
         return (
@@ -15,7 +15,7 @@ const NavLinksTablet = () => {
             scroll={scrollWithOffset}
             key={navlink.id}
             id={`link-${navlink.linkId}`}
-            className="xl:text-md navlink text-base font-semibold uppercase text-dark hover:text-secondary_light"
+            className="xl:text-md navlink text-base font-bold uppercase text-light hover:text-secondary_light"
             to={navlink.href}
           >
             {navlink.name}
@@ -28,7 +28,7 @@ const NavLinksTablet = () => {
             scroll={scrollWithOffset}
             key={navlink.id}
             id={`link-${navlink.linkId}`}
-            className="xl:text-md navlink text-base font-semibold uppercase text-dark hover:text-secondary_light"
+            className="xl:text-md navlink text-base font-bold uppercase text-light hover:text-secondary_light"
             to={navlink.href}
           >
             {navlink.name}

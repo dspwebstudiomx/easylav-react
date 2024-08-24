@@ -22,16 +22,13 @@ html {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   font-family: "Quick Sand", sans-serif;
 }
 
 h2 {
   font-size: 32px;
-}
-
-p {
-  font-size: 18px;
 }
 
 /* *::selection {

@@ -29,7 +29,7 @@ export default function Footer() {
     <footer id="footer" className="text-base">
       <HeaderLine />
       <Section
-        backgroundColor={"bg-secondary_dark"}
+        backgroundColor={"bg-secondary_dark dark:bg-secondary_dark"}
         id={"footer-sections"}
         className={classes.section}
         height={"h-auto"}

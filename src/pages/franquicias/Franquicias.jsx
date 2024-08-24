@@ -1,14 +1,5 @@
 import { canastaderopa_640, Placeholder } from "assets";
-import {
-  BorderLeft,
-  ButtonContainer,
-  ButtonSecondary,
-  ContactFormFranquicias,
-  ImageResponsive,
-  Modal,
-  PageLayout,
-  TitleH1,
-} from "components";
+import { BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, TitleH1 } from "components";
 import DescriptionWithBulletPoint from "components/list/DescriptionWithBulletPoint";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
