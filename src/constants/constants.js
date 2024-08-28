@@ -10,7 +10,6 @@ import {
   canastaderopa_2400,
   canastaderopa_640,
 } from "assets";
-import Testimonio from "pages/inicio/Testimonios/Testimonio";
 
 // --------- Constantes para estilos - TailwindCSS ------------- //H1
 
