@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function FooterLinksGenerator({ links }) {
   const classes = {
-    footerSectionsList: "flex flex-col gap-0",
+    footerSectionsList: "flex flex-col gap-2 text-lg",
   }
   return (
     <ul className={classes.footerSectionsList}>

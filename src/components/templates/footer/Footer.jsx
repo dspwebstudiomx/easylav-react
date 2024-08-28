@@ -4,6 +4,7 @@ import {
   FooterNavHashLinksGenerator,
   HeaderLine,
   Section,
+  Spacing,
 } from "components";
 import { linksServicios } from "data";
 import {
@@ -22,7 +23,7 @@ export default function Footer() {
     footerSections: "flex flex-col",
     footerSectionsList: "flex flex-col gap-0",
     footerSectionsTitle:
-      "text-sm font-medium uppercase leading-6 text-primary mb-6",
+      "text-lg font-medium uppercase leading-6 text-primary mb-6",
   };
 
   return (
@@ -44,6 +45,7 @@ export default function Footer() {
               Secciones
             </h3>
             <FooterNavHashLinksGenerator links={navLinksSections} />
+            <Spacing height="h-2" />
             <FooterLinksGenerator links={navLinksPages} />
           </div>
           {/* Footer Sections */}

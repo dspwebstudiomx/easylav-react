@@ -1,3 +1,6 @@
+// Inicio.jsx //
+
+//Importaciones
 import { canastaderopa_640 } from 'assets';
 import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
@@ -9,26 +12,43 @@ const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucur
 const Testimonios = lazy(() => import('./Testimonios/Testimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
 
+//Constantes de estilos - TailwindCSS
+const SECTION_BACKGROUNDCOLOR_CLASSNAME = 'dark:bg-dark'
+const SECTION_CLASSNAME = 'dark:text-light'
+const CONTAINER_CLASSNAME = 'mx-auto'
+
+//Constantes de SEO Friendly
+const TITLE = 'Inicio | Easylav: Tu lavandería ideal'
+const DESCRIPTION = 'En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto'
+const KEYWORDS = 'lavandería, lavado, planchado, ropa'
+const URL = 'easylav-react.netlify.app'
+const AUTHOR = 'dspwebstudio'
+const OG_IMAGE = canastaderopa_640
+const OG_IMAGE_ALT = 'canasta verde con ropa sucia'
+const OG_TYPE = 'website'
+// const ROBOTS = 'index, follow'
+
+
 const Inicio = () => (
   <Suspense fallback={<Loading />}>
     <HomeLayout>
       <SEOFriendly
-        title='Inicio | Easylav: Tu lavandería ideal'
-        url='easylav-react.netlify.app'
-        description='En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto'
-        author='dspwebstudio'
-        keywords='lavandería Morelia, planchado Morelia'
-        ogImage={canastaderopa_640}
-        ogImageAlt='canasta verde con ropa sucia'
-        ogType='website' />
+        title={TITLE}
+        url={URL}
+        description={DESCRIPTION}
+        author={AUTHOR}
+        keywords={KEYWORDS}
+        ogImage={OG_IMAGE}
+        ogImageAlt={OG_IMAGE_ALT}
+        ogType={OG_TYPE} />
       <HeroInicio />
       <SobreNosotros />
       <NuestrosServicios />
       <PorqueElegirnos />
       <NuestrasSucursales />
       <Testimonios />
-      <Section backgroundColor={'dark:bg-dark'} className={'dark:text-light'}>
-        <Container className={'mx-auto'}>
+      <Section backgroundColor={SECTION_BACKGROUNDCOLOR_CLASSNAME} className={SECTION_CLASSNAME}>
+        <Container className={CONTAINER_CLASSNAME}>
           <Contacto />
         </Container>
       </Section>

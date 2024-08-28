@@ -11,7 +11,7 @@ const Fields = ({ errors, touched }) => {
         <Field
           id="user_name"
           name="user_name"
-          className="rounded-md text-slate-900 bg-slate-200 p-2 border-2 border-primary xl:p-2 outline-none"
+          className="rounded-md border-2 border-primary p-2 outline-none  bg-light text-dark"
           type="text"
           placeholder="Nombre Completo"
           required
@@ -27,7 +27,7 @@ const Fields = ({ errors, touched }) => {
           Ciudad<span className="text-required ml-1">*</span>
         </label>
         <Field
-          className="rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none"
+          className="rounded-md border-2 border-primary p-2 outline-none bg-light text-dark"
           id="user_city"
           name="user_city"
           placeholder="Ciudad"
@@ -43,7 +43,7 @@ const Fields = ({ errors, touched }) => {
         <div className='flex flex-col xl:w-[50%] w-full'>
           <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
           <Field
-            className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
+            className='rounded-md border-2 border-primary p-2 outline-none  bg-light text-dark'
             id='user_email'
             name='user_email'
             type='email'
@@ -56,7 +56,7 @@ const Fields = ({ errors, touched }) => {
         <div className='flex flex-col xl:w-[45%] w-full'>
           <label htmlFor='user_phone' className='mb-2'>Número Telefónico<span className='text-required ml-1'>*</span></label>
           <Field
-            className='rounded-md text-slate-900 bg-slate-200 border-2 border-primary p-2 xl:p-2 outline-none'
+            className='rounded-md border-2 border-primary p-2 outline-none bg-light text-dark'
             type='text'
             name='user_phone'
             id='user_phone'
@@ -73,7 +73,7 @@ const Fields = ({ errors, touched }) => {
           type='text'
           name='message'
           id='message'
-          className='rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-primary h-40 max-h-32 min-h-32 outline-none'
+          className='rounded-md border-2 border-primary h-40 max-h-32 min-h-32 outline-none p-2 bg-light text-dark'
           required
         />
         {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}

@@ -9,7 +9,7 @@ const PageLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="mt-[100px] sm:mt-[0px] xl:mt-[0px]">
+      <main className="mt-[100px] sm:mt-[0px] xl:mt-[90px]">
         <Section backgroundColor={'dark:bg-dark'} height={'h-auto'} className={'dark:text-light flex flex-col gap-6'}>
           <Container className="mx-auto py-0 2xl:py-20">
             {children}

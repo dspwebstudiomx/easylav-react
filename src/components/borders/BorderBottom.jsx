@@ -5,11 +5,9 @@ const BorderBottom = ({ ...props }) => {
   const { children, justify } = props
 
   return (
-    <div className={` border-b-primary border-b-4 flex ${justify} text-center w-44`}>
-      <span className='py-3 mx-auto'>
-        {children}
-      </span>
-    </div>
+    <div className={` border-b-primary border-b-4 ${justify}`}>
+      {children}
+    </div >
   )
 }
 BorderBottom.propTypes = {

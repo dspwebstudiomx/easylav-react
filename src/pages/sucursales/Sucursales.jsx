@@ -1,13 +1,18 @@
-import image from "assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg"
-import { BorderBottom, PageLayout, SEOFriendly, Spacing, TitleH2 } from 'components'
-import { scrollToTop } from "functions"
-import CityCardGenerator from "./components/CityCardGenerator"
+import image from "assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg";
+import {
+  BorderBottom,
+  PageLayout,
+  SEOFriendly,
+  Spacing,
+  TitleH2,
+} from "components";
+import { scrollToTop } from "functions";
+import CityCardGenerator from "./components/CityCardGenerator";
 
 const Sucursales = () => {
-
-  scrollToTop()
+  scrollToTop();
   return (
-    <PageLayout id={'Sucursales'} >
+    <PageLayout id={"Sucursales"}>
       <SEOFriendly
         title="Sucursales | Easylav: Tu lavandería ideal"
         url="easylav-react.netlify.app"
@@ -18,17 +23,17 @@ const Sucursales = () => {
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
-      <BorderBottom justify={'mx-auto'}>
-        <TitleH2 title='Morelia' />
+      <BorderBottom justify={"mx-auto"}>
+        <TitleH2 title="Morelia" />
       </BorderBottom>
-      < CityCardGenerator city={'Morelia'} />
-      <Spacing height={'h-12'} />
-      <BorderBottom justify={'mx-auto'}>
-        <TitleH2 title='León' />
+      <CityCardGenerator city={"Morelia"} />
+      <Spacing height={"h-12"} />
+      <BorderBottom justify={"mx-auto"}>
+        <TitleH2 title="León" />
       </BorderBottom>
-      <CityCardGenerator city={'León'} />
+      <CityCardGenerator city={"León"} />
     </PageLayout>
-  )
-}
+  );
+};
 
-export default Sucursales
+export default Sucursales;

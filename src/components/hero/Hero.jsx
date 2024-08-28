@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Hero({ ...props }) {
   const {
-    children, backgroundColor, backgroundImage_640, backgroundImage_1024, backgroundImage_1920, height, titleSection, opacity, opacityColor, textColor, imageAlt,
+    children, backgroundColor, backgroundImage_640, backgroundImage_1024, backgroundImage_1920, height, id, opacity, opacityColor, textColor, imageAlt,
   } = props;
 
   const classes = {
@@ -14,13 +14,13 @@ function Hero({ ...props }) {
 
   return (
     <Section
-      id={titleSection}
+      id={id}
       height={height}
       backgroundColor={backgroundColor}
       className={classes.section}
     >
       <div
-        id={`imagen-${titleSection}`}
+        id={`imagen-${id}`}
         className="top:0 absolute inset-0 -z-20 h-full object-cover object-center"
       >
         <ImageResponsive
@@ -31,8 +31,8 @@ function Hero({ ...props }) {
           image_1024={backgroundImage_1024}
           image_1920={backgroundImage_1920} />
       </div>
-      <div id={`opacidad-${titleSection}`} className={classes.opacity} />
-      <Container id={`contenido-${titleSection}`}>{children}</Container>
+      <div id={`opacidad-${id}`} className={classes.opacity} />
+      <Container id={`contenido-${id}`}>{children}</Container>
     </Section>
   );
 }
@@ -44,7 +44,7 @@ Hero.propTypes = {
   backgroundImage_1024: PropTypes.string,
   backgroundImage_1920: PropTypes.string,
   height: PropTypes.string,
-  titleSection: PropTypes.string,
+  id: PropTypes.string,
   opacity: PropTypes.string,
   opacityColor: PropTypes.string,
   textColor: PropTypes.string,

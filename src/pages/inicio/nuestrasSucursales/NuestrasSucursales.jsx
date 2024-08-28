@@ -5,23 +5,23 @@ import {
   Container,
   PaginatedSucursalCards,
   Section,
-  TitleH2,
+  TitleH2
 } from 'components';
+
 import { FaEnvelope } from 'react-icons/fa';
 
+
 const NuestrasSucursales = () => {
+
   return (
-    <Section
-      id='nuestras-sucursales'
-      backgroundColor={'dark:bg-dark'}
-      height={'h-auto'}
-      className={'dark:text-light'}
-    >
-      <Container className='mx-auto w-full sm:w-4/5'>
+    <Section id='nuestras-sucursales' >
+      <Container className='mx-auto w-full'>
         <BorderBottom justify='mx-auto'>
           <TitleH2 title='Sucursales' />
         </BorderBottom>
-        <PaginatedSucursalCards />
+        <div className='grid gap-6'>
+          <PaginatedSucursalCards />
+        </div>
         <ButtonContainer position='justify-center' distance=''>
           <ButtonSecondary
             title='Contáctanos'

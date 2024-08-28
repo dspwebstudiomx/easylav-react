@@ -1,5 +1,6 @@
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import { Badge } from 'components';
+import { useGetServiceHour } from 'hooks';
 import PropTypes from 'prop-types';
 import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
@@ -18,31 +19,14 @@ export default function SucursalCard({
   badge,
   advertisement,
 }) {
+  const isOpen = useGetServiceHour();
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
-
-  // Obtenemos la hora actual
-  const currentTime = new Date();
-  const currentHour = currentTime.getHours();
-  const currentMinute = currentTime.getMinutes();
-
-  // Definimos el horario de servicio
-  const openHour = 7;
-  const openMinute = 30;
-  const closeHour = 21;
-  const closeMinute = 30;
-
-  // Comparamos la hora actual con el horario de servicio
-  const isOpen =
-    (currentHour > openHour ||
-      (currentHour === openHour && currentMinute >= openMinute)) &&
-    (currentHour < closeHour ||
-      (currentHour === closeHour && currentMinute < closeMinute));
 
   return (
     <article
       id={`sucursal-${title}`}
       key={id}
-      className={`relative ${width} animate__animated animate__bounceIn animate__slower flex min-h-[38px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-xl dark:text-dark`}
+      className={`relative ${width} animate__animated animate__fadeIn animate__slower flex min-h-[38px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-xl dark:text-dark`}
     >
       {/* mapa */}
       <div className='h-[150px] overflow-hidden rounded-t-lg w-full'>
@@ -58,7 +42,7 @@ export default function SucursalCard({
       </div>
       {/* mapa */}
       <div className='relative flex flex-col justify-start gap-3 p-8 px-6'>
-        <h3 className='pb-0 text-center text-xl font-semibold uppercase sm:text-sm'>
+        <h3 className='text-center text-lg font-semibold uppercase sm:text-sm'>
           {title}
         </h3>
         {/* Dirección */}

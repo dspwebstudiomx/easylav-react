@@ -1,3 +1,4 @@
+import { GENERAL_UI } from "constants/constants";
 import { frequentQuestions } from "data";
 import PropTypes from 'prop-types';
 import { useState } from "react";
@@ -96,8 +97,8 @@ const AccordionItem = ({ question, answer }) => {
           </svg>
         </div>
 
-        <div className="w-full pr-5 xl:pr-16">
-          <h4 className="mt-1 xl:text-xl font-semibold text-dark dark:text-white min-h-[100px] 2xl:min-h-[60px]">
+        <div className="w-full pr-4 xl:pr-16">
+          <h4 className="mt-1 text-lg xl:text-xl font-semibold text-dark dark:text-white min-h-[100px] 2xl:min-h-[60px]">
             {question}
           </h4>
         </div>
@@ -107,7 +108,7 @@ const AccordionItem = ({ question, answer }) => {
         className={`pl-[62px] duration-200 w-full 2xl:w-[480px] ease-in-out ${active ? "block" : "hidden"
           }`}
       >
-        <p className="py-3 text-lg text-body-color dark:text-dark-6 w-full pr-14">
+        <p className={`${GENERAL_UI.PARAGRAPH} py-6 dark:text-dark-6 w-full pr-8`}>
           {answer}
         </p>
       </div>

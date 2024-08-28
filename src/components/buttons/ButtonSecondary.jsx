@@ -1,14 +1,23 @@
 import { Button } from 'components'
+import { BUTTON_SECONDARY_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
 
 export default function ButtonSecondary({ ...props }) {
 
-  const { title, href, border, icon, type, onClick, titleMailto } = props
-
-  const themeButton = 'bg-secondary border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:bg-secondary_dark hover:border-t-secondary_light hover:border-l-secondary min-h-[70px] dark:bg-primary dark:border-l-primary dark:border-t-primary_light dark:hover:bg-primary_dark dark:hover:border-l-primary'
+  const { title, href, icon, type, onClick, titleMailto } = props
 
   return (
-    <Button href={href} type={type} themeButton={themeButton} title={title} border={border} icon={icon} onClick={onClick} titleMailto={titleMailto} />
+    <Button
+      backgroundColor={BUTTON_SECONDARY_UI.BACKGROUND_COLOR}
+      border={BUTTON_SECONDARY_UI.BORDER}
+      textColor={BUTTON_SECONDARY_UI.TEXT_COLOR}
+      href={href}
+      type={type}
+      title={title}
+      icon={icon}
+      onClick={onClick}
+      titleMailto={titleMailto}
+    />
   )
 }
 

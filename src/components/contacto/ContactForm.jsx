@@ -1,3 +1,11 @@
+/*
+Contact Form
+=====================================
+Creado por : Daniel Pérez
+Fecha: 2022-08-25
+*/
+
+// Importaciones
 import emailjs from '@emailjs/browser';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
@@ -7,6 +15,8 @@ import ButtonContainer from '../containers/ButtonContainer';
 import EmailErrorModal from '../modals/EmailErrorModal';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
 
+
+// Componente
 export default function ContactForm() {
 
   const form = useRef();
@@ -49,15 +59,15 @@ export default function ContactForm() {
         },
       );
   };
-  // if (showModal) {
-  //   document.body.classList.add('modal-active')
-  // } else {
-  //   document.body.classList.remove('modal-active')
-  // }
+  if (showModal) {
+    document.body.classList.add('modal-active')
+  } else {
+    document.body.classList.remove('modal-active')
+  }
 
 
   return (
-    <form id="formulario" className="border-4  border-primary_dark rounded-2xl px-8 py-10 pb-14 bg-primary_light dark:bg-slate-700  text-slate-100 w-full text-dark ">
+    <div id="formulario" className="border-4  border-primary_dark rounded-2xl px-8 py-10 pb-14 bg-primary_light dark:bg-slate-700  text-slate-100 w-full text-dark ">
       <Formik
         initialValues={{
           user_name: '',
@@ -121,7 +131,7 @@ export default function ContactForm() {
                 <Field
                   id="user_name"
                   name="user_name"
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 p-4 border-2 border-primary xl:p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-2 outline-none"
                   type="text"
                   required
                 />
@@ -130,7 +140,7 @@ export default function ContactForm() {
               <div id='formField_ciudad' className="flex flex-col xl:w-[45%] w-full">
                 <label htmlFor='user_city' className="mb-2 text-sm">Ciudad<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-2 outline-none"
                   id="user_city"
                   name="user_city"
                   required
@@ -143,7 +153,7 @@ export default function ContactForm() {
               <div id='formField_email' className="flex flex-col xl:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2 text-sm">Correo Electrónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-4 xl:p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-primary p-2 outline-none"
                   id="user_email"
                   name="user_email"
                   type="email"
@@ -212,6 +222,6 @@ export default function ContactForm() {
         )
         }
       </Formik >
-    </form >
+    </div>
   )
 }

@@ -6,7 +6,7 @@ const NextPageButton = ({ handleNextPage }) => {
     <button onClick={handleNextPage}>
       <BiChevronRightCircle
         className="ml-2 text-primary hover:text-primary_dark"
-        size={65}
+        size={52}
       />
     </button>
   )

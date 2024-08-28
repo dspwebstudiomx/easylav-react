@@ -1,36 +1,36 @@
-// Testimonio.js
+/*Testimonio
+=====================================
+Creado por : Daniel Pérez
+Fecha: 2022-08-28
+*/
+
+// Importaciones
+import { TESTIMONIAL_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
 
+
+//Estructura
 const Testimonio = ({ testimonio }) => {
 
-  //Estilos TailwindCSS
-  const classes = {
-    article: 'shadow-xl p-6 flex flex-col justify-between bg-light text-dark rounded-lg',
-    paragraph: 'text-pretty text-base text-lg',
-    contenedor: 'flex flex-row lg:flex-row mt-6 gap-6 justify-start sm:items-center',
-    nombre: 'font-semibold text-lg',
-    contenedorNombreEstrella: 'text-dark',
-    estrellasContenedor: 'flex items-center',
-    estrellas: 'text-secondary dark:text-primary',
-    numero: "font-semibold text-lg text-dark"
-  }
+  //Constantes de Datos
+  const NAME_PERSON_TESTIMONY = testimonio.nombre
+  const TESTIMONY = testimonio.testimonio
+  const TESTIMONY_ID = testimonio.id
+  const TESTIMONY_QUALIFICATION = testimonio.calificacion
 
-  //Estructura
   return (
-    <article id={`testimonio-${testimonio.nombre}`} className={classes.article} key={testimonio.id}>
-      <p id={`testimonio-parrafo-${testimonio.nombre}`} className={classes.paragraph}>{testimonio.testimonio}</p>
-      <div id={`contenedor-testimonio-${testimonio.id}`} className={classes.contenedor}>
-        <h3 className={classes.nombre}>{testimonio.nombre}</h3>
-        <div id={`contenedor-nombre_estrella-${testimonio.id}`} className={classes.contenedorNombreEstrella}>
+    <article id={`testimonio-${NAME_PERSON_TESTIMONY}`} className={TESTIMONIAL_UI.ARTICLE_CLASSNAME} key={TESTIMONY_ID}>
+      <p id={`testimonio-parrafo-${NAME_PERSON_TESTIMONY}`} className={TESTIMONIAL_UI.PARAGRAPH_CLASSNAME}>{TESTIMONY}</p>
+      <div id={`contenedor-testimonio-${TESTIMONY_ID}`} className={TESTIMONIAL_UI.CONTAINER_CLASSNAME}>
+        <h3 className={TESTIMONIAL_UI.NAME_CLASSNAME}>{NAME_PERSON_TESTIMONY}</h3>
+        <div id={`contenedor-nombre_estrella-${TESTIMONY_ID}`} className={TESTIMONIAL_UI.NUMBER_STAR_CONTAINER_CLASSNAME}>
           <div className='flex gap-2 text-secondary'>
-            {testimonio.estrellas.map((estrella) => {
-              return (
-                <span key={estrella.id} className={classes.estrellasContenedor}>
-                  {estrella.icon && <estrella.icon size={16} className={classes.estrellas} />}
-                </span>
-              )
-            })}
-            <h4 className={classes.numero}>{testimonio.calificacion}</h4>
+            {testimonio.estrellas.map((estrella) => (
+              <span key={estrella.id} className={TESTIMONIAL_UI.STARS_CONTAINER_CLASSNAME}>
+                {estrella.icon && <estrella.icon size={16} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
+              </span>
+            ))}
+            <h4 className={TESTIMONIAL_UI.QUALIFICATION_CLASSNAME}>{TESTIMONY_QUALIFICATION}</h4>
           </div>
         </div>
       </div>

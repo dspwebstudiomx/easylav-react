@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Pager = ({ handleNextPage, handlePrevPage, handlePageChange, itemsPerPage, localservices, currentPage }) => {
 
-  const classes = 'mx-auto flex items-center justify-center gap-7'
+  const classes = 'mx-auto flex items-center justify-center gap-4'
 
   return (
     <div className={classes} >

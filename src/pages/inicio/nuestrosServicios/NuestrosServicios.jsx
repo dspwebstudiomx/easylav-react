@@ -1,5 +1,6 @@
 import {
   BorderBottom,
+  BorderLeft,
   ButtonContainer,
   ButtonSecondary,
   Container,
@@ -12,14 +13,18 @@ const NuestrosServicios = () => {
   return (
     <Section
       id={'servicios'}
-      backgroundColor={''}
-      height={'h-auto'}
-      className={''}
     >
       <Container className={'mx-auto'} id='servicios-container'>
-        <BorderBottom justify={'mx-auto'}>
-          <TitleH2 title='Nuestros Servicios' />
-        </BorderBottom>
+        <div className='sm:hidden'>
+          <BorderLeft justify={'mx-auto'}>
+            <TitleH2 title='Nuestros Servicios' />
+          </BorderLeft>
+        </div>
+        <div className='hidden sm:block'>
+          <BorderBottom justify={'mx-auto'}>
+            <TitleH2 title='Nuestros Servicios' />
+          </BorderBottom>
+        </div>
         <ServicesGenerator />
         <ButtonContainer position={'justify-center'} distance={'mt-16'}>
           <ButtonSecondary

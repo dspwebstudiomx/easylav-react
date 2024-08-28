@@ -1,23 +1,24 @@
 import lottieImage from 'assets/images/lottie/Animation.json';
 import { BorderLeft, Container, LottieAnimationImage, Section, TitleH2 } from 'components';
+import { ABOUT_PROPS, ABOUT_UI, GENERAL_UI } from 'constants/constants';
 
 const SobreNosotros = () => {
   return (
     <Section
-      id={'nosotros'}
-      backgroundColor={''}
-      height={'h-auto'}
-      className={''}
+      id={ABOUT_PROPS.SECTION_ID}
+      className={ABOUT_UI.SECTION}
+      backgroundColor={ABOUT_UI.BACKGROUND_COLOR}
+      height={ABOUT_UI.HEIGHT}
     >
-      <Container className={'mx-auto'} id='nosotros-container'>
-        <div className='grid gap-x-20 gap-y-16 sm:grid-cols-2'>
-          <div className='grid place-content-center gap-8'>
+      <Container className={ABOUT_UI.CONTAINER} id={ABOUT_PROPS.CONTAINER_ID}>
+        <div id='sobrenosotros-doscolunmas' className={ABOUT_UI.TWOCOLUMNS_CONTAINER}>
+          <div id='sobrenosotros-columna-1' className={ABOUT_UI.COLUMN1_CONTAINER}>
             <BorderLeft>
-              <TitleH2 title={'Sobre Nosotros'} />
+              <TitleH2 title={ABOUT_PROPS.TITLEH2} />
             </BorderLeft>
-            <p className='text-balance 2xl:text-xl'>
-              En{' '}
-              <span className='font-semibold text-secondary dark:text-primary'>
+            <p className={GENERAL_UI.PARAGRAPH}>
+              En
+              <span className={ABOUT_UI.SPAN}>
                 Easylav
               </span>
               , somos un equipo apasionado por el cuidado de la ropa. Con muchos
@@ -27,7 +28,7 @@ const SobreNosotros = () => {
               ropa merece lo mejor.
             </p>
           </div>
-          <div className='items-center justify-end'>
+          <div id='sobrenosotros-columna-2' className={ABOUT_UI.COLUMNS2_CONTAINER}>
             {/* <ImageResponsive
               src={img1}
               className={'shadow-image'}

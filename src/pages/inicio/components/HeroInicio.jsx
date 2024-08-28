@@ -1,21 +1,30 @@
-import { canastaderopa_1920, canastaderopa_2400, canastaderopa_640 } from "assets";
+/*
+Hero Inicio
+=====================================
+Creado por : Daniel Pérez
+Fecha: 2022-08-25
+*/
+
+// Importaciones
 import { ButtonContainer, ButtonSecondary, Container, Hero } from "components";
+import { HEROINICIO_PROPS, HEROINICIO_UI } from "constants/constants";
 import { scrollWithOffset } from "functions";
 
+// Componente
 export default function HeroInicio() {
   return (
     <Hero
-      textColor="text-light"
-      opacity="opacity-45"
-      opacityColor="bg-[#000]"
-      height="h-[60vh]"
-      titleSection="inicio"
-      imageAlt="canasta de ropa verde con ropa sucia de color con fondo blanco"
-      backgroundImage_640={canastaderopa_640}
-      backgroundImage_1024={canastaderopa_1920}
-      backgroundImage_1920={canastaderopa_2400}
+      textColor={HEROINICIO_UI.TEXT_COLOR}
+      opacity={HEROINICIO_UI.OPACITY}
+      opacityColor={HEROINICIO_UI.OPACITY_COLOR}
+      height={HEROINICIO_UI.HEIGHT}
+      id={HEROINICIO_PROPS.SECTION_ID}
+      imageAlt={HEROINICIO_PROPS.IMAGE_ALT}
+      backgroundImage_640={HEROINICIO_PROPS.BACKGROUND_IMAGE_640}
+      backgroundImage_1024={HEROINICIO_PROPS.BACKGROUND_IMAGE_1024}
+      backgroundImage_1920={HEROINICIO_PROPS.BACKGROUND_IMAGE_1920}
     >
-      <Container className="w-[80vw] items-start">
+      <Container className="w-[75vw] items-start">
         <h1 className="sr-only">
           en Easylav tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado
           Perfecto
@@ -25,13 +34,12 @@ export default function HeroInicio() {
         </p>
         <ButtonContainer>
           <ButtonSecondary
-            title="Nuestros Servicios"
-            href="/#servicios"
-            border="border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary hover:border-l-secondary_dark"
-            onClick={(el) => scrollWithOffset(el)} />
+            title={HEROINICIO_PROPS.BUTTON_SECONDARY.TITLE}
+            href={HEROINICIO_PROPS.BUTTON_SECONDARY.HREF}
+            onClick={scrollWithOffset}
+          />
         </ButtonContainer>
       </Container>
     </Hero>
-  )
+  );
 }
-

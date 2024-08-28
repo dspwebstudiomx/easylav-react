@@ -6,7 +6,7 @@ const PrevPageButton = ({ handlePrevPage }) => {
     <button onClick={handlePrevPage}>
       <BiChevronLeftCircle
         className="mr-2 text-primary hover:text-primary_dark"
-        size={65}
+        size={52}
       />
     </button>
   )
