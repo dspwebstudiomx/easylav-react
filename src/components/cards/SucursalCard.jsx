@@ -1,3 +1,11 @@
+/* 
+  Loading
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-28
+*/
+
+// Importaciones
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import { Badge } from 'components';
 import { useGetServiceHour } from 'hooks';
@@ -5,6 +13,7 @@ import PropTypes from 'prop-types';
 import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
+// Estructura
 export default function SucursalCard({
   title,
   id,
@@ -87,7 +96,7 @@ export default function SucursalCard({
               className='flex w-full items-center justify-center gap-3 text-base'
             >
               <Badge flexDirection='flex-row' backgroundColor='bg-secondary_light md:bg-secondary sm:hover:bg-secondary dark:bg-primary dark:hover:bg-primary_dark'>
-                <FaEnvelope />
+                <FaEnvelope size={24} />
                 <span className=''>Enviar correo</span>
               </Badge>
             </a>

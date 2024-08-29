@@ -1,9 +1,18 @@
+/* 
+  PaginatedSucursalCards
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-26
+*/
+
+// Importaciones
 import { Pager } from 'components';
 import { localservices } from 'data';
 import { useMediaQueries, usePagination } from 'hooks';
 import PropTypes from 'prop-types';
 import SucursalCard from './SucursalCard';
 
+// Estructura
 const PaginatedSucursalCards = () => {
   const { isMobile, isTablet, isDesktop, itemsPerPage } = useMediaQueries();
 

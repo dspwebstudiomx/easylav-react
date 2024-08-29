@@ -1,13 +1,13 @@
-/*Testimonio
-=====================================
-Creado por : Daniel Pérez
-Fecha: 2022-08-28
+/*
+  Testimonio
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-28
 */
 
 // Importaciones
 import { TESTIMONIAL_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
-
 
 //Estructura
 const Testimonio = ({ testimonio }) => {

@@ -36,6 +36,13 @@ export const GENERAL_UI = {
   PARAGRAPH: "text-lg",
 };
 
+// Loading
+export const LOADING_UI = {
+  CONTAINER: "flex flex-col justify-start items-center h-screen pt-60",
+  BACKGROUND_COLOR: "bg-secondary_dark",
+  SPINNER: "loader mx-auto mt-8",
+};
+
 // Section
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
