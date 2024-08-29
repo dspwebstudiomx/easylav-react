@@ -1,7 +1,17 @@
 /*
-Importaciones externas
-Secondary Button
-TitleH2
+  Externals Imports
+  General UI
+  -TitleH1
+  -TitleH2
+  -Paragraph
+  Section
+  Button
+  Secondary Button
+  Hero Inicio
+  Sobre Nosotros
+  Testimoios
+  Testimonio
+
 */
 
 // -------- Importaciones externas ---------- //
@@ -34,6 +44,7 @@ export const SECTION_UI = {
   TEXT_COLOR: "text-dark dark:text-light",
 };
 
+// Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center",
   WIDTH: "w-auto",
@@ -119,3 +130,6 @@ export const TESTIMONIAL_UI = {
   STARS_CLASSNAME: "text-secondary dark:text-primary",
   QUALIFICATION_CLASSNAME: "font-semibold text-lg text-dark",
 };
+
+// Nuestras Sucursales
+export const SUCURSAL_SECTION_UI = {};
