@@ -1,8 +1,12 @@
+import { BORDER_CENTER_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
 
-const BorderCenter = ({ children, justify }) => {
+const BorderCenter = ({ children }) => {
+
+  const styles = `${BORDER_CENTER_UI.BORDER_LEFT} ${BORDER_CENTER_UI.JUSTIFY}`
+
   return (
-    <div className={`border-l-4 border-l-primary border-r-4 border-r-primary flex ${justify}`}>
+    <div className={styles}>
       <span className='px-4'>
         {children}
       </span>
@@ -11,7 +15,6 @@ const BorderCenter = ({ children, justify }) => {
 }
 BorderCenter.propTypes = {
   children: PropTypes.node.isRequired,
-  justify: PropTypes.string,
 }
 
 export default BorderCenter

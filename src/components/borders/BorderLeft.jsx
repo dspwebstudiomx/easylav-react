@@ -1,8 +1,18 @@
+/*
+  Border Left
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-20
+*/
+
+import { BORDER_LEFT_UI } from "constants/constants";
 import PropTypes from "prop-types";
 
-const BorderLeft = ({ children, position }) => {
+const styles = `${BORDER_LEFT_UI.BORDER_LEFT} ${BORDER_LEFT_UI.JUSTIFY}`
+
+const BorderLeft = ({ children }) => {
   return (
-    <div className={`flex border-l-4 border-l-primary ${position}`}>
+    <div className={styles}>
       <span className="ml-4"></span>
       {children}
     </div>
@@ -10,7 +20,6 @@ const BorderLeft = ({ children, position }) => {
 };
 BorderLeft.propTypes = {
   children: PropTypes.node.isRequired,
-  position: PropTypes.string,
 };
 
 export default BorderLeft;

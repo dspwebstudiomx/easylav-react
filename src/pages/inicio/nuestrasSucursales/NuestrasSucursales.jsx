@@ -1,36 +1,21 @@
 /*
-Nuestras Sucursales
-=====================================
-Creado por : Daniel Pérez
-Fecha: 2022-08-20
+  Nuestras Sucursales
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-20
 */
 
-import { BorderBottom, BorderLeft, ButtonContainer, ButtonSecondary, Container, PaginatedSucursalCards, Section, TitleH2 } from 'components';
-import { TESTIMONIALS_PROPS, TESTIMONIALS_UI } from 'constants/constants';
+import { ButtonContainer, ButtonSecondary, PaginatedSucursalCards, Section, TitleContainer } from 'components';
+import { SUCURSAL_SECTION_PROPS } from 'constants/constants';
 import { FaEnvelope } from 'react-icons/fa';
 
 
 const NuestrasSucursales = () => {
   return (
     <Section id='nuestras-sucursales' >
-      <Container className='mx-auto w-full'>
-        <div className='sm:hidden'>
-          <BorderLeft justify={'mx-auto'}>
-            <TitleH2
-              title={TESTIMONIALS_PROPS.TITLEH2}
-              justify={TESTIMONIALS_UI.TITLEH2_JUSTIFY}
-            />
-          </BorderLeft>
-        </div>
-        <div className='hidden sm:block'>
-          <BorderBottom justify={'mx-auto'}>
-            <TitleH2
-              title={TESTIMONIALS_PROPS.TITLEH2}
-              justify={TESTIMONIALS_UI.TITLEH2_JUSTIFY}
-            />
-          </BorderBottom>
-        </div>
-        <div className='grid gap-6'>
+      <div className='mx-auto w-[80%]'>
+        <TitleContainer title={SUCURSAL_SECTION_PROPS.TITLEH2} />
+        <div className='my-12'>
           <PaginatedSucursalCards />
         </div>
         <ButtonContainer position='justify-center' distance=''>
@@ -40,7 +25,7 @@ const NuestrasSucursales = () => {
             icon={<FaEnvelope />}
           />
         </ButtonContainer>
-      </Container>
+      </div>
     </Section>
   );
 };

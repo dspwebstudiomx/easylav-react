@@ -17,9 +17,7 @@ const PaginatedSucursalCards = () => {
 
   return (
     <>
-      <div
-        className={`grid ${isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-1' : isDesktop ? 'grid-cols-4' : 'grid-cols-4'} mx-auto place-content-center gap-12 bg-red_light justify-center`}
-      >
+      <div className={`grid ${isMobile ? 'grid-cols-1' : isTablet ? 'grid-cols-1' : isDesktop ? 'grid-cols-1' : 'grid-cols-1'} mx-auto mb-12 place-content-center gap-6 2xl:gap-0 justify-center`}      >
         <div className='flex'>
           {paginatedData.map((localservice) => (
             <SucursalCard
@@ -32,7 +30,7 @@ const PaginatedSucursalCards = () => {
               servicehour1={localservice.servicehour1}
               ciudad={localservice.ciudad}
               email={localservice.email}
-              width='w-[100%]  sm:w-[220px] 2xl:w-[240px] mx-auto'
+              width='w-[220px] 2xl:w-[240px] mx-auto'
               titleMailto={localservice.titleMailto}
               badge={localservice.badge}
               advertisement={localservice.advertisement}
@@ -40,14 +38,8 @@ const PaginatedSucursalCards = () => {
           ))}
         </div>
       </div>
-      <Pager
-        handleNextPage={handleNextPage}
-        handlePageChange={handlePageChange}
-        handlePrevPage={handlePrevPage}
-        itemsPerPage={itemsPerPage}
-        localservices={localservices}
-        currentPage={currentPage}
-      />
+      <Pager handleNextPage={handleNextPage} handlePageChange={handlePageChange} handlePrevPage={handlePrevPage} itemsPerPage={itemsPerPage} localservices={localservices}
+        currentPage={currentPage} />
     </>
   );
 };

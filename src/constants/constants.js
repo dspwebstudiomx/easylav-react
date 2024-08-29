@@ -55,6 +55,27 @@ export const BUTTON_UI = {
   ROUNDED: "rounded-xl",
 };
 
+// Border Bottom
+export const BORDER_BOTTOM_UI = {
+  WIDTH: "w-full",
+  BORDER_LEFT: "flex border-b-4 border-b-primary",
+  JUSTIFY: "justify-center",
+};
+
+// Border Center
+export const BORDER_CENTER_UI = {
+  WIDTH: "w-full",
+  BORDER_CENTER:
+    "flex border-l-4 border-l-primary border-r-4 border-r-primary ",
+  JUSTIFY: "justify-center",
+};
+
+// Border Left
+export const BORDER_LEFT_UI = {
+  BORDER_LEFT: "flex border-l-4 border-l-primary",
+  JUSTIFY: "justify-center",
+};
+
 // Secondary Button
 export const BUTTON_SECONDARY_UI = {
   HEIGHT: "min-h-[70px]",
@@ -69,7 +90,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "min-h-[60vh] sm:h-auto 2xl:h-[70vh]",
+  HEIGHT: "min-h-[90vh] sm:h-auto 2xl:h-[70vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
@@ -132,4 +153,10 @@ export const TESTIMONIAL_UI = {
 };
 
 // Nuestras Sucursales
-export const SUCURSAL_SECTION_UI = {};
+export const SUCURSAL_SECTION_UI = {
+  TITLEH2_JUSTIFY: "mx-auto",
+  BORDER_JUSTIFY: "mx-auto",
+};
+export const SUCURSAL_SECTION_PROPS = {
+  TITLEH2: "Nuestras Sucursales",
+};
