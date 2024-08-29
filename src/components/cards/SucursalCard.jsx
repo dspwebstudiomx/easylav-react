@@ -138,9 +138,10 @@ export default function SucursalCard({
                 target='_blank'
                 rel='noopener noreferrer'
                 title={`Ir a ${title} en Waze`}
-                className='flex w-auto w-full flex-col items-center justify-center gap-3 bg-secondary text-sm'
+                className='flex w-auto w-full flex-col items-center justify-center gap-2 bg-secondary text-sm'
+
               >
-                <Badge flexDirection='flex-col' backgroundColor='dark:bg-primary_dark'>
+                <Badge flexDirection='flex-col' backgroundColor=''>
                   <FaWaze size={24} />
                   <span>Waze</span>
                 </Badge>
@@ -155,7 +156,7 @@ export default function SucursalCard({
                 title={`Ir a ${title} en Google Maps`}
                 className='flex w-auto w-full flex-col items-center justify-center gap-3 bg-secondary_dark text-sm'
               >
-                <Badge flexDirection='flex-col' backgroundColor='dark:bg-primary_dark'>
+                <Badge flexDirection='flex-col' backgroundColor=''>
                   <FaMapMarkedAlt size={24} />
                   <span className='mx-auto text-center'>Google Maps</span>
                 </Badge>
