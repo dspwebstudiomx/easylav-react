@@ -17,7 +17,7 @@ export default function ButtonPrimary({ ...props }) {
 
   return (
     <Button
-      backgroundColor={BUTTON_PRIMARY_UI.BACKGROUND_COLOR}
+      backgroundColor={`${BUTTON_PRIMARY_UI.BACKGROUND_COLOR} button-primary`}
       border={BUTTON_PRIMARY_UI.BORDER}
       textColor={BUTTON_PRIMARY_UI.TEXT_COLOR}
       href={href}

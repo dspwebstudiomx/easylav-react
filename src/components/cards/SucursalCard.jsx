@@ -1,4 +1,4 @@
-/* 
+/*
   Loading
   =====================================
   Creado por : Daniel Pérez
@@ -14,29 +14,14 @@ import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
 // Estructura
-export default function SucursalCard({
-  title,
-  id,
-  position,
-  serviceday1,
-  servicehour1,
-  place,
-  email,
-  gmap,
-  width,
-  titleMailto,
-  badge,
-  advertisement,
-}) {
+export default function SucursalCard({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto, badge, advertisement, }) {
+
   const isOpen = useGetServiceHour();
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
   return (
-    <article
-      id={`sucursal-${title}`}
-      key={id}
-      className={`relative ${width} animate__animated animate__fadeIn animate__slower flex min-h-[38px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-xl dark:text-dark`}
-    >
+    <article id={`sucursal-${title}`} key={id} className={`relative ${width} animate__animated animate__fadeIn animate__slower flex min-h-[38px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-2xl dark:text-dark w-[280px] sm:w-[280px] 2xl:w-[240px] mx-auto`} >
+
       {/* mapa */}
       <div className='h-[150px] overflow-hidden rounded-t-lg w-full'>
         <APIProvider apiKey={googleAPIKey}>
@@ -50,6 +35,8 @@ export default function SucursalCard({
         </APIProvider>
       </div>
       {/* mapa */}
+
+      {/* Contenido */}
       <div className='relative flex flex-col justify-start gap-3 p-8 px-6'>
         <h3 className='text-center text-lg font-semibold uppercase sm:text-sm'>
           {title}
@@ -84,6 +71,8 @@ export default function SucursalCard({
         </div>
         {/* Horario */}
       </div>
+      {/* Contenido */}
+
       {/* Badge */}
       <section>
         {!badge && (
@@ -95,7 +84,7 @@ export default function SucursalCard({
               type={'button'}
               className='flex w-full items-center justify-center gap-3 text-base'
             >
-              <Badge flexDirection='flex-row' backgroundColor='bg-secondary_light md:bg-secondary sm:hover:bg-secondary dark:bg-primary dark:hover:bg-primary_dark'>
+              <Badge flexDirection='flex-row' backgroundColor='bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary sm:hover:bg-secondary dark:bg-primary dark:hover:bg-primary_dark'>
                 <FaEnvelope size={24} />
                 <span className=''>Enviar correo</span>
               </Badge>
@@ -137,7 +126,7 @@ export default function SucursalCard({
         )}
         {badge && (
           <div className=''>
-            <Badge backgroundColor='bg-secondary_light dark:bg-primary'>
+            <Badge backgroundColor='bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary '>
               <p className='text-base'>{badge}</p>
             </Badge>
             <div className='flex md:hidden'>
@@ -177,7 +166,7 @@ export default function SucursalCard({
       </section>
       {/* Badge */}
 
-      {/* Badge */}
+      {/* Badge Horario Abierto/Cerrado */}
       {isOpen && (
         <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
           <p className=''>Abierto</p>
@@ -188,12 +177,15 @@ export default function SucursalCard({
           <p className=''>Cerrado</p>
         </div>
       )}
+      {/* Badge Horario Abierto/Cerrado */}
+
+      {/* Badge Aviso */}
       {advertisement && (
         <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light dark:border-primary_dark dark:bg-primary flex items-center text-sm'>
           <p className='ml-8 '>{advertisement}</p>
         </div>
       )}
-      {/* Badge */}
+      {/* Badge Aviso */}
     </article>
   );
 }

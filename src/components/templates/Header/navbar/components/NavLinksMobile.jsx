@@ -6,17 +6,17 @@ import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksMobile = ({ onLinkClick }) => {
   return (
-    <div className="animate__animated animate__fadeInDown absolute left-0 top-[103px] z-20 z-30 flex h-[95vh] w-full flex-col items-center justify-start overflow-hidden border-t-4 border-t-primary bg-primary px-8 opacity-[99%] sm:h-[65vh]">
+    <div className="animate__animated animate__fadeInDown absolute left-0 top-[103px] z-20 z-30 flex h-[95vh] w-full flex-col items-center justify-start overflow-hidden border-t-4 border-t-primary bg-primary px-8 opacity-[99%]">
       <ul
         id="navlinks-mobile"
-        className="grid w-full grid-cols-2 gap-3 px-2 py-8 sm:grid-cols-3 md:grid-cols-3"
+        className="grid w-full grid-cols-2 gap-3 px-2 py-8 place-content-center"
       >
         {navLinksSections.map((navlink) => {
           return (
             <li
               id={`navlink-${navlink.linkId}`}
               key={navlink.id}
-              className="flex h-[100%] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-xl"
+              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-xl"
             >
               <NavHashLink
                 id={`link-${navlink.linkId}`}
@@ -42,7 +42,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
             <li
               id={`navlink-${navlink.linkId}`}
               key={navlink.id}
-              className="flex h-[100%] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-xl"
+              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-xl"
             >
               <NavLink
                 id={`link-${navlink.linkId}`}

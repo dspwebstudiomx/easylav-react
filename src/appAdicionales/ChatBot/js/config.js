@@ -22,7 +22,7 @@ const settings = {
     title: "Easylav ChatBot",
   },
   audio: {
-    disabled: false,
+    disabled: true,
   },
   chatHistory: {
     disabled: true,

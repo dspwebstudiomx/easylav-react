@@ -88,7 +88,7 @@ export const BORDER_LEFT_UI = {
 export const BUTTON_SECONDARY_UI = {
   HEIGHT: "min-h-[70px]",
   TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR: "bg-secondary dark:bg-primary_dark ",
+  BACKGROUND_COLOR: "bg-gradient-to-r from-secondary_dark to-secondary_light",
   BORDER:
     "border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary",
 };
@@ -97,7 +97,8 @@ export const BUTTON_SECONDARY_UI = {
 export const BUTTON_PRIMARY_UI = {
   HEIGHT: "min-h-[70px]",
   TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR: "bg-primary dark:bg-secondary_dark ",
+  BACKGROUND_COLOR:
+    "bg-gradient-to-r from-primary_dark to-primary dark:bg-secondary_dark ",
   BORDER:
     "border-l-primary_dark border-l-4 border-t-primary_light border-t-4 hover:border-t-primary_light hover:border-l-primary dark:border-l-secondary dark:border-t-secondary_light dark:hover:border-l-secondary",
 };
@@ -107,7 +108,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "min-h-[90vh] h-auto sm:h-[50vh]",
+  HEIGHT: "h-[90vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",

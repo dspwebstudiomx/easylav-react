@@ -11,7 +11,7 @@ const SucursalCardPerCity = ({ city }) => {
   )
 }
 SucursalCardPerCity.propTypes = {
-  city: PropTypes.object.isRequired
+  city: PropTypes.string.isRequired
 }
 
 export default SucursalCardPerCity

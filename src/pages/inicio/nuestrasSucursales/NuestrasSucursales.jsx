@@ -13,9 +13,9 @@ import { FaEnvelope } from 'react-icons/fa';
 const NuestrasSucursales = () => {
   return (
     <Section id='nuestras-sucursales' >
-      <div className='mx-auto w-[80%]'>
+      <div className='mx-auto'>
         <TitleContainer title={SUCURSAL_SECTION_PROPS.TITLEH2} />
-        <div className='my-12'>
+        <div className='my-12 mt-24'>
           <PaginatedSucursalCards />
         </div>
         <ButtonContainer position='justify-center' distance=''>
