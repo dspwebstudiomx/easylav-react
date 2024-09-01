@@ -17,13 +17,12 @@ import FooterLogoWithSocial from "./FooterLogoWithSocial";
 
 export default function Footer() {
   const classes = {
-    section: "py-24",
     container:
       "mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4",
     footerSections: "flex flex-col",
     footerSectionsList: "flex flex-col gap-0",
     footerSectionsTitle:
-      "text-lg font-medium uppercase leading-6 text-primary mb-6",
+      "text-lg font-medium uppercase leading-6 xl:text-sm text-primary mb-6",
   };
 
   return (
@@ -32,7 +31,6 @@ export default function Footer() {
       <Section
         backgroundColor={"bg-secondary_dark dark:bg-secondary_dark"}
         id={"footer-sections"}
-        className={classes.section}
         height={"h-auto"}
       >
         <Container className={classes.container}>
@@ -59,14 +57,17 @@ export default function Footer() {
           </div>
           {/* Footer Services */}
 
-          {/* Footer Privacy */}
-          <div id="footer-policies" className={classes.footerSections}>
-            <h3 className={classes.footerSectionsTitle}>
-              Políticas de Privacidad, Política de Cookies
-            </h3>
-            <FooterLinksGenerator links={linksPoliticas} />
+
+          <div className="flex flex-col">
+            {/* Footer Privacy */}
+            <div id="footer-policies" className={classes.footerSections}>
+              <h3 className={classes.footerSectionsTitle}>
+                Políticas de Privacidad, Política de Cookies
+              </h3>
+              <FooterLinksGenerator links={linksPoliticas} />
+            </div>
+            {/* Footer Privacy */}
           </div>
-          {/* Footer Privacy */}
 
           {/* Footer Terms */}
           <div id="footer-privacy-terms" className={classes.footerSections}>

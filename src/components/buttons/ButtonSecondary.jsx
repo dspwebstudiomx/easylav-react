@@ -1,7 +1,16 @@
+/*
+  ButtonSecondary
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-21
+*/
+
+// Importaciones
 import { Button } from 'components'
 import { BUTTON_SECONDARY_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
 
+// Estructura
 export default function ButtonSecondary({ ...props }) {
 
   const { title, href, icon, type, onClick, titleMailto } = props

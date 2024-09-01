@@ -16,9 +16,9 @@ const Sucursales = () => {
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
-      <SucursalCardPerCity title='Morelia' city='Morelia' />
-      <Spacing height={"h-12"} />
-      <SucursalCardPerCity title='Morelia' city='León' />
+      <SucursalCardPerCity city='Morelia' />
+      <Spacing height={"h-8"} />
+      <SucursalCardPerCity city='León' />
     </PageLayout>
   );
 };

@@ -38,7 +38,8 @@ export const GENERAL_UI = {
 
 // Loading
 export const LOADING_UI = {
-  CONTAINER: "flex flex-col justify-start items-center h-screen pt-60",
+  CONTAINER:
+    "flex flex-col justify-start items-center h-screen pt-60 sm:justify-center sm:pt-0",
   BACKGROUND_COLOR: "bg-secondary_dark",
   SPINNER: "loader mx-auto mt-8",
 };
@@ -46,7 +47,7 @@ export const LOADING_UI = {
 // Section
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
-  PADDING: "p-12 sm:p-20 2xl:p-0",
+  PADDING: "p-12 sm:p-20 2xl:p-20",
   BACKGROUND_COLOR: "bg-light dark:bg-dark",
   TEXT_COLOR: "text-dark dark:text-light",
 };
@@ -59,7 +60,7 @@ export const BUTTON_UI = {
   FONT_SIZE: "text-xl",
   PADDING: "px-6 py-4",
   FONT_WEIGHT: "font-semibold",
-  ROUNDED: "rounded-xl",
+  ROUNDED: "rounded-full",
 };
 
 // Border Bottom
@@ -92,12 +93,21 @@ export const BUTTON_SECONDARY_UI = {
     "border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary",
 };
 
+//Primary Button
+export const BUTTON_PRIMARY_UI = {
+  HEIGHT: "min-h-[70px]",
+  TEXT_COLOR: "text-light",
+  BACKGROUND_COLOR: "bg-primary dark:bg-secondary_dark ",
+  BORDER:
+    "border-l-primary_dark border-l-4 border-t-primary_light border-t-4 hover:border-t-primary_light hover:border-l-primary dark:border-l-secondary dark:border-t-secondary_light dark:hover:border-l-secondary",
+};
+
 // Hero Inicio
 export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "min-h-[90vh] sm:h-auto 2xl:h-[70vh]",
+  HEIGHT: "min-h-[90vh] h-auto sm:h-[50vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",

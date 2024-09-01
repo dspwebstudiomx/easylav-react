@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <section className="grid w-[100vw] h-[100vh] place-content-center gap-20 bg-light">
       <img src={logo} alt="logo" className="mx-auto" />
-      <p className="font-bold text-4xl text-center">Error 404: Sitio web no encontrado </p>
+      <p className="font-bold text-4xl text-center text-secondary_dark">Error 404: Sitio web no encontrado </p>
       <ButtonContainer position={'justify-center'}>
         <Link to="/">
           <ButtonSecondary
