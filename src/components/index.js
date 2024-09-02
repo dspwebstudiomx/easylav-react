@@ -4,6 +4,7 @@ export { default as BorderCenter } from "./borders/BorderCenter";
 export { default as BorderLeft } from "./borders/BorderLeft";
 export { default as Button } from "./buttons/Button";
 export { default as ButtonCard } from "./buttons/ButtonCard";
+export { default as ButtonPrimary } from "./buttons/ButtonPrimary";
 export { default as ButtonSecondary } from "./buttons/ButtonSecondary";
 export { default as DarkModeButton } from "./buttons/DarkModeButton";
 export { default as ScrollToTopButton } from "./buttons/ScrollToTopButton";
@@ -51,5 +52,7 @@ export { default as NavLinksMobile } from "./templates/header/navbar/components/
 export { default as NavLinksTablet } from "./templates/header/navbar/components/NavLinksTablet";
 export { default as Navbar } from "./templates/header/navbar/Navbar";
 export { default as Section } from "./templates/Section";
-export { default as TitleH1 } from "./title/TitleH1";
-export { default as TitleH2 } from "./title/TitleH2";
+export { default as Paragraph } from "./text/Paragraph";
+export { default as TitleH1 } from "./text/TitleH1";
+export { default as TitleH2 } from "./text/TitleH2";
+export { default as TitleH3 } from "./text/TitleH3";

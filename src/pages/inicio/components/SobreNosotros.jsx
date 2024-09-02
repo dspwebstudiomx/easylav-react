@@ -1,6 +1,6 @@
 import lottieImage from 'assets/images/lottie/Animation.json';
-import { BorderLeft, Container, LottieAnimationImage, Section, TitleH2 } from 'components';
-import { ABOUT_PROPS, ABOUT_UI, GENERAL_UI } from 'constants/constants';
+import { BorderLeft, Container, LottieAnimationImage, Paragraph, Section, TitleH2 } from 'components';
+import { ABOUT_PROPS, ABOUT_UI } from 'constants/constants';
 
 const SobreNosotros = () => {
   return (
@@ -16,7 +16,7 @@ const SobreNosotros = () => {
             <BorderLeft>
               <TitleH2 title={ABOUT_PROPS.TITLEH2} />
             </BorderLeft>
-            <p className={GENERAL_UI.PARAGRAPH}>
+            <Paragraph>
               En
               <span className={ABOUT_UI.SPAN}>
                 Easylav
@@ -26,7 +26,7 @@ const SobreNosotros = () => {
               asegurarnos de que cada prenda se vea y se sienta como nueva.
               Usamos solo los mejores equipos y productos porque creemos que tu
               ropa merece lo mejor.
-            </p>
+            </Paragraph>
           </div>
           <div id='sobrenosotros-columna-2' className={ABOUT_UI.COLUMNS2_CONTAINER}>
             {/* <ImageResponsive

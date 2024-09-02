@@ -1,15 +1,11 @@
+import { BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, PageLayout, TitleH1 } from "components";
 import { GENERAL_UI } from "constants/constants";
 import { frequentQuestions } from "data";
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaRegBuilding } from "react-icons/fa6";
-import BorderLeft from "../../components/borders/BorderLeft";
-import ButtonPrimary from "../../components/buttons/ButtonPrimary";
-import ButtonSecondary from "../../components/buttons/ButtonSecondary";
-import ButtonContainer from "../../components/containers/ButtonContainer";
-import PageLayout from "../../components/layout/PageLayout";
-import TitleH1 from "../../components/title/TitleH1";
+
 
 const PreguntasFrecuentes = () => {
   return (
@@ -30,32 +26,18 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <div className="w-full sm:grid grid-cols-2 gap-8 gap-y-2">
-          <ul>
-            {frequentQuestions.map(freqQuestion => {
-              return (
-                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`} className="bg-light text-dark">
-                  <AccordionItem
-                    question={freqQuestion.question}
-                    answer={freqQuestion.answer}
-                  />
-                </li>
-              )
-            }).slice(0, 3)}
-          </ul>
-          <ul>
-            {frequentQuestions.map(freqQuestion => {
-              return (
-                <li key={freqQuestion.id} id={`question-${freqQuestion.id}`} className="bg-light text-dark">
-                  <AccordionItem
-                    question={freqQuestion.question}
-                    answer={freqQuestion.answer}
-                  />
-                </li>
-              )
-            }).slice(3, 6)}
-          </ul>
-        </div>
+        <ul className="w-full sm:grid grid-cols-2 gap-8 gap-y-2">
+          {frequentQuestions.map(freqQuestion => {
+            return (
+              <li key={freqQuestion.id} id={`question-${freqQuestion.id}`} className="bg-light text-dark">
+                <AccordionItem
+                  question={freqQuestion.question}
+                  answer={freqQuestion.answer}
+                />
+              </li>
+            )
+          })}
+        </ul>
         {/* Questions */}
       </div>
       <ButtonContainer position={'justify-center'}>

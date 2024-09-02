@@ -7,7 +7,6 @@
 
 import { ButtonContainer, ButtonSecondary, PaginatedSucursalCards, Section, TitleContainer } from 'components';
 import { SUCURSAL_SECTION_PROPS } from 'constants/constants';
-import { FaEnvelope } from 'react-icons/fa';
 
 
 const NuestrasSucursales = () => {
@@ -22,7 +21,7 @@ const NuestrasSucursales = () => {
           <ButtonSecondary
             title='Contáctanos'
             href='/contacto'
-            icon={<FaEnvelope />}
+            distance=''
           />
         </ButtonContainer>
       </div>

@@ -196,6 +196,7 @@ export default function ContactForm() {
                 icon={<FaRegEnvelope />}
                 type={'submit'}
                 width={'w-[240px]'}
+                distance='mx-1'
               />
             </ButtonContainer>
             {/* Submit Button */}

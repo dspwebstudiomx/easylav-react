@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
-const Spacing = ({ height }) => {
+const Spacing = ({ distance }) => {
   return (
-    <div className={height}></div>
+    <div className={distance}></div>
   )
 }
 Spacing.propTypes = {
-  height: PropTypes.string
+  distance: PropTypes.string
 }
 
 export default Spacing

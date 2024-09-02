@@ -1,17 +1,17 @@
-import Container from '../../../components/containers/Container';
-import ButtonContainer from '../../../components/containers/ButtonContainer'
-import ButtonSecondary from '../../../components/buttons/ButtonSecondary'
-import Section from '../../../components/templates/Section'
-import SucursalCardCopy from '../../../components/cards/SucursalCardCopy';
-import { localservices } from '../../../data/sucursales'
 import { FaEnvelope } from 'react-icons/fa6';
-import TitleH2 from '../../../components/title/TitleH2';
-import BorderButtom from '../../../components/borders/BorderButtom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import BorderButtom from '../../../components/borders/BorderButtom';
+import ButtonSecondary from '../../../components/buttons/ButtonSecondary';
+import SucursalCardCopy from '../../../components/cards/SucursalCardCopy';
+import ButtonContainer from '../../../components/containers/ButtonContainer';
+import Container from '../../../components/containers/Container';
+import Section from '../../../components/templates/Section';
+import TitleH2 from '../../../components/text/TitleH2';
+import { localservices } from '../../../data/sucursales';
 // import { Navigation } from 'swiper/modules';
-import '../../../../node_modules/swiper/swiper.css'
 import '../../../../node_modules/swiper/modules/navigation.scss'; // Navigation module
 import '../../../../node_modules/swiper/modules/pagination.scss';
+import '../../../../node_modules/swiper/swiper.css';
 
 
 const NuestrasSucursalesCopy = () => {

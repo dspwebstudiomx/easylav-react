@@ -26,14 +26,29 @@ import {
 // General Styles
 
 export const GENERAL_UI = {
-  TITLEH1: "",
-  TITLEH2: {
-    JUSTIFY: "",
-    FONT_SIZE: "text-3xl",
+  TITLEH1: {
+    FONT_SIZE: "text-5xl",
     FONT_WEIGHT: "font-bold",
+    COLOR: "",
     BACKGROUND_COLOR: "",
   },
-  PARAGRAPH: "text-lg",
+  TITLEH2: {
+    FONT_SIZE: "text-3xl",
+    FONT_WEIGHT: "font-bold",
+    COLOR: "text-dark dark:text-light",
+    BACKGROUND_COLOR: "",
+  },
+  TITLEH3: {
+    FONT_SIZE: "text-2xl",
+    FONT_WEIGHT: "font-semibold",
+    COLOR: "text-dark",
+    BACKGROUND_COLOR: "",
+  },
+  PARAGRAPH: {
+    FONT_SIZE: "text-base sm:text-sm",
+    COLOR: "text-[#324] dark:text-light",
+    FONT_WEIGHT: "",
+  },
 };
 
 // Loading
@@ -49,14 +64,14 @@ export const SECTION_UI = {
   DISPLAY: "grid gap-12",
   PADDING: "p-12 sm:p-20 2xl:p-20",
   BACKGROUND_COLOR: "bg-light dark:bg-dark",
-  TEXT_COLOR: "text-dark dark:text-light",
+  TEXT_COLOR: "",
 };
 
 // Button
 export const BUTTON_UI = {
-  DISPLAY: "flex items-center justify-center",
+  DISPLAY: "flex items-center justify-center gap-0",
   WIDTH: "w-auto",
-  HEIGHT: "min-h-[70px]",
+  HEIGHT: "min-h-[60px]",
   FONT_SIZE: "text-xl",
   PADDING: "px-6 py-4",
   FONT_WEIGHT: "font-semibold",
@@ -132,7 +147,6 @@ export const ABOUT_UI = {
   TWOCOLUMNS_CONTAINER: "grid gap-x-20 gap-y-16 sm:grid-cols-2",
   COLUMN1_CONTAINER: "grid place-content-center gap-8",
   COLUMN2_CONTAINER: "items-center justify-end",
-  PARAGRAPH: "text-balance 2xl:text-x",
   SPAN: "font-semibold text-secondary dark:text-primary ml-2",
 };
 export const ABOUT_PROPS = {
@@ -148,7 +162,6 @@ export const TESTIMONIALS_UI = {
   SECTION: "",
   CONTAINER: "mx-auto",
   BORDERBOTTOM_JUSTIFY: "mx-auto",
-  TITLEH2_JUSTIFY: "",
 };
 export const TESTIMONIALS_PROPS = {
   SECTION_ID: "testimonios",

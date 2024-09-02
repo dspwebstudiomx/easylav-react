@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet"
 import BorderCenter from "../../components/borders/BorderCenter"
 import PageLayout from "../../components/layout/PageLayout"
-import TitleH1 from "../../components/title/TitleH1"
+import TitleH1 from "../../components/text/TitleH1"
 
 const TerminosCondiciones = () => {
   return (
