@@ -48,6 +48,12 @@ export const ContactFormFranquicias = () => {
       );
   };
 
+  if (showModal) {
+    document.body.classList.add('modal-active')
+  } else {
+    document.body.classList.remove('modal-active')
+  }
+
   return (
     <article id="formulario" className="border-4 border-primary_dark rounded-2xl bg-primary_light text-sm p-4 h-auto text-dark">
       <Formik

@@ -27,9 +27,9 @@ import {
 
 export const GENERAL_UI = {
   TITLEH1: {
-    FONT_SIZE: "text-5xl",
+    FONT_SIZE: "text-4xl",
     FONT_WEIGHT: "font-bold",
-    COLOR: "",
+    COLOR: "text-light",
     BACKGROUND_COLOR: "",
   },
   TITLEH2: {
@@ -71,11 +71,11 @@ export const SECTION_UI = {
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
   WIDTH: "w-auto",
-  HEIGHT: "min-h-[60px]",
+  HEIGHT: "min-h-[0px]",
   FONT_SIZE: "text-xl",
   PADDING: "px-6 py-4",
-  FONT_WEIGHT: "font-semibold",
-  ROUNDED: "rounded-full",
+  FONT_WEIGHT: "font-base",
+  ROUNDED: "rounded-xl",
 };
 
 // Border Bottom
@@ -123,7 +123,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[90vh] md:h-[50vh] lg:h-[60vh] xl:h-[70vh]",
+  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[50vh] lg:h-[60vh] xl:h-[70vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",

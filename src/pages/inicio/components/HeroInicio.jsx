@@ -6,7 +6,7 @@ Fecha: 2022-08-25
 */
 
 // Importaciones
-import { ButtonContainer, ButtonSecondary, Container, Hero } from "components";
+import { ButtonContainer, ButtonSecondary, Container, Hero, TitleH1 } from "components";
 import { HEROINICIO_PROPS, HEROINICIO_UI } from "constants/constants";
 import { scrollWithOffset } from "functions";
 
@@ -24,14 +24,10 @@ export default function HeroInicio() {
       backgroundImage_1024={HEROINICIO_PROPS.BACKGROUND_IMAGE_1024}
       backgroundImage_1920={HEROINICIO_PROPS.BACKGROUND_IMAGE_1920}
     >
-      <Container className="w-[75vw] items-start">
-        <h1 className="sr-only">
-          en Easylav tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado
-          Perfecto
-        </h1>
-        <p className="text-border text-[32px] font-semibold leading-[45px] sm:w-2/3 sm:text-4xl">
-          Tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto
-        </p>
+      <Container className="w-[65vw] items-start">
+        <TitleH1>
+          En <span className="text-primary">Easylav</span> tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto
+        </TitleH1>
         <ButtonContainer>
           <ButtonSecondary
             title={HEROINICIO_PROPS.BUTTON_SECONDARY.TITLE}

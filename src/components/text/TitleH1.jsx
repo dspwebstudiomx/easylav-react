@@ -1,12 +1,17 @@
+import { GENERAL_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
 
-const TitleH1 = ({ title }) => {
+const styles = `${GENERAL_UI.TITLEH1.COLOR} ${GENERAL_UI.TITLEH1.FONT_SIZE} ${GENERAL_UI.TITLEH1.FONT_WEIGHT} ${GENERAL_UI.TITLEH1.BACKGROUND_COLOR}`
+
+const TitleH1 = ({ children }) => {
   return (
-    <h1 className='text-4xl sm:text-4xl font-semibold leading-[40px]'>{title}</h1>
+    <h1 className={styles}>
+      {children}
+    </h1>
   )
 }
 TitleH1.propTypes = {
-  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default TitleH1

@@ -8,7 +8,7 @@ import { FaXmark } from "react-icons/fa6";
 import { franquiciaDescripciones } from "../../data/franquiciaDescripciones";
 
 const Franquicias = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   const handleModalToggle = () => {
     setShowModal(!showModal);
@@ -59,6 +59,7 @@ const Franquicias = () => {
               width={"w-[340px]"}
               onClick={handleModalToggle}
               icon={<FaInfoCircle />}
+              distance='mx-1'
             />
           </ButtonContainer>
         </div>
