@@ -123,7 +123,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[50vh] lg:h-[60vh] xl:h-[70vh]",
+  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[40vh] lg:h-[60vh] xl:h-[60vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
