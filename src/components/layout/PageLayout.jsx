@@ -2,7 +2,6 @@
 import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from 'components';
 import scrollToTop from 'functions/scrollToTop';
 import PropTypes from 'prop-types';
-import MyChatBot from '../../appAdicionales/ChatBot/MyChatBot';
 
 const PageLayout = ({ children }) => {
   scrollToTop()
@@ -19,7 +18,6 @@ const PageLayout = ({ children }) => {
       </main>
       <Footer />
       <ScrollToTopButton />
-      <MyChatBot />
     </>
   );
 };

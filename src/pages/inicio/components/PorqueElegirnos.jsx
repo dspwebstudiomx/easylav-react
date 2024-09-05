@@ -1,6 +1,5 @@
 import { Placeholder } from 'assets';
-import { BorderLeft, Container, ImageResponsive, Section, TitleH2 } from 'components';
-import DescriptionWithBulletPoint from 'components/list/DescriptionWithBulletPoint';
+import { BorderLeft, Container, DescriptionWithBulletPoint, ImageResponsive, Section, TitleH2 } from 'components';
 import { porqueElegirnosDescripciones } from 'data';
 
 export default function PorqueElegirnos() {

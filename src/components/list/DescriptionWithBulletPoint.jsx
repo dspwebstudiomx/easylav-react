@@ -1,3 +1,4 @@
+import { Paragraph, TitleH3 } from 'components'
 import PropTypes from 'prop-types'
 import { TbPoint } from "react-icons/tb"
 
@@ -15,8 +16,10 @@ export default function DescriptionWithBulletPoint({ ...props }) {
         <TbPoint size={32} />
       </span>
       <div className='flex flex-col justify-start items-start'>
-        <h3 className='font-semibold text-2xl mb-2'>{titulo}</h3>
-        <p className='font-normal'>{texto}</p>
+        <TitleH3 title={titulo} />
+        <Paragraph>
+          {texto}
+        </Paragraph>
       </div>
     </li>
   )

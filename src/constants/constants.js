@@ -27,7 +27,7 @@ import {
 
 export const GENERAL_UI = {
   TITLEH1: {
-    FONT_SIZE: "text-4xl",
+    FONT_SIZE: "text-3xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-light",
     BACKGROUND_COLOR: "",
@@ -43,11 +43,15 @@ export const GENERAL_UI = {
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark",
     BACKGROUND_COLOR: "",
+    CARD: "text-base uppercase font-semibold",
+    CLASSNAME: "text-lg sm:text-sm mx-auto uppercase",
   },
   PARAGRAPH: {
-    FONT_SIZE: "text-base sm:text-sm",
+    FONT_SIZE: "text-base sm:text-xl",
     COLOR: "text-[#324] dark:text-light",
     FONT_WEIGHT: "",
+    LETTER_SPACING: "tracking-wide",
+    LINE_HEIGHT: "leading-6",
   },
 };
 
@@ -123,7 +127,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[40vh] lg:h-[60vh] xl:h-[60vh]",
+  HEIGHT: "h-[80vh] sm:h-[120vh]  md:h-[40vh] lg:h-[60vh] xl:h-[60vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",

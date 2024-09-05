@@ -1,5 +1,4 @@
-import { ContactForm, SocialLinks, TitleH2 } from "components";
-import { GENERAL_UI } from "constants/constants";
+import { ContactForm, Paragraph, SocialLinks, TitleH2 } from "components";
 import { Link } from "react-router-dom";
 
 const Contacto = () => {
@@ -14,7 +13,7 @@ const Contacto = () => {
             "¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario."
           }
         />
-        <p className={GENERAL_UI.PARAGRAPH}>
+        <Paragraph>
           Nuestra forma de contacto es fácil y rápida. Puedes llenar el
           formulario en línea con tus preguntas o sugerencias, y nos pondremos
           en contacto contigo enseguida.{" "}
@@ -24,7 +23,7 @@ const Contacto = () => {
             <Link to={"/preguntas-frecuentes"}>Preguntas Frecuentes</Link>
           </span>
           .
-        </p>
+        </Paragraph>
         <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0">
           <SocialLinks
             color={"text-secondary dark:text-primary"}

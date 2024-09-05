@@ -1,4 +1,3 @@
-import MyChatBot from 'appAdicionales/ChatBot/MyChatBot';
 import { Footer, Header, ScrollToTopButton } from 'components';
 import PropTypes from 'prop-types';
 
@@ -14,7 +13,6 @@ export default function MainLayout({ children }) {
       <main className={classes.main}>{children}</main>
       <Footer />
       <ScrollToTopButton />
-      <MyChatBot />
     </>
   );
 }

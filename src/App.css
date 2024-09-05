@@ -115,3 +115,9 @@ h2 {
 .button-secondary {
   background: linear-gradient(45deg, #985DA0, #392352);
 }
+
+;
+
+.swiper {
+  width: 60%;
+}

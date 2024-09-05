@@ -11,6 +11,7 @@ const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
 const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
 const Testimonios = lazy(() => import('./Testimonios/Testimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
+const CarouselPromociones = lazy(() => import('./promociones/CarouselPromociones'));
 
 //Constantes de estilos - TailwindCSS
 const SECTION_BACKGROUNDCOLOR_CLASSNAME = 'dark:bg-dark'
@@ -41,7 +42,9 @@ const Inicio = () => (
         ogImage={OG_IMAGE}
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
+
       <HeroInicio />
+      <CarouselPromociones />
       <SobreNosotros />
       <NuestrosServicios />
       <PorqueElegirnos />

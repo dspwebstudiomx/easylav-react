@@ -7,7 +7,8 @@
 
 // Importaciones
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
-import { Badge } from 'components';
+import { Badge, Paragraph, TitleH3 } from 'components';
+import { GENERAL_UI } from 'constants/constants';
 import { useGetServiceHour } from 'hooks';
 import PropTypes from 'prop-types';
 import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
@@ -38,38 +39,42 @@ export default function SucursalCard({ title, id, position, serviceday1, service
 
       {/* Contenido */}
       <div className='relative flex flex-col justify-start gap-3 p-8 px-6'>
-        <h3 className='text-center text-lg font-semibold uppercase sm:text-sm'>
-          {title}
-        </h3>
-        {/* Dirección */}
-        <a
-          href={gmap}
-          target='_blank'
-          rel='noopener noreferrer'
-          title={`sucursal ${title}`}
-          className='text-base'
-        >
-          <p className='text-md mx-auto flex w-full items-center gap-4 text-balance'>
+        <TitleH3 title={title} className={GENERAL_UI.TITLEH3.CLASSNAME} />
+        <div className='flex flex-col gap-4 my-4'>
+          {/* Dirección */}
+          <a
+            href={gmap}
+            target='_blank'
+            rel='noopener noreferrer'
+            title={`sucursal ${title}`}
+            className=''
+          >
+            <div className='flex gap-4'>
+              <span className='text-secondary'>
+                <FaMapMarkerAlt size={18} />
+              </span>
+              <Paragraph>
+                <span className='sm:text-base'>{place}</span>
+              </Paragraph>
+            </div>
+          </a>
+          {/* Dirección */}
+          {/* Horario */}
+          <div className='mx-auto mb-2 flex w-full items-center gap-4'>
             <span className='text-secondary'>
-              <FaMapMarkerAlt size={18} />
+              <FaRegClock size={16} />
             </span>
-            <span className='text-xs'>{place}</span>
-          </p>
-        </a>
-        {/* Dirección */}
-        {/* Horario */}
-        <div className='mx-auto mb-2 flex w-full items-center gap-4'>
-          <span className='text-secondary'>
-            <FaRegClock size={16} />
-          </span>
-          <div className='flex gap-3 xl:gap-2'>
-            <div className='flex flex-col gap-1'>
-              <p className='text-xs'>{serviceday1}</p>
-              <p className='text-xs'>{servicehour1}</p>
+            <div className='flex gap-3 xl:gap-2'>
+              <div className='flex flex-col gap-1 text-sm'>
+                <Paragraph className='flex flex-col'>
+                  <span className='sm:text-base'>{serviceday1}</span>
+                  <span className='sm:text-base'>{servicehour1}</span>
+                </Paragraph>
+              </div>
             </div>
           </div>
+          {/* Horario */}
         </div>
-        {/* Horario */}
       </div>
       {/* Contenido */}
 

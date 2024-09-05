@@ -30,6 +30,7 @@ export { default as Spacing } from "./layout/Spacing";
 export { default as SectionNavLink } from "./links/SectionNavLink";
 export { default as SocialLink } from "./links/SocialLink";
 export { default as SocialLinks } from "./links/SocialLinks";
+export { default as DescriptionWithBulletPoint } from "./list/DescriptionWithBulletPoint";
 export { default as TextWithBulletPoint } from "./list/TextWithBulletPoint";
 export { default as Loading } from "./Loading";
 export { default as EmailErrorModal } from "./modals/EmailErrorModal";
