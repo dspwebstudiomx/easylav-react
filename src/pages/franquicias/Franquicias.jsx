@@ -1,6 +1,7 @@
 import { canastaderopa_640, Placeholder } from "assets";
 import { BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, TitleH1 } from "components";
 import DescriptionWithBulletPoint from "components/list/DescriptionWithBulletPoint";
+import { FRANQUICIAS_UI } from "constants/constants";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaInfoCircle } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { FaXmark } from "react-icons/fa6";
 import { franquiciaDescripciones } from "../../data/franquiciaDescripciones";
 
 const Franquicias = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const handleModalToggle = () => {
     setShowModal(!showModal);
@@ -17,6 +18,8 @@ const Franquicias = () => {
 
   const img1 = canastaderopa_640;
   const img2 = Placeholder;
+
+  const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
 
   return (
     <PageLayout>
@@ -32,7 +35,9 @@ const Franquicias = () => {
         {/* Columna 1 */}
         <div id="columma-1" className="flex flex-col items-start gap-12">
           <BorderLeft>
-            <TitleH1 title="¿Quieres una Franquícia?" />
+            <TitleH1 className={styles}>
+              Quieres una franquicia?
+            </TitleH1>
           </BorderLeft>
           <ul className="flex flex-col gap-8 text-xl">
             {franquiciaDescripciones.map((descripcion) => {

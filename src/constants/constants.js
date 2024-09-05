@@ -47,7 +47,7 @@ export const GENERAL_UI = {
     CLASSNAME: "text-lg sm:text-sm mx-auto uppercase",
   },
   PARAGRAPH: {
-    FONT_SIZE: "text-base sm:text-xl",
+    FONT_SIZE: "text-base sm:text-lg",
     COLOR: "text-[#324] dark:text-light",
     FONT_WEIGHT: "",
     LETTER_SPACING: "tracking-wide",
@@ -194,4 +194,14 @@ export const SUCURSAL_SECTION_UI = {
 };
 export const SUCURSAL_SECTION_PROPS = {
   TITLEH2: "Nuestras Sucursales",
+};
+
+// Franquicias
+export const FRANQUICIAS_UI = {
+  TITLEH1: {
+    COLOR: "text-dark dark:text-light",
+    FONT_SIZE: "text-3xl",
+    FONT_WEIGHT: "font-semibold",
+    LETTER_SPACING: "tracking-wide",
+  },
 };

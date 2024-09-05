@@ -11,8 +11,8 @@ const PagePaginationIndex = ({ localservices, itemsPerPage, currentPage, handleP
             onClick={() => handlePageChange(index + 1)}
             className={
               currentPage === index + 1
-                ? "mx-2 border-b-4 border-b-primary_dark text-2xl font-bold font-semibold hover:text-secondary_light"
-                : "mx-2 text-2xl font-semibold hover:text-secondary_light"
+                ? "mx-2 border-b-4 border-b-primary_dark text-2xl font-bold font-semibold hover:text-secondary_light text-dark dark:text-light"
+                : "mx-2 text-2xl font-semibold hover:text-secondary_light text-dark dark:text-light"
             }
           >
             {index + 1}

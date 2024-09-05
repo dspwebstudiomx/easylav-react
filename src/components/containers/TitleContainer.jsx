@@ -1,5 +1,5 @@
 import { BorderBottom, BorderLeft, TitleH2 } from 'components'
-import { SECTION_UI, SUCURSAL_SECTION_UI } from 'constants/constants'
+import { GENERAL_UI, SECTION_UI } from 'constants/constants'
 import propTypes from 'prop-types'
 
 const TitleContainer = ({ title }) => {
@@ -9,7 +9,7 @@ const TitleContainer = ({ title }) => {
         <BorderLeft>
           <TitleH2
             title={title}
-            justify={SUCURSAL_SECTION_UI.TITLEH2_JUSTIFY}
+            justify={GENERAL_UI.TITLEH2_JUSTIFY}
           />
         </BorderLeft>
       </div>
@@ -17,7 +17,7 @@ const TitleContainer = ({ title }) => {
         <BorderBottom justify={SECTION_UI.BORDER_JUSTIFY}>
           <TitleH2
             title={title}
-            justify={SUCURSAL_SECTION_UI.TITLEH2_JUSTIFY}
+            justify={GENERAL_UI.TITLEH2_JUSTIFY}
           />
         </BorderBottom>
       </div>

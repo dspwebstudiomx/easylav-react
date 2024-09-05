@@ -1,7 +1,16 @@
+/*
+  Sobre Nosotros Sección
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2022-08-20
+*/
+
+// Importaciones
 import lottieImage from 'assets/images/lottie/Animation.json';
 import { BorderLeft, Container, LottieAnimationImage, Paragraph, Section, TitleH2 } from 'components';
 import { ABOUT_PROPS, ABOUT_UI } from 'constants/constants';
 
+// Estructura
 const SobreNosotros = () => {
   return (
     <Section

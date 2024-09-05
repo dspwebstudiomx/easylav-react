@@ -2,7 +2,8 @@
   ButtonPrimary
   =====================================
   Creado por : Daniel Pérez
-  Fecha: 2022-08-21
+  Fecha de Creacion: 2022-08-21
+  Fecha de Modificación: 2022-09-05
 */
 
 // Importaciones
@@ -17,7 +18,7 @@ export default function ButtonPrimary({ ...props }) {
 
   return (
     <Button
-      backgroundColor={`${BUTTON_PRIMARY_UI.BACKGROUND_COLOR} button-primary`}
+      backgroundColor={`${BUTTON_PRIMARY_UI.BACKGROUND_COLOR}`}
       border={BUTTON_PRIMARY_UI.BORDER}
       textColor={BUTTON_PRIMARY_UI.TEXT_COLOR}
       href={href}
