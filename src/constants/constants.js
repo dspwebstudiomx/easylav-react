@@ -41,7 +41,7 @@ export const GENERAL_UI = {
   TITLEH3: {
     FONT_SIZE: "text-2xl",
     FONT_WEIGHT: "font-semibold",
-    COLOR: "text-dark",
+    COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
     CARD: "text-base uppercase font-semibold",
     CLASSNAME: "text-lg sm:text-sm mx-auto uppercase",
@@ -196,7 +196,49 @@ export const SUCURSAL_SECTION_PROPS = {
   TITLEH2: "Nuestras Sucursales",
 };
 
+// Sucursal Card
+export const SUCURSAL_CARD_PROPS = {};
+export const SUCURSAL_CARD_UI = {
+  ARTICLE: {
+    ANIMATION: "animate__animated animate__fadeIn animate__slower ",
+    BACKGROUND: "bg-light",
+    COLOR: "text-dark",
+    DISPLAY: "flex  flex-col relative mx-auto",
+    HEIGHT: "min-h-[38px]",
+    JUSTIFY: "justify-between",
+    OVERFLOW: "overflow-hidden",
+    ROUNDED: "rounded-xl",
+    SHADOW: "shadow-xl",
+    WIDTH: "w-[280px] sm:w-[280px] 2xl:w-[240px]",
+  },
+  MAP: {
+    CONTAINER: {
+      HEIGHT: "h-[150px]",
+      OVERFLOW: "overflow-hidden",
+      ROUNDED: "rounded-t-lg",
+      WIDTH: "w-full",
+    },
+  },
+  TITLEH3: {
+    COLOR: "text-dark",
+    FONT_SIZE: "text-lg",
+    FONT_STYLE: "uppercase",
+    FONT_WEIGHT: "font-semibold",
+    CLASSNAME: "text-lg sm:text-sm mx-auto uppercase",
+    JUSTIFY: "mx-auto",
+  },
+  PARAGRAPH: {
+    FONT_SIZE: "text-base sm:text-sm",
+    COLOR: "text-dark",
+    FONT_WEIGHT: "",
+    LETTER_SPACING: "tracking-wide",
+    LINE_HEIGHT: "leading-0",
+    JUSTIFY: "items-center",
+  },
+};
+
 // Franquicias
+export const FRANQUICIAS_PROPS = {};
 export const FRANQUICIAS_UI = {
   TITLEH1: {
     COLOR: "text-dark dark:text-light",

@@ -15,7 +15,7 @@ export default function DescriptionWithBulletPoint({ ...props }) {
       <span className='text-primary'>
         <TbPoint size={32} />
       </span>
-      <div className='flex flex-col justify-start items-start'>
+      <div className='flex flex-col justify-start items-start gap-6'>
         <TitleH3 title={titulo} />
         <Paragraph>
           {texto}
@@ -25,7 +25,7 @@ export default function DescriptionWithBulletPoint({ ...props }) {
   )
 }
 DescriptionWithBulletPoint.propTypes = {
-  titulo: PropTypes.string.isRequired,
-  texto: PropTypes.string.isRequired,
   id: PropTypes.number,
+  texto: PropTypes.string.isRequired,
+  titulo: PropTypes.string.isRequired,
 }

@@ -8,7 +8,7 @@
 // Importaciones
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import { Badge, Paragraph, TitleH3 } from 'components';
-import { GENERAL_UI } from 'constants/constants';
+import { SUCURSAL_CARD_UI } from 'constants/constants';
 import { useGetServiceHour } from 'hooks';
 import PropTypes from 'prop-types';
 import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
@@ -20,11 +20,24 @@ export default function SucursalCard({ title, id, position, serviceday1, service
   const isOpen = useGetServiceHour();
   const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
+
+  const styles = {
+    article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
+
+    data: `${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE}`,
+
+    map: `${SUCURSAL_CARD_UI.MAP.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.MAP.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.MAP.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.MAP.CONTAINER.WIDTH}`,
+
+    title: `${SUCURSAL_CARD_UI.TITLEH3.COLOR} ${SUCURSAL_CARD_UI.TITLEH3.FONT_SIZE} ${SUCURSAL_CARD_UI.TITLEH3.FONT_WEIGHT} ${SUCURSAL_CARD_UI.TITLEH3.FONT_STYLE} ${SUCURSAL_CARD_UI.TITLEH3.JUSTIFY}`,
+  }
+
+
+
   return (
-    <article id={`sucursal-${title}`} key={id} className={`relative ${width} animate__animated animate__fadeIn animate__slower flex min-h-[38px] flex-col justify-between overflow-hidden rounded-xl bg-light shadow-2xl dark:text-dark w-[280px] sm:w-[280px] 2xl:w-[240px] mx-auto`} >
+    <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`} >
 
       {/* mapa */}
-      <div className='h-[150px] overflow-hidden rounded-t-lg w-full'>
+      <div className={styles.map}>
         <APIProvider apiKey={googleAPIKey}>
           <Map
             defaultCenter={position}
@@ -39,7 +52,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
 
       {/* Contenido */}
       <div className='relative flex flex-col justify-start gap-3 p-8 px-6'>
-        <TitleH3 title={title} className={GENERAL_UI.TITLEH3.CLASSNAME} />
+        <TitleH3 title={title} className={styles.title} />
         <div className='flex flex-col gap-4 my-4'>
           {/* Dirección */}
           <a
@@ -54,7 +67,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
                 <FaMapMarkerAlt size={18} />
               </span>
               <Paragraph>
-                <span className='sm:text-base'>{place}</span>
+                <span className={styles.data}>{place}</span>
               </Paragraph>
             </div>
           </a>

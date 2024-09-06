@@ -44,7 +44,7 @@ const Inicio = () => (
         ogType={OG_TYPE} />
 
       <HeroInicio />
-      <CarouselPromociones />
+      {/* <CarouselPromociones /> */}
       <SobreNosotros />
       <NuestrosServicios />
       <PorqueElegirnos />

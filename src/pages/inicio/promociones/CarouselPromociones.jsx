@@ -4,15 +4,19 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+const styles = {
+  swiperslide: 'w-[420px] mx-auto'
+}
 
 const CarouselPromociones = () => {
   return (
     <Section>
       <Container>
         <Swiper
-          modules={[Pagination, Scrollbar, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
           autoplay={{
@@ -27,19 +31,19 @@ const CarouselPromociones = () => {
           className='swiper'
         >
           <SwiperSlide>
-            <div className='w-[320px] sm:w-full'>
+            <div className={styles.swiperslide}>
               <TitleH3 title='Hola Mundo' />
               <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, cum est dolores architecto laudantium molestiae commodi corrupti quos. Totam fugiat dolorum nobis asperiores sed quo accusantium deserunt corporis consectetur dicta!</Paragraph>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='w-[320px] sm:w-full'>
+            <div className={styles.swiperslide}>
               <TitleH3 title='Hola Mundo 2' />
               <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, cum est dolores architecto laudantium molestiae commodi corrupti quos. Totam fugiat dolorum nobis asperiores sed quo accusantium deserunt corporis consectetur dicta!</Paragraph>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className='w-[320px] sm:w-full'>
+            <div className={styles.swiperslide}>
               <TitleH3 title='Hola Mundo 3' />
               <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, cum est dolores architecto laudantium molestiae commodi corrupti quos. Totam fugiat dolorum nobis asperiores sed quo accusantium deserunt corporis consectetur dicta!</Paragraph>
             </div>
