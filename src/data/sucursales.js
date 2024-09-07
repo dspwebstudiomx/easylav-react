@@ -139,8 +139,8 @@ const localservices = [
     city: "Morelia",
     email: "josetocavenlavin@easylav.mx",
     titleMailto: "Enviar correo a sucursal a Laguna de Parras",
-    badge: "hola Alexis",
-    advertisement: "hola",
+    badge: "Próximamente",
+    advertisement: "Nueva Sucursal",
   },
 ];
 export { localservices, localservicesbck };

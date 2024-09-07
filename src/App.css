@@ -121,3 +121,8 @@ h2 {
 .swiper {
   width: 60%;
 }
+
+.button {
+  width: 80px;
+  border: 10px solid #fff
+}

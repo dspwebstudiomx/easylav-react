@@ -27,10 +27,11 @@ import {
 
 export const GENERAL_UI = {
   TITLEH1: {
-    FONT_SIZE: "text-3xl",
+    FONT_SIZE: "text-4xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-light",
     BACKGROUND_COLOR: "",
+    JUSTIFY: "mx-auto",
   },
   TITLEH2: {
     FONT_SIZE: "text-3xl",
@@ -76,7 +77,7 @@ export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
   WIDTH: "w-auto",
   HEIGHT: "min-h-[0px]",
-  FONT_SIZE: "text-xl",
+  FONT_SIZE: "text-base sm:text-lg",
   PADDING: "px-6 py-4",
   FONT_WEIGHT: "font-base",
   ROUNDED: "rounded-xl",
@@ -127,7 +128,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[80vh] sm:h-[120vh]  md:h-[40vh] lg:h-[60vh] xl:h-[60vh]",
+  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[40vh] lg:h-[60vh] xl:h-[60vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
@@ -204,7 +205,7 @@ export const SUCURSAL_CARD_UI = {
     BACKGROUND: "bg-light",
     COLOR: "text-dark",
     DISPLAY: "flex  flex-col relative mx-auto",
-    HEIGHT: "min-h-[38px]",
+    HEIGHT: "min-h-[510px]",
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",

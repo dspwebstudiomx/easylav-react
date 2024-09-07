@@ -15,7 +15,7 @@ import { scrollWithOffset } from "functions";
 // Componente
 export default function HeroInicio() {
 
-  const styles = `${GENERAL_UI.TITLEH1.COLOR} ${GENERAL_UI.TITLEH1.FONT_SIZE} ${GENERAL_UI.TITLEH1.FONT_WEIGHT} ${GENERAL_UI.TITLEH1.BACKGROUND_COLOR}`
+  const styles = `${GENERAL_UI.TITLEH1.COLOR} ${GENERAL_UI.TITLEH1.FONT_SIZE} ${GENERAL_UI.TITLEH1.FONT_WEIGHT} ${GENERAL_UI.TITLEH1.BACKGROUND_COLOR} ${GENERAL_UI.TITLEH1.JUSTIFY}`
 
   return (
     <Hero
@@ -29,18 +29,21 @@ export default function HeroInicio() {
       backgroundImage_1024={HEROINICIO_PROPS.BACKGROUND_IMAGE_1024}
       backgroundImage_1920={HEROINICIO_PROPS.BACKGROUND_IMAGE_1920}
     >
-      <Container className="w-[65vw] items-start">
+      <Container className="sm:w-[65vw] xl:w-[45vw] px-12">
         <TitleH1 className={styles} >
-          En <span className="text-primary">Easylav</span> tu Ropa es Nuestra Pasión: Limpieza Impecable, Planchado Perfecto
+          En <span className="text-primary">Easylav</span> tu Ropa es Nuestra Pasión
+          <br />
+          <span className="mt-8">Limpieza Impecable, Planchado Perfecto</span>
         </TitleH1>
-        <ButtonContainer>
+        <ButtonContainer distance="" position="mx-auto">
           <ButtonSecondary
             title={HEROINICIO_PROPS.BUTTON_SECONDARY.TITLE}
             href={HEROINICIO_PROPS.BUTTON_SECONDARY.HREF}
-            onClick={scrollWithOffset}
+            onClick={el => scrollWithOffset(el)}
           />
         </ButtonContainer>
       </Container>
+
     </Hero>
   );
 }
