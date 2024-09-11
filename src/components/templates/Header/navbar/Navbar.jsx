@@ -1,4 +1,5 @@
 import { Container, DarkModeButton, HeaderLine, Logo, MenuButton, NavLinksDesktop, NavLinksMobile, NavLinksTablet } from "components";
+import { NAVBAR_UI } from "constants/constants";
 import { useState } from "react";
 
 
@@ -13,9 +14,10 @@ const Navbar = () => {
   };
 
   const classes = {
-    nav: "fixed top-0 z-50 h-[100px] w-full bg-light shadow-xl sm:relative xl:fixed",
-    container: "mx-auto flex justify-between px-8 sm:px-0 md:px-12 xl:px-0",
-    navbar: "flex h-[100px] items-center justify-between gap-4"
+    nav: `${NAVBAR_UI.NAV.BACKGROUND_COLOR} ${NAVBAR_UI.NAV.POSITION} ${NAVBAR_UI.NAV.SHADOW} ${NAVBAR_UI.NAV.WIDTH}`,
+    container: `${NAVBAR_UI.CONTAINER.DISPLAY} ${NAVBAR_UI.CONTAINER.MARGIN} ${NAVBAR_UI.CONTAINER.PADDING}`,
+    navbar: `${NAVBAR_UI.NAVBAR.DISPLAY} ${NAVBAR_UI.NAVBAR.WIDTH} ${NAVBAR_UI.NAVBAR.HEIGHT}`,
+    navlinks: `${NAVBAR_UI.NAVLINKS.DISPLAY}`
   }
 
   return (
@@ -24,7 +26,7 @@ const Navbar = () => {
         <Container className={classes.container}>
           <div id="navbar" className={classes.navbar}>
             <Logo />
-            <div className="flex justify-end gap-4">
+            <div className={classes.navlinks}>
               <NavLinksDesktop />
               <DarkModeButton />
               <MenuButton

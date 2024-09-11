@@ -1,4 +1,5 @@
 export { default as Badge } from "./badge/Badge";
+export { default as Banner } from "./banner/Banner";
 export { default as BorderBottom } from "./borders/BorderBottom";
 export { default as BorderCenter } from "./borders/BorderCenter";
 export { default as BorderLeft } from "./borders/BorderLeft";

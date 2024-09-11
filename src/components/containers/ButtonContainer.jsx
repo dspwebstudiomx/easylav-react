@@ -1,3 +1,11 @@
+/*
+  Button Container
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-08-21
+*/
+
+// Importaciones
 import PropTypes from 'prop-types'
 export default function ButtonContainer({ children, position, distance }) {
   return (

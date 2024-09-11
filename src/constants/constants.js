@@ -19,9 +19,9 @@
 // General Styles
 export const GENERAL_UI = {
   TITLEH1: {
-    FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-4xl",
-    FONT_WEIGHT: "font-bold",
+    FONT_FAMILY: "font-din",
+    FONT_SIZE: "text-3xl md:text-4xl",
+    FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
     JUSTIFY: "mx-auto",
@@ -30,14 +30,16 @@ export const GENERAL_UI = {
     },
   },
   TITLEH2: {
-    FONT_SIZE: "text-3xl",
-    FONT_WEIGHT: "font-bold",
+    FONT_FAMILY: "text-din",
+    FONT_SIZE: "text-2xl md:text-3xl",
+    FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
   },
   TITLEH3: {
+    FONT_FAMILY: "text-din",
     FONT_SIZE: "text-xl",
-    FONT_WEIGHT: "font-semibold",
+    FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
     CARD: "text-base uppercase font-semibold",
@@ -45,18 +47,18 @@ export const GENERAL_UI = {
   },
   TITLEH4: {
     FONT_FAMILY: "text-din",
-    FONT_SIZE: "text-sm",
+    FONT_SIZE: "text-lg",
     FONT_WEIGHT: "font-semibold",
-    COLOR: "text-dark dark:text-light",
+    COLOR: "text-dark",
     BACKGROUND_COLOR: "",
     TEXT_TRANSFORM: "uppercase",
     JUSTIFY: "mx-auto",
   },
   PARAGRAPH: {
-    FONT_SIZE: "text-base sm:text-lg",
+    FONT_SIZE: "text-xl sm:text-xl",
     COLOR: "text-[#324] dark:text-light",
     FONT_WEIGHT: "",
-    LETTER_SPACING: "tracking-wide",
+    LETTER_SPACING: "",
     LINE_HEIGHT: "leading-0",
   },
 };
@@ -83,6 +85,39 @@ export const CONTAINER_UI = {
     "flex flex-col gap-20 max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto wrap",
 };
 
+// Navbar
+export const NAVBAR_UI = {
+  NAV: {
+    BACKGROUND_COLOR: "bg-light",
+    POSITION: "fixed top-0 z-50 h-[100px] sm:relative xl:fixed",
+    SHADOW: "shadow-xl",
+    WIDTH: "w-full",
+  },
+  CONTAINER: {
+    DISPLAY: "flex justify-between items-center h-full w-full",
+    MARGIN: "mx-auto",
+    PADDING: "px-8 sm:px-0 md:px-0 xl:px-0",
+  },
+  NAVBAR: {
+    DISPLAY: "flex items-center justify-between gap-4",
+    WIDTH: "w-full",
+    HEIGHT: "h-[100px]",
+  },
+  NAVLINKS: {
+    DISPLAY: "flex items-center jsutify-4 gap-4",
+  },
+};
+
+// Banner
+export const BANNER_UI = {
+  BORDER: "border-2",
+  COLOR: "text-dark",
+  FONT_SIZE: "text-lg",
+  PADDING: "p-8",
+  ROUNDED: "rounded-xl",
+  THEME: "primary",
+};
+
 // Border Bottom
 export const BORDER_BOTTOM_UI = {
   WIDTH: "w-full",
@@ -107,7 +142,7 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "max-w-[320px]",
+  WIDTH: "max-w-[260px]",
   HEIGHT: "min-h-[70px]",
   FONT_SIZE: "text-xl",
   PADDING: "px-6 py-4",
@@ -122,7 +157,7 @@ export const BUTTON_PRIMARY_UI = {
   HEIGHT: "min-h-[70px]",
   TEXT_COLOR: "text-light",
   BACKGROUND_COLOR:
-    "bg-gradient-to-r from-primary_dark to-primary dark:bg-secondary_dark ",
+    "bg-gradient-to-r from-primary_dark to-primary dark:bg-gradient dark:from-secondary_dark dark:to-secondary_light ",
   BORDER:
     "border-l-primary_dark border-l-4 border-t-primary_light border-t-4 hover:border-t-primary_light hover:border-l-primary dark:border-l-secondary dark:border-t-secondary_light dark:hover:border-l-secondary",
 };
@@ -144,7 +179,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-45",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[40vh] lg:h-[60vh] xl:h-[70vh]",
+  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[45vh] lg:h-[60vh] xl:h-[65vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
@@ -194,8 +229,9 @@ export const TESTIMONIAL_UI = {
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex flex-row lg:flex-row mt-6 gap-6 justify-between sm:items-center",
-  NAME_CLASSNAME: "font-semibold text-base",
-  NUMBER_STAR_CONTAINER_CLASSNAME: "text-dark justify-between flex",
+  NAME_CLASSNAME: "font-semibold text-lg",
+  NUMBER_STAR_CONTAINER_CLASSNAME:
+    "text-dark justify-between flex items-center",
   STARS_CONTAINER_CLASSNAME: "flex items-center",
   STARS_CLASSNAME: "text-secondary dark:text-primary",
   QUALIFICATION_CLASSNAME: "font-semibold text-lg text-dark",
@@ -244,13 +280,38 @@ export const SUCURSAL_CARD_UI = {
 };
 
 // Franquicias
-export const FRANQUICIAS_PROPS = {};
+export const FRANQUICIAS_PROPS = {
+  CONTAINER: {
+    ID: "franquicias-container",
+  },
+  COLUMNA_1: {
+    ID: "franquicias-columna-1",
+    UL: "franquicias-texto",
+  },
+};
 export const FRANQUICIAS_UI = {
   TITLEH1: {
     COLOR: "text-dark dark:text-light",
-    FONT_SIZE: "text-3xl",
+    FONT_SIZE: "text-3xl md:text-4xl",
     FONT_WEIGHT: "font-semibold",
     LETTER_SPACING: "tracking-wide",
+  },
+  CONTAINER: {
+    DISPLAY: "grid gap-12 md:grid-cols-2 gap-12",
+  },
+  COLUMNA_1: {
+    DISPLAY: "flex flex-col items-start gap-12",
+  },
+  COLUMNA_2: {
+    DISPLAY:
+      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-12 lg:gap-0 justify-items-end md:w-[60]",
+    HEIGHT: "h-full ",
+    MARGIN: "mx-auto mt-24 xl:mr-12  ",
+    PADDING: "lg:p-0 md:p-0",
+    WIDTH: "w-full",
+  },
+  UL: {
+    DISPLAY: "flex flex-col gap-8",
   },
 };
 

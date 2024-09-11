@@ -19,7 +19,7 @@ export default {
       secondary_light: "#A94BF1",
       secondary_dark: "#7A36AD",
       dark: "#021526",
-      // dark: "#450054",
+      // dark: "#3C3C3C",
       // light: "#fafafa",
       light: "#fff",
       required: "red",

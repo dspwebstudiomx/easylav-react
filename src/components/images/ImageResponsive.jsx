@@ -1,4 +1,14 @@
+/*
+  Imagen Responsiva
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-04
+*/
+
+// Importaciones
 import PropTypes from 'prop-types'
+
+// Estructura
 const ImageResponsive = ({ ...props }) => {
 
   const { image_640, image_1024, image_1920, imageAlt, className, width } = props

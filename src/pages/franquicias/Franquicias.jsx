@@ -1,13 +1,22 @@
+/*
+  Franquicias
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-02
+*/
+
+// Importaciones
 import { canastaderopa_640, Placeholder } from "assets";
-import { BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, TitleH1 } from "components";
+import { Banner, BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, TitleH1 } from "components";
 import DescriptionWithBulletPoint from "components/list/DescriptionWithBulletPoint";
-import { FRANQUICIAS_UI } from "constants/constants";
+import { BANNER_UI, FRANQUICIAS_PROPS, FRANQUICIAS_UI } from "constants/constants";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { franquiciaDescripciones } from "../../data/franquiciaDescripciones";
 
+// Estructura
 const Franquicias = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -19,7 +28,9 @@ const Franquicias = () => {
   const img1 = canastaderopa_640;
   const img2 = Placeholder;
 
-  const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
+  const classes = {
+    title: `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`,
+  }
 
   return (
     <PageLayout>
@@ -31,15 +42,15 @@ const Franquicias = () => {
           href="https://easylav-react.netlify.app/franquicias"
         />
       </Helmet>
-      <div className="grid gap-0 xl:grid-cols-2">
+      <div className={FRANQUICIAS_UI.CONTAINER.DISPLAY} id={FRANQUICIAS_PROPS.CONTAINER.ID}>
         {/* Columna 1 */}
-        <div id="columma-1" className="flex flex-col items-start gap-12">
+        <div id={FRANQUICIAS_PROPS.COLUMNA_1.ID} className={FRANQUICIAS_UI.COLUMNA_1.DISPLAY}>
           <BorderLeft>
-            <TitleH1 className={styles} textColor="text-dark dark:text-light">
+            <TitleH1 className={classes.title}>
               Quieres una franquicia?
             </TitleH1>
           </BorderLeft>
-          <ul className="flex flex-col gap-8 text-xl">
+          <ul id={FRANQUICIAS_PROPS.COLUMNA_1.UL} className={`${FRANQUICIAS_UI.UL.DISPLAY}`}>
             {franquiciaDescripciones.map((descripcion) => {
               return (
                 <DescriptionWithBulletPoint
@@ -50,15 +61,13 @@ const Franquicias = () => {
               );
             })}
           </ul>
-          <p className="rounded-xl border-2 border-primary_dark bg-primary_light p-8 text-lg text-dark">
+          <Banner themeColor={BANNER_UI.THEME}>
             En resumen, invertir en la franquicia de Lavanderías Easylav
             representa una oportunidad estratégica y rentable en un mercado en
             crecimiento, respaldada por un modelo de negocio comprobado, una
             marca reconocida y un soporte integral.
-          </p>
-          <ButtonContainer
-            position={"justify-center sm:justify-center my-12 sm:my-6"}
-          >
+          </Banner>
+          <ButtonContainer position={"justify-center sm:justify-center my-12 sm:my-6"}          >
             <ButtonSecondary
               title={"Solicita más información"}
               width={"w-[340px]"}
@@ -71,9 +80,7 @@ const Franquicias = () => {
         {/* Columna 1 */}
 
         {/* Columna 2 */}
-        <div
-          id="columma-2"
-          className="mx-auto mt-24 grid items-start gap-12 xl:gap-12 h-40 sm:mr-12 sm:grid-cols-2 md:p-0 lg:grid-cols-2 lg:p-0 xl:grid-cols-1 justify-center"
+        <div id="columma-2" className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
         >
           <div className="h-auto rotate-[0deg]">
             <ImageResponsive
@@ -83,7 +90,7 @@ const Franquicias = () => {
               image_640={img1}
               image_1024={img1}
               image_1920={img1}
-              width={320}
+              width={380}
             />
           </div>
           <div className="h-auto rotate-[0deg]">
@@ -94,7 +101,7 @@ const Franquicias = () => {
               image_640={img2}
               image_1024={img2}
               image_1920={img2}
-              width={320}
+              width={380}
             />
           </div>
           <div className="h-auto rotate-[0deg]">
@@ -105,7 +112,7 @@ const Franquicias = () => {
               image_640={img1}
               image_1024={img1}
               image_1920={img1}
-              width={320}
+              width={380}
             />
           </div>
           <div className="h-auto rotate-[0deg]">
@@ -116,7 +123,29 @@ const Franquicias = () => {
               image_640={img2}
               image_1024={img2}
               image_1920={img2}
-              width={320}
+              width={380}
+            />
+          </div>
+          <div className="h-auto rotate-[0deg]">
+            <ImageResponsive
+              src={img1}
+              className={"shadow-xl"}
+              imageAlt={"Placeholder"}
+              image_640={img1}
+              image_1024={img1}
+              image_1920={img1}
+              width={380}
+            />
+          </div>
+          <div className="h-auto rotate-[0deg]">
+            <ImageResponsive
+              src={img2}
+              className={"shadow-xl"}
+              imageAlt={"Placeholder"}
+              image_640={img2}
+              image_1024={img2}
+              image_1920={img2}
+              width={380}
             />
           </div>
         </div>

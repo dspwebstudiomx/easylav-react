@@ -8,7 +8,7 @@ function Hero({ ...props }) {
 
   const classes = {
     section: `relative overflow-hidden z-0 flex`,
-    image: "absolute inset-0 h-full object-cover w-full",
+    image: "absolute inset-0 h-full object-cover w-full z-0",
     container: `absolute top-40 sm:top-20 sm:left-16 lg:left-0 xl:top-28 sm:left-20 xl:left-20 z-2 text-light `,
     opacity: `${opacity} absolute inset-0 z-1 ${opacityColor}`,
   };
