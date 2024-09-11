@@ -1,4 +1,4 @@
-import { Button, PageLayout, TitleH1, TitleH2 } from "components"
+import { Button, ButtonContainer, ButtonPrimary, Container, PageLayout, Paragraph, TitleH1, TitleH2 } from "components"
 import { GENERAL_UI } from "constants/constants"
 
 const GuiaEstilos = () => {
@@ -8,13 +8,13 @@ const GuiaEstilos = () => {
         <TitleH1 title="Guia de Estilos" />
         <div className="border-2 mt-3 border-primary"></div>
       </div>
-      <div className="flex flex-col border-2 p-24 border-primary_dark rounded-2xl bg-[#fff] gap-28">
+      <Container className="flex flex-col border-2 p-24 border-primary_dark rounded-2xl bg-[#fff] gap-28">
 
 
-        <div className="grid sm:grid-cols-2 grid gap-8 mx-auto">
+        <div className="grid sm:grid-cols-2 grid gap-8 mx-auto text-dark">
           {/* Color Primario */}
           <div className="grid gap-6">
-            <p className="font-semibold">Color Primario</p>
+            <Paragraph className="font-semibold">Color Primario</Paragraph>
             <div className="flex gap-4">
               <div className="mx-auto text-center flex flex-col gap-4 items-center">
                 <div className=" bg-primary_light w-28 h-20"></div>
@@ -43,8 +43,8 @@ const GuiaEstilos = () => {
           {/* Color Primario */}
 
           {/* Color Secundario */}
-          <div className="grid items-center justify-center gap-6">
-            <p className="font-semibold">Color Secundario</p>
+          <div className="grid items-center justify-center gap-6 text-dark">
+            <Paragraph className="font-semibold">Color Secundario</Paragraph>
             <div className="flex gap-4">
               <div className="mx-auto text-center flex flex-col gap-4 items-center">
                 <div className=" bg-secondary_light w-28 h-20"></div>
@@ -72,8 +72,8 @@ const GuiaEstilos = () => {
           {/* Color Secundario */}
 
           {/* Color Dark */}
-          <div className="grid items-center justify-center gap-6">
-            <p className="font-semibold">Color Negro</p>
+          <div className="grid items-center justify-center gap-6 text-dark">
+            <Paragraph className="font-semibold">Color Negro</Paragraph>
             <div className="flex">
               <div className="mx-auto text-center flex flex-col gap-4 items-center">
                 <div className=" bg-dark w-28 h-20"></div>
@@ -87,8 +87,8 @@ const GuiaEstilos = () => {
           {/* Color Dark */}
 
           {/* Color Light */}
-          <div className="grid items-center justify-center gap-6">
-            <p className="font-semibold">Color Light</p>
+          <div className="grid items-center justify-center gap-6 text-dark">
+            <Paragraph className="font-semibold">Color Light</Paragraph>
             <div className="flex">
               <div className="mx-auto text-center flex flex-col gap-4 items-center">
                 <div className=" bg-light w-28 h-20 border-2"></div>
@@ -102,12 +102,13 @@ const GuiaEstilos = () => {
           {/* Color Dark */}
         </div>
 
-
         {/* Titulos & Parrafos */}
-        <div className="grid sm:grid-cols-2">
-          <div className="flex flex-col gap-5">
-            <p className="font-semibold">Titulo Principal (36px)</p>
-            <TitleH1 title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, et!" />
+        <div className="grid sm:grid-cols-2 text-dark">
+          <div className="flex flex-col gap-5 text-dark">
+            <Paragraph className="font-semibold">Titulo Principal (36px)</Paragraph>
+            <TitleH1>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vero quod blanditiis veniam rem sunt laboriosam.
+            </TitleH1>
           </div>
           <div className="flex flex-col gap-5">
             <p className="font-semibold">Titulo Secundario (30px)</p>
@@ -116,7 +117,7 @@ const GuiaEstilos = () => {
         </div>
         <div className="grid sm:grid-cols-2">
           <div className="flex flex-col gap-5">
-            <p className="font-semibold">Párrafo (16px)</p>
+            <Paragraph className="font-semibold">Párrafo (16px)</Paragraph>
             <p className={GENERAL_UI.PARAGRAPH}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, et!</p>
           </div>
           <div className="flex flex-col gap-5">
@@ -126,9 +127,11 @@ const GuiaEstilos = () => {
         {/* Titulos & Parrafos */}
 
         <div className="grid">
-
+          <ButtonContainer>
+            <ButtonPrimary title='Hola' />
+          </ButtonContainer>
         </div>
-      </div>
+      </Container>
     </PageLayout >
   )
 }

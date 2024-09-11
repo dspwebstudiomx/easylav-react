@@ -2,7 +2,7 @@
   Sobre Nosotros Sección
   =====================================
   Creado por : Daniel Pérez
-  Fecha: 2022-08-20
+  Fecha: 2024-08-20
 */
 
 // Importaciones
@@ -23,7 +23,9 @@ const SobreNosotros = () => {
         <div id='sobrenosotros-doscolunmas' className={ABOUT_UI.TWOCOLUMNS_CONTAINER}>
           <div id='sobrenosotros-columna-1' className={ABOUT_UI.COLUMN1_CONTAINER}>
             <BorderLeft>
-              <TitleH2 title={ABOUT_PROPS.TITLEH2} />
+              <TitleH2>
+                {ABOUT_PROPS.TITLEH2}
+              </TitleH2>
             </BorderLeft>
             <Paragraph>
               En

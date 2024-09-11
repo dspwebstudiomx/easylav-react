@@ -6,6 +6,7 @@ export { default as img1 } from "../assets/images/images/1.webp";
 export { default as canastaderopa_1920 } from "../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-1920.jpg";
 export { default as canastaderopa_2400 } from "../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-2400.jpg";
 export { default as canastaderopa_640 } from "../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg";
+export { default as Camisas } from "../assets/images/images/camisas.webp";
 export { default as LaundryLady } from "../assets/images/images/laundrylady.webp";
 export { default as Placeholder } from "../assets/images/images/Placeholder.webp";
 export { default as LogoHorizontalBlanco } from "../assets/images/logos/horizontal/logo-blanco.png";

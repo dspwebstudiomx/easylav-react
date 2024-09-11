@@ -57,3 +57,5 @@ export { default as Paragraph } from "./text/Paragraph";
 export { default as TitleH1 } from "./text/TitleH1";
 export { default as TitleH2 } from "./text/TitleH2";
 export { default as TitleH3 } from "./text/TitleH3";
+export { default as TitleH4 } from "./text/TitleH4";
+export { default as Video } from "./video/Video";

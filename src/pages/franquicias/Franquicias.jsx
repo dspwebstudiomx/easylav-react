@@ -35,7 +35,7 @@ const Franquicias = () => {
         {/* Columna 1 */}
         <div id="columma-1" className="flex flex-col items-start gap-12">
           <BorderLeft>
-            <TitleH1 className={styles}>
+            <TitleH1 className={styles} textColor="text-dark dark:text-light">
               Quieres una franquicia?
             </TitleH1>
           </BorderLeft>
@@ -73,12 +73,12 @@ const Franquicias = () => {
         {/* Columna 2 */}
         <div
           id="columma-2"
-          className="mx-auto mt-24 grid items-start gap-12 sm:mr-12 sm:grid-cols-2 md:p-12 lg:grid-cols-2 lg:p-0 xl:grid-cols-1 justify-end"
+          className="mx-auto mt-24 grid items-start gap-12 xl:gap-12 h-40 sm:mr-12 sm:grid-cols-2 md:p-0 lg:grid-cols-2 lg:p-0 xl:grid-cols-1 justify-center"
         >
-          <div className="h-auto rotate-[25deg]">
+          <div className="h-auto rotate-[0deg]">
             <ImageResponsive
               src={img1}
-              className={"shadow-image"}
+              className={"shadow-xl"}
               imageAlt={"Placeholder"}
               image_640={img1}
               image_1024={img1}
@@ -86,10 +86,10 @@ const Franquicias = () => {
               width={320}
             />
           </div>
-          <div className="h-auto rotate-[15deg]">
+          <div className="h-auto rotate-[0deg]">
             <ImageResponsive
               src={img2}
-              className={"shadow-image"}
+              className={"shadow-xl"}
               imageAlt={"Placeholder"}
               image_640={img2}
               image_1024={img2}
@@ -97,10 +97,10 @@ const Franquicias = () => {
               width={320}
             />
           </div>
-          <div className="h-auto rotate-[-20deg]">
+          <div className="h-auto rotate-[0deg]">
             <ImageResponsive
               src={img1}
-              className={"shadow-image"}
+              className={"shadow-xl"}
               imageAlt={"Placeholder"}
               image_640={img1}
               image_1024={img1}
@@ -108,10 +108,10 @@ const Franquicias = () => {
               width={320}
             />
           </div>
-          <div className="h-auto rotate-[-35deg]">
+          <div className="h-auto rotate-[0deg]">
             <ImageResponsive
               src={img2}
-              className={"shadow-image"}
+              className={"shadow-xl"}
               imageAlt={"Placeholder"}
               image_640={img2}
               image_1024={img2}

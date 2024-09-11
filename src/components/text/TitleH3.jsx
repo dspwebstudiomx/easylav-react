@@ -1,12 +1,20 @@
 import { GENERAL_UI } from 'constants/constants';
 import Proptypes from 'prop-types';
 
-const titleH3UIString = `flex ${GENERAL_UI.TITLEH3.JUSTIFY} ${GENERAL_UI.TITLEH3.FONT_SIZE} ${GENERAL_UI.TITLEH3.FONT_WEIGHT} ${GENERAL_UI.TITLEH3.BACKGROUND_COLOR} ${GENERAL_UI.TITLEH3.COLOR}`;
+const classes = `
+  ${GENERAL_UI.TITLEH3.FONT_FAMILY}
+  ${GENERAL_UI.TITLEH3.FONT_SIZE}
+  ${GENERAL_UI.TITLEH3.FONT_WEIGHT}
+  ${GENERAL_UI.TITLEH3.COLOR}
+  ${GENERAL_UI.TITLEH3.BACKGROUND_COLOR}
+  ${GENERAL_UI.TITLEH3.JUSTIFY}
+`;
 
 const TitleH3 = ({ title, className }) => {
 
+
   return (
-    <h3 className={`${titleH3UIString} mr-auto -mb-2 ${className}`}>
+    <h3 className={`${classes} mx-auto -mb-2 ${className}`}>
       {title}
     </h3>
   )

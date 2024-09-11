@@ -8,11 +8,20 @@ const Contacto = () => {
       className="animate__slower grid items-center md:grid-cols-2 md:gap-12 xl:gap-24"
     >
       <div className="animate__animated animate__bounceInLeft grid gap-8">
-        <TitleH2
-          title={
-            "¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario."
-          }
-        />
+        <TitleH2>
+          ¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.
+        </TitleH2>
+        <Paragraph>
+          Nuestra forma de contacto es fácil y rápida. Puedes llenar el
+          formulario en línea con tus preguntas o sugerencias, y nos pondremos
+          en contacto contigo enseguida.{" "}
+          <strong>¡Esperamos saber de ti pronto!</strong>
+          <span className="ml-1"> o si gustas, puedes visitar nuestra sección de</span>
+          <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
+            <Link to={"/preguntas-frecuentes"}>Preguntas Frecuentes</Link>
+          </span>
+          .
+        </Paragraph>
         <Paragraph>
           Nuestra forma de contacto es fácil y rápida. Puedes llenar el
           formulario en línea con tus preguntas o sugerencias, y nos pondremos

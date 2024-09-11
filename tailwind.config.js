@@ -3,14 +3,21 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      din: {
+        light: ["din-light", "sans-serif"],
+        regular: ["din-regular", "sans-serif"],
+        bold: ["din-bold", "sans-serif"],
+      },
+    },
     extend: {},
     colors: {
-      primary: "#55C3B9",
+      primary: "#4ED1C1",
       primary_light: "#ccfbf1",
       primary_dark: "#2BAC9F",
-      secondary: "#622A77",
-      secondary_light: "#985DA0",
-      secondary_dark: "#392352",
+      secondary: "#AF4DFA",
+      secondary_light: "#A94BF1",
+      secondary_dark: "#7A36AD",
       dark: "#021526",
       // dark: "#450054",
       // light: "#fafafa",

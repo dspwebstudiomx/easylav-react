@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 function Button({ variant, children, ...props }) {
   let className = 'inline-block px-4 py-2 rounded';
@@ -23,7 +24,14 @@ function Button({ variant, children, ...props }) {
   );
 }
 
+Button.propTypes = {
+  variant: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
+
 export default Button;
+
+
 
 //ejemplo:
 

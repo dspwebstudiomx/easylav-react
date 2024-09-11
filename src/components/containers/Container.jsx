@@ -1,13 +1,21 @@
+/*
+  Sobre Nosotros Sección
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-08-28
+*/
+
+// Importaciones
+import { CONTAINER_UI } from "constants/constants";
 import PropTypes from "prop-types";
 
+// Estructura
 export default function Container({ id, children, className }) {
 
-  const classes = {
-    div: `${className} flex flex-col gap-20 max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto overflow-x-hidden wrap`
-  }
+  const classes = `${className} ${CONTAINER_UI.DISPLAY} `
 
   return (
-    <div id={id} className={classes.div}>
+    <div id={id} className={classes}>
       {children}
     </div>
   );

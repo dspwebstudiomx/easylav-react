@@ -1,18 +1,27 @@
-import { Paragraph, TitleH3 } from 'components'
-import Video from 'components/video/Video'
+/*
+  Nuestros Servicios Sección
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-02
+*/
+
+// Importaciones
+import { Paragraph, TitleH3, Video } from 'components'
+import { SERVICES_GENERATOR_PROPS, SERVICES_GENERATOR_UI } from 'constants/constants'
 import { services } from 'data'
 
+// Estructura
 const ServicesGenerator = () => {
   return (
-    <div className='grid place-content-center gap-8 w-full'>
-      <ul className='grid sm:grid-cols-3 gap-20'>
+    <div id={SERVICES_GENERATOR_PROPS.ID} className={SERVICES_GENERATOR_UI.DIV}>
+      <ul className={SERVICES_GENERATOR_UI.UL}>
         {services.map((service) => {
           return (
-            <li key={service.title} id={service.idLink} className='flex flex-col gap-8 items-center justify-center'>
-              <div className='mx-auto sm:w-24 md:w-44 dark:border-4 dark:border-primary '>
+            <li key={service.title} id={service.idLink} className={SERVICES_GENERATOR_UI.LI.CLASSNAME} >
+              <div className={SERVICES_GENERATOR_UI.LI.DIV_VIDEO}>
                 <Video src={service.image} type={'video/webm'} title={service.alt} />
               </div>
-              <div className='mx-auto'>
+              <div className={SERVICES_GENERATOR_UI.DIV_TITLEH3}>
                 <TitleH3 title={service.title} />
               </div>
               <Paragraph>
@@ -23,7 +32,7 @@ const ServicesGenerator = () => {
         })
         }
       </ul>
-    </div>
+    </div >
   )
 }
 

@@ -12,7 +12,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
   return (
     <div className={`flex ${gap} ${position}`}>
       <SocialLink
-        href={'https://www.facebook.com/easylavmx'}
+        href={'https://www.facebook.com/profile.php?id=61562871132158'}
         icono={<FiFacebook size={size} className={classes.Link} />}
         ariaLabel={'Accede a mi  cuenta de Facebook'}
         title={'Visita mi página en Facebook'}
@@ -21,7 +21,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         hover={hover}
       />
       <SocialLink
-        href={'https://www.instagram.com/easylavmx'}
+        href={'https://www.instagram.com/profile.php?id=61562871132158'}
         icono={<FaInstagram size={size} className={classes.Link} />}
         ariaLabel={'Accede a mi  cuenta de Instagram'}
         title="Visita mi perfil de Instagram"

@@ -1,22 +1,27 @@
+/*
+  Por qué Elegirnos Sección
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-02
+*/
+
+// Importaciones
 import { Placeholder } from 'assets';
 import { BorderLeft, Container, DescriptionWithBulletPoint, ImageResponsive, Section, TitleH2 } from 'components';
+import { PORQUE_ELEGIRNOS_PROPS, PORQUE_ELEGIRNOS_UI } from 'constants/constants';
 import { porqueElegirnosDescripciones } from 'data';
 
+// Estructura
 export default function PorqueElegirnos() {
-
-  const classes = {
-    article: 'mx-au,to grid gap-x-20 gap-y-16 sm:grid-cols-2',
-    contenedorCaracteristicas: 'grid place-content-center gap-12',
-    caracteristica: 'flex flex-col gap-6 text-balance text-2xl',
-    contenedorImagen: 'items-center justify-end'
-  }
   return (
-    <Section id={'porque-elegirnos'} backgroundColor={''} height={'h-auto'} className={''} >
-      <Container className={'mx-auto'} id='porque-elegirnos-container'>
-        <article className={classes.article}>
-          <div id='contenedor-caracteristicas' className={classes.contenedorCaracteristicas}>
+    <Section id={PORQUE_ELEGIRNOS_PROPS.SECTION.ID} backgroundColor={PORQUE_ELEGIRNOS_UI.SECTION.BACKGROUND_COLOR} height={PORQUE_ELEGIRNOS_UI.HEIGHT} className={PORQUE_ELEGIRNOS_UI.CLASSNAME} >
+      <Container className={PORQUE_ELEGIRNOS_UI.CONTAINER} id={PORQUE_ELEGIRNOS_PROPS.CONTAINER.ID}>
+        <article className={PORQUE_ELEGIRNOS_UI.ARTICLE}>
+          <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.CARACTERISTICAS.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_CARACTERISTICAS}>
             <BorderLeft>
-              <TitleH2 title='Por qué Elegirnos' />
+              <TitleH2>
+                {PORQUE_ELEGIRNOS_PROPS.ARTICLE.CARACTERISTICAS.TITLEH2.TITLE}
+              </TitleH2>
             </BorderLeft>
             {porqueElegirnosDescripciones.map(descripcion => {
               return (
@@ -24,7 +29,7 @@ export default function PorqueElegirnos() {
               )
             })}
           </div>
-          <div id='contenedor-imagen' className={classes.contenedorImagen}>
+          <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
             <ImageResponsive
               src={Placeholder}
               imageAlt={'Placeholder'}
@@ -34,6 +39,7 @@ export default function PorqueElegirnos() {
               image_1920={Placeholder}
             />
           </div>
+          <div className=''></div>
         </article>
       </Container>
     </Section>

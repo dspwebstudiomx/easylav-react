@@ -1,5 +1,5 @@
-import { BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, PageLayout, TitleH1 } from "components";
-import { GENERAL_UI } from "constants/constants";
+import { BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, PageLayout, TitleH1, TitleH3 } from "components";
+import { FRANQUICIAS_UI, GENERAL_UI } from "constants/constants";
 import { frequentQuestions } from "data";
 import PropTypes from 'prop-types';
 import { useState } from "react";
@@ -8,19 +8,23 @@ import { FaRegBuilding } from "react-icons/fa6";
 
 
 const PreguntasFrecuentes = () => {
+
+  const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
   return (
     <PageLayout>
-      <div className="-mx-4 flex flex-col sm:gap-12">
+      <div className="flex flex-col sm:gap-12">
         {/* Title */}
         <div className="w-full px-4">
           <div className="mx-auto mb-[60px] lg:mb-20 flex  flex-col gap-4">
-            <h1 className="mb-2 block text-lg font-semibold text-primary">
+            <span className="mb-2 block text-lg font-semibold text-primary">
               Preguntas Frecuentes
-            </h1>
+            </span>
             <BorderLeft>
-              <TitleH1 title=" Tienes alguna pregunta?" />
+              <TitleH1 className={styles} textColor="text-dark dark:text-light">
+                Tienes alguna duda?
+              </TitleH1>
             </BorderLeft>
-            <span className="text-2xl w-full">Puedes ver las preguntas más frecuentes:</span>
+            <TitleH3>Puedes ver las preguntas más frecuentes:</TitleH3>
           </div>
         </div>
         {/* Title */}
