@@ -36,7 +36,7 @@ export default function HeroInicio() {
           <br />
           <span className="mt-8">Limpieza Impecable, Planchado Perfecto</span>
         </TitleH1>
-        <ButtonContainer distance="-mt-6 lg:ml-16" position="mx-auto">
+        <ButtonContainer distance="-mt-6 lg:ml-16" position="mr-auto">
           <ButtonSecondary
             title={HEROINICIO_PROPS.BUTTON_SECONDARY.TITLE}
             href={HEROINICIO_PROPS.BUTTON_SECONDARY.HREF}

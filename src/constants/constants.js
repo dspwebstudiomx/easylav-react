@@ -177,9 +177,9 @@ export const BUTTON_SECONDARY_UI = {
 // Hero Inicio
 export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
-  OPACITY: "opacity-45",
+  OPACITY: "opacity-30",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[90vh] sm:h-[120vh]  md:h-[45vh] lg:h-[60vh] xl:h-[65vh]",
+  HEIGHT: "h-[60vh] sm:h-[110vh] lg:h-[60vh] xl:h-[65vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
@@ -297,7 +297,7 @@ export const FRANQUICIAS_UI = {
     LETTER_SPACING: "tracking-wide",
   },
   CONTAINER: {
-    DISPLAY: "grid gap-12 md:grid-cols-2 gap-12",
+    DISPLAY: "grid md:grid-cols-2 gap-12",
   },
   COLUMNA_1: {
     DISPLAY: "flex flex-col items-start gap-12",
@@ -305,7 +305,7 @@ export const FRANQUICIAS_UI = {
   COLUMNA_2: {
     DISPLAY:
       "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-12 lg:gap-0 justify-items-end md:w-[60]",
-    HEIGHT: "h-full ",
+    HEIGHT: "h-auto",
     MARGIN: "mx-auto mt-24 xl:mr-12  ",
     PADDING: "lg:p-0 md:p-0",
     WIDTH: "w-full",
