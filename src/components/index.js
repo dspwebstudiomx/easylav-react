@@ -45,7 +45,7 @@ export { default as SEOFriendly } from "./SEOFriendly";
 export { default as Footer } from "./templates/footer/Footer";
 export { default as FooterLinksGenerator } from "./templates/footer/FooterLinksGenerator";
 export { default as FooterNavHashLinksGenerator } from "./templates/footer/FooterNavHashinksGenerator";
-export { default as Header } from "./templates/header/Header";
+export { Header } from "./templates/header/Header";
 export { default as HeaderLine } from "./templates/header/HeaderLine";
 export { default as Logo } from "./templates/header/navbar/components/Logo";
 export { default as MenuButton } from "./templates/header/navbar/components/MenuButton";
