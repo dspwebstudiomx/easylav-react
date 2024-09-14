@@ -1,9 +1,10 @@
 import { Navbar } from "components";
 
-export default function Header() {
+const Header = () => {
   return (
     <header id='header'>
       <Navbar />
     </header>
   )
 }
+export default Header
