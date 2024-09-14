@@ -4,31 +4,26 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Autoplay, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Testimonio from '../Testimonios/Testimonio';
+import Testimonio from './Testimonio';
 
 // const styles = { swiperslide: 'w-[420px] mx-auto' }
 
-const CarouselPromociones = () => {
+const CarouselTestimonios = () => {
   return (
     <>
-      <div className='pt-4 2xl:hidden bg-light'>
+      <div className='py-12 2xl:hidden bg-section dark:bg-dark'>
         <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
+          modules={[Pagination, Autoplay, Scrollbar]}
+          className="mySwiper shadow-xl"
+          spaceBetween={50}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: false,
           }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper"
+          loop={true}
+          pagination={{ clickable: true, draggable: true }}
           breakpoints={{
             600: {
               slidesPerView: 1,
@@ -37,8 +32,14 @@ const CarouselPromociones = () => {
             },
             768: {
               slidesPerView: 2,
-              touchRatio: 0
-            }
+              spaceBetweenSlides: 30,
+              touchRatio: 1
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetweenSlides: 30,
+              touchRatio: 1
+            },
           }
           }
         >
@@ -53,7 +54,7 @@ const CarouselPromociones = () => {
 
         </Swiper>
       </div >
-      <div className='pt-20 bg-light hidden 2xl:block'>
+      <div className='pt-20 bg-section hidden 2xl:block'>
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
           spaceBetween={0}
@@ -85,8 +86,8 @@ const CarouselPromociones = () => {
   )
 }
 
-CarouselPromociones.propTypes = {
+CarouselTestimonios.propTypes = {
   title: PropTypes.string,
 }
 
-export default CarouselPromociones
+export default CarouselTestimonios

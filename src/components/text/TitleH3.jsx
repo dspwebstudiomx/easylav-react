@@ -12,7 +12,6 @@ const classes = `
 
 const TitleH3 = ({ title, className }) => {
 
-
   return (
     <h3 className={`${classes} mx-auto -mb-2 ${className}`}>
       {title}

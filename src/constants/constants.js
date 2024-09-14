@@ -76,7 +76,7 @@ export const LOADING_UI = {
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
   PADDING: "p-12 sm:p-20 2xl:p-20",
-  BACKGROUND_COLOR: "bg-light dark:bg-dark",
+  BACKGROUND_COLOR: "bg-section dark:bg-dark",
   TEXT_COLOR: "",
 };
 
@@ -226,7 +226,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-6 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] w-auto",
+    "p-8 pb-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex flex-row lg:flex-row mt-6 gap-6 justify-between sm:items-center",

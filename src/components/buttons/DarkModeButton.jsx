@@ -16,7 +16,7 @@ export default function ThemeToggle() {
       aria-labelledby='dspwebstudio'
       className="ml-5 w-12 h-12  mx-auto rounded-full focus:outline-none rounded-xl"
       onClick={toggleTheme}>
-      {!darkMode ? <IoSunnyOutline className='w-full h-full rounded-lg border-2 p-3 text-primary bg-primary_light border-primary' /> : <FiMoon className='w-full h-full rounded-lg border-2 p-3 text-light bg-secondary_light border-secondary' />}
+      {!darkMode ? <IoSunnyOutline className='w-10 h-10 text-primary' /> : <FiMoon className='w-8 h-8 text-secondary' />}
     </button>
   )
 }

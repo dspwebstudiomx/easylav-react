@@ -12,6 +12,7 @@ export default {
     },
     extend: {},
     colors: {
+      section: "#e7f6f3",
       primary: "#4ED1C1",
       primary_light: "#ccfbf1",
       primary_dark: "#2BAC9F",

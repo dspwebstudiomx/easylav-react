@@ -3,8 +3,7 @@ import {
   FooterLinksGenerator,
   FooterNavHashLinksGenerator,
   HeaderLine,
-  Section,
-  Spacing,
+  Spacing
 } from "components";
 import { linksServicios } from "data";
 import {
@@ -18,7 +17,7 @@ import FooterLogoWithSocial from "./FooterLogoWithSocial";
 export default function Footer() {
   const classes = {
     container:
-      "mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4",
+      "mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4 bg-secondary_dark",
     footerSections: "flex flex-col",
     footerSectionsList: "flex flex-col gap-0",
     footerSectionsTitle:
@@ -26,13 +25,9 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer" className="text-base">
+    <footer id="footer" className="text-base bg-secondary_dark">
       <HeaderLine />
-      <Section
-        backgroundColor={"bg-secondary_dark dark:bg-secondary_dark"}
-        id={"footer-sections"}
-        height={"h-auto"}
-      >
+      <div id={"footer-sections"} className="bg-secondary_dark p-12">
         <Container className={classes.container}>
           {/* Footer Sections */}
           <div id="footer-sections" className={classes.footerSections}>
@@ -82,7 +77,7 @@ export default function Footer() {
           <FooterLogoWithSocial />
           {/* Footer Logo */}
         </Container>
-      </Section>
+      </div>
       <div className="bg-primary py-6 text-light">
         <div className="mx-auto flex w-[80vw] flex-col justify-center gap-4 text-center text-sm font-semibold sm:w-[65vw] sm:flex-row sm:gap-20 sm:text-left xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <h3>Derechos Reservados 2024</h3>

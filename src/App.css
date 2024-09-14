@@ -31,9 +31,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #ecf5f3;
-}
 
 html {
   scroll-behavior: smooth;
@@ -141,8 +138,9 @@ h2 {
   background: linear-gradient(45deg, #985DA0, #392352);
 }
 
-.swiper {
-  width: 60%;
+.mySwiper {
+  width: 70%;
+  border-radius: 15px;
 }
 
 .button {
