@@ -28,10 +28,6 @@ const Franquicias = () => {
   const img1 = canastaderopa_640;
   const img2 = Placeholder;
 
-  const classes = {
-    title: `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`,
-  }
-
   return (
     <PageLayout>
       <Helmet>
@@ -46,7 +42,7 @@ const Franquicias = () => {
         {/* Columna 1 */}
         <div id={FRANQUICIAS_PROPS.COLUMNA_1.ID} className={FRANQUICIAS_UI.COLUMNA_1.DISPLAY}>
           <BorderLeft>
-            <TitleH1 className={classes.title}>
+            <TitleH1 className={''}>
               Quieres una franquicia?
             </TitleH1>
           </BorderLeft>

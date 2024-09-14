@@ -55,6 +55,7 @@ export const GENERAL_UI = {
     JUSTIFY: "mx-auto",
   },
   PARAGRAPH: {
+    FONT_FAMILY: "text-din",
     FONT_SIZE: "text-xl sm:text-xl",
     COLOR: "text-[#324] dark:text-light",
     FONT_WEIGHT: "",
@@ -82,7 +83,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-20 max-w-screen-xs sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto wrap",
+    "flex flex-col gap-20 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto",
 };
 
 // Navbar
@@ -142,10 +143,10 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "max-w-[260px]",
-  HEIGHT: "min-h-[70px]",
+  WIDTH: "max-w-[270px] sm:min-w-[210px]",
+  HEIGHT: "min-h-[65px]",
   FONT_SIZE: "text-xl",
-  PADDING: "px-6 py-4",
+  PADDING: "px-4 py-2",
   FONT_WEIGHT: "font-semibold",
   TEXT_TRANSFORM: "",
   ROUNDED: "rounded-lg",
@@ -225,7 +226,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "shadow-xl p-10 flex flex-col justify-between bg-light text-dark rounded-lg",
+    "p-6 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] w-auto",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex flex-row lg:flex-row mt-6 gap-6 justify-between sm:items-center",
@@ -291,7 +292,7 @@ export const FRANQUICIAS_PROPS = {
 };
 export const FRANQUICIAS_UI = {
   TITLEH1: {
-    COLOR: "text-dark dark:text-light",
+    COLOR: "text- dark:text-light",
     FONT_SIZE: "text-3xl md:text-4xl",
     FONT_WEIGHT: "font-semibold",
     LETTER_SPACING: "tracking-wide",

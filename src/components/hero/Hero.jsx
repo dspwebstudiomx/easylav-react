@@ -9,7 +9,7 @@ function Hero({ ...props }) {
   const classes = {
     section: `relative overflow-hidden z-0 flex`,
     image: "absolute inset-0 h-full object-cover w-full z-0",
-    container: `absolute top-20 2xl:left-48 z-2 text-light flex flex-col items-center `,
+    container: `absolute top-20 2xl:left-52 z-2 text-light flex flex-col items-center `,
     opacity: `${opacity} absolute inset-0 z-1 ${opacityColor}`,
   };
 

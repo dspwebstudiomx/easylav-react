@@ -5,7 +5,7 @@ const Contacto = () => {
   return (
     <div
       id="contactDescription"
-      className="animate__slower grid items-center md:grid-cols-2 md:gap-12 xl:gap-24"
+      className="animate__slower grid items-start md:grid-cols-2 md:gap-12 xl:gap-24"
     >
       <div className="animate__animated animate__bounceInLeft grid gap-8">
         <TitleH2>
@@ -23,13 +23,9 @@ const Contacto = () => {
           .
         </Paragraph>
         <Paragraph>
-          Nuestra forma de contacto es fácil y rápida. Puedes llenar el
-          formulario en línea con tus preguntas o sugerencias, y nos pondremos
-          en contacto contigo enseguida.{" "}
-          <strong>¡Esperamos saber de ti pronto!</strong>
-          <span className="ml-1"> o si gustas, puedes visitar nuestra sección de</span>
+          Si gustas enviar felicitaciones y sugerencias no dudes en escribirnos a
           <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
-            <Link to={"/preguntas-frecuentes"}>Preguntas Frecuentes</Link>
+            <Link to="mailto:atnclientes@easylav.mx">Atencion a clientes</Link>
           </span>
           .
         </Paragraph>
