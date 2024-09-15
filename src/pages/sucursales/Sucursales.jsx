@@ -5,7 +5,7 @@ import { scrollToTop } from "functions";
 const Sucursales = () => {
   scrollToTop();
   return (
-    <PageLayout id={"Sucursales"}>
+    <>
       <SEOFriendly
         title="Sucursales | Easylav: Tu lavandería ideal"
         url="easylav-react.netlify.app"
@@ -16,10 +16,13 @@ const Sucursales = () => {
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
-      <SucursalCardPerCity city='Morelia' />
-      <Spacing height={"h-8"} />
-      <SucursalCardPerCity city='León' />
-    </PageLayout>
+      <PageLayout id={"Sucursales"}>
+        <SucursalCardPerCity city='Morelia' />
+        <Spacing height={"h-8"} />
+        <SucursalCardPerCity city='León' />
+      </PageLayout>
+    </>
+
   );
 };
 

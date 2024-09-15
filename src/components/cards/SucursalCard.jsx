@@ -44,7 +44,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
       {/* mapa */}
 
       {/* Contenido */}
-      <div className='relative flex flex-col justify-start gap-3 p-8 px-6'>
+      <div className='relative flex flex-col justify-start gap-3 p-4'>
         <div className='flex items-center justify-center mx-auto'>
           <TitleH4 title={title} />
         </div>

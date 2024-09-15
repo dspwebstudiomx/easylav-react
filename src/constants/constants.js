@@ -59,7 +59,7 @@ export const GENERAL_UI = {
     FONT_SIZE: "text-xl sm:text-xl",
     COLOR: "text-[#324] dark:text-light",
     FONT_WEIGHT: "",
-    LETTER_SPACING: "",
+    LETTER_SPACING: "tracking-tight",
     LINE_HEIGHT: "leading-0",
   },
 };
@@ -226,7 +226,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-8 pb-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[340px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[280px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex lg:flex-row gap-0 justify-between sm:items-center sm:flex-row",
@@ -255,12 +255,12 @@ export const SUCURSAL_CARD_UI = {
     BACKGROUND: "bg-light",
     COLOR: "text-dark",
     DISPLAY: "flex  flex-col relative mx-auto",
-    HEIGHT: "min-h-[480px]",
+    HEIGHT: "min-h-[480px] 2xl:h-auto",
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[280px] sm:w-[280px] 2xl:w-[240px]",
+    WIDTH: "w-[290px] sm:w-[280px] 2xl:w-[300px]",
   },
   MAP: {
     CONTAINER: {

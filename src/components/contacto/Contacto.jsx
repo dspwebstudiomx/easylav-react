@@ -13,13 +13,14 @@ const Contacto = () => {
         </TitleH2>
         <Paragraph>
           Nuestra forma de contacto es fácil y rápida. Puedes llenar el
-          formulario en línea con tus preguntas o sugerencias, y nos pondremos
+          formulario en línea con tus preguntas y nos pondremos
           en contacto contigo enseguida.{" "}
           <strong>¡Esperamos saber de ti pronto!</strong>
           <span className="ml-1"> o si gustas, puedes visitar nuestra sección de</span>
-          <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
+          <span className="mx-2 font-semibold italic text-secondary dark:text-primary">
             <Link to={"/preguntas-frecuentes"}>Preguntas Frecuentes</Link>
           </span>
+          <span className="">con las preguntas mas solicitadas.</span>
           .
         </Paragraph>
         <Paragraph>

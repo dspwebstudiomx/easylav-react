@@ -32,7 +32,7 @@ export default function HeroInicio() {
     >
       <Container className="sm:w-[70vw] lg:w-[80vw] xl:w-[50vw] px-12 xl:mt-12">
         <TitleH1 className={styles} textColor={GENERAL_UI.TITLEH1.HERO.COLOR}>
-          En <span className="text-primary">Easylav</span> tu Ropa es Nuestra Pasión :
+          En <span className="text-primary">EASYLAV</span> tu Ropa es Nuestra Pasión :
           <br />
           <span className="mt-8">Limpieza Impecable, Planchado Perfecto</span>
         </TitleH1>

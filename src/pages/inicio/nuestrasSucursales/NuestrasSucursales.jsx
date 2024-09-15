@@ -22,6 +22,7 @@ const NuestrasSucursales = () => {
             title='Contáctanos'
             href='/contacto'
             distance=''
+            type='button'
           />
         </ButtonContainer>
       </div>

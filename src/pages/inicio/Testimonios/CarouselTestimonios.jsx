@@ -20,7 +20,7 @@ const CarouselTestimonios = () => {
           spaceBetween={50}
           autoplay={{
             delay: 6000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
           loop={true}
           pagination={{ clickable: true, draggable: true }}
@@ -32,12 +32,12 @@ const CarouselTestimonios = () => {
             },
             768: {
               slidesPerView: 2,
-              spaceBetweenSlides: 30,
+              spaceBetweenSlides: 20,
               touchRatio: 1
             },
             1024: {
               slidesPerView: 3,
-              spaceBetweenSlides: 30,
+              spaceBetweenSlides: 20,
               touchRatio: 1
             },
           }

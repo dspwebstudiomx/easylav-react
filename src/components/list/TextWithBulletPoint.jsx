@@ -9,11 +9,11 @@ export default function TextWithBulletPoint({ ...props }) {
       <div className="w-[32px]">
         <TbPoint className='text-primary text-4xl' />
       </div>
-      <div className='flex flex-col gap-6'>
-        <span className='ml-2'>
+      <div className='flex flex-col gap-6 bg-red_light ml-2'>
+        <span className=''>
           {titulo}
         </span>
-        <span className='ml-2'>
+        <span className=''>
           {texto}
         </span>
 
