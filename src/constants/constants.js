@@ -180,7 +180,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-30",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[60vh] sm:h-[110vh] lg:h-[60vh]",
+  HEIGHT: "h-[100vh] sm:h-[110vh] lg:h-[60vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
@@ -260,7 +260,7 @@ export const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[290px] sm:w-[280px] 2xl:w-[300px]",
+    WIDTH: "w-[220px] sm:w-[280px] 2xl:w-[300px]",
   },
   MAP: {
     CONTAINER: {

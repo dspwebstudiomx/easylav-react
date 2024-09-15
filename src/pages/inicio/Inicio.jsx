@@ -2,7 +2,7 @@
 
 //Importaciones
 import { canastaderopa_640 } from 'assets';
-import { BackgroundSection, Container, HomeLayout, Loading, Section, SEOFriendly, TitleH3 } from 'components';
+import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
 const HeroInicio = lazy(() => import('./components/HeroInicio'));
@@ -55,10 +55,6 @@ const Inicio = () => (
           <Contacto />
         </Container>
       </Section>
-      <BackgroundSection background={'../../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-1920.jpg'} className='h-80 text-dark' opacity="opacity-60">
-        <TitleH3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, delectus.</TitleH3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quo optio, nobis temporibus recusandae qui aliquid, ut sed alias tempora totam distinctio atque facere quaerat quisquam repudiandae dolore autem porro. Accusamus fugiat quidem voluptatibus, saepe eveniet corrupti distinctio adipisci aspernatur.</p>
-      </BackgroundSection>
     </HomeLayout>
   </Suspense>
 );
