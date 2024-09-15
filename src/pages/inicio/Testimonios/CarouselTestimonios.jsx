@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Testimonio from './Testimonio';
 
@@ -13,10 +13,10 @@ import Testimonio from './Testimonio';
 const CarouselTestimonios = () => {
   return (
     <>
-      <div className='py-12 2xl:hidden bg-section dark:bg-dark'>
+      <div className='py-12 bg-section dark:bg-dark'>
         <Swiper
           modules={[Pagination, Autoplay, Scrollbar]}
-          className="mySwiper shadow-xl"
+          className="mySwiper"
           spaceBetween={50}
           autoplay={{
             delay: 6000,
@@ -52,34 +52,6 @@ const CarouselTestimonios = () => {
           )
           )}
 
-        </Swiper>
-      </div >
-      <div className='pt-20 bg-section hidden 2xl:block'>
-        <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
-          spaceBetween={0}
-          slidesPerView={1}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          loop
-          navigation={true}
-          pagination={{ clickable: true }}
-          // scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
-          className='swiper bg-primary'
-        >
-          <SwiperSlide>
-            <img src="https://placehold.co/1240x600" alt="Slide 1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://placehold.co/1240x600" alt="Slide 1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://placehold.co/1240x600" alt="Slide 1" />
-          </SwiperSlide>
         </Swiper>
       </div >
     </>

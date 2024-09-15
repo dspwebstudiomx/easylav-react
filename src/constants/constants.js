@@ -226,13 +226,13 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-8 pb-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] w-auto shadow-xl",
+    "p-8 pb-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[340px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
-    "flex flex-row lg:flex-row mt-6 gap-6 justify-between sm:items-center",
+    "flex lg:flex-row gap-0 justify-between sm:items-center sm:flex-row",
   NAME_CLASSNAME: "font-semibold text-lg",
   NUMBER_STAR_CONTAINER_CLASSNAME:
-    "text-dark justify-between flex items-center",
+    "text-dark justify-between flex items-center mb-6",
   STARS_CONTAINER_CLASSNAME: "flex items-center",
   STARS_CLASSNAME: "text-secondary dark:text-primary",
   QUALIFICATION_CLASSNAME: "font-semibold text-lg text-dark",

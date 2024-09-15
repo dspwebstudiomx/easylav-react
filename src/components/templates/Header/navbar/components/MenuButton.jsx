@@ -12,11 +12,11 @@ const MenuButton = ({ navigationLinks, toggleNav }) => {
       type="button"
     >
       {!navigationLinks ? (
-        <FaBars size={30} className="z-40 text-secondary" />
+        <FaBars size={30} className="z-40 text-secondary_dark" />
       ) : (
         <FaXmark
           size={36}
-          className="dark:text-slate-100 z-30 text-secondary"
+          className="dark:text-slate-100 z-30 text-secondary_dark"
         />
       )}
     </button>

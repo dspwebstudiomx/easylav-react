@@ -27,10 +27,10 @@ const NavLinksMobile = ({ onLinkClick }) => {
               >
                 <div className="flex items-center justify-center">
                   {navlink.icon && (
-                    <navlink.icon size={32} className="text-secondary" />
+                    <navlink.icon size={32} className="text-secondary_dark" />
                   )}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wide text-secondary text-center">
+                <span className="text-base font-bold uppercase tracking-wide text-secondary_dark text-center">
                   {navlink.name}
                 </span>
               </NavHashLink>
@@ -53,10 +53,10 @@ const NavLinksMobile = ({ onLinkClick }) => {
               >
                 <div className="flex items-center justify-center">
                   {navlink.icon && (
-                    <navlink.icon size={32} className="text-secondary" />
+                    <navlink.icon size={32} className="text-secondary_dark" />
                   )}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wide text-secondary text-center">
+                <span className="text-base font-bold uppercase tracking-wide text-secondary_dark text-center">
                   {navlink.name}
                 </span>
               </NavLink>
