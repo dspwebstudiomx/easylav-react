@@ -75,7 +75,7 @@ export const LOADING_UI = {
 // Section
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
-  PADDING: "py-12 px-8 sm:p-20 2xl:p-2",
+  PADDING: "py-12 px-8 sm:p-20",
   BACKGROUND_COLOR: "bg-section dark:bg-dark",
   TEXT_COLOR: "",
 };
@@ -188,7 +188,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-30",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-full",
+  HEIGHT: "h-[80vh]",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",

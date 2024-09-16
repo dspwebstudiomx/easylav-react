@@ -9,6 +9,7 @@ const ContactoPagina = lazy(() => import("pages/contacto/ContactoPagina"));
 const Franquicias = lazy(() => import("pages/franquicias/Franquicias"));
 const GuiaEstilos = lazy(() => import("pages/guia-estilos/GuiaEstilos"));
 const NotFound = lazy(() => import("pages/404/NotFound"));
+const Test = lazy(() => import("pages/test/Test"));
 const PoliticaPrivacidad = lazy(
   () => import("pages/politica-privacidad/PoliticaPrivacidad"),
 );
@@ -31,6 +32,7 @@ export default function App() {
           <Route path='/terminos-condiciones/' element={<TerminosCondiciones />} />
           <Route path='/preguntas-frecuentes/' element={<PreguntasFrecuentes />} />
           <Route path='/guia-estilos/' element={<GuiaEstilos />} />
+          <Route path='/test/' element={<Test />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
