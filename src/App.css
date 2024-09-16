@@ -31,6 +31,10 @@
   box-sizing: border-box;
 }
 
+.hola {
+  background-color: #eaf7f6;
+}
+
 
 html {
   scroll-behavior: smooth;

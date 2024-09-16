@@ -9,7 +9,7 @@ function Hero({ ...props }) {
   const classes = {
     section: `relative overflow-hidden z-0 flex`,
     image: "absolute inset-0 h-full object-cover w-full z-0",
-    container: `absolute top-20 2xl:left-52 z-2 text-light flex flex-col items-center `,
+    container: `absolute w-full h-full flex top-32 md:top-20 xl:left-20 max-w-screen-lg lg:mx-0 flex mx-auto 2xl:left-96`,
     opacity: `${opacity} absolute inset-0 z-1 ${opacityColor}`,
   };
 
@@ -24,7 +24,11 @@ function Hero({ ...props }) {
         image_1024={backgroundImage_1024}
         image_1920={backgroundImage_1920} />
       <div id={`opacidad-${id}`} className={classes.opacity} />
-      <Container id={`contenido-${id}`} className={`${classes.container} ${height}`}>{children}</Container>
+      <Container id={`contenido-${id}`} className={`${classes.container} ${height}`}>
+        <div className="w-4/5 mx-auto">
+          {children}
+        </div>
+      </Container>
     </Section>
   );
 }

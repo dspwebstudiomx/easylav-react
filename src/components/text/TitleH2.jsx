@@ -14,7 +14,7 @@ const styles = `
 const TitleH2 = ({ children }) => {
 
   return (
-    <h2 className={`${styles} mr-auto mb-2`}>
+    <h2 className={`${styles} mr-auto`}>
       {children}
     </h2>
   )

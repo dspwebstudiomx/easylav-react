@@ -12,7 +12,7 @@ const BorderBottom = ({ ...props }) => {
 
   const { children } = props
 
-  const styles = `${BORDER_BOTTOM_UI.BORDER_LEFT} ${BORDER_BOTTOM_UI.JUSTIFY} ${BORDER_BOTTOM_UI.WIDTH}`
+  const styles = `${BORDER_BOTTOM_UI.BORDER} ${BORDER_BOTTOM_UI.JUSTIFY} ${BORDER_BOTTOM_UI.WIDTH}`
 
   return (
     <div className={styles}>

@@ -31,7 +31,7 @@ export const GENERAL_UI = {
   },
   TITLEH2: {
     FONT_FAMILY: "text-din",
-    FONT_SIZE: "text-2xl md:text-3xl",
+    FONT_SIZE: "text-3xl",
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -75,7 +75,7 @@ export const LOADING_UI = {
 // Section
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
-  PADDING: "p-12 sm:p-20 2xl:p-20",
+  PADDING: "py-12 px-8 sm:p-20 2xl:p-2",
   BACKGROUND_COLOR: "bg-section dark:bg-dark",
   TEXT_COLOR: "",
 };
@@ -105,7 +105,9 @@ export const NAVBAR_UI = {
     HEIGHT: "h-[100px]",
   },
   NAVLINKS: {
-    DISPLAY: "flex items-center jsutify-4 gap-4",
+    DISPLAY: "flex items-center gap-4",
+    FONT_WEIGHT: "font-semibold",
+    FONT_SIZE: "text-base",
   },
 };
 
@@ -122,7 +124,7 @@ export const BANNER_UI = {
 // Border Bottom
 export const BORDER_BOTTOM_UI = {
   WIDTH: "w-full",
-  BORDER_LEFT: "flex border-b-4 border-b-primary",
+  BORDER: "flex border-b-4 border-b-primary pb-2",
   JUSTIFY: "justify-center",
 };
 
@@ -153,6 +155,12 @@ export const BUTTON_UI = {
   LETTER_SPACING: "tracking-wider sm:tracking-normal",
 };
 
+// Button Container
+export const BUTTON_CONTAINER = {
+  POSITION: "place-items-center sm:place-items-start",
+  DISTANCE: "mt-12",
+};
+
 //Primary Button
 export const BUTTON_PRIMARY_UI = {
   HEIGHT: "min-h-[70px]",
@@ -180,7 +188,7 @@ export const HEROINICIO_UI = {
   TEXT_COLOR: "text-light",
   OPACITY: "opacity-30",
   OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[100vh] sm:h-[110vh] lg:h-[60vh]",
+  HEIGHT: "h-full",
 };
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
@@ -226,7 +234,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[280px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] md:h-[340px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex lg:flex-row gap-0 justify-between sm:items-center sm:flex-row",
@@ -260,7 +268,7 @@ export const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[220px] sm:w-[280px] 2xl:w-[300px]",
+    WIDTH: "w-[260px] sm:w-[280px] 2xl:w-[300px]",
   },
   MAP: {
     CONTAINER: {
