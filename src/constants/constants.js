@@ -20,11 +20,11 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "font-din",
-    FONT_SIZE: "text-3xl md:text-4xl",
+    FONT_SIZE: "text-3xl",
     FONT_WEIGHT: "font-semibold",
-    COLOR: "text-dark dark:text-light",
+    COLOR: "text-light",
     BACKGROUND_COLOR: "",
-    JUSTIFY: "mx-auto",
+    JUSTIFY: "mr-auto",
     HERO: {
       COLOR: "text-light",
     },
@@ -83,7 +83,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-20 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg mx-auto",
+    "flex flex-col gap-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg",
 };
 
 // Navbar
@@ -166,7 +166,7 @@ export const BUTTON_PRIMARY_UI = {
   HEIGHT: "min-h-[70px]",
   TEXT_COLOR: "text-light",
   BACKGROUND_COLOR:
-    "bg-gradient-to-r from-primary_dark to-primary dark:bg-gradient dark:from-secondary_dark dark:to-secondary_light ",
+    "bg-gradient-to-r from-primary_dark to-primary dark:bg-gradient dark:from-secondary_dark dark:to-secondary_light hover:bg-primary_dark",
   BORDER:
     "border-l-primary_dark border-l-4 border-t-primary_light border-t-4 hover:border-t-primary_light hover:border-l-primary dark:border-l-secondary dark:border-t-secondary_light dark:hover:border-l-secondary",
 };

@@ -15,7 +15,7 @@ export default function Container({ id, children, className }) {
   const classes = `${className} ${CONTAINER_UI.DISPLAY} `
 
   return (
-    <div id={id} className={classes}>
+    <div id={id} className={`${classes} mx-auto`}>
       {children}
     </div>
   );
