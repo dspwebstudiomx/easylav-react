@@ -6,10 +6,10 @@
 */
 
 // Importaciones
-import { canastaderopa_640, Placeholder } from "assets";
 import { Banner, BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, TitleH1 } from "components";
 import DescriptionWithBulletPoint from "components/list/DescriptionWithBulletPoint";
 import { BANNER_UI, FRANQUICIAS_PROPS, FRANQUICIAS_UI } from "constants/constants";
+import { franquiciasImagenes } from "data";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaInfoCircle } from "react-icons/fa";
@@ -24,9 +24,6 @@ const Franquicias = () => {
     setShowModal(!showModal);
     document.body.style.overflow = showModal ? "auto" : "hidden";
   };
-
-  const img1 = canastaderopa_640;
-  const img2 = Placeholder;
 
   return (
     <PageLayout>
@@ -78,72 +75,23 @@ const Franquicias = () => {
         {/* Columna 2 */}
         <div id="columma-2" className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
         >
-          <div className="h-auto rotate-[0deg]">
-            <ImageResponsive
-              src={img1}
-              className={"shadow-xl"}
-              imageAlt={"Placeholder"}
-              image_640={img1}
-              image_1024={img1}
-              image_1920={img1}
-              width={380}
-            />
-          </div>
-          <div className="h-auto rotate-[0deg]">
-            <ImageResponsive
-              src={img2}
-              className={"shadow-xl"}
-              imageAlt={"Placeholder"}
-              image_640={img2}
-              image_1024={img2}
-              image_1920={img2}
-              width={380}
-            />
-          </div>
-          <div className="h-auto rotate-[0deg]">
-            <ImageResponsive
-              src={img1}
-              className={"shadow-xl"}
-              imageAlt={"Placeholder"}
-              image_640={img1}
-              image_1024={img1}
-              image_1920={img1}
-              width={380}
-            />
-          </div>
-          <div className="h-auto rotate-[0deg]">
-            <ImageResponsive
-              src={img2}
-              className={"shadow-xl"}
-              imageAlt={"Placeholder"}
-              image_640={img2}
-              image_1024={img2}
-              image_1920={img2}
-              width={380}
-            />
-          </div>
-          <div className="h-auto rotate-[0deg]">
-            <ImageResponsive
-              src={img1}
-              className={"shadow-xl"}
-              imageAlt={"Placeholder"}
-              image_640={img1}
-              image_1024={img1}
-              image_1920={img1}
-              width={380}
-            />
-          </div>
-          <div className="h-auto rotate-[0deg]">
-            <ImageResponsive
-              src={img2}
-              className={"shadow-xl"}
-              imageAlt={"Placeholder"}
-              image_640={img2}
-              image_1024={img2}
-              image_1920={img2}
-              width={380}
-            />
-          </div>
+          {franquiciasImagenes.map(imagen => {
+            return (
+              <div key={imagen.id} className="h-auto rotate-[0deg]">
+                <ImageResponsive
+                  src={imagen.image_640}
+                  className={`${FRANQUICIAS_UI.IMAGE.WIDTH}`}
+                  imageAlt={imagen.image_640}
+                  image_640={imagen.image_640}
+                  image_1024={imagen.image_640}
+                  image_1920={imagen.image_640}
+                  width={380}
+                />
+              </div>
+            )
+          }
+          )
+          }
         </div>
         {/* Columna 2 */}
 

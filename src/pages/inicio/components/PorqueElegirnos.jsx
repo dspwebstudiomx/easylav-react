@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { Placeholder } from 'assets';
+import { VistaDentroLavanderia_640 as img } from 'assets';
 import { BorderLeft, Container, DescriptionWithBulletPoint, ImageResponsive, Section, TitleH2 } from 'components';
 import { PORQUE_ELEGIRNOS_PROPS, PORQUE_ELEGIRNOS_UI } from 'constants/constants';
 import { porqueElegirnosDescripciones } from 'data';
@@ -31,12 +31,12 @@ export default function PorqueElegirnos() {
           </div>
           <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
             <ImageResponsive
-              src={Placeholder}
+              src={img}
               imageAlt={'Placeholder'}
-              className={'shadow-image'}
-              image_640={Placeholder}
-              image_1024={Placeholder}
-              image_1920={Placeholder}
+              // className={'shadow-image'}
+              image_640={img}
+              image_1024={img}
+              image_1920={img}
             />
           </div>
           <div className=''></div>

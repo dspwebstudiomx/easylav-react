@@ -20,9 +20,9 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "font-din",
-    FONT_SIZE: "text-3xl",
+    FONT_SIZE: "text-2xl sm:text-3xl",
     FONT_WEIGHT: "font-semibold",
-    COLOR: "text-light",
+    COLOR: "text-dark",
     BACKGROUND_COLOR: "",
     JUSTIFY: "mr-auto",
     HERO: {
@@ -38,7 +38,7 @@ export const GENERAL_UI = {
   },
   TITLEH3: {
     FONT_FAMILY: "text-din",
-    FONT_SIZE: "text-xl",
+    FONT_SIZE: "text-2xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -57,7 +57,7 @@ export const GENERAL_UI = {
   PARAGRAPH: {
     FONT_FAMILY: "text-din",
     FONT_SIZE: "text-xl sm:text-xl",
-    COLOR: "text-[#324] dark:text-light",
+    COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
     LETTER_SPACING: "tracking-tight",
     LINE_HEIGHT: "leading-0",
@@ -184,12 +184,7 @@ export const BUTTON_SECONDARY_UI = {
 };
 
 // Hero Inicio
-export const HEROINICIO_UI = {
-  TEXT_COLOR: "text-light",
-  OPACITY: "opacity-30",
-  OPACITY_COLOR: "bg-dark",
-  HEIGHT: "h-[80vh]",
-};
+export const HEROINICIO_UI = {};
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
   IMAGE_ALT: "canasta de ropa verde con ropa sucia de color con fondo blanco",
@@ -263,11 +258,11 @@ export const SUCURSAL_CARD_UI = {
     BACKGROUND: "bg-light",
     COLOR: "text-dark",
     DISPLAY: "flex  flex-col relative mx-auto",
-    HEIGHT: "min-h-[480px] 2xl:h-auto",
+    HEIGHT: "min-h-[440px]",
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
-    SHADOW: "shadow-xl",
+    SHADOW: "shadow-2xl",
     WIDTH: "w-[260px] sm:w-[280px] 2xl:w-[300px]",
   },
   MAP: {
@@ -306,21 +301,24 @@ export const FRANQUICIAS_UI = {
     LETTER_SPACING: "tracking-wide",
   },
   CONTAINER: {
-    DISPLAY: "grid md:grid-cols-2 gap-12",
+    DISPLAY: "grid xl:grid-cols-2 gap-0",
   },
   COLUMNA_1: {
     DISPLAY: "flex flex-col items-start gap-12",
   },
   COLUMNA_2: {
     DISPLAY:
-      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-12 lg:gap-0 justify-items-end md:w-[60]",
-    HEIGHT: "h-auto",
-    MARGIN: "mx-auto mt-24 xl:mr-12  ",
-    PADDING: "lg:p-0 md:p-0",
-    WIDTH: "w-full",
+      "grid sm:grid-cols-2 justify-items-center lg:justify-items-end gap-y-8 md:gap-x-8",
+    HEIGHT: "sm:h-[500px] lg:h-[600px] xl:h-[800px]",
+    MARGIN: "mx-auto mt-24",
+    PADDING: "p-0",
+    WIDTH: "lg:w-[80%] xl:w-full",
   },
   UL: {
     DISPLAY: "flex flex-col gap-8",
+  },
+  IMAGE: {
+    WIDTH: "w-[320px] lg:w-[480px]",
   },
 };
 
@@ -393,5 +391,5 @@ export const PORQUE_ELEGIRNOS_UI = {
   ARTICLE: "mx-auto grid gap-x-20 gap-y-16 sm:grid-cols-2",
   CONTAINER: "mx-auto",
   CONTAINER_CARACTERISTICAS: "grid place-content-center gap-12",
-  CONTAINER_IMAGE: "items-center justify-end",
+  CONTAINER_IMAGE: "items-center lg:justify-end",
 };

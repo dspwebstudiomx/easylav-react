@@ -6,8 +6,8 @@
 */
 
 // Importaciones
-import lottieImage from 'assets/images/lottie/Animation.json';
-import { BorderLeft, Container, LottieAnimationImage, Paragraph, Section, TitleH2 } from 'components';
+import { VistaLavadorasySecadorasConDosMesas_640 as img } from 'assets';
+import { BorderLeft, Container, ImageResponsive, Paragraph, Section, TitleH2 } from 'components';
 import { ABOUT_PROPS, ABOUT_UI } from 'constants/constants';
 
 // Estructura
@@ -40,15 +40,15 @@ const SobreNosotros = () => {
             </Paragraph>
           </div>
           <div id='sobrenosotros-columna-2' className={ABOUT_UI.COLUMNS2_CONTAINER}>
-            {/* <ImageResponsive
-              src={img1}
-              className={'shadow-image'}
+            <ImageResponsive
+              src={img}
+              // className={'shadow-image'}
               imageAlt={'Placeholder'}
-              image_640={img1}
-              image_1024={img1}
-              image_1920={img1}
-            /> */}
-            <LottieAnimationImage lottieImage={lottieImage} />
+              image_640={img}
+              image_1024={img}
+              image_1920={img}
+            />
+            {/* <LottieAnimationImage lottieImage={lottieImage} /> */}
           </div>
         </div>
       </Container>

@@ -3,7 +3,7 @@ import { Camisas, canastaderopa_1920 } from 'assets'
 import { ButtonContainer, TitleH1 } from "components"
 import { scrollWithOffset } from 'functions'
 import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production'
-import BackgroundImage from "./BackgroundImage"
+import BackgroundImage from "../../components/sections/BackgroundImageSection"
 
 
 const Test = () => {

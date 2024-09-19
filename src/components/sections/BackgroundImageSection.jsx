@@ -1,7 +1,7 @@
 import { Container, Section } from 'components'
 import PropTypes from 'prop-types'
 
-const BackgroundImage = ({ children, image_768, image_576, image_240, image_1024, image_1200, image_1920, height, opacity, image, backgroundColor }) => {
+const BackgroundImageSection = ({ children, image_768, image_576, image_240, image_1024, image_1200, image_1920, height, opacity, image, backgroundColor }) => {
   return (
     <Section id='hero' className={`${height} relative overflow-hidden p-12 w-full z-0 xl:py-20`}>
 
@@ -32,7 +32,7 @@ const BackgroundImage = ({ children, image_768, image_576, image_240, image_1024
     </Section>
   )
 }
-BackgroundImage.propTypes = {
+BackgroundImageSection.propTypes = {
   children: PropTypes.node,
   image_240: PropTypes.string,
   image_576: PropTypes.string,
@@ -45,4 +45,4 @@ BackgroundImage.propTypes = {
   opacity: PropTypes.string,
   backgroundColor: PropTypes.string,
 }
-export default BackgroundImage
+export default BackgroundImageSection

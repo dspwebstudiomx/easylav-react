@@ -1,4 +1,5 @@
 export { franquiciaDescripciones } from "data/franquiciaDescripciones";
+export { franquiciasImagenes } from "data/franquiciasImagenes";
 export { frequentQuestions } from "data/frequentQuestions";
 export {
   linksPoliticas,

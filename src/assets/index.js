@@ -8,6 +8,10 @@ export { default as canastaderopa_2400 } from "../assets/images/images/annie-spr
 export { default as canastaderopa_640 } from "../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg";
 export { default as Camisas } from "../assets/images/images/camisas.webp";
 export { default as LaundryLady } from "../assets/images/images/laundrylady.webp";
+export { default as VistaDentroLavanderia_640 } from "../assets/images/images/lavanderia/vistadentrolavanderia_640.webp";
+export { default as VistaLavadorasySecadorasConDosMesas_640 } from "../assets/images/images/lavanderia/vistalavadorasysecadorascondosmesas_640.webp";
+export { default as VistaLavanderiaDesdeEntrada_1_640 } from "../assets/images/images/lavanderia/vistalavanderiadesdeentrada_1_640.webp";
+export { default as VistaLavanderiaDesdeEntrada_2_640 } from "../assets/images/images/lavanderia/vistalavanderiadesdeentrada_2_640.webp";
 export { default as Placeholder } from "../assets/images/images/Placeholder.webp";
 export { default as LogoHorizontalBlanco } from "../assets/images/logos/horizontal/logo-blanco.png";
 export { default as LogoHorizontalColor } from "../assets/images/logos/horizontal/logo-color.png";

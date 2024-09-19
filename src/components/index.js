@@ -40,7 +40,7 @@ export { default as NextPageButton } from "components/pagination/NextPageButton"
 export { default as PagePaginationIndex } from "components/pagination/PagePaginationIndex";
 export { default as Pager } from "components/pagination/Pager";
 export { default as PrevPageButton } from "components/pagination/PrevPageButton";
-export { default as BackgroundSection } from "components/sections/BackgroundSection";
+export { default as BackgroundImageSection } from "components/sections/BackgroundImageSection";
 export { default as SEOFriendly } from "components/SEOFriendly";
 export { default as Footer } from "components/templates/footer/Footer";
 export { default as FooterLinksGenerator } from "components/templates/footer/FooterLinksGenerator";

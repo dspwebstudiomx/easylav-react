@@ -5,10 +5,11 @@
   Fecha: 2022-08-20
 */
 
+// Importaciones
 import { ButtonContainer, ButtonSecondary, PaginatedSucursalCards, Section, TitleContainer } from 'components';
 import { SUCURSAL_SECTION_PROPS } from 'constants/constants';
 
-
+// Estructura
 const NuestrasSucursales = () => {
   return (
     <Section id='nuestras-sucursales' >
