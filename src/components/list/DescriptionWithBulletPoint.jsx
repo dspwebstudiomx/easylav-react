@@ -4,7 +4,7 @@ import { TbPoint } from "react-icons/tb"
 
 export default function DescriptionWithBulletPoint({ ...props }) {
 
-  const { texto, id, titulo } = props
+  const { id, texto, titulo } = props
 
   const classes = {
     caracteristica: 'flex gap-4 text-balance',
@@ -15,7 +15,7 @@ export default function DescriptionWithBulletPoint({ ...props }) {
       <span className='text-primary'>
         <TbPoint size={32} />
       </span>
-      <div className='flex flex-col justify-start items-start gap-6 w-2/3'>
+      <div className='flex flex-col justify-start items-start gap-6'>
         <TitleH3 title={titulo} />
         <Paragraph>
           {texto}

@@ -55,8 +55,8 @@ export const GENERAL_UI = {
     JUSTIFY: "mx-auto",
   },
   PARAGRAPH: {
-    FONT_FAMILY: "text-din",
-    FONT_SIZE: "text-xl sm:text-xl",
+    FONT_FAMILY: "text-din text-balance",
+    FONT_SIZE: "text-xl sm:text-xl mr-6 sm:mr-0",
     COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
     LETTER_SPACING: "tracking-tight",
@@ -97,7 +97,7 @@ export const NAVBAR_UI = {
   CONTAINER: {
     DISPLAY: "flex justify-between items-center h-full w-full",
     MARGIN: "mx-auto",
-    PADDING: "px-8 sm:px-0 md:px-0 xl:px-0",
+    PADDING: "px-8 sm:px-8 md:px-8 xl:px-0",
   },
   NAVBAR: {
     DISPLAY: "flex items-center justify-between gap-4",
@@ -301,7 +301,7 @@ export const FRANQUICIAS_UI = {
     LETTER_SPACING: "tracking-wide",
   },
   CONTAINER: {
-    DISPLAY: "grid xl:grid-cols-2 gap-0",
+    DISPLAY: "grid xl:grid-cols-2 sm:gap-20",
   },
   COLUMNA_1: {
     DISPLAY: "flex flex-col items-start gap-12",
@@ -388,8 +388,9 @@ export const PORQUE_ELEGIRNOS_UI = {
     CLASSNAME: "",
     HEIGHT: "h-auto",
   },
-  ARTICLE: "mx-auto grid gap-x-20 gap-y-16 sm:grid-cols-2",
+  ARTICLE: "mx-auto grid gap-x-20 gap-y-16",
   CONTAINER: "mx-auto",
   CONTAINER_CARACTERISTICAS: "grid place-content-center gap-12",
-  CONTAINER_IMAGE: "items-center lg:justify-end",
+  CONTAINER_BULLET_DETAILS: "grid sm:grid-cols-2 gap-8",
+  CONTAINER_IMAGE: "items-center lg:justify-end mt-8",
 };

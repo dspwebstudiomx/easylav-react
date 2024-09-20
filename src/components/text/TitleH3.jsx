@@ -13,7 +13,7 @@ const classes = `
 const TitleH3 = ({ title, className }) => {
 
   return (
-    <h3 className={`${classes} mx-auto -mb-2 ${className}`}>
+    <h3 className={`${classes} -mb-3 ${className}`}>
       {title}
     </h3>
   )
