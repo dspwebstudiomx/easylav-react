@@ -7,7 +7,7 @@ const Contacto = () => {
       id="contactDescription"
       className="animate__slower grid items-start md:grid-cols-2 md:gap-12 xl:gap-24"
     >
-      <div className="animate__animated animate__bounceInLeft grid gap-8">
+      <div className="animate__animated animate__bounceInLeft animate__slowest grid gap-8">
         <TitleH2>
           ¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.
         </TitleH2>
@@ -40,7 +40,7 @@ const Contacto = () => {
       </div>
       <div
         id="contactForm"
-        className="animate__animated animate__bounceInRight animate__slower mx-auto w-full"
+        className="animate__animated animate__bounceInRight animate__slowest mx-auto w-full"
       >
         <ContactForm />
       </div>

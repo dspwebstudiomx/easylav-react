@@ -30,7 +30,7 @@ const HeroInicio = () => {
   const buttonSize = xl
   const buttonText = 'Nuestros Servicios'
   const textTransform = 'uppercase'
-  const textSize = 'xl'
+  const textSize = '2xl'
   const href = '/#servicios'
 
   return (

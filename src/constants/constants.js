@@ -20,7 +20,7 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "font-din",
-    FONT_SIZE: "text-2xl sm:text-3xl",
+    FONT_SIZE: "text-2xl sm:text-3xl xl:text-4xl",
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark",
     BACKGROUND_COLOR: "",
@@ -47,7 +47,7 @@ export const GENERAL_UI = {
   },
   TITLEH4: {
     FONT_FAMILY: "text-din",
-    FONT_SIZE: "text-lg",
+    FONT_SIZE: "text-base",
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark",
     BACKGROUND_COLOR: "",
@@ -281,6 +281,9 @@ export const SUCURSAL_CARD_UI = {
     LINE_HEIGHT: "leading-1",
     JUSTIFY: "",
   },
+  ICON: {
+    SIZE: 16,
+  },
 };
 
 // Franquicias
@@ -309,7 +312,7 @@ export const FRANQUICIAS_UI = {
   COLUMNA_2: {
     DISPLAY:
       "grid sm:grid-cols-2 justify-items-center lg:justify-items-end gap-y-8 md:gap-x-8",
-    HEIGHT: "sm:h-[500px] lg:h-[600px] xl:h-[800px]",
+    HEIGHT: "lg:h-[600px] xl:h-[800px]",
     MARGIN: "mx-auto mt-24",
     PADDING: "p-0",
     WIDTH: "lg:w-[80%] xl:w-full",
@@ -388,9 +391,9 @@ export const PORQUE_ELEGIRNOS_UI = {
     CLASSNAME: "",
     HEIGHT: "h-auto",
   },
-  ARTICLE: "mx-auto grid gap-x-20 gap-y-16",
+  ARTICLE: "mx-auto grid sm:grid-cols-2 gap-x-20 gap-y-16",
   CONTAINER: "mx-auto",
   CONTAINER_CARACTERISTICAS: "grid place-content-center gap-12",
-  CONTAINER_BULLET_DETAILS: "grid sm:grid-cols-2 gap-8",
+  CONTAINER_BULLET_DETAILS: "grid lg:grid-cols-1 gap-8",
   CONTAINER_IMAGE: "items-center lg:justify-end mt-8",
 };

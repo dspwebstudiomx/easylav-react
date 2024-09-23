@@ -7,11 +7,17 @@
 
 // Importaciones
 import { VistaLavadorasySecadorasConDosMesas_640 as img } from 'assets';
-import { BorderLeft, Container, ImageResponsive, Paragraph, Section, TitleH2 } from 'components';
+import { BackgroundImageSection, BorderLeft, Container, Paragraph, Section, TitleH2 } from 'components';
 import { ABOUT_PROPS, ABOUT_UI } from 'constants/constants';
 
 // Estructura
 const SobreNosotros = () => {
+
+  const theme = 'dark'
+  const backgroundOpacity = 'opacity-0'
+  const backgroundColor = `bg-${theme}`
+  const imageDisplay = 'block'
+
   return (
     <Section
       id={ABOUT_PROPS.SECTION_ID}
@@ -40,15 +46,16 @@ const SobreNosotros = () => {
             </Paragraph>
           </div>
           <div id='sobrenosotros-columna-2' className={ABOUT_UI.COLUMNS2_CONTAINER}>
-            <ImageResponsive
+            {/* <ImageResponsive
               src={img}
               // className={'shadow-image'}
               imageAlt={'Placeholder'}
               image_640={img}
               image_1024={img}
               image_1920={img}
-            />
+            /> */}
             {/* <LottieAnimationImage lottieImage={lottieImage} /> */}
+            <BackgroundImageSection height="h-[240px] sm:h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={img} image_1200={img} image_576={img} image_1920={img} />
           </div>
         </div>
       </Container>

@@ -37,7 +37,8 @@ export default function PorqueElegirnos() {
                 )
               })}
             </div>
-            {/* <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
+          </div>
+          {/* <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
             <ImageResponsive
               src={img}
               imageAlt={'Placeholder'}
@@ -47,9 +48,8 @@ export default function PorqueElegirnos() {
               image_1920={img}
             />
           </div> */}
-            <div className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
-              <BackgroundImageSection height="h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={VistaLavanderiaDesdeEntrada_1_640} image_1200={VistaLavanderiaDesdeEntrada_1_640} image_576={VistaLavanderiaDesdeEntrada_1_640} image_1920={VistaLavanderiaDesdeEntrada_1_640} />
-            </div>
+          <div className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
+            <BackgroundImageSection height="h-[240px] sm:h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={VistaLavanderiaDesdeEntrada_1_640} image_1200={VistaLavanderiaDesdeEntrada_1_640} image_576={VistaLavanderiaDesdeEntrada_1_640} image_1920={VistaLavanderiaDesdeEntrada_1_640} />
           </div>
         </article>
       </Container>

@@ -44,7 +44,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
       {/* mapa */}
 
       {/* Contenido */}
-      <div className='relative flex flex-col justify-start gap-3 p-4'>
+      <div className='relative flex flex-col justify-start gap-3 p-4 px-10'>
         <div className='flex items-center justify-center mx-auto'>
           <TitleH4 title={title} />
         </div>
@@ -60,7 +60,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
           >
             <div className='flex gap-4'>
               <span className='text-secondary'>
-                <FaMapMarkerAlt size={18} />
+                <FaMapMarkerAlt size={SUCURSAL_CARD_UI.ICON.SIZE} />
               </span>
               <span className={styles.data}>{place}</span>
             </div>
@@ -69,7 +69,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
           {/* Horario */}
           <div className='mx-auto mb-2 flex w-full items-center gap-4'>
             <span className='text-secondary'>
-              <FaRegClock size={16} />
+              <FaRegClock size={SUCURSAL_CARD_UI.ICON.SIZE} />
             </span>
             <div className='flex gap-3 xl:gap-2'>
               <div className='flex flex-col gap-1'>

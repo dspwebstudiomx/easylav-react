@@ -17,7 +17,8 @@ const CarouselTestimonios = () => {
         <Swiper
           modules={[Pagination, Autoplay, Scrollbar]}
           className="mySwiper"
-          spaceBetween={50}
+          keyboard={true}
+          spaceBetween={40}
           autoplay={{
             delay: 6000,
             disableOnInteraction: true,
@@ -32,12 +33,12 @@ const CarouselTestimonios = () => {
             },
             768: {
               slidesPerView: 2,
-              spaceBetweenSlides: 20,
+              spaceBetweenSlides: 30,
               touchRatio: 1
             },
             1024: {
               slidesPerView: 3,
-              spaceBetweenSlides: 20,
+              spaceBetweenSlides: 30,
               touchRatio: 1
             },
           }
