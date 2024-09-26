@@ -338,7 +338,7 @@ export const FRANQUICIAS_UI = {
   },
   COLUMNA_2: {
     DISPLAY:
-      "grid justify-items-center sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-1 gap-8",
+      "grid justify-items-center sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-8",
     HEIGHT: "lg:h-auto xl:h-[800px]",
     MARGIN: "mx-auto mt-24",
     PADDING: "p-0",
@@ -425,7 +425,7 @@ export const PORQUE_ELEGIRNOS_UI = {
   CONTAINER_IMAGE: "items-center lg:justify-end mt-8",
 };
 
-// Hero Inicio
+// Quieres una franquicia - Inicio - Sección
 export const QUIERES_UNA_FRANQUICIA_UI = {
   THEME: "dark",
   BACKGROUND: {
@@ -444,18 +444,19 @@ export const QUIERES_UNA_FRANQUICIA_UI = {
   },
   BUTTON: {
     SIZE: "lg",
-    HREF: "/#servicios",
+    HREF: "/franquicias",
     TEXT: {
-      CONTENT: "Nuestros Servicios",
+      CONTENT: "Conocer más",
       COLOR: "light",
       SIZE: "xl",
-      TRANSFORM: "uppercase",
+      TRANSFORM: "",
     },
     CONTAINER: "place-content-center",
   },
   TITLE: {
     H2: {
-      CONTENT: "¿Quieres una franquicia?",
+      CONTENT:
+        "¿Estás listo para emprender un negocio rentable y en crecimiento? ",
       TRANSFORM: "uppercase",
       FONT_SIZE: "text-2xl",
       FONT_WEIGHT: "font-bold",

@@ -6,7 +6,7 @@ Fecha: 2022-08-25
 */
 
 // Importaciones
-import { Camisas } from 'assets'
+import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets'
 import { BackgroundImageSection, ButtonContainer } from "components"
 import { QUIERES_UNA_FRANQUICIA_UI } from 'constants/constants'
 import { scrollWithOffset } from 'functions'
@@ -22,10 +22,10 @@ const QuieresUnaFranquicia = () => {
     span: `text-${QUIERES_UNA_FRANQUICIA_UI.COLOR.TITLE} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.TRANSFORM} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.FONT_SIZE} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.FONT_WEIGHT} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.JUSTIFY}`,
   }
   const images = {
-    image_576: Camisas,
-    image_1024: Camisas,
-    image_1200: Camisas,
-    image_1920: Camisas
+    image_576: VistaLavanderiaDesdeEntrada_1_640,
+    image_1024: VistaLavanderiaDesdeEntrada_1_640,
+    image_1200: VistaLavanderiaDesdeEntrada_1_640,
+    image_1920: VistaLavanderiaDesdeEntrada_1_640
   }
 
   //! Falta la alineación del titulo
@@ -37,7 +37,7 @@ const QuieresUnaFranquicia = () => {
             {QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.CONTENT}
           </span>
           <p className={styles.paragraph}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi accusamus temporibus officia consequuntur earum! Ea repellendus iure, corrupti, sint repudiandae natus deleniti tempore nesciunt et odio culpa minus sit architecto recusandae non veniam voluptate est a atque accusamus inventore.
+            Imagina ser parte de una franquicia de lavandería, un sector que nunca pasa de moda y siempre tiene demanda. Con nuestra marca, no solo obtendrás un modelo de negocio probado y exitoso, sino también el respaldo y la capacitación necesaria para triunfar. Nuestros sistemas innovadores y tecnología de vanguardia te permitirán ofrecer un servicio excepcional, atrayendo a clientes que buscan calidad y conveniencia. No dejes pasar esta oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
           </p>
           <ButtonContainer position={styles.buttonContainer}>
             <HashLink to={QUIERES_UNA_FRANQUICIA_UI.BUTTON.HREF} scroll={el => scrollWithOffset(el)} >
