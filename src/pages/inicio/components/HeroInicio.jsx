@@ -8,7 +8,7 @@ Fecha: 2022-08-25
 // Importaciones
 import { Camisas } from 'assets'
 import { BackgroundImageSection, ButtonContainer, TitleH1 } from "components"
-import { GENERAL_UI, HEROINICIO_UI } from 'constants/constants'
+import { GENERAL_UI, HEROINICIO_PROPS, HEROINICIO_UI } from 'constants/constants'
 import { scrollWithOffset } from 'functions'
 import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production'
 
@@ -34,7 +34,7 @@ const HeroInicio = () => {
 
   //! Falta la alineación del titulo
   return (
-    <BackgroundImageSection height="full" opacity={`bg-${HEROINICIO_UI.BACKGROUND.COLOR} ${HEROINICIO_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={HEROINICIO_UI.DISPLAY.IMAGE} backgroundColor={HEROINICIO_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920}>
+    <BackgroundImageSection id={HEROINICIO_PROPS.SECTION_ID} height="full" opacity={`bg-${HEROINICIO_UI.BACKGROUND.COLOR} ${HEROINICIO_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={HEROINICIO_UI.DISPLAY.IMAGE} backgroundColor={HEROINICIO_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920}>
       <div id='hero-inicio_container' className={`grid md:grid-cols-1 gap-x-8 p-6 md:p-0`}>
         <div id='hero-inicio_info_container' className="flex flex-col gap-8 sm:w-2/3">
           <TitleH1 textColor={styles.titleH1.textColor} textTransform={styles.titleH1.textTransform} align={'center'}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también enemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </TitleH1>

@@ -1,9 +1,9 @@
 import { Container, Section } from 'components'
 import PropTypes from 'prop-types'
 
-const BackgroundImageSection = ({ children, image_768, image_576, image_240, image_1024, image_1200, image_1920, height, opacity, image, backgroundColor }) => {
+const BackgroundImageSection = ({ id, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, height, opacity, image, backgroundColor }) => {
   return (
-    <Section id='hero' className={`${height} relative overflow-hidden p-12 w-full z-0 xl:py-20`}>
+    <Section id={id} className={`${height} relative overflow-hidden p-12 w-full z-0 xl:py-20`}>
 
       {/* Background Image */}
       <img
@@ -33,6 +33,7 @@ const BackgroundImageSection = ({ children, image_768, image_576, image_240, ima
   )
 }
 BackgroundImageSection.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.node,
   image_240: PropTypes.string,
   image_576: PropTypes.string,
