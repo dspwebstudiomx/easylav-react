@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import { FaInstagram, FaRegEnvelope } from 'react-icons/fa6';
+import { FaInstagram, FaPhone, FaRegEnvelope } from 'react-icons/fa6';
 import { FiFacebook } from 'react-icons/fi';
 import SocialLink from '../links/SocialLink';
 
@@ -34,6 +34,15 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         icono={<FaRegEnvelope size={size = size + 1} className={classes.Link} />}
         ariaLabel={'Envia un correo electrónico para contactarme'}
         title="Envía un Correo Electrónico"
+        color={color}
+        circleBorder={circleBorder}
+        hover={hover}
+      />
+      <SocialLink
+        href={'tel:4435200593'}
+        icono={< FaPhone size={size = size - 1} className={classes.Link} />}
+        ariaLabel={'Realiza una llamada'}
+        title="Realiza una llamada"
         color={color}
         circleBorder={circleBorder}
         hover={hover}
