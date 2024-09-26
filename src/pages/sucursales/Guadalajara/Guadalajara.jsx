@@ -1,8 +1,43 @@
+/*
+  Guadalajara - Sucursales
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-26
+*/
 
+// Importaciones
+import { CentroGuadalajara as image } from 'assets'
+import { PageLayoutPlaces, SEOFriendly } from "components"
+import PropTypes from 'prop-types'
+
+// Estructura
 const Guadalajara = () => {
+
   return (
-    <div>Guadalajara</div>
+    <>
+      <SEOFriendly
+        title="Morelia | Sucursales EasyLav: Tu lavandería ideal"
+        url="easylav-react.netlify.app/sucursales/morelia"
+        description="Conoce nuestras sucursales en Guadalajara, Jalisco. EasyLav, siempre juntos"
+        author="dspwebstudio"
+        keywords="lavandería Morelia, planchado Morelia"
+        ogImage={image}
+        ogImageAlt="Zócalo de Guadalajara, Jalisco con vista hacia la catedral"
+        ogType="website"
+      />
+      <PageLayoutPlaces
+        city='Guadalajara'
+        image_576={image}
+        image_1024={image}
+        image_1200={image}
+        image_1920={image}
+      />
+    </>
   )
 }
-
+Guadalajara.propTypes = {
+  image: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node
+}
 export default Guadalajara

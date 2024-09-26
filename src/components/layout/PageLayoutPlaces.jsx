@@ -1,26 +1,45 @@
+/*
+  Page Layout Places - Template
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-26
+*/
+
+// Importaciones
+import { BackgroundImageSection, Contacto, SucursalCardPerCity } from 'components'
 import PropTypes from 'prop-types'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
 import Container from '../containers/Container'
-import Hero from '../hero/Hero'
 import Footer from '../templates/footer/Footer'
 import Header from '../templates/header/Header'
 import Section from '../templates/Section'
 import Spacing from './Spacing'
 
-const PageLayoutPlaces = ({ children, id, image }) => {
+
+// Estructura
+const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 }) => {
+
+  const styles = {
+    span: `text-4xl uppercase font-semibold tracking-wider text-light py-8`,
+  }
   return (
     <>
       <Header />
-      <main id='contenido' className='sm:mt-24 xl:mt-12'>
-        <Hero backgroundImage={image} opacity={'opacity-25'} height={'h-20'}>
-          <h1>Morelia</h1>
-        </Hero>
-        <Section id={id} className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
+      <main id={`sucursales-${city}`} className='mt-[100px] sm:mt-0 xl:mt-[100px]'>
+        <BackgroundImageSection height="full" opacity='opacity-70' titleColor='text-light' textColor='text-light' image='block' backgroundColor='bg-dark' image_1024={image_1024} image_1200={image_1200} image_576={image_576} image_1920={image_1920}>
+          <span className={styles.span}>
+            {city}
+          </span>
+        </BackgroundImageSection >
+
+        <Section id='sucursales-morelia' className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={''}>
-            {children}
+            <SucursalCardPerCity city={city} />
+            <Spacing distance={'mt-[10vh]'} />
+            <Contacto />
           </Container>
-          <Spacing height={'h-24'} />
         </Section>
+
       </main >
       <Footer />
       <ScrollToTopButton />
@@ -29,8 +48,12 @@ const PageLayoutPlaces = ({ children, id, image }) => {
 }
 PageLayoutPlaces.propTypes = {
   children: PropTypes.node.isRequired,
-  id: PropTypes.string,
-  image: PropTypes.string,
+  city: PropTypes.string,
+  image_576: PropTypes.string,
+  image_1024: PropTypes.string,
+  image_1200: PropTypes.string,
+  image_1920: PropTypes.string,
+
 }
 
 export default PageLayoutPlaces

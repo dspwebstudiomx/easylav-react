@@ -1,31 +1,36 @@
-import { Placeholder as image } from 'assets'
-import { Container, Footer, Header, Hero, ScrollToTopButton, Section, Spacing } from "components"
+/*
+  Morelia - Sucursales
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-26
+*/
+
+// Importaciones
+import { CatedralMorelia as image } from 'assets'
+import { PageLayoutPlaces, SEOFriendly } from "components"
 import PropTypes from 'prop-types'
 
 const Morelia = () => {
 
-  const images = {
-    backgroundImage_640: image,
-    backgroundImage_1024: image,
-    backgroundImage_1920: image,
-  }
-
   return (
     <>
-      <Header />
-      <main id='sucursal-morelia' className='sm:mt-24 xl:mt-12'>
-        <Hero backgroundImage_640={images.backgroundImage_640} backgroundImage_1024={images.backgroundImage_1024} backgroundImage_1920={images.backgroundImage_1920} opacity='opacity-60' backgroundColor='bg-dark' height='h-50' opacityColor='bg-dark'>
-
-        </Hero>
-        <Section id='sucursales-morelia' className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
-          <Container className={''}>
-
-          </Container>
-          <Spacing height={'h-24'} />
-        </Section>
-      </main >
-      <Footer />
-      <ScrollToTopButton />
+      <SEOFriendly
+        title="Morelia | Sucursales EasyLav: Tu lavandería ideal"
+        url="easylav-react.netlify.app/sucursales/morelia"
+        description="Conoce nuestras sucursales en Morelia, Michoacán. EasyLav, siempre juntos"
+        author="dspwebstudio"
+        keywords="lavandería Morelia, planchado Morelia"
+        ogImage={image}
+        ogImageAlt="Calle Benito Juaréz con vista a la Catedral de Morelia"
+        ogType="website"
+      />
+      <PageLayoutPlaces
+        city='Morelia'
+        image_576={image}
+        image_1024={image}
+        image_1200={image}
+        image_1920={image}
+      />
     </>
   )
 }
