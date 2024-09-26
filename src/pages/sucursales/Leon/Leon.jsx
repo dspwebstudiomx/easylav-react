@@ -8,7 +8,6 @@
 // Importaciones
 import { Camisas as image } from 'assets'
 import { PageLayoutPlaces, SEOFriendly } from "components"
-import PropTypes from 'prop-types'
 
 // Estructura
 const Leon = () => {
@@ -34,10 +33,5 @@ const Leon = () => {
       />
     </>
   )
-}
-Leon.propTypes = {
-  image: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  children: PropTypes.node
 }
 export default Leon

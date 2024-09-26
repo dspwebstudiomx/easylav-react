@@ -8,7 +8,6 @@
 // Importaciones
 import { CatedralMorelia as image } from 'assets'
 import { PageLayoutPlaces, SEOFriendly } from "components"
-import PropTypes from 'prop-types'
 
 const Morelia = () => {
 
@@ -34,10 +33,4 @@ const Morelia = () => {
     </>
   )
 }
-Morelia.propTypes = {
-  image: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  children: PropTypes.node
-}
-
 export default Morelia

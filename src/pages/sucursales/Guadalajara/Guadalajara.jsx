@@ -8,7 +8,6 @@
 // Importaciones
 import { CentroGuadalajara as image } from 'assets'
 import { PageLayoutPlaces, SEOFriendly } from "components"
-import PropTypes from 'prop-types'
 
 // Estructura
 const Guadalajara = () => {
@@ -34,10 +33,5 @@ const Guadalajara = () => {
       />
     </>
   )
-}
-Guadalajara.propTypes = {
-  image: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  children: PropTypes.node
 }
 export default Guadalajara
