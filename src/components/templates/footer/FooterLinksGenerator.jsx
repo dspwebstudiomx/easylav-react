@@ -19,7 +19,7 @@ export default function FooterLinksGenerator({ links }) {
             >
               <TbPoint
                 className="text-2xl text-primary"
-                size={32}
+                size={20}
                 title={`Visita ${link.name}`}
                 onClick={scrollToTop}
               />

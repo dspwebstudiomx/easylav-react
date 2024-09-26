@@ -20,7 +20,7 @@ export default function FooterNavHashLinksGenerator({ links }) {
             >
               <TbPoint
                 className="text-2xl text-primary"
-                size={32}
+                size={20}
                 title={`Visita ${link.name}`}
               />
               <span className="ml-2">{link.name}</span>
