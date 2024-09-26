@@ -19,25 +19,26 @@
 // General Styles
 export const GENERAL_UI = {
   TITLEH1: {
-    FONT_FAMILY: "font-din",
-    FONT_SIZE: "text-2xl sm:text-3xl xl:text-4xl",
-    FONT_WEIGHT: "font-semibold",
-    COLOR: "text-dark",
+    FONT_FAMILY: "",
+    FONT_SIZE: "text-2xl sm:text-3xl xl:text-3xl",
+    FONT_WEIGHT: "font-bold",
+    COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
     JUSTIFY: "mr-auto",
     HERO: {
       COLOR: "text-light",
     },
+    TRANSFORM: "uppercase",
   },
   TITLEH2: {
-    FONT_FAMILY: "text-din",
+    FONT_FAMILY: "font-din-bold",
     FONT_SIZE: "text-3xl",
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
   },
   TITLEH3: {
-    FONT_FAMILY: "text-din",
+    FONT_FAMILY: "font-din-regular",
     FONT_SIZE: "text-2xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
@@ -46,7 +47,7 @@ export const GENERAL_UI = {
     TEXT_TRANSFORM: "uppercase",
   },
   TITLEH4: {
-    FONT_FAMILY: "text-din",
+    FONT_FAMILY: "font-din-regular",
     FONT_SIZE: "text-base",
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark",
@@ -55,7 +56,7 @@ export const GENERAL_UI = {
     JUSTIFY: "mx-auto",
   },
   PARAGRAPH: {
-    FONT_FAMILY: "text-din text-balance",
+    FONT_FAMILY: "font-din text-balance",
     FONT_SIZE: "text-xl sm:text-xl mr-6 sm:mr-0",
     COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
@@ -115,7 +116,7 @@ export const NAVBAR_UI = {
 export const BANNER_UI = {
   BORDER: "border-2",
   COLOR: "text-dark",
-  FONT_SIZE: "text-lg",
+  FONT_SIZE: "text-xl",
   PADDING: "p-8",
   ROUNDED: "rounded-xl",
   THEME: "primary",
@@ -184,7 +185,33 @@ export const BUTTON_SECONDARY_UI = {
 };
 
 // Hero Inicio
-export const HEROINICIO_UI = {};
+export const HEROINICIO_UI = {
+  THEME: "dark",
+  BACKGROUND: {
+    OPACITY: "opacity-50",
+    COLOR: "dark",
+  },
+  DISPLAY: {
+    BUTTON: "block",
+    IMAGE: "block",
+    PARAGRAPH: "hidden",
+  },
+  COLOR: {
+    BUTTON: "primary",
+    PARAGRAPH: "light",
+    TITLE: "light",
+  },
+  BUTTON: {
+    SIZE: "lg",
+    HREF: "/#servicios",
+    TEXT: {
+      CONTENT: "Nuestros Servicios",
+      COLOR: "light",
+      SIZE: "xl",
+      TRANSFORM: "",
+    },
+  },
+};
 export const HEROINICIO_PROPS = {
   SECTION_ID: "inicio",
   IMAGE_ALT: "canasta de ropa verde con ropa sucia de color con fondo blanco",
@@ -311,8 +338,8 @@ export const FRANQUICIAS_UI = {
   },
   COLUMNA_2: {
     DISPLAY:
-      "grid sm:grid-cols-2 justify-items-center lg:justify-items-end gap-y-8 md:gap-x-8",
-    HEIGHT: "lg:h-[600px] xl:h-[800px]",
+      "grid justify-items-center sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-1 gap-8",
+    HEIGHT: "lg:h-auto xl:h-[800px]",
     MARGIN: "mx-auto mt-24",
     PADDING: "p-0",
     WIDTH: "lg:w-[80%] xl:w-full",
@@ -396,4 +423,43 @@ export const PORQUE_ELEGIRNOS_UI = {
   CONTAINER_CARACTERISTICAS: "grid place-content-center gap-12",
   CONTAINER_BULLET_DETAILS: "grid lg:grid-cols-1 gap-8",
   CONTAINER_IMAGE: "items-center lg:justify-end mt-8",
+};
+
+// Hero Inicio
+export const QUIERES_UNA_FRANQUICIA_UI = {
+  THEME: "dark",
+  BACKGROUND: {
+    OPACITY: "opacity-80",
+    COLOR: "dark",
+  },
+  DISPLAY: {
+    BUTTON: "block",
+    IMAGE: "block",
+    PARAGRAPH: "block",
+  },
+  COLOR: {
+    BUTTON: "primary",
+    PARAGRAPH: "light",
+    TITLE: "light",
+  },
+  BUTTON: {
+    SIZE: "lg",
+    HREF: "/#servicios",
+    TEXT: {
+      CONTENT: "Nuestros Servicios",
+      COLOR: "light",
+      SIZE: "xl",
+      TRANSFORM: "uppercase",
+    },
+    CONTAINER: "place-content-center",
+  },
+  TITLE: {
+    H2: {
+      CONTENT: "¿Quieres una franquicia?",
+      TRANSFORM: "uppercase",
+      FONT_SIZE: "text-2xl",
+      FONT_WEIGHT: "font-bold",
+      JUSTIFY: "mx-auto",
+    },
+  },
 };

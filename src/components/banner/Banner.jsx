@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 // Estructura
 const Banner = ({ children, themeColor }) => {
 
-  const classes = `bg-${themeColor}_light border-${themeColor}_dark text-dark ${BANNER_UI.BORDER} ${BANNER_UI.COLOR} ${BANNER_UI.FONT_SIZE}  ${BANNER_UI.PADDING} ${BANNER_UI.ROUNDED}`
+  const classes = ` bg-${themeColor}_light border-${themeColor}_dark text-dark ${BANNER_UI.BORDER} ${BANNER_UI.COLOR} ${BANNER_UI.FONT_SIZE}  ${BANNER_UI.PADDING} ${BANNER_UI.ROUNDED}`
 
   return (
     <p className={classes}>

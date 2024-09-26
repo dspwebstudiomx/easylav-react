@@ -6,6 +6,7 @@ import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
 import CantidadSucursales from './cantidadSucursales/CantidadSucursales';
+import QuieresUnaFranquicia from './franquicias/QuieresUnaFranquicia';
 const HeroInicio = lazy(() => import('./components/HeroInicio'));
 const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
@@ -52,6 +53,7 @@ const Inicio = () => (
       <NuestrasSucursales />
       {/* <Testimonios /> */}
       <CarouselTestimonios />
+      <QuieresUnaFranquicia />
       <Section backgroundColor={SECTION_BACKGROUNDCOLOR_CLASSNAME} className={SECTION_CLASSNAME}>
         <Container className={CONTAINER_CLASSNAME}>
           <Contacto />

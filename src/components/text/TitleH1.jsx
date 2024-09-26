@@ -19,6 +19,7 @@ const TitleH1 = ({ children, textColor }) => {
   ${GENERAL_UI.TITLEH1.FONT_WEIGHT}
   ${GENERAL_UI.TITLEH1.BACKGROUND_COLOR}
   ${GENERAL_UI.TITLEH1.JUSTIFY}
+  ${GENERAL_UI.TITLEH1.TRANSFORM}
   `
   return (
     <h1 className={`${styles} ${textColor}`}>

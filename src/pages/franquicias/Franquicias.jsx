@@ -22,7 +22,7 @@ const Franquicias = () => {
 
   const handleModalToggle = () => {
     setShowModal(!showModal);
-    document.body.style.overflow = showModal ? "auto" : "hidden";
+    document.body.style.overflow = !showModal ? "auto" : "hidden";
   };
 
   return (
@@ -43,7 +43,7 @@ const Franquicias = () => {
               Quieres una franquicia?
             </TitleH1>
           </BorderLeft>
-          <ul id={FRANQUICIAS_PROPS.COLUMNA_1.UL} className={`${FRANQUICIAS_UI.UL.DISPLAY}`}>
+          <ul id={FRANQUICIAS_PROPS.COLUMNA_1.UL} className={`${FRANQUICIAS_UI.UL.DISPLAY} text-`}>
             {franquiciaDescripciones.map((descripcion) => {
               return (
                 <DescriptionWithBulletPoint
