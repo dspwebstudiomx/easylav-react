@@ -10,6 +10,7 @@ export { default as ButtonSecondary } from "components/buttons/ButtonSecondary";
 export { default as DarkModeButton } from "components/buttons/DarkModeButton";
 export { default as ScrollToTopButton } from "components/buttons/ScrollToTopButton";
 export { default as SubmitButton } from "components/buttons/SubmitButton";
+export { default as BackgroundCard } from "components/cards/BackgroundCard";
 export { default as PaginatedSucursalCards } from "components/cards/PaginatedSucursalCards";
 export { default as SucursalCard } from "components/cards/SucursalCard";
 export { default as SucursalCardPerCity } from "components/cards/SucursalCardPerCity";

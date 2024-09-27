@@ -1,7 +1,16 @@
-import image from "assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg";
-import { PageLayout, SEOFriendly, Spacing, SucursalCardPerCity } from "components";
+/*
+  Sucursales - Página
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-26
+*/
+
+// Importaciones
+import { CentroGuadalajara as guadalajara, CatedralMorelia as image, canastaderopa_640 as leon, CatedralMorelia as morelia } from 'assets';
+import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
+// Estructura
 const Sucursales = () => {
   scrollToTop();
   return (
@@ -17,13 +26,17 @@ const Sucursales = () => {
         ogType="website"
       />
       <PageLayout id={"Sucursales"}>
-        <SucursalCardPerCity city='Morelia' />
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
+          <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' />
+          <BackgroundCard image={leon} title='León' href='/sucursales/leon' />
+          <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' />
+        </div>
+        {/* <SucursalCardPerCity city='Morelia' />
         <Spacing height={"h-8"} />
-        <SucursalCardPerCity city='León' />
+        <SucursalCardPerCity city='León' /> */}
       </PageLayout>
     </>
 
   );
 };
-
 export default Sucursales;

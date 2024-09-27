@@ -69,9 +69,9 @@ export default function Footer() {
           </Container>
         </div>
         <div className="bg-primary py-6 text-light">
-          <div className="mx-auto flex w-[80vw] flex-col justify-between gap-4 text-center text-sm font-semibold sm:w-[65vw] sm:flex-row sm:gap-20 sm:text-left xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+          <div className="mx-auto flex w-[80vw] justify-between gap-4 text-center text-sm font-semibold sm:w-[65vw] sm:flex-row sm:gap-20 sm:text-left xl:max-w-screen-xl 2xl:max-w-screen-2xl">
             <h3>Derechos Reservados 2024</h3>
-            <h3 className="flex flex-col lg:flex-row">
+            <h3 className="flex">
               <span>Diseñado y Desarrollado por:</span>
               <a
                 href="https://dspwebstudio.com"

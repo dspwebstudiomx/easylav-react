@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
-import { FaInstagram, FaPhone, FaRegEnvelope } from 'react-icons/fa6';
-import { FiFacebook } from 'react-icons/fi';
+import { FaInstagram, FaRegEnvelope } from 'react-icons/fa6';
+import { FiFacebook, FiPhone } from 'react-icons/fi';
 import SocialLink from '../links/SocialLink';
 
 const classes = {
@@ -21,7 +21,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         hover={hover}
       />
       <SocialLink
-        href={'https://www.instagram.com/profile.php?id=61562871132158'}
+        href={'https://www.instagram.com/lavanderiaseasylav/'}
         icono={<FaInstagram size={size} className={classes.Link} />}
         ariaLabel={'Accede a mi  cuenta de Instagram'}
         title="Visita mi perfil de Instagram"
@@ -40,7 +40,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
       />
       <SocialLink
         href={'tel:4435200593'}
-        icono={< FaPhone size={size = size - 1} className={classes.Link} />}
+        icono={< FiPhone size={size = size - 1} className={classes.Link} />}
         ariaLabel={'Realiza una llamada'}
         title="Realiza una llamada"
         color={color}
