@@ -43,16 +43,16 @@ export default function Footer() {
             {/* Footer Services */}
 
 
+            {/* Footer Privacy */}
             <div className="flex flex-col">
-              {/* Footer Privacy */}
               <div id="footer-policies" className={classes.footerSections}>
                 <h3 className={classes.footerSectionsTitle}>
                   Políticas de Privacidad, Política de Cookies
                 </h3>
                 <FooterLinksGenerator links={linksPoliticas} />
               </div>
-              {/* Footer Privacy */}
             </div>
+            {/* Footer Privacy */}
 
             {/* Footer Terms */}
             <div id="footer-privacy-terms" className={classes.footerSections}>
@@ -68,21 +68,25 @@ export default function Footer() {
             {/* Footer Logo */}
           </Container>
         </div>
+
         <div className="bg-primary py-6 text-light">
-          <div className="mx-auto flex w-[80vw] justify-between gap-4 text-center text-sm font-semibold sm:w-[65vw] sm:flex-row sm:gap-20 sm:text-left xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-            <h3>Derechos Reservados 2024</h3>
-            <h3 className="flex">
-              <span>Diseñado y Desarrollado por:</span>
-              <a
-                href="https://dspwebstudio.com"
-                target="_blank"
-                className="ml-2 font-semibold text-secondary_dark"
-              >
-                dspwebstudio.com
-              </a>
-            </h3>
-          </div>
+          <Container className=''>
+            <div className="flex flex-col sm:flex-row gap-4 justify-between md:w-[90vw] 2xl:w-[65vw] items-center mx-auto">
+              <h3>Derechos Reservados 2024</h3>
+              <h3 className="flex text-xs sm:text-sm">
+                <span>Diseñado y Desarrollado por:</span>
+                <a
+                  href="https://dspwebstudio.com"
+                  target="_blank"
+                  className="ml-2 font-semibold text-secondary_dark"
+                >
+                  dspwebstudio.com
+                </a>
+              </h3>
+            </div>
+          </Container>
         </div>
+
       </footer>
     </>
 

@@ -256,7 +256,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] md:h-[340px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] md:h-[340px] xl:h-[260px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex lg:flex-row gap-0 justify-between sm:items-center sm:flex-row",

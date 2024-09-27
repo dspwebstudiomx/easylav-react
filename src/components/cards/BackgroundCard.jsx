@@ -13,7 +13,7 @@ import { Link } from "react-router-dom"
 // Estructura
 const BackgroundCard = ({ id, title, image, href }) => {
   return (
-    <Link to={href} id={`sucursal-${title}`} className="w-[270px] h-auto shadow-2xl border-2 border-secondary">
+    <Link to={href} id={`sucursal-${title}`} className="w-[300px] h-[120px] shadow-2xl rounded-lg">
       <BackgroundImageSection
         id={id}
         image_768={image}

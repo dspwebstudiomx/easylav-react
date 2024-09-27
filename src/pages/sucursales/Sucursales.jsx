@@ -17,23 +17,20 @@ const Sucursales = () => {
     <>
       <SEOFriendly
         title="Sucursales | Easylav: Tu lavandería ideal"
-        url="easylav-react.netlify.app"
+        url="easylav-react.netlify.app/sucursales"
         description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
         author="dspwebstudio"
-        keywords="lavandería Morelia, planchado Morelia"
+        keywords="lavandería, planchado"
         ogImage={image}
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
       <PageLayout id={"Sucursales"}>
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-20 sm:gap-x-10">
           <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' />
           <BackgroundCard image={leon} title='León' href='/sucursales/leon' />
           <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' />
         </div>
-        {/* <SucursalCardPerCity city='Morelia' />
-        <Spacing height={"h-8"} />
-        <SucursalCardPerCity city='León' /> */}
       </PageLayout>
     </>
 

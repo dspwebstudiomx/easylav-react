@@ -9,14 +9,14 @@ const BackgroundImageSection = ({ id, children, image_768, image_576, image_240,
       <img
         src={image_768}
         srcSet={`
-          ${image_576},
+          ${image_576} 576w,
           ${image_768} 768w,
           ${image_1024} 1024w,
           ${image_1200} 1200w,
           ${image_1920} 1920w,
                       `}
         alt={image_240}
-        className={`absolute inset-0 -z-20 h-full w-full object-cover object-center ${height} ${image}`}
+        className={`absolute inset-0 -z-20 h-full w-full object-cover object-center overflow-hidden ${image}`}
         title={image_240 || image_768}
       />
       {/* Background Image */}
@@ -26,7 +26,7 @@ const BackgroundImageSection = ({ id, children, image_768, image_576, image_240,
       {/* Overlay */}
 
       {/* Content Container */}
-      <Container id='heroContainer' className='mx-auto z-0'>
+      <Container className='mx-auto z-0 flex items-center justify-center'>
         {children}
       </Container>
     </Section>
