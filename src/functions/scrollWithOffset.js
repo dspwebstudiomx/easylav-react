@@ -3,8 +3,8 @@ export default function scrollWithOffset(el) {
   const yOffset = 0;
 
   const isMobile = window.innerWidth < 767;
-  const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
-  const isDesktop = window.innerWidth >= 1024;
+  const isTablet = window.innerWidth >= 768 && window.innerWidth < 1200;
+  const isDesktop = window.innerWidth >= 1201;
 
   const offsetMobile = isMobile && -100; // ajusta el offset para móviles
   const offsetTablet = isTablet && 0; // ajusta el offset para tabletas

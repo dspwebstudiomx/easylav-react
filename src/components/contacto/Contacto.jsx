@@ -1,16 +1,17 @@
-import { ContactForm, Paragraph, SocialLinks, TitleH2 } from "components";
+import { ContactForm, Paragraph, SocialLinks, Spacing, TitleH2 } from "components";
 import { Link } from "react-router-dom";
 
 const Contacto = () => {
   return (
     <div
       id="contactDescription"
-      className="animate__slower grid items-start md:grid-cols-2 md:gap-12 xl:gap-24"
+      className="animate__slower grid items-start md:grid-cols-2 md:gap-12 xl:gap-6"
     >
-      <div className="animate__animated animate__bounceInLeft animate__slowest grid gap-8">
+      <div className="animate__animated animate__bounceInLeft animate__slowest grid gap-4">
         <TitleH2>
           ¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.
         </TitleH2>
+        <Spacing distance='h-8' />
         <Paragraph>
           Nuestra forma de contacto es fácil y rápida. Puedes llenar el
           formulario en línea con tus preguntas y nos pondremos
@@ -30,11 +31,11 @@ const Contacto = () => {
           </span>
           .
         </Paragraph>
-        <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0">
+        <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0 2xl:mt-12">
           <SocialLinks
             color={"text-secondary dark:text-primary"}
             size={54}
-            gap={"gap-10"}
+            gap={"gap-4"}
           />
         </div>
       </div>

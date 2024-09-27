@@ -331,24 +331,24 @@ export const FRANQUICIAS_UI = {
     LETTER_SPACING: "tracking-wide",
   },
   CONTAINER: {
-    DISPLAY: "grid xl:grid-cols-2 sm:gap-20",
+    DISPLAY: "grid xl:grid-cols-2 sm:gap-0",
   },
   COLUMNA_1: {
     DISPLAY: "flex flex-col items-start gap-12",
   },
   COLUMNA_2: {
     DISPLAY:
-      "grid justify-items-center sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-8",
+      "grid justify-items-center sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-1 gap-8",
     HEIGHT: "lg:h-auto xl:h-[800px]",
     MARGIN: "mx-auto mt-24",
     PADDING: "p-0",
     WIDTH: "lg:w-[80%] xl:w-full",
   },
   UL: {
-    DISPLAY: "flex flex-col gap-8",
+    DISPLAY: "flex flex-col gap-10",
   },
   IMAGE: {
-    WIDTH: "w-[320px] lg:w-[480px]",
+    WIDTH: "w-[320px] lg:w-[400px] xl:w-[320px]",
   },
 };
 
