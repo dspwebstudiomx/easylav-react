@@ -22,6 +22,7 @@ const CityCardGenerator = ({ city }) => {
             email={localservice.email}
             badge={localservice.badge}
             advertisement={localservice.advertisement}
+            image={localservice.image}
           />
         )
       }

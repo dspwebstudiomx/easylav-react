@@ -7,7 +7,7 @@ import Loading from "./components/Loading";
 const Inicio = lazy(() => import("pages/inicio/Inicio"));
 const Sucursales = lazy(() => import("pages/sucursales/Sucursales"));
 const ContactoPagina = lazy(() => import("pages/contacto/ContactoPagina"));
-const Franquicias = lazy(() => import("pages/franquicias/Franquicias"));
+const Franquicias = lazy(() => import("pages/franquicias/FranquiciasTarjetas"));
 const GuiaEstilos = lazy(() => import("pages/guia-estilos/GuiaEstilos"));
 const NotFound = lazy(() => import("pages/404/NotFound"));
 const Test = lazy(() => import("pages/test/Test"));

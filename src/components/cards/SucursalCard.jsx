@@ -6,32 +6,45 @@
 */
 
 // Importaciones
-import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import { Badge, TitleH4 } from 'components';
 import { SUCURSAL_CARD_UI } from 'constants/constants';
 import { useGetServiceHour } from 'hooks';
 import PropTypes from 'prop-types';
-import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
 // Estructura
-export default function SucursalCard({ title, id, position, serviceday1, servicehour1, place, email, gmap, width, titleMailto, badge, advertisement, }) {
+export default function SucursalCard({
+  title,
+  id,
+  position,
+  serviceday1,
+  servicehour1,
+  place,
+  // email,
+  gmap,
+  width,
+  // titleMailto,
+  badge,
+  advertisement,
+  image,
+}) {
 
   const isOpen = useGetServiceHour();
-  const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
+  // const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
   const styles = {
     article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
     data: `${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_WEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.LETTER_SPACING} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.JUSTIFY}`,
-    map: `${SUCURSAL_CARD_UI.MAP.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.MAP.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.MAP.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.MAP.CONTAINER.WIDTH}`,
+    image: `${SUCURSAL_CARD_UI.IMAGE.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH}`,
   }
 
   return (
     <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`} >
 
       {/* mapa */}
-      <div className={styles.map}>
-        <APIProvider apiKey={googleAPIKey}>
+      <div className={styles.image}>
+        {/* <APIProvider apiKey={googleAPIKey}>
           <Map
             defaultCenter={position}
             zoom={17}
@@ -39,7 +52,8 @@ export default function SucursalCard({ title, id, position, serviceday1, service
             disableDefaultUI={true}
             mapTypeControl={false}
           />
-        </APIProvider>
+        </APIProvider> */}
+        <img src={image} alt={title} />
       </div>
       {/* mapa */}
 
@@ -88,7 +102,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
         {!badge && (
           <div className='w-full'>
             {/* Enviar Correo */}
-            <a
+            {/* <a
               href={`mailto:${email}`}
               title={titleMailto}
               type={'button'}
@@ -98,7 +112,7 @@ export default function SucursalCard({ title, id, position, serviceday1, service
                 <FaEnvelope size={24} />
                 <span className=''>Enviar correo</span>
               </Badge>
-            </a>
+            </a> */}
             {/* Enviar Correo */}
 
             <div className='flex md:hidden'>
@@ -212,4 +226,5 @@ SucursalCard.propTypes = {
   titleMailto: PropTypes.string,
   badge: PropTypes.string,
   advertisement: PropTypes.string,
+  image: PropTypes.string,
 };

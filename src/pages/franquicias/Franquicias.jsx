@@ -104,7 +104,7 @@ const Franquicias = () => {
               <button id="button-close" onClick={handleModalToggle}>
                 <FaXmark
                   size={36}
-                  className="z-30 mb-3 ml-auto text-secondary"
+                  className="z-30 ml-auto text-secondary"
                 />
               </button>
               <ContactFormFranquicias />

@@ -7,7 +7,7 @@ const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.WIDTH} ${BUTTON_UI.HEIGHT} ${
 const Button = ({ backgroundColor, title, border, icon, type, onClick, href, textColor, distance }) => {
   return (
     <a href={href}>
-      <button onClick={onClick} type={type} className={`${backgroundColor} ${border} ${ButtonUI} ${textColor} z-50`} title={title} href={href}>
+      <button onClick={onClick} type={type} className={`${backgroundColor} ${border} ${ButtonUI} ${textColor} flex gap-1 z-50`} title={title} href={href}>
         <span>{icon}</span>
         <Spacing distance={distance} />
         {title}

@@ -1,4 +1,4 @@
-import { Lavadero, LavarRopa, Planchar } from "assets";
+import { Lavadero, LavarRopa, PilaToallas, Planchar, Toalla } from "assets";
 
 export const services = [
   {
@@ -21,11 +21,29 @@ export const services = [
   },
   {
     id: 3,
-    title: "Planchado y Doblez",
+    title: "Tintorería",
     description:
       "El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.",
     image: Planchar,
     idLink: "planchado-y-doblez",
     alt: "plancha sacando vapor",
+  },
+  {
+    id: 4,
+    title: "Plegado",
+    description:
+      "El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.",
+    image: Toalla,
+    idLink: "plegado",
+    alt: "plegado de toallas",
+  },
+  {
+    id: 5,
+    title: "Por encargo",
+    description:
+      "El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.",
+    image: PilaToallas,
+    idLink: "plegado",
+    alt: "plegado de toallas",
   },
 ];

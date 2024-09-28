@@ -146,7 +146,7 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "max-w-[270px] sm:min-w-[210px]",
+  WIDTH: "min-w-[240px]",
   HEIGHT: "min-h-[65px]",
   FONT_SIZE: "text-xl",
   PADDING: "px-4 py-2",
@@ -164,7 +164,6 @@ export const BUTTON_CONTAINER = {
 
 //Primary Button
 export const BUTTON_PRIMARY_UI = {
-  HEIGHT: "min-h-[70px]",
   TEXT_COLOR: "text-light",
   BACKGROUND_COLOR:
     "bg-gradient-to-r from-primary_dark to-primary dark:bg-gradient dark:from-secondary_dark dark:to-secondary_light hover:bg-primary_dark",
@@ -174,14 +173,10 @@ export const BUTTON_PRIMARY_UI = {
 
 // Secondary Button
 export const BUTTON_SECONDARY_UI = {
-  HEIGHT: "min-h-[70px]",
   TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR:
-    "bg-gradient-to-r from-secondary_dark to-secondary_light dark:bg-gradient-to-r dark:from-primary_dark dark:to-primary ",
-
-  // BACKGROUND_COLOR: "bg-secondary",
+  BACKGROUND_COLOR: "bg-secondary",
   BORDER:
-    "border-l-secondary_dark border-l-4 border-t-secondary_light border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary",
+    "border-l-secondary_dark border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary",
 };
 
 // Hero Inicio
@@ -285,16 +280,16 @@ export const SUCURSAL_CARD_UI = {
     BACKGROUND: "bg-light",
     COLOR: "text-dark",
     DISPLAY: "flex  flex-col relative mx-auto",
-    HEIGHT: "min-h-[440px]",
+    HEIGHT: "min-h-[480px]",
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-2xl",
     WIDTH: "w-[260px] sm:w-[280px] 2xl:w-[300px]",
   },
-  MAP: {
+  IMAGE: {
     CONTAINER: {
-      HEIGHT: "h-[150px]",
+      HEIGHT: "h-[180px]",
       OVERFLOW: "overflow-hidden",
       ROUNDED: "rounded-t-lg",
       WIDTH: "w-full",

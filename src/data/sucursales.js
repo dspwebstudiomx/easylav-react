@@ -1,19 +1,7 @@
-const localservicesbck = [
-  {
-    id: 3,
-    title: "Jardines de Jerez",
-    gmap: "https://maps.app.goo.gl/HM8vj9rCzMDhekKo7",
-    position: { lat: 21.1024, lng: -101.63745 },
-    place:
-      "Blvd. Paseo de Jerez Sur 229-LOCAL 5, Jardines de Jerez, 37530 León de los Aldama, Gto.",
-    serviceday1: "Lunes-Sábado:",
-    servicehour1: "7:00 a.m a 9:30 p.m",
-    serviceday2: "Domingo:",
-    servicehour2: "7:00 a.m a 9:30 p.m",
-    city: "León",
-    email: "easylavjerez@easylav.mx",
-  },
-];
+//! fotos de sucursal en lugar de mapas
+
+import { Placeholder } from "assets";
+
 const localservices = [
   {
     id: 1,
@@ -25,7 +13,7 @@ const localservices = [
     servicehour1: "7:00 a.m a 9:30 p.m",
     city: "Morelia",
     email: "pedregal@easylav.mx",
-    advertisement: "Promoción 2x1",
+    image: Placeholder,
   },
   {
     id: 2,
@@ -37,6 +25,7 @@ const localservices = [
     servicehour1: "7:00 a.m a 9:30 p.m",
     city: "Morelia",
     email: "jesusdelmonte@easylav.mx",
+    image: Placeholder,
   },
   {
     id: 3,
@@ -49,6 +38,7 @@ const localservices = [
     city: "Morelia",
     email: "cincodefebrero@easylav.mx",
     titleMailto: "Enviar correo a 5 de Febrero",
+    image: Placeholder,
   },
   {
     id: 4,
@@ -61,6 +51,7 @@ const localservices = [
     city: "Morelia",
     email: "sierradeveracruz@easylav.mx",
     titleMailto: "Enviar correo a sucursal Sierra de Veracruz",
+    image: Placeholder,
   },
   {
     id: 5,
@@ -75,6 +66,7 @@ const localservices = [
     email: "maderooriente@easylav.mx",
     titleMailto: "Enviar correo a sucursal Madero Oriente",
     advertisement: "😎 Genial!",
+    image: Placeholder,
   },
   {
     id: 7,
@@ -83,10 +75,11 @@ const localservices = [
     position: { lat: 19.68546, lng: -101.16852 },
     place: "Av Solidaridad 1167-A, Nueva Chapultepec, 58280 Morelia, Mich.",
     serviceday1: "Lunes a Domingo:",
-    servicehour1: "7:00 a.m a 9:30 p.m",
+    servicehour1: "7:00 a.m a 9:00 p.m",
     city: "Morelia",
     email: "solidaridad@easylav.mx",
     titleMailto: "Enviar correo a sucursal Solidaridad",
+    image: Placeholder,
   },
   {
     id: 8,
@@ -100,6 +93,7 @@ const localservices = [
     city: "Morelia",
     email: "adolfolopezmateos@easylav.mx",
     titleMailto: "Enviar correo a sucursal Adolfo López Mateos",
+    image: Placeholder,
   },
   {
     id: 9,
@@ -112,6 +106,7 @@ const localservices = [
     city: "León",
     email: "delta@easylav.mx",
     titleMailto: "Enviar correo a sucursal a Delta",
+    image: Placeholder,
   },
   {
     id: 10,
@@ -126,6 +121,7 @@ const localservices = [
     titleMailto: "Enviar correo a sucursal a Laguna de Parras",
     badge: "Próxima Apertura",
     advertisement: "Nueva Sucursal",
+    image: Placeholder,
   },
   {
     id: 11,
@@ -139,8 +135,9 @@ const localservices = [
     city: "Morelia",
     email: "josetocavenlavin@easylav.mx",
     titleMailto: "Enviar correo a sucursal a Laguna de Parras",
-    badge: "Próximamente",
+    badge: "Próxima Apertura",
     advertisement: "Nueva Sucursal",
+    image: Placeholder,
   },
 ];
-export { localservices, localservicesbck };
+export { localservices };

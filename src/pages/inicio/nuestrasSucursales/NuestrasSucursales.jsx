@@ -5,6 +5,9 @@
   Fecha: 2022-08-20
 */
 
+
+//! fotos de sucursal en lugar de mapas
+
 // Importaciones
 import { ButtonContainer, ButtonSecondary, PaginatedSucursalCards, Section, TitleContainer } from 'components';
 import { SUCURSAL_SECTION_PROPS } from 'constants/constants';
@@ -22,7 +25,7 @@ const NuestrasSucursales = () => {
           <ButtonSecondary
             title='Contáctanos'
             href='/contacto'
-            distance=''
+            distance='my-2'
             type='button'
           />
         </ButtonContainer>

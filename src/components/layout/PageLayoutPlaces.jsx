@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { BackgroundImageSection, Contacto, SucursalCardPerCity } from 'components'
+import { BackgroundImageSection, ButtonContainer, ButtonSecondary, Contacto, SucursalCardPerCity } from 'components'
 import PropTypes from 'prop-types'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
 import Container from '../containers/Container'
@@ -26,7 +26,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
     <>
       <Header />
       <main id={`sucursales-${city}`} className='mt-[100px] sm:mt-0 xl:mt-[100px]'>
-        <BackgroundImageSection height="full" opacity='opacity-70' titleColor='text-light' textColor='text-light' image='block' backgroundColor='bg-dark' image_1024={image_1024} image_1200={image_1200} image_576={image_576} image_1920={image_1920}>
+        <BackgroundImageSection height="full" opacity='opacity-40' titleColor='text-light' textColor='text-light' image='block' backgroundColor='bg-dark' image_1024={image_1024} image_1200={image_1200} image_576={image_576} image_1920={image_1920}>
           <span className={styles.span}>
             {city}
           </span>
@@ -35,6 +35,14 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         <Section id='sucursales-morelia' className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={''}>
             <SucursalCardPerCity city={city} />
+            <ButtonContainer position='justify-center' distance='mt-16'>
+              <ButtonSecondary
+                title='Regresar a sucursales'
+                href='/sucursales'
+                distance=''
+                type='button'
+              />
+            </ButtonContainer>
             <Spacing distance={'mt-[10vh]'} />
             <Contacto />
           </Container>

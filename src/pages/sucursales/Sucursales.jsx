@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { CatedralMorelia as image, canastaderopa_640 as leon, CatedralMorelia as morelia } from 'assets';
+import { CentroGuadalajara as guadalajara, CatedralMorelia as image, canastaderopa_640 as leon, CatedralMorelia as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
@@ -29,7 +29,7 @@ const Sucursales = () => {
         <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-2 sm:gap-20 sm:gap-x-10 place-items-center">
           <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' />
           <BackgroundCard image={leon} title='León' href='/sucursales/leon' />
-          {/* <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' /> */}
+          <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' />
         </div>
       </PageLayout>
     </>
