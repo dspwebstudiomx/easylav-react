@@ -35,6 +35,7 @@ const PaginatedSucursalCards = () => {
             titleMailto={localservice.titleMailto}
             badge={localservice.badge}
             advertisement={localservice.advertisement}
+            image={localservice.image}
           />
         ))}
       </div>
