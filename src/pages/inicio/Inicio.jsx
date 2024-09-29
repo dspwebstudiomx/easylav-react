@@ -6,7 +6,8 @@ import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
 import QuieresUnaFranquicia from './franquicias/QuieresUnaFranquicia';
-const HeroInicio = lazy(() => import('./components/HeroInicio'));
+import CarouselPromociones from './promociones/CarouselPromociones';
+// const HeroInicio = lazy(() => import('./components/HeroInicio'));
 const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
@@ -44,7 +45,8 @@ const Inicio = () => (
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
 
-      <HeroInicio />
+      {/* <HeroInicio /> */}
+      <CarouselPromociones />
       <SobreNosotros />
       <NuestrosServicios />
       {/* <CantidadSucursales /> */}

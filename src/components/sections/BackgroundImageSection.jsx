@@ -26,7 +26,7 @@ const BackgroundImageSection = ({ id, children, image_768, image_576, image_240,
       {/* Overlay */}
 
       {/* Content Container */}
-      <Container className='mx-auto z-0 flex items-center justify-center'>
+      <Container className='mx-auto z-0 flex items-center justify-center top-0'>
         {children}
       </Container>
     </Section>

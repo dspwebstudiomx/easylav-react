@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="bg-primary py-6 text-light">
           <Container className=''>
-            <div className="flex flex-col sm:flex-row gap-4 justify-between md:w-[90vw] 2xl:w-[65vw] items-center mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mx-auto xl:w-[65vw]">
               <h3>Derechos Reservados 2024</h3>
               <h3 className="flex text-xs sm:text-sm">
                 <span>Diseñado y Desarrollado por:</span>
