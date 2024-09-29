@@ -10,6 +10,7 @@ const CarouselPromociones = () => {
 
 
   const styles = {
+    height: 'h-[600px] sm:h-[500px]',
     button: `bg-${HEROINICIO_UI.COLOR.BUTTON} px-6 py-4 w-[${HEROINICIO_UI.BUTTON.SIZE}] text-${HEROINICIO_UI.BUTTON.TEXT.SIZE} rounded-lg ${HEROINICIO_UI.DISPLAY.BUTTON}  text-${HEROINICIO_UI.BUTTON.TEXT.SIZE} text-${HEROINICIO_UI.BUTTON.TEXT.COLOR}`,
     paragraph: `text-${HEROINICIO_UI.COLOR.PARAGRAPH} text-lg ${HEROINICIO_UI.DISPLAY.PARAGRAPH}`,
     buttonContainer: 'place-content-center sm:place-content-start',
@@ -17,10 +18,11 @@ const CarouselPromociones = () => {
       textColor: `text-${HEROINICIO_UI.COLOR.TITLE}`,
       textTransform: GENERAL_UI.TITLEH1.TRANSFORM,
 
-    }
+    },
+    image: `relative overflow-hidden object-cover w-full h-[600px] sm:h-[500px]`
   }
   return (
-    <section id='inicio' className='relative overflow-hidden w-full sm:h-[500px]'>
+    <section id='inicio' className={`relative overflow-hidden w-full ${styles.height}`}>
       <Swiper Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -37,17 +39,17 @@ const CarouselPromociones = () => {
         className='-z-10'
       >
         <SwiperSlide>
-          <img src={image_1} alt="Slide 1" className='h-[500px] w-full overflow-hidden  object-cover' />
+          <img src={image_1} alt="Slide 1" className={styles.image} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image_2} alt="Slide 2" className='h-[500px] w-full overflow-hidden  object-cover' />
+          <img src={image_2} alt="Slide 2" className={styles.image} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image_3} alt="Slide 3" className='h-[500px] w-full overflow-hidden  object-cover' />
+          <img src={image_3} alt="Slide 3" className={styles.image} />
         </SwiperSlide>
       </Swiper>
-      <div className='absolute inset-0 z-0 w-full h-[500px] bg-dark opacity-90 top-0 left-0'></div>
-      <div className='absolute inset-0 top-0 z-30 p-8 py-20 sm:p-20 h-full'>
+      <div className={`absolute inset-0 z-10 w-full bg-dark opacity-60 top-0 left-0 ${styles.height}`}></div>
+      <div className='absolute inset-0 top-0 z-20 p-8 py-20 sm:p-20 h-full'>
         <Container>
           <div className='w-full sm:w-2/3'>
             <TitleH1 textColor={styles.titleH1.textColor} textTransform={styles.titleH1.textTransform} align={'center'}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </TitleH1>

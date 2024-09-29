@@ -16,17 +16,17 @@ const BackgroundImageSection = ({ id, children, image_768, image_576, image_240,
           ${image_1920} 1920w,
                       `}
         alt={image_240}
-        className={`absolute inset-0 -z-20 h-full w-full object-cover object-center overflow-hidden ${image}`}
+        className={`absolute inset-0 -z-50 h-full w-full object-cover object-center overflow-hidden ${image}`}
         title={image_240 || image_768}
       />
       {/* Background Image */}
 
       {/* Overlay */}
-      <div className={`absolute inset-0 -z-10 w-full h-full ${backgroundColor} ${opacity} top-0 left-0'`}></div>
+      <div className={`absolute inset-0 z-0 w-full h-full ${backgroundColor} ${opacity} top-0 left-0'`}></div>
       {/* Overlay */}
 
       {/* Content Container */}
-      <Container className='mx-auto z-0 flex items-center justify-center top-0'>
+      <Container className='mx-auto z-10 flex items-center justify-center top-0'>
         {children}
       </Container>
     </Section>

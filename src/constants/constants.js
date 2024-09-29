@@ -183,8 +183,8 @@ export const BUTTON_SECONDARY_UI = {
 export const HEROINICIO_UI = {
   THEME: "dark",
   BACKGROUND: {
-    OPACITY: "opacity-50",
-    COLOR: "dark",
+    OPACITY: "opacity-90",
+    COLOR: "bg-dark",
   },
   DISPLAY: {
     BUTTON: "block",
