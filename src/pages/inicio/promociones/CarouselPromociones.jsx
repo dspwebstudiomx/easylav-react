@@ -10,7 +10,7 @@ const CarouselPromociones = () => {
 
 
   const styles = {
-    height: 'h-[600px] sm:h-[500px]',
+    height: 'h-[600px] lg:h-[500px]',
     button: `bg-${HEROINICIO_UI.COLOR.BUTTON} px-6 py-4 w-[${HEROINICIO_UI.BUTTON.SIZE}] text-${HEROINICIO_UI.BUTTON.TEXT.SIZE} rounded-lg ${HEROINICIO_UI.DISPLAY.BUTTON}  text-${HEROINICIO_UI.BUTTON.TEXT.SIZE} text-${HEROINICIO_UI.BUTTON.TEXT.COLOR}`,
     paragraph: `text-${HEROINICIO_UI.COLOR.PARAGRAPH} text-lg ${HEROINICIO_UI.DISPLAY.PARAGRAPH}`,
     buttonContainer: 'place-content-center sm:place-content-start',
@@ -19,7 +19,7 @@ const CarouselPromociones = () => {
       textTransform: GENERAL_UI.TITLEH1.TRANSFORM,
 
     },
-    image: `relative overflow-hidden object-cover w-full h-[600px] sm:h-[500px]`
+    image: `relative overflow-hidden object-cover w-full object-center h-[600px] lg:h-[500px]`
   }
   return (
     <section id='inicio' className={`relative overflow-hidden w-full ${styles.height}`}>
@@ -36,7 +36,7 @@ const CarouselPromociones = () => {
         rollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
-        className='-z-10'
+        className={`-z-10 ${styles.height}`}
       >
         <SwiperSlide>
           <img src={image_1} alt="Slide 1" className={styles.image} />

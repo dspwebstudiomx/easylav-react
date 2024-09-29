@@ -21,7 +21,7 @@ const NuestrasSucursales = () => {
         <div className='my-12 mt-24'>
           <PaginatedSucursalCards />
         </div>
-        <ButtonContainer position='justify-center' distance=''>
+        <ButtonContainer position='items-center' distance=''>
           <ButtonSecondary
             title='Contáctanos'
             href='/contacto'

@@ -32,9 +32,8 @@ const HeroInicio = () => {
     image_1920: Camisas
   }
 
-  //! Falta la alineación del titulo
   return (
-    <BackgroundImageSection id={HEROINICIO_PROPS.SECTION_ID} height="full" opacity={HEROINICIO_UI.BACKGROUND.OPACITY} titleColor='text-primary' textColor='text-dark' image={HEROINICIO_UI.DISPLAY.IMAGE} backgroundColor={HEROINICIO_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920}>
+    <BackgroundImageSection id={HEROINICIO_PROPS.SECTION_ID} height='h-full' opacity={HEROINICIO_UI.BACKGROUND.OPACITY} titleColor='text-primary' textColor='text-dark' image={HEROINICIO_UI.DISPLAY.IMAGE} backgroundColor={HEROINICIO_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920}>
       <div id='hero-inicio_container' className={`grid md:grid-cols-1 gap-x-8 p-6 md:p-0`}>
         <div id='hero-inicio_info_container' className="flex flex-col gap-8 sm:w-2/3">
           <TitleH1 textColor={styles.titleH1.textColor} textTransform={styles.titleH1.textTransform} align={'center'}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </TitleH1>

@@ -146,7 +146,7 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "min-w-[240px]",
+  WIDTH: "w-[240px]",
   HEIGHT: "min-h-[65px]",
   FONT_SIZE: "text-xl",
   PADDING: "px-4 py-2",
@@ -174,9 +174,9 @@ export const BUTTON_PRIMARY_UI = {
 // Secondary Button
 export const BUTTON_SECONDARY_UI = {
   TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR: "bg-secondary",
+  BACKGROUND_COLOR: "bg-secondary_dark",
   BORDER:
-    "border-l-secondary_dark border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary",
+    "border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary",
 };
 
 // Hero Inicio
@@ -367,7 +367,7 @@ export const NUESTROS_SERVICIOS_UI = {
   },
   BUTTON_CONTAINER: {
     DISTANCE: "mt-16",
-    POSITION: "justify-center",
+    POSITION: "items-center",
   },
 };
 

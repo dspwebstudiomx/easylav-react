@@ -1,7 +1,7 @@
 import { Container, Section } from 'components'
 import PropTypes from 'prop-types'
 
-const BackgroundImageSection = ({ id, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, height, opacity, image, backgroundColor }) => {
+const BackgroundImageSection = ({ id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor }) => {
   return (
     <Section id={id} className={`${height} relative overflow-hidden p-12 w-full z-0 xl:py-20`}>
 
@@ -16,13 +16,13 @@ const BackgroundImageSection = ({ id, children, image_768, image_576, image_240,
           ${image_1920} 1920w,
                       `}
         alt={image_240}
-        className={`absolute inset-0 -z-50 h-full w-full object-cover object-center overflow-hidden ${image}`}
+        className={`absolute inset-0 -z-50 h-full w-full object-cover object-center overflow-hidden ${image} ${height}`}
         title={image_240 || image_768}
       />
       {/* Background Image */}
 
       {/* Overlay */}
-      <div className={`absolute inset-0 z-0 w-full h-full ${backgroundColor} ${opacity} top-0 left-0'`}></div>
+      <div className={`absolute inset-0 z-0 w-full ${backgroundColor} ${opacity} ${height} top-0 left-0'`}></div>
       {/* Overlay */}
 
       {/* Content Container */}
