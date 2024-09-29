@@ -1,5 +1,5 @@
 /*
-  Nuestros Servicios Sección
+  Nuestros Servicios - Sección
   =====================================
   Creado por : Daniel Pérez
   Fecha: 2024-09-01

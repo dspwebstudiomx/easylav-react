@@ -19,7 +19,7 @@ const ServicesGenerator = () => {
           return (
             <li key={service.title} id={service.idLink} className={SERVICES_GENERATOR_UI.LI.CLASSNAME} >
               <div className={SERVICES_GENERATOR_UI.LI.DIV_VIDEO}>
-                <Video src={service.image} type={'video/webm'} title={service.alt} />
+                <Video src={service.image} type={'image/gif'} title={service.alt} />
               </div>
               <div className={SERVICES_GENERATOR_UI.DIV_TITLEH3}>
                 <TitleH3 title={service.title} />

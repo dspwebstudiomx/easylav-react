@@ -32,7 +32,7 @@ export const services = [
     id: 4,
     title: "Plegado",
     description:
-      "El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.",
+      "Ofrecemos un servicio de plegado de ropa que asegura un acabado ordenado y profesional. Deja que nuestros expertos se encarguen de tus prendas, ahorrándote tiempo y esfuerzo.",
     image: Toalla,
     idLink: "plegado",
     alt: "plegado de toallas",
@@ -41,7 +41,7 @@ export const services = [
     id: 5,
     title: "Por encargo",
     description:
-      "El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.",
+      "Ya sea un vestido, traje o ropa delicada, nuestros expertos se encargarán de cuidarlas y tratarlas según tus necesidades.",
     image: PilaToallas,
     idLink: "plegado",
     alt: "plegado de toallas",
