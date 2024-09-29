@@ -1,49 +1,55 @@
-import { Lavadero, LavarRopa, PilaToallas, Planchar, Toalla } from "assets";
+import {
+  Lavadero,
+  LavadoraInteligente,
+  PilaToallas,
+  Planchar,
+  Toalla,
+} from "assets";
 
 export const services = [
   {
     id: 1,
-    title: "Lavado Regular",
+    title: "Lavado",
     description:
-      "Confía en nosotros para mantener tus prendas limpias y frescas semana tras semana. Utilizamos técnicas avanzadas para eliminar las manchas y preservar la calidad de tus telas.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam dolores placeat doloremque culpa officiis at earum facilis quisquam, accusamus alias magni cupiditate corporis? Cupiditate nisi voluptatum quibusdam nesciunt.",
     image: Lavadero,
-    idLink: "lavado-regular",
+    idLink: "lavado",
     alt: "lavadora trabajando",
   },
   {
     id: 2,
-    title: "Lavado Especializado",
+    title: "Secado",
     description:
-      "¿Tienes prendas delicadas o difíciles de limpiar? Nuestro servicio especializado está diseñado para manejar incluso los textiles más sensibles, asegurando resultados excepcionales",
-    image: LavarRopa,
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam dolores placeat doloremque culpa officiis at earum facilis quisquam, accusamus alias magni cupiditate corporis? Cupiditate nisi voluptatum quibusdam nesciunt.",
+    image: LavadoraInteligente,
     idLink: "lavado-especializado",
     alt: "playera lavandose a mano",
   },
   {
     id: 3,
-    title: "Tintorería",
+    title: "Por encargo",
     description:
-      "El toque final perfecto para tus prendas. Nuestro servicio de planchado garantiza que cada artículo luzca impecable y listo para usar.",
-    image: Planchar,
-    idLink: "planchado-y-doblez",
-    alt: "plancha sacando vapor",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam dolores placeat doloremque culpa officiis at earum facilis quisquam, accusamus alias magni cupiditate corporis? Cupiditate nisi voluptatum quibusdam nesciunt.",
+    image: PilaToallas,
+    idLink: "plegado",
+    alt: "plegado de toallas",
   },
   {
     id: 4,
     title: "Plegado",
     description:
-      "Ofrecemos un servicio de plegado de ropa que asegura un acabado ordenado y profesional. Deja que nuestros expertos se encarguen de tus prendas, ahorrándote tiempo y esfuerzo.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam dolores placeat doloremque culpa officiis at earum facilis quisquam, accusamus alias magni cupiditate corporis? Cupiditate nisi voluptatum quibusdam nesciunt.",
     image: Toalla,
     idLink: "plegado",
     alt: "plegado de toallas",
   },
   {
     id: 5,
-    title: "Por encargo",
+    title: "Tintorería",
     description:
-      "Ya sea un vestido, traje o ropa delicada, nuestros expertos se encargarán de cuidarlas y tratarlas según tus necesidades.",
-    image: PilaToallas,
-    idLink: "plegado",
-    alt: "plegado de toallas",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam dolores placeat doloremque culpa officiis at earum facilis quisquam, accusamus alias magni cupiditate corporis? Cupiditate nisi voluptatum quibusdam nesciunt.",
+    image: Planchar,
+    idLink: "planchado-y-doblez",
+    alt: "plancha sacando vapor",
   },
 ];
