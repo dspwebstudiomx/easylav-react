@@ -18,13 +18,19 @@ const Accordion = ({ description, title }) => {
     event.preventDefault();
     setActive(!active);
   };
+
+  const styles = {
+    width: 'w-[260px] xl:w-[480px] ',
+    height: 'h-[180px] sm:h-[90px] '
+  }
+
   return (
     <div className="w-full rounded-lg p-4 sm:p-8">
       <button
-        className={`w-[260px] h-[180px] sm:h-[90px] xl:w-[480px] flex text-left first-line:items-center justify-center first-line:justify-center bg-light text-dark`}
+        className={`flex text-left justify-center items-center bg-light text-dark ${styles.width} ${styles.height} p-8`}
         onClick={() => handleToggle()}
       >
-        <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg text-primary">
+        <div className={`mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg text-primary ${styles.height}`}>
           <svg
             className={`fill-primary stroke-primary duration-200 ease-in-out ${active ? "rotate-180" : ""
               }`}
@@ -40,15 +46,15 @@ const Accordion = ({ description, title }) => {
             />
           </svg>
         </div>
-        <div className="w-full pr-4 xl:pr-16">
-          <h4 className="mt-1 text-lg xl:text-xl font-semibold text-dark dark:text-white 2xl:h-[10px]">
+        <div className="w-full pr-4">
+          <h4 className="text-lg xl:text-xl font-semibold text-dark dark:text-white">
             {title}
           </h4>
         </div>
       </button>
 
       <div
-        className={`pl-16 duration-200 w-full 2xl:w-full ease-in-out ${active ? "block" : "hidden"
+        className={`${styles.width} pl-16 duration-200 w-full ease-in-out bg-light text-dark ${active ? "block" : "hidden"
           }`}
       >
         <p className={`${GENERAL_UI.PARAGRAPH} py-8  dark:text-dark-6 w-full pr-8`}>
