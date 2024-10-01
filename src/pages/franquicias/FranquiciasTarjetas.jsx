@@ -30,8 +30,8 @@ const PreguntasFrecuentes = () => {
                 Franquicias
               </span>
               <BorderLeft>
-                <TitleH1 className={styles} textColor="text-dark dark:text-light">
-                  Tienes alguna duda?
+                <TitleH1 className={styles} textColor="text-dark dark:text-light w-2/3">
+                  ¿Estás interesado en adquirir una franquicia?
                 </TitleH1>
               </BorderLeft>
               <TitleH3>Puedes ver las preguntas más frecuentes:</TitleH3>
@@ -43,8 +43,9 @@ const PreguntasFrecuentes = () => {
           <ul className="w-full sm:grid grid-cols-2 gap-8 gap-y-2 sm:gap-y-8">
             {franquiciaDescripciones.map(description => {
               return (
-                <li key={description.id} id={`descripcion-${description.id}`} className="bg-light text-dark">
+                <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">
                   <Accordion
+                    height='h-[90px]'
                     title={description.title}
                     description={description.description}
                   />

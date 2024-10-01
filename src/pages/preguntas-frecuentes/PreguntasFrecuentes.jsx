@@ -12,7 +12,7 @@ import { frequentQuestions } from "data";
 import { FaHome } from "react-icons/fa";
 import { FaRegBuilding } from "react-icons/fa6";
 
-// Estructura
+// <Estructura></Estructura>
 const PreguntasFrecuentes = () => {
 
   const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
@@ -37,12 +37,13 @@ const PreguntasFrecuentes = () => {
 
         {/* Questions */}
         <ul className="w-full sm:grid grid-cols-2 gap-8 gap-y-2 sm:gap-y-8">
-          {frequentQuestions.map(freqQuestion => {
+          {frequentQuestions.map(question => {
             return (
-              <li key={freqQuestion.id} id={`question-${freqQuestion.id}`} className="bg-light text-dark">
+              <li key={question.id} id={`question-${question.id}`} className="text-dark">
                 <Accordion
-                  title={freqQuestion.question}
-                  description={freqQuestion.answer}
+                  height={'h-[150px]'}
+                  title={question.question}
+                  description={question.answer}
                 />
               </li>
             )

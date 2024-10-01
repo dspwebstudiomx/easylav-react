@@ -21,7 +21,7 @@ const Accordion = ({ description, title }) => {
   return (
     <div className="w-full rounded-lg p-4 sm:p-8">
       <button
-        className={`w-[260px] h-[180px] sm:h-[90px] xl:w-[480px] flex text-left first-line:items-center justify-center first-line:justify-center`}
+        className={`w-[260px] h-[180px] sm:h-[90px] xl:w-[480px] flex text-left first-line:items-center justify-center first-line:justify-center bg-light text-dark`}
         onClick={() => handleToggle()}
       >
         <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg text-primary">
