@@ -67,7 +67,7 @@ export default function ContactForm() {
 
 
   return (
-    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl px-8 py-10 pb-14  bg-secondary dark:bg-primary_light w-full text-dark ">
+    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl px-8 py-10 pb-14  bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
       <Formik
         initialValues={{
           user_name: '',
@@ -190,7 +190,7 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position={'items-center'}>
+            <ButtonContainer position={'justify-center'}>
               <ButtonSecondary
                 title={'Enviar mensaje'}
                 icon={<FaRegEnvelope />}
