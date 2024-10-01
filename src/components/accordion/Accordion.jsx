@@ -26,7 +26,7 @@ const Accordion = ({ description, title, height }) => {
   return (
     <div className="w-full rounded-lg p-4 sm:p-8">
       <button
-        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark`}
+        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark ${!active ? "rounded-2xl" : "rounded-t-2xl"}`}
         onClick={() => handleToggle()}
       >
         <div className={`mr-5 flex h-8 w-full max-w-[50px] items-center justify-center text-primary`}>
@@ -51,7 +51,7 @@ const Accordion = ({ description, title, height }) => {
       </button>
 
       <div
-        className={`${styles.width} pl-16 duration-200 w-full ease-in-out bg-primary_light/50   text-dark ${active ? "block" : "hidden"
+        className={`${styles.width} pl-16 duration-200 w-full ease-in-out bg-primary_light/50   text-dark ${active ? "block rounded-b-2xl" : "hidden"
           }`}
       >
         <p className={`${GENERAL_UI.PARAGRAPH} py-8  dark:text-dark-6 w-full pr-8`}>
