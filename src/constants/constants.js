@@ -334,7 +334,7 @@ export const FRANQUICIAS_UI = {
   COLUMNA_2: {
     DISPLAY:
       "grid justify-items-center sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-1 gap-8",
-    HEIGHT: "lg:h-auto xl:h-[800px]",
+    HEIGHT: "lg:h-auto xl:h-auto",
     MARGIN: "mx-auto mt-24",
     PADDING: "p-0",
     WIDTH: "lg:w-[80%] xl:w-full",

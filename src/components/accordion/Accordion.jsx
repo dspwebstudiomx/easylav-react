@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 // Estructura
-const Accordion = ({ description, title }) => {
+const Accordion = ({ description, title, height }) => {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => {
@@ -21,16 +21,15 @@ const Accordion = ({ description, title }) => {
 
   const styles = {
     width: 'w-[260px] xl:w-[480px] ',
-    height: 'h-[180px] sm:h-[90px] '
   }
 
   return (
     <div className="w-full rounded-lg p-4 sm:p-8">
       <button
-        className={`flex text-left justify-center items-center bg-light text-dark ${styles.width} ${styles.height} p-8`}
+        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark`}
         onClick={() => handleToggle()}
       >
-        <div className={`mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg text-primary ${styles.height}`}>
+        <div className={`mr-5 flex h-8 w-full max-w-[50px] items-center justify-center text-primary`}>
           <svg
             className={`fill-primary stroke-primary duration-200 ease-in-out ${active ? "rotate-180" : ""
               }`}
@@ -46,15 +45,13 @@ const Accordion = ({ description, title }) => {
             />
           </svg>
         </div>
-        <div className="w-full pr-4">
-          <h4 className="text-lg xl:text-xl font-semibold text-dark dark:text-white">
-            {title}
-          </h4>
-        </div>
+        <h4 className="text-lg xl:text-xl font-semibold text-dark dark:text-white">
+          {title}
+        </h4>
       </button>
 
       <div
-        className={`${styles.width} pl-16 duration-200 w-full ease-in-out bg-light text-dark ${active ? "block" : "hidden"
+        className={`${styles.width} pl-16 duration-200 w-full ease-in-out bg-primary_light/50   text-dark ${active ? "block" : "hidden"
           }`}
       >
         <p className={`${GENERAL_UI.PARAGRAPH} py-8  dark:text-dark-6 w-full pr-8`}>
@@ -66,6 +63,7 @@ const Accordion = ({ description, title }) => {
 };
 Accordion.propTypes = {
   title: PropTypes.string,
+  height: PropTypes.string,
   description: PropTypes.string,
 }
 export default Accordion
