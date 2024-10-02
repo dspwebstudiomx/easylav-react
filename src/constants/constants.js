@@ -332,7 +332,7 @@ export const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-2",
   },
   COLUMNA_2: {
-    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-0",
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-8",
     HEIGHT: "lg:h-auto md:h-[500px]",
     MARGIN: "mx-auto mt-24 sm:mt-8",
     PADDING: "p-0",

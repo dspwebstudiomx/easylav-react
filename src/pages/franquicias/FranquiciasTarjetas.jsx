@@ -22,7 +22,7 @@ const PreguntasFrecuentes = () => {
         ogType="website"
       />
       <PageLayout>
-        <div className="flex flex-col sm:gap-12">
+        <div className="flex flex-col sm:gap-12 gap-0">
           {/* Title */}
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] lg:mb-0flex  flex-col gap-4">
@@ -34,7 +34,7 @@ const PreguntasFrecuentes = () => {
                   ¿Estás interesado en adquirir una franquicia?
                 </TitleH1>
               </BorderLeft>
-              <h3 className='text-2xl'>Puedes ver las preguntas más frecuentes:</h3>
+              <h3 className='text-xl font-semibold sm:text-2xl mt-8'>Puedes ver las preguntas más frecuentes:</h3>
             </div>
           </div>
           {/* Title */}
