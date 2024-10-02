@@ -146,10 +146,10 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "w-[240px]",
-  HEIGHT: "min-h-[65px]",
+  WIDTH: "min-w-[280px]",
+  HEIGHT: "h-auto",
   FONT_SIZE: "text-xl",
-  PADDING: "px-4 py-2",
+  PADDING: "px-6 py-8 sm:px-3 sm:py-4",
   FONT_WEIGHT: "font-semibold",
   TEXT_TRANSFORM: "",
   ROUNDED: "rounded-lg",
@@ -251,14 +251,14 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] md:h-[340px] xl:h-[260px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] md:h-[340px] xl:h-[340px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
-    "flex lg:flex-row gap-0 justify-between sm:items-center sm:flex-row",
+    "flex lg:flex-row gap-0 justify-between items-center sm:flex-row",
   NAME_CLASSNAME: "font-semibold text-lg",
   NUMBER_STAR_CONTAINER_CLASSNAME:
-    "text-dark justify-between flex items-center mb-6",
-  STARS_CONTAINER_CLASSNAME: "flex items-center",
+    "text-dark justify-center flex items-center mb-6",
+  STARS_CONTAINER_CLASSNAME: "flex items-center justify-center",
   STARS_CLASSNAME: "text-secondary dark:text-primary",
   QUALIFICATION_CLASSNAME: "font-semibold text-lg text-dark",
 };
@@ -380,6 +380,7 @@ export const SERVICES_GENERATOR_UI = {
     DIV_VIDEO: "mx-auto sm:w-24 md:w-44 dark:border-4 dark:border-primary ",
     DIV_TITLEH3: "mx-auto",
   },
+  IMAGE: "w-[210px]",
 };
 
 // Por que Elegirnos
@@ -437,7 +438,7 @@ export const QUIERES_UNA_FRANQUICIA_UI = {
     TITLE: "light",
   },
   BUTTON: {
-    SIZE: "lg",
+    SIZE: "",
     HREF: "/franquicias",
     TEXT: {
       CONTENT: "Conocer más",

@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { CentroGuadalajara as guadalajara, CatedralMorelia as image, canastaderopa_640 as leon, CatedralMorelia as morelia } from 'assets';
+import { CentroGuadalajara as guadalajara, CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
@@ -21,7 +21,7 @@ const Sucursales = () => {
         description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
         author="dspwebstudio"
         keywords="lavandería, planchado"
-        ogImage={image}
+        ogImage={morelia}
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />

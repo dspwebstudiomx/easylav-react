@@ -18,6 +18,7 @@ export { default as VistaDentroLavanderia_640 } from "../assets/images/images/la
 export { default as VistaLavadorasySecadorasConDosMesas_640 } from "../assets/images/images/lavanderia/vistalavadorasysecadorascondosmesas_640.webp";
 export { default as VistaLavanderiaDesdeEntrada_1_640 } from "../assets/images/images/lavanderia/vistalavanderiadesdeentrada_1_640.webp";
 export { default as VistaLavanderiaDesdeEntrada_2_640 } from "../assets/images/images/lavanderia/vistalavanderiadesdeentrada_2_640.webp";
+export { default as CentroLeon } from "../assets/images/images/leon.jpg";
 export { default as Placeholder } from "../assets/images/images/Placeholder.webp";
 export { default as LogoHorizontalBlanco } from "../assets/images/logos/horizontal/logo-blanco.png";
 export { default as LogoHorizontalColor } from "../assets/images/logos/horizontal/logo-color.png";

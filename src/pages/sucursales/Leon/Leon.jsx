@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { Camisas as image } from 'assets'
+import { CentroLeon as image } from 'assets'
 import { PageLayoutPlaces, SEOFriendly } from "components"
 
 // Estructura

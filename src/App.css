@@ -17,9 +17,9 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark light;
-  user-select: none;
-  -ms-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .text-border {
