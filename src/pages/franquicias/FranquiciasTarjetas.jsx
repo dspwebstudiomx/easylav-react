@@ -1,5 +1,5 @@
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ImageResponsive, PageLayout, SEOFriendly, TitleH1, TitleH3 } from "components";
+import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ImageResponsive, PageLayout, SEOFriendly, TitleH1 } from "components";
 import { FRANQUICIAS_UI } from "constants/constants";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
 import { FaHome } from "react-icons/fa";
@@ -25,7 +25,7 @@ const PreguntasFrecuentes = () => {
         <div className="flex flex-col sm:gap-12">
           {/* Title */}
           <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] lg:mb-20 flex  flex-col gap-4">
+            <div className="mx-auto mb-[60px] lg:mb-0flex  flex-col gap-4">
               <span className="mb-2 block text-lg font-semibold text-primary">
                 Franquicias
               </span>
@@ -34,18 +34,18 @@ const PreguntasFrecuentes = () => {
                   ¿Estás interesado en adquirir una franquicia?
                 </TitleH1>
               </BorderLeft>
-              <TitleH3>Puedes ver las preguntas más frecuentes:</TitleH3>
+              <h3 className='text-2xl'>Puedes ver las preguntas más frecuentes:</h3>
             </div>
           </div>
           {/* Title */}
-          <div className='grid sm:grid-cols-2'>
+          <div className=''>
             {/* Questions */}
-            <ul className="w-full">
+            <ul className="grid sm:grid-cols-2">
               {franquiciaDescripciones.map(description => {
                 return (
                   <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">
                     <Accordion
-                      height='h-[90px]'
+                      height='h-auto'
                       title={description.title}
                       description={description.description}
                     />
@@ -77,7 +77,7 @@ const PreguntasFrecuentes = () => {
             </div>
           </div>
         </div>
-        <ButtonContainer position={'justify-center mt-8'}>
+        <ButtonContainer position={'items-center sm:justify-center mt-8'}>
           <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={''} />
           <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={''} />
         </ButtonContainer>

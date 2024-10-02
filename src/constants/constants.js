@@ -326,24 +326,23 @@ export const FRANQUICIAS_UI = {
     LETTER_SPACING: "tracking-wide",
   },
   CONTAINER: {
-    DISPLAY: "grid xl:grid-cols-2 sm:gap-0",
+    DISPLAY: "grid 2xl:grid-cols-2 sm:gap-8",
   },
   COLUMNA_1: {
-    DISPLAY: "flex flex-col items-start gap-12",
+    DISPLAY: "flex flex-col gap-2",
   },
   COLUMNA_2: {
-    DISPLAY:
-      "grid justify-items-center sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-1 gap-8",
-    HEIGHT: "lg:h-auto xl:h-auto",
-    MARGIN: "mx-auto mt-24",
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-0",
+    HEIGHT: "lg:h-auto md:h-[500px]",
+    MARGIN: "mx-auto mt-24 sm:mt-8",
     PADDING: "p-0",
     WIDTH: "lg:w-[80%] xl:w-full",
   },
   UL: {
-    DISPLAY: "flex flex-col gap-10",
+    DISPLAY: "flex flex-col gap-0",
   },
   IMAGE: {
-    WIDTH: "w-[320px] lg:w-[400px] xl:w-[320px]",
+    WIDTH: "w-[320px] sm:w-[300px]",
   },
 };
 
@@ -375,7 +374,7 @@ export const NUESTROS_SERVICIOS_UI = {
 export const SERVICES_GENERATOR_PROPS = {};
 export const SERVICES_GENERATOR_UI = {
   DIV: "grid place-content-center gap-8 w-full",
-  UL: "grid sm:grid-cols-3 gap-20",
+  UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
   LI: {
     CLASSNAME: "flex flex-col gap-8 items-center justify-center",
     DIV_VIDEO: "mx-auto sm:w-24 md:w-44 dark:border-4 dark:border-primary ",

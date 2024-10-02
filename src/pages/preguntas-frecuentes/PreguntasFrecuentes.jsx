@@ -41,7 +41,7 @@ const PreguntasFrecuentes = () => {
             return (
               <li key={question.id} id={`question-${question.id}`} className="text-dark">
                 <Accordion
-                  height={'h-[150px]'}
+                  height={'h-[200px]'}
                   title={question.question}
                   description={question.answer}
                 />
