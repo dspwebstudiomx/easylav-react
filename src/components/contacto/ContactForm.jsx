@@ -190,7 +190,7 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position={'items-center'}>
+            <ButtonContainer position={'justify-center items-center'}>
               <ButtonSecondary
                 title={'Enviar mensaje'}
                 icon={<FaRegEnvelope />}

@@ -1,9 +1,9 @@
 import { Container, Section } from 'components'
 import PropTypes from 'prop-types'
 
-const BackgroundImageSection = ({ id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor }) => {
+const BackgroundImageSection = ({ align, id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor }) => {
   return (
-    <Section id={id} className={`${height} relative overflow-hidden p-12 w-full z-0 xl:py-20`}>
+    <Section id={id} className={`${height} relative overflow-hidden w-full z-0`}>
 
       {/* Background Image */}
       <img
@@ -26,7 +26,7 @@ const BackgroundImageSection = ({ id, height, children, image_768, image_576, im
       {/* Overlay */}
 
       {/* Content Container */}
-      <Container className='mx-auto z-10 flex items-center justify-center top-0'>
+      <Container className={`absolute z-10 grid w-full place-content-center ${height} ${align} `}>
         {children}
       </Container>
     </Section>
@@ -34,6 +34,7 @@ const BackgroundImageSection = ({ id, height, children, image_768, image_576, im
 }
 BackgroundImageSection.propTypes = {
   id: PropTypes.string,
+  align: PropTypes.string,
   children: PropTypes.node,
   image_240: PropTypes.string,
   image_576: PropTypes.string,

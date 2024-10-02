@@ -22,8 +22,8 @@ const BackgroundCard = ({ id, title, image, href }) => {
         image_1024={image}
         image_1200={image}
         image_1920={image}
-        height='h-[full]'
-        opacity='opacity-40 hover:opacity-50'
+        height='h-[200px] w-full grid place-items-center'
+        opacity='opacity-30 hover:opacity-40'
         backgroundColor='bg-dark'
       >
         <h2 className="text-light uppercase text-2xl font-semibold tracking-wide">{title}</h2>

@@ -366,7 +366,7 @@ export const NUESTROS_SERVICIOS_UI = {
   },
   BUTTON_CONTAINER: {
     DISTANCE: "mt-16",
-    POSITION: "justify-center",
+    POSITION: "justify-center items-center",
   },
 };
 

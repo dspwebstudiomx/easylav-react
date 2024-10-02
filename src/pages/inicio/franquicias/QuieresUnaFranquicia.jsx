@@ -30,7 +30,7 @@ const QuieresUnaFranquicia = () => {
 
   //! Falta la alineación del titulo
   return (
-    <BackgroundImageSection height="full" opacity={`bg-${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} ${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={QUIERES_UNA_FRANQUICIA_UI.DISPLAY.IMAGE} backgroundColor={QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920}>
+    <BackgroundImageSection height="h-[900px] sm:h-[700px] lg:h-[600px] sm:h-[90vh]" opacity={`bg-${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} ${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={QUIERES_UNA_FRANQUICIA_UI.DISPLAY.IMAGE} backgroundColor={QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920}>
       <div id='hero-inicio_container' className={`grid md:grid-cols-1 gap-x-8 p-6 md:p-0`}>
         <div id='hero-inicio_info_container' className="flex flex-col gap-8 sm:w-2/3 mx-auto">
           <span className={styles.span}>

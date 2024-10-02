@@ -26,7 +26,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
     <>
       <Header />
       <main id={`sucursales-${city}`} className='mt-[100px] sm:mt-0 xl:mt-[100px]'>
-        <BackgroundImageSection height="full" opacity='opacity-40' titleColor='text-light' textColor='text-light' image='block' backgroundColor='bg-dark' image_1024={image_1024} image_1200={image_1200} image_576={image_576} image_1920={image_1920}>
+        <BackgroundImageSection height="h-[200px]" align='left-[10%]' opacity='opacity-40' titleColor='text-light' textColor='text-light' image='block' backgroundColor='bg-dark' image_1024={image_1024} image_1200={image_1200} image_576={image_576} image_1920={image_1920}>
           <span className={styles.span}>
             {city}
           </span>
