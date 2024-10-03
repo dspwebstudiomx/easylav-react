@@ -7,11 +7,9 @@ Fecha: 2022-08-25
 
 // Importaciones
 import emailjs from '@emailjs/browser';
+import { SubmitButton } from 'components';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
-import { FaRegEnvelope } from "react-icons/fa6";
-import ButtonSecondary from '../buttons/ButtonSecondary';
-import ButtonContainer from '../containers/ButtonContainer';
 import EmailErrorModal from '../modals/EmailErrorModal';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
 
@@ -190,15 +188,7 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position={'justify-center items-center'}>
-              <ButtonSecondary
-                title={'Enviar mensaje'}
-                icon={<FaRegEnvelope />}
-                type={'submit'}
-                width={'w-[240px]'}
-                distance='mx-1'
-              />
-            </ButtonContainer>
+            <SubmitButton />
             {/* Submit Button */}
 
             {/* Modals */}

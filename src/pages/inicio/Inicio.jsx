@@ -5,8 +5,8 @@ import { canastaderopa_640 } from 'assets';
 import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
+import HeroInicio from './components/HeroInicio';
 import QuieresUnaFranquicia from './franquicias/QuieresUnaFranquicia';
-import CarouselPromociones from './promociones/CarouselPromociones';
 // const HeroInicio = lazy(() => import('./components/HeroInicio'));
 const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
@@ -46,7 +46,7 @@ const Inicio = () => (
         ogType={OG_TYPE} />
 
       {/* <HeroInicio /> */}
-      <CarouselPromociones />
+      <HeroInicio />
       <SobreNosotros />
       <NuestrosServicios />
       {/* <CantidadSucursales /> */}

@@ -51,7 +51,7 @@ const CarouselPromociones = () => {
       <div className={`absolute inset-0 z-10 w-full bg-dark opacity-60 top-0 left-0 ${styles.height}`}></div>
       <div className='absolute inset-0 top-0 z-20 p-8 py-20 sm:p-20 h-full'>
         <Container>
-          <div className='w-full sm:w-2/3'>
+          <div className='w-full sm:w-2/3 flex flex-col gap-12'>
             <TitleH1 textColor={styles.titleH1.textColor} textTransform={styles.titleH1.textTransform} align={'center'}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </TitleH1>
             <p className={styles.paragraph}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus in architecto, quibusdam earum placeat officiis ea molestias esse consequuntur aliquam culpa tempora ut dolorum nisi quaerat autem quisquam. Asperiores temporibus adipisci fugiat et sed incidunt maiores magnam iste voluptate sunt.</p>
             <ButtonContainer position={'items-center'}>

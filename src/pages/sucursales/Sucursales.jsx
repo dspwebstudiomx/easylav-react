@@ -10,7 +10,7 @@ import { CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
-// Estructura
+// Estructuracls
 const Sucursales = () => {
   scrollToTop();
   return (

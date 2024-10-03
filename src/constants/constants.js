@@ -181,10 +181,11 @@ export const BUTTON_SECONDARY_UI = {
 
 // Hero Inicio
 export const HEROINICIO_UI = {
+  HEIGHT: "h-full sm:h-[600px] lg:h-[500px]",
   THEME: "dark",
   BACKGROUND: {
     OPACITY: "opacity-90",
-    COLOR: "bg-dark",
+    COLOR: "bg-primary",
   },
   DISPLAY: {
     BUTTON: "block",
@@ -203,7 +204,7 @@ export const HEROINICIO_UI = {
       CONTENT: "Nuestros Servicios",
       COLOR: "light",
       SIZE: "xl",
-      TRANSFORM: "",
+      TRANSFORM: "uppercase",
     },
   },
 };
@@ -332,9 +333,9 @@ export const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-2",
   },
   COLUMNA_2: {
-    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-8",
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-y-12",
     HEIGHT: "lg:h-auto md:h-[500px]",
-    MARGIN: "mx-auto mt-24 sm:mt-8",
+    MARGIN: "mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto",
     PADDING: "p-0",
     WIDTH: "lg:w-[80%] xl:w-full",
   },
@@ -342,7 +343,7 @@ export const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-0",
   },
   IMAGE: {
-    WIDTH: "w-[320px] sm:w-[300px]",
+    WIDTH: "w-[320px] sm:w-[360px]",
   },
 };
 

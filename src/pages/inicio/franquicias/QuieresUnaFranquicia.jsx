@@ -7,10 +7,8 @@ Fecha: 2022-08-25
 
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets'
-import { BackgroundImageSection, ButtonContainer, Container } from "components"
+import { BackgroundImageSection, ButtonContainer, ButtonPrimary, Container } from "components"
 import { QUIERES_UNA_FRANQUICIA_UI } from 'constants/constants'
-import { scrollWithOffset } from 'functions'
-import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production'
 
 // Estructura
 const QuieresUnaFranquicia = () => {
@@ -40,9 +38,7 @@ const QuieresUnaFranquicia = () => {
               Imagina ser parte de una franquicia de lavandería, un sector que nunca pasa de moda y siempre tiene demanda. Con nuestra marca, no solo obtendrás un modelo de negocio probado y exitoso, sino también el respaldo y la capacitación necesaria para triunfar. Nuestros sistemas innovadores y tecnología de vanguardia te permitirán ofrecer un servicio excepcional, atrayendo a clientes que buscan calidad y conveniencia. No dejes pasar esta oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
             </p>
             <ButtonContainer position={styles.buttonContainer}>
-              <HashLink to={QUIERES_UNA_FRANQUICIA_UI.BUTTON.HREF} scroll={el => scrollWithOffset(el)} >
-                <button className={styles.button}>{QUIERES_UNA_FRANQUICIA_UI.BUTTON.TEXT.CONTENT}</button>
-              </HashLink>
+              <ButtonPrimary title='Conoce más' href='/franquicias' />
             </ButtonContainer>
           </div>
         </div>
