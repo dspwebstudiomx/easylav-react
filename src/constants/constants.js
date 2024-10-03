@@ -343,7 +343,7 @@ export const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-0",
   },
   IMAGE: {
-    WIDTH: "w-[320px] sm:w-[360px]",
+    WIDTH: "w-[320px] sm:w-[280px] lg:w-[360px]",
   },
 };
 

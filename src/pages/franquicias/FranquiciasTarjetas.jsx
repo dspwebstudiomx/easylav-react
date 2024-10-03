@@ -1,14 +1,23 @@
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ImageResponsive, PageLayout, SEOFriendly, TitleH1 } from "components";
+import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, SEOFriendly, Spacing, TitleH1 } from "components";
 import { FRANQUICIAS_UI } from "constants/constants";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
-import { FaHome } from "react-icons/fa";
-import { FaRegBuilding } from "react-icons/fa6";
+import { useState } from 'react';
+import { FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaRegBuilding, FaXmark } from "react-icons/fa6";
 
 
 const PreguntasFrecuentes = () => {
 
   const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalToggle = () => {
+    setShowModal(!showModal);
+    document.body.style.overflow = !showModal ? "auto" : "hidden";
+  };
+
   return (
     <>
       <SEOFriendly
@@ -53,6 +62,15 @@ const PreguntasFrecuentes = () => {
                 )
               })}
             </ul>
+            <ButtonContainer position={"justify-center sm:justify-center my-12 sm:my-6 xl:my-20"}          >
+              <ButtonSecondary
+                title={"Solicita más información"}
+                width={"w-[340px]"}
+                onClick={handleModalToggle}
+                icon={<FaInfoCircle />}
+                distance='mx-1'
+              />
+            </ButtonContainer>
             {/* Questions */}
 
             <div id="franquicias-columma-2" className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
@@ -77,11 +95,28 @@ const PreguntasFrecuentes = () => {
             </div>
           </div>
         </div>
-        <ButtonContainer position={'items-center sm:justify-center mt-8'}>
+        <ButtonContainer position={'items-center sm:justify-center my-8'}>
           <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={''} />
           <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={''} />
         </ButtonContainer>
       </PageLayout >
+      {showModal && (
+        <Modal>
+          <div
+            id="franquicias-formualario"
+            className="z-40 mx-auto flex w-[90%] flex-col rounded-xl border-4 border-primary bg-light p-8 2xl:w-1/2"
+          >
+            <button id="button-close" onClick={handleModalToggle}>
+              <FaXmark
+                size={36}
+                className="z-30 ml-auto text-secondary"
+              />
+            </button>
+            <Spacing distance='my-4' />
+            <ContactFormFranquicias />
+          </div>
+        </Modal>
+      )}
     </>
   );
 };
