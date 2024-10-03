@@ -146,10 +146,10 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "min-w-[280px]",
+  WIDTH: "min-w-[240px]",
   HEIGHT: "h-auto",
   FONT_SIZE: "text-xl",
-  PADDING: "px-6 py-8 sm:px-3 sm:py-4",
+  PADDING: "px-6 py-6 sm:px-3 sm:py-4",
   FONT_WEIGHT: "font-semibold",
   TEXT_TRANSFORM: "",
   ROUNDED: "rounded-lg",
@@ -251,10 +251,10 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] md:h-[340px] xl:h-[340px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[380px] md:h-[340px] xl:h-[340px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
-    "flex lg:flex-row gap-0 justify-between items-center sm:flex-row",
+    "flex lg:flex-row gap-1 justify-between items-center flex-col sm:flex-row",
   NAME_CLASSNAME: "font-semibold text-lg",
   NUMBER_STAR_CONTAINER_CLASSNAME:
     "text-dark justify-center flex items-center mb-6",
@@ -285,7 +285,7 @@ export const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-2xl",
-    WIDTH: "w-[260px] sm:w-[280px] 2xl:w-[300px]",
+    WIDTH: "w-[290px] sm:w-[280px] 2xl:w-[300px]",
   },
   IMAGE: {
     CONTAINER: {

@@ -41,4 +41,10 @@ export const franquiciaDescripciones = [
     description:
       "El equipo directivo de Lavanderías Easylav cuenta con experiencia en el sector y está comprometido con el éxito de sus franquiciados. Esto se traduce en una gestión estratégica sólida, adaptación a las tendencias del mercado y capacidad para enfrentar cambios económicos con flexibilidad y eficacia.",
   },
+  {
+    id: 8,
+    title: "Lorem ipsum esimet dolot",
+    description:
+      "La estructura de franquicia de Lavanderías Easylav permite a los inversionistas escalar su inversión según sus objetivos financieros y personales. Con la posibilidad de abrir múltiples ubicaciones y expandirse geográficamente, los franquiciados pueden aprovechar las oportunidades de crecimiento en diferentes mercados y comunidades.",
+  },
 ];

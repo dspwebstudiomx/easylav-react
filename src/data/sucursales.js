@@ -1,6 +1,6 @@
 //! fotos de sucursal en lugar de mapas
 
-import { Placeholder } from "assets";
+import { Placeholder, VistaLavanderiaDesdeEntrada_1_640 } from "assets";
 
 const localservices = [
   {
@@ -38,7 +38,7 @@ const localservices = [
     city: "Morelia",
     email: "cincodefebrero@easylav.mx",
     titleMailto: "Enviar correo a 5 de Febrero",
-    image: Placeholder,
+    image: VistaLavanderiaDesdeEntrada_1_640,
   },
   {
     id: 4,

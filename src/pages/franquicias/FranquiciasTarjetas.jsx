@@ -40,7 +40,7 @@ const PreguntasFrecuentes = () => {
           {/* Title */}
           <div className=''>
             {/* Questions */}
-            <ul className="grid sm:grid-cols-2">
+            <ul className="grid sm:grid-cols-2 gap-4">
               {franquiciaDescripciones.map(description => {
                 return (
                   <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">

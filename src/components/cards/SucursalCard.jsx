@@ -53,12 +53,13 @@ export default function SucursalCard({
             mapTypeControl={false}
           />
         </APIProvider> */}
-        <img src={image} alt={title} />
+        <div className='absolute bg-dark opacity-40 w-full h-[180px]'></div>
+        <img src={image} alt={title} className='-z-10 w-full h-[180px] object-cover object-center' />
       </div>
       {/* mapa */}
 
       {/* Contenido */}
-      <div className='relative flex flex-col justify-start gap-3 p-4 px-10'>
+      <div className='flex flex-col justify-start gap-3 p-4 px-10'>
         <div className='flex items-center justify-center mx-auto'>
           <TitleH4 title={title} />
         </div>

@@ -36,12 +36,12 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <ul className="w-full sm:grid grid-cols-2 gap-8 gap-y-2 sm:gap-y-8">
+        <ul className="w-full sm:grid grid-cols-2 gap-8">
           {frequentQuestions.map(question => {
             return (
               <li key={question.id} id={`question-${question.id}`} className="text-dark">
                 <Accordion
-                  height={'h-[200px]'}
+                  height={'h-auto'}
                   title={question.question}
                   description={question.answer}
                 />
@@ -51,9 +51,9 @@ const PreguntasFrecuentes = () => {
         </ul>
         {/* Questions */}
       </div>
-      <ButtonContainer position={'items-center sm:justify-center'}>
+      <ButtonContainer position={'items-center justify-center'} distance='mt-20'>
         <ButtonPrimary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'w-[240px]'} />
-        <ButtonSecondary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={'w-[240px]'} />
+        <ButtonSecondary href={'/'} title={'Inicio'} icon={<FaHome />} width={'w-[240px]'} />
       </ButtonContainer>
     </PageLayout >
   );

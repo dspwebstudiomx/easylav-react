@@ -9,7 +9,7 @@
 import PropTypes from 'prop-types'
 export default function ButtonContainer({ children, position, distance }) {
   return (
-    <div className={`flex flex-col sm:flex-row mt-12 gap-8 w-full ${position} ${distance}`}>
+    <div className={`flex flex-col sm:flex-row gap-8 w-full ${position} ${distance}`}>
       {children}
     </div>
   )

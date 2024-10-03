@@ -19,18 +19,23 @@ import Spacing from './Spacing'
 // Estructura
 const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 }) => {
 
-  const styles = {
-    span: `text-4xl uppercase font-semibold tracking-wider text-light py-8`,
-  }
   return (
     <>
       <Header />
       <main id={`sucursales-${city}`} className='mt-[100px] sm:mt-0 xl:mt-[100px]'>
-        <BackgroundImageSection height="h-[200px]" align='left-[10%]' opacity='opacity-40' titleColor='text-light' textColor='text-light' image='block' backgroundColor='bg-dark' image_1024={image_1024} image_1200={image_1200} image_576={image_576} image_1920={image_1920}>
-          <span className={styles.span}>
-            {city}
-          </span>
-        </BackgroundImageSection >
+        <BackgroundImageSection
+          // image_768={image_768}
+          image_576={image_576}
+          // image_240={image_240}
+          image_1024={image_1024}
+          image_1200={image_1200}
+          image_1920={image_1920}
+          height='h-[180px] sm:h-[300px] '
+          opacity='opacity-50 hover:opacity-60'
+          backgroundColor='bg-dark'
+        >
+          <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
+        </BackgroundImageSection>
 
         <Section id='sucursales-morelia' className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={''}>
