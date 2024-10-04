@@ -10,6 +10,8 @@ const localservices = [
     position: { lat: 19.7158083, lng: -101.2159875 },
     place: "Av Pedregal 167, Emiliano Zapata, 58148 Morelia, Mich.",
     serviceday1: "Lunes a Domingo:",
+    openHour: "7:00",
+    closeHour: "21:30",
     servicehour1: "7:00 a.m a 9:30 p.m",
     city: "Morelia",
     email: "pedregal@easylav.mx",

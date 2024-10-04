@@ -15,7 +15,7 @@ const PreguntasFrecuentes = () => {
 
   const handleModalToggle = () => {
     setShowModal(!showModal);
-    document.body.style.overflow = !showModal ? "auto" : "hidden";
+    document.body.style.overflow = !showModal && "hidden";
   };
 
   return (
@@ -109,7 +109,7 @@ const PreguntasFrecuentes = () => {
             <button id="button-close" onClick={handleModalToggle}>
               <FaXmark
                 size={36}
-                className="z-30 ml-auto text-secondary"
+                className="z-30 ml-auto text-primary_dark"
               />
             </button>
             <Spacing distance='my-4' />

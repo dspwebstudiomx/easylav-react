@@ -48,11 +48,11 @@ export const ContactFormFranquicias = () => {
       );
   };
 
-  if (showModal) {
-    document.body.classList.add('modal-active')
-  } else {
-    document.body.classList.remove('modal-active')
-  }
+  // if (showModal) {
+  //   document.body.classList.add('modal-active')
+  // } else {
+  //   document.body.classList.remove('modal-active')
+  // }
 
   return (
     <article id="formulario" className="border-4 border-primary_dark rounded-2xl bg-primary_light text-sm p-4 h-auto text-dark">
@@ -114,7 +114,12 @@ export const ContactFormFranquicias = () => {
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 p-6 text-base">
             <Fields errors={errors} touched={touched} />
             <SubmitButton />
-            {showModal && <EmailSuccessModal onClick={() => resetForm() && setShowModal(false)} />}
+            {showModal && <EmailSuccessModal
+              onClick={() => {
+                setShowModal(false);
+                resetForm()
+              }}
+            />}
             {showErrorModal && <EmailErrorModal onClick={() => setShowErrorModal(false)} />}
           </Form>
         )}

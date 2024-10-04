@@ -6,11 +6,19 @@
 */
 
 // Importaciones
-import { CentroLeon as image } from 'assets'
+import { CentroLeon } from 'assets'
 import { PageLayoutPlaces, SEOFriendly } from "components"
 
 // Estructura
 const Leon = () => {
+
+
+  const image = {
+    576: CentroLeon,
+    1024: CentroLeon,
+    1200: CentroLeon,
+    1920: CentroLeon,
+  }
 
   return (
     <>
@@ -26,10 +34,10 @@ const Leon = () => {
       />
       <PageLayoutPlaces
         city='León'
-        image_576={image}
-        image_1024={image}
-        image_1200={image}
-        image_1920={image}
+        image_576={image[576]}
+        image_1024={image[1024]}
+        image_1200={image[1200]}
+        image_1920={image[1920]}
       />
     </>
   )

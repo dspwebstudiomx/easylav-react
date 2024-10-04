@@ -23,3 +23,12 @@ export { default as Placeholder } from "../assets/images/images/Placeholder.webp
 export { default as LogoHorizontalBlanco } from "../assets/images/logos/horizontal/logo-blanco.png";
 export { default as LogoHorizontalColor } from "../assets/images/logos/horizontal/logo-color.png";
 export { default as LogoSVG } from "../assets/images/logos/svg/logoSVG.svg";
+export { default as HeroInicioImage1_478x600 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
+export { default as HeroInicioImage1_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
+export { default as HeroInicioImage1_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
+export { default as HeroInicioImage2_478x600 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
+export { default as HeroInicioImage2_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
+export { default as HeroInicioImage2_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
+export { default as HeroInicioImage3_478x600 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
+export { default as HeroInicioImage3_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
+export { default as HeroInicioImage3_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
