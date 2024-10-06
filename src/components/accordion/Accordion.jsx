@@ -26,7 +26,7 @@ const Accordion = ({ description, title, height }) => {
   return (
     <div className='w-full rounded-lg'>
       <button
-        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark ${!active ? 'rounded-2xl border-2 border-primary' : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'} border-r-2 border-r-primary mx-auto`}
+        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark items-center justify-center ${!active ? 'rounded-2xl border-2 border-primary' : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'} border-r-2 border-r-primary mx-auto`}
         onClick={() => handleToggle()}
       >
         {/*  svg icon */}
