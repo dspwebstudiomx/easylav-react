@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 // Estructura
 export default function ButtonSecondary({ ...props }) {
 
-  const { title, href, icon, type, onClick, titleMailto, distance } = props
+  const { title, href, icon, type, onClick, titleMailto, distance, width } = props
 
   return (
     <Button
@@ -26,6 +26,7 @@ export default function ButtonSecondary({ ...props }) {
       icon={icon}
       onClick={onClick}
       titleMailto={titleMailto}
+      width={width}
       distance={distance}
     />
   )
@@ -34,6 +35,7 @@ export default function ButtonSecondary({ ...props }) {
 ButtonSecondary.propTypes = {
   title: PropTypes.string,
   height: PropTypes.string,
+  width: PropTypes.string,
   href: PropTypes.string,
   border: PropTypes.string,
   type: PropTypes.string,

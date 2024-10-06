@@ -20,7 +20,7 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "",
-    FONT_SIZE: "text-2xl sm:text-3xl xl:text-3xl",
+    FONT_SIZE: "text-[26px] sm:text-3xl xl:text-3xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -28,7 +28,7 @@ export const GENERAL_UI = {
     HERO: {
       COLOR: "text-light",
     },
-    TRANSFORM: "uppercase",
+    TRANSFORM: "uppercase tracking-wide",
   },
   TITLEH2: {
     FONT_FAMILY: "font-din-bold",
@@ -146,7 +146,6 @@ export const BORDER_LEFT_UI = {
 // Button
 export const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  WIDTH: "min-w-[240px]",
   HEIGHT: "h-auto",
   FONT_SIZE: "text-xl",
   PADDING: "px-6 py-6 sm:px-3 sm:py-4",
@@ -181,7 +180,7 @@ export const BUTTON_SECONDARY_UI = {
 
 // Hero Inicio
 export const HEROINICIO_UI = {
-  HEIGHT: "h-[600px] lg:h-[500px]",
+  HEIGHT: "h-[750px] lg:h-[500px]",
   THEME: "dark",
   BACKGROUND: {
     OPACITY: "opacity-90",
@@ -430,7 +429,7 @@ export const QUIERES_UNA_FRANQUICIA_UI = {
   },
   DISPLAY: {
     BUTTON: "block",
-    IMAGE: "block",
+    IMAGE: "bg-fixed",
     PARAGRAPH: "block",
   },
   COLOR: {
@@ -447,7 +446,7 @@ export const QUIERES_UNA_FRANQUICIA_UI = {
       SIZE: "xl",
       TRANSFORM: "",
     },
-    CONTAINER: "place-content-center",
+    CONTAINER: "items-center justify-center",
   },
   TITLE: {
     H2: {

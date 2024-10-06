@@ -43,7 +43,7 @@ const PreguntasFrecuentes = () => {
                   ¿Estás interesado en adquirir una franquicia?
                 </TitleH1>
               </BorderLeft>
-              <h3 className='text-xl font-semibold sm:text-2xl mt-8'>Puedes ver las preguntas más frecuentes:</h3>
+              <h3 className='text-xl font-semibold sm:text-2xl mt-8 text-dark'>Visita cada punto para ver la información relacionada</h3>
             </div>
           </div>
           {/* Title */}
@@ -62,10 +62,10 @@ const PreguntasFrecuentes = () => {
                 )
               })}
             </ul>
-            <ButtonContainer position={"justify-center sm:justify-center my-12 sm:my-6 xl:my-20"}          >
+            <ButtonContainer position={"justify-center sm:justify-center items-center my-12 sm:my-6 xl:my-20"}          >
               <ButtonSecondary
                 title={"Solicita más información"}
-                width={"w-[340px]"}
+                width={"w-[280px]"}
                 onClick={handleModalToggle}
                 icon={<FaInfoCircle />}
                 distance='mx-1'
@@ -96,8 +96,8 @@ const PreguntasFrecuentes = () => {
           </div>
         </div>
         <ButtonContainer position={'items-center sm:justify-center my-8'}>
-          <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={''} />
-          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={''} />
+          <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[300px]'} />
+          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[300px] sm:w-[140px]'} />
         </ButtonContainer>
       </PageLayout >
       {showModal && (

@@ -20,13 +20,13 @@ const Accordion = ({ description, title, height }) => {
   };
 
   const styles = {
-    width: 'w-full xl:w-[380px] ',
+    width: 'w-[300px] xl:w-[380px] ',
   }
 
   return (
     <div className='w-full rounded-lg'>
       <button
-        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark ${!active ? 'rounded-2xl border-2 border-primary' : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'} border-r-2 border-r-primary`}
+        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark ${!active ? 'rounded-2xl border-2 border-primary' : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'} border-r-2 border-r-primary mx-auto`}
         onClick={() => handleToggle()}
       >
         {/*  svg icon */}
@@ -56,7 +56,7 @@ const Accordion = ({ description, title, height }) => {
 
       </button>
 
-      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary' : 'hidden'}`}
+      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto' : 'hidden'}`}
       >
         <p className={`${GENERAL_UI.PARAGRAPH} py-8  dark:text-dark-6 w-full pr-8`}>
           {description}
