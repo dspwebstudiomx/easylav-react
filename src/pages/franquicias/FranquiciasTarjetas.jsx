@@ -62,13 +62,13 @@ const PreguntasFrecuentes = () => {
                 )
               })}
             </ul>
-            <ButtonContainer position={"justify-center sm:justify-center items-center my-12 sm:my-6 xl:my-20"}          >
+            <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}          >
               <ButtonSecondary
                 title={"Solicita más información"}
                 width={"w-[280px]"}
                 onClick={handleModalToggle}
                 icon={<FaInfoCircle />}
-                distance='mx-1'
+                distance=''
               />
             </ButtonContainer>
             {/* Questions */}
