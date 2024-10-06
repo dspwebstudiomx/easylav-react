@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const Fields = ({ errors, touched }) => {
   return (
     <div className="flex flex-wrap justify-between gap-3">
+      {/* Nombre Completo */}
       <div className="flex flex-col xl:w-[50%] w-full">
         <label htmlFor="user_name" className="mb-2">
           Nombre Completo<span className="text-required ml-1">*</span>
@@ -22,6 +23,9 @@ const Fields = ({ errors, touched }) => {
           </p>
         )}
       </div>
+      {/* Nombre Completo */}
+
+      {/* Ciudad */}
       <div className="flex flex-col xl:w-[45%] w-full">
         <label htmlFor="user_city" className="mb-2">
           Ciudad<span className="text-required ml-1">*</span>
@@ -39,6 +43,8 @@ const Fields = ({ errors, touched }) => {
           </p>
         )}
       </div>
+      {/* Ciudad */}
+
       <div className='flex flex-wrap justify-between gap-3'>
         <div className='flex flex-col xl:w-[50%] w-full'>
           <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
