@@ -45,6 +45,7 @@ const Fields = ({ errors, touched }) => {
       </div>
       {/* Ciudad */}
 
+      {/* Correo Electrónico */}
       <div className='flex flex-wrap justify-between gap-3'>
         <div className='flex flex-col xl:w-[50%] w-full'>
           <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
@@ -73,6 +74,9 @@ const Fields = ({ errors, touched }) => {
 
         </div>
       </div>
+      {/* Correo Electrónico */}
+
+      {/* Número Telefónico */}
       <div className='flex flex-col w-full'>
         <label htmlFor='message' className='mb-2'>Mensaje<span className='text-required ml-1'>*</span></label>
         <textarea
@@ -85,7 +89,7 @@ const Fields = ({ errors, touched }) => {
         {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
 
       </div>
-      {/* rest of the fields */}
+      {/* Número Telefónico */}
     </div>
   );
 };
