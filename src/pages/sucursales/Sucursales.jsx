@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
+import { CentroGuadalajara as guadalajara, CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
@@ -29,7 +29,7 @@ const Sucursales = () => {
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 place-items-center">
           <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' />
           <BackgroundCard image={leon} title='León' href='/sucursales/leon' />
-          {/* <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' /> */}
+          <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' />
         </div>
       </PageLayout>
     </>

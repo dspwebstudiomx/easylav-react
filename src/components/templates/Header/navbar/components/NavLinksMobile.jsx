@@ -1,3 +1,4 @@
+import { SocialLinks } from "components";
 import { navLinksPages, navLinksSections } from "data/navlinks";
 import { scrollWithOffset } from "functions";
 import PropTypes from "prop-types";
@@ -64,6 +65,18 @@ const NavLinksMobile = ({ onLinkClick }) => {
           );
         })}
       </ul>
+      <div className="mt-2">
+        <h3 className="text-center text-light text-2xl mb-4">Sigue nuestas redes sociales</h3>
+
+        <SocialLinks
+          position={"justify-center md:0justify-end"}
+          color={"text-secondary_dark"}
+          size={41}
+          circleBorder={"border-2 rounded-[100px] border-primary_dark shadow-xl bg-light p-3"}
+          gap={"gap-3"}
+          hover={"hover:text-primary hover:border-primary"}
+        />
+      </div>
     </div>
   );
 };
