@@ -26,7 +26,7 @@ const Sucursales = () => {
         ogType="website"
       />
       <PageLayout id={"Sucursales"}>
-        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8 sm:gap-10 place-items-center">
+        <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 place-items-center">
           <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' />
           <BackgroundCard image={leon} title='León' href='/sucursales/leon' />
           {/* <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' /> */}
