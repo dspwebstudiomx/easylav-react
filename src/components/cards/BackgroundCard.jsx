@@ -32,7 +32,7 @@ const BackgroundCard = ({ id, title, image, href }) => {
   )
 }
 BackgroundCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   href: PropTypes.string.isRequired,
   title: PropTypes.node.isRequired,
   image: PropTypes.string.isRequired,
