@@ -47,7 +47,7 @@ const Fields = ({ errors, touched }) => {
         {/* Ciudad */}
       </div>
 
-      <div className=''>
+      <div className='flex flex-col sm:flex-row gap-3'>
         {/* Correo Electrónico */}
         <div className='flex justify-between gap-3'>
           <div className='flex flex-col sm:w-[45%] w-full'>

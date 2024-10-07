@@ -65,7 +65,7 @@ const PreguntasFrecuentes = () => {
             <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}          >
               <ButtonSecondary
                 title={"Solicita más información"}
-                width={"w-[280px]"}
+                width={"w-[240px]"}
                 onClick={handleModalToggle}
                 icon={<FaInfoCircle />}
                 distance=''
@@ -96,8 +96,8 @@ const PreguntasFrecuentes = () => {
           </div>
         </div>
         <ButtonContainer position={'items-center sm:justify-center my-8'}>
-          <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[300px]'} />
-          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[300px] sm:w-[140px]'} />
+          <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} />
+          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} />
         </ButtonContainer>
       </PageLayout >
       {showModal && (

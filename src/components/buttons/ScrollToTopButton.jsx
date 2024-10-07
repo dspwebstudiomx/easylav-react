@@ -28,7 +28,7 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`animate__animated animate__fadeIn animate__slow shadow-2xl rounded-full fixed bg-primary w-16 h-16 right-3 bottom-24 z-50 grid place-content-center border-l-4 border-t-4 border-l-primary_dark border-t-primary_light border-l-primary_dark ${visible ? 'block' : 'hidden'
+      className={`animate__animated animate__fadeIn animate__slow shadow-2xl rounded-full fixed bg-primary w-16 h-16 right-3 bottom-32h z-50 grid place-content-center border-l-4 border-t-4 border-l-primary_dark border-t-primary_light border-l-primary_dark ${visible ? 'block' : 'hidden'
         }`}
     >
       <HiOutlineChevronDoubleUp className='text-primary_light' size={28} />

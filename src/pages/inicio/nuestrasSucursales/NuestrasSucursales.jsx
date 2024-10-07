@@ -24,7 +24,7 @@ const NuestrasSucursales = () => {
             href='/contacto'
             distance='my-2'
             type='button'
-            width='min-w-[300px]'
+            width='min-w-[240px]'
           />
         </ButtonContainer>
       </div>

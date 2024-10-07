@@ -40,7 +40,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         <Section id='sucursales-morelia' className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={''}>
             <SucursalCardPerCity city={city} />
-            <ButtonContainer position='items-center' distance='mt-16'>
+            <ButtonContainer position='items-center justify-center' distance='mt-16'>
               <ButtonSecondary
                 title='Regresar a sucursales'
                 href='/sucursales'

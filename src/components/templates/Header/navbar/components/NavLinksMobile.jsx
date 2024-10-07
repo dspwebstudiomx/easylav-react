@@ -66,8 +66,6 @@ const NavLinksMobile = ({ onLinkClick }) => {
         })}
       </ul>
       <div className="mt-2">
-        <h3 className="text-center text-light text-2xl mb-4">Sigue nuestas redes sociales</h3>
-
         <SocialLinks
           position={"justify-center md:0justify-end"}
           color={"text-secondary_dark"}

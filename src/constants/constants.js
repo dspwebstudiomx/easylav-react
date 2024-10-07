@@ -28,7 +28,7 @@ export const GENERAL_UI = {
     HERO: {
       COLOR: "text-light",
     },
-    TRANSFORM: "uppercase tracking-wide",
+    TRANSFORM: "uppercase leading-7",
   },
   TITLEH2: {
     FONT_FAMILY: "font-din-bold",
@@ -76,7 +76,7 @@ export const LOADING_UI = {
 // Section
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
-  PADDING: "py-12 px-8 sm:p-20",
+  PADDING: "py-16 px-12 sm:p-20",
   BACKGROUND_COLOR: "bg-section dark:bg-dark",
   TEXT_COLOR: "",
 };
@@ -285,7 +285,7 @@ export const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-2xl",
-    WIDTH: "w-[290px] sm:w-[280px] 2xl:w-[300px]",
+    WIDTH: "w-[260px] sm:w-[280px] 2xl:w-[300px]",
   },
   IMAGE: {
     CONTAINER: {
@@ -342,7 +342,7 @@ export const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-0",
   },
   IMAGE: {
-    WIDTH: "w-[320px] sm:w-[280px] lg:w-[360px]",
+    WIDTH: "w-[280px] lg:w-[360px]",
   },
 };
 
