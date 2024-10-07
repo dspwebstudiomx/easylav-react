@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const Fields = ({ errors, touched }) => {
   return (
     <div className="flex flex-col justify-between gap-3">
+
       <div className='flex flex-col sm:flex-row gap-3'>
         {/* Nombre Completo */}
         <div className="flex flex-col sm:w-[50%] w-full">
@@ -27,7 +28,7 @@ const Fields = ({ errors, touched }) => {
         {/* Nombre Completo */}
 
         {/* Ciudad */}
-        <div className="flex flex-col sm:w-[45%] w-full">
+        <div className="flex flex-col  sm:w-[50%] w-full">
           <label htmlFor="user_city" className="mb-2">
             Ciudad<span className="text-required ml-1">*</span>
           </label>
@@ -49,42 +50,39 @@ const Fields = ({ errors, touched }) => {
 
       <div className='flex flex-col sm:flex-row gap-3'>
         {/* Correo Electrónico */}
-        <div className='flex justify-between gap-3'>
-          <div className='flex flex-col sm:w-[45%] w-full'>
-            <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
-            <Field
-              className='rounded-md border-2 border-primary p-2 outline-none  bg-light text-dark'
-              id='user_email'
-              name='user_email'
-              type='email'
-              placeholder='Correo electrónico'
-              required
-            />
-            {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
+        <div className='flex flex-col  sm:w-[50%] w-full'>
+          <label htmlFor='user_email' className='mb-2'>Correo Electrónico<span className='text-required ml-1'>*</span></label>
+          <Field
+            className='rounded-md border-2 border-primary p-2 outline-none  bg-light text-dark'
+            id='user_email'
+            name='user_email'
+            type='email'
+            placeholder='Correo electrónico'
+            required
+          />
+          {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
 
-          </div>
-          {/* Correo Electrónico */}
-
-          {/* Número Telefónico */}
-          <div className='flex flex-col sm:w-[50%] w-full'>
-            <label htmlFor='user_phone' className='mb-2'>Número Telefónico<span className='text-required ml-1'>*</span></label>
-            <Field
-              className='rounded-md border-2 border-primary p-2 outline-none bg-light text-dark'
-              type='text'
-              name='user_phone'
-              id='user_phone'
-              placeholder='Número telefónico'
-              required
-            />
-            {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
-
-          </div>
         </div>
-        {/* Número Telefónico */}
+        {/* Correo Electrónico */}
 
-
         {/* Número Telefónico */}
+        <div className='flex flex-col sm:w-[50%] w-full'>
+          <label htmlFor='user_phone' className='mb-2'>Número Telefónico<span className='text-required ml-1'>*</span></label>
+          <Field
+            className='rounded-md border-2 border-primary p-2 outline-none bg-light text-dark'
+            type='text'
+            name='user_phone'
+            id='user_phone'
+            placeholder='Número telefónico'
+            required
+          />
+          {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
+
+        </div>
       </div>
+      {/* Número Telefónico */}
+
+
       {/* Mensaje */}
       <div className='flex flex-col w-full'>
         <label htmlFor='message' className='mb-2'>Mensaje<span className='text-required ml-1'>*</span></label>
@@ -99,7 +97,7 @@ const Fields = ({ errors, touched }) => {
       </div>
       {/* Mensaje */}
 
-    </div>
+    </div >
   );
 };
 Fields.propTypes = {

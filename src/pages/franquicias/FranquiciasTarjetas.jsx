@@ -101,10 +101,10 @@ const PreguntasFrecuentes = () => {
         </ButtonContainer>
       </PageLayout >
       {showModal && (
-        <Modal>
+        <Modal width='sm:w-[40vw]'>
           <div
             id="franquicias-formualario"
-            className="z-40 mx-auto flex w-[90%] flex-col rounded-xl border-4 border-primary bg-light p-8 2xl:w-1/2"
+            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
           >
             <button id="button-close" onClick={handleModalToggle}>
               <FaXmark
