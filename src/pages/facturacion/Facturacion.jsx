@@ -1,5 +1,5 @@
 import { CatedralMorelia } from "assets"
-import { PageLayout, SEOFriendly } from "components"
+import { BorderLeft, PageLayout, SEOFriendly, TitleH1 } from "components"
 
 const Facturacion = () => {
   return (
@@ -14,7 +14,11 @@ const Facturacion = () => {
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
-      <h1>Facturación</h1>
+      <BorderLeft>
+        <TitleH1 className={''}>
+          Quieres una franquicia?
+        </TitleH1>
+      </BorderLeft>
     </PageLayout>
   )
 }

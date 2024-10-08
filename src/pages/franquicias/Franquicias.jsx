@@ -6,12 +6,12 @@
 */
 
 // Importaciones
-import { Banner, BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, TitleH1 } from "components";
+import { CatedralMorelia } from "assets";
+import { Banner, BorderLeft, ButtonContainer, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, SEOFriendly, TitleH1 } from "components";
 import DescriptionWithBulletPoint from "components/list/DescriptionWithBulletPoint";
 import { BANNER_UI, FRANQUICIAS_PROPS, FRANQUICIAS_UI } from "constants/constants";
 import { franquiciasImagenes } from "data";
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { franquiciaDescripciones } from "../../data/franquiciaDescripciones";
@@ -27,14 +27,16 @@ const Franquicias = () => {
 
   return (
     <PageLayout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Franquicias | Easylav</title>
-        <link
-          rel="canonical"
-          href="https://easylav-react.netlify.app/franquicias"
-        />
-      </Helmet>
+      <SEOFriendly
+        title="Franquicias | Easylav: Tu lavandería ideal"
+        url="easylav-react.netlify.app/franquicias"
+        description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
+        author="dspwebstudio"
+        keywords="lavandería, planchado"
+        ogImage={CatedralMorelia}
+        ogImageAlt="canasta verde con ropa sucia"
+        ogType="website"
+      />
       <div className={FRANQUICIAS_UI.CONTAINER.DISPLAY} id={FRANQUICIAS_PROPS.CONTAINER.ID}>
         {/* Columna 1 */}
         <div id={FRANQUICIAS_PROPS.COLUMNA_1.ID} className={FRANQUICIAS_UI.COLUMNA_1.DISPLAY}>
