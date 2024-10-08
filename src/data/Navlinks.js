@@ -102,6 +102,12 @@ const linksTerminos = [
     href: "/preguntas-frecuentes",
     linkId: "preguntas-frecuentes",
   },
+  {
+    id: 3,
+    name: "Facturación",
+    href: "/facturacion",
+    linkId: "facturacion",
+  },
 ];
 export {
   linksPoliticas,
