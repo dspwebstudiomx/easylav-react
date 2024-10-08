@@ -336,7 +336,7 @@ export const FRANQUICIAS_UI = {
     HEIGHT: "lg:h-auto md:h-[500px]",
     MARGIN: "mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto",
     PADDING: "p-0",
-    WIDTH: "lg:w-[80%] xl:w-full",
+    WIDTH: "w-full",
   },
   UL: {
     DISPLAY: "flex flex-col gap-0",
