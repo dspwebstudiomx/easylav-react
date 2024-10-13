@@ -383,7 +383,7 @@ export default function ContactFacturacion() {
               />
             }
             {/* Modals */}
-            <ButtonContainer position='items-center justify-center'>
+            <ButtonContainer position='items-center justify-center bg-red_light'>
               <SubmitButton type='submit' />
               <SubmitButton type='submit' />
               {/* <ButtonPrimary width='w-auto' title='Borrar Información' onClick={() => resetForm()} type='submit' /> */}
