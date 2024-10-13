@@ -159,7 +159,7 @@ export const BUTTON_UI = {
 
 // Button Container
 export const BUTTON_CONTAINER = {
-  POSITION: "place-items-center",
+  POSITION: "place-items-center bg-red",
   DISTANCE: "mt-12",
 };
 

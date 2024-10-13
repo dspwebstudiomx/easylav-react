@@ -7,7 +7,7 @@ Fecha: 2022-08-25
 
 // Importaciones
 import emailjs from '@emailjs/browser';
-import { ButtonContainer, SubmitButton } from 'components';
+import { ButtonContainer, ButtonPrimary, SubmitButton } from 'components';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
 import EmailErrorModal from '../modals/EmailErrorModal';
@@ -383,10 +383,9 @@ export default function ContactFacturacion() {
               />
             }
             {/* Modals */}
-            <ButtonContainer position='items-center justify-center bg-red_light'>
+            <ButtonContainer position='items-center justify-center'>
               <SubmitButton type='submit' />
-              <SubmitButton type='submit' />
-              {/* <ButtonPrimary width='w-auto' title='Borrar Información' onClick={() => resetForm()} type='submit' /> */}
+              <ButtonPrimary width='w-auto' title='Borrar Información' onClick={() => resetForm()} type='submit' />
             </ButtonContainer>
           </Form>
         )
