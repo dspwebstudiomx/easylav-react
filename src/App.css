@@ -124,3 +124,16 @@ html {
   width: 80px;
   border: 10px solid #fff
 }
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: #fff !important;
+  color: fieldtext !important;
+  text-transform: uppercase;
+}
+
+input::-internal-datetime-container {
+  display: flex;
+  align-items: center;
+}

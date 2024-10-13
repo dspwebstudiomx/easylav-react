@@ -1,5 +1,5 @@
 import { CatedralMorelia } from "assets"
-import { BorderLeft, PageLayout, SEOFriendly, TitleH1 } from "components"
+import { BorderBottom, ContactFacturacion, PageLayout, SEOFriendly, Spacing, TitleH1, TitleH3 } from "components"
 
 const Facturacion = () => {
   return (
@@ -14,11 +14,19 @@ const Facturacion = () => {
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
-      <BorderLeft>
-        <TitleH1 className={''}>
-          Quieres una franquicia?
+      <BorderBottom >
+        <TitleH1 className={'block w-full mx-auto bg-red_light'} align='mx-auto'>
+          Facturación
         </TitleH1>
-      </BorderLeft>
+      </BorderBottom>
+      <Spacing distance='mt-0' />
+      <TitleH3>
+        Favor de proporcionar los siguientes datos para que te hagamos llegar tu factura.
+      </TitleH3>
+      <Spacing distance='mt-6' />
+      <div className="mr-auto w-full">
+        <ContactFacturacion />
+      </div>
     </PageLayout>
   )
 }

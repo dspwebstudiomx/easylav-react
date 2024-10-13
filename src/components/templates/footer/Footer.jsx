@@ -57,7 +57,7 @@ export default function Footer() {
             {/* Footer Terms */}
             <div id="footer-privacy-terms" className={classes.footerSections}>
               <h3 className={classes.footerSectionsTitle}>
-                Términos y Condiciones, Preguntas Frecuentes
+                Términos y Condiciones, Preguntas Frecuentes y Facturación
               </h3>
               <FooterLinksGenerator links={linksTerminos} />
             </div>

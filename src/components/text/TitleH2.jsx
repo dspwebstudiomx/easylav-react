@@ -8,19 +8,19 @@ const styles = `
   ${GENERAL_UI.TITLEH2.FONT_WEIGHT}
   ${GENERAL_UI.TITLEH2.COLOR}
   ${GENERAL_UI.TITLEH2.BACKGROUND_COLOR}
-  ${GENERAL_UI.TITLEH2.JUSTIFY}
 `;
 
-const TitleH2 = ({ children }) => {
+const TitleH2 = ({ children, align }) => {
 
   return (
-    <h2 className={`${styles} mr-auto`}>
+    <h2 className={`${styles} ${align}`}>
       {children}
     </h2>
   )
 }
 TitleH2.propTypes = {
-  children: Proptypes.node.isRequired
+  children: Proptypes.node.isRequired,
+  align: Proptypes.string
 }
 
 export default TitleH2

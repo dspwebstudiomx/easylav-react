@@ -36,6 +36,7 @@ export const GENERAL_UI = {
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
+    JUSTIFY: "mx-auto",
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-regular",
@@ -77,8 +78,9 @@ export const LOADING_UI = {
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
   PADDING: "py-16 px-12 sm:p-20",
-  BACKGROUND_COLOR: "bg-section dark:bg-dark",
+  BACKGROUND_COLOR: "bg-light dark:bg-dark",
   TEXT_COLOR: "",
+  BORDER_JUSTIFY: "mx-auto",
 };
 
 // Container
@@ -124,9 +126,9 @@ export const BANNER_UI = {
 
 // Border Bottom
 export const BORDER_BOTTOM_UI = {
-  WIDTH: "w-full",
-  BORDER: "flex border-b-4 border-b-primary pb-2",
-  JUSTIFY: "justify-center",
+  WIDTH: "sm:w-[60%] md:w-[50%] lg:w-[30%]",
+  BORDER: "flex border-b-4 border-b-primary pb-3",
+  JUSTIFY: "mx-auto",
 };
 
 // Border Center
@@ -157,7 +159,7 @@ export const BUTTON_UI = {
 
 // Button Container
 export const BUTTON_CONTAINER = {
-  POSITION: "place-items-center sm:place-items-start",
+  POSITION: "place-items-center",
   DISTANCE: "mt-12",
 };
 
@@ -377,10 +379,11 @@ export const SERVICES_GENERATOR_UI = {
   UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
   LI: {
     CLASSNAME: "flex flex-col gap-8 items-center justify-center",
-    DIV_VIDEO: "mx-auto sm:w-24 md:w-44 dark:border-4 dark:border-primary ",
+    DIV_VIDEO:
+      "mx-auto sm:w-24 md:w-44 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
     DIV_TITLEH3: "mx-auto",
   },
-  IMAGE: "w-[210px]",
+  IMAGE: "p-2",
 };
 
 // Por que Elegirnos

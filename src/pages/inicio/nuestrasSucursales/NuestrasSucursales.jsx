@@ -13,7 +13,7 @@ import { SUCURSAL_SECTION_PROPS } from 'constants/constants';
 const NuestrasSucursales = () => {
   return (
     <Section id='nuestras-sucursales' >
-      <div className='mx-auto'>
+      <div className='m-auto'>
         <TitleContainer title={SUCURSAL_SECTION_PROPS.TITLEH2} />
         <div className='my-12 mt-24'>
           <PaginatedSucursalCards />

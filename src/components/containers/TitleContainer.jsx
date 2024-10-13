@@ -16,17 +16,20 @@ const TitleContainer = ({ title }) => {
     <div className='flex justify-center'>
       <div className='sm:hidden'>
         <BorderLeft>
-          <TitleH2 justify={GENERAL_UI.TITLEH2_JUSTIFY}>
+          <TitleH2 justify={GENERAL_UI.TITLEH2.JUSTIFY}>
             {title}
           </TitleH2>
         </BorderLeft>
       </div>
-      <div className='hidden sm:block'>
-        <BorderBottom justify={SECTION_UI.BORDER_JUSTIFY}>
-          <TitleH2 justify={GENERAL_UI.TITLEH2_JUSTIFY}>
-            {title}
-          </TitleH2>
-        </BorderBottom>
+      <div className='hidden sm:block w-full mx-auto'>
+
+        <div className='mx-auto text-center'>
+          <BorderBottom justify={SECTION_UI.BORDER_JUSTIFY}>
+            <TitleH2 align={GENERAL_UI.TITLEH2.JUSTIFY}>
+              {title}
+            </TitleH2>
+          </BorderBottom>
+        </div>
       </div>
     </div>
   )

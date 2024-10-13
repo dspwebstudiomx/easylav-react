@@ -10,16 +10,17 @@ const classes = `
   ${GENERAL_UI.TITLEH3.JUSTIFY}
 `;
 
-const TitleH3 = ({ title, className }) => {
+const TitleH3 = ({ children, className }) => {
 
   return (
     <h3 className={`${classes} -mb-3 ${className}`}>
-      {title}
+      {children}
     </h3>
   )
 }
 TitleH3.propTypes = {
   title: Proptypes.string.isRequired,
+  children: Proptypes.node.isRequired,
   className: Proptypes.string
 }
 

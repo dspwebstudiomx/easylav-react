@@ -7,7 +7,7 @@ Fecha: 2022-08-25
 
 // Importaciones
 import emailjs from '@emailjs/browser';
-import { SubmitButton } from 'components';
+import { ButtonContainer, SubmitButton } from 'components';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
 import EmailErrorModal from '../modals/EmailErrorModal';
@@ -188,7 +188,9 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <SubmitButton />
+            <ButtonContainer position='place-content-center'>
+              <SubmitButton title="Enviar mensaje" />
+            </ButtonContainer>
             {/* Submit Button */}
 
             {/* Modals */}
