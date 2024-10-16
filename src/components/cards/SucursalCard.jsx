@@ -14,7 +14,7 @@ import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
 // Estructura
-export default function SucursalCard({
+const SucursalCard = ({
   title,
   id,
   position,
@@ -28,7 +28,7 @@ export default function SucursalCard({
   badge,
   advertisement,
   image,
-}) {
+}) => {
 
   const isOpen = useGetServiceHour();
   // const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
@@ -192,16 +192,14 @@ export default function SucursalCard({
       {/* Badge */}
 
       {/* Badge Horario Abierto/Cerrado */}
-      {isOpen && (
+      {isOpen ? (
         <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
           <p className=''>Abierto</p>
         </div>
-      )}
-      {!isOpen && (
-        <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
-          <p className=''>Cerrado</p>
-        </div>
-      )}
+      ) : <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
+        <p className=''>Cerrado</p>
+      </div>
+      }
       {/* Badge Horario Abierto/Cerrado */}
 
       {/* Badge Aviso */}
@@ -229,3 +227,5 @@ SucursalCard.propTypes = {
   advertisement: PropTypes.string,
   image: PropTypes.string,
 };
+
+export default SucursalCard

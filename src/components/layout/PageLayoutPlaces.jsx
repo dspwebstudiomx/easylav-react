@@ -60,7 +60,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   )
 }
 PageLayoutPlaces.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   city: PropTypes.string,
   image_576: PropTypes.string,
   image_1024: PropTypes.string,

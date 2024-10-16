@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 
 const SucursalCardPerCity = ({ city }) => {
   return (
-    <>
-      {/* <TitleContainer title={city} /> */}
-      <CityCardGenerator city={city} />
-    </>
+    <CityCardGenerator city={city} />
   )
 }
 SucursalCardPerCity.propTypes = {

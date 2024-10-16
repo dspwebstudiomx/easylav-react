@@ -10,7 +10,7 @@ const CityCardGenerator = ({ city }) => {
   return (
     <article className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12 items-center justify-center'>
       {
-        ciudad.map(localservice =>
+        ciudad.map((localservice) =>
           <SucursalCard
             key={localservice.title}
             position={localservice.position}

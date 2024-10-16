@@ -26,7 +26,7 @@ const Morelia = () => {
         description="Conoce nuestras sucursales en Morelia, Michoacán. EasyLav, siempre juntos"
         author="dspwebstudio"
         keywords="lavandería Morelia, planchado Morelia"
-        ogImage={image}
+        ogImage={image[576]}
         ogImageAlt="Calle Benito Juaréz con vista a la Catedral de Morelia"
         ogType="website"
       />
