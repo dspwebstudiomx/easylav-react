@@ -49,8 +49,9 @@ const NavLinksMobile = ({ onLinkClick }) => {
                 id={`link-${navlink.linkId}`}
                 to={navlink.href}
                 className="flex h-full w-full flex-col items-center justify-center gap-4 py-2"
-                onClick={onLinkClick}
-                scroll={(el) => scrollWithOffset(el)}
+                scroll={
+                  (el) => scrollWithOffset(el)
+                }
               >
                 <div className="flex items-center justify-center">
                   {navlink.icon && (
@@ -73,6 +74,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
           circleBorder={"border-2 rounded-[100px] border-primary_dark shadow-xl bg-light p-3"}
           gap={"gap-3"}
           hover={"hover:text-primary hover:border-primary"}
+          onClick={onLinkClick}
         />
       </div>
     </div>

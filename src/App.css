@@ -137,3 +137,7 @@ input::-internal-datetime-container {
   display: flex;
   align-items: center;
 }
+
+input[type="file"] button {
+  background-color: #2BAC9F !important;
+}

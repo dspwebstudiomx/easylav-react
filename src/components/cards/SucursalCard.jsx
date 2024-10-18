@@ -29,8 +29,8 @@ const SucursalCard = ({
   advertisement,
   image,
 }) => {
-
   const isOpen = useGetServiceHour();
+
   // const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
   const styles = {

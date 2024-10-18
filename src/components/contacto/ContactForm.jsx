@@ -188,7 +188,7 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position='place-content-center'>
+            <ButtonContainer position='items-center justify-center'>
               <SubmitButton title="Enviar mensaje" />
             </ButtonContainer>
             {/* Submit Button */}

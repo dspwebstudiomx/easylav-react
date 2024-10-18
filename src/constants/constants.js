@@ -57,11 +57,11 @@ export const GENERAL_UI = {
     JUSTIFY: "mx-auto",
   },
   PARAGRAPH: {
-    FONT_FAMILY: "font-din text-balance",
+    FONT_FAMILY: "font-din text-pretty",
     FONT_SIZE: "text-xl sm:text-xl mr-6 sm:mr-0",
     COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
-    LETTER_SPACING: "tracking-tight",
+    LETTER_SPACING: "tracking-wider",
     LINE_HEIGHT: "leading-0",
   },
 };
@@ -77,7 +77,7 @@ export const LOADING_UI = {
 // Section
 export const SECTION_UI = {
   DISPLAY: "grid gap-12",
-  PADDING: "py-16 px-12 sm:p-20",
+  PADDING: "py-16 px-8 sm:p-20",
   BACKGROUND_COLOR: "bg-light dark:bg-dark",
   TEXT_COLOR: "",
   BORDER_JUSTIFY: "mx-auto",
@@ -380,7 +380,7 @@ export const SERVICES_GENERATOR_UI = {
   LI: {
     CLASSNAME: "flex flex-col gap-8 items-center justify-center",
     DIV_VIDEO:
-      "mx-auto sm:w-24 md:w-44 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
+      "mx-auto w-60 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
     DIV_TITLEH3: "mx-auto",
   },
   IMAGE: "p-2",

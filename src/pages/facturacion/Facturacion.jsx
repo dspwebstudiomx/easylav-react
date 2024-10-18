@@ -1,5 +1,5 @@
 import { CatedralMorelia } from "assets"
-import { BorderBottom, ContactFacturacion, PageLayout, SEOFriendly, Spacing, TitleH1, TitleH3 } from "components"
+import { BorderBottom, ContactFacturacion, PageLayout, SEOFriendly, Spacing, TitleH1 } from "components"
 
 const Facturacion = () => {
   return (
@@ -15,18 +15,16 @@ const Facturacion = () => {
         ogType="website"
       />
       <BorderBottom >
-        <TitleH1 className={'block w-full mx-auto bg-red_light'} align='mx-auto'>
+        <TitleH1 className={'block mx-auto bg-red_light'} align='mx-auto'>
           Facturación
         </TitleH1>
       </BorderBottom>
       <Spacing distance='mt-0' />
-      <TitleH3>
+      {/* <TitleH3>
         Favor de proporcionar los siguientes datos para que te hagamos llegar tu factura.
-      </TitleH3>
+      // </TitleH3> */}
       <Spacing distance='mt-6' />
-      <div className="mr-auto w-full">
-        <ContactFacturacion />
-      </div>
+      <ContactFacturacion />
     </PageLayout>
   )
 }

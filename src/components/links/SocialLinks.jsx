@@ -8,7 +8,7 @@ const classes = {
   Link: 'text-blue-900  hover:scale-110 dark:text-blue-500 text-xl ',
 }
 
-const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
+const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick }) => {
   return (
     <div className={`flex ${gap} ${position}`}>
       <SocialLink
@@ -19,6 +19,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         color={color}
         circleBorder={circleBorder}
         hover={hover}
+        onClick={onClick}
       />
       <SocialLink
         href={'https://www.instagram.com/lavanderiaseasylav/'}
@@ -28,6 +29,8 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         color={color}
         circleBorder={circleBorder}
         hover={hover}
+        onClick={onClick}
+
       />
       <SocialLink
         href={'mailto:contacto@easylav.mx'}
@@ -37,6 +40,8 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         color={color}
         circleBorder={circleBorder}
         hover={hover}
+        onClick={onClick}
+
       />
       <SocialLink
         href={'tel:4435200593'}
@@ -46,6 +51,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position }) => {
         color={color}
         circleBorder={circleBorder}
         hover={hover}
+        onClick={onClick}
       />
 
     </div>
@@ -57,7 +63,8 @@ SocialLinks.propTypes = {
   circleBorder: PropTypes.string,
   position: PropTypes.string,
   gap: PropTypes.string,
-  hover: PropTypes.string
+  hover: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default SocialLinks

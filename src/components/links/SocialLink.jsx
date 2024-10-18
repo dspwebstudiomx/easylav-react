@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const SocialLink = ({ href, icono, ariaLabel, title, color, size, circleBorder, hover }) => {
+const SocialLink = ({ href, icono, ariaLabel, title, color, size, circleBorder, hover, onClick }) => {
   return (
-    <li className={`list-none ${color}`}>
+    <li className={`list-none ${color}`} onClick={onClick}>
       <a className={`${color} ${size} ${circleBorder} ${hover} text-xl font-semibold flex gap-2 place-items-center`} href={href} target="blank" rel="noopener noreferrer" aria-label={ariaLabel} title={title}>
         {icono}
       </a>
@@ -18,6 +18,7 @@ SocialLink.propTypes = {
   circleBorder: PropTypes.string,
   hover: PropTypes.string,
   icono: PropTypes.object,
+  onClick: PropTypes.func
 }
 
 export default SocialLink
