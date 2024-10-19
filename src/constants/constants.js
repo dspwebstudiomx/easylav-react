@@ -92,7 +92,7 @@ export const CONTAINER_UI = {
 // Navbar
 export const NAVBAR_UI = {
   NAV: {
-    BACKGROUND_COLOR: "bg-light dark:bg-dark",
+    BACKGROUND_COLOR: "bg-light dark:bg-navbar_dark",
     POSITION: "fixed top-0 z-50 h-[100px] sm:relative xl:fixed",
     SHADOW: "shadow-xl",
     WIDTH: "w-full",
