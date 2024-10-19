@@ -43,7 +43,7 @@ const PreguntasFrecuentes = () => {
                   ¿Estás interesado en adquirir una franquicia?
                 </TitleH1>
               </BorderLeft>
-              <h3 className='text-xl font-semibold sm:text-2xl mt-8 text-dark'>Visita cada punto para ver la información relacionada</h3>
+              <h3 className='text-xl font-semibold sm:text-2xl mt-8 text-dark dark:text-light'>Visita cada punto para ver la información relacionada.</h3>
             </div>
           </div>
           {/* Title */}

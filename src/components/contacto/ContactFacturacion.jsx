@@ -288,7 +288,9 @@ export default function ContactFacturacion() {
               </div>
             </div>
             {/* Datos del Usuario */}
+
             <Spacing distance='h-20' />
+
             {/* Datos de Compra */}
             <div id='datos de compra'>
               <h2 className='text-xl uppercase font-bold text-center text-secondary_dark dark:text-primary_dark mb-12'>
