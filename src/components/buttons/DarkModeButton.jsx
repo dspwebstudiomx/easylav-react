@@ -3,35 +3,38 @@ import { FiMoon } from "react-icons/fi";
 import { IoSunnyOutline } from 'react-icons/io5';
 
 export default function ThemeToggle() {
-
-  const [theme, setTheme] = useState(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    } else {
-      return 'light'
+  const [darkMode, setDarkMode] = useState(() => {
+    // Recuperar el tema del localStorage al inicializar el estado
+    const savedTheme = localStorage.getItem('darkMode');
+    if (savedTheme !== null) {
+      return savedTheme === 'true'; // Devuelve true si el tema guardado es 'true'
     }
-  })
-
-  useEffect(() => {
-    if (theme == 'dark') {
-      document.body.classList.add('dark')
-    } else {
-      document.body.classList.remove('dark')
-    }
-  }, [theme]);
+    // Si no hay tema guardado, verificar el tema del sistema
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
-  }
+    setDarkMode(prevDarkMode => {
+      const newDarkMode = !prevDarkMode;
+      // Almacenar el nuevo estado del tema en localStorage
+      localStorage.setItem('darkMode', newDarkMode);
+      return newDarkMode;
+    });
+  };
+
+  useEffect(() => {
+    // Aplicar el tema al cargar el componente
+    document.body.classList.toggle('dark', darkMode);
+  }, [darkMode]);
+
   return (
     <button
       id='themeToggle'
       title='Theme Toggle'
       aria-label='The Toggle'
-      aria-labelledby='dspwebstudio'
-      className="ml-5 w-12 h-12  mx-auto rounded-full focus:outline-none rounded-xl"
+      className="ml-5 w-12 h-12 mx-auto focus:outline-none"
       onClick={toggleTheme}>
-      {!theme === 'dark' ? <IoSunnyOutline className='w-10 h-10 text-primary' /> : <FiMoon className='w-8 h-8 text-secondary_dark' />}
+      {darkMode ? <IoSunnyOutline className='w-8 h-8 text-primary' /> : <FiMoon className='w-8 h-8 text-secondary' />}
     </button>
-  )
+  );
 }

@@ -10,6 +10,7 @@ import emailjs from '@emailjs/browser';
 import { ButtonContainer, ButtonPrimary, Spacing } from 'components';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
+import { FaTrashAlt } from 'react-icons/fa';
 import { FaRegEnvelope } from 'react-icons/fa6';
 import EmailErrorModal from '../modals/EmailErrorModal';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
@@ -66,7 +67,7 @@ export default function ContactFacturacion() {
 
 
   return (
-    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl p-6  bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
+    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl p-6 md:p-12 bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
       <Formik
         initialValues={{
           user_name: '',
@@ -447,7 +448,8 @@ export default function ContactFacturacion() {
                 <span><FaRegEnvelope /></span>
                 <span>Enviar mensaje</span>
               </button>
-              <ButtonPrimary width='w-[220px]' title='Borrar Información' onClick={() => resetForm()} type='submit' />
+              <ButtonPrimary width='w-[220px]' title='Borrar' onClick={() => resetForm()} type='submit' icon={<FaTrashAlt />} />
+
             </ButtonContainer>
 
             {/* Submit Button */}
