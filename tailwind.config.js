@@ -21,6 +21,7 @@ export default {
       secondary_dark: "#7A36AD",
       // dark: "#021526",
       dark: "rgb(6, 6, 57)",
+      // navbar_dark: "#004",
       navbar_dark: "#004",
       // dark: "#3C3C3C",
       // light: "#fafafa",
