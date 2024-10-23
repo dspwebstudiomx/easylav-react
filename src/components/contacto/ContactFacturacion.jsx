@@ -159,7 +159,7 @@ export default function ContactFacturacion() {
                       type="text"
                       required
                     />
-                    {touched.user_name && errors.user_name && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_name}</span></p>}
+                    {touched.user_name && errors.user_name && <p className='mt-2 text-required text-xs'>* <span className='text-dark dark:text-light'>{errors.user_name}</span></p>}
                   </div>
                   {/* Nombre o Razon Social */}
 
@@ -173,7 +173,7 @@ export default function ContactFacturacion() {
                       id="user_RFC"
                       required
                     />
-                    {touched.user_RFC && errors.user_RFC && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
+                    {touched.user_RFC && errors.user_RFC && <p className='mt-2 text-required text-xs'>* <span className='text-dark dark:text-light'>{errors.user_phone}</span></p>}
                   </div>
                   {/* RFC */}
                 </div>
@@ -191,7 +191,7 @@ export default function ContactFacturacion() {
                       type="email"
                       required
                     />
-                    {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
+                    {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark dark:text-light'>{errors.user_email}</span></p>}
                   </div>
                   {/* Email */}
 
@@ -205,7 +205,7 @@ export default function ContactFacturacion() {
                       id="user_phone"
                       required
                     />
-                    {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
+                    {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark dark:text-light'>{errors.user_phone}</span></p>}
 
                   </div>
                   {/* Numero telefonico */}
@@ -223,7 +223,7 @@ export default function ContactFacturacion() {
                       name="user_street"
                       required
                     />
-                    {touched.user_street && errors.user_street && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
+                    {touched.user_street && errors.user_street && <p className='mt-2 text-required text-xs'>*<span className='text-dark dark:text-light'>{errors.user_city}</span> </p>}
                   </div>
                   {/* Calle */}
                   {/* Numero */}
@@ -236,7 +236,7 @@ export default function ContactFacturacion() {
                       id="user_number"
                       required
                     />
-                    {touched.user_number && errors.user_number && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
+                    {touched.user_number && errors.user_number && <p className='mt-2 text-required text-xs'>* <span className='text-dark dark:text-light'>{errors.user_phone}</span></p>}
 
                   </div>
                   {/* Numero */}
@@ -250,7 +250,7 @@ export default function ContactFacturacion() {
                       name="user_city"
                       required
                     />
-                    {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
+                    {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark dark:text-light'>{errors.user_city}</span> </p>}
                   </div>
                   {/* Ciudad */}
                 </div>
@@ -267,7 +267,7 @@ export default function ContactFacturacion() {
                       name="user_zipcode"
                       required
                     />
-                    {touched.userzipcodea && errors.user_zipcode && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
+                    {touched.userzipcode && errors.user_zipcode && <p className='mt-2 text-required text-xs'>*<span className='text-dark dark:text-light'>{errors.user_city}</span> </p>}
                   </div>
                   {/* Código Postal */}
 
@@ -359,14 +359,14 @@ export default function ContactFacturacion() {
                       <option>I06 - Comunicaciones telefónicas</option>
                       <option>I07 - Comunicaciones satelitales</option>
                       <option>I08 - Otra maquinaria y equipo</option>
-                      <option>D01 - Honorarios médicos, dentales y gastos hospitalarios.</option>
-                      <option>D03 - Gastos funerales.</option>
-                      <option>D04 - Donativos.</option>
-                      <option>D05 - Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación).</option>
-                      <option>D06 - Aportaciones voluntarias al SAR.</option>
-                      <option>D07 - Primas por seguros de gastos médicos.</option>
-                      <option>D08 - Gastos de transportación escolar obligatoria.</option>
-                      <option>D09 - Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.</option>
+                      <option>D01 - Honorarios médicos, dentales y gastos hospitalarios</option>
+                      <option>D03 - Gastos funerales</option>
+                      <option>D04 - Donativos</option>
+                      <option>D05 - Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)</option>
+                      <option>D06 - Aportaciones voluntarias al SAR</option>
+                      <option>D07 - Primas por seguros de gastos médicos</option>
+                      <option>D08 - Gastos de transportación escolar obligatoria</option>
+                      <option>D09 - Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones</option>
                       <option>D10 - Pagos por servicios educativos (colegiaturas)</option>
                       <option>P01 - Por definir</option>
                     </select>

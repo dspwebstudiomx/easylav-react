@@ -130,7 +130,6 @@ input:-internal-autofill-selected {
   background-image: none !important;
   background-color: #fff !important;
   color: fieldtext !important;
-  text-transform: uppercase;
 }
 
 input::-internal-datetime-container {
