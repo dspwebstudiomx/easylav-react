@@ -27,7 +27,7 @@ const Sucursales = () => {
       />
       <PageLayout id={"Sucursales"}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 place-items-center">
-          <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' />
+          <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' height='h-[280px]' />
           <BackgroundCard image={leon} title='León' href='/sucursales/leon' />
           <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' />
         </div>

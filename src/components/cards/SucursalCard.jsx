@@ -8,7 +8,7 @@
 // Importaciones
 import { Badge, TitleH4 } from 'components';
 import { SUCURSAL_CARD_UI } from 'constants/constants';
-import { useGetServiceHour } from 'hooks';
+import isOpen from 'hooks/useGetServiceHour';
 import PropTypes from 'prop-types';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
@@ -21,17 +21,12 @@ const SucursalCard = ({
   serviceday1,
   servicehour1,
   place,
-  // email,
   gmap,
   width,
-  // titleMailto,
   badge,
   advertisement,
   image,
 }) => {
-  const isOpen = useGetServiceHour();
-
-  // const googleAPIKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
   const styles = {
     article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
@@ -42,21 +37,12 @@ const SucursalCard = ({
   return (
     <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`} >
 
-      {/* mapa */}
+      {/* Imagen Sucursal */}
       <div className={styles.image}>
-        {/* <APIProvider apiKey={googleAPIKey}>
-          <Map
-            defaultCenter={position}
-            zoom={17}
-            gestureHandling={'greedy'}
-            disableDefaultUI={true}
-            mapTypeControl={false}
-          />
-        </APIProvider> */}
         <div className='absolute bg-dark opacity-40 w-full h-[180px]'></div>
         <img src={image} alt={title} className='-z-10 w-full h-[180px] object-cover object-center' />
       </div>
-      {/* mapa */}
+      {/* Imagen Sucursal */}
 
       {/* Contenido */}
       <div className='flex flex-col justify-start gap-3 p-4 px-10'>
