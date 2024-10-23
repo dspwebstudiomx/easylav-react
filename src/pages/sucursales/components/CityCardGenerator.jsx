@@ -12,7 +12,7 @@ const CityCardGenerator = ({ city }) => {
       {
         ciudad.map((localservice) =>
           <SucursalCard
-            key={localservice.title}
+            key={localservice.id}
             position={localservice.position}
             place={localservice.place}
             gmap={localservice.gmap}
@@ -23,6 +23,10 @@ const CityCardGenerator = ({ city }) => {
             badge={localservice.badge}
             advertisement={localservice.advertisement}
             image={localservice.image}
+            openHour={localservice.openHour}
+            closeHour={localservice.closeHour}
+            openMinute={localservice.openMinute}
+            closeMinute={localservice.closeMinute}
           />
         )
       }

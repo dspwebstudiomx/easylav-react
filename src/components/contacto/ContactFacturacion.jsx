@@ -9,6 +9,7 @@ Fecha: 2022-08-25
 import emailjs from '@emailjs/browser';
 import { ButtonContainer, ButtonPrimary, Spacing } from 'components';
 import { Field, Form, Formik } from 'formik';
+import { scrollToTop } from 'functions';
 import { useEffect, useRef, useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
 import { FaRegEnvelope } from 'react-icons/fa6';
@@ -67,7 +68,7 @@ export default function ContactFacturacion() {
 
 
   return (
-    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl p-6 md:p-12 bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
+    <div id="formulario" className="">
       <Formik
         initialValues={{
           user_name: '',
@@ -136,25 +137,25 @@ export default function ContactFacturacion() {
         }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm text-dark tracking-wider py-12">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col  w-full mx-auto p-0 gap-8 text-sm text-dark dark:text-light tracking-wider pb-20">
             {/* Fields */}
 
             {/* Datos del Usuario */}
             <div id='datos-usuario'>
-              <h2 className='text-xl uppercase font-bold text-center text-secondary_dark dark:text-primary_dark mb-12'>
+              <h2 className='text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12'>
                 Datos del usuario
               </h2>
-              <div id='campos-datos-usuario' className='flex flex-col gap-8'>
+              <div id='campos-datos-usuario' className='flex flex-col w-[280px] sm:w-full mx-auto text-left'>
 
                 {/* Nombre Completo / Razón  - RFC  */}
                 <div className='grid sm:grid-cols-2 gap-8'>
                   {/* Nombre o Razon Social */}
-                  <div id='formField_name' className="flex flex-col w-full">
+                  <div id='formField_name' className="flex flex-col">
                     <label htmlFor='user_name' className="mb-2">Nombre Completo o Razón Social<span className='text-required ml-1'>*</span></label>
                     <Field
                       id="user_name"
                       name="user_name"
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       type="text"
                       required
                     />
@@ -166,7 +167,7 @@ export default function ContactFacturacion() {
                   <div id='formField_RFC' className="flex flex-col">
                     <label htmlFor="user_RFC" className="mb-2">RFC<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       type="text"
                       name="user_RFC"
                       id="user_RFC"
@@ -179,12 +180,12 @@ export default function ContactFacturacion() {
                 {/* Nombre Completo / Razón  - RFC  */}
 
                 {/* Correo Electrónico - Número Telefónico */}
-                <div className='grid sm:grid-cols-2 gap-8'>
+                <div className='grid sm:grid-cols-2 gap-8 mt-8'>
                   {/* Email */}
                   <div id='formField_email' className="flex flex-col">
                     <label htmlFor="user_email" className="mb-2">Correo Electrónico<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_email"
                       name="user_email"
                       type="email"
@@ -198,7 +199,7 @@ export default function ContactFacturacion() {
                   <div id='formField_phone' className="flex flex-col">
                     <label htmlFor="user_phone" className="mb-2">Número Telefónico<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       type="text"
                       name="user_phone"
                       id="user_phone"
@@ -212,12 +213,12 @@ export default function ContactFacturacion() {
                 {/* Correo Electrónico - Número Telefónico */}
 
                 {/* Calle - Número - Ciudad */}
-                <div className='grid sm:grid-cols-3 w-full gap-8'>
+                <div className='grid sm:grid-cols-3 w-full gap-8 mt-8'>
                   {/* Calle */}
                   <div id='formField_street' className="flex flex-col">
                     <label htmlFor='user_street' className="mb-2">Calle<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_street"
                       name="user_street"
                       required
@@ -229,7 +230,7 @@ export default function ContactFacturacion() {
                   <div id='formField_number' className="flex flex-col">
                     <label htmlFor="user_number" className="mb-2">Número<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       type="number"
                       name="user_number"
                       id="user_number"
@@ -244,7 +245,7 @@ export default function ContactFacturacion() {
                   <div id='formField_city' className="flex flex-col">
                     <label htmlFor='user_city' className="mb-2">Ciudad<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_city"
                       name="user_city"
                       required
@@ -256,12 +257,12 @@ export default function ContactFacturacion() {
                 {/* Calle - Número - Ciudad */}
 
                 {/* Código Postal - Estado */}
-                <div className='grid sm:grid-cols-2 gap-8'>
+                <div className='grid sm:grid-cols-2 gap-8 mt-8'>
                   {/* Código Postal */}
                   <div id='formField_zipcode' className="flex flex-col">
                     <label htmlFor='user_zipcode' className="mb-2">Código Postal<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_zipcode"
                       name="user_zipcode"
                       required
@@ -274,7 +275,7 @@ export default function ContactFacturacion() {
                   <div id='formField_state' className="flex flex-col">
                     <label htmlFor='user_state' className="mb-2">Estado<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_state"
                       name="user_state"
                       required
@@ -289,14 +290,14 @@ export default function ContactFacturacion() {
             </div>
             {/* Datos del Usuario */}
 
-            <Spacing distance='h-20' />
+            <Spacing distance='h-12' />
 
             {/* Datos de Compra */}
-            <div id='datos de compra'>
-              <h2 className='text-xl uppercase font-bold text-center text-secondary_dark dark:text-primary_dark mb-12'>
+            <div id='datos de compra' className='flex flex-col mx-auto w-[280px] sm:w-full'>
+              <h2 className='text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12'>
                 Datos de Compra
               </h2>
-              <div id='campos-datos-compra' className='flex flex-col gap-8'>
+              <div id='campos-datos-compra' className='flex flex-col'>
 
                 {/* Fecha de Compra - Número de Ticket */}
                 <div className="grid md:grid-cols-2 gap-8">
@@ -304,7 +305,7 @@ export default function ContactFacturacion() {
                   <div id='formField_dateservice' className="flex flex-col">
                     <label htmlFor='user_dateservice' className="mb-2">Fecha del Servicio<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none text-dark w-[330px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none text-dark w-[280px] md:w-auto"
                       id="user_dateservice"
                       name="user_dateservice"
                       type="date"
@@ -317,7 +318,7 @@ export default function ContactFacturacion() {
                   <div id='formField_number' className="flex flex-col">
                     <label htmlFor='user_ticketnumber' className="mb-2">Número de Ticket<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark text-right bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_ticketnumber"
                       name="user_ticketnumber"
                       type="number"
@@ -330,12 +331,12 @@ export default function ContactFacturacion() {
                 {/* Fecha de Compra - Número de Ticket */}
 
                 {/* Sucursal - Selector CFDI */}
-                <div className='grid md:grid-cols-2 gap-8'>
+                <div className='grid md:grid-cols-2 gap-8 mt-8'>
                   {/* Sucursal */}
                   <div id='formField_sucursal' className="flex flex-col">
                     <label htmlFor='user_sucursal' className="mb-2">Sucursal<span className='text-required ml-1'>*</span></label>
                     <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[320px] md:w-auto"
+                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
                       id="user_sucursal"
                       name="user_sucursal"
                       required
@@ -344,9 +345,9 @@ export default function ContactFacturacion() {
                   </div>
                   {/* Sucursal */}
                   {/* Selector CFDI */}
-                  <div id='formField_CFDI' className="flex flex-col text-balance">
+                  <div id='formField_CFDI' className="flex flex-col">
                     <label htmlFor='user_CFDI' className="mb-2">Comprobante Fiscal Digital por Internet (CFDI)<span className='text-required ml-1'>*</span></label>
-                    <select name="user_CFDI" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[330px] md:w-auto'>
+                    <select name="user_CFDI" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[280px] md:w-auto'>
                       <option>G01 - Adquisición de mercancías</option>
                       <option>G02 - Devoluciones, descuentos o bonificaciones</option>
                       <option defaultValue={'G03 - Gastos en general'} selected>G03 - Gastos en general</option>
@@ -376,11 +377,11 @@ export default function ContactFacturacion() {
 
 
                 {/* Forma de Pago - Subtotal */}
-                <div className='grid sm:grid-cols-2 gap-8'>
+                <div className='grid sm:grid-cols-2 gap-8 mt-8'>
                   {/* Forma de Pago */}
-                  <div id='formField_payment' className="flex flex-col text-balance">
+                  <div id='formField_payment' className="flex flex-col w-full">
                     <label htmlFor='user_payment' className="mb-2">Forma de Pago<span className='text-required ml-1'>*</span></label>
-                    <select name="user_payment" className='w-auto rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none'>
+                    <select name="user_payment" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none'>
                       <option>Efectivo</option>
                       <option>Tarjeta Crédito</option>
                       <option>Tarjeta Débito</option>
@@ -404,7 +405,7 @@ export default function ContactFacturacion() {
                 {/* Forma de Pago - Subtotal */}
 
                 {/* IVA - Total a Pagar */}
-                <div className='grid sm:grid-cols-2 gap-8'>
+                <div className='grid sm:grid-cols-2 gap-8 mt-8'>
                   {/* IVA */}
                   <div id='formField_IVA' className="flex flex-col">
                     <label htmlFor='user_IVA' className="mb-2">I.V.A<span className='text-required ml-1'>*</span></label>
@@ -436,7 +437,7 @@ export default function ContactFacturacion() {
               </div>
             </div>
 
-            <form encType="multipart/form-data" method="post" onSubmit={sendEmail} className='flex flex-col mt-8'>
+            <form encType="multipart/form-data" method="post" onSubmit={sendEmail} className='flex flex-col  w-[280px] mx-auto mt-12'>
               <label htmlFor='user_total' className="mb-2">Añadir archivo</label>
               <input type="file" name="my_file" />
             </form>
@@ -450,7 +451,14 @@ export default function ContactFacturacion() {
                 <span><FaRegEnvelope /></span>
                 <span>Enviar mensaje</span>
               </button>
-              <ButtonPrimary width='w-[220px]' title='Borrar' onClick={() => resetForm()} type='submit' icon={<FaTrashAlt />} />
+              <ButtonPrimary
+                width='w-[220px]'
+                title='Borrar'
+                onClick={() =>
+                  [resetForm(),
+                  scrollToTop()]
+                }
+                type='submit' icon={<FaTrashAlt />} />
 
             </ButtonContainer>
 

@@ -176,7 +176,7 @@ const localservices = [
     image: Placeholder,
     openHour: 7,
     openMinute: 0,
-    closeHour: 21,
+    closeHour: 14,
     closeMinute: 30,
   },
 ];

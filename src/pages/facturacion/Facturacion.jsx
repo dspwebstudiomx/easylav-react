@@ -19,11 +19,10 @@ const Facturacion = () => {
           Facturación
         </TitleH1>
       </BorderBottom>
-      <Spacing distance='mt-0' />
       {/* <TitleH3>
         Favor de proporcionar los siguientes datos para que te hagamos llegar tu factura.
       // </TitleH3> */}
-      <Spacing distance='mt-6' />
+      <Spacing distance='mt-0' />
       <ContactFacturacion />
     </PageLayout>
   )
