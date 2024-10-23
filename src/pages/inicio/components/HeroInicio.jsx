@@ -1,4 +1,4 @@
-import { HeroInicioImage1_1024x500, HeroInicioImage1_1920x500, HeroInicioImage1_478x600, HeroInicioImage2_1024x500, HeroInicioImage2_1920x500, HeroInicioImage2_478x600, HeroInicioImage3_1024x500, HeroInicioImage3_1920x500, HeroInicioImage3_478x600 } from 'assets'
+import { HeroInicioImage1_1024x500, HeroInicioImage1_1920x500, HeroInicioImage1_478x600, VistaLavadorasySecadorasConDosMesas_640, VistaLavanderiaDesdeEntrada_2_640 } from 'assets'
 import { ButtonContainer, ButtonPrimary, Container, ImageResponsive, TitleH1 } from 'components'
 import { GENERAL_UI, HEROINICIO_UI } from 'constants/constants'
 import { Autoplay } from 'swiper/modules'
@@ -39,10 +39,10 @@ const HeroInicio = () => {
           <ImageResponsive image_640={HeroInicioImage1_478x600} image_1024={HeroInicioImage1_1024x500} image_1920={HeroInicioImage1_1920x500} imageAlt='sucursal lavadoras' className={''} width={'w-full'} height={HEROINICIO_UI.HEIGHT} />
         </SwiperSlide>
         <SwiperSlide>
-          <ImageResponsive image_640={HeroInicioImage2_478x600} image_1024={HeroInicioImage2_1024x500} image_1920={HeroInicioImage2_1920x500} imageAlt='sucursal lavadoras' className={''} width={'w-full'} height={HEROINICIO_UI.HEIGHT} />
+          <ImageResponsive image_640={VistaLavadorasySecadorasConDosMesas_640} image_1024={VistaLavadorasySecadorasConDosMesas_640} image_1920={VistaLavadorasySecadorasConDosMesas_640} imageAlt='sucursal lavadoras' className={''} width={'w-full'} height={HEROINICIO_UI.HEIGHT} />
         </SwiperSlide>
         <SwiperSlide>
-          <ImageResponsive image_640={HeroInicioImage3_478x600} image_1024={HeroInicioImage3_1024x500} image_1920={HeroInicioImage3_1920x500} imageAlt='sucursal lavadoras' className={''} width={'w-full'} height={HEROINICIO_UI.HEIGHT} />
+          <ImageResponsive image_640={VistaLavanderiaDesdeEntrada_2_640} image_1024={VistaLavanderiaDesdeEntrada_2_640} image_1920={VistaLavanderiaDesdeEntrada_2_640} imageAlt='sucursal lavadoras' className={''} width={'w-full'} height={HEROINICIO_UI.HEIGHT} />
         </SwiperSlide>
       </Swiper>
       <div className={`absolute inset-0 z-10 w-full bg-dark opacity-60 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
