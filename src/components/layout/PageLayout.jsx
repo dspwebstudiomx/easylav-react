@@ -14,8 +14,8 @@ const PageLayout = ({ children }) => {
           <Spacing height="h-24" />
         </Section>
       </main>
-      <Footer />
       <ScrollToTopButton />
+      <Footer />
     </>
   );
 };

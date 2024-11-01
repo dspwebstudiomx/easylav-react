@@ -2,7 +2,7 @@
 
 //Importaciones
 import { canastaderopa_640 } from 'assets';
-import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
+import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
 
@@ -58,6 +58,7 @@ const Inicio = () => (
         </Container>
       </Section>
     </HomeLayout>
+    <ScrollToTopButton />
   </Suspense>
 );
 
