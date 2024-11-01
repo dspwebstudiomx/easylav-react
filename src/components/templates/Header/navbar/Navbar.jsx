@@ -47,9 +47,9 @@ const Navbar = () => {
             )}
           </div>
         </Container>
+        <NavLinksTablet />
+        <HeaderLine />
       </nav>
-      <NavLinksTablet />
-      <HeaderLine />
     </>
   );
 };
