@@ -6,7 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksDesktop = () => {
   const classes =
-    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light last:text-primary_dark dark:text-light dark:last:text-primary";
+    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light last:text-primary_dark dark:text-light dark:last:text-secondary dark:hover:text-primary";
 
   return (
     <>
