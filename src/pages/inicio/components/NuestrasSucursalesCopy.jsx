@@ -44,7 +44,7 @@ const NuestrasSucursalesCopy = () => {
                 spaceBetween: 40,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 4,
                 spaceBetween: 50,
               },
             }}

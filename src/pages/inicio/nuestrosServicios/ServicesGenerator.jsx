@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { Paragraph, TitleH3 } from 'components'
+import { TitleH3 } from 'components'
 import { SERVICES_GENERATOR_PROPS, SERVICES_GENERATOR_UI } from 'constants/constants'
 import { services } from 'data'
 
@@ -22,11 +22,11 @@ const ServicesGenerator = () => {
                 <img className={SERVICES_GENERATOR_UI.IMAGE} src={service.image} title={service.alt} />
               </div>
               <div className={SERVICES_GENERATOR_UI.DIV_TITLEH3}>
-                <TitleH3 title={service.title} />
+                <TitleH3>{service.title}</TitleH3>
               </div>
-              <Paragraph>
+              <p className={SERVICES_GENERATOR_UI.PARAGRAPH}>
                 {service.description}
-              </Paragraph>
+              </p>
             </li>
           )
         })

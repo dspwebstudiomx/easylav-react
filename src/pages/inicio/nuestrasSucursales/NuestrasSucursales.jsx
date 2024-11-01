@@ -15,7 +15,7 @@ const NuestrasSucursales = () => {
     <Section id='nuestras-sucursales' >
       <div className='m-auto'>
         <TitleContainer title={SUCURSAL_SECTION_PROPS.TITLEH2} />
-        <div className='my-12 mt-24'>
+        <div className='my-20 mt-24'>
           <PaginatedSucursalCards />
         </div>
         <ButtonContainer position='justify-center items-center' distance=''>
@@ -24,7 +24,7 @@ const NuestrasSucursales = () => {
             href='/contacto'
             distance='my-2'
             type='button'
-            width='min-w-[240px]'
+            width='min-w-[280px]'
           />
         </ButtonContainer>
       </div>

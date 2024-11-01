@@ -20,7 +20,7 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "",
-    FONT_SIZE: "text-[26px] sm:text-3xl xl:text-3xl",
+    FONT_SIZE: "text-[26px] sm:text-2xl xl:text-2xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -39,10 +39,10 @@ export const GENERAL_UI = {
     JUSTIFY: "mx-auto",
   },
   TITLEH3: {
-    FONT_FAMILY: "font-din-regular",
-    FONT_SIZE: "text-2xl",
+    FONT_FAMILY: "font-din",
+    FONT_SIZE: "text-xl",
     FONT_WEIGHT: "font-bold",
-    COLOR: "text-dark dark:text-light",
+    COLOR: "text-secondary_dark dark:text-light",
     BACKGROUND_COLOR: "",
     CARD: "text-base uppercase font-semibold",
     TEXT_TRANSFORM: "uppercase",
@@ -58,10 +58,10 @@ export const GENERAL_UI = {
   },
   PARAGRAPH: {
     FONT_FAMILY: "font-din text-pretty",
-    FONT_SIZE: "text-xl sm:text-xl mr-6 sm:mr-0",
+    FONT_SIZE: "text-lg sm:text-lg mr-6 sm:mr-0",
     COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
-    LETTER_SPACING: "tracking-wider",
+    LETTER_SPACING: "tracking-normal",
     LINE_HEIGHT: "leading-0",
   },
 };
@@ -86,7 +86,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg place-content-center",
+    "flex flex-col gap-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl place-content-center p-4",
 };
 
 // Navbar
@@ -193,10 +193,18 @@ export const HEROINICIO_UI = {
     IMAGE: "block",
     PARAGRAPH: "hidden",
   },
+  TITLE: {
+    FONT_SIZE: "text-2xl lg:text-3xl xl:text-3xl",
+    FONT_WEIGHT: "font-black",
+    FONT_FAMILY: "",
+    LETTER_SPACING: "tracking-wide",
+    LINE_HEIGHT: "",
+    TEXT_TRANSFORM: "uppercase",
+  },
   COLOR: {
     BUTTON: "primary",
-    PARAGRAPH: "light",
-    TITLE: "light",
+    PARAGRAPH: "text-light",
+    TITLE: "text-light",
   },
   BUTTON: {
     SIZE: "lg",
@@ -282,12 +290,12 @@ export const SUCURSAL_CARD_UI = {
     BACKGROUND: "bg-light",
     COLOR: "text-dark",
     DISPLAY: "flex  flex-col relative mx-auto",
-    HEIGHT: "min-h-[480px]",
+    HEIGHT: "min-h-[490px]",
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-2xl",
-    WIDTH: "w-[260px] sm:w-[280px] 2xl:w-[300px]",
+    WIDTH: "w-auto 2xl:w-[280px]",
   },
   IMAGE: {
     CONTAINER: {
@@ -373,17 +381,20 @@ export const NUESTROS_SERVICIOS_UI = {
 };
 
 // Services Generator
-export const SERVICES_GENERATOR_PROPS = {};
+export const SERVICES_GENERATOR_PROPS = {
+  ID: "nuestros-servicios",
+};
 export const SERVICES_GENERATOR_UI = {
   DIV: "grid place-content-center gap-8 w-full",
   UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
   LI: {
     CLASSNAME: "flex flex-col gap-8 items-center justify-center",
     DIV_VIDEO:
-      "mx-auto w-60 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
-    DIV_TITLEH3: "mx-auto",
+      "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
+    DIV_TITLEH3: "mx-auto text-primary",
   },
   IMAGE: "p-2",
+  PARAGRAPH: "text-dark text-[16px] dark:text-light",
 };
 
 // Por que Elegirnos

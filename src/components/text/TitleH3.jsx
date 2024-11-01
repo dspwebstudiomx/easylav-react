@@ -8,12 +8,13 @@ const classes = `
   ${GENERAL_UI.TITLEH3.COLOR}
   ${GENERAL_UI.TITLEH3.BACKGROUND_COLOR}
   ${GENERAL_UI.TITLEH3.JUSTIFY}
+  ${GENERAL_UI.TITLEH3.TEXT_TRANSFORM}
 `;
 
 const TitleH3 = ({ children, className }) => {
 
   return (
-    <h3 className={`${classes} -mb-3 ${className}`}>
+    <h3 className={`${classes} ${className}`}>
       {children}
     </h3>
   )

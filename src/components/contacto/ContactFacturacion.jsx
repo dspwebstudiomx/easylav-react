@@ -137,7 +137,7 @@ export default function ContactFacturacion() {
         }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col  w-full mx-auto p-0 gap-8 text-sm text-dark dark:text-light tracking-wider pb-20">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col  w-full mx-auto p-0 gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-2/3 2xl:w-1/2">
             {/* Fields */}
 
             {/* Datos del Usuario */}
@@ -436,11 +436,11 @@ export default function ContactFacturacion() {
                 {/* IVA - Total a Pagar */}
               </div>
             </div>
-
+            {/* 
             <form encType="multipart/form-data" method="post" onSubmit={sendEmail} className='flex flex-col  w-[280px] mx-auto mt-12'>
               <label htmlFor='user_total' className="mb-2">Añadir archivo</label>
               <input type="file" name="my_file" />
-            </form>
+            </form> */}
             {/* Datos de Compra */}
 
             {/* Fields */}

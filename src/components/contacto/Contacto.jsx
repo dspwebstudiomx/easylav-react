@@ -5,12 +5,14 @@ const Contacto = () => {
   return (
     <div
       id="contactDescription"
-      className="animate__slower grid items-start md:grid-cols-2 md:gap-12 xl:gap-6"
+      className="animate__slower grid items-center md:grid-cols-2 md:gap-12 xl:gap-12 w-full justify-center mx-auto"
     >
       <div className="animate__animated animate__bounceInLeft animate__slowest grid gap-4">
-        <TitleH2>
-          ¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.
-        </TitleH2>
+        <div className="2xl:w-3/4">
+          <TitleH2>
+            ¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.
+          </TitleH2>
+        </div>
         <Spacing distance='h-8' />
         <Paragraph>
           Nuestra forma de contacto es fácil y rápida. Puedes llenar el

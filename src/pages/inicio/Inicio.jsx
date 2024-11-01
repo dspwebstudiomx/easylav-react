@@ -45,15 +45,11 @@ const Inicio = () => (
         ogImage={OG_IMAGE}
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
-
-      {/* <HeroInicio /> */}
       <HeroInicio />
       <SobreNosotros />
       <NuestrosServicios />
-      {/* <CantidadSucursales /> */}
       <PorqueElegirnos />
       <NuestrasSucursales />
-      {/* <Testimonios /> */}
       <CarouselTestimonios />
       <QuieresUnaFranquicia />
       <Section backgroundColor={SECTION_BACKGROUNDCOLOR_CLASSNAME} className={SECTION_CLASSNAME}>
