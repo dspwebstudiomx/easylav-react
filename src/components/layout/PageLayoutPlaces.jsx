@@ -6,12 +6,11 @@
 */
 
 // Importaciones
-import { BackgroundImageSection, ButtonContainer, ButtonSecondary, Contacto, SucursalCardPerCity } from 'components'
+import { BackgroundImageSection, ButtonContainer, ButtonSecondary, Contacto, Navbar, SucursalCardPerCity } from 'components'
 import PropTypes from 'prop-types'
 import ScrollToTopButton from '../buttons/ScrollToTopButton'
 import Container from '../containers/Container'
 import Footer from '../templates/footer/Footer'
-import Header from '../templates/header/Header'
 import Section from '../templates/Section'
 import Spacing from './Spacing'
 
@@ -21,7 +20,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
 
   return (
     <>
-      <Header />
+      <Navbar />
       <main id={`sucursales-${city}`} className='mt-[100px] sm:mt-0 xl:mt-[100px]'>
         <BackgroundImageSection
           // image_768={image_768}
