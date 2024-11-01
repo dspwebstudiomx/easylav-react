@@ -1,10 +1,8 @@
 // PageLayout.jsx
 import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from 'components';
-import scrollToTop from 'functions/scrollToTop';
 import PropTypes from 'prop-types';
 
 const PageLayout = ({ children }) => {
-  scrollToTop()
   return (
     <>
       <Header />
