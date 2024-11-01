@@ -8,7 +8,6 @@
 // Importaciones
 import { BackgroundImageSection, ButtonContainer, ButtonSecondary, Contacto, Navbar, SucursalCardPerCity } from 'components'
 import PropTypes from 'prop-types'
-import ScrollToTopButton from '../buttons/ScrollToTopButton'
 import Container from '../containers/Container'
 import Footer from '../templates/footer/Footer'
 import Section from '../templates/Section'
@@ -54,7 +53,6 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
 
       </main >
       <Footer />
-      <ScrollToTopButton />
     </>
   )
 }
