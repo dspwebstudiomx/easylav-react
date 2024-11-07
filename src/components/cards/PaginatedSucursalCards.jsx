@@ -6,11 +6,10 @@
 */
 
 // Importaciones
-import { Container, Pager } from 'components';
+import { Container, Pager, SucursalCard } from 'components';
 import { localservices } from 'data';
 import { useMediaQueries, usePagination } from 'hooks';
 import PropTypes from 'prop-types';
-import SucursalCard from './SucursalCard';
 
 // Estructura
 const PaginatedSucursalCards = () => {
@@ -24,18 +23,20 @@ const PaginatedSucursalCards = () => {
         {paginatedData.map((localservice) => (
           <SucursalCard
             key={localservice.id}
-            title={localservice.title}
-            gmap={localservice.gmap}
             position={localservice.position}
             place={localservice.place}
+            gmap={localservice.gmap}
+            title={localservice.title}
             serviceday1={localservice.serviceday1}
             servicehour1={localservice.servicehour1}
-            ciudad={localservice.ciudad}
             email={localservice.email}
-            titleMailto={localservice.titleMailto}
             badge={localservice.badge}
             advertisement={localservice.advertisement}
             image={localservice.image}
+            openHour={localservice.openHour}
+            closeHour={localservice.closeHour}
+            openMinute={localservice.openMinute}
+            closeMinute={localservice.closeMinute}
           />
         ))}
       </div>

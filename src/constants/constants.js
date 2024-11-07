@@ -39,10 +39,10 @@ export const GENERAL_UI = {
     JUSTIFY: "mx-auto",
   },
   TITLEH3: {
-    FONT_FAMILY: "font-din",
+    FONT_FAMILY: "font-din-bold",
     FONT_SIZE: "text-xl",
     FONT_WEIGHT: "font-bold",
-    COLOR: "text-secondary_dark dark:text-light",
+    COLOR: "text-primary_dark dark:text-light",
     BACKGROUND_COLOR: "",
     CARD: "text-base uppercase font-semibold",
     TEXT_TRANSFORM: "uppercase",
@@ -264,7 +264,7 @@ export const TESTIMONIAL_UI = {
     "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[380px] md:h-[340px] xl:h-[340px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
-    "flex lg:flex-row gap-1 justify-between items-center flex-col sm:flex-row",
+    "flex justify-between items-center gap-2 flex-col sm:flex-row sm:items-start",
   NAME_CLASSNAME: "font-semibold text-lg",
   NUMBER_STAR_CONTAINER_CLASSNAME:
     "text-dark justify-center flex items-center mb-6",
@@ -295,7 +295,7 @@ export const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-2xl",
-    WIDTH: "w-auto 2xl:w-[280px]",
+    WIDTH: "w-[270px] 2xl:w-[280px]",
   },
   IMAGE: {
     CONTAINER: {
@@ -391,7 +391,7 @@ export const SERVICES_GENERATOR_UI = {
     CLASSNAME: "flex flex-col gap-8 items-center justify-center",
     DIV_VIDEO:
       "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
-    DIV_TITLEH3: "mx-auto text-primary",
+    DIV_TITLEH3: "mx-auto text-dark",
   },
   IMAGE: "p-2",
   PARAGRAPH: "text-dark text-[16px] dark:text-light",

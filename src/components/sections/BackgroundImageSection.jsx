@@ -1,9 +1,9 @@
 import { Container, Section } from 'components'
 import PropTypes from 'prop-types'
 
-const BackgroundImageSection = ({ align, id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor }) => {
+const BackgroundImageSection = ({ align, id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor, rounded }) => {
   return (
-    <Section id={id} className={`${height} relative overflow-hidden w-full z-0`}>
+    <Section id={id} className={`${height} relative overflow-hidden w-full z-0 ${rounded}`}>
 
       {/* Background Image */}
       <img
@@ -46,5 +46,6 @@ BackgroundImageSection.propTypes = {
   height: PropTypes.string,
   opacity: PropTypes.string,
   backgroundColor: PropTypes.string,
+  rounded: PropTypes.string
 }
 export default BackgroundImageSection

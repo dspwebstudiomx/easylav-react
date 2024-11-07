@@ -20,8 +20,7 @@ const TitleH3 = ({ children, className }) => {
   )
 }
 TitleH3.propTypes = {
-  title: Proptypes.string.isRequired,
-  children: Proptypes.node.isRequired,
+  children: Proptypes.node,
   className: Proptypes.string
 }
 

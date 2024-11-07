@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
 
 // Estructura
-const BackgroundCard = ({ id, title, image, href }) => {
+const BackgroundCard = ({ id, title, image, href, rounded }) => {
   return (
     <Link to={href} id={`sucursal-${title}`} className="w-[260px] xl:w-[320px] shadow-2xl rounded-lg">
       <BackgroundImageSection
@@ -25,6 +25,7 @@ const BackgroundCard = ({ id, title, image, href }) => {
         height='h-auto xl:h-[240px] grid place-items-center'
         opacity='opacity-30 hover:opacity-40'
         backgroundColor='bg-dark'
+        rounded={rounded}
       >
         <h2 className="text-light uppercase text-2xl font-semibold tracking-wide">{title}</h2>
       </BackgroundImageSection>
@@ -36,6 +37,7 @@ BackgroundCard.propTypes = {
   href: PropTypes.string.isRequired,
   title: PropTypes.node.isRequired,
   image: PropTypes.string.isRequired,
+  rounded: PropTypes.string.isRequired,
 }
 
 export default BackgroundCard
