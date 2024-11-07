@@ -13,9 +13,15 @@ import PropTypes from 'prop-types';
 
 // Estructura
 const PaginatedSucursalCards = () => {
+
+  // Usar el Custom Hook - useMediaQueries
   const { itemsPerPage } = useMediaQueries();
 
-  const { paginatedData, handlePageChange, currentPage, handleNextPage, handlePrevPage } = usePagination(localservices, itemsPerPage);
+  // Ordenar localservices alfabéticamente por el título
+  const sortedLocalServices = [...localservices].sort((a, b) => a.title.localeCompare(b.title));
+
+  // Usar el Custom Hook - usePagination con los datos ordenados
+  const { paginatedData, handlePageChange, currentPage, handleNextPage, handlePrevPage } = usePagination(sortedLocalServices, itemsPerPage);
 
   return (
     <Container>
@@ -40,12 +46,14 @@ const PaginatedSucursalCards = () => {
           />
         ))}
       </div>
-      <Pager handleNextPage={handleNextPage} handlePageChange={handlePageChange} handlePrevPage={handlePrevPage} itemsPerPage={itemsPerPage} localservices={localservices} currentPage={currentPage} />
+      <Pager handleNextPage={handleNextPage} handlePageChange={handlePageChange} handlePrevPage={handlePrevPage} itemsPerPage={itemsPerPage} localservices={sortedLocalServices} currentPage={currentPage} />
     </Container>
   );
 };
+
 PaginatedSucursalCards.propTypes = {
   handlePrevPage: PropTypes.func,
   handleNextPage: PropTypes.func
 }
+
 export default PaginatedSucursalCards;
