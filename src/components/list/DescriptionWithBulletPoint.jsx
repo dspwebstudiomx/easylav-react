@@ -15,7 +15,7 @@ export default function DescriptionWithBulletPoint({ ...props }) {
       <span className='text-primary'>
         <TbPoint size={32} />
       </span>
-      <div className='flex flex-col justify-start items-start gap-6'>
+      <div className='flex flex-col justify-start items-start gap-0'>
         <TitleH3 title={titulo} />
         <Paragraph>
           {texto}

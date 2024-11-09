@@ -13,7 +13,7 @@ import propTypes from 'prop-types'
 // Estructura
 const TitleContainer = ({ title }) => {
   return (
-    <div className='flex justify-center'>
+    <div className='w-full sm:w-[320px] mx-auto'>
       <div className='sm:hidden'>
         <BorderLeft>
           <TitleH2 justify={GENERAL_UI.TITLEH2.JUSTIFY}>

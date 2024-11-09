@@ -86,7 +86,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl place-content-center p-4",
+    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg",
 };
 
 // Navbar
@@ -126,7 +126,7 @@ export const BANNER_UI = {
 
 // Border Bottom
 export const BORDER_BOTTOM_UI = {
-  WIDTH: "sm:w-[60%] md:w-[50%] lg:w-[30%]",
+  WIDTH: "w-100%",
   BORDER: "flex border-b-4 border-b-primary pb-3",
   JUSTIFY: "mx-auto",
 };

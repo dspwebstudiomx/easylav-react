@@ -142,7 +142,7 @@ const localservices = [
   },
   {
     id: 10,
-    title: "Ventura",
+    title: "Ventura Puente",
     gmap: "https://maps.app.goo.gl/f4oWmgkdkSJKpnPs5",
     position: { lat: 19.6908296, lng: -101.1843515 },
     place: "Laguna de Parras 585-2, Ventura Puente, 58020 Morelia, Mich.",

@@ -24,10 +24,9 @@ const Contacto = () => {
             <Link to={"/preguntas-frecuentes"}>Preguntas Frecuentes</Link>
           </span>
           <span className="">con las preguntas mas solicitadas.</span>
-          .
         </Paragraph>
         <Paragraph>
-          Si gustas enviar felicitaciones y sugerencias no dudes en escribirnos a
+          Si gustas enviar felicitaciones y/o sugerencias no dudes en escribirnos a
           <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
             <Link to="mailto:atnclientes@easylav.mx">Atencion a clientes</Link>
           </span>

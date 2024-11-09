@@ -8,6 +8,7 @@ Fecha: 2022-08-25
 // Importaciones
 import emailjs from '@emailjs/browser';
 import { ButtonContainer, ButtonPrimary, Spacing } from 'components';
+import { localservices } from 'data';
 import { Field, Form, Formik } from 'formik';
 import { scrollToTop } from 'functions';
 import { useEffect, useRef, useState } from 'react';
@@ -23,6 +24,9 @@ export default function ContactFacturacion() {
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
+
+  // Ordenar localservices alfabéticamente por el título
+  const sortedLocalServices = [...localservices].sort((a, b) => a.title.localeCompare(b.title));
 
   useEffect(() => {
     if (showModal) {
@@ -335,12 +339,15 @@ export default function ContactFacturacion() {
                   {/* Sucursal */}
                   <div id='formField_sucursal' className="flex flex-col">
                     <label htmlFor='user_sucursal' className="mb-2">Sucursal<span className='text-required ml-1'>*</span></label>
-                    <Field
-                      className="rounded-md bg-light text-dark bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
-                      id="user_sucursal"
-                      name="user_sucursal"
-                      required
-                    />
+                    <select name="user_CFDI" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[280px] md:w-auto'>
+                      <option defaultValue={'Escoge tu sucursal'} selected >Escoge tu sucursal</option>
+                      {sortedLocalServices.map(localservice => {
+                        return (
+                          <option key={localservice.id}>{localservice.title}</option>
+                        )
+                      }
+                      )}
+                    </select>
                     {touched.user_sucursal && errors.user_sucursal && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
                   </div>
                   {/* Sucursal */}

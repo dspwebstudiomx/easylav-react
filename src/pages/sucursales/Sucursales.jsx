@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { CentroGuadalajara as guadalajara, CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
+import { CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
@@ -26,10 +26,10 @@ const Sucursales = () => {
         ogType="website"
       />
       <PageLayout id={"Sucursales"}>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 place-items-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-10 place-items-center">
           <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' height='h-[280px]' rounded='rounded-lg' />
           <BackgroundCard image={leon} title='León' href='/sucursales/leon' rounded='rounded-lg' height='h-[280px]' />
-          <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' height='h-[280px]' rounded='rounded-lg' />
+          {/* <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' height='h-[280px]' rounded='rounded-lg' /> */}
         </div>
       </PageLayout>
     </>
