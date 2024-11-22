@@ -30,7 +30,7 @@ const PreguntasFrecuentes = () => {
                 Tienes alguna duda?
               </TitleH1>
             </BorderLeft>
-            <TitleH3>Puedes ver las preguntas más frecuentes:</TitleH3>
+            <TitleH3>Puedes ver las preguntas más frecuentes</TitleH3>
           </div>
         </div>
         {/* Title */}

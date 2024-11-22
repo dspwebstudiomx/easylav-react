@@ -20,7 +20,7 @@ const Accordion = ({ description, title, height }) => {
   };
 
   const styles = {
-    width: 'w-full lg:w-[410px] 2xl:w-[480px] ',
+    width: 'w-full lg:w-[410px] 2xl:w-[480px] h-[120px]',
   }
 
   return (
@@ -56,7 +56,7 @@ const Accordion = ({ description, title, height }) => {
 
       </button>
 
-      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto' : 'hidden'}`}
+      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-[280px]' : 'hidden'}`}
       >
         <p className={`${GENERAL_UI.PARAGRAPH} py-8  dark:text-dark-6 w-full pr-8`}>
           {description}

@@ -111,9 +111,11 @@ export const ContactFormFranquicias = () => {
         onSubmit={() => { }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 p-0 text-xs">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 sm:p-8 text-xs items-between">
             <Fields errors={errors} touched={touched} />
-            <SubmitButton text="Enviar mensaje" />
+            <div className='mx-auto'>
+              <SubmitButton text="Enviar mensaje" />
+            </div>
             {showModal && <EmailSuccessModal
               onClick={() => {
                 setShowModal(false);
