@@ -55,7 +55,7 @@ export const ContactFormFranquicias = () => {
   // }
 
   return (
-    <article id="formulario" className="border-4 border-primary_dark rounded-2xl bg-primary_light text-sm p-4 h-auto text-dark">
+    <article id="formulario" className="text-sm p-0 h-auto text-dark">
       <Formik
         initialValues={{
           user_name: '',
