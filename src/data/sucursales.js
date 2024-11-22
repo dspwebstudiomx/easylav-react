@@ -1,6 +1,6 @@
 //! fotos de sucursal en lugar de mapas
 
-import { Placeholder, VistaLavanderiaDesdeEntrada_1_640 } from "assets";
+import { Placeholder, VistaLavanderiaDesdeEntrada_1_640, delta } from "assets";
 
 const localservices = [
   {
@@ -10,7 +10,7 @@ const localservices = [
     position: { lat: 19.7158083, lng: -101.2159875 },
     place: "Av Pedregal 167, Emiliano Zapata, 58148 Morelia, Mich.",
     serviceday1: "Lunes a Domingo:",
-    openHour: 13,
+    openHour: 14,
     openMinute: 0,
     closeHour: 22,
     closeMinute: 30,
@@ -134,7 +134,7 @@ const localservices = [
     city: "León",
     email: "delta@easylav.mx",
     titleMailto: "Enviar correo a sucursal a Delta",
-    image: Placeholder,
+    image: delta,
     openHour: 7,
     openMinute: 0,
     closeHour: 21,

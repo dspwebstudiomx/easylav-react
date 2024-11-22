@@ -1,4 +1,5 @@
 import { ContactForm, Paragraph, SocialLinks, Spacing, TitleH2 } from "components";
+import { scrollToTop } from "functions";
 import { Link } from "react-router-dom";
 
 const Contacto = () => {
@@ -29,8 +30,15 @@ const Contacto = () => {
           Si gustas enviar felicitaciones y/o sugerencias no dudes en escribirnos a
           <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
             <Link to="mailto:atnclientes@easylav.mx">Atencion a clientes</Link>
-          </span>
-          .
+          </span>.
+        </Paragraph>
+        <Paragraph>
+          Si requieres solicitar una factura puedes visitar nuestra sección
+          <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
+            <Link to="/facturacion" onClick={() =>
+              [scrollToTop()]
+            }>Facturación</Link>
+          </span>, llenar los datos completos y mandar la información.
         </Paragraph>
         <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0 2xl:mt-12">
           <SocialLinks
@@ -46,7 +54,7 @@ const Contacto = () => {
       >
         <ContactForm />
       </div>
-    </div>
+    </div >
   );
 };
 

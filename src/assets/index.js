@@ -33,3 +33,4 @@ export { default as HeroInicioImage3_478x600 } from "../assets/images/recortadas
 export { default as HeroInicioImage3_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
 export { default as HeroInicioImage3_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
 export { default as woman } from "../assets/images/images/png/woman1.png";
+export { default as delta } from "../assets/images/sucursales/delta.webp";

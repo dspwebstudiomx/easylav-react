@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 const PaginatedSucursalCards = () => {
 
   // Usar el Custom Hook - useMediaQueries
-  const { itemsPerPage } = useMediaQueries();
+  const { itemsPerPage } = useMediaQueries()
 
   // Ordenar localservices alfabéticamente por el título
   const sortedLocalServices = [...localservices].sort((a, b) => a.title.localeCompare(b.title));

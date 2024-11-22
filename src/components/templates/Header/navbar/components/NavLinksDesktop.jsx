@@ -1,6 +1,6 @@
 // NavLinksDesktop.jsx
 import { navLinksPages, navLinksSections } from "data/navlinks";
-import { scrollToTop, scrollWithOffset } from "functions";
+import { scrollWithOffset } from "functions";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
@@ -34,7 +34,6 @@ const NavLinksDesktop = () => {
               id={`navlink-${navlink.name}`}
               className={classes}
               to={navlink.href}
-              scroll={scrollToTop}
             >
               {navlink.name}
             </NavLink>

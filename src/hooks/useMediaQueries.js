@@ -16,12 +16,10 @@ const useMediaQueries = () => {
       setItemsPerPage(1);
     } else if (isTablet) {
       setItemsPerPage(2);
-    } else if (isDesktop) {
-      setItemsPerPage(3);
     } else {
       setItemsPerPage(3);
     }
-  }, [isMobile, isTablet, isDesktop, itemsPerPage]);
+  }, [isMobile, isTablet, isDesktop]);
 
   return {
     isMobile,

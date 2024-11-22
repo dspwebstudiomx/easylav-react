@@ -178,7 +178,7 @@ const SucursalCard = ({
       {/* Badge */}
 
       {/* Badge Horario Abierto/Cerrado */}
-      {isOpen ? (
+      {isOpen  ? (
         <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
           <p className=''>Abierto</p>
         </div>

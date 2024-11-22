@@ -24,6 +24,20 @@ export default function ContactFacturacion() {
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
+  const [showCardDigitsInput, setShowCardDigitsInput] = useState(false);
+  const [cardDigits, setCardDigits] = useState(''); // Estado para los últimos 4 dígitos
+  const [paymentMethod, setPaymentMethod] = useState(); // Estado para la forma de pago
+
+
+  const handlePaymentChange = (event) => {
+    const selectedPayment = event.target.value;
+    setPaymentMethod(selectedPayment); // Actualiza el estado de la forma de pago
+    setShowCardDigitsInput(selectedPayment === "Tarjeta Débito" || selectedPayment === "Tarjeta Crédito");
+  };
+
+  const handleCardDigitsChange = (event) => {
+    setCardDigits(event.target.value); // Actualiza el estado con el valor del input
+  };
 
   // Ordenar localservices alfabéticamente por el título
   const sortedLocalServices = [...localservices].sort((a, b) => a.title.localeCompare(b.title));
@@ -51,8 +65,8 @@ export default function ContactFacturacion() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_Contacto', 'template_contacto', form.current, {
-        publicKey: 'dO-yqTYETkfD9vvLv',
+      .sendForm('service_facturacion', 'template_facturacion', form.current, {
+        publicKey: 'ZbK-tAT_FCSlxO0ZF',
       })
       .then(
         () => {
@@ -88,11 +102,12 @@ export default function ContactFacturacion() {
           user_ticketnumber: '',
           user_sucursal: '',
           user_CFDI: '',
-          user_payment: '',
+          user_payment: paymentMethod,
           user_subtotal: '',
           user_IVA: '',
           user_total: '',
-          user_CSF: ''
+          user_CSF: '',
+          card_digits: cardDigits, // Añade el estado de cardDigits aquí
         }}
         validate={
           values => {
@@ -339,7 +354,7 @@ export default function ContactFacturacion() {
                   {/* Sucursal */}
                   <div id='formField_sucursal' className="flex flex-col">
                     <label htmlFor='user_sucursal' className="mb-2">Sucursal<span className='text-required ml-1'>*</span></label>
-                    <select name="user_CFDI" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[280px] md:w-auto'>
+                    <Field as='select' name="user_sucursal" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[280px] md:w-auto'>
                       <option defaultValue={'Escoge tu sucursal'} selected >Escoge tu sucursal</option>
                       {sortedLocalServices.map(localservice => {
                         return (
@@ -347,7 +362,7 @@ export default function ContactFacturacion() {
                         )
                       }
                       )}
-                    </select>
+                    </Field>
                     {touched.user_sucursal && errors.user_sucursal && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
                   </div>
                   {/* Sucursal */}
@@ -388,13 +403,15 @@ export default function ContactFacturacion() {
                   {/* Forma de Pago */}
                   <div id='formField_payment' className="flex flex-col w-full">
                     <label htmlFor='user_payment' className="mb-2">Forma de Pago<span className='text-required ml-1'>*</span></label>
-                    <select name="user_payment" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2  border-secondary dark:border-primary outline-none'>
-                      <option>Efectivo</option>
-                      <option>Tarjeta Crédito</option>
-                      <option>Tarjeta Débito</option>
-                    </select>
+                    <Field as="select" name="user_payment" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2 border-secondary dark:border-primary outline-none' onChange={handlePaymentChange}>
+                      <option value="">Seleccione</option>
+                      <option value="Efectivo">Efectivo</option>
+                      <option value="Tarjeta Crédito">Tarjeta Crédito</option>
+                      <option value="Tarjeta Débito">Tarjeta Débito</option>
+                    </Field>
                   </div>
                   {/* Forma de Pago */}
+
                   {/* SubTotal */}
                   <div id='formField_subtotal' className="flex flex-col">
                     <label htmlFor='user_subtotal' className="mb-2">Subtotal<span className='text-required'>*</span></label>
@@ -450,6 +467,28 @@ export default function ContactFacturacion() {
             </form> */}
             {/* Datos de Compra */}
 
+            <div className='grid sm:grid-cols-2 gap-8'>
+
+              {/* Input para los últimos 4 dígitos de la tarjeta */}
+              {showCardDigitsInput && (
+                <div id='formField_lastFourDigitsCard' className="flex flex-col">
+                  <label htmlFor='user_lastFourDigitsCard' className="mb-2">Últimos 4 dígitos de la tarjeta<span className='text-required ml-1'>*</span></label>
+                  <Field
+                    className="rounded-md bg-light text-dark border-2 border-secondary dark:border-primary p-2 outline-none"
+                    id="user_lastFourDigitsCard"
+                    name="user_lastFourDigitsCard"
+                    type="number"
+                    maxLength="4"
+                    value={cardDigits} // Mantiene el valor del input
+                    onChange={handleCardDigitsChange} // Maneja el cambio del input
+                    required
+                  />
+                  {touched.user_lastFourDigitsCard && errors.user_lastFourDigitsCard && <p className='mt-2 text-required text-xs'>* <span className='text-dark dark:text-light'>{errors.user_lastFourDigitsCard}</span></p>}
+                </div>
+
+              )}
+            </div>
+
             {/* Fields */}
 
             {/* Submit Button */}
@@ -465,7 +504,7 @@ export default function ContactFacturacion() {
                   [resetForm(),
                   scrollToTop()]
                 }
-                type='submit' icon={<FaTrashAlt />} />
+                type='button' icon={<FaTrashAlt />} />
 
             </ButtonContainer>
 

@@ -86,7 +86,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg",
+    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg xl:max-w-screen-lg",
 };
 
 // Navbar
@@ -182,7 +182,7 @@ export const BUTTON_SECONDARY_UI = {
 
 // Hero Inicio
 export const HEROINICIO_UI = {
-  HEIGHT: "h-[650px] lg:h-[500px]",
+  HEIGHT: "h-[650px] lg:h-[600px]",
   THEME: "dark",
   BACKGROUND: {
     OPACITY: "opacity-90",
@@ -194,12 +194,12 @@ export const HEROINICIO_UI = {
     PARAGRAPH: "hidden",
   },
   TITLE: {
-    FONT_SIZE: "text-2xl lg:text-3xl xl:text-3xl",
-    FONT_WEIGHT: "font-black",
+    FONT_SIZE: "text-2xl lg:text-3xl xl:text-4xl",
+    FONT_WEIGHT: "font-bold",
     FONT_FAMILY: "",
-    LETTER_SPACING: "tracking-wide",
+    LETTER_SPACING: "tracking-wider",
     LINE_HEIGHT: "",
-    TEXT_TRANSFORM: "uppercase",
+    TEXT_TRANSFORM: "",
   },
   COLOR: {
     BUTTON: "primary",
@@ -246,9 +246,9 @@ export const ABOUT_PROPS = {
 
 // Testimonios
 export const TESTIMONIALS_UI = {
-  BACKGROUND_COLOR: "",
-  HEIGHT: "",
-  SECTION: "",
+  BACKGROUND_COLOR: "bg-primary",
+  SECTION: "py-20",
+  HEIGHT: "h-[100vh]",
   CONTAINER: "mx-auto",
   BORDERBOTTOM_JUSTIFY: "mx-auto",
 };
@@ -294,12 +294,12 @@ export const SUCURSAL_CARD_UI = {
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
-    SHADOW: "shadow-2xl",
-    WIDTH: "w-[270px] 2xl:w-[280px]",
+    SHADOW: "shadow-xl",
+    WIDTH: "w-[260px] 2xl:w-[280px]",
   },
   IMAGE: {
     CONTAINER: {
-      HEIGHT: "h-[180px]",
+      HEIGHT: "",
       OVERFLOW: "overflow-hidden",
       ROUNDED: "rounded-t-lg",
       WIDTH: "w-full",

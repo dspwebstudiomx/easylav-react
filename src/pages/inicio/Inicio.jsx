@@ -5,7 +5,6 @@ import { canastaderopa_640 } from 'assets';
 import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
-
 import HeroInicio from './components/HeroInicio';
 import QuieresUnaFranquicia from './franquicias/QuieresUnaFranquicia';
 // const HeroInicio = lazy(() => import('./components/HeroInicio'));

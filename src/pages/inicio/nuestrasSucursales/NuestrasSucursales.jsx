@@ -1,35 +1,87 @@
-/*
-  Nuestras Sucursales
-  =====================================
-  Creado por : Daniel Pérez
-  Fecha: 2022-08-20
-*/
+import { BorderBottom, Container, SucursalCard, TitleH2 } from 'components';
+import { localservices } from 'data';
+import PropTypes from 'prop-types';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Importaciones
-import { ButtonContainer, ButtonSecondary, PaginatedSucursalCards, Section, TitleContainer } from 'components';
-import { SUCURSAL_SECTION_PROPS } from 'constants/constants';
+// const styles = { swiperslide: 'w-[420px] mx-auto' }
 
-// Estructura
 const NuestrasSucursales = () => {
   return (
-    <Section id='nuestras-sucursales' >
-      <div className='m-auto'>
-        <TitleContainer title={SUCURSAL_SECTION_PROPS.TITLEH2} />
-        <div className='my-20 mt-24'>
-          <PaginatedSucursalCards />
-        </div>
-        <ButtonContainer position='justify-center items-center' distance=''>
-          <ButtonSecondary
-            title='Contáctanos'
-            href='/contacto'
-            distance='my-2'
-            type='button'
-            width='min-w-[280px]'
-          />
-        </ButtonContainer>
-      </div>
-    </Section>
-  );
-};
+    <div className='py-12 bg-light dark:bg-dark'>
+      <Container className='mb-24'>
+        <BorderBottom>
+          <TitleH2>Nuestras Sucursales</TitleH2>
+        </BorderBottom>
+      </Container>
+      <Swiper
+        modules={[Navigation]}
+        className="mySwiper"
+        keyboard={true}
+        spaceBetween={40}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: true,
+        }}
+        loop={true}
+        // pagination={{ clickable: true, draggable: true }}
+        navigation={true}
+        breakpoints={{
+          600: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 20,
+            touchRatio: 1
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 20,
+            touchRatio: 1
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 0,
+            touchRatio: 1
+          },
+          1920: {
+            slidesPerView: 4,
+            spaceBetweenSlides: 20,
+            touchRatio: 1
+          },
+        }
+        }
+      >
+        {localservices.map((localservice) => (
+          <SwiperSlide key={localservice.id}>
+            <SucursalCard
+              key={localservice.id}
+              position={localservice.position}
+              place={localservice.place}
+              gmap={localservice.gmap}
+              title={localservice.title}
+              serviceday1={localservice.serviceday1}
+              servicehour1={localservice.servicehour1}
+              email={localservice.email}
+              badge={localservice.badge}
+              advertisement={localservice.advertisement}
+              image={localservice.image}
+              openHour={localservice.openHour}
+              closeHour={localservice.closeHour}
+              openMinute={localservice.openMinute}
+              closeMinute={localservice.closeMinute}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  )
+}
 
-export default NuestrasSucursales;
+NuestrasSucursales.propTypes = {
+  title: PropTypes.string,
+}
+
+export default NuestrasSucursales

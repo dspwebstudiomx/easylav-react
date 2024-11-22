@@ -5,7 +5,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 export default function FooterNavHashLinksGenerator({ links }) {
   const classes = {
-    footerSectionsList: "flex flex-col gap-0 text-lg xl:text-sm"
+    footerSectionsList: "flex flex-col gap-3 text-lg xl:text-sm"
   }
   return (
     <ul className={classes.footerSectionsList}>
