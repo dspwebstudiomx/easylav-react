@@ -24,7 +24,7 @@ const CarouselTestimonios = () => {
             disableOnInteraction: true,
           }}
           loop={true}
-          pagination={{ clickable: true, draggable: true }}
+          pagination={{ clickable: true, draggable: true, dynamicBullets: true }}
           breakpoints={{
             600: {
               slidesPerView: 1,

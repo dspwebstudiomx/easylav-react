@@ -96,7 +96,7 @@ const PreguntasFrecuentes = () => {
           </div>
         </div>
         <ButtonContainer position={'items-center sm:justify-center my-8'}>
-          <ButtonPrimary href={'/'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} />
+          <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} />
           <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} />
         </ButtonContainer>
       </PageLayout >
