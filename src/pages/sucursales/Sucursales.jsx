@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { CentroLeon as leon, CatedralMorelia as morelia } from 'assets';
+import { CentroLeon as leon, catedral_morelia_card as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function MainLayout({ children }) {
 
   const classes = {
-    main: 'mt-[100px] sm:mt-0 xl:mt-[100px]'
+    main: 'mt-[100px] sm:mt-[60px]'
   }
 
   return (

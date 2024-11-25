@@ -111,7 +111,7 @@ export const ContactFormFranquicias = () => {
         onSubmit={() => { }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 sm:p-8 text-xs items-between">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 sm:p-8 text-sm items-between">
             <Fields errors={errors} touched={touched} />
             <div className='mx-auto'>
               <SubmitButton text="Enviar mensaje" />

@@ -25,7 +25,6 @@ const NavLinksTablet = () => {
       {navLinksPages.map((navlink) => {
         return (
           <NavLink
-            scroll={scrollWithOffset}
             key={navlink.id}
             id={`link-${navlink.linkId}`}
             className="xl:text-md navlink text-base font-bold uppercase text-light hover:text-secondary_light"

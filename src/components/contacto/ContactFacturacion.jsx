@@ -156,7 +156,7 @@ export default function ContactFacturacion() {
         }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col  w-full mx-auto p-0 gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-2/3 2xl:w-1/2">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col  w-full mx-auto p-0 gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-2/3">
             {/* Fields */}
 
             {/* Datos del Usuario */}

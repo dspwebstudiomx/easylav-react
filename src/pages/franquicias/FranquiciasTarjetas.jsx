@@ -101,7 +101,7 @@ const PreguntasFrecuentes = () => {
         </ButtonContainer>
       </PageLayout >
       {showModal && (
-        <Modal width='sm:w-[40vw] md:w-[60vw] lg:w-[40vw]'>
+        <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
           <div
             id="franquicias-formualario"
             className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"

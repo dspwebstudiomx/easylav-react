@@ -12,6 +12,7 @@ export { default as canastaderopa_2400 } from "../assets/images/images/annie-spr
 export { default as canastaderopa_640 } from "../assets/images/images/annie-spratt-5TfCI4nj6B4-unsplash-640.jpg";
 export { default as Camisas } from "../assets/images/images/camisas.webp";
 export { default as CatedralMorelia } from "../assets/images/images/catedral_morelia.webp";
+export { default as catedral_morelia_card } from "../assets/images/images/catedral_morelia_card.webp";
 export { default as CentroGuadalajara } from "../assets/images/images/centro_guadalajara.webp";
 export { default as LaundryLady } from "../assets/images/images/laundrylady.webp";
 export { default as VistaDentroLavanderia_640 } from "../assets/images/images/lavanderia/vistadentrolavanderia_640.webp";
@@ -20,17 +21,23 @@ export { default as VistaLavanderiaDesdeEntrada_1_640 } from "../assets/images/i
 export { default as VistaLavanderiaDesdeEntrada_2_640 } from "../assets/images/images/lavanderia/vistalavanderiadesdeentrada_2_640.webp";
 export { default as CentroLeon } from "../assets/images/images/leon.jpg";
 export { default as Placeholder } from "../assets/images/images/Placeholder.webp";
+export { default as woman } from "../assets/images/images/png/woman1.png";
 export { default as LogoHorizontalBlanco } from "../assets/images/logos/horizontal/logo-blanco.png";
 export { default as LogoHorizontalColor } from "../assets/images/logos/horizontal/logo-color.png";
 export { default as LogoSVG } from "../assets/images/logos/svg/logoSVG.svg";
-export { default as HeroInicioImage1_478x600 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
-export { default as HeroInicioImage1_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
-export { default as HeroInicioImage1_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
-export { default as HeroInicioImage2_478x600 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
-export { default as HeroInicioImage2_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
-export { default as HeroInicioImage2_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
-export { default as HeroInicioImage3_478x600 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
-export { default as HeroInicioImage3_1024x500 } from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
-export { default as HeroInicioImage3_1920x500 } from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
-export { default as woman } from "../assets/images/images/png/woman1.png";
+export {
+  default as HeroInicioImage1_1024x500,
+  default as HeroInicioImage2_1024x500,
+  default as HeroInicioImage3_1024x500,
+} from "../assets/images/recortadas/lavanderia1_1024x500.jpg";
+export {
+  default as HeroInicioImage1_1920x500,
+  default as HeroInicioImage2_1920x500,
+  default as HeroInicioImage3_1920x500,
+} from "../assets/images/recortadas/lavanderia1_1920x500.jpg";
+export {
+  default as HeroInicioImage1_478x600,
+  default as HeroInicioImage2_478x600,
+  default as HeroInicioImage3_478x600,
+} from "../assets/images/recortadas/lavanderia1_478x600.jpg";
 export { default as delta } from "../assets/images/sucursales/delta.webp";

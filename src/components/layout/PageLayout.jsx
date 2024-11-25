@@ -6,7 +6,7 @@ const PageLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="mt-[100px] sm:mt-[0px] xl:mt-[100px]">
+      <main className="mt-[100px] sm:mt-[60px] xl:mt-[100px]">
         <Section backgroundColor={'dark:bg-dark bg-light'} height={'md:min-h-[42vh] 2xl:min-h-[70vh]'} className={'dark:text-light flex flex-col gap-6 items-center justify-center'}>
           <Container>
             {children}

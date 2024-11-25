@@ -29,28 +29,26 @@ const Navbar = () => {
   }
 
   return (
-    <>
-      <nav id="nav" className={classes.nav}>
-        <Container className={classes.container}>
-          <div id="navbar" className={classes.navbar}>
-            <Logo />
-            <div className={classes.navlinks}>
-              <NavLinksDesktop />
-              <DarkModeButton />
-              <MenuButton
-                toggleNav={toggleNav}
-                navigationLinks={navigationLinks}
-              />
-            </div>
-            {navigationLinks && (
-              <NavLinksMobile onLinkClick={handleLinkClick} />
-            )}
+    <nav id="nav" className={classes.nav}>
+      <Container className={classes.container}>
+        <div id="navbar" className={classes.navbar}>
+          <Logo />
+          <div className={classes.navlinks}>
+            <NavLinksDesktop />
+            <DarkModeButton />
+            <MenuButton
+              toggleNav={toggleNav}
+              navigationLinks={navigationLinks}
+            />
           </div>
-        </Container>
-        <NavLinksTablet />
-        <HeaderLine />
-      </nav>
-    </>
+          {navigationLinks && (
+            <NavLinksMobile onLinkClick={handleLinkClick} />
+          )}
+        </div>
+      </Container>
+      <NavLinksTablet />
+      <HeaderLine />
+    </nav>
   );
 };
 

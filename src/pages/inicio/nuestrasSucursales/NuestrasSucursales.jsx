@@ -8,9 +8,18 @@ import 'swiper/css/scrollbar';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// const styles = { swiperslide: 'w-[420px] mx-auto' }
-
 const NuestrasSucursales = () => {
+  // Ordenar localservices alfabéticamente por el título
+  const sortedLocalServices = localservices.sort((a, b) => {
+    if (a.title < b.title) {
+      return -1;
+    }
+    if (a.title > b.title) {
+      return 1;
+    }
+    return 0;
+  });
+
   return (
     <div className='py-12 bg-light dark:bg-dark'>
       <Container className='mb-24'>
@@ -28,7 +37,6 @@ const NuestrasSucursales = () => {
           disableOnInteraction: true,
         }}
         loop={true}
-        // pagination={{ clickable: true, draggable: true }}
         navigation={true}
         breakpoints={{
           600: {
@@ -51,10 +59,9 @@ const NuestrasSucursales = () => {
             spaceBetweenSlides: 20,
             touchRatio: 1
           },
-        }
-        }
+        }}
       >
-        {localservices.map((localservice) => (
+        {sortedLocalServices.map((localservice) => (
           <SwiperSlide key={localservice.id}>
             <SucursalCard
               key={localservice.id}
@@ -84,4 +91,4 @@ NuestrasSucursales.propTypes = {
   title: PropTypes.string,
 }
 
-export default NuestrasSucursales
+export default NuestrasSucursales;

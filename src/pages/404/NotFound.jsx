@@ -1,7 +1,7 @@
+import { LogoHorizontalColor as logo } from "assets"
+import { ButtonContainer, ButtonSecondary } from "components"
 import { Link } from "react-router-dom"
-import logo from "../../assets/images/logos/horizontal/logo-color.png"
-import ButtonSecondary from "../../components/buttons/ButtonSecondary"
-import ButtonContainer from "../../components/containers/ButtonContainer"
+
 
 const NotFound = () => {
   return (
@@ -11,8 +11,9 @@ const NotFound = () => {
       <ButtonContainer position={'justify-center'}>
         <Link to="/">
           <ButtonSecondary
-            title={'Regresar a inicio'}
+            title={'Inicio'}
             width={'w-[240px]'}
+            href="/#inicio"
           />
         </Link>
       </ButtonContainer>
