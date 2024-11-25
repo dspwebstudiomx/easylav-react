@@ -28,7 +28,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
           image_1024={image_1024}
           image_1200={image_1200}
           image_1920={image_1920}
-          height='h-[180px] sm:h-[300px] '
+          height='h-[210px] sm:h-[300px] '
           opacity='opacity-50 hover:opacity-60'
           backgroundColor='bg-dark'
         >

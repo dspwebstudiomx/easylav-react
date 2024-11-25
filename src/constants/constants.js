@@ -182,7 +182,7 @@ export const BUTTON_SECONDARY_UI = {
 
 // Hero Inicio
 export const HEROINICIO_UI = {
-  HEIGHT: "h-[650px] lg:h-[600px]",
+  HEIGHT: "h-[600px] sm:h-[100vh] md:h-[40vh] lg:h-[70vh] 2xl:h-[75vh]",
   THEME: "dark",
   BACKGROUND: {
     OPACITY: "opacity-90",

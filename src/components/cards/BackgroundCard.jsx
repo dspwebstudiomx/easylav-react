@@ -22,7 +22,7 @@ const BackgroundCard = ({ id, title, image, href, rounded }) => {
         image_1024={image}
         image_1200={image}
         image_1920={image}
-        height='h-auto xl:h-[240px] grid place-items-center'
+        height='h-[180px] xl:h-[240px] grid place-items-center'
         opacity='opacity-30 hover:opacity-40'
         backgroundColor='bg-dark'
         rounded={rounded}
