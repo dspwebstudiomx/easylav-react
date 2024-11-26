@@ -28,7 +28,7 @@ const Leon = () => {
         description="Conoce nuestras sucursales en León, Guanajuato. EasyLav, siempre juntos"
         author="dspwebstudio"
         keywords="lavandería León, planchado León"
-        ogImage={image}
+        ogImage={image[576]}
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
       />
