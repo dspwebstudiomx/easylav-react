@@ -13,7 +13,7 @@ import Testimonio from './Testimonio';
 const CarouselTestimonios = () => {
   return (
     <>
-      <div className='py-12 bg-section dark:bg-dark'>
+      <div className='py-12 bg-section dark:bg-dark overflow-visible'>
         <Swiper
           modules={[Pagination, Autoplay, Scrollbar]}
           className="mySwiper"
@@ -46,7 +46,6 @@ const CarouselTestimonios = () => {
         >
           {testimonios.map((testimonio) => (
             <SwiperSlide key={testimonio.id}>
-              {/* <img src="https://placehold.co/840x420" alt="Slide 1" /> */}
               <Testimonio testimonio={testimonio} />
             </SwiperSlide>
 

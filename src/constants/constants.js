@@ -261,7 +261,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[380px] md:h-[340px] xl:h-[340px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[380px] md:h-[340px] xl:h-[340px] w-auto border-neumorphism",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
   CONTAINER_CLASSNAME:
     "flex justify-between items-center gap-2 flex-col sm:flex-row sm:items-start",
@@ -294,7 +294,7 @@ export const SUCURSAL_CARD_UI = {
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
-    SHADOW: "shadow-xl",
+    SHADOW: "border-neumorphism",
     WIDTH: "w-[260px] 2xl:w-[280px]",
   },
   IMAGE: {
@@ -389,7 +389,7 @@ export const SERVICES_GENERATOR_UI = {
   UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center border-neomorphism p-12",
+      "flex flex-col gap-8 items-center justify-center border-neumorphism p-12",
     DIV_VIDEO:
       "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3xl bg-light",
     DIV_TITLEH3: "mx-auto text-dark",
