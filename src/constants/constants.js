@@ -58,7 +58,7 @@ export const GENERAL_UI = {
   },
   PARAGRAPH: {
     FONT_FAMILY: "font-din text-pretty",
-    FONT_SIZE: "text-lg sm:text-lg mr-6 sm:mr-0",
+    FONT_SIZE: "text-lg sm:text-2xl mr-6 sm:mr-0",
     COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
     LETTER_SPACING: "tracking-normal",
