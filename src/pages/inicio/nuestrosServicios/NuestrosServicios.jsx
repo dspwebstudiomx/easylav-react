@@ -23,6 +23,7 @@ const NuestrosServicios = () => {
             title={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.TITLE}
             href={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.HREF}
             width='max-w-[300px]'
+            name={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.NAME}
           />
         </ButtonContainer>
       </Container>

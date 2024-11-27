@@ -155,6 +155,8 @@ export const BUTTON_UI = {
   TEXT_TRANSFORM: "",
   ROUNDED: "rounded-lg",
   LETTER_SPACING: "tracking-wider sm:tracking-normal",
+  ANIMATION:
+    "transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300",
 };
 
 // Button Container
@@ -368,6 +370,7 @@ export const NUESTROS_SERVICIOS_PROPS = {
   BUTTON_SECONDARY: {
     TITLE: "Conoce nuestras sucursales",
     HREF: "/sucursales",
+    NAME: "Visita nuestras sucursales",
   },
 };
 export const NUESTROS_SERVICIOS_UI = {

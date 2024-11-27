@@ -139,6 +139,6 @@ input[type="file"] button {
   border-radius: 5px;
   background: #f3f3f3;
   box-shadow:
-    -20px 20px 60px #bebebe,
-    20px -20px 60px #ffffff;
+    -15px 15px 60px #bebebe,
+    15px -15px 60px #ffffff;
 }
