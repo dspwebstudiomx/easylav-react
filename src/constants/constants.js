@@ -86,7 +86,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg xl:max-w-screen-lg",
+    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg xl:max-w-screen-xl",
 };
 
 // Navbar
@@ -388,9 +388,10 @@ export const SERVICES_GENERATOR_UI = {
   DIV: "grid place-content-center gap-8 w-full",
   UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
   LI: {
-    CLASSNAME: "flex flex-col gap-8 items-center justify-center",
+    CLASSNAME:
+      "flex flex-col gap-8 items-center justify-center border-neomorphism p-12",
     DIV_VIDEO:
-      "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3cssxl bg-light",
+      "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3xl bg-light",
     DIV_TITLEH3: "mx-auto text-dark",
   },
   IMAGE: "p-2",

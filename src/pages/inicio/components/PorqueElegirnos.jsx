@@ -35,7 +35,7 @@ export default function PorqueElegirnos() {
           <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
             <ImageResponsive
               src={img}
-              imageAlt={'Placeholder'}
+              imageAlt={'Mujer señalando hacia las caraterísticas de la empresa'}
               // className={'shadow-image'}
               image_640={img}
               image_1024={img}

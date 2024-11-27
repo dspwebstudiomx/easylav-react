@@ -45,9 +45,9 @@ const Inicio = () => (
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
       <HeroInicio />
-      <SobreNosotros />
       <NuestrosServicios />
       <PorqueElegirnos />
+      <SobreNosotros />
       <NuestrasSucursales />
       <CarouselTestimonios />
       <QuieresUnaFranquicia />
