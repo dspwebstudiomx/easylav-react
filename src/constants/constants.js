@@ -100,7 +100,7 @@ export const NAVBAR_UI = {
   CONTAINER: {
     DISPLAY: "flex justify-between items-center h-full w-full",
     MARGIN: "mx-auto",
-    PADDING: "px-8 sm:px-8 md:px-8 xl:px-0",
+    PADDING: "px-8 sm:px-8 md:px-8 xl:px-16",
   },
   NAVBAR: {
     DISPLAY: "flex items-center justify-between gap-4",
