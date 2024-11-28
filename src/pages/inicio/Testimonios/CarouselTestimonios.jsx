@@ -37,6 +37,11 @@ const CarouselTestimonios = () => {
               touchRatio: 1
             },
             1024: {
+              slidesPerView: 2,
+              spaceBetweenSlides: 30,
+              touchRatio: 1
+            },
+            1210: {
               slidesPerView: 3,
               spaceBetweenSlides: 30,
               touchRatio: 1
