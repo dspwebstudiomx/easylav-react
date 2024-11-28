@@ -263,10 +263,10 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[380px] md:h-[340px] xl:h-[340px] w-auto border-neumorphism",
-  PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[420px] md:h-[340px] xl:h-[380px] w-auto border-neumorphism",
+  PARAGRAPH_CLASSNAME: "text-pretty text-xl sm:text-2xl ",
   CONTAINER_CLASSNAME:
-    "flex justify-between items-center gap-2 flex-col sm:flex-row sm:items-start",
+    "flex items-center gap-2 flex-col sm:flex-row sm:items-start",
   NAME_CLASSNAME: "font-semibold text-lg",
   NUMBER_STAR_CONTAINER_CLASSNAME:
     "text-dark justify-center flex items-center mb-6",

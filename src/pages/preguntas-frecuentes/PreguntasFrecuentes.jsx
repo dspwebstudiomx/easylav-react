@@ -3,6 +3,7 @@
   ========================================
   Creado por : Daniel Pérez
   Fecha: 2024-09-28
+  Modificado: 2024-11-28
 */
 
 // Importaciones
@@ -36,12 +37,12 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <ul className="w-full sm:grid grid-cols-2 gap-8">
+        <ul className="w-full grid sm:grid-cols-2 gap-12">
           {frequentQuestions.map(question => {
             return (
               <li key={question.id} id={`question-${question.id}`} className="text-dark">
                 <Accordion
-                  height={'h-auto'}
+                  height={'h-[210px] sm:h-[140px]'}
                   title={question.question}
                   description={question.answer}
                 />
@@ -52,8 +53,8 @@ const PreguntasFrecuentes = () => {
         {/* Questions */}
       </div>
       <ButtonContainer position={'items-center justify-center'} distance='mt-20'>
-        <ButtonPrimary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'w-[240px]'} />
-        <ButtonSecondary href={'/'} title={'Inicio'} icon={<FaHome />} width={'w-[240px]'} />
+        <ButtonPrimary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'w-[240px]'} name='Ver Sucursales' />
+        <ButtonSecondary href={'/'} title={'Inicio'} icon={<FaHome />} width={'w-[240px]'} name='Ir a inicio' />
       </ButtonContainer>
     </PageLayout >
   );

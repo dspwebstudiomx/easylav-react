@@ -13,16 +13,20 @@ import PropTypes from 'prop-types'
 const Testimonio = ({ testimonio }) => {
 
   //Constantes de Datos
-  const NAME_PERSON_TESTIMONY = testimonio.nombre
+  const PERSON_NAME_TESTIMONY = testimonio.nombre
   const TESTIMONY = testimonio.testimonio
   const TESTIMONY_ID = testimonio.id
   const TESTIMONY_QUALIFICATION = testimonio.calificacion
 
   return (
-    <article id={`testimonio-${NAME_PERSON_TESTIMONY}`} className={TESTIMONIAL_UI.ARTICLE_CLASSNAME} key={TESTIMONY_ID}>
-      <p id={`testimonio-parrafo-${NAME_PERSON_TESTIMONY}`} className={TESTIMONIAL_UI.PARAGRAPH_CLASSNAME}>{TESTIMONY}</p>
+    <article id={`testimonio-${PERSON_NAME_TESTIMONY}`} className={TESTIMONIAL_UI.ARTICLE_CLASSNAME} key={TESTIMONY_ID}>
+      {/* Testimonio */}
+      <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className={TESTIMONIAL_UI.PARAGRAPH_CLASSNAME}>{TESTIMONY}</p>
+      {/* Testimonio */}
+
+      {/* Nombre & Estrella */}
       <div id={`contenedor-testimonio-${TESTIMONY_ID}`} className={TESTIMONIAL_UI.CONTAINER_CLASSNAME}>
-        <h3 className={TESTIMONIAL_UI.NAME_CLASSNAME}>{NAME_PERSON_TESTIMONY}</h3>
+        <h3 className={TESTIMONIAL_UI.NAME_CLASSNAME}>{PERSON_NAME_TESTIMONY}</h3>
         <div id={`contenedor-nombre_estrella-${TESTIMONY_ID}`} className={TESTIMONIAL_UI.NUMBER_STAR_CONTAINER_CLASSNAME}>
           <div className='flex gap-2 text-secondary justify-center items-center'>
             {testimonio.estrellas.map((estrella) => (
@@ -34,6 +38,7 @@ const Testimonio = ({ testimonio }) => {
           </div>
         </div>
       </div>
+      {/* Nombre & Estrella */}
     </article>
   )
 }
