@@ -49,7 +49,7 @@ const PreguntasFrecuentes = () => {
           {/* Title */}
           <div className=''>
             {/* Questions */}
-            <ul className="grid sm:grid-cols-2 gap-4">
+            <ul className="grid sm:grid-cols-2 gap-8">
               {franquiciaDescripciones.map(description => {
                 return (
                   <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">
@@ -96,8 +96,8 @@ const PreguntasFrecuentes = () => {
           </div>
         </div>
         <ButtonContainer position={'items-center sm:justify-center my-8'}>
-          <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} />
-          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} />
+          <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
+          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} name='Ir a Contacto' />
         </ButtonContainer>
       </PageLayout >
       {showModal && (

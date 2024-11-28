@@ -20,11 +20,11 @@ const Accordion = ({ description, title, height }) => {
   };
 
   const styles = {
-    width: 'w-full lg:w-[410px] 2xl:w-[480px] h-[120px]',
+    width: 'w-full lg:w-[360px] 2xl:w-[480px] h-[120px]',
   }
 
   return (
-    <div className='w-full rounded-lg'>
+    <div className='w-auto rounded-lg'>
       <button
         className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark items-center justify-start ${!active ? 'rounded-2xl border-2 border-primary' : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'} border-r-2 border-r-primary mx-auto`}
         onClick={() => handleToggle()}
