@@ -37,7 +37,7 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <ul className="w-full grid sm:grid-cols-2 gap-12">
+        <ul className="w-full grid sm:grid-cols-2 gap-8">
           {frequentQuestions.map(question => {
             return (
               <li key={question.id} id={`question-${question.id}`} className="text-dark">
