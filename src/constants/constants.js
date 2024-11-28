@@ -263,7 +263,7 @@ export const TESTIMONIALS_PROPS = {
 // Testimonio
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[420px] sm:h-[380px] w-auto border-neumorphism",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[420px] sm:h-[380px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-xl sm:text-2xl ",
   CONTAINER_CLASSNAME:
     "flex items-center gap-2 flex-col sm:flex-row sm:items-start",
@@ -296,7 +296,7 @@ export const SUCURSAL_CARD_UI = {
     JUSTIFY: "justify-between",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
-    SHADOW: "border-neumorphism",
+    SHADOW: "shadow-xl",
     WIDTH: "w-[260px] 2xl:w-[280px]",
   },
   IMAGE: {
