@@ -392,7 +392,7 @@ export const SERVICES_GENERATOR_UI = {
   UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center border-neumorphism p-12",
+      "flex flex-col gap-8 items-center justify-center border-neumorphism p-12 border-xl",
     DIV_VIDEO:
       "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3xl bg-light",
     DIV_TITLEH3: "mx-auto text-dark",
