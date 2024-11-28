@@ -1,3 +1,4 @@
+import PoliticaCookies from 'pages/politica-cookies/PoliticaCookies';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../node_modules/animate.css/animate.css';
@@ -29,6 +30,7 @@ export default function App() {
           <Route path='/contacto/' element={<ContactoPagina />} />
           <Route path='/sucursales/' element={<Sucursales />} />
           <Route path='/politica-privacidad/' element={<PoliticaPrivacidad />} />
+          <Route path='/politica-cookies/' element={<PoliticaCookies />} />
           <Route path='/franquicias/' element={<Franquicias />} />
           <Route path='/terminos-condiciones/' element={<TerminosCondiciones />} />
           <Route path='/preguntas-frecuentes/' element={<PreguntasFrecuentes />} />
