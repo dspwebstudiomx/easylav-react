@@ -17,17 +17,17 @@ const navLinksSections = [
   },
   {
     id: 2,
-    name: "Quienes Somos",
-    href: "/#nosotros",
-    icon: GrUser,
-    linkId: "Nosotros",
-  },
-  {
-    id: 3,
     name: "Servicios",
     href: "/#servicios",
     icon: GrCoatCheck,
     linkId: "servicios",
+  },
+  {
+    id: 3,
+    name: "Quienes Somos",
+    href: "/#nosotros",
+    icon: GrUser,
+    linkId: "Nosotros",
   },
 ];
 const navLinksPages = [

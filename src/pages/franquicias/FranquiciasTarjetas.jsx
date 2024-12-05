@@ -3,8 +3,8 @@ import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary,
 import { FRANQUICIAS_UI } from "constants/constants";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
 import { useState } from 'react';
-import { FaHome, FaInfoCircle } from "react-icons/fa";
-import { FaRegBuilding, FaXmark } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
+import { FaRegBuilding, FaRegEnvelope, FaXmark } from "react-icons/fa6";
 
 
 const PreguntasFrecuentes = () => {
@@ -63,13 +63,7 @@ const PreguntasFrecuentes = () => {
               })}
             </ul>
             <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}          >
-              <ButtonSecondary
-                title={"Solicita más información"}
-                width={"w-[240px]"}
-                onClick={handleModalToggle}
-                icon={<FaInfoCircle />}
-                distance=''
-              />
+              <ButtonSecondary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} name='ver sucursales' />
             </ButtonContainer>
             {/* Questions */}
 
@@ -97,7 +91,7 @@ const PreguntasFrecuentes = () => {
         </div>
         <ButtonContainer position={'items-center sm:justify-center my-8'}>
           <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
-          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} name='Ir a Contacto' />
+          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegEnvelope />} width={'min-w-[240px] sm:w-[140px]'} name='Ir a Contacto' />
         </ButtonContainer>
       </PageLayout >
       {showModal && (

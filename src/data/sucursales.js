@@ -1,8 +1,6 @@
-//! fotos de sucursal en lugar de mapas
-
 import { Placeholder, VistaLavanderiaDesdeEntrada_1_640, delta } from "assets";
 
-const localservices = [
+export const localservices = [
   {
     id: 1,
     title: "Pedregal",
@@ -199,4 +197,3 @@ const localservices = [
     closeMinute: 30,
   },
 ];
-export { localservices };

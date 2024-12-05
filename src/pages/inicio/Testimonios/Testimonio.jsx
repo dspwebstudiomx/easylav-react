@@ -31,7 +31,7 @@ const Testimonio = ({ testimonio }) => {
           <div className='flex gap-2 text-secondary justify-center items-center'>
             {testimonio.estrellas.map((estrella) => (
               <span key={estrella.id} className={TESTIMONIAL_UI.STARS_CONTAINER_CLASSNAME}>
-                {estrella.icon && <estrella.icon size={16} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
+                {estrella.icon && <estrella.icon size={12} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
               </span>
             ))}
             <h4 className={TESTIMONIAL_UI.QUALIFICATION_CLASSNAME}>{TESTIMONY_QUALIFICATION}</h4>

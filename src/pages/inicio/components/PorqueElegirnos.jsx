@@ -40,6 +40,7 @@ export default function PorqueElegirnos() {
               image_640={img}
               image_1024={img}
               image_1920={img}
+              width='320px'
             />
           </div>
         </article>

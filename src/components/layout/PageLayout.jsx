@@ -1,5 +1,5 @@
 // PageLayout.jsx
-import { Container, Footer, Header, Section, Spacing } from 'components';
+import { Container, Footer, Header, ScrollToTopButton, Section, Spacing } from 'components';
 import PropTypes from 'prop-types';
 
 const PageLayout = ({ children }) => {
@@ -15,6 +15,7 @@ const PageLayout = ({ children }) => {
         </Section>
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };

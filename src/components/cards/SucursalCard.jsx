@@ -33,7 +33,6 @@ const SucursalCard = ({
     data: `${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_WEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.LETTER_SPACING} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.JUSTIFY}`,
     image: `${SUCURSAL_CARD_UI.IMAGE.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH}`,
   }
-
   return (
     <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`} >
 
@@ -178,13 +177,15 @@ const SucursalCard = ({
       {/* Badge */}
 
       {/* Badge Horario Abierto/Cerrado */}
-      {isOpen  ? (
+      {isOpen &&
         <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
           <p className=''>Abierto</p>
         </div>
-      ) : <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
-        <p className=''>Cerrado</p>
-      </div>
+      }
+      {!isOpen &&
+        <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
+          <p className=''>Cerrado</p>
+        </div>
       }
       {/* Badge Horario Abierto/Cerrado */}
 

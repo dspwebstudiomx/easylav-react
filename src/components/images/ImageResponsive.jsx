@@ -20,7 +20,7 @@ const ImageResponsive = ({ ...props }) => {
       <img
         title={imageAlt}
         src={image_640}
-        className={`${className} object-cover object-center ${width} ${height}`}
+        className={`${className}  ${width} ${height}`}
         alt={imageAlt}
       />
     </picture>
