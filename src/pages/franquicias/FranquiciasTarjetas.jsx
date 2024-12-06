@@ -33,9 +33,9 @@ const PreguntasFrecuentes = () => {
       <PageLayout>
         <div className="flex flex-col sm:gap-12 gap-0">
           {/* Title */}
-          <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] lg:mb-0flex  flex-col gap-4">
-              <span className="mb-2 block text-lg font-semibold text-primary">
+          <div className="w-full px-4 sm:px-0">
+            <div className="mx-auto mb-[60px] lg:mb-0 flex  flex-col gap-4">
+              <span className="mb-2 block text-2xl font-semibold text-primary">
                 Franquicias
               </span>
               <BorderLeft>

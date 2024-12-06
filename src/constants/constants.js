@@ -86,7 +86,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-xl",
+    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl",
 };
 
 // Navbar
