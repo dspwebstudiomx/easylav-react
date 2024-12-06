@@ -53,10 +53,8 @@ const CarouselTestimonios = () => {
             <SwiperSlide key={testimonio.id}>
               <Testimonio testimonio={testimonio} />
             </SwiperSlide>
-
           )
           )}
-
         </Swiper>
       </div >
     </>

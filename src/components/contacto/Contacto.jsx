@@ -6,7 +6,7 @@ const Contacto = () => {
   return (
     <div
       id="contactDescription"
-      className="animate__slower grid items-center md:grid-cols-2 md:gap-12 xl:gap-12 w-full justify-center mx-auto"
+      className="animate__slower grid items-center md:grid-cols-2 md:gap-12 xl:gap-12 w-full sm:w-2/3 justify-center mx-auto"
     >
       <div className="animate__animated animate__bounceInLeft animate__slowest grid gap-0">
         <div className="2xl:w-3/4">

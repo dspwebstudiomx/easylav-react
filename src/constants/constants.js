@@ -58,7 +58,7 @@ export const GENERAL_UI = {
   },
   PARAGRAPH: {
     FONT_FAMILY: "font-din text-pretty",
-    FONT_SIZE: "text-lg sm:text-2xl mr-6 sm:mr-0",
+    FONT_SIZE: "text-base sm:text-base mr-6 sm:mr-0",
     COLOR: "text-dark dark:text-light",
     FONT_WEIGHT: "",
     LETTER_SPACING: "tracking-normal",
@@ -86,7 +86,7 @@ export const SECTION_UI = {
 // Container
 export const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg xl:max-w-screen-xl",
+    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-xl",
 };
 
 // Navbar
@@ -100,7 +100,7 @@ export const NAVBAR_UI = {
   CONTAINER: {
     DISPLAY: "flex justify-between items-center h-full w-full",
     MARGIN: "mx-auto",
-    PADDING: "px-8 sm:px-8 md:px-8 xl:px-16",
+    PADDING: "px-8 sm:px-8 md:px-8 xl:px-0",
   },
   NAVBAR: {
     DISPLAY: "flex items-center justify-between gap-4",
@@ -264,7 +264,7 @@ export const TESTIMONIALS_PROPS = {
 export const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
     "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[420px] sm:h-[380px] w-auto shadow-xl",
-  PARAGRAPH_CLASSNAME: "text-pretty text-xl sm:text-2xl ",
+  PARAGRAPH_CLASSNAME: "text-pretty text-lg sm:text-xl ",
   CONTAINER_CLASSNAME:
     "flex items-center gap-2 flex-col sm:flex-row sm:items-start",
   NAME_CLASSNAME: "font-semibold text-lg",
@@ -389,7 +389,7 @@ export const SERVICES_GENERATOR_PROPS = {
 };
 export const SERVICES_GENERATOR_UI = {
   DIV: "grid place-content-center gap-8 w-full",
-  UL: "grid sm:grid-cols-2 xl:grid-cols-3 gap-20",
+  UL: "grid sm:grid-cols-2 xl:grid-cols-4 gap-6",
   LI: {
     CLASSNAME:
       "flex flex-col gap-8 items-center justify-center border-neumorphism p-12 border-xl",
