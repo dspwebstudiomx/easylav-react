@@ -100,7 +100,7 @@ export const NAVBAR_UI = {
   CONTAINER: {
     DISPLAY: "flex justify-between items-center h-full w-full",
     MARGIN: "mx-auto",
-    PADDING: "px-8 sm:px-8 md:px-8 xl:px-0",
+    PADDING: "px-8 sm:px-8 md:px-8 xl:px-20 2xl:px-0",
   },
   NAVBAR: {
     DISPLAY: "flex items-center justify-between gap-4",
@@ -184,7 +184,7 @@ export const BUTTON_SECONDARY_UI = {
 
 // Hero Inicio
 export const HEROINICIO_UI = {
-  HEIGHT: "h-[600px] sm:h-[100vh] md:h-[40vh] lg:h-[70vh] 2xl:h-[75vh]",
+  HEIGHT: "h-[80vh] sm:h-[100vh] md:h-[500px] lg:h-[80vh] 2xl:h-[75vh]",
   THEME: "dark",
   BACKGROUND: {
     OPACITY: "opacity-90",
