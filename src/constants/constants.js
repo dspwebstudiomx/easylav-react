@@ -184,7 +184,8 @@ export const BUTTON_SECONDARY_UI = {
 
 // Hero Inicio
 export const HEROINICIO_UI = {
-  HEIGHT: "h-[80vh] sm:h-[100vh] md:h-[500px] lg:h-[80vh] 2xl:h-[75vh]",
+  HEIGHT:
+    "h-[80vh] sm:h-[100vh] md:h-[400px] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
   THEME: "dark",
   BACKGROUND: {
     OPACITY: "opacity-90",
@@ -196,7 +197,7 @@ export const HEROINICIO_UI = {
     PARAGRAPH: "hidden",
   },
   TITLE: {
-    FONT_SIZE: "text-2xl lg:text-3xl xl:text-4xl",
+    FONT_SIZE: "text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl",
     FONT_WEIGHT: "font-bold",
     FONT_FAMILY: "",
     LETTER_SPACING: "tracking-wider",
