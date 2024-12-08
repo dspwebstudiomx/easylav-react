@@ -1,5 +1,6 @@
 import { BorderBottom, Container, SucursalCard, TitleH2 } from 'components';
 import { localservices } from 'data';
+import isOpen from 'hooks/useGetServiceHour';
 import PropTypes from 'prop-types';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -79,6 +80,7 @@ const NuestrasSucursales = () => {
               closeHour={localservice.closeHour}
               openMinute={localservice.openMinute}
               closeMinute={localservice.closeMinute}
+              isOpen={isOpen}
             />
           </SwiperSlide>
         ))}

@@ -404,7 +404,7 @@ export default function ContactFacturacion() {
                   <div id='formField_payment' className="flex flex-col w-full">
                     <label htmlFor='user_payment' className="mb-2">Forma de Pago<span className='text-required ml-1'>*</span></label>
                     <Field as="select" name="user_payment" className='rounded-md bg-light text-dark bg-light px-4 p-2 border-2 border-secondary dark:border-primary outline-none' onChange={handlePaymentChange}>
-                      <option value="">Seleccione</option>
+                      <option value="" defaultValue={'Seleccione'}>Seleccione</option>
                       <option value="Efectivo">Efectivo</option>
                       <option value="Tarjeta Crédito">Tarjeta Crédito</option>
                       <option value="Tarjeta Débito">Tarjeta Débito</option>

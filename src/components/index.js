@@ -1,6 +1,7 @@
 export { default as Accordion } from "components/accordion/Accordion";
 export { default as Badge } from "components/badge/Badge";
 export { default as Banner } from "components/banner/Banner";
+export { default as SectionBanner } from "components/banner/SectionBanner";
 export { default as BorderBottom } from "components/borders/BorderBottom";
 export { default as BorderCenter } from "components/borders/BorderCenter";
 export { default as BorderLeft } from "components/borders/BorderLeft";

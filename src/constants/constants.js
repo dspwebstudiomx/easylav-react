@@ -40,7 +40,7 @@ export const GENERAL_UI = {
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-xl",
+    FONT_SIZE: "text-lg",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-primary_dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -389,17 +389,17 @@ export const SERVICES_GENERATOR_PROPS = {
   ID: "nuestros-servicios",
 };
 export const SERVICES_GENERATOR_UI = {
-  DIV: "grid place-content-center gap-8 w-full",
-  UL: "grid sm:grid-cols-2 xl:grid-cols-4 gap-6",
+  DIV: "w-full",
+  UL: "grid sm:grid-cols-2 xl:grid-cols-5 gap-6",
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center border-neumorphism p-12 border-xl",
+      "flex flex-col gap-8 items-center justify-center shadow-xl p-8 border-2 rounded-xl",
     DIV_VIDEO:
       "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3xl bg-light",
     DIV_TITLEH3: "mx-auto text-dark",
   },
   IMAGE: "p-2",
-  PARAGRAPH: "text-dark text-[16px] dark:text-light",
+  PARAGRAPH: "text-dark text-[15px] dark:text-light",
 };
 
 // Por que Elegirnos

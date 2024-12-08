@@ -27,8 +27,6 @@ const HeroInicio = () => {
         }
         loop
         rollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         className={`-z-10 ${HEROINICIO_UI.HEIGHT}`}
       >
         <SwiperSlide>

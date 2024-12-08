@@ -1,41 +1,48 @@
-/*
-  Loading
-  =====================================
-  Creado por : Daniel Pérez
-  Fecha: 2022-08-28
-*/
-
-// Importaciones
 import { Badge, TitleH4 } from 'components';
 import { SUCURSAL_CARD_UI } from 'constants/constants';
-import isOpen from 'hooks/useGetServiceHour';
 import PropTypes from 'prop-types';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
-// Estructura
+// Componente SucursalCard
 const SucursalCard = ({
   title,
   id,
   position,
-  serviceday1,
-  servicehour1,
   place,
   gmap,
   width,
   badge,
   advertisement,
   image,
+  serviceday1,
+  servicehour1,
+  openHour, // Prop para la hora de apertura
+  closeHour, // Prop para la hora de cierre
+  openMinute, // Prop para los minutos de apertura
+  closeMinute, // Prop para los minutos de cierre
 }) => {
+  // Calcular si la sucursal está abierta
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
+  const currentMinute = currentTime.getMinutes();
+
+  // Definimos el horario de servicio para la sucursal actual
+  const openTime = openHour * 60 + openMinute;
+  const closeTime = closeHour * 60 + closeMinute;
+  const currentTimeInMinutes = currentHour * 60 + currentMinute; // Convertir a minutos
+
+  // Comparamos la hora actual con el horario de servicio
+  const isOpen = currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
 
   const styles = {
     article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
     data: `${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_WEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.LETTER_SPACING} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.JUSTIFY}`,
     image: `${SUCURSAL_CARD_UI.IMAGE.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH}`,
-  }
-  return (
-    <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`} >
+  };
 
+  return (
+    <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`}>
       {/* Imagen Sucursal */}
       <div className={styles.image}>
         <div className='absolute bg-dark opacity-40 w-full h-[180px]'></div>
@@ -56,7 +63,6 @@ const SucursalCard = ({
             target='_blank'
             rel='noopener noreferrer'
             title={`sucursal ${title}`}
-            className=''
           >
             <div className='flex gap-4'>
               <span className='text-secondary'>
@@ -66,6 +72,7 @@ const SucursalCard = ({
             </div>
           </a>
           {/* Dirección */}
+
           {/* Horario */}
           <div className='mx-auto mb-2 flex w-full items-center gap-4'>
             <span className='text-secondary'>
@@ -83,24 +90,29 @@ const SucursalCard = ({
       </div>
       {/* Contenido */}
 
+      {/* Badge Horario Abierto/Cerrado */}
+      {isOpen ? (
+        <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
+          <p className=''>Abierto</p>
+        </div>
+      ) : (
+        <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
+          <p className=''>Cerrado</p>
+        </div>
+      )}
+
+      {/* Badge Aviso */}
+      {advertisement && (
+        <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light dark:border-primary_dark dark:bg-primary flex items-center text-sm'>
+          <p className='ml-8 '>{advertisement}</p>
+        </div>
+      )}
+      {/* Badge Aviso */}
+
       {/* Badge */}
       <section>
         {!badge && (
           <div className='w-full'>
-            {/* Enviar Correo */}
-            {/* <a
-              href={`mailto:${email}`}
-              title={titleMailto}
-              type={'button'}
-              className='flex w-full items-center justify-center gap-3 text-base'
-            >
-              <Badge flexDirection='flex-row' backgroundColor='bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary sm:hover:bg-secondary dark:bg-primary dark:hover:bg-primary_dark'>
-                <FaEnvelope size={24} />
-                <span className=''>Enviar correo</span>
-              </Badge>
-            </a> */}
-            {/* Enviar Correo */}
-
             <div className='flex md:hidden'>
               {/* Waze */}
               <a
@@ -147,7 +159,6 @@ const SucursalCard = ({
                 rel='noopener noreferrer'
                 title={`Ir a ${title} en Waze`}
                 className='flex w-auto w-full flex-col items-center justify-center gap-2 bg-secondary text-sm'
-
               >
                 <Badge flexDirection='flex-col' backgroundColor=''>
                   <FaWaze size={24} />
@@ -175,44 +186,26 @@ const SucursalCard = ({
         )}
       </section>
       {/* Badge */}
-
-      {/* Badge Horario Abierto/Cerrado */}
-      {isOpen &&
-        <div className='absolute right-3 top-3 rounded-lg border-2 border-primary bg-primary_dark px-4 py-2 text-light dark:bg-secondary_light dark:border-secondary text-sm'>
-          <p className=''>Abierto</p>
-        </div>
-      }
-      {!isOpen &&
-        <div className='absolute right-3 top-3 rounded-lg border-2 border-red_dark bg-red_light px-4 py-2 text-red_dark text-sm'>
-          <p className=''>Cerrado</p>
-        </div>
-      }
-      {/* Badge Horario Abierto/Cerrado */}
-
-      {/* Badge Aviso */}
-      {advertisement && (
-        <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light dark:border-primary_dark dark:bg-primary flex items-center text-sm'>
-          <p className='ml-8 '>{advertisement}</p>
-        </div>
-      )}
-      {/* Badge Aviso */}
     </article>
   );
 }
+
 SucursalCard.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
   width: PropTypes.string,
   position: PropTypes.object,
   gmap: PropTypes.string,
-  serviceday1: PropTypes.string,
-  servicehour1: PropTypes.string,
-  email: PropTypes.string,
+  openHour: PropTypes.number,
+  closeHour: PropTypes.number,
+  openMinute: PropTypes.number,
+  closeMinute: PropTypes.number,
   place: PropTypes.string,
-  titleMailto: PropTypes.string,
   badge: PropTypes.string,
   advertisement: PropTypes.string,
+  serviceday1: PropTypes.string,
+  servicehour1: PropTypes.string,
   image: PropTypes.string,
 };
 
-export default SucursalCard
+export default SucursalCard;

@@ -2,7 +2,7 @@
 
 //Importaciones
 import { canastaderopa_640 } from 'assets';
-import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SEOFriendly } from 'components';
+import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SectionBanner, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import CarouselTestimonios from './Testimonios/CarouselTestimonios';
 import HeroInicio from './components/HeroInicio';
@@ -45,6 +45,9 @@ const Inicio = () => (
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
       <HeroInicio />
+      <SectionBanner themeColor='primary' themeColorDark='secondary'>
+        Nueva Sucursal - Iretiticateme
+      </SectionBanner>
       <NuestrosServicios />
       <PorqueElegirnos />
       <SobreNosotros />
