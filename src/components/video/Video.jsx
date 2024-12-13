@@ -2,8 +2,9 @@ import PropType from 'prop-types'
 
 const Video = ({ src, type, title }) => {
   return (
-    <video src={src} type={type} autoPlay loop width={210}
-      title={title}></video>
+    <div className='2xl:w-2/3 grid place-items-center h-full'>
+      <video src={src} type={type} autoPlay loop muted title={title}></video>
+    </div>
   )
 }
 Video.propTypes = {

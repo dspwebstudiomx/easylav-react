@@ -6,17 +6,17 @@
 */
 
 // Importaciones
-import { VistaLavadorasySecadorasConDosMesas_640 as img } from 'assets';
-import { BackgroundImageSection, BorderLeft, Container, Paragraph, Section, TitleH2 } from 'components';
+import video from 'assets/video/video1.mp4';
+import { BorderLeft, Container, Paragraph, Section, TitleH2 } from 'components';
+import Video from 'components/video/Video';
 import { ABOUT_PROPS, ABOUT_UI } from 'constants/constants';
-
 // Estructura
 const SobreNosotros = () => {
 
-  const theme = 'dark'
-  const backgroundOpacity = 'opacity-0'
-  const backgroundColor = `bg-${theme}`
-  const imageDisplay = 'block'
+  // const theme = 'dark'
+  // const backgroundOpacity = 'opacity-0'
+  // const backgroundColor = `bg-${theme}`
+  // const imageDisplay = 'block'
 
   return (
     <Section
@@ -55,7 +55,8 @@ const SobreNosotros = () => {
               image_1920={img}
             /> */}
             {/* <LottieAnimationImage lottieImage={lottieImage} /> */}
-            <BackgroundImageSection height="h-[240px] sm:h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={img} image_1200={img} image_576={img} image_1920={img} />
+            {/* <BackgroundImageSection height="h-[240px] sm:h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={img} image_1200={img} image_576={img} image_1920={img} /> */}
+            <Video src={video} type='video/mp4' title='sucursal' width={420} />
           </div>
         </div>
       </Container>

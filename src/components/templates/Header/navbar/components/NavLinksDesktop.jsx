@@ -6,7 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksDesktop = () => {
   const classes =
-    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light last:text-primary_dark dark:text-light dark:last:text-secondary dark:hover:text-primary";
+    "uppercase font-semibold text-sm text-dark text-bolder hover:text-secondary_light last:text-primary_dark dark:text-light dark:last:text-secondary dark:hover:text-primary active:text-primary";
 
   return (
     <>
@@ -18,10 +18,12 @@ const NavLinksDesktop = () => {
           return (
             <NavHashLink
               key={navlink.id}
-              id={`navlink-${navlink.name}`}
+              id={`navlink ${navlink.name}`}
               className={classes}
               to={navlink.href}
               scroll={scrollWithOffset}
+              title={`navlink ${navlink.linkId}`}
+
             >
               {navlink.name}
             </NavHashLink>
@@ -34,12 +36,17 @@ const NavLinksDesktop = () => {
               id={`navlink-${navlink.name}`}
               className={classes}
               to={navlink.href}
+              style={({ isActive }) => ({
+                color: isActive ? "text-primary" : "black",
+              })}
+              title={`navlink ${navlink.linkId}`}
+
             >
               {navlink.name}
             </NavLink>
           );
         })}
-      </ul>
+      </ul >
     </>
   );
 };

@@ -4,16 +4,16 @@
 import { canastaderopa_640 } from 'assets';
 import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SectionBanner, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
-import CarouselTestimonios from './Testimonios/CarouselTestimonios';
-import HeroInicio from './components/HeroInicio';
-import QuieresUnaFranquicia from './franquicias/QuieresUnaFranquicia';
+import { Link } from 'react-router-dom';
 // const HeroInicio = lazy(() => import('./components/HeroInicio'));
-const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
+const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
 const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
+const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
+const QuieresUnaFranquicia = lazy(() => import('./franquicias/QuieresUnaFranquicia'));
+const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
-// const CarouselPromociones = lazy(() => import('./Testimonios/CarouselTestimonios'));
 
 //Constantes de estilos - TailwindCSS
 const SECTION_BACKGROUNDCOLOR_CLASSNAME = 'dark:bg-dark'
@@ -44,9 +44,13 @@ const Inicio = () => (
         ogImage={OG_IMAGE}
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
-      <HeroInicio />
+      {/* <HeroInicio /> */}
+      <HeroInicioVideo />
       <SectionBanner themeColor='primary' themeColorDark='secondary'>
-        Nueva Sucursal - Iretiticateme
+        <Link to="/sucursales/morelia/#sucursal-Iretiticateme">
+          <span className='block text-base'>Nueva sucursal</span>
+          <span className='block text-2xl'>Iretiticateme</span>
+        </Link>
       </SectionBanner>
       <NuestrosServicios />
       <PorqueElegirnos />

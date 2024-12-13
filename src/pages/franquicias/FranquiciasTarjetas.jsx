@@ -1,13 +1,15 @@
+//! Colocar imagen en el formulario de contacto
+
 import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, SEOFriendly, Spacing, TitleH1 } from "components";
 import { FRANQUICIAS_UI } from "constants/constants";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
 import { useState } from 'react';
-import { FaHome } from "react-icons/fa";
-import { FaRegBuilding, FaRegEnvelope, FaXmark } from "react-icons/fa6";
+import { FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaRegBuilding, FaXmark } from "react-icons/fa6";
 
 
-const PreguntasFrecuentes = () => {
+const FranquiciasTarjetas = () => {
 
   const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
 
@@ -91,7 +93,12 @@ const PreguntasFrecuentes = () => {
         </div>
         <ButtonContainer position={'items-center sm:justify-center my-8'}>
           <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
-          <ButtonSecondary href={'/contacto'} title={'Ir a contacto'} icon={<FaRegEnvelope />} width={'min-w-[240px] sm:w-[140px]'} name='Ir a Contacto' />
+          <ButtonSecondary title={"Solicita más información"}
+            width={"w-[340px]"}
+            onClick={handleModalToggle}
+            icon={<FaInfoCircle />}
+            distance='mx-1' />
+
         </ButtonContainer>
       </PageLayout >
       {showModal && (
@@ -114,5 +121,5 @@ const PreguntasFrecuentes = () => {
     </>
   );
 };
-export default PreguntasFrecuentes;
+export default FranquiciasTarjetas;
 

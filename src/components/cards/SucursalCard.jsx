@@ -38,15 +38,15 @@ const SucursalCard = ({
   const styles = {
     article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
     data: `${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_WEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.LETTER_SPACING} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT} ${SUCURSAL_CARD_UI.PARAGRAPH.JUSTIFY}`,
-    image: `${SUCURSAL_CARD_UI.IMAGE.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH}`,
+    image: `${SUCURSAL_CARD_UI.IMAGE.CONTAINER.HEIGHT} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH} w-full`,
   };
 
   return (
     <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`}>
       {/* Imagen Sucursal */}
       <div className={styles.image}>
-        <div className='absolute bg-dark opacity-40 w-full h-[180px]'></div>
-        <img src={image} alt={title} className='-z-10 w-full h-[180px] object-cover object-center' />
+        <div className='absolute bg-dark opacity-40 h-[180px]'></div>
+        <img src={image} alt={`sucursal ${title}`} title={`sucursal ${title}`} className='-z-10 w-full h-[180px] object-cover object-center' />
       </div>
       {/* Imagen Sucursal */}
 

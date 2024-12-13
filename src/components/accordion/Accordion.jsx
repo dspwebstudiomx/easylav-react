@@ -20,7 +20,7 @@ const Accordion = ({ description, title, height }) => {
   };
 
   const styles = {
-    width: 'w-full lg:w-[360px] 2xl:w-[480px] h-[120px]',
+    width: 'w-full lg:w-[360px] 2xl:w-full h-[140px]',
   }
 
   return (
@@ -49,16 +49,16 @@ const Accordion = ({ description, title, height }) => {
         {/*  svg icon */}
 
         {/* title */}
-        <h4 className='text-lg xl:text-xl font-semibold text-dark dark:text-white'>
+        <h4 className='text-lg xl:text-lg font-semibold text-dark dark:text-white'>
           {title}
         </h4>
         {/* title */}
 
       </button>
 
-      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-[280px]' : 'hidden'}`}
+      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-[260px]' : 'hidden'}`}
       >
-        <p className={`${GENERAL_UI.PARAGRAPH} py-8  dark:text-dark-6 w-full pr-8`}>
+        <p className={`${GENERAL_UI.PARAGRAPH} pt-8  dark:text-dark-6 w-full px-8 pb-4`}>
           {description}
         </p>
       </div>

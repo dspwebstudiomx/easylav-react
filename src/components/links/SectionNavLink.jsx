@@ -6,10 +6,12 @@ const SectionNavLink = ({ id, name, href, scroll, classes }) => {
   return (
     <NavHashLink
       key={id}
-      id={`navlink-${name}`}
+      id={`navlink ${name}`}
       className={classes}
       to={href}
       scroll={scroll}
+      title={`navlink ${name}`}
+
     >
       {name}
     </NavHashLink>

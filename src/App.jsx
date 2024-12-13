@@ -8,7 +8,7 @@ import Loading from "./components/Loading";
 const Inicio = lazy(() => import("pages/inicio/Inicio"));
 const Sucursales = lazy(() => import("pages/sucursales/Sucursales"));
 const ContactoPagina = lazy(() => import("pages/contacto/ContactoPagina"));
-const Franquicias = lazy(() => import("pages/franquicias/FranquiciasTarjetas"));
+const FranquiciasTarjetas = lazy(() => import("pages/franquicias/FranquiciasTarjetas"));
 const GuiaEstilos = lazy(() => import("pages/guia-estilos/GuiaEstilos"));
 const NotFound = lazy(() => import("pages/404/NotFound"));
 const Test = lazy(() => import("pages/test/Test"));
@@ -31,7 +31,7 @@ export default function App() {
           <Route path='/sucursales/' element={<Sucursales />} />
           <Route path='/politica-privacidad/' element={<PoliticaPrivacidad />} />
           <Route path='/politica-cookies/' element={<PoliticaCookies />} />
-          <Route path='/franquicias/' element={<Franquicias />} />
+          <Route path='/franquicias/' element={<FranquiciasTarjetas />} />
           <Route path='/terminos-condiciones/' element={<TerminosCondiciones />} />
           <Route path='/preguntas-frecuentes/' element={<PreguntasFrecuentes />} />
           <Route path='/facturacion/' element={<Facturacion />} />

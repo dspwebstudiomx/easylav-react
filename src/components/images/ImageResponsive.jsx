@@ -30,7 +30,7 @@ ImageResponsive.propTypes = {
   image_640: PropTypes.string.isRequired,
   image_1024: PropTypes.string,
   image_1920: PropTypes.string,
-  width: PropTypes.string,
+  width: PropTypes.any,
   height: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
   className: PropTypes.string

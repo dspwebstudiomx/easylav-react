@@ -25,6 +25,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                 className="flex h-full w-full flex-col items-center justify-center gap-4 py-2"
                 onClick={onLinkClick}
                 scroll={(el) => scrollWithOffset(el)}
+                title={`link-${navlink.linkId}`}
               >
                 <div className="flex items-center justify-center">
                   {navlink.icon && (
@@ -52,6 +53,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                 scroll={
                   (el) => scrollWithOffset(el)
                 }
+                title={`link-${navlink.linkId}`}
               >
                 <div className="flex items-center justify-center">
                   {navlink.icon && (

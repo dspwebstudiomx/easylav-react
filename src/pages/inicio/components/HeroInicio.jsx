@@ -1,3 +1,5 @@
+//! Crear componente con video de fondo
+
 import { HeroInicioImage1_1024x500, HeroInicioImage1_1920x500, HeroInicioImage1_478x600, VistaLavadorasySecadorasConDosMesas_640, VistaLavanderiaDesdeEntrada_2_640 } from 'assets'
 import { ButtonContainer, ButtonPrimary, Container, ImageResponsive } from 'components'
 import { HEROINICIO_UI } from 'constants/constants'

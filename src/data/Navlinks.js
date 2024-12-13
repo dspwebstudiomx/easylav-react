@@ -57,21 +57,33 @@ const navLinksPages = [
 const linksServicios = [
   {
     id: 1,
-    name: "Lavado Regular",
-    href: "/#lavado-regular",
-    linkId: "lavado-regular",
+    name: "Lavado",
+    href: "/#lavado",
+    linkId: "lavado",
   },
   {
     id: 2,
-    name: "Lavado Especial",
-    href: "/#lavado-especializado",
-    linkId: "lavado-especializado",
+    name: "Secado",
+    href: "/#secado",
+    linkId: "Secado",
   },
   {
     id: 3,
-    name: "Planchado y Doblez",
-    href: "/#planchado-y-doblez",
-    linkId: "planchado-y-doblez",
+    name: "Encargo",
+    href: "/#por-encargo",
+    linkId: "Encargo",
+  },
+  {
+    id: 4,
+    name: "Plegado",
+    href: "/#plegado",
+    linkId: "Plegado",
+  },
+  {
+    id: 5,
+    name: "Tintorería",
+    href: "/#tintoreria",
+    linkId: "Tintoreria",
   },
 ];
 

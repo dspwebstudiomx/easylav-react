@@ -19,7 +19,7 @@ const PreguntasFrecuentes = () => {
   const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
   return (
     <PageLayout>
-      <div className="flex flex-col sm:gap-12">
+      <div className="flex flex-col sm:gap-0">
         {/* Title */}
         <div className="w-full px-4">
           <div className="mx-auto mb-[60px] lg:mb-20 flex  flex-col gap-4">
@@ -27,7 +27,7 @@ const PreguntasFrecuentes = () => {
               Preguntas Frecuentes
             </span>
             <BorderLeft>
-              <TitleH1 className={styles} textColor="text-dark dark:text-light">
+              <TitleH1 className={styles} textColor="text-dark dark:text-light" align="items-left">
                 Tienes alguna duda?
               </TitleH1>
             </BorderLeft>
@@ -37,7 +37,7 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <ul className="w-full grid sm:grid-cols-2 gap-8">
+        <ul className="w-full grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
           {frequentQuestions.map(question => {
             return (
               <li key={question.id} id={`question-${question.id}`} className="text-dark">

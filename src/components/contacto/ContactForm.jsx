@@ -179,7 +179,7 @@ export default function ContactForm() {
                 type="text"
                 name="message"
                 id="message"
-                className="rounded-md bg-light text-slate-900 bg-slate-200 p-2 border-2  border-secondary dark:border-primary h-40 max-h-20 min-h-20 lg:min-h-40 lg:max-h-40 2xl:max-h-28 2xl:min-h-28 outline-none"
+                className="rounded-md bg-light text-slate-900 bg-slate-200 p-2 border-2  border-secondary dark:border-primary h-40 min-h-40 max-h-40 2xl:max-h-28 2xl:min-h-28 outline-none"
                 required
               />
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}

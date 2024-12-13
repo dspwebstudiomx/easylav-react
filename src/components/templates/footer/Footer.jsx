@@ -6,7 +6,7 @@ import FooterLogoWithSocial from "./FooterLogoWithSocial";
 export default function Footer() {
   const classes = {
     container:
-      "mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4 bg-secondary_dark gap-8",
+      "mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 bg-secondary_dark gap-8",
     footerSections: "flex flex-col",
     footerSectionsList: "flex flex-col gap-0",
     footerSectionsTitle:
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Footer Sections */}
 
           {/* Footer Services */}
-          <div id="footer-services" className="flex flex-col md:hidden">
+          <div id="footer-services" className="flex flex-col">
             <h3 className={classes.footerSectionsTitle}>
               Servicios
             </h3>

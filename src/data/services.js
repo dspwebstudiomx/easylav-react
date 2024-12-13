@@ -10,19 +10,19 @@ export const services = [
   {
     id: 1,
     title: "Lavado",
+    idLink: "lavado",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam.",
     image: Lavadero,
-    idLink: "lavado",
     alt: "lavadora trabajando",
   },
   {
     id: 2,
     title: "Secado",
+    idLink: "secado",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam.",
     image: LavadoraInteligente,
-    idLink: "lavado-especializado",
     alt: "playera lavandose a mano",
   },
   {
@@ -31,7 +31,7 @@ export const services = [
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam.",
     image: PilaToallas,
-    idLink: "plegado",
+    idLink: "por-encargo",
     alt: "plegado de toallas",
   },
   {
@@ -49,7 +49,7 @@ export const services = [
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi aliquid nulla et distinctio ad, enim quis omnis expedita molestiae architecto magnam.",
     image: Planchar,
-    idLink: "planchado-y-doblez",
+    idLink: "tintoreria",
     alt: "plancha sacando vapor",
   },
 ];
