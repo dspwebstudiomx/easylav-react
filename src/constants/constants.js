@@ -238,7 +238,7 @@ export const ABOUT_UI = {
   CONTAINER: "mx-auto",
   TWOCOLUMNS_CONTAINER: "grid gap-x-20 gap-y-16 sm:grid-cols-2 sm:gap-20",
   COLUMN1_CONTAINER: "grid place-content-center gap-8",
-  COLUMN2_CONTAINER: "flex justify-end bg-red_light",
+  COLUMN2_CONTAINER: "flex justify-end",
   SPAN: "font-semibold text-secondary dark:text-primary ml-2",
 };
 export const ABOUT_PROPS = {
@@ -345,7 +345,7 @@ export const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-2",
   },
   COLUMNA_2: {
-    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-y-12",
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-12",
     HEIGHT: "lg:h-auto md:h-[500px]",
     MARGIN: "mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto",
     PADDING: "p-0",

@@ -43,7 +43,7 @@ const Franquicias = () => {
           <div id={FRANQUICIAS_PROPS.COLUMNA_1.ID} className={FRANQUICIAS_UI.COLUMNA_1.DISPLAY}>
             <BorderLeft>
               <TitleH1 className={''}>
-                Quieres una franquicia?
+                Quieres una franquicia
               </TitleH1>
             </BorderLeft>
             <ul id={FRANQUICIAS_PROPS.COLUMNA_1.UL} className={`${FRANQUICIAS_UI.UL.DISPLAY} text-`}>

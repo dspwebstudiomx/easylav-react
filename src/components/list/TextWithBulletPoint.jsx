@@ -5,15 +5,15 @@ export default function TextWithBulletPoint({ ...props }) {
   const { id, texto, titulo } = props
 
   return (
-    <li className="flex w-full" id={`descripcion-${id}`} key={id} >
+    <li className="flex w-full items-center" id={`descripcion-${id}`} key={id} >
       <div className="w-[32px]">
         <TbPoint className='text-primary text-4xl' />
       </div>
-      <div className='flex flex-col gap-6 bg-red_light'>
+      <div className=''>
         <span className=''>
           {titulo}
         </span>
-        <span className=''>
+        <span className='text-dark'>
           {texto}
         </span>
 

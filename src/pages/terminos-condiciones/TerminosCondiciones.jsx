@@ -6,8 +6,8 @@
 */
 
 import { CatedralMorelia } from "assets";
-import { BorderLeft, PageLayout, SEOFriendly, TitleH1 } from "components";
-import { FRANQUICIAS_PROPS, FRANQUICIAS_UI } from "constants/constants";
+import { BorderLeft, PageLayout, SEOFriendly, TextWithBulletPoint, TitleH1 } from "components";
+import { FRANQUICIAS_PROPS } from "constants/constants";
 
 
 
@@ -26,16 +26,15 @@ const Franquicias = () => {
         ogType="website"
       />
       <PageLayout>
-        <div className={FRANQUICIAS_UI.CONTAINER.DISPLAY} id={FRANQUICIAS_PROPS.CONTAINER.ID}>
+        <div className={'flex flex-col gap-8'} id={FRANQUICIAS_PROPS.CONTAINER.ID}>
+          <BorderLeft>
+            <TitleH1 className={''}>
+              Terminos y Condiciones
+            </TitleH1>
+          </BorderLeft>
           {/* Columna 1 */}
           <div id='terminos-condiciones' className={''}>
-            <BorderLeft>
-              <TitleH1 className={''}>
-                Quieres una franquicia?
-              </TitleH1>
-            </BorderLeft>
-
-
+            <TextWithBulletPoint texto={'lorem'} />
           </div>
           {/* Columna 1 */}
         </div>
