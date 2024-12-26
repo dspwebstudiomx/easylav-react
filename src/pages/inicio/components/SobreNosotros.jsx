@@ -45,7 +45,7 @@ const SobreNosotros = () => {
               ropa merece lo mejor.
             </Paragraph>
           </div>
-          <div id='sobrenosotros-columna-2' className={ABOUT_UI.COLUMNS2_CONTAINER}>
+          <div id='sobrenosotros-columna-2' className={ABOUT_UI.COLUMN2_CONTAINER}>
             {/* <ImageResponsive
               src={img}
               // className={'shadow-image'}
@@ -56,7 +56,7 @@ const SobreNosotros = () => {
             /> */}
             {/* <LottieAnimationImage lottieImage={lottieImage} /> */}
             {/* <BackgroundImageSection height="h-[240px] sm:h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={img} image_1200={img} image_576={img} image_1920={img} /> */}
-            <Video src={video} type='video/mp4' title='sucursal' width={420} className='shadow-image' />
+            <Video size={320} src={video} type='video/mp4' title='sucursal' className='shadow-image' />
           </div>
         </div>
       </Container>

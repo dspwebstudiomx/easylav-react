@@ -236,9 +236,9 @@ export const ABOUT_UI = {
   HEIGHT: "h-auto",
   SECTION: "",
   CONTAINER: "mx-auto",
-  TWOCOLUMNS_CONTAINER: "grid gap-x-20 gap-y-16 sm:grid-cols-2",
+  TWOCOLUMNS_CONTAINER: "grid gap-x-20 gap-y-16 sm:grid-cols-2 sm:gap-20",
   COLUMN1_CONTAINER: "grid place-content-center gap-8",
-  COLUMN2_CONTAINER: "items-center justify-end",
+  COLUMN2_CONTAINER: "flex justify-end bg-red_light",
   SPAN: "font-semibold text-secondary dark:text-primary ml-2",
 };
 export const ABOUT_PROPS = {
