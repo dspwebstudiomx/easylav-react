@@ -3,8 +3,9 @@
 //Importaciones
 import { canastaderopa_640 } from 'assets';
 import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SectionBanner, SEOFriendly } from 'components';
+import { scrollWithOffset } from 'functions';
 import { lazy, Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 // const HeroInicio = lazy(() => import('./components/HeroInicio'));
 const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
@@ -47,10 +48,15 @@ const Inicio = () => (
       {/* <HeroInicio /> */}
       <HeroInicioVideo />
       <SectionBanner themeColor='primary' themeColorDark='secondary'>
-        <Link to="/sucursales/morelia/#sucursal-Iretiticateme">
+        <NavHashLink
+          id={'navlink-to-iretiticateme'}
+          to={'/sucursales/morelia/#sucursal-Iretiticateme'}
+          scroll={scrollWithOffset}
+          title={`navlink-to-iretiticateme`}
+        >
           <span className='block text-base'>Nueva sucursal</span>
           <span className='block text-2xl'>Iretiticateme</span>
-        </Link>
+        </NavHashLink>
       </SectionBanner>
       <NuestrosServicios />
       <PorqueElegirnos />
