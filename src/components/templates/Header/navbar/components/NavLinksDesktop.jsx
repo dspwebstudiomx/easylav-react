@@ -6,7 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksDesktop = () => {
   const classes =
-    "uppercase font-semibold text-base text-dark text-bolder hover:text-secondary_light last:text-primary_dark dark:text-light dark:last:text-secondary dark:hover:text-primary active:text-primary";
+    "uppercase font-semibold text-base text-dark text-bolder hover:text-secondary_light last:text-primary_dark dark:text-light dark:last:text-secondary dark:hover:text-primary target:text-primary target:dark:text-light";
 
   return (
     <>
@@ -36,9 +36,6 @@ const NavLinksDesktop = () => {
               id={`navlink-${navlink.name}`}
               className={classes}
               to={navlink.href}
-              style={({ isActive }) => ({
-                color: isActive ? "text-primary" : "black",
-              })}
               title={`navlink ${navlink.linkId}`}
 
             >

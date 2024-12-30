@@ -26,12 +26,14 @@ const Contacto = () => {
           </span>
           <span className="">con las preguntas mas solicitadas.</span>
         </Paragraph>
+        <Spacing distance='h-4' />
         <Paragraph>
           Si gustas enviar felicitaciones y/o sugerencias no dudes en escribirnos a
           <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
             <Link to="mailto:atnclientes@easylav.mx">Atencion a clientes</Link>
           </span>.
         </Paragraph>
+        <Spacing distance='h-4' />
         <Paragraph>
           Si requieres solicitar una factura puedes visitar nuestra sección
           <span className="ml-2 font-semibold italic text-secondary dark:text-primary">

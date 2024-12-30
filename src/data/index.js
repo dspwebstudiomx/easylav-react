@@ -8,6 +8,7 @@ export {
   navLinksPages,
   navLinksSections,
 } from "data/navlinks";
+export { paquetesFranquicias } from "data/paquetesFranquicias";
 export { porqueElegirnosDescripciones } from "data/porqueElegirnosDescripciones";
 export { routes } from "data/routes";
 export { services } from "data/services";

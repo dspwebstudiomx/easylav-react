@@ -3,9 +3,9 @@
 import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, ImageResponsive, Modal, PageLayout, SEOFriendly, Spacing, TitleH1 } from "components";
 import { FRANQUICIAS_UI } from "constants/constants";
-import { franquiciaDescripciones, franquiciasImagenes } from "data";
+import { franquiciaDescripciones, franquiciasImagenes, paquetesFranquicias } from "data";
 import { useState } from 'react';
-import { FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaCheck, FaHome, FaInfoCircle } from "react-icons/fa";
 import { FaRegBuilding, FaXmark } from "react-icons/fa6";
 
 
@@ -20,6 +20,7 @@ const FranquiciasTarjetas = () => {
     document.body.style.overflow = !showModal && "hidden";
   };
 
+
   return (
     <>
       <SEOFriendly
@@ -33,6 +34,8 @@ const FranquiciasTarjetas = () => {
         ogType="website"
       />
       <PageLayout>
+
+        {/* Contenido */}
         <div className="flex flex-col sm:gap-12 gap-0">
           {/* Title */}
           <div className="w-full px-4 sm:px-0">
@@ -90,17 +93,99 @@ const FranquiciasTarjetas = () => {
               }
             </div>
           </div>
-        </div>
-        <ButtonContainer position={'items-center sm:justify-center my-8'}>
-          <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
-          <ButtonSecondary title={"Solicita más información"}
-            width={"w-[340px]"}
-            onClick={handleModalToggle}
-            icon={<FaInfoCircle />}
-            distance='mx-1' />
+          <ButtonContainer position={'items-center sm:justify-center my-8'}>
+            <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
+            <ButtonSecondary title={"Solicita más información"}
+              width={"w-[340px]"}
+              onClick={handleModalToggle}
+              icon={<FaInfoCircle />}
+              distance='mx-1' />
 
-        </ButtonContainer>
+          </ButtonContainer>
+        </div>
+        {/* Contenido */}
+
       </PageLayout >
+      {/* Test */}
+      <section className="bg-secondary_dark text-light">
+        <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-2xl lg:items-center">
+          <div className="mx-auto text-center">
+            <h1
+              className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
+            >
+              <span className="sm:block">  ¿Estás interesado en adquirir una franquicia?</span>
+            </h1>
+
+            <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
+              numquam ea!
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                href="#"
+              >
+                Get Started
+              </a>
+
+              <a
+                className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+                href="#"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-12 sm:px-6 sm:py-12 lg:px-8 lg:py-16 mx-auto bg-light text-dark">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 xl:grid-cols-4 md:gap-8 max-w-screen-2xl mx-auto">
+
+          {paquetesFranquicias.map(paquete => {
+            return (
+              <li key={paquete.id} className="divide-y divide-secondary_dark rounded-2xl border-primary_dark border-4 shadow-2xl">
+
+                {/* Primera Parte */}
+                <div className="p-8 flex flex-col gap-6">
+                  <h2 className="text-3xl text-dark uppercase font-bold text-center">
+                    {paquete.nombre}
+                    <span className="sr-only">Plan</span>
+                  </h2>
+                  <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <ButtonSecondary title={"Contactar"}
+                    width={"w-full 2xl:w-2/3 mx-auto"}
+                    onClick={handleModalToggle}
+                    icon={''}
+                    distance='mx-1' />
+                </div>
+                {/* Primera Parte */}
+
+                {/* Segunda Parte */}
+                <div className="p-8">
+                  <p className="text-lg font-medium text-gray-900 sm:text-xl">Que incluye <span className='text-secondary_dark'>:</span></p>
+
+                  <ul className="mt-2 space-y-2 sm:mt-4" id={`lista-caracteristica-${paquete.nombre}`}>
+                    {paquete.caracteristicas.map((caracteristica, index) => (
+                      <li key={index} className="text-gray-700 flex gap-4 ">
+                        <FaCheck className='text-secondary_dark' />
+                        <span>{caracteristica}</span></li>
+                    ))}
+                  </ul>
+                </div>
+                {/* Segunda Parte */}
+
+              </li>
+            )
+          })}
+
+
+        </ul>
+      </section>
+      {/* Test */}
+
+      {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
           <div
@@ -118,6 +203,8 @@ const FranquiciasTarjetas = () => {
           </div>
         </Modal>
       )}
+      {/* Modal */}
+
     </>
   );
 };

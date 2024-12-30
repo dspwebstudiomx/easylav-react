@@ -166,7 +166,7 @@ export const localservices = [
     email: "periodismo@easylav.mx",
     titleMailto: "Enviar correo a sucursal a Laguna de Parras",
     badge: "",
-    advertisement: "Próximamente",
+    advertisement: "",
     image: periodismo,
   },
   {
