@@ -5,8 +5,8 @@ import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary,
 import { FRANQUICIAS_UI } from "constants/constants";
 import { franquiciaDescripciones, franquiciasImagenes, paquetesFranquicias } from "data";
 import { useState } from 'react';
-import { FaCheck, FaHome, FaInfoCircle } from "react-icons/fa";
-import { FaRegBuilding, FaXmark } from "react-icons/fa6";
+import { FaHome, FaInfoCircle } from "react-icons/fa";
+import { FaCheck, FaRegBuilding, FaXmark } from "react-icons/fa6";
 
 
 const FranquiciasTarjetas = () => {
@@ -139,17 +139,16 @@ const FranquiciasTarjetas = () => {
           </div>
         </div>
       </section>
-
       <section className="p-12 sm:px-6 sm:py-12 lg:px-8 lg:py-16 mx-auto bg-light text-dark">
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 xl:grid-cols-4 md:gap-8 max-w-screen-2xl mx-auto">
 
           {paquetesFranquicias.map(paquete => {
             return (
-              <li key={paquete.id} className="divide-y divide-secondary_dark rounded-2xl border-primary_dark border-4 shadow-2xl">
+              <li key={paquete.id} className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl hover:-translate-y-1 hover:scale-105">
 
                 {/* Primera Parte */}
                 <div className="p-8 flex flex-col gap-6">
-                  <h2 className="text-3xl text-dark uppercase font-bold text-center">
+                  <h2 className="text-3xl text-secondary_dark uppercase font-bold text-left">
                     {paquete.nombre}
                     <span className="sr-only">Plan</span>
                   </h2>
@@ -183,13 +182,14 @@ const FranquiciasTarjetas = () => {
 
         </ul>
       </section>
+
       {/* Test */}
 
       {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
           <div
-            id="franquicias-formualario"
+            id="franquicias-formulario"
             className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
           >
             <button id="button-close" onClick={handleModalToggle}>

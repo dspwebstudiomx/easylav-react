@@ -6,9 +6,24 @@
 */
 
 // Importaciones
-import { TitleH3 } from 'components'
-import { SERVICES_GENERATOR_PROPS, SERVICES_GENERATOR_UI } from 'constants/constants'
-import { services } from 'data'
+import { TitleH3 } from 'components';
+import { services } from 'data';
+
+const SERVICES_GENERATOR_PROPS = {
+  ID: "nuestros-servicios",
+};
+const SERVICES_GENERATOR_UI = {
+  DIV: "w-full",
+  UL: "grid sm:grid-cols-2 xl:grid-cols-5 gap-6",
+  LI: {
+    CLASSNAME:
+      "flex flex-col gap-8 items-center justify-center shadow-xl p-8 border-2 rounded-xl bg-light",
+    DIV_VIDEO: "mx-auto w-32 sm:w-24 md:w-40",
+    DIV_TITLEH3: "mx-auto text-primary",
+  },
+  IMAGE: "p-2",
+  PARAGRAPH: "text-dark text-[16px]",
+};
 
 // Estructura
 const ServicesGenerator = () => {
@@ -21,7 +36,7 @@ const ServicesGenerator = () => {
               <div className={SERVICES_GENERATOR_UI.LI.DIV_VIDEO}>
                 <img className={SERVICES_GENERATOR_UI.IMAGE} src={service.image} title={service.alt} alt={service.alt} />
               </div>
-              <div className={SERVICES_GENERATOR_UI.DIV_TITLEH3}>
+              <div className={SERVICES_GENERATOR_UI.LI.DIV_TITLEH3}>
                 <TitleH3>{service.title}</TitleH3>
               </div>
               <p className={SERVICES_GENERATOR_UI.PARAGRAPH}>

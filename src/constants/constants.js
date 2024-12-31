@@ -40,9 +40,9 @@ export const GENERAL_UI = {
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-lg",
+    FONT_SIZE: "text-xl",
     FONT_WEIGHT: "font-bold",
-    COLOR: "text-primary_dark dark:text-light",
+    COLOR: "text-primary_dark dark:text-primary",
     BACKGROUND_COLOR: "",
     CARD: "text-base uppercase font-semibold",
     TEXT_TRANSFORM: "uppercase",
@@ -146,18 +146,6 @@ export const BORDER_LEFT_UI = {
 };
 
 // Button
-export const BUTTON_UI = {
-  DISPLAY: "flex items-center justify-center gap-0",
-  HEIGHT: "h-auto",
-  FONT_SIZE: "text-xl",
-  PADDING: "px-6 py-6 sm:px-3 sm:py-4",
-  FONT_WEIGHT: "font-semibold",
-  TEXT_TRANSFORM: "",
-  ROUNDED: "rounded-lg",
-  LETTER_SPACING: "tracking-wider sm:tracking-normal",
-  ANIMATION:
-    "transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300",
-};
 
 // Button Container
 export const BUTTON_CONTAINER = {
@@ -385,22 +373,6 @@ export const NUESTROS_SERVICIOS_UI = {
 };
 
 // Services Generator
-export const SERVICES_GENERATOR_PROPS = {
-  ID: "nuestros-servicios",
-};
-export const SERVICES_GENERATOR_UI = {
-  DIV: "w-full",
-  UL: "grid sm:grid-cols-2 xl:grid-cols-5 gap-6",
-  LI: {
-    CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center shadow-xl p-8 border-2 rounded-xl",
-    DIV_VIDEO:
-      "mx-auto w-40 dark:w-48 sm:w-24 md:w-40 dark:border-4 dark:border-primary rounded-3xl bg-light",
-    DIV_TITLEH3: "mx-auto text-dark",
-  },
-  IMAGE: "p-2",
-  PARAGRAPH: "text-dark text-[15px] dark:text-light",
-};
 
 // Por que Elegirnos
 export const PORQUE_ELEGIRNOS_PROPS = {
