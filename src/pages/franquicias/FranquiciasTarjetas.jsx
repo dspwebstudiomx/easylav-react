@@ -1,12 +1,44 @@
-//! Colocar imagen en el formulario de contacto
-
+// Importaciones
 import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, ScrollToTopButton, SEOFriendly, Spacing, TitleH2 } from "components";
-import { FRANQUICIAS_UI } from "constants/constants";
-import { franquiciaDescripciones, franquiciasImagenes, paquetesFranquicias } from "data";
+import { franquiciaDescripciones, franquiciasImagenes } from "data";
 import { useState } from 'react';
 import { FaHome, FaInfoCircle } from "react-icons/fa";
-import { FaCheck, FaRegBuilding, FaXmark } from "react-icons/fa6";
+import { FaRegBuilding, FaXmark } from "react-icons/fa6";
+import PaquetesFranquicias from './PaquetesFranquicias';
+
+
+// Props
+
+
+//Estilos
+const FRANQUICIAS_UI = {
+  TITLEH1: {
+    COLOR: "text- dark:text-light",
+    FONT_SIZE: "text-3xl md:text-4xl",
+    FONT_WEIGHT: "font-semibold",
+    LETTER_SPACING: "tracking-wide",
+  },
+  CONTAINER: {
+    DISPLAY: "grid 2xl:grid-cols-2 sm:gap-8",
+  },
+  COLUMNA_1: {
+    DISPLAY: "flex flex-col gap-2",
+  },
+  COLUMNA_2: {
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-12",
+    HEIGHT: "lg:h-auto md:h-[500px]",
+    MARGIN: "mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto",
+    PADDING: "p-0",
+    WIDTH: "w-full",
+  },
+  UL: {
+    DISPLAY: "flex flex-col gap-0",
+  },
+  IMAGE: {
+    WIDTH: "w-[280px] lg:w-[360px]",
+  },
+};
 
 
 const FranquiciasTarjetas = () => {
@@ -66,49 +98,7 @@ const FranquiciasTarjetas = () => {
         {/* Banner */}
 
         {/* Paquetes de Franquicias */}
-        <section className="px-8 py-12 sm:py-12 md:px-20 lg:p-24 mx-auto bg-light text-dark dark:bg-dark">
-          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 md:gap-12 max-w-screen-2xl mx-auto">
-
-            {paquetesFranquicias.map(paquete => {
-              return (
-                <li key={paquete.id} className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl hover:-translate-y-1 hover:scale-105 dark:bg-light">
-
-                  {/* Primera Parte */}
-                  <div className="p-8 flex flex-col gap-6">
-                    <h2 className="text-3xl text-dark uppercase font-bold text-left">
-                      {paquete.nombre}
-                      <span className="sr-only">Plan</span>
-                    </h2>
-                    <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <ButtonSecondary title={"Contactar"}
-                      width={"w-full 2xl:w-2/3 mx-auto"}
-                      onClick={handleModalToggle}
-                      icon={''}
-                      distance='mx-1' />
-                  </div>
-                  {/* Primera Parte */}
-
-                  {/* Segunda Parte */}
-                  <div className="p-8">
-                    <p className="text-lg font-medium text-gray-900 sm:text-xl">Que incluye <span className='text-secondary_dark'>:</span></p>
-
-                    <ul className="mt-2 space-y-2 sm:mt-4" id={`lista-caracteristica-${paquete.nombre}`}>
-                      {paquete.caracteristicas.map((caracteristica, index) => (
-                        <li key={index} className="text-gray-700 flex gap-4 ">
-                          <FaCheck className='text-secondary_dark' />
-                          <span>{caracteristica}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                  {/* Segunda Parte */}
-
-                </li>
-              )
-            })}
-
-
-          </ul>
-        </section>
+        <PaquetesFranquicias />
         {/* Paquetes de Franquicias */}
 
         {/* Contenido */}

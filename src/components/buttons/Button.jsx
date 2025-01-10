@@ -36,7 +36,7 @@ Button.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   border: PropTypes.string,
-  icon: PropTypes.element,
+  icon: PropTypes.elementType,
   type: PropTypes.string,
   onClick: PropTypes.func,
   name: PropTypes.string
