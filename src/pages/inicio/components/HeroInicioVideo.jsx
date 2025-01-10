@@ -1,10 +1,49 @@
+import { VistaLavanderiaDesdeEntrada_2_640 as defaultImage } from 'assets';
 import video from 'assets/video/video1.mp4';
 import { ButtonContainer, ButtonPrimary, Container } from 'components';
 import Video from 'components/video/Video';
-import { HEROINICIO_UI } from 'constants/constants';
 import PropTypes from 'prop-types';
 
 const HeroInicioVideo = () => {
+
+  const HEROINICIO_UI = {
+    HEIGHT:
+      "h-[80vh] sm:h-[100vh] md:h-[400px] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
+    THEME: "dark",
+    BACKGROUND: {
+      OPACITY: "opacity-90",
+      COLOR: "bg-primary",
+    },
+    DISPLAY: {
+      BUTTON: "block",
+      IMAGE: "block",
+      PARAGRAPH: "hidden",
+    },
+    TITLE: {
+      FONT_SIZE: "text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl",
+      FONT_WEIGHT: "font-bold",
+      FONT_FAMILY: "",
+      LETTER_SPACING: "tracking-wider",
+      LINE_HEIGHT: "",
+      TEXT_TRANSFORM: "",
+    },
+    COLOR: {
+      BUTTON: "primary",
+      PARAGRAPH: "text-light",
+      TITLE: "text-light",
+    },
+    BUTTON: {
+      SIZE: "lg",
+      HREF: "/#servicios",
+      TEXT: {
+        CONTENT: "Nuestros Servicios",
+        COLOR: "light",
+        SIZE: "xl",
+        TRANSFORM: "uppercase",
+      },
+    },
+  };
+
   const styles = {
     button: `bg-${HEROINICIO_UI.COLOR.BUTTON} px-6 py-4 w-[${HEROINICIO_UI.BUTTON.SIZE}] text-${HEROINICIO_UI.BUTTON.TEXT.SIZE} rounded-lg ${HEROINICIO_UI.DISPLAY.BUTTON}  text-${HEROINICIO_UI.BUTTON.TEXT.SIZE} text-${HEROINICIO_UI.BUTTON.TEXT.COLOR}`,
     paragraph: `text-${HEROINICIO_UI.COLOR.PARAGRAPH} text-lg ${HEROINICIO_UI.DISPLAY.PARAGRAPH}`,
@@ -15,7 +54,7 @@ const HeroInicioVideo = () => {
   return (
     <section id='inicio' className={`relative overflow-hidden w-full ${HEROINICIO_UI.HEIGHT}`}>
       <div className={`absolute inset-0 z-0 w-full bg-dark opacity-60 left-0 ${HEROINICIO_UI.HEIGHT}`}>
-        <Video src={video} type='video/mp4' title='sucursal' className={styles.image} />
+        <Video src={video} type='video/mp4' title='sucursal' className={styles.image} defaultImage={defaultImage} />
       </div>
       <div className={`absolute inset-0 z-10 w-[1920px] bg-dark opacity-20 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
       <div className={`absolute inset-0 top-0 z-20 p-8 py-20 sm:p-20 ${HEROINICIO_UI.HEIGHT} w-full flex items-center`}>

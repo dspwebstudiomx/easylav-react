@@ -1,7 +1,7 @@
 //! Colocar imagen en el formulario de contacto
 
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, SEOFriendly, Spacing, TitleH1 } from "components";
+import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, ScrollToTopButton, SEOFriendly, Spacing, TitleH2 } from "components";
 import { FRANQUICIAS_UI } from "constants/constants";
 import { franquiciaDescripciones, franquiciasImagenes, paquetesFranquicias } from "data";
 import { useState } from 'react';
@@ -34,9 +34,9 @@ const FranquiciasTarjetas = () => {
         ogType="website"
       />
       <Navbar />
-      <div className='bg-light mt-[100px] pb-[100px]'>
+      <div className='bg-light mt-[100px] sm:mt-0 pb-[100px]'>
         {/* Banner */}
-        <section className="bg-secondary_dark text-light">
+        <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
           <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-2xl lg:items-center">
             <div className="mx-auto text-center">
               <h1
@@ -51,16 +51,11 @@ const FranquiciasTarjetas = () => {
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <a
-                  className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-                  href="#"
-                >
-                  Get Started
-                </a>
+                <ButtonPrimary title='Conoce lo que ofrecemos' href='franquicias/#Sobre-franquicias' />
 
                 <a
                   className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-                  href="#"
+                  href="#Sobre-franquicias"
                 >
                   Learn More
                 </a>
@@ -71,16 +66,16 @@ const FranquiciasTarjetas = () => {
         {/* Banner */}
 
         {/* Paquetes de Franquicias */}
-        <section className="p-12 sm:px-6 sm:py-12 lg:px-8 lg:py-16 mx-auto bg-light text-dark">
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 xl:grid-cols-4 md:gap-8 max-w-screen-2xl mx-auto">
+        <section className="px-8 py-12 sm:py-12 md:px-20 lg:p-24 mx-auto bg-light text-dark dark:bg-dark">
+          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 md:gap-12 max-w-screen-2xl mx-auto">
 
             {paquetesFranquicias.map(paquete => {
               return (
-                <li key={paquete.id} className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl hover:-translate-y-1 hover:scale-105">
+                <li key={paquete.id} className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl hover:-translate-y-1 hover:scale-105 dark:bg-light">
 
                   {/* Primera Parte */}
                   <div className="p-8 flex flex-col gap-6">
-                    <h2 className="text-3xl text-secondary_dark uppercase font-bold text-left">
+                    <h2 className="text-3xl text-dark uppercase font-bold text-left">
                       {paquete.nombre}
                       <span className="sr-only">Plan</span>
                     </h2>
@@ -117,17 +112,14 @@ const FranquiciasTarjetas = () => {
         {/* Paquetes de Franquicias */}
 
         {/* Contenido */}
-        <Container className="flex flex-col sm:gap-12 gap-0">
+        <Container className="flex flex-col sm:gap-12" id='Sobre-franquicias'>
           {/* Title */}
           <div className="w-full px-4 sm:px-0">
             <div className="mx-auto mb-[60px] lg:mb-0 flex  flex-col gap-4">
-              <span className="mb-2 block text-2xl font-semibold text-primary">
-                Franquicias
-              </span>
               <BorderLeft>
-                <TitleH1 className={styles} textColor="text-dark dark:text-light w-2/3">
-                  ¿Estás interesado en adquirir una franquicia?
-                </TitleH1>
+                <TitleH2 className={styles} textColor="text-dark dark:text-light w-full">
+                  SOBRE NUESTRAS FRANQUICIAS
+                </TitleH2>
               </BorderLeft>
               <h3 className='text-xl font-semibold sm:text-2xl mt-8 text-dark dark:text-light'>Visita cada punto para ver la información relacionada.</h3>
             </div>
@@ -187,6 +179,7 @@ const FranquiciasTarjetas = () => {
         {/* Contenido */}
 
       </div>
+      <ScrollToTopButton />
       <Footer />
       {/* Modal */}
       {showModal && (

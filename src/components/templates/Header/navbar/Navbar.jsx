@@ -7,8 +7,32 @@
 
 // Importaciones
 import { Container, DarkModeButton, HeaderLine, Logo, MenuButton, NavLinksDesktop, NavLinksMobile, NavLinksTablet } from "components";
-import { NAVBAR_UI } from "constants/constants";
 import { useState } from "react";
+
+// Estilos
+const NAVBAR_UI = {
+  NAV: {
+    BACKGROUND_COLOR: "bg-light",
+    POSITION: "fixed top-0 z-50 h-[100px] sm:relative xl:fixed",
+    SHADOW: "shadow-xl",
+    WIDTH: "w-full",
+  },
+  CONTAINER: {
+    DISPLAY: "flex justify-between items-center h-full w-full",
+    MARGIN: "mx-auto",
+    PADDING: "px-8 sm:px-8 md:px-8 xl:px-20 2xl:px-0",
+  },
+  NAVBAR: {
+    DISPLAY: "flex items-center justify-between gap-4",
+    WIDTH: "w-full",
+    HEIGHT: "h-[100px]",
+  },
+  NAVLINKS: {
+    DISPLAY: "flex items-center gap-4",
+    FONT_WEIGHT: "font-semibold",
+    FONT_SIZE: "text-base",
+  },
+};
 
 // Estructura
 const Navbar = () => {

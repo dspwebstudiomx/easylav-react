@@ -13,7 +13,7 @@ import Testimonio from './Testimonio';
 const CarouselTestimonios = () => {
   return (
     <>
-      <div className='py-12 bg-section dark:bg-dark overflow-visible'>
+      <div className='py-12 bg-secondary_dark dark:bg-primary_dark dark:bg-dark overflow-visible'>
         <Swiper
           modules={[Pagination, Autoplay, Scrollbar]}
           className="mySwiper"

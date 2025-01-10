@@ -9,6 +9,7 @@
 import { TitleH3 } from 'components';
 import { services } from 'data';
 
+// Estilos
 const SERVICES_GENERATOR_PROPS = {
   ID: "nuestros-servicios",
 };

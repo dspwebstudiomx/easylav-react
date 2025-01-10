@@ -6,11 +6,20 @@
 */
 
 // Importaciones
-import { SECTION_UI } from 'constants/constants'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
+// Clases
+const SECTION_UI = {
+  DISPLAY: "grid gap-12",
+  PADDING: "py-16 px-8 sm:p-20",
+  BACKGROUND_COLOR: "bg-light dark:bg-dark",
+  TEXT_COLOR: "",
+  BORDER_JUSTIFY: "mx-auto",
+};
 
 // Estructura
 export default function Section({ id, children, backgroundColor, height, className, backgroundImage }) {
+
 
   const classes = `${SECTION_UI.DISPLAY} ${SECTION_UI.PADDING} ${SECTION_UI.BACKGROUND_COLOR} ${SECTION_UI.TEXT_COLOR} ${backgroundColor} ${height} ${className}  bg-[url("${backgroundImage}")] `
 

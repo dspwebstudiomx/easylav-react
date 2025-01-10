@@ -7,8 +7,33 @@
 
 // Importaciones
 import { ButtonContainer, ButtonSecondary, Container, Section, Spacing, TitleContainer } from 'components';
-import { NUESTROS_SERVICIOS_PROPS, NUESTROS_SERVICIOS_UI } from 'constants/constants';
 import ServicesGenerator from './ServicesGenerator';
+
+// Estilos
+// Nuestros Servicios
+const NUESTROS_SERVICIOS_PROPS = {
+  SECTION: {
+    ID: "servicios",
+  },
+  TITLEH2: "Nuestros Servicios",
+  CONTAINER: {
+    ID: "nuestrosservicios-container",
+  },
+  BUTTON_SECONDARY: {
+    TITLE: "Conoce nuestras sucursales",
+    HREF: "/sucursales",
+    NAME: "Visita nuestras sucursales",
+  },
+};
+const NUESTROS_SERVICIOS_UI = {
+  CONTAINER: {
+    CLASSNAME: "mx-auto",
+  },
+  BUTTON_CONTAINER: {
+    DISTANCE: "mt-16",
+    POSITION: "justify-center items-center",
+  },
+};
 
 // Estructura
 const NuestrosServicios = () => {

@@ -74,46 +74,6 @@ export const LOADING_UI = {
   SPINNER: "loader mx-auto mt-8",
 };
 
-// Section
-export const SECTION_UI = {
-  DISPLAY: "grid gap-12",
-  PADDING: "py-16 px-8 sm:p-20",
-  BACKGROUND_COLOR: "bg-light dark:bg-dark",
-  TEXT_COLOR: "",
-  BORDER_JUSTIFY: "mx-auto",
-};
-
-// Container
-export const CONTAINER_UI = {
-  DISPLAY:
-    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl",
-};
-
-// Navbar
-export const NAVBAR_UI = {
-  NAV: {
-    BACKGROUND_COLOR: "bg-light dark:bg-navbar_dark",
-    POSITION: "fixed top-0 z-50 h-[100px] sm:relative xl:fixed",
-    SHADOW: "shadow-xl",
-    WIDTH: "w-full",
-  },
-  CONTAINER: {
-    DISPLAY: "flex justify-between items-center h-full w-full",
-    MARGIN: "mx-auto",
-    PADDING: "px-8 sm:px-8 md:px-8 xl:px-20 2xl:px-0",
-  },
-  NAVBAR: {
-    DISPLAY: "flex items-center justify-between gap-4",
-    WIDTH: "w-full",
-    HEIGHT: "h-[100px]",
-  },
-  NAVLINKS: {
-    DISPLAY: "flex items-center gap-4",
-    FONT_WEIGHT: "font-semibold",
-    FONT_SIZE: "text-base",
-  },
-};
-
 // Banner
 export const BANNER_UI = {
   BORDER: "border-2",
@@ -168,71 +128,6 @@ export const BUTTON_SECONDARY_UI = {
   BACKGROUND_COLOR: "bg-secondary_dark",
   BORDER:
     "border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary",
-};
-
-// Hero Inicio
-export const HEROINICIO_UI = {
-  HEIGHT:
-    "h-[80vh] sm:h-[100vh] md:h-[400px] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
-  THEME: "dark",
-  BACKGROUND: {
-    OPACITY: "opacity-90",
-    COLOR: "bg-primary",
-  },
-  DISPLAY: {
-    BUTTON: "block",
-    IMAGE: "block",
-    PARAGRAPH: "hidden",
-  },
-  TITLE: {
-    FONT_SIZE: "text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl",
-    FONT_WEIGHT: "font-bold",
-    FONT_FAMILY: "",
-    LETTER_SPACING: "tracking-wider",
-    LINE_HEIGHT: "",
-    TEXT_TRANSFORM: "",
-  },
-  COLOR: {
-    BUTTON: "primary",
-    PARAGRAPH: "text-light",
-    TITLE: "text-light",
-  },
-  BUTTON: {
-    SIZE: "lg",
-    HREF: "/#servicios",
-    TEXT: {
-      CONTENT: "Nuestros Servicios",
-      COLOR: "light",
-      SIZE: "xl",
-      TRANSFORM: "uppercase",
-    },
-  },
-};
-export const HEROINICIO_PROPS = {
-  SECTION_ID: "inicio",
-  IMAGE_ALT: "canasta de ropa verde con ropa sucia de color con fondo blanco",
-  BUTTON_SECONDARY: {
-    TITLE: "Nuestros Servicios",
-    HREF: "/#servicios",
-    TYPE: "button",
-  },
-};
-
-// Sobre Nosotros
-export const ABOUT_UI = {
-  BACKGROUND_COLOR: "",
-  HEIGHT: "h-auto",
-  SECTION: "",
-  CONTAINER: "mx-auto",
-  TWOCOLUMNS_CONTAINER: "grid gap-x-20 gap-y-16 sm:grid-cols-2 sm:gap-20",
-  COLUMN1_CONTAINER: "grid place-content-center gap-8",
-  COLUMN2_CONTAINER: "flex justify-end",
-  SPAN: "font-semibold text-secondary dark:text-primary ml-2",
-};
-export const ABOUT_PROPS = {
-  SECTION_ID: "nosotros",
-  CONTAINER_ID: "sobrenosotros-contenedor",
-  TITLEH2: "Sobre Nosotros",
 };
 
 // Testimonios
@@ -346,33 +241,6 @@ export const FRANQUICIAS_UI = {
     WIDTH: "w-[280px] lg:w-[360px]",
   },
 };
-
-// Nuestros Servicios
-export const NUESTROS_SERVICIOS_PROPS = {
-  SECTION: {
-    ID: "servicios",
-  },
-  TITLEH2: "Nuestros Servicios",
-  CONTAINER: {
-    ID: "nuestrosservicios-container",
-  },
-  BUTTON_SECONDARY: {
-    TITLE: "Conoce nuestras sucursales",
-    HREF: "/sucursales",
-    NAME: "Visita nuestras sucursales",
-  },
-};
-export const NUESTROS_SERVICIOS_UI = {
-  CONTAINER: {
-    CLASSNAME: "mx-auto",
-  },
-  BUTTON_CONTAINER: {
-    DISTANCE: "mt-16",
-    POSITION: "justify-center items-center",
-  },
-};
-
-// Services Generator
 
 // Por que Elegirnos
 export const PORQUE_ELEGIRNOS_PROPS = {
