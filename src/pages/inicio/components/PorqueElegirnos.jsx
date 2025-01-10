@@ -8,8 +8,46 @@
 // Importaciones
 import { woman as img } from 'assets';
 import { BorderLeft, Container, DescriptionWithBulletPoint, ImageResponsive, Section, TitleH2 } from 'components';
-import { PORQUE_ELEGIRNOS_PROPS, PORQUE_ELEGIRNOS_UI } from 'constants/constants';
 import { porqueElegirnosDescripciones } from 'data';
+
+// Estilos
+// Por que Elegirnos
+const PORQUE_ELEGIRNOS_PROPS = {
+  SECTION: {
+    ID: "porque-elegirnos",
+  },
+  CONTAINER: {
+    ID: "porque-elegirnos-container",
+  },
+  ARTICLE: {
+    CARACTERISTICAS: {
+      CONTENEDOR: {
+        ID: "contenedor-caracteristicas",
+      },
+      TITLEH2: {
+        TITLE: "Por qué Elegirnos?",
+      },
+    },
+    IMAGE: {
+      CONTENEDOR: {
+        ID: "contenedor-imagen",
+      },
+    },
+  },
+};
+const PORQUE_ELEGIRNOS_UI = {
+  SECTION: {
+    BACKGROUND_COLOR: "",
+    CLASSNAME: "",
+    HEIGHT: "h-auto",
+  },
+  ARTICLE: "mx-auto grid sm:grid-cols-2 gap-x-20 gap-y-16",
+  CONTAINER: "mx-auto",
+  CONTAINER_CARACTERISTICAS: "grid place-content-center gap-12",
+  CONTAINER_BULLET_DETAILS: "grid lg:grid-cols-1 gap-8",
+  CONTAINER_IMAGE: "items-center lg:justify-end mt-8",
+};
+
 
 // Estructura
 export default function PorqueElegirnos() {
