@@ -1,10 +1,45 @@
+// Importaciones
 import { Badge, TitleH4 } from 'components';
-import { SUCURSAL_CARD_UI } from 'constants/constants';
 import PropTypes from 'prop-types';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
-// Componente SucursalCard
+// Estilos
+const SUCURSAL_CARD_UI = {
+  ARTICLE: {
+    ANIMATION: "animate__animated animate__fadeIn animate__slower ",
+    BACKGROUND: "bg-light",
+    COLOR: "text-dark",
+    DISPLAY: "flex  flex-col relative mx-auto",
+    HEIGHT: "min-h-[490px]",
+    JUSTIFY: "justify-between",
+    OVERFLOW: "overflow-hidden",
+    ROUNDED: "rounded-xl",
+    SHADOW: "shadow-xl",
+    WIDTH: "w-[260px] 2xl:w-[280px]",
+  },
+  IMAGE: {
+    CONTAINER: {
+      HEIGHT: "",
+      OVERFLOW: "overflow-hidden",
+      ROUNDED: "rounded-t-lg",
+      WIDTH: "w-full",
+    },
+  },
+  PARAGRAPH: {
+    FONT_SIZE: "text-sm",
+    COLOR: "text-dark",
+    FONT_WEIGHT: "",
+    LETTER_SPACING: "",
+    LINE_HEIGHT: "leading-1",
+    JUSTIFY: "",
+  },
+  ICON: {
+    SIZE: 16,
+  },
+};
+
+// Estructura
 const SucursalCard = ({
   title,
   id,
