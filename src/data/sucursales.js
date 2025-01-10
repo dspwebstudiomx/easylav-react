@@ -141,7 +141,7 @@ export const localservices = [
     city: "Morelia",
     email: "ventura@easylav.mx",
     titleMailto: "Enviar correo a sucursal a Laguna de Parras",
-    badge: "Próxima Apertura",
+    badge: "",
     advertisement: "Nueva Sucursal",
     image: Placeholder,
     openHour: 7,
