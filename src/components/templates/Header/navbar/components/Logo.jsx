@@ -1,8 +1,9 @@
-// Logo.jsx
+// Importaciones
 import { LogoHorizontalColor } from 'assets';
 import { scrollWithOffset } from 'functions';
 import { NavHashLink } from 'react-router-hash-link';
 
+// Estructura
 const Logo = () => {
   return (
     <NavHashLink to={'/#inicio'} scroll={scrollWithOffset} >

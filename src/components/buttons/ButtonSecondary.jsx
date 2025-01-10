@@ -48,7 +48,7 @@ ButtonSecondary.propTypes = {
   border: PropTypes.string,
   type: PropTypes.string,
   distance: PropTypes.string,
-  icon: PropTypes.elementType,
+  icon: PropTypes.any,
   onClick: PropTypes.func,
   titleMailto: PropTypes.string,
   name: PropTypes.string
