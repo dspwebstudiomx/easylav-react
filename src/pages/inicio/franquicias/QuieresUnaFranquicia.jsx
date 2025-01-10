@@ -6,10 +6,50 @@ Fecha: 2022-08-25
 */
 
 // Importaciones
-import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets'
-import { BackgroundImageSection, ButtonContainer, ButtonPrimary, Container } from "components"
-import { QUIERES_UNA_FRANQUICIA_UI } from 'constants/constants'
-import { scrollToTop } from 'functions'
+import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets';
+import { BackgroundImageSection, ButtonContainer, ButtonPrimary, Container } from "components";
+import { scrollToTop } from 'functions';
+
+// Estilos
+// Quieres una franquicia - Inicio - Sección
+const QUIERES_UNA_FRANQUICIA_UI = {
+  THEME: "dark",
+  BACKGROUND: {
+    OPACITY: "opacity-80",
+    COLOR: "dark",
+  },
+  DISPLAY: {
+    BUTTON: "block",
+    IMAGE: "bg-fixed",
+    PARAGRAPH: "block",
+  },
+  COLOR: {
+    BUTTON: "primary",
+    PARAGRAPH: "light",
+    TITLE: "light",
+  },
+  BUTTON: {
+    SIZE: "",
+    HREF: "/franquicias",
+    TEXT: {
+      CONTENT: "Conocer más",
+      COLOR: "light",
+      SIZE: "xl",
+      TRANSFORM: "",
+    },
+    CONTAINER: "items-center justify-center",
+  },
+  TITLE: {
+    H2: {
+      CONTENT:
+        "¿Estás listo para emprender un negocio rentable y en crecimiento? ",
+      TRANSFORM: "uppercase",
+      FONT_SIZE: "text-2xl",
+      FONT_WEIGHT: "font-bold",
+      JUSTIFY: "mx-auto",
+    },
+  },
+};
 
 // Estructura
 const QuieresUnaFranquicia = () => {
