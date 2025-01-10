@@ -6,9 +6,15 @@
 */
 
 // Importaciones
-import { LogoHorizontalBlanco } from "assets"
-import { LOADING_UI } from "constants/constants"
+import { LogoHorizontalBlanco } from "assets";
 
+// Estilos
+const LOADING_UI = {
+  CONTAINER:
+    "flex flex-col justify-start items-center h-screen pt-60 sm:justify-center sm:pt-0",
+  BACKGROUND_COLOR: "bg-secondary_dark",
+  SPINNER: "loader mx-auto mt-8",
+};
 const styles = `${LOADING_UI.CONTAINER} ${LOADING_UI.BACKGROUND_COLOR}`
 
 // Estructura

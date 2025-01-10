@@ -5,9 +5,17 @@
   Fecha: 2022-08-20
 */
 
-import { BORDER_BOTTOM_UI } from 'constants/constants'
-import PropTypes from 'prop-types'
+// Importaciones
+import PropTypes from 'prop-types';
 
+// Estilos
+const BORDER_BOTTOM_UI = {
+  WIDTH: "w-100%",
+  BORDER: "flex border-b-4 border-b-primary pb-3",
+  JUSTIFY: "mx-auto",
+};
+
+// Estructura
 const BorderBottom = ({ ...props }) => {
 
   const { children } = props

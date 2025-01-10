@@ -66,14 +66,6 @@ export const GENERAL_UI = {
   },
 };
 
-// Loading
-export const LOADING_UI = {
-  CONTAINER:
-    "flex flex-col justify-start items-center h-screen pt-60 sm:justify-center sm:pt-0",
-  BACKGROUND_COLOR: "bg-secondary_dark",
-  SPINNER: "loader mx-auto mt-8",
-};
-
 // Banner
 export const BANNER_UI = {
   BORDER: "border-2",
@@ -82,52 +74,6 @@ export const BANNER_UI = {
   PADDING: "p-8",
   ROUNDED: "rounded-xl",
   THEME: "primary",
-};
-
-// Border Bottom
-export const BORDER_BOTTOM_UI = {
-  WIDTH: "w-100%",
-  BORDER: "flex border-b-4 border-b-primary pb-3",
-  JUSTIFY: "mx-auto",
-};
-
-// Border Center
-export const BORDER_CENTER_UI = {
-  WIDTH: "w-full",
-  BORDER_CENTER:
-    "flex border-l-4 border-l-primary border-r-4 border-r-primary ",
-  JUSTIFY: "mx-auto",
-};
-
-// Border Left
-export const BORDER_LEFT_UI = {
-  BORDER_LEFT: "flex border-l-4 border-l-primary",
-  JUSTIFY: "mr-auto",
-};
-
-// Button
-
-// Button Container
-export const BUTTON_CONTAINER = {
-  POSITION: "place-items-center bg-red",
-  DISTANCE: "mt-12",
-};
-
-//Primary Button
-export const BUTTON_PRIMARY_UI = {
-  TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR:
-    "bg-gradient-to-r from-primary_dark to-primary dark:bg-gradient dark:from-secondary_dark dark:to-secondary_light hover:bg-primary_dark",
-  BORDER:
-    "border-l-primary_dark border-l-4 border-t-primary_light border-t-4 hover:border-t-primary_light hover:border-l-primary dark:border-l-secondary dark:border-t-secondary_light dark:hover:border-l-secondary",
-};
-
-// Secondary Button
-export const BUTTON_SECONDARY_UI = {
-  TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR: "bg-secondary_dark",
-  BORDER:
-    "border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary",
 };
 
 // Testimonios
@@ -142,21 +88,6 @@ export const TESTIMONIALS_PROPS = {
   SECTION_ID: "testimonios",
   CONTAINER_ID: "testimonios-contenedor",
   TITLEH2: "Testimonios",
-};
-
-// Testimonio
-export const TESTIMONIAL_UI = {
-  ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[420px] sm:h-[380px] w-auto shadow-xl",
-  PARAGRAPH_CLASSNAME: "text-pretty text-lg sm:text-xl ",
-  CONTAINER_CLASSNAME:
-    "flex items-center gap-2 flex-col sm:flex-row sm:items-start",
-  NAME_CLASSNAME: "font-semibold text-lg",
-  NUMBER_STAR_CONTAINER_CLASSNAME:
-    "text-dark justify-center flex items-center mb-6",
-  STARS_CONTAINER_CLASSNAME: "flex items-center justify-center",
-  STARS_CLASSNAME: "text-secondary dark:text-primary",
-  QUALIFICATION_CLASSNAME: "font-semibold text-lg text-dark",
 };
 
 // Nuestras Sucursales

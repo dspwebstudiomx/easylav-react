@@ -7,9 +7,19 @@
 */
 
 // Importaciones
-import { Button } from 'components'
-import { BUTTON_PRIMARY_UI } from 'constants/constants'
-import PropTypes from 'prop-types'
+import { Button } from 'components';
+import PropTypes from 'prop-types';
+
+// Estilos
+//Primary Button
+const BUTTON_PRIMARY_UI = {
+  TEXT_COLOR: "text-light",
+  BACKGROUND_COLOR:
+    "bg-gradient-to-r from-primary_dark to-primary dark:bg-gradient dark:from-secondary_dark dark:to-secondary_light hover:bg-primary_dark",
+  BORDER:
+    "border-l-primary_dark border-l-4 border-t-primary_light border-t-4 hover:border-t-primary_light hover:border-l-primary dark:border-l-secondary dark:border-t-secondary_light dark:hover:border-l-secondary",
+};
+
 
 // Estructura
 export default function ButtonPrimary({ ...props }) {

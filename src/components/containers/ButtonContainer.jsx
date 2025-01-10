@@ -6,7 +6,14 @@
 */
 
 // Importaciones
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
+// Estilos
+const BUTTON_CONTAINER = {
+  POSITION: "place-items-center bg-red",
+  DISTANCE: "mt-12",
+};
+
 export default function ButtonContainer({ children, position, distance }) {
   return (
     <div className={`flex flex-col sm:flex-row gap-8 ${position} ${distance}`}>

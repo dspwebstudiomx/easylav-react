@@ -6,8 +6,11 @@
 */
 
 // Importaciones
-import { BANNER_UI } from 'constants/constants'
-import PropTypes from 'prop-types'
+import { BANNER_UI } from 'constants/constants';
+import PropTypes from 'prop-types';
+
+// Estilos
+
 
 // Estructura
 const Banner = ({ children, themeColor }) => {

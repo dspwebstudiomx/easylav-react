@@ -5,8 +5,14 @@
   Fecha: 2022-08-20
 */
 
-import { BORDER_LEFT_UI } from "constants/constants";
+// Importaciones
 import PropTypes from "prop-types";
+
+// Estilos
+const BORDER_LEFT_UI = {
+  BORDER_LEFT: "flex border-l-4 border-l-primary",
+  JUSTIFY: "mr-auto",
+};
 
 const styles = `${BORDER_LEFT_UI.BORDER_LEFT} ${BORDER_LEFT_UI.JUSTIFY}`
 
