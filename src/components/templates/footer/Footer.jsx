@@ -27,7 +27,7 @@ export default function Footer() {
               Secciones
             </h3>
             <FooterNavHashLinksGenerator links={navLinksSections} />
-            <Spacing height="h-2" />
+            <Spacing distance="h-2" />
             <FooterLinksGenerator links={navLinksPages} />
           </div>
           {/* Footer Sections */}
