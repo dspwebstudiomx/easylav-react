@@ -24,7 +24,7 @@ const PaquetesFranquicias = () => {
     document.body.style.overflow = !showModal && "hidden";
   };
   return (
-    <Section className={styles}>
+    <Section className={styles} id='paquetes-franquicias'>
       <Container>
         <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 md:gap-12 max-w-screen-2xl mx-auto">
 

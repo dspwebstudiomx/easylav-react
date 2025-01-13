@@ -55,6 +55,8 @@ const FranquiciasTarjetas = () => {
 
   return (
     <>
+
+      /
       <SEOFriendly
         title="Franquicias | Easylav: Tu lavandería ideal"
         url="easylav-react.netlify.app/franquicias"
@@ -66,7 +68,7 @@ const FranquiciasTarjetas = () => {
         ogType="website"
       />
       <Navbar />
-      <div className='bg-light mt-[100px] sm:mt-0 xl:mt-[100px] b-[100px]'>
+      <div className='bg-light mt-[100px] sm:mt-0 xl:mt-[80px] pb-[100px]'>
         {/* Banner */}
         <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
           <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-2xl lg:items-center">
@@ -83,14 +85,7 @@ const FranquiciasTarjetas = () => {
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <ButtonPrimary title='Conoce lo que ofrecemos' href='franquicias/#Sobre-franquicias' />
-
-                <a
-                  className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-                  href="#Sobre-franquicias"
-                >
-                  Learn More
-                </a>
+                <ButtonPrimary title='Conoce lo que ofrecemos' href='#sobre-nuestras-franquicias' />
               </div>
             </div>
           </div>
@@ -102,7 +97,7 @@ const FranquiciasTarjetas = () => {
         {/* Paquetes de Franquicias */}
 
         {/* Contenido */}
-        <Section className="flex flex-col sm:gap-12" id='Sobre-franquicias'>
+        <Section className="flex flex-col sm:gap-12" id='sobre-nuestras-franquicias'>
           <Container>
             {/* Title */}
             <div className="w-full px-4 sm:px-0">
