@@ -7,7 +7,7 @@
 
 import { CatedralMorelia } from "assets";
 import { BorderLeft, PageLayout, SEOFriendly, TextWithBulletPoint, TitleH1 } from "components";
-import { FRANQUICIAS_PROPS } from "constants/constants";
+
 
 
 
@@ -26,7 +26,7 @@ const Franquicias = () => {
         ogType="website"
       />
       <PageLayout>
-        <div className={'flex flex-col gap-8'} id={FRANQUICIAS_PROPS.CONTAINER.ID}>
+        <div className={'flex flex-col gap-8'} id='terminos-condiciones'>
           <BorderLeft>
             <TitleH1 className={''}>
               Terminos y Condiciones

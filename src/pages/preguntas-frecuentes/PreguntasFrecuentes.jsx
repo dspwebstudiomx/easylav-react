@@ -8,7 +8,6 @@
 
 // Importaciones
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, PageLayout, TitleH1, TitleH3 } from "components";
-import { FRANQUICIAS_UI } from "constants/constants";
 import { frequentQuestions } from "data";
 import { FaHome } from "react-icons/fa";
 import { FaRegBuilding } from "react-icons/fa6";
@@ -16,7 +15,7 @@ import { FaRegBuilding } from "react-icons/fa6";
 // <Estructura></Estructura>
 const PreguntasFrecuentes = () => {
 
-  const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
+  const styles = ``
   return (
     <PageLayout>
       <div className="flex flex-col sm:gap-0">
