@@ -93,7 +93,7 @@ const FranquiciasTarjetas = () => {
           <Container>
             {/* Title */}
             <div className="w-full px-4 sm:px-0">
-              <div className="mx-auto mb-[60px] lg:mb-0 flex  flex-col gap-4">
+              <div className="mx-auto mb-[60px] lg:mb-0 flex  flex-col gap-0">
                 <BorderLeft>
                   <TitleH2 className={styles} textColor="text-dark dark:text-light w-full">
                     SOBRE NUESTRAS FRANQUICIAS
@@ -103,14 +103,14 @@ const FranquiciasTarjetas = () => {
               </div>
             </div>
             {/* Title */}
-            <div className=''>
+            <div className='lg:mt-12'>
               {/* Questions */}
-              <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+              <ul className="grid sm:grid-cols-2 :grid-cols-3 gap-8">
                 {franquiciaDescripciones.map(description => {
                   return (
                     <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">
                       <Accordion
-                        height='h-[120px]'
+                        height='h-[130px]'
                         title={description.title}
                         description={description.description}
                       />
