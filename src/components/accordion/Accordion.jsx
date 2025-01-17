@@ -56,7 +56,7 @@ const Accordion = ({ description, title, height }) => {
 
       </button>
 
-      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto md:h-[380px]  lg:h-[340px] pb-8' : 'hidden'}`}
+      <div className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-[360px]  md:h-[380px]  lg:h-[340px] pb-8' : 'hidden'}`}
       >
         <p className={`${GENERAL_UI.PARAGRAPH} pt-8  dark:text-dark-6 w-full px-8 pb-4`}>
           {description}
