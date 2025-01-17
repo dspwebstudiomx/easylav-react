@@ -2,7 +2,7 @@
 import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, ScrollToTopButton, Section, SEOFriendly, Spacing, TitleH2 } from "components";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
-import { useShowModal } from 'hooks';
+import { useHandleModalToggle, useShowModal } from 'hooks';
 import { FaHome, FaInfoCircle } from "react-icons/fa";
 import { FaRegBuilding, FaXmark } from "react-icons/fa6";
 import PaquetesFranquicias from './PaquetesFranquicias';
@@ -39,12 +39,13 @@ const FRANQUICIAS_UI = {
   },
 };
 
+const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
 
+// Estructura
 const FranquiciasTarjetas = () => {
 
-  const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
-
   const { showModal } = useShowModal();
+  const { handleModalToggle } = useHandleModalToggle()
 
   return (
     <>

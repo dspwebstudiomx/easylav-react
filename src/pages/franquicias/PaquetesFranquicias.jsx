@@ -1,7 +1,9 @@
 // Importaciones
 import { ButtonSecondary, Container, Section } from "components"
 import { paquetesFranquicias } from "data"
-import { useState } from "react"
+import { useHandleModalToggle } from "hooks"
+
+
 import { FaCheck } from "react-icons/fa6"
 
 // Estilos
@@ -16,13 +18,7 @@ const styles = `${PAQUETES_FRANQUICIAS_UI.PADDING} ${PAQUETES_FRANQUICIAS_UI.MAR
 
 // Estructura
 const PaquetesFranquicias = () => {
-  // Funciones
-  const [showModal, setShowModal] = useState(false);
-
-  const handleModalToggle = () => {
-    setShowModal(!showModal);
-    document.body.style.overflow = !showModal && "hidden";
-  };
+  const { handleModalToggle } = useHandleModalToggle()
   return (
     <Section className={styles} id='paquetes-franquicias'>
       <Container>
