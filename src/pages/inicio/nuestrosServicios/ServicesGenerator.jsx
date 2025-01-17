@@ -15,7 +15,7 @@ const SERVICES_GENERATOR_PROPS = {
 };
 const SERVICES_GENERATOR_UI = {
   DIV: "w-full",
-  UL: "grid sm:grid-cols-2 xl:grid-cols-5 gap-6",
+  UL: "grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6",
   LI: {
     CLASSNAME:
       "flex flex-col gap-8 items-center justify-center shadow-xl p-8 border-2 rounded-xl bg-light",

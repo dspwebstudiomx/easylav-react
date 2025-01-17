@@ -49,8 +49,6 @@ const FranquiciasTarjetas = () => {
 
   return (
     <>
-
-      /
       <SEOFriendly
         title="Franquicias | Easylav: Tu lavandería ideal"
         url="easylav-react.netlify.app/franquicias"
@@ -62,7 +60,7 @@ const FranquiciasTarjetas = () => {
         ogType="website"
       />
       <Navbar />
-      <div className='bg-light mt-[80px] xl:mt-[80px] dark:bg-dark'>
+      <div className='bg-light mt-[80px] sm:mt-0 xl:mt-[80px] dark:bg-dark'>
         {/* Banner */}
         <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
           <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-2xl lg:items-center">
