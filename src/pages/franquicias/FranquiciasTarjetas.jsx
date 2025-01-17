@@ -2,11 +2,10 @@
 import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, ScrollToTopButton, Section, SEOFriendly, Spacing, TitleH2 } from "components";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
-import { useState } from 'react';
+import { useShowModal } from 'hooks';
 import { FaHome, FaInfoCircle } from "react-icons/fa";
 import { FaRegBuilding, FaXmark } from "react-icons/fa6";
 import PaquetesFranquicias from './PaquetesFranquicias';
-
 
 // Props
 
@@ -45,13 +44,7 @@ const FranquiciasTarjetas = () => {
 
   const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
 
-  const [showModal, setShowModal] = useState(false);
-
-  const handleModalToggle = () => {
-    setShowModal(!showModal);
-    document.body.style.overflow = !showModal && "hidden";
-  };
-
+  const { showModal } = useShowModal();
 
   return (
     <>
@@ -68,7 +61,7 @@ const FranquiciasTarjetas = () => {
         ogType="website"
       />
       <Navbar />
-      <div className='bg-light mt-[100px] sm:mt-0 xl:mt-[80px] dark:bg-dark'>
+      <div className='bg-light mt-[80px] xl:mt-[80px] dark:bg-dark'>
         {/* Banner */}
         <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
           <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-2xl lg:items-center">

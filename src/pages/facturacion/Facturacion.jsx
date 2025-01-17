@@ -3,7 +3,7 @@ import { CatedralMorelia } from "assets";
 import { BorderLeft, ContactFacturacion, Container, PageLayout, SEOFriendly, TitleH1 } from "components";
 
 // Estilos
-const TERMINOS_UI = {
+const FACTURACION_UI = {
   TITLEH1: {
     COLOR: "text- dark:text-light",
     FONT_SIZE: "text-3xl md:text-4xl",
@@ -32,7 +32,7 @@ const TERMINOS_UI = {
 };
 
 
-const styles = `${TERMINOS_UI.TITLEH1.COLOR} ${TERMINOS_UI.TITLEH1.FONT_SIZE} ${TERMINOS_UI.TITLEH1.FONT_WEIGHT} ${TERMINOS_UI.TITLEH1.LETTER_SPACING}`
+const styles = `${FACTURACION_UI.TITLEH1.COLOR} ${FACTURACION_UI.TITLEH1.FONT_SIZE} ${FACTURACION_UI.TITLEH1.FONT_WEIGHT} ${FACTURACION_UI.TITLEH1.LETTER_SPACING}`
 
 //Estructura
 const Facturacion = () => {
