@@ -1,10 +1,9 @@
 //Importaciones
-import { useState } from "react";
+import { useShowModal } from "hooks";
 
 // Custom Hook
 const useHandleModalToggle = () => {
-  const [showModal, setShowModal] = useState(false);
-
+  const { showModal, setShowModal } = useShowModal();
   const handleModalToggle = () => {
     setShowModal(!showModal);
     document.body.style.overflow = !showModal && "hidden";
