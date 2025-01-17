@@ -17,7 +17,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
             <li
               id={`navlink-${navlink.linkId}`}
               key={navlink.id}
-              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-xl"
+              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-2xl"
             >
               <NavHashLink
                 id={`link-${navlink.linkId}`}

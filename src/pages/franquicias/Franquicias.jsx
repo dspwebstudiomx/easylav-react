@@ -42,7 +42,7 @@ const FRANQUICIAS_UI = {
 const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
 
 // Estructura
-const FranquiciasTarjetas = () => {
+const Franquicias = () => {
 
   const { showModal } = useShowModal();
   const { handleModalToggle } = useHandleModalToggle()
@@ -183,5 +183,5 @@ const FranquiciasTarjetas = () => {
     </>
   );
 };
-export default FranquiciasTarjetas;
+export default Franquicias
 
