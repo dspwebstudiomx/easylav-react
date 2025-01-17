@@ -1,9 +1,40 @@
-import { CatedralMorelia } from "assets"
-import { BorderLeft, ContactFacturacion, Container, PageLayout, SEOFriendly, TitleH1 } from "components"
-import { FRANQUICIAS_UI } from "constants/constants"
+//Importaciones
+import { CatedralMorelia } from "assets";
+import { BorderLeft, ContactFacturacion, Container, PageLayout, SEOFriendly, TitleH1 } from "components";
 
-const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`
+// Estilos
+const TERMINOS_UI = {
+  TITLEH1: {
+    COLOR: "text- dark:text-light",
+    FONT_SIZE: "text-3xl md:text-4xl",
+    FONT_WEIGHT: "font-semibold",
+    LETTER_SPACING: "tracking-wide",
+  },
+  CONTAINER: {
+    DISPLAY: "grid 2xl:grid-cols-2 sm:gap-8",
+  },
+  COLUMNA_1: {
+    DISPLAY: "flex flex-col gap-2",
+  },
+  COLUMNA_2: {
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-12",
+    HEIGHT: "lg:h-auto md:h-[500px]",
+    MARGIN: "mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto",
+    PADDING: "p-0",
+    WIDTH: "w-full",
+  },
+  UL: {
+    DISPLAY: "flex flex-col gap-0",
+  },
+  IMAGE: {
+    WIDTH: "w-[280px] lg:w-[360px]",
+  },
+};
 
+
+const styles = `${TERMINOS_UI.TITLEH1.COLOR} ${TERMINOS_UI.TITLEH1.FONT_SIZE} ${TERMINOS_UI.TITLEH1.FONT_WEIGHT} ${TERMINOS_UI.TITLEH1.LETTER_SPACING}`
+
+//Estructura
 const Facturacion = () => {
   return (
     <PageLayout>

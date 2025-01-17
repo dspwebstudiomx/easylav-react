@@ -5,10 +5,9 @@
   Fecha: 2024-09-02
 */
 
+// Importaciones
 import { CatedralMorelia } from "assets";
 import { BorderLeft, PageLayout, SEOFriendly, TextWithBulletPoint, TitleH1 } from "components";
-
-
 
 
 // Estructura
