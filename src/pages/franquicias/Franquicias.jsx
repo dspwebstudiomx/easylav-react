@@ -2,9 +2,9 @@
 import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, ScrollToTopButton, Section, SEOFriendly, Spacing, TitleH2 } from "components";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
-import { useHandleModalToggle, useShowModal } from 'hooks';
-import { FaHome, FaInfoCircle } from "react-icons/fa";
-import { FaRegBuilding, FaXmark } from "react-icons/fa6";
+import { useShowModal } from 'hooks';
+import { FaHome, FaInfoCircle } from 'react-icons/fa';
+import { FaRegBuilding, FaXmark } from 'react-icons/fa6';
 import PaquetesFranquicias from './PaquetesFranquicias';
 
 // Props
@@ -43,10 +43,7 @@ const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SI
 
 // Estructura
 const Franquicias = () => {
-
   const { showModal } = useShowModal();
-  const { handleModalToggle } = useHandleModalToggle()
-
   return (
     <>
       <SEOFriendly
@@ -148,7 +145,7 @@ const Franquicias = () => {
               <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
               <ButtonSecondary title={"Solicita más información"}
                 width={"w-[340px]"}
-                onClick={handleModalToggle}
+                onClick={showModal}
                 icon={<FaInfoCircle />}
                 distance='mx-1' />
 
@@ -167,7 +164,7 @@ const Franquicias = () => {
             id="franquicias-formulario"
             className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
           >
-            <button id="button-close" onClick={handleModalToggle}>
+            <button id="button-close" onClick={showModal}>
               <FaXmark
                 size={36}
                 className="z-30 ml-auto text-primary_dark"

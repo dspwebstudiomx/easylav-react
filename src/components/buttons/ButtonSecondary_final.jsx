@@ -1,10 +1,3 @@
-/*
-  ButtonSecondary
-  =====================================
-  Creado por : Daniel Pérez
-  Fecha: 2022-08-21
-*/
-
 // Importaciones
 import { Button } from 'components';
 import PropTypes from 'prop-types';
@@ -19,8 +12,7 @@ const BUTTON_SECONDARY_UI = {
 
 // Estructura
 export default function ButtonSecondary({ ...props }) {
-
-  const { title, href, icon, type, titleMailto, distance, width, name, onClick } = props
+  const { title, href, icon, type, onClick, titleMailto, distance, width, name } = props;
 
   return (
     <Button
@@ -37,19 +29,8 @@ export default function ButtonSecondary({ ...props }) {
       distance={distance}
       name={name}
     />
-  )
+  );
 }
 
 ButtonSecondary.propTypes = {
-  title: PropTypes.string,
-  height: PropTypes.string,
-  width: PropTypes.string,
-  href: PropTypes.string,
-  border: PropTypes.string,
-  type: PropTypes.string,
-  distance: PropTypes.string,
-  icon: PropTypes.any,
-  onClick: PropTypes.func,
-  titleMailto: PropTypes.string,
-  name: PropTypes.string
 }

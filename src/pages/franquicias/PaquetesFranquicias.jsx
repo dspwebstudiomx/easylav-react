@@ -1,7 +1,7 @@
 // Importaciones
 import { ButtonSecondary, Container, Section } from "components"
 import { paquetesFranquicias } from "data"
-import { useHandleModalToggle } from "hooks"
+import { useShowModal } from "hooks"
 
 
 import { FaCheck } from "react-icons/fa6"
@@ -18,7 +18,7 @@ const styles = `${PAQUETES_FRANQUICIAS_UI.PADDING} ${PAQUETES_FRANQUICIAS_UI.MAR
 
 // Estructura
 const PaquetesFranquicias = () => {
-  const { handleModalToggle } = useHandleModalToggle()
+  const { setShowModal } = useShowModal();
   return (
     <Section className={styles} id='paquetes-franquicias'>
       <Container>
@@ -37,7 +37,7 @@ const PaquetesFranquicias = () => {
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <ButtonSecondary title={"Contactar"}
                     width={"w-full 2xl:w-2/3 mx-auto"}
-                    onClick={handleModalToggle}
+                    onClick={() => setShowModal(true)}
                     icon={''}
                     distance='mx-1' />
                 </div>

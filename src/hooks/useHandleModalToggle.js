@@ -1,14 +1,16 @@
 //Importaciones
 import { useShowModal } from "hooks";
+import { useEffect } from "react";
 
 // Custom Hook
+
 const useHandleModalToggle = () => {
   const { showModal, setShowModal } = useShowModal();
-  const handleModalToggle = () => {
+  useEffect(() => {
     setShowModal(!showModal);
     document.body.style.overflow = !showModal && "hidden";
-  };
-  return { handleModalToggle };
+    return { showModal, setShowModal };
+  });
 };
 
 export default useHandleModalToggle;

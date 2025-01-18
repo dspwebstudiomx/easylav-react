@@ -3,7 +3,7 @@ import { lazy } from "react";
 const Inicio = lazy(() => import("pages/inicio/Inicio"));
 const Sucursales = lazy(() => import("pages/sucursales/Sucursales"));
 const ContactoPagina = lazy(() => import("pages/contacto/ContactoPagina"));
-const Franquicias = lazy(() => import("pages/franquicias/FranquiciasTarjetas"));
+const Franquicias = lazy(() => import("pages/franquicias/Franquicias"));
 const NotFound = lazy(() => import("pages/404/NotFound"));
 const PoliticaPrivacidad = lazy(
   () => import("pages/politica-privacidad/PoliticaPrivacidad"),
