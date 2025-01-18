@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 // Estilos
 const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl justify-center",
+    "flex flex-col gap-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
 };
 
 

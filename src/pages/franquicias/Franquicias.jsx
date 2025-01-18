@@ -102,7 +102,7 @@ const Franquicias = () => {
             {/* Title */}
             <div className='lg:mt-12'>
               {/* Questions */}
-              <ul className="grid sm:grid-cols-2 :grid-cols-3 gap-8">
+              <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {franquiciaDescripciones.map(description => {
                   return (
                     <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">

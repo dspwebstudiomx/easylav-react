@@ -1,12 +1,13 @@
-// NavLinksDesktop.jsx
 import { navLinksPages, navLinksSections } from "data/navlinks";
 import { scrollWithOffset } from "functions";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
 const NavLinksDesktop = () => {
-  const classes =
-    "uppercase font-semibold text-base text-dark text-bolder hover:text-secondary_light last:text-primary_dark target:text-primary"
+  const baseClasses =
+    "uppercase font-semibold text-base text-dark text-bolder hover:text-secondary_light last:text-primary_dark target:text-primary";
+
+  const activeClasses = "text-secondary_dark"; // Add this line for active link styling
 
   return (
     <>
@@ -19,11 +20,12 @@ const NavLinksDesktop = () => {
             <NavHashLink
               key={navlink.id}
               id={`navlink ${navlink.name}`}
-              className={classes}
+              className={({ isActive }) =>
+                `${baseClasses} ${isActive ? activeClasses : ''}`
+              }
               to={navlink.href}
               scroll={scrollWithOffset}
               title={`navlink ${navlink.linkId}`}
-
             >
               {navlink.name}
             </NavHashLink>
@@ -34,16 +36,17 @@ const NavLinksDesktop = () => {
             <NavLink
               key={navlink.id}
               id={`navlink-${navlink.name}`}
-              className={classes}
+              className={({ isActive }) =>
+                `${baseClasses} ${isActive ? activeClasses : ''}`
+              }
               to={navlink.href}
               title={`navlink ${navlink.linkId}`}
-
             >
               {navlink.name}
             </NavLink>
           );
         })}
-      </ul >
+      </ul>
     </>
   );
 };

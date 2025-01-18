@@ -20,7 +20,7 @@ const Accordion = ({ description, title, height }) => {
   };
 
   const styles = {
-    width: 'w-full lg:w-[360px] 2xl:w-full h-[140px]',
+    width: 'w-full lg:w-[360px] h-[140px]',
   }
 
   return (
