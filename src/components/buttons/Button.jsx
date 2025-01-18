@@ -27,7 +27,7 @@ const Button = ({ backgroundColor, title, border, icon, type, onClick, href, tex
   return (
     <HashLink to={href} scroll={el => scrollWithOffset(el)}>
       <button name={name} onClick={typeof onClick === 'function' ? onClick : undefined} type={type} className={`${width} ${backgroundColor} ${border} ${ButtonUI} ${textColor} flex gap-3 z-50`} href={href}>
-        <span>{icon}</span>
+        {icon && <span>{icon}</span>}
         {title}
       </button>
     </HashLink>
