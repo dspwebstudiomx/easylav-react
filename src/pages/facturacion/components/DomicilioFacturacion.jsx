@@ -21,7 +21,7 @@ const DomicilioFacturacion = () => {
             name="user_street"
             required
           />
-          {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
+          {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>Por favor, ingrese una ciudad válida.</span> </p>}
         </div>
         {/* Calle */}
 
@@ -35,7 +35,7 @@ const DomicilioFacturacion = () => {
             type="number"
             required
           />
-          {touched.user_numero && errors.user_numero && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
+          {touched.user_numero && errors.user_numero && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>Por favor, ingrese un número válido.</span> </p>}
         </div>
         {/* Número */}
 
@@ -48,7 +48,7 @@ const DomicilioFacturacion = () => {
             name="user_suburb"
             required
           />
-          {touched.user_colonia && errors.user_colonia && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
+          {touched.user_colonia && errors.user_colonia && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>Por favor, ingrese una colonia válida.</span> </p>}
         </div>
         {/* Colonia */}
 
