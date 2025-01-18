@@ -48,7 +48,7 @@ const HeroInicio = () => {
             <h1 className={styles.title}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </h1>
             <p className={styles.paragraph}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus in architecto, quibusdam earum placeat officiis ea molestias esse consequuntur aliquam culpa tempora ut dolorum nisi quaerat autem quisquam. Asperiores temporibus adipisci fugiat et sed incidunt maiores magnam iste voluptate sunt.</p>
             <ButtonContainer position={'items-center'}>
-              <ButtonPrimary title='Nuestros servicios' href='/#servicios' />
+              <ButtonPrimary title='Nuestros servicios' href='/#servicios' width={"w-[340px]"} />
             </ButtonContainer>
           </div>
         </Container>

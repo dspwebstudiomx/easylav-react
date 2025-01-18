@@ -74,7 +74,7 @@ const Franquicias = () => {
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <ButtonPrimary title='Conoce lo que ofrecemos' href='#sobre-nuestras-franquicias' />
+                <ButtonPrimary title='Conoce lo que ofrecemos' href='#sobre-nuestras-franquicias' width={"w-[340px]"} />
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Franquicias = () => {
                 })}
               </ul>
               <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}          >
-                <ButtonSecondary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'min-w-[240px] sm:w-[140px]'} name='ver sucursales' />
+                <ButtonSecondary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'min-w-[340px] sm:w-[140px]'} name='ver sucursales' />
               </ButtonContainer>
               {/* Questions */}
 
@@ -142,7 +142,7 @@ const Franquicias = () => {
               </div>
             </div>
             <ButtonContainer position={'items-center sm:justify-center my-8'}>
-              <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[240px]'} name='Regresar a inicio' />
+              <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[340px]'} name='Regresar a inicio' />
               <ButtonSecondary title={"Solicita más información"}
                 width={"w-[340px]"}
                 onClick={showModal}

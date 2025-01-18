@@ -16,9 +16,9 @@ const BUTTON_UI = {
   LETTER_SPACING: "tracking-wider sm:tracking-normal",
   ANIMATION:
     "transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300",
-  MAX_WIDTH: "min-w-[240px]"
+  // MAX_WIDTH: "min-w-[240px] 2xl:min-w-[320px]"
 
-};
+}
 
 // Estructura
 const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.HEIGHT} ${BUTTON_UI.FONT_SIZE} ${BUTTON_UI.PADDING} ${BUTTON_UI.FONT_WEIGHT} ${BUTTON_UI.ROUNDED} ${BUTTON_UI.TEXT_TRANSFORM} ${BUTTON_UI.LETTER_SPACING} ${BUTTON_UI.ANIMATION} max-screen-${BUTTON_UI.MAX_WIDTH}`

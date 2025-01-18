@@ -36,7 +36,7 @@ const PaquetesFranquicias = () => {
                   </h2>
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <ButtonSecondary title={"Contactar"}
-                    width={"w-full 2xl:w-2/3 mx-auto"}
+                    width={"w-full"}
                     onClick={() => setShowModal(true)}
                     icon={''}
                     distance='mx-1' />
