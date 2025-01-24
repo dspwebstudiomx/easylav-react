@@ -20,7 +20,7 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "",
-    FONT_SIZE: "text-[26px] sm:text-2xl xl:text-2xl",
+    FONT_SIZE: "text-[26px] sm:text-2xl xl:text-3xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -34,15 +34,16 @@ export const GENERAL_UI = {
     FONT_FAMILY: "font-din-bold",
     FONT_SIZE: "text-3xl",
     FONT_WEIGHT: "font-semibold",
-    COLOR: "text-dark dark:text-light",
+    COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
     JUSTIFY: "mx-auto",
+    TEXT_TRANSFORM: "uppercase",
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-xl",
+    FONT_SIZE: "text-2xl",
     FONT_WEIGHT: "font-bold",
-    COLOR: "text-primary_dark dark:text-primary",
+    COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
     CARD: "text-base uppercase font-semibold",
     TEXT_TRANSFORM: "uppercase",
