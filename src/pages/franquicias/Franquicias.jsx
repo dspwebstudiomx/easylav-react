@@ -43,7 +43,8 @@ const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SI
 
 // Estructura
 const Franquicias = () => {
-  const { showModal } = useShowModal();
+
+  const { showModal, setShowModal } = useShowModal()
   return (
     <>
       <SEOFriendly
@@ -145,10 +146,11 @@ const Franquicias = () => {
               <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[340px]'} name='Regresar a inicio' />
               <ButtonSecondary title={"Solicita más información"}
                 width={"w-[340px]"}
-                onClick={showModal}
+                onClick={() => setShowModal(true)}
                 icon={<FaInfoCircle />}
-                distance='mx-1' />
-
+                distance='mx-1'
+                id='mas-informacion'
+              />
             </ButtonContainer>
           </Container>
         </Section>
@@ -164,7 +166,7 @@ const Franquicias = () => {
             id="franquicias-formulario"
             className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
           >
-            <button id="button-close" onClick={showModal}>
+            <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
                 size={36}
                 className="z-30 ml-auto text-primary_dark"

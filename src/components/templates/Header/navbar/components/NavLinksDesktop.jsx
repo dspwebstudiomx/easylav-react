@@ -20,9 +20,10 @@ const NavLinksDesktop = () => {
             <NavHashLink
               key={navlink.id}
               id={`navlink ${navlink.name}`}
-              className={({ isActive }) =>
-                `${baseClasses} ${isActive ? activeClasses : ''}`
-              }
+              className={({ isActive }) => {
+                const classNames = `${baseClasses} ${isActive ? activeClasses : ''}`;
+                return classNames;
+              }}
               to={navlink.href}
               scroll={scrollWithOffset}
               title={`navlink ${navlink.linkId}`}
@@ -36,11 +37,13 @@ const NavLinksDesktop = () => {
             <NavLink
               key={navlink.id}
               id={`navlink-${navlink.name}`}
-              className={({ isActive }) =>
-                `${baseClasses} ${isActive ? activeClasses : ''}`
-              }
+              className={({ isActive }) => {
+                const classNames = `${baseClasses} ${isActive ? activeClasses : ''}`;
+                return classNames;
+              }}
               to={navlink.href}
               title={`navlink ${navlink.linkId}`}
+            // Spread the remaining props to avoid passing isActive
             >
               {navlink.name}
             </NavLink>

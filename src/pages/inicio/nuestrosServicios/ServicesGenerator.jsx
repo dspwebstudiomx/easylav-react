@@ -18,7 +18,7 @@ const SERVICES_GENERATOR_UI = {
   UL: "grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6",
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center shadow-xl p-8 border-2 rounded-xl bg-light",
+      "flex flex-col gap-8 items-center justify-center shadow-xl border-2 rounded-xl bg-light w-full p-8",
     DIV_VIDEO: "mx-auto w-32 sm:w-24 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },
