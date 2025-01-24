@@ -8,7 +8,7 @@ const HeroInicioVideo = () => {
 
   const HEROINICIO_UI = {
     HEIGHT:
-      "h-[80vh] sm:h-[100vh] md:h-[400px] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
+      "h-[70vh] sm:h-[100vh] md:h-[400px] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
     THEME: "dark",
     BACKGROUND: {
       OPACITY: "opacity-90",
