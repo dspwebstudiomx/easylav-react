@@ -8,7 +8,7 @@ const HeroInicioVideo = () => {
 
   const HEROINICIO_UI = {
     HEIGHT:
-      "h-[85vh] sm:h-[100vh] md:h-[400px] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
+      "h-[85vh] sm:h-[100vh] md:h-[60vh] lg:h-[60vh] xl:h-[60vh] 2xl:h-[75vh]",
     THEME: "dark",
     BACKGROUND: {
       OPACITY: "opacity-90",
@@ -20,7 +20,7 @@ const HeroInicioVideo = () => {
       PARAGRAPH: "hidden",
     },
     TITLE: {
-      FONT_SIZE: "text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl",
+      FONT_SIZE: "text-2xl md:text-4xl",
       FONT_WEIGHT: "font-bold",
       FONT_FAMILY: "",
       LETTER_SPACING: "tracking-wider",
