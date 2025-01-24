@@ -1,5 +1,5 @@
 // Importaciones
-import { ButtonSecondary, Container, Section } from "components"
+import { ButtonContainer, ButtonSecondary, Container, Section } from "components"
 import { paquetesFranquicias } from "data"
 import { useShowModal } from "hooks"
 
@@ -22,7 +22,7 @@ const PaquetesFranquicias = () => {
   return (
     <Section className={styles} id='paquetes-franquicias'>
       <Container>
-        <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 md:gap-12 max-w-screen-2xl mx-auto">
+        <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 2xl:grid-cols-4 md:gap-12 max-w-screen-2xl mx-auto">
 
           {paquetesFranquicias.map(paquete => {
             return (
@@ -35,11 +35,13 @@ const PaquetesFranquicias = () => {
                     <span className="sr-only">Plan</span>
                   </h2>
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <ButtonSecondary title={"Contactar"}
-                    width={"w-full"}
-                    onClick={() => setShowModal(true)}
-                    icon={''}
-                    distance='mx-1' />
+                  <ButtonContainer position='justify-center'>
+                    <ButtonSecondary title={"Contactar"}
+                      width={"w-full"}
+                      onClick={() => setShowModal(true)}
+                      icon={''}
+                      distance='mx-1' />
+                  </ButtonContainer>
                 </div>
                 {/* Primera Parte */}
 
