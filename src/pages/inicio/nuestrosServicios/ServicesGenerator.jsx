@@ -15,10 +15,10 @@ const SERVICES_GENERATOR_PROPS = {
 };
 const SERVICES_GENERATOR_UI = {
   DIV: "w-full",
-  UL: "grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6",
+  UL: "grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8",
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center shadow-xl border-2 rounded-xl bg-light w-full p-8",
+      "flex flex-col gap-8 items-center justify-center shadow-xl border-2 rounded-xl bg-light p-8 w-[260px]",
     DIV_VIDEO: "mx-auto w-32 sm:w-24 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },

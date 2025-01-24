@@ -65,7 +65,7 @@ export default function ContactForm() {
 
 
   return (
-    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl p-8  bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
+    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
       <Formik
         initialValues={{
           user_name: '',
@@ -189,7 +189,7 @@ export default function ContactForm() {
 
             {/* Submit Button */}
             <ButtonContainer position='items-center justify-center'>
-              <SubmitButton title="Enviar mensaje" />
+              <SubmitButton title="Enviar mensaje" type="submit" />
             </ButtonContainer>
             {/* Submit Button */}
 
