@@ -15,7 +15,7 @@ export default {
       section: "#eaf7f6",
       primary: "#4ED1C1",
       primary_light: "#ccfbf1",
-      primary_dark: "#2BAC9F",
+      primary_dark: "#10413C",
       secondary: "#AF4DFA",
       secondary_light: "#AF8CFA",
       secondary_dark: "#7A36AD",
