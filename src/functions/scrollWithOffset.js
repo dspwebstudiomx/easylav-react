@@ -6,7 +6,7 @@ export default function scrollWithOffset(el) {
   const isTablet = window.innerWidth >= 768 && window.innerWidth < 1200;
   const isDesktop = window.innerWidth >= 1201;
 
-  const offsetMobile = isMobile && -100; // ajusta el offset para móviles
+  const offsetMobile = isMobile && -80; // ajusta el offset para móviles
   const offsetTablet = isTablet && 0; // ajusta el offset para tabletas
   const offsetDesktop = isDesktop ? -100 : 0; // ajusta el offset para desktop
 

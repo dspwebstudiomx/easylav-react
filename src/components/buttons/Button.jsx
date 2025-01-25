@@ -9,7 +9,7 @@ const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
   HEIGHT: "h-auto",
   WIDTH: "min-w-[190px] max-w-[240px] sm:w-[340px] xl:w-full",
-  FONT_SIZE: "text-lg",
+  FONT_SIZE: "text-base",
   PADDING: "px-6 py-4 sm:px-3 sm:py-4",
   FONT_WEIGHT: "font-semibold",
   TEXT_TRANSFORM: "uppercase",

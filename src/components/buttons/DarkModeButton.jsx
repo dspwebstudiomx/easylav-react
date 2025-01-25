@@ -34,7 +34,7 @@ export default function ThemeToggle() {
       aria-label='The Toggle'
       className="ml-5 w-12 h-12 mx-auto focus:outline-none"
       onClick={toggleTheme}>
-      {darkMode ? <IoSunnyOutline className='w-8 h-8 text-primary' /> : <FiMoon className='w-8 h-8 text-secondary' />}
+      {darkMode ? <IoSunnyOutline className='w-8 h-8 text-secondary_dark' /> : <FiMoon className='w-8 h-8 text-secondary' />}
     </button>
   );
 }
