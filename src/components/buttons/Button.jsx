@@ -1,3 +1,10 @@
+/*
+  Botón - Componente
+  =====================================+
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-09
+*/
+
 // Importaciones
 import { scrollWithOffset } from 'functions';
 import PropTypes from 'prop-types';
