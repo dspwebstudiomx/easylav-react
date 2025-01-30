@@ -22,7 +22,7 @@ const PaquetesFranquicias = () => {
   return (
     <Section className={styles} id='paquetes-franquicias'>
       <Container>
-        <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 2xl:grid-cols-4 md:gap-12 max-w-screen-2xl mx-auto">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 2xl:grid-cols-4 md:gap-12 2xl:gap-6 max-w-screen-2xl mx-auto">
 
           {paquetesFranquicias.map(paquete => {
             return (
@@ -37,7 +37,6 @@ const PaquetesFranquicias = () => {
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <ButtonContainer position='justify-center'>
                     <ButtonSecondary title={"Contactar"}
-                      width={"w-full"}
                       onClick={() => setShowModal(true)}
                       icon={''}
                       distance='mx-1' />
@@ -46,7 +45,7 @@ const PaquetesFranquicias = () => {
                 {/* Primera Parte */}
 
                 {/* Segunda Parte */}
-                <div className="p-8">
+                <div className="p-8 flex flex-col gap-6">
                   <p className="text-lg font-medium text-gray-900 sm:text-xl">Que incluye <span className='text-secondary_dark'>:</span></p>
 
                   <ul className="mt-2 space-y-2 sm:mt-4" id={`lista-caracteristica-${paquete.nombre}`}>
