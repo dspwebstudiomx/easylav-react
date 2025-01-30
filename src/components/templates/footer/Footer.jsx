@@ -72,7 +72,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mx-auto xl:w-[65vw]">
             <h3>Derechos Reservados 2024</h3>
             <h3 className="flex text-xs sm:text-sm">
-              <span>Diseñado y Desarrollado por:</span>
+              <span>Diseño y Desarrollo por:</span>
               <a
                 href="https://dspwebstudio.com"
                 target="_blank"

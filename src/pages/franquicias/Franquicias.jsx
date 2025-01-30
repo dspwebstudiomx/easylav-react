@@ -25,7 +25,7 @@ const FRANQUICIAS_UI = {
     DISPLAY: "flex flex-col gap-2",
   },
   COLUMNA_2: {
-    DISPLAY: "grid justify-items-center sm:grid-cols-2 gap-12",
+    DISPLAY: "grid justify-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-12",
     HEIGHT: "lg:h-auto md:h-[500px]",
     MARGIN: "mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto",
     PADDING: "p-0",
