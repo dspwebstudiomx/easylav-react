@@ -144,7 +144,7 @@ const Franquicias = () => {
             </div>
             <ButtonContainer position={'items-center sm:justify-center my-8'}>
               <ButtonPrimary href={'/#inicio'} title={'Regresar a inicio'} icon={<FaHome />} width={'min-w-[340px]'} name='Regresar a inicio' />
-              <ButtonSecondary title={"Solicita más información"}
+              <ButtonSecondary title={"Más información"}
                 width={"w-[340px]"}
                 onClick={() => setShowModal(true)}
                 icon={<FaInfoCircle />}

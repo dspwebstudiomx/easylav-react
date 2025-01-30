@@ -149,6 +149,7 @@ const SucursalCard = ({
         {!badge && (
           <div className='w-full'>
             <div className='flex md:hidden'>
+
               {/* Waze */}
               <a
                 href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}

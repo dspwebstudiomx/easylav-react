@@ -7,9 +7,9 @@ import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs
 // Estilos
 const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  HEIGHT: "h-auto",
-  WIDTH: "min-w-[190px] max-w-[240px] sm:w-[340px] xl:w-full",
-  FONT_SIZE: "text-base",
+  HEIGHT: "h-auto xl:min-h-[80px]",
+  WIDTH: "min-w-[190px] max-w-[240px] sm:w-[340px] xl:min-w-[280px]",
+  FONT_SIZE: "text-base xl:text-lg",
   PADDING: "px-6 py-4 sm:px-3 sm:py-4",
   FONT_WEIGHT: "font-semibold",
   TEXT_TRANSFORM: "uppercase",
