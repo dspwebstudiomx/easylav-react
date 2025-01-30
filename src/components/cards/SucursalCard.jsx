@@ -27,11 +27,11 @@ const SUCURSAL_CARD_UI = {
     },
   },
   PARAGRAPH: {
-    FONT_SIZE: "text-sm",
+    FONT_SIZE: "text-base",
     COLOR: "text-dark",
     FONT_WEIGHT: "",
     LETTER_SPACING: "",
-    LINE_HEIGHT: "leading-1",
+    LINE_HEIGHT: "leading-2",
     JUSTIFY: "",
   },
   ICON: {
@@ -46,7 +46,6 @@ const SucursalCard = ({
   position,
   place,
   gmap,
-  width,
   badge,
   advertisement,
   image,
@@ -77,7 +76,7 @@ const SucursalCard = ({
   };
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={`${styles.article} ${width}`}>
+    <article id={`sucursal-${title}`} key={id} className={`${styles.article} w-full`}>
       {/* Imagen Sucursal */}
       <div className={styles.image}>
         <div className='absolute bg-dark opacity-40 h-[180px]'></div>
