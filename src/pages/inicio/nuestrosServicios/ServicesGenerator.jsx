@@ -18,12 +18,12 @@ const SERVICES_GENERATOR_UI = {
   UL: "grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-12",
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center shadow-2xl border-2 border-primary rounded-xl bg-light p-8 w-full",
+      "flex flex-col gap-8 items-center justify-center shadow-2xl rounded-xl bg-light p-8 w-full hover:scale-110 duration-300",
     DIV_VIDEO: "mx-auto w-32 sm:w-24 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },
   IMAGE: "p-2",
-  PARAGRAPH: "text-dark text-[16px]",
+  PARAGRAPH: "text-dark text-[16px] hidden",
 };
 
 // Estructura

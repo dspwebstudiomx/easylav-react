@@ -23,7 +23,7 @@ const BUTTON_UI = {
   ROUNDED: "rounded-lg",
   LETTER_SPACING: "tracking-wider sm:tracking-normal",
   ANIMATION:
-    "transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300",
+    "transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300",
 }
 
 // Estructura
