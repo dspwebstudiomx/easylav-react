@@ -81,7 +81,7 @@ const SucursalCard = ({
       {/* Imagen Sucursal */}
       <div className={styles.image}>
         <div className='absolute bg-dark opacity-40 h-[180px]'></div>
-        <img src={image} alt={`sucursal ${title}`} title={`sucursal ${title}`} className='-z-10 w-full h-[180px] object-cover object-center' />
+        <img src={image} alt={`sucursal ${title}`} title={`sucursal ${title}`} className='-z-10 w-full h-[210px] object-cover object-center' />
       </div>
       {/* Imagen Sucursal */}
 
