@@ -12,7 +12,7 @@ import { services } from 'data';
 
 const SERVICES_UI = {
   DIV: "w-full",
-  UL: "grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-12",
+  UL: "flex flex-wrap gap-12",
 }
 
 // Estilos

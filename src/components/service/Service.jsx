@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const SERVICE_UI = {
   LI: {
     CLASSNAME:
-      "flex flex-col gap-8 items-center justify-center shadow-2xl rounded-xl bg-light p-8 w-full hover:scale-110 duration-300",
+      "flex flex-col gap-8 items-center justify-center shadow-2xl rounded-xl bg-light p-8 w-[260px] xl:w-[200px] hover:scale-110 duration-300",
     DIV_VIDEO: "mx-auto w-32 sm:w-24 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },
