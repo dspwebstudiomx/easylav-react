@@ -13,7 +13,7 @@ const NavLinksDesktop = () => {
     <>
       <ul
         id="navlinks-desktop"
-        className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0"
+        className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0 items-center"
       >
         {navLinksSections.map((navlink) => {
           return (
@@ -21,7 +21,7 @@ const NavLinksDesktop = () => {
               key={navlink.id}
               id={`navlink ${navlink.name}`}
               className={({ isActive }) => {
-                const classNames = `${baseClasses} ${isActive ? activeClasses : ''}`;
+                const classNames = `${isActive ? activeClasses : baseClasses}`;
                 return classNames;
               }}
               to={navlink.href}

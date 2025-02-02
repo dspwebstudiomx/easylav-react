@@ -46,6 +46,7 @@ export { default as Pager } from "components/pagination/Pager";
 export { default as PrevPageButton } from "components/pagination/PrevPageButton";
 export { default as BackgroundImageSection } from "components/sections/BackgroundImageSection";
 export { default as SEOFriendly } from "components/SEOFriendly";
+export { default as Service } from "components/service/Service";
 export { default as Footer } from "components/templates/footer/Footer";
 export { default as FooterLinksGenerator } from "components/templates/footer/FooterLinksGenerator";
 export { default as FooterNavHashLinksGenerator } from "components/templates/footer/FooterNavHashinksGenerator";
