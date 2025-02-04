@@ -7,7 +7,7 @@ const CityCardGenerator = ({ city }) => {
   const ciudad = localservices.filter(localservice => localservice.city === city)
   ciudad.sort((a, b) => a.title.localeCompare(b.title));
   return (
-    <article className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-12 items-center justify-center'>
+    <article className='flex flex-wrap gap-y-12 gap-x-2 items-center justify-center'>
       {
         ciudad.map((localservice) =>
           <SucursalCard

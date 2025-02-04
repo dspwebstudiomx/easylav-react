@@ -36,10 +36,14 @@ const PaquetesFranquicias = () => {
                   </h2>
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                   <ButtonContainer position='justify-center'>
-                    <ButtonSecondary title={"Contactar"}
+                    <ButtonSecondary
+                      title={"Contactar"}
+                      width={"w-[210px]"}
                       onClick={() => setShowModal(true)}
                       icon={''}
-                      distance='mx-1' />
+                      distance='mx-1'
+                      id='boton-Contactar'
+                    />
                   </ButtonContainer>
                 </div>
                 {/* Primera Parte */}

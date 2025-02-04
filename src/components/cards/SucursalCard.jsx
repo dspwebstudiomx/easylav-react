@@ -15,27 +15,59 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[260px] 2xl:w-[280px]",
+    WIDTH: "w-[260px] 2xl:w-[340px]",
   },
   IMAGE: {
     CONTAINER: {
+      WIDTH: "w-full",
       OVERFLOW: "overflow-hidden",
       ROUNDED: "rounded-t-lg",
-      WIDTH: "w-full",
+      OVERLAY: "absolute bg-dark opacity-40 h-[180px]",
+      IMG: "-z-10 w-full h-[210px] object-cover object-center"
     },
   },
-  PARAGRAPH: {
+  ICON: {
+    SIZE: '30',
+    COLOR: 'text-secondary'
+  },
+  TEXT: {
     FONT_SIZE: "text-base",
     COLOR: "text-dark",
     LINE_HEIGHT: "leading-2",
   },
-  ICON: {
-    SIZE: 20,
+  CONTENT: {
+    SECTION: "flex flex-col justify-start gap-3 p-4 px-10",
+    TITLE: "flex items-center justify-center mx-auto",
+    DESCRIPTION: {
+      CONTAINER: "flex flex-col gap-4 my-4 justify-center",
+      INFO: "flex gap-6 justify-center"
+    }
+  }
+}
+
+const styles =
+{
+  article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
+  image: {
+    section: `${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH}`,
+    overlay: SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERLAY,
+    img: SUCURSAL_CARD_UI.IMAGE.CONTAINER.IMG
   },
-};
+  content: {
+    section: SUCURSAL_CARD_UI.CONTENT.SECTION,
+    title: SUCURSAL_CARD_UI.CONTENT.TITLE,
+    icon: {
+      size: SUCURSAL_CARD_UI.ICON.SIZE,
+      color: SUCURSAL_CARD_UI.ICON.COLOR
+    },
+    text: `${SUCURSAL_CARD_UI.TEXT.FONT_SIZE} ${SUCURSAL_CARD_UI.TEXT.COLOR} ${SUCURSAL_CARD_UI.TEXT.LINE_HEIGHT}`,
+    description: {
+      container: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.CONTAINER,
+      info: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.INFO
+    }
+  },
 
-const styles = `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH} w-full`
-
+}
 // Utility function to determine if the branch is open
 const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => {
   const currentTime = new Date();
@@ -71,67 +103,53 @@ const renderMapLinks = (position, title, gmap) => (
 );
 
 // Estructura
-const SucursalCard = ({
-  title,
-  id,
-  position,
-  place,
-  gmap,
-  badge,
-  advertisement,
-  image,
-  serviceday1,
-  servicehour1,
-  openHour,
-  closeHour,
-  openMinute,
-  closeMinute,
-}) => {
+const SucursalCard = ({ title, position, place, gmap, badge, advertisement, image, serviceday1, servicehour1, openHour, closeHour, openMinute, closeMinute }) => {
   const isOpen = isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute);
 
   return (
-    <article id={`sucursal-${title}`} key={id} className={styles}>
+    <article id={`sucursal-${title}`} key={title} className={styles.article}>
 
       {/* Imagen Sucursal */}
-      <div className={`${SUCURSAL_CARD_UI.IMAGE.CONTAINER.OVERFLOW} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.ROUNDED} ${SUCURSAL_CARD_UI.IMAGE.CONTAINER.WIDTH}`}>
-        <div className='absolute bg-dark opacity-40 h-[180px]'></div>
-        <img src={image} alt={`Sucursal ${title}`} title={`Sucursal ${title}`} className='-z-10 w-full h-[210px] object-cover object-center' />
+      <div className={styles.image.section}>
+        <div className={styles.image.opacity}></div>
+        <img className={styles.image.img} src={image} alt={`Sucursal ${title}`} title={`Sucursal ${title}`} />
       </div>
       {/* Imagen Sucursal */}
 
       {/* Contenido */}
-      <div className='flex flex-col justify-start gap-3 p-4 px-10'>
-        <div className='flex items-center justify-center mx-auto'>
+      <div className={styles.content.section}>
+
+        {/* Título */}
+        <div className={styles.content.title}>
           <TitleH3>
             {title}
           </TitleH3>
         </div>
-        <div className='flex flex-col gap-4 my-4'>
+        {/* Título */}
+
+        {/* Descripción */}
+        <div className={styles.content.description.container}>
+
           {/* Dirección */}
-          <a href={gmap} target='_blank' rel='noopener noreferrer' title={`Sucursal ${title}`}>
-            <div className='flex gap-4'>
-              <span className='text-secondary'>
-                <FaMapMarkerAlt size={SUCURSAL_CARD_UI.ICON.SIZE} />
-              </span>
-              <span className={`${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT}`}>{place}</span>
-            </div>
+          <a className={styles.content.description.info} href={gmap} target='_blank' rel='noopener noreferrer' title={`Sucursal ${title}`}>
+            <FaMapMarkerAlt size={styles.content.icon.size} className={styles.content.icon.color} />
+            <span className={styles.content.text}>{place}</span>
           </a>
           {/* Dirección */}
 
           {/* Horario */}
-          <div className='mx-auto mb-2 flex w-full items-center gap-4'>
-            <span className='text-secondary'>
-              <FaRegClock size={SUCURSAL_CARD_UI.ICON.SIZE} />
-            </span>
-            <div className='flex gap-3 xl:gap-2'>
-              <div className='flex flex-col gap-1'>
-                <span className={`${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT}`}>{serviceday1}</span>
-                <span className={`${SUCURSAL_CARD_UI.PARAGRAPH.COLOR} ${SUCURSAL_CARD_UI.PARAGRAPH.FONT_SIZE} ${SUCURSAL_CARD_UI.PARAGRAPH.LINE_HEIGHT}`}>{servicehour1}</span>
-              </div>
+          <div className={styles.content.description.info}>
+            <FaRegClock size={styles.content.icon.size} className={styles.content.icon.color} />
+            <div className={styles.content.text}>
+              <span>{serviceday1}</span>
+              <span>{servicehour1}</span>
             </div>
           </div>
           {/* Horario */}
+
         </div>
+        {/* Descripción */}
+
       </div>
       {/* Contenido */}
 
@@ -139,22 +157,24 @@ const SucursalCard = ({
       {renderOpenClosedBadge(isOpen)}
 
       {/* Badge Aviso */}
-      {advertisement && (
-        <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm'>
-          <p className='ml-8'>{advertisement}</p>
-        </div>
-      )}
+      {
+        advertisement && (
+          <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm'>
+            <p className='ml-8'>{advertisement}</p>
+          </div>
+        )
+      }
       {/* Badge Aviso */}
 
       {/* Badge */}
       <section>
         {badge ? (
-          <div className=''>
+          <>
             <Badge backgroundColor='bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary'>
-              <p className='text-base'>{badge}</p>
+              <p className='text-base uppercase px-8 py-2'>{badge}</p>
             </Badge>
             {renderMapLinks(position, title, gmap)}
-          </div>
+          </>
         ) : (
           <div className='w-full'>
             {renderMapLinks(position, title, gmap)}
@@ -162,7 +182,7 @@ const SucursalCard = ({
         )}
       </section>
       {/* Badge */}
-    </article>
+    </article >
   );
 }
 
