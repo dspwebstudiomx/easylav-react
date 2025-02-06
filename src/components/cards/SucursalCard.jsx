@@ -41,6 +41,10 @@ const SUCURSAL_CARD_UI = {
     DESCRIPTION: {
       CONTAINER: "flex flex-col gap-4 my-4 justify-center",
       INFO: "flex gap-6 justify-center"
+    },
+    ADVERTISEMENT: {
+      CONTAINER: 'absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm',
+      PARAGRAPH: 'ml-8'
     }
   }
 }
@@ -64,6 +68,10 @@ const styles =
     description: {
       container: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.CONTAINER,
       info: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.INFO
+    },
+    advertisement: {
+      container: SUCURSAL_CARD_UI.CONTENT.ADVERTISEMENT.CONTAINER,
+      paragraph: SUCURSAL_CARD_UI.CONTENT.ADVERTISEMENT.PARAGRAPH,
     }
   },
 
@@ -149,7 +157,6 @@ const SucursalCard = ({ title, position, place, gmap, badge, advertisement, imag
 
         </div>
         {/* Descripción */}
-
       </div>
       {/* Contenido */}
 
@@ -159,8 +166,8 @@ const SucursalCard = ({ title, position, place, gmap, badge, advertisement, imag
       {/* Badge Aviso */}
       {
         advertisement && (
-          <div className='absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm'>
-            <p className='ml-8'>{advertisement}</p>
+          <div className={styles.content.advertisement.container}>
+            <p className={styles.content.advertisement.paragraph}>{advertisement}</p>
           </div>
         )
       }
