@@ -42,7 +42,7 @@ const SUCURSAL_CARD_UI = {
       CONTAINER: "flex flex-col gap-4 my-4 justify-center",
       INFO: "flex gap-6 justify-center"
     },
-    ADVERTISEMENT: {
+    BADGE: {
       CONTAINER: 'absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm',
       PARAGRAPH: 'ml-8'
     }
@@ -69,9 +69,9 @@ const styles =
       container: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.CONTAINER,
       info: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.INFO
     },
-    advertisement: {
-      container: SUCURSAL_CARD_UI.CONTENT.ADVERTISEMENT.CONTAINER,
-      paragraph: SUCURSAL_CARD_UI.CONTENT.ADVERTISEMENT.PARAGRAPH,
+    badge: {
+      container: SUCURSAL_CARD_UI.CONTENT.BADGE.CONTAINER,
+      paragraph: SUCURSAL_CARD_UI.CONTENT.BADGE.PARAGRAPH,
     }
   },
 
@@ -165,9 +165,9 @@ const SucursalCard = ({ title, position, place, gmap, badge, advertisement, imag
 
       {/* Badge Aviso */}
       {
-        advertisement && (
-          <div className={styles.content.advertisement.container}>
-            <p className={styles.content.advertisement.paragraph}>{advertisement}</p>
+        badge && (
+          <div className={styles.content.badge.container}>
+            <p className={styles.content.badge.paragraph}>{badge}</p>
           </div>
         )
       }
@@ -175,10 +175,10 @@ const SucursalCard = ({ title, position, place, gmap, badge, advertisement, imag
 
       {/* Badge */}
       <section>
-        {badge ? (
+        {advertisement ? (
           <>
             <Badge backgroundColor='bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary'>
-              <p className='text-base uppercase px-8 py-2'>{badge}</p>
+              <p className='text-base uppercase px-8 py-2'>{advertisement}</p>
             </Badge>
             {renderMapLinks(position, title, gmap)}
           </>
