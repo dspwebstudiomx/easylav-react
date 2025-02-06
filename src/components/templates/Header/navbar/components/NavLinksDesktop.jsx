@@ -7,7 +7,7 @@ const NavLinksDesktop = () => {
   const baseClasses =
     "uppercase font-semibold text-base text-dark text-bolder hover:text-secondary_dark last:text-primary_dark target:text-primary";
 
-  const activeClasses = "text-secondary uppercase"; // Add this line for active link styling
+  const activeClasses = ""; // Add this line for active link styling
 
   return (
     <>
