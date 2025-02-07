@@ -19,9 +19,10 @@ const NAVBAR_UI = {
     HEIGHT: "h-[100px]"
   },
   CONTAINER: {
-    DISPLAY: "flex justify-between items-center",
+    DISPLAY: "flex gap-12 justify-between items-center",
     MARGIN: "mx-auto",
     PADDING: "p-6 sm:px-8 md:px-8 xl:px-20 2xl:p-0",
+    WIDTH: "w-full",
     HEIGHT: "h-full"
   },
   NAVBAR: {
@@ -49,7 +50,7 @@ const Navbar = () => {
 
   const classes = {
     nav: `${NAVBAR_UI.NAV.BACKGROUND_COLOR} ${NAVBAR_UI.NAV.POSITION} ${NAVBAR_UI.NAV.SHADOW} ${NAVBAR_UI.NAV.WIDTH} ${NAVBAR_UI.NAV.HEIGHT}`,
-    container: `${NAVBAR_UI.CONTAINER.DISPLAY} ${NAVBAR_UI.CONTAINER.MARGIN} ${NAVBAR_UI.CONTAINER.PADDING}`,
+    container: `${NAVBAR_UI.CONTAINER.DISPLAY} ${NAVBAR_UI.CONTAINER.MARGIN} ${NAVBAR_UI.CONTAINER.PADDING} ${NAVBAR_UI.CONTAINER.WIDTH} ${NAVBAR_UI.CONTAINER.HEIGHT}`,
     navbar: `${NAVBAR_UI.NAVBAR.DISPLAY} ${NAVBAR_UI.NAVBAR.WIDTH} ${NAVBAR_UI.NAVBAR.HEIGHT}`,
     navlinks: `${NAVBAR_UI.NAVLINKS.DISPLAY} ${NAVBAR_UI.NAVLINKS.FONT_WEIGHT} ${NAVBAR_UI.NAVLINKS.FONT_SIZE}`
   }
