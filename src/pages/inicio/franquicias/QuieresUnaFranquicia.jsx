@@ -44,7 +44,7 @@ const QUIERES_UNA_FRANQUICIA_UI = {
       CONTENT:
         "¿Estás listo para emprender un negocio rentable y en crecimiento? ",
       TRANSFORM: "uppercase",
-      FONT_SIZE: "text-4xl",
+      FONT_SIZE: "text-2xl sm:text-3xl lg:text-4xl",
       FONT_WEIGHT: "font-base",
       JUSTIFY: "mx-auto",
     },
