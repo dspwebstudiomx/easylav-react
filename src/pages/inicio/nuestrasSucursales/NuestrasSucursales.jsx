@@ -34,7 +34,7 @@ const NuestrasSucursales = () => {
         modules={[Navigation]}
         className="mySwiper"
         keyboard={true}
-        spaceBetween={40}
+        spaceBetween={0}
         autoplay={{
           delay: 6000,
           disableOnInteraction: true,
@@ -54,12 +54,12 @@ const NuestrasSucursales = () => {
           },
           1024: {
             slidesPerView: 3,
-            spaceBetweenSlides: 0,
+            spaceBetweenSlides: 60,
             touchRatio: 1
           },
           1920: {
-            slidesPerView: 4,
-            spaceBetweenSlides: 20,
+            slidesPerView: 3,
+            spaceBetweenSlides: 40,
             touchRatio: 1
           },
         }}

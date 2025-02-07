@@ -1,10 +1,10 @@
 // Importaciones
-import { ButtonContainer, ButtonSecondary, Container, Section } from "components"
+import { ButtonContainer, ButtonSecondary, ContactFormFranquicias, Container, Modal, Section, Spacing } from "components"
 import { paquetesFranquicias } from "data"
 import { useShowModal } from "hooks"
 
 
-import { FaCheck } from "react-icons/fa6"
+import { FaCheck, FaXmark } from "react-icons/fa6"
 
 // Estilos
 const PAQUETES_FRANQUICIAS_UI = {
@@ -18,7 +18,8 @@ const styles = `${PAQUETES_FRANQUICIAS_UI.PADDING} ${PAQUETES_FRANQUICIAS_UI.MAR
 
 // Estructura
 const PaquetesFranquicias = () => {
-  const { setShowModal } = useShowModal();
+
+  const { showModal, setShowModal } = useShowModal()
   return (
     <Section className={styles} id='paquetes-franquicias'>
       <Container>
@@ -26,7 +27,7 @@ const PaquetesFranquicias = () => {
 
           {paquetesFranquicias.map(paquete => {
             return (
-              <li key={paquete.id} className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl hover:-translate-y-1 hover:scale-105 dark:bg-light">
+              <li key={paquete.id} className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl  dark:bg-light">
 
                 {/* Primera Parte */}
                 <div className="p-8 flex flex-col gap-6">
@@ -66,9 +67,28 @@ const PaquetesFranquicias = () => {
             )
           })}
 
-
         </ul>
       </Container>
+
+      {/* Modal */}
+      {showModal && (
+        <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
+          <div
+            id="franquicias-formulario"
+            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
+          >
+            <button id="button-close" onClick={() => setShowModal(false)}>
+              <FaXmark
+                size={36}
+                className="z-30 ml-auto text-primary_dark"
+              />
+            </button>
+            <Spacing distance='my-4' />
+            <ContactFormFranquicias />
+          </div>
+        </Modal>
+      )}
+      {/* Modal */}
     </Section>
   )
 }

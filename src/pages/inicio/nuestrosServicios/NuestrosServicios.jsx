@@ -47,7 +47,7 @@ const NuestrosServicios = () => {
           <ButtonSecondary
             title={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.TITLE}
             href={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.HREF}
-            width='min-w-[340px]'
+            width=''
             name={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.NAME}
           />
         </ButtonContainer>
