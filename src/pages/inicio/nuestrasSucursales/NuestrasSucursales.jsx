@@ -57,7 +57,7 @@ const NuestrasSucursales = () => {
               touchRatio: 1
             },
             1920: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetweenSlides: 40,
               touchRatio: 1
             },

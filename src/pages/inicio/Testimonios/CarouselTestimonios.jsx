@@ -1,3 +1,12 @@
+/*
+  Carousel Testimonios - Componente
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-08-12
+*/
+
+// Importaciones
+import { Container, Section } from 'components';
 import { testimonios } from 'data';
 import PropTypes from 'prop-types';
 import 'swiper/css';
@@ -8,12 +17,16 @@ import { Autoplay, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Testimonio from './Testimonio';
 
-// const styles = { swiperslide: 'w-[420px] mx-auto' }
+// Estilos
+const styles = {
+  backgroundColor: 'bg-secondary_dark dark:bg-primary'
+}
 
+// Estructura
 const CarouselTestimonios = () => {
   return (
-    <>
-      <div className='py-12 bg-secondary_dark dark:bg-primary_dark dark:bg-dark overflow-visible'>
+    <Section backgroundColor={styles.backgroundColor}>
+      <Container>
         <Swiper
           modules={[Pagination, Autoplay, Scrollbar]}
           className="mySwiper"
@@ -46,8 +59,8 @@ const CarouselTestimonios = () => {
               spaceBetweenSlides: 30,
               touchRatio: 1
             },
-            1910: {
-              slidesPerView: 4,
+            1920: {
+              slidesPerView: 3,
               spaceBetweenSlides: 30,
               touchRatio: 1
             },
@@ -61,11 +74,12 @@ const CarouselTestimonios = () => {
           )
           )}
         </Swiper>
-      </div >
-    </>
+      </Container>
+    </Section >
   )
 }
 
+// Propiedades
 CarouselTestimonios.propTypes = {
   title: PropTypes.string,
 }

@@ -9,7 +9,7 @@ const Contacto = () => {
       className="animate__slower grid items-center md:grid-cols-2 md:gap-12 xl:gap-20 w-full xl:w-4/5 justify-center mx-auto"
     >
       <div className="animate__animated animate__bounceInLeft animate__slowest grid gap-0">
-        <div className="2xl:w-3/4">
+        <div className="">
           <TitleH2>
             ¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.
           </TitleH2>
