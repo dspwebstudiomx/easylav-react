@@ -13,10 +13,10 @@ import { useState } from "react";
 const NAVBAR_UI = {
   NAV: {
     BACKGROUND_COLOR: "bg-light",
-    POSITION: "fixed top-0 z-50 sm:relative xl:fixed flex justify-center",
+    POSITION: "fixed top-0 z-50 sm:relative xl:fixed flex flex-col justify-center",
     SHADOW: "shadow-xl",
     WIDTH: "w-[100vw]",
-    HEIGHT: "h-[100px]"
+    HEIGHT: "h-[100px] md:h-full lg:h-[100px]"
   },
   CONTAINER: {
     DISPLAY: "flex gap-12 justify-between items-center",
