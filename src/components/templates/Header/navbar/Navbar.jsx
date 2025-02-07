@@ -16,12 +16,12 @@ const NAVBAR_UI = {
     POSITION: "fixed top-0 z-50 sm:relative xl:fixed flex flex-col justify-center",
     SHADOW: "shadow-xl",
     WIDTH: "w-[100vw]",
-    HEIGHT: "h-[100px] md:h-full lg:h-[100px]"
+    HEIGHT: "h-[100px] sm:h-[150px] xl:h-[100px]"
   },
   CONTAINER: {
     DISPLAY: "flex gap-12 justify-between items-center",
     MARGIN: "mx-auto",
-    PADDING: "p-6 sm:px-8 md:px-8 xl:px-20 2xl:p-0",
+    PADDING: "p-6 sm:px-8 md:px-0 2xl:p-0",
     WIDTH: "w-full",
     HEIGHT: "h-full"
   },
@@ -31,7 +31,7 @@ const NAVBAR_UI = {
     HEIGHT: "h-full",
   },
   NAVLINKS: {
-    DISPLAY: "flex items-center gap-4",
+    DISPLAY: "flex items-center justify-between gap-4",
     FONT_WEIGHT: "font-semibold",
     FONT_SIZE: "text-base",
   },
