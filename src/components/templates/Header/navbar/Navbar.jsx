@@ -25,7 +25,7 @@ const NAVBAR_UI = {
   NAVBAR: {
     DISPLAY: "flex items-center justify-between gap-4",
     WIDTH: "w-full",
-    HEIGHT: "h-[40px]",
+    HEIGHT: "h-[55px]",
   },
   NAVLINKS: {
     DISPLAY: "flex items-center gap-4",

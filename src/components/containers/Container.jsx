@@ -12,11 +12,11 @@ import PropTypes from "prop-types";
 // Estilos
 const CONTAINER_UI = {
   DISPLAY:
-    "flex flex-col gap-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl justify-center mx-auto p-8"
+    "flex flex-col gap-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl justify-center mx-auto p-4 py-6"
 };
 
 
-// Estructura
+// Estructura4
 export default function Container({ id, children, className }) {
   const classes = `${className} ${CONTAINER_UI.DISPLAY} `
   return (
