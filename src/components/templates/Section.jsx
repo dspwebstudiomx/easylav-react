@@ -10,8 +10,8 @@ import PropTypes from 'prop-types';
 
 // Clases
 const SECTION_UI = {
-  DISPLAY: "grid gap-12",
-  PADDING: "py-16 px-8 sm:p-20",
+  DISPLAY: "block",
+  PADDING: "p-12 sm:p-20 2xl:py-20",
   BACKGROUND_COLOR: "bg-light dark:bg-dark",
   TEXT_COLOR: "",
   BORDER_JUSTIFY: "mx-auto",

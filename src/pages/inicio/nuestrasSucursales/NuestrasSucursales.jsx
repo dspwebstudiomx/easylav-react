@@ -1,4 +1,4 @@
-import { BorderBottom, Container, SucursalCard, TitleH2 } from 'components';
+import { BorderCenter, Container, Section, SucursalCard, TitleH2 } from 'components';
 import { localservices } from 'data';
 import isOpen from 'hooks/useGetServiceHour';
 import PropTypes from 'prop-types';
@@ -24,70 +24,70 @@ const NuestrasSucursales = () => {
   });
 
   return (
-    <div className='py-12 bg-light dark:bg-dark'>
-      <Container className='mb-24'>
-        <BorderBottom>
+    <Section>
+      <Container>
+        <BorderCenter >
           <TitleH2>Nuestras Sucursales</TitleH2>
-        </BorderBottom>
+        </BorderCenter>
+        <Swiper
+          modules={[Navigation]}
+          className="mySwiper"
+          keyboard={true}
+          spaceBetween={0}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: true,
+          }}
+          loop={true}
+          navigation={true}
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+              spaceBetweenSlides: 20,
+              touchRatio: 1
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetweenSlides: 20,
+              touchRatio: 1
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetweenSlides: 60,
+              touchRatio: 1
+            },
+            1920: {
+              slidesPerView: 2,
+              spaceBetweenSlides: 40,
+              touchRatio: 1
+            },
+          }}
+        >
+          {sortedLocalServices.map((localservice) => (
+            <SwiperSlide key={localservice.id}>
+              <SucursalCard
+                key={localservice.id}
+                position={localservice.position}
+                place={localservice.place}
+                gmap={localservice.gmap}
+                title={localservice.title}
+                serviceday1={localservice.serviceday1}
+                servicehour1={localservice.servicehour1}
+                email={localservice.email}
+                badge={localservice.badge}
+                advertisement={localservice.advertisement}
+                image={localservice.image}
+                openHour={localservice.openHour}
+                closeHour={localservice.closeHour}
+                openMinute={localservice.openMinute}
+                closeMinute={localservice.closeMinute}
+                isOpen={isOpen}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Container>
-      <Swiper
-        modules={[Navigation]}
-        className="mySwiper"
-        keyboard={true}
-        spaceBetween={0}
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: true,
-        }}
-        loop={true}
-        navigation={true}
-        breakpoints={{
-          600: {
-            slidesPerView: 1,
-            spaceBetweenSlides: 20,
-            touchRatio: 1
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetweenSlides: 20,
-            touchRatio: 1
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetweenSlides: 60,
-            touchRatio: 1
-          },
-          1920: {
-            slidesPerView: 3,
-            spaceBetweenSlides: 40,
-            touchRatio: 1
-          },
-        }}
-      >
-        {sortedLocalServices.map((localservice) => (
-          <SwiperSlide key={localservice.id}>
-            <SucursalCard
-              key={localservice.id}
-              position={localservice.position}
-              place={localservice.place}
-              gmap={localservice.gmap}
-              title={localservice.title}
-              serviceday1={localservice.serviceday1}
-              servicehour1={localservice.servicehour1}
-              email={localservice.email}
-              badge={localservice.badge}
-              advertisement={localservice.advertisement}
-              image={localservice.image}
-              openHour={localservice.openHour}
-              closeHour={localservice.closeHour}
-              openMinute={localservice.openMinute}
-              closeMinute={localservice.closeMinute}
-              isOpen={isOpen}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    </Section>
   )
 }
 

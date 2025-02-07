@@ -16,9 +16,9 @@ const BorderCenter = ({ children }) => {
 
   return (
     <div className={styles}>
-      <span className='px-4'>
-        {children}
-      </span>
+      <span className='border-b-4  border-b-primary'></span>
+      {children}
+      <span className='px-4'></span>
     </div>
   )
 }

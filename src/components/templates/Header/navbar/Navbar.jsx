@@ -13,19 +13,21 @@ import { useState } from "react";
 const NAVBAR_UI = {
   NAV: {
     BACKGROUND_COLOR: "bg-light",
-    POSITION: "fixed top-0 z-50 sm:relative xl:fixed",
+    POSITION: "fixed top-0 z-50 sm:relative xl:fixed flex justify-center",
     SHADOW: "shadow-xl",
-    WIDTH: "w-full",
+    WIDTH: "w-[100vw]",
+    HEIGHT: "h-[100px]"
   },
   CONTAINER: {
     DISPLAY: "flex justify-between items-center",
     MARGIN: "mx-auto",
-    PADDING: "px-8 sm:px-8 md:px-8 xl:px-20 2xl:px-0",
+    PADDING: "p-6 sm:px-8 md:px-8 xl:px-20 2xl:p-0",
+    HEIGHT: "h-full"
   },
   NAVBAR: {
     DISPLAY: "flex items-center justify-between gap-4",
     WIDTH: "w-full",
-    HEIGHT: "h-[55px]",
+    HEIGHT: "h-full",
   },
   NAVLINKS: {
     DISPLAY: "flex items-center gap-4",
@@ -46,7 +48,7 @@ const Navbar = () => {
   };
 
   const classes = {
-    nav: `${NAVBAR_UI.NAV.BACKGROUND_COLOR} ${NAVBAR_UI.NAV.POSITION} ${NAVBAR_UI.NAV.SHADOW} ${NAVBAR_UI.NAV.WIDTH}`,
+    nav: `${NAVBAR_UI.NAV.BACKGROUND_COLOR} ${NAVBAR_UI.NAV.POSITION} ${NAVBAR_UI.NAV.SHADOW} ${NAVBAR_UI.NAV.WIDTH} ${NAVBAR_UI.NAV.HEIGHT}`,
     container: `${NAVBAR_UI.CONTAINER.DISPLAY} ${NAVBAR_UI.CONTAINER.MARGIN} ${NAVBAR_UI.CONTAINER.PADDING}`,
     navbar: `${NAVBAR_UI.NAVBAR.DISPLAY} ${NAVBAR_UI.NAVBAR.WIDTH} ${NAVBAR_UI.NAVBAR.HEIGHT}`,
     navlinks: `${NAVBAR_UI.NAVLINKS.DISPLAY} ${NAVBAR_UI.NAVLINKS.FONT_WEIGHT} ${NAVBAR_UI.NAVLINKS.FONT_SIZE}`
