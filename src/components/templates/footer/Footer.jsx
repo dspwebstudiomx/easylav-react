@@ -1,6 +1,6 @@
 import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, HeaderLine, Spacing } from "components";
-import { linksServicios } from "data";
-import { linksPoliticas, linksTerminos, navLinksPages, navLinksSections, } from "data/navlinks";
+import { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from "data";
+import { FaRegCopyright } from "react-icons/fa6";
 import FooterLogoWithSocial from "./FooterLogoWithSocial";
 
 export default function Footer() {
@@ -68,8 +68,11 @@ export default function Footer() {
           </Container>
         </div>
         <div className='bg-primary text-light'>
-          <Container className="flex flex-col sm:flex-row gap-4 justify-between items-center mx-auto xl:w-[65vw]">
-            <h3>Derechos Reservados 2024</h3>
+          <Container className="flex flex-col sm:flex-row gap-4 justify-between items-center mx-auto xl:w-[65vw] h-16">
+            <div className="flex gap-2 items-center justify-center">
+              <FaRegCopyright />
+              <h3>Derechos Reservados 2024</h3>
+            </div>
             <h3 className="flex text-xs sm:text-sm">
               <span>Diseño y Desarrollo por:</span>
               <a
