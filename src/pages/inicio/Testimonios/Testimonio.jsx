@@ -11,10 +11,10 @@ import PropTypes from 'prop-types';
 // Estilos
 const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[420px] sm:h-[380px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[380px] w-auto shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-lg sm:text-xl ",
   CONTAINER_CLASSNAME:
-    "flex items-center gap-2 flex-col sm:flex-row sm:items-start",
+    "flex flex-row justify-between",
   NAME_CLASSNAME: "font-semibold text-lg",
   NUMBER_STAR_CONTAINER_CLASSNAME:
     "text-dark justify-between flex mb-6",

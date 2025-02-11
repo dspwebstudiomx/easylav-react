@@ -47,7 +47,7 @@ const Inicio = () => (
         ogType={OG_TYPE} />
       {/* <HeroInicio /> */}
       <HeroInicioVideo />
-      <SectionBanner themeColor='primary' themeColorDark='secondary'>
+      <SectionBanner themeBackgroundColor='primary' themeTextColor='primary_darkcontrast' themeBackgroundDark='secondary_dark' themeTextColorDark='light'>
         <NavHashLink
           id={'navlink-to-iretiticateme'}
           to={'/sucursales/morelia/#sucursal-Iretiticateme'}

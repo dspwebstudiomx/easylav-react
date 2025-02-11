@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 // Clases
 const SECTION_UI = {
   DISPLAY: "block",
-  PADDING: "p-12 sm:p-20 2xl:py-20",
+  PADDING: "p-12 px-8 sm:p-20 2xl:py-20",
   BACKGROUND_COLOR: "bg-light dark:bg-dark",
   TEXT_COLOR: "",
   BORDER_JUSTIFY: "mx-auto",

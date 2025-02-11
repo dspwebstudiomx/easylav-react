@@ -10,9 +10,9 @@ import { BANNER_UI } from 'constants/constants'
 import PropTypes from 'prop-types'
 
 // Estructura
-const SectionBanner = ({ children, themeColor, themeColorDark }) => {
+const SectionBanner = ({ children, themeBackgroundColor, themeTextColorDark, themeTextColor, themeBackgroundDark }) => {
 
-  const classes = ` bg-${themeColor}_light text-${themeColor}_dark ${BANNER_UI.COLOR} ${BANNER_UI.PADDING} mx-auto text-center uppercase border-${themeColor} border-t-2 border-b-2 font-semibold tracking-wide text-2xl  dark:bg-${themeColorDark}_light dark:text-light  dark:border-${themeColorDark}`
+  const classes = ` ${BANNER_UI.COLOR} ${BANNER_UI.PADDING} mx-auto text-center uppercase font-semibold tracking-wide text-2xl bg-${themeBackgroundColor} text-${themeTextColor} border-t-2 border-b-2  border-${themeTextColor}   dark:bg-${themeBackgroundDark} dark:text-light dark:border-${themeTextColorDark}`
 
   return (
     <p className={classes}>
@@ -22,8 +22,10 @@ const SectionBanner = ({ children, themeColor, themeColorDark }) => {
 }
 SectionBanner.propTypes = {
   children: PropTypes.node.isRequired,
-  themeColor: PropTypes.string.isRequired,
-  themeColorDark: PropTypes.string.isRequired,
+  themeBackgroundColor: PropTypes.string.isRequired,
+  themeTextColor: PropTypes.string.isRequired,
+  themeTextColorDark: PropTypes.string.isRequired,
+  themeBackgroundDark: PropTypes.string.isRequired,
 }
 
 export default SectionBanner
