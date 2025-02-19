@@ -19,8 +19,7 @@ const SEOFriendly = ({
       <meta name="description" content={description} />
       <meta name="author" content={author} />
       <meta name="keywords" content={keywords} />
-      {/* <meta name="robots" content="index" /> */}
-      {/* <meta name="robots" content="follow" /> */}
+      <meta name="robots" content="index, follow" />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />

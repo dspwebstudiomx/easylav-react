@@ -33,7 +33,7 @@ const Testimonio = ({ testimonio }) => {
   const TESTIMONY_QUALIFICATION = testimonio.calificacion
 
   return (
-    <article id={`testimonio-${PERSON_NAME_TESTIMONY}`} className={TESTIMONIAL_UI.ARTICLE_CLASSNAME} key={TESTIMONY_ID}>
+    <article id={`testimonio-${testimonio.nombre}`} className={TESTIMONIAL_UI.ARTICLE_CLASSNAME} key={TESTIMONY_ID}>
       {/* Testimonio */}
       <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className={TESTIMONIAL_UI.PARAGRAPH_CLASSNAME}>{TESTIMONY}</p>
       {/* Testimonio */}

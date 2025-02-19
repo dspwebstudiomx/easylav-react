@@ -1,7 +1,7 @@
 // Inicio.jsx //
 
 //Importaciones
-import { canastaderopa_640 } from 'assets';
+import { VistaLavanderiaDesdeEntrada_2_640 } from 'assets';
 import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SectionBanner, SEOFriendly } from 'components';
 import { scrollWithOffset } from 'functions';
 import { lazy, Suspense } from 'react';
@@ -23,11 +23,11 @@ const CONTAINER_CLASSNAME = 'mx-auto'
 
 //Constantes de SEO Friendly
 const TITLE = 'Inicio | Easylav: Tu lavandería ideal'
-const DESCRIPTION = 'En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto'
-const KEYWORDS = 'lavandería, lavado, planchado, ropa'
+const DESCRIPTION = 'En Easylav, nos apasiona cuidar de tu ropa. Ofrecemos limpieza impecable y planchado perfecto para que tus prendas luzcan siempre como nuevas. Descubre nuestro servicio de lavandería de calidad superior, con atención a los detalles y resultados excepcionales. ¡Tu ropa merece lo mejor!'
+const KEYWORDS = 'lavanderia en Morelia'
 const URL = 'easylav-react.netlify.app'
 const AUTHOR = 'dspwebstudio'
-const OG_IMAGE = canastaderopa_640
+const OG_IMAGE = VistaLavanderiaDesdeEntrada_2_640
 const OG_IMAGE_ALT = 'canasta verde con ropa sucia'
 const OG_TYPE = 'website'
 // const ROBOTS = 'index, follow'

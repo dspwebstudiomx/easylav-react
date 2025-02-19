@@ -20,7 +20,7 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "",
-    FONT_SIZE: "text-[26px] sm:text-2xl xl:text-3xl",
+    FONT_SIZE: "text-[26px] sm:text-2xl xl:text-4xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",
@@ -31,8 +31,8 @@ export const GENERAL_UI = {
     TRANSFORM: "uppercase leading-7",
   },
   TITLEH2: {
-    FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-2xl",
+    FONT_FAMILY: "font-bold",
+    FONT_SIZE: "text-3xl",
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
@@ -41,7 +41,7 @@ export const GENERAL_UI = {
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-[21px]",
+    FONT_SIZE: "text-xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
