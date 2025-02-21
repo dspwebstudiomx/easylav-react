@@ -34,10 +34,7 @@ const Service = ({ service }) => {
       {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
-          <div
-            id="modal-servicio"
-            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-12 pb-20"
-          >
+          <div id="modal-servicio" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-6 sm:p-12 pb-20">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
                 size={36}
@@ -45,7 +42,10 @@ const Service = ({ service }) => {
               />
             </button>
             <Spacing distance='my-4' />
-            <TitleH2>{service.title}</TitleH2>
+            <div className='flex flex-col sm:flex-row gap-8 justify-start items-center'>
+              <img src={service.image} title={service.alt} alt={service.alt} width={120} />
+              <TitleH2>{service.title}</TitleH2>
+            </div>
             <Spacing distance='my-4' />
             <Paragraph>
               {service.description}
