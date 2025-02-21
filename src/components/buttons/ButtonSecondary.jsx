@@ -20,7 +20,7 @@ const BUTTON_SECONDARY_UI = {
 // Estructura
 export default function ButtonSecondary({ ...props }) {
 
-  const { title, href, icon, type, titleMailto, distance, width, name, onClick } = props
+  const { title, href, icon, type, titleMailto, distance, name, onClick, width } = props
 
   return (
     <Button

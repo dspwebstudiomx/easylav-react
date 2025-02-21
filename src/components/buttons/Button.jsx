@@ -15,7 +15,7 @@ import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs
 const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
   HEIGHT: "h-[80px]",
-  WIDTH: "min-w-[180px] max-w-[180px] sm:w-[340px] xl:min-w-[280px]",
+  WIDTH: "min-w-[160px] max-w-[160px] sm:w-[340px] xl:min-w-[280px]",
   FONT_SIZE: "text-lg xl:text-lg",
   PADDING: "px-6 py-4 sm:px-3 sm:py-4",
   FONT_WEIGHT: "font-semibold",
@@ -27,17 +27,18 @@ const BUTTON_UI = {
 }
 
 // Estructura
-const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.HEIGHT} ${BUTTON_UI.FONT_SIZE} ${BUTTON_UI.PADDING} ${BUTTON_UI.FONT_WEIGHT} ${BUTTON_UI.ROUNDED} ${BUTTON_UI.TEXT_TRANSFORM} ${BUTTON_UI.LETTER_SPACING} ${BUTTON_UI.ANIMATION}`
+const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.HEIGHT} ${BUTTON_UI.FONT_SIZE} ${BUTTON_UI.PADDING} ${BUTTON_UI.FONT_WEIGHT} ${BUTTON_UI.ROUNDED} ${BUTTON_UI.TEXT_TRANSFORM} ${BUTTON_UI.LETTER_SPACING} ${BUTTON_UI.ANIMATION} `
 
 const Button = ({ backgroundColor, title, border, icon, type, onClick, href, textColor, name, width }) => {
   return (
     <HashLink to={href} scroll={el => scrollWithOffset(el)}>
-      <button name={name} onClick={typeof onClick === 'function' ? onClick : undefined} type={type} className={`${backgroundColor} ${border} ${ButtonUI} ${textColor} flex gap-3 z-50 ${width}`} href={href}>
+      <button name={name} onClick={typeof onClick === 'function' ? onClick : undefined} type={type} className={`${backgroundColor} ${border} ${ButtonUI} ${textColor} flex gap-3 z-50 ${width} `} href={href}>
         {icon && <span>{icon}</span>}
         {title}
       </button>
     </HashLink>
   )
+
 }
 Button.propTypes = {
   backgroundColor: PropTypes.string,
@@ -52,6 +53,4 @@ Button.propTypes = {
   onClick: PropTypes.func,
   name: PropTypes.string
 }
-
 export default Button
-
