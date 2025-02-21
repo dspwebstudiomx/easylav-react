@@ -18,9 +18,9 @@ const Banner = ({ children, themeColor }) => {
   const classes = ` bg-${themeColor}_light border-${themeColor}_dark text-dark ${BANNER_UI.BORDER} ${BANNER_UI.COLOR} ${BANNER_UI.FONT_SIZE}  ${BANNER_UI.PADDING} ${BANNER_UI.ROUNDED} animate__animated animate__flash`
 
   return (
-    <p className={classes}>
+    <div className={classes}>
       {children}
-    </p>
+    </div>
   )
 }
 Banner.propTypes = {
