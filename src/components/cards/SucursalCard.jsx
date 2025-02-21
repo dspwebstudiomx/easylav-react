@@ -15,7 +15,7 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[260px] 2xl:w-[340px]",
+    WIDTH: "w-[280px] 2xl:w-[340px]",
   },
   IMAGE: {
     CONTAINER: {

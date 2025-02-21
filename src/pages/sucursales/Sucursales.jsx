@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import { leon_card as leon, catedral_morelia_card as morelia, CentroGuadalajara as guadalajara } from 'assets';
+import { leon_card as leon, catedral_morelia_card as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from "components";
 import { scrollToTop } from "functions";
 
@@ -27,9 +27,9 @@ const Sucursales = () => {
       />
       <PageLayout id={"Sucursales"}>
         <div className="flex flex-wrap gap-8 place-items-center justify-center">
-          <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' height='h-[280px]' rounded='rounded-lg' />
-          <BackgroundCard image={leon} title='León' href='/sucursales/leon' rounded='rounded-lg' height='h-[280px]' />
-          <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' height='h-[280px]' rounded='rounded-lg' />
+          <BackgroundCard image={morelia} title='Morelia' href='/sucursales/morelia' height='h-[210px]' rounded='rounded-lg' width='w-[260px] xl:w-[320px]' />
+          <BackgroundCard image={leon} title='León' href='/sucursales/leon' rounded='rounded-lg' height='h-[210px]' width='w-[260px] xl:w-[320px]' />
+          {/* <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' height='h-[280px]' rounded='rounded-lg' /> */}
         </div>
       </PageLayout>
     </>
