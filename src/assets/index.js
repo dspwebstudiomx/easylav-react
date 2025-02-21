@@ -43,6 +43,7 @@ export {
 } from "../assets/images/recortadas/lavanderia1_478x600.jpg";
 export { default as cincodefebrero } from "../assets/images/sucursales/cincodefebrero.webp";
 export { default as delta } from "../assets/images/sucursales/delta.webp";
+export { default as iretiticateme } from "../assets/images/sucursales/Iretiticateme.webp";
 export { default as jesusdelmonte } from "../assets/images/sucursales/jesusdelmonte.webp";
 export { default as madero } from "../assets/images/sucursales/madero.webp";
 export { default as pedregal } from "../assets/images/sucursales/pedregal.webp";
