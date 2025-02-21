@@ -24,8 +24,8 @@ const Service = ({ service }) => {
         <div className={SERVICE_UI.ELEMENT.DIV_VIDEO}>
           <img className={SERVICE_UI.IMAGE} src={service.image} title={service.alt} alt={service.alt} />
         </div>
-        <div className={SERVICE_UI.ELEMENT.DIV_TITLEH3}>
-          <TitleH3>{service.title}</TitleH3>
+        <div className={`${SERVICE_UI.ELEMENT.DIV_TITLEH3} my-2`}>
+          <TitleH3 justify="text-center" color="text-secondary_dark">{service.title}</TitleH3>
         </div>
         <p className={SERVICE_UI.PARAGRAPH}>
           {service.description}
