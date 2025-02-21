@@ -25,7 +25,7 @@ const Service = ({ service }) => {
           <img className={SERVICE_UI.IMAGE} src={service.image} title={service.alt} alt={service.alt} />
         </div>
         <div className={`${SERVICE_UI.ELEMENT.DIV_TITLEH3} my-2`}>
-          <TitleH3 justify="text-center" color="text-secondary_dark">{service.title}</TitleH3>
+          <TitleH3 justify="text-center" color="text-dark">{service.title}</TitleH3>
         </div>
         <p className={SERVICE_UI.PARAGRAPH}>
           {service.description}
@@ -34,7 +34,7 @@ const Service = ({ service }) => {
       {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
-          <div id="modal-servicio" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-6 sm:p-12 pb-20">
+          <div id="modal-servicio" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 sm:p-12 pb-20">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
                 size={36}
