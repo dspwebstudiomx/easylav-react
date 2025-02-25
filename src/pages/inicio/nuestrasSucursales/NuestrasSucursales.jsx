@@ -35,7 +35,7 @@ const NuestrasSucursales = () => {
           keyboard={true}
           spaceBetween={0}
           autoplay={{
-            delay: 6000,
+            delay: 2000,
             disableOnInteraction: true,
           }}
           loop={true}
