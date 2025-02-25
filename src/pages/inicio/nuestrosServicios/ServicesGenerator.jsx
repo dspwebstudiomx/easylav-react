@@ -23,7 +23,7 @@ const SERVICES_PROPS = {
 // Estructura
 const ServicesGenerator = () => {
   return (
-    <div id={SERVICES_PROPS.ID} className={SERVICES_UI.DIV}>
+    <article id={SERVICES_PROPS.ID} className={SERVICES_UI.DIV}>
       <ul className={SERVICES_UI.LIST}>
         {services.map((service, key) => {
           return (
@@ -32,7 +32,7 @@ const ServicesGenerator = () => {
         })
         }
       </ul>
-    </div >
+    </article>
   )
 }
 

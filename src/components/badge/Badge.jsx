@@ -9,7 +9,7 @@ const Badge = ({ children, backgroundColor, flexDirection }) => {
 }
 Badge.propTypes = {
   children: PropTypes.node.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
   flexDirection: PropTypes.string
 }
 

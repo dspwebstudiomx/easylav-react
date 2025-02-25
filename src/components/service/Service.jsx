@@ -1,4 +1,4 @@
-import { Modal, Paragraph, Spacing, TitleH2, TitleH3 } from 'components';
+import { ButtonContainer, ButtonSecondary, Modal, Paragraph, TitleH2, TitleH3 } from 'components';
 import { useShowModal } from 'hooks';
 import PropTypes from 'prop-types';
 import { FaXmark } from 'react-icons/fa6';
@@ -34,22 +34,32 @@ const Service = ({ service }) => {
       {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
-          <div id="modal-servicio" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 sm:p-12 pb-20">
-            <button id="button-close" onClick={() => setShowModal(false)}>
-              <FaXmark
-                size={36}
-                className="z-30 ml-auto text-primary_dark z-50"
-              />
-            </button>
-            <Spacing distance='my-4' />
-            <div className='flex flex-col sm:flex-row gap-8 justify-start items-center'>
-              <img src={service.image} title={service.alt} alt={service.alt} width={120} />
-              <TitleH2>{service.title}</TitleH2>
+          <div id="modal-servicio" className="z-40 mx-auto flex flex-col gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12">
+            <div className='flex flex-col sm:flex-row justify-between'>
+              <div className='flex gap-8 justify-start items-center'>
+                <img src={service.image} title={service.alt} alt={service.alt} width={120} />
+                <TitleH2>{service.title}</TitleH2>
+              </div>
+              <button id="button-close" onClick={() => setShowModal(false)} className='-mt-24'>
+                <FaXmark
+                  size={36}
+                  className="z-30 ml-auto text-primary_dark z-50"
+                />
+              </button>
             </div>
-            <Spacing distance='my-4' />
             <Paragraph>
-              {service.description}
+              <span className='text-dark mt-4'>
+                {service.description}
+              </span>
             </Paragraph>
+            <ButtonContainer position='justify-center sm:justify-end items-center'>
+              <ButtonSecondary
+                title='Conócenos'
+                href='/sucursales'
+                width='w-full 2xl:w-[210px]'
+                name='botón conócenos'
+              />
+            </ButtonContainer>
           </div>
         </Modal>
       )}

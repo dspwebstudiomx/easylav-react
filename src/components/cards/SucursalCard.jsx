@@ -1,5 +1,6 @@
 import { Badge, TitleH3 } from 'components';
 import PropTypes from 'prop-types';
+import { useMemo } from 'react'; // Import useMemo from React
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaRegClock, FaWaze } from 'react-icons/fa6';
 
@@ -76,6 +77,7 @@ const styles =
   },
 
 }
+
 // Utility function to determine if the branch is open
 const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => {
   const currentTime = new Date();
@@ -112,7 +114,7 @@ const renderMapLinks = (position, title, gmap) => (
 
 // Estructura
 const SucursalCard = ({ title, position, place, gmap, badge, advertisement, image, serviceday1, servicehour1, openHour, closeHour, openMinute, closeMinute }) => {
-  const isOpen = isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute);
+  const isOpen = useMemo(() => isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute), [openHour, openMinute, closeHour, closeMinute]);
 
   return (
     <article id={`sucursal-${title}`} key={title} className={styles.article}>
