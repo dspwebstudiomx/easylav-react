@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const useMediaQueries = () => {
-  const [itemsPerPage, setItemsPerPage] = useState(3);
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
@@ -11,15 +10,15 @@ const useMediaQueries = () => {
     query: "(min-width: 1024px) and (max-width: 1920px)",
   });
 
-  useEffect(() => {
+  const itemsPerPage = useMemo(() => {
     if (isMobile) {
-      setItemsPerPage(1);
+      return 1;
     } else if (isTablet) {
-      setItemsPerPage(2);
+      return 2;
     } else {
-      setItemsPerPage(3);
+      return 3;
     }
-  }, [isMobile, isTablet, isDesktop]);
+  }, [isMobile, isTablet]);
 
   return {
     isMobile,

@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 
 const usePagination = (data, itemsPerPage) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [paginatedData, setPaginatedData] = useState([]);
 
-  useEffect(() => {
+  const paginatedData = useMemo(() => {
     const totalPages = Math.ceil(data.length / itemsPerPage);
 
     // Asegúrate de que currentPage no exceda el número total de páginas
@@ -14,9 +13,9 @@ const usePagination = (data, itemsPerPage) => {
       setCurrentPage(1);
     }
 
-    // Calcula el índice de inicio y actualiza los datos paginados
+    // Calcula el índice de inicio y devuelve los datos paginados
     const startIndex = (currentPage - 1) * itemsPerPage;
-    setPaginatedData(data.slice(startIndex, startIndex + itemsPerPage));
+    return data.slice(startIndex, startIndex + itemsPerPage);
   }, [currentPage, data, itemsPerPage]); // Dependencias correctas
 
   const goToPage = (page) => {
