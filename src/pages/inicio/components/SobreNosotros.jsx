@@ -6,7 +6,7 @@
 */
 
 // Importaciones
-import video from 'assets/video/video1.mp4';
+import video from 'assets/video/video2.mp4';
 import { BorderLeft, Container, Paragraph, Section, TitleH2 } from 'components';
 import Video from 'components/video/Video';
 
