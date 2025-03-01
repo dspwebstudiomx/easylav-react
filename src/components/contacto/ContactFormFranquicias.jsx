@@ -111,7 +111,8 @@ export const ContactFormFranquicias = () => {
         onSubmit={() => { }}
       >
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 sm:p-8 text-sm items-between">
+          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm items-between">
+            <h2 className='text-2xl font-semibold text-dark'>¿Estás interesado en adquirir una franquicia?</h2>
             <Fields errors={errors} touched={touched} />
             <div className='mx-auto'>
               <SubmitButton text="Enviar mensaje" />

@@ -123,12 +123,12 @@ const Franquicias = () => {
 
               <div id="franquicias-columma-2" className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
               >
-                {franquiciasImagenes.map(imagen => {
+                {franquiciasImagenes.sort(() => Math.random() - 0.5).map(imagen => {
                   return (
                     <div key={imagen.id} className="h-auto rotate-[0deg]">
                       <ImageResponsive
                         src={imagen.image_640}
-                        className={`${FRANQUICIAS_UI.IMAGE.WIDTH}`}
+                        className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
                         imageAlt={imagen.image_640}
                         image_640={imagen.image_640}
                         image_1024={imagen.image_640}
@@ -175,7 +175,7 @@ const Franquicias = () => {
             <Spacing distance='my-4' />
             <ContactFormFranquicias />
           </div>
-        </Modal>
+        </Modal >
       )}
       {/* Modal */}
 
