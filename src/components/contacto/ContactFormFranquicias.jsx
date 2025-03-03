@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { EmailErrorModal, EmailSuccessModal, SubmitButton } from 'components';
+import { EmailErrorModal, EmailSuccessModal, HomeButton, SubmitButton } from 'components';
 import { Form, Formik } from 'formik';
 import React, { useEffect, useState } from 'react';
 import Fields from '../contacto/components/Form/Fields';
@@ -114,8 +114,9 @@ export const ContactFormFranquicias = () => {
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm items-between">
             <h2 className='text-2xl font-semibold text-dark'>¿Estás interesado en adquirir una franquicia?</h2>
             <Fields errors={errors} touched={touched} />
-            <div className='mx-auto'>
+            <div className='mx-auto flex sm:flex-row gap-4 w-full px-20'>
               <SubmitButton text="Enviar mensaje" />
+              <HomeButton text="Ir a inicio" />
             </div>
             {showModal && <EmailSuccessModal
               onClick={() => {

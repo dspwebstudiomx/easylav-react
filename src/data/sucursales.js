@@ -43,7 +43,7 @@ export const localservices = [
     city: "Morelia",
     email: "jesusdelmonte@easylav.mx",
     image: jesusdelmonte,
-    advertisement: "Miercoles y Jueves $65.00 en lavado y secado",
+    advertisement: "",
   },
   {
     id: 3,

@@ -10,6 +10,7 @@ export { default as ButtonCard } from "components/buttons/ButtonCard";
 export { default as ButtonPrimary } from "components/buttons/ButtonPrimary";
 export { default as ButtonSecondary } from "components/buttons/ButtonSecondary";
 export { default as DarkModeButton } from "components/buttons/DarkModeButton";
+export { default as HomeButton } from "components/buttons/HomeButton";
 export { default as ScrollToTopButton } from "components/buttons/ScrollToTopButton";
 export { default as SubmitButton } from "components/buttons/SubmitButton";
 export { default as BackgroundCard } from "components/cards/BackgroundCard";
