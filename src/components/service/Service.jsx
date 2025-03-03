@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const SERVICE_UI = {
   ELEMENT: {
     CLASSNAME:
-      `flex flex-col gap-4 items-center justify-center shadow-2xl rounded-xl p-8 w-[260px] xl:w-[200px] bg-light dark:border-4 dark:border-primary`,
+      `flex flex-col gap-4 items-center justify-center shadow-2xl rounded-xl p-8 w-[200px] xl:w-[100px] bg-light dark:border-4 dark:border-primary`,
     DIV_VIDEO: "mx-auto w-32 sm:w-24 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },
@@ -43,7 +43,7 @@ const Service = ({ service }) => {
             </button>
             <div className='flex flex-col sm:flex-row justify-between'>
               <div className='flex flex-col sm:flex-row gap-8 justify-start items-center'>
-                <img src={service.image} title={service.alt} alt={service.alt} width={120} />
+                <img src={service.image} title={service.alt} alt={service.alt} width={40} />
                 <TitleH2>{service.title}</TitleH2>
               </div>
             </div>
