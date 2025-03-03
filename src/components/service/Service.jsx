@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import { FaXmark } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
+// Estilos
 const SERVICE_UI = {
   ELEMENT: {
     CLASSNAME:
@@ -23,6 +24,7 @@ const SERVICE_UI = {
   PARAGRAPH: "text-dark text-[16px] hidden",
 };
 
+// Estructura
 const Service = ({ service }) => {
   const { showModal, setShowModal } = useShowModal()
 

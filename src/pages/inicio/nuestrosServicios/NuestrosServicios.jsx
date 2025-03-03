@@ -10,7 +10,6 @@ import { ButtonContainer, ButtonSecondary, Container, Section, Spacing, TitleCon
 import ServicesGenerator from './ServicesGenerator';
 
 // Estilos
-// Nuestros Servicios
 const NUESTROS_SERVICIOS_PROPS = {
   SECTION: {
     ID: "servicios",
