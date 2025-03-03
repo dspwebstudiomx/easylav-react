@@ -1,3 +1,11 @@
+/*
+  Service - Component
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-01
+*/
+
+// Importaciones
 import { ButtonContainer, ButtonSecondary, Modal, Paragraph, TitleH2, TitleH3 } from 'components';
 import { useShowModal } from 'hooks';
 import PropTypes from 'prop-types';
