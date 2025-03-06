@@ -53,7 +53,7 @@ const Service = ({ service }) => {
             </button>
             <div className='flex flex-col sm:flex-row justify-between'>
               <div className='flex flex-col sm:flex-row gap-8 justify-start items-center'>
-                <img src={service.image} title={service.alt} alt={service.alt} width={40} />
+                <img src={service.image} title={service.alt} alt={service.alt} width={80} />
                 <TitleH2>{service.title}</TitleH2>
               </div>
             </div>
