@@ -194,7 +194,7 @@ export const localservices = [
     id: 13,
     title: "Bonanza",
     gmap: "https://maps.app.goo.gl/MBDiQVkM8SmwDCQz7",
-    position: { lat: 19.6675059, lng: -101.203968 },
+    position: { lat: 19.65850134, lng: -101.20101213 },
     place: "Av. la Joya 11, 58095 Morelia, Mich.",
     serviceday1: "Lunes a Domingo:",
     servicehour1: "7:00 a.m a 9:30 p.m",

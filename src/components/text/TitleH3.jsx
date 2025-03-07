@@ -13,7 +13,7 @@ const classes = `
 const TitleH3 = ({ children, justify, color }) => {
 
   return (
-    <h3 className={`${classes} ${justify} ${color}`}>
+    <h3 className={`${classes} flex ${justify} ${color}`}>
       {children}
     </h3>
   )
