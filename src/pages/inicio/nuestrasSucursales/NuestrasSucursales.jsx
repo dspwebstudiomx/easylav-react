@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
@@ -30,12 +30,11 @@ const NuestrasSucursales = () => {
           <TitleH2>Nuestras Sucursales</TitleH2>
         </BorderCenter>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           className="mySwiper"
-          keyboard={true}
           spaceBetween={0}
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: true,
           }}
           loop={true}
