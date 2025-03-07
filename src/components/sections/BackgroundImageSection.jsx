@@ -1,7 +1,7 @@
-import { Container, Section } from 'components'
+import { Section } from 'components'
 import PropTypes from 'prop-types'
 
-const BackgroundImageSection = ({ align, id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor, rounded }) => {
+const BackgroundImageSection = ({ className, align, id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor, rounded }) => {
   return (
     <Section id={id} className={`${height} relative overflow-hidden w-full z-0 ${rounded}`}>
 
@@ -22,18 +22,19 @@ const BackgroundImageSection = ({ align, id, height, children, image_768, image_
       {/* Background Image */}
 
       {/* Overlay */}
-      <div className={`absolute inset-0 z-0 w-full ${backgroundColor} ${opacity} ${height} top-0 left-0'`}></div>
+      <div className={`absolute inset-0 z-0 w-full ${backgroundColor} ${opacity} ${height} top-0 left-0' h-full`}></div>
       {/* Overlay */}
 
       {/* Content Container */}
-      <Container className={`z-10 grid ${height} ${align} top-0 inset-0 absolute left-0 w-full grid place-items-center p-12`}>
+      <div className={`z-10 grid ${height} ${align} top-0 inset-0 absolute left-0 w-full  ${className}`}>
         {children}
-      </Container>
+      </div>
     </Section>
   )
 }
 BackgroundImageSection.propTypes = {
   id: PropTypes.string,
+  className: PropTypes.string,
   align: PropTypes.string,
   children: PropTypes.node,
   image_240: PropTypes.string,

@@ -2,7 +2,7 @@ import { BackgroundImageSection, Badge, TitleH3 } from 'components';
 import PropTypes from 'prop-types';
 import { useMemo } from 'react'; // Import useMemo from React
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import { FaRegClock, FaWaze } from 'react-icons/fa6';
+import { FaMagnifyingGlass, FaRegClock, FaWaze } from 'react-icons/fa6';
 
 // Estilos
 const SUCURSAL_CARD_UI = {
@@ -77,7 +77,7 @@ const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => 
 
 // Function to render the open/closed badge
 const renderOpenClosedBadge = (isOpen) => (
-  <div className={`absolute right-3 top-3 rounded-lg border-2 font-medium ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2 text-sm`}>
+  <div className={`rounded-lg border-2 font-medium ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2 text-sm`}>
     <p>{isOpen ? 'Abierto' : 'Cerrado'}</p>
   </div>
 );
@@ -111,6 +111,9 @@ const SucursalCard = (props) => {
 
       {/* Imagen */}
       <BackgroundImageSection
+        id={`sucursal-${title}`}
+        image={image}
+        image_240={image}
         image_576={image}
         image_768={image}
         image_1024={image}
@@ -118,12 +121,23 @@ const SucursalCard = (props) => {
         image_1920={image}
         height='h-[210px]'
         opacity='opacity-30 hover:opacity-60'
-        backgroundColor='bg-dark'>
+        backgroundColor='bg-dark'
+        className='p-3'>
+        <div id={`open-closed-zoom-${title}`} className='flex justify-end items-start h-full'>
+          {/* Badge Horario Abierto/Cerrado */}
+          {renderOpenClosedBadge(isOpen)}
+        </div>
+        <div className='flex justify-end items-end h-full'>
+          <span id='zoom' className='text-light rounded-full border-2 border-light p-2 bg-dark opacity-60 hover:bg-secondary hover:opacity-100 cursor-pointer'>
+            <FaMagnifyingGlass />
+          </span>
+        </div>
+
       </BackgroundImageSection>
       {/* Imagen */}
 
       {/* Descripción */}
-      <section className='flex flex-col gap-4 justify-between items-center min-h-[320px] '>
+      <section className='flex flex-col gap-4 justify-between items-start min-h-[320px] '>
         <div className='p-8 flex flex-col gap-4'>
           {/* Título */}
           <TitleH3 justify='justify-center mb-4' color='text-dark'>
@@ -167,16 +181,12 @@ const SucursalCard = (props) => {
       {/* Descripción */}
 
 
-      {/* Badge Horario Abierto/Cerrado */}
-      {renderOpenClosedBadge(isOpen)}
-
       {/* Badge*/}
       {badge && (
         <section className={styles.content.badge.container}>
           <p className={styles.content.badge.paragraph}>{badge}</p>
         </section>
-      )
-      }
+      )}
       {/* Badge*/}
 
 

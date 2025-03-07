@@ -31,6 +31,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
           height='h-[210px] sm:h-[300px] '
           opacity='opacity-50 hover:opacity-60'
           backgroundColor='bg-dark'
+          className='flex justify-center items-center'
         >
           <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
         </BackgroundImageSection>
