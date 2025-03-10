@@ -110,7 +110,7 @@ const SucursalCard = (props) => {
   const { showModal, setShowModal } = useShowModal()
 
   return (
-    <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'hidden-when-modal': showModal })}>
+    <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'z-10': showModal })}>
 
       {/* Imagen */}
       <BackgroundImageSection
