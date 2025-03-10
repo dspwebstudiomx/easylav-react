@@ -31,7 +31,7 @@ const PaquetesFranquicias = () => {
 
                 {/* Primera Parte */}
                 <div className="p-8 flex flex-col gap-6">
-                  <h2 className="text-3xl text-dark uppercase font-bold text-left">
+                  <h2 className="text-3xl text-dark uppercase font-bold text-center lg:text-left">
                     {paquete.nombre}
                     <span className="sr-only">Plan</span>
                   </h2>

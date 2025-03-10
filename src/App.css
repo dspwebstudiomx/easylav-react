@@ -172,3 +172,7 @@ input[type="file"] button {
 .video-container video:playing+img {
   display: none;
 }
+
+.hidden-when-modal {
+  display: none;
+}

@@ -1,32 +1,20 @@
 import { SucursalCard } from 'components'
 import { localservices } from 'data'
 import PropTypes from 'prop-types'
+import { useMemo } from 'react'
 
 const CityCardGenerator = ({ city }) => {
 
-  const ciudad = localservices.filter(localservice => localservice.city === city)
+  const ciudad = useMemo(() => {
+    return localservices.filter(localservice => localservice.city === city)
+  }, [city])
   ciudad.sort((a, b) => a.title.localeCompare(b.title));
+
   return (
-    <article className='grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-0 sm:gap-x-2 items-center justify-center'>
+    <article className='grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-0 sm:gap-x-2 items-center justify-center z-0'>
       {
         ciudad.map((localservice) =>
-          <SucursalCard
-            key={localservice.id}
-            position={localservice.position}
-            place={localservice.place}
-            gmap={localservice.gmap}
-            title={localservice.title}
-            serviceday1={localservice.serviceday1}
-            servicehour1={localservice.servicehour1}
-            email={localservice.email}
-            badge={localservice.badge}
-            advertisement={localservice.advertisement}
-            image={localservice.image}
-            openHour={localservice.openHour}
-            closeHour={localservice.closeHour}
-            openMinute={localservice.openMinute}
-            closeMinute={localservice.closeMinute}
-          />
+          <SucursalCard key={localservice.id} {...localservice} />
         )
       }
     </article>

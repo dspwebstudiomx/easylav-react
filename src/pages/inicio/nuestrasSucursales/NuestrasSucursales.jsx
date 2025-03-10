@@ -1,6 +1,5 @@
 import { BorderCenter, Container, Section, SucursalCard, TitleH2 } from 'components';
 import { localservices } from 'data';
-import isOpen from 'hooks/useGetServiceHour';
 import PropTypes from 'prop-types';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -64,24 +63,7 @@ const NuestrasSucursales = () => {
         >
           {sortedLocalServices.map((localservice) => (
             <SwiperSlide key={localservice.id}>
-              <SucursalCard
-                key={localservice.id}
-                position={localservice.position}
-                place={localservice.place}
-                gmap={localservice.gmap}
-                title={localservice.title}
-                serviceday1={localservice.serviceday1}
-                servicehour1={localservice.servicehour1}
-                email={localservice.email}
-                badge={localservice.badge}
-                advertisement={localservice.advertisement}
-                image={localservice.image}
-                openHour={localservice.openHour}
-                closeHour={localservice.closeHour}
-                openMinute={localservice.openMinute}
-                closeMinute={localservice.closeMinute}
-                isOpen={isOpen}
-              />
+              <SucursalCard key={localservice.id} {...localservice} />
             </SwiperSlide>
           ))}
         </Swiper>

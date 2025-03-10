@@ -1,8 +1,10 @@
-import { BackgroundImageSection, Badge, TitleH3 } from 'components';
+import classNames from 'classnames';
+import { BackgroundImageSection, Badge, Modal, Spacing, TitleH3 } from 'components';
+import { useShowModal } from "hooks";
 import PropTypes from 'prop-types';
 import { useMemo } from 'react'; // Import useMemo from React
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
-import { FaMagnifyingGlass, FaRegClock, FaWaze } from 'react-icons/fa6';
+import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
 // Estilos
 const SUCURSAL_CARD_UI = {
@@ -16,7 +18,7 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[240px] lg:w-[320px]",
+    WIDTH: "w-[240px] md:w-[280px] lg:w-[320px] -z-10",
   },
   ICON: {
     SIZE: '30',
@@ -105,9 +107,10 @@ const SucursalCard = (props) => {
 
   const { title, position, place, gmap, badge, advertisement, image, serviceday1, servicehour1, openHour, closeHour, openMinute, closeMinute } = props;
   const isOpen = useMemo(() => isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute), [openHour, openMinute, closeHour, closeMinute]);
+  const { showModal, setShowModal } = useShowModal()
 
   return (
-    <article id={`sucursal-${title}`} key={title} className={styles.article}>
+    <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'hidden-when-modal': showModal })}>
 
       {/* Imagen */}
       <BackgroundImageSection
@@ -128,11 +131,10 @@ const SucursalCard = (props) => {
           {renderOpenClosedBadge(isOpen)}
         </div>
         <div className='flex justify-end items-end h-full'>
-          <span id='zoom' className='text-light rounded-full border-2 border-light p-2 bg-dark opacity-60 hover:bg-secondary hover:opacity-100 cursor-pointer'>
+          <button onClick={() => setShowModal(true)} id='zoom' className='text-light rounded-full border-2 border-light p-2 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer'>
             <FaMagnifyingGlass />
-          </span>
+          </button>
         </div>
-
       </BackgroundImageSection>
       {/* Imagen */}
 
@@ -180,7 +182,6 @@ const SucursalCard = (props) => {
       </section>
       {/* Descripción */}
 
-
       {/* Badge*/}
       {badge && (
         <section className={styles.content.badge.container}>
@@ -189,8 +190,25 @@ const SucursalCard = (props) => {
       )}
       {/* Badge*/}
 
-
-    </article >
+      {/* Modal */}
+      {showModal && (
+        <Modal width='w-[90vw] md:w-[60vw] lg:w-[50vw] z-50'>
+          <div id='imagen-sucursal' className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
+            <button id="button-close" onClick={() => setShowModal(false)}>
+              <FaXmark
+                size={36}
+                className="z-30 ml-auto text-primary_dark"
+              />
+            </button>
+            <Spacing distance='my-4' />
+            <div className="flex flex-col items-center justify-center">
+              <img src={image} alt={title} className="w-auto h-[50vh] object-cover" />
+            </div>
+          </div>
+        </Modal>
+      )}
+      {/* Modal */}
+    </article>
   );
 }
 
@@ -209,23 +227,6 @@ SucursalCard.propTypes = {
   serviceday1: PropTypes.string,
   servicehour1: PropTypes.string,
   image: PropTypes.string,
-};
-
-SucursalCard.defaultProps = {
-  title: 'Sucursal',
-  id: 'default-id',
-  position: { lat: 0, lng: 0 },
-  gmap: '#',
-  openHour: 0,
-  closeHour: 0,
-  openMinute: 0,
-  closeMinute: 0,
-  place: 'Ubicación no disponible',
-  badge: '',
-  advertisement: '',
-  serviceday1: 'Día no disponible',
-  servicehour1: 'Horario no disponible',
-  image: 'default-image.jpg',
 };
 
 export default SucursalCard;

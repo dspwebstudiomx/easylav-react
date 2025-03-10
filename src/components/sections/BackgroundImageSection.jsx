@@ -22,11 +22,11 @@ const BackgroundImageSection = ({ className, align, id, height, children, image_
       {/* Background Image */}
 
       {/* Overlay */}
-      <div className={`absolute inset-0 z-0 w-full ${backgroundColor} ${opacity} ${height} top-0 left-0' h-full`}></div>
+      <div className={`absolute inset-0 -z-40 w-full ${backgroundColor} ${opacity} ${height} top-0 left-0' h-full`}></div>
       {/* Overlay */}
 
       {/* Content Container */}
-      <div className={`z-10 grid ${height} ${align} top-0 inset-0 absolute left-0 w-full  ${className}`}>
+      <div className={`-z-30 grid ${height} ${align} top-0 inset-0 absolute left-0 w-full  ${className}`}>
         {children}
       </div>
     </Section>
