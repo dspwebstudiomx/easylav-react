@@ -35,7 +35,7 @@ const Service = ({ service }) => {
           <img className={SERVICE_UI.IMAGE} src={service.image} title={service.alt} alt={service.alt} />
         </div>
         <div className={`${SERVICE_UI.ELEMENT.DIV_TITLEH3} my-2`}>
-          <TitleH3 justify="text-center" color="text-dark">{service.title}</TitleH3>
+          <TitleH3 justify="justify-center" color="text-dark">{service.title}</TitleH3>
         </div>
         <p className={SERVICE_UI.PARAGRAPH}>
           {service.description}
@@ -54,7 +54,7 @@ const Service = ({ service }) => {
             <div className='flex flex-col sm:flex-row justify-between'>
               <div className='flex flex-col sm:flex-row gap-8 justify-start items-center'>
                 <img src={service.image} title={service.alt} alt={service.alt} width={80} />
-                <TitleH2>{service.title}</TitleH2>
+                <TitleH2 align='justify-center'>{service.title}</TitleH2>
               </div>
             </div>
             <Paragraph>

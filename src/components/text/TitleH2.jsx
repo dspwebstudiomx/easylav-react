@@ -10,17 +10,17 @@ const classes = `
   ${GENERAL_UI.TITLEH3.TEXT_TRANSFORM}
 `;
 
-const TitleH2 = ({ children, align }) => {
+const TitleH2 = ({ children, justify }) => {
 
   return (
-    <h2 className={`${classes} ${align}`}>
+    <h2 className={`${classes} ${justify}`}>
       {children}
     </h2>
   )
 }
 TitleH2.propTypes = {
   children: Proptypes.node.isRequired,
-  align: Proptypes.string
+  justify: Proptypes.string
 }
 
 export default TitleH2
