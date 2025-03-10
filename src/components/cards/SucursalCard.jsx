@@ -110,7 +110,7 @@ const SucursalCard = (props) => {
   const { showModal, setShowModal } = useShowModal()
 
   return (
-    <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'hidden-when-modal': showModal })}>
+    <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'z-10': showModal })}>
 
       {/* Imagen */}
       <BackgroundImageSection
@@ -197,12 +197,13 @@ const SucursalCard = (props) => {
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
                 size={36}
-                className="z-30 ml-auto text-primary_dark"
+                className="z-30 ml-auto text-primary hover:text-primary_dark cursor-pointer"
               />
             </button>
             <Spacing distance='my-4' />
-            <div className="flex flex-col items-center justify-center">
-              <img src={image} alt={title} className="w-auto h-[50vh] object-cover" />
+            <div className="flex flex-col items-center justify-center gap-4 pb-6">
+              <img src={image} alt={title} className="w-auto h-[50vh] object-cover shadow-2xl" />
+              <span className='text-lg font-bold uppercase'>{`Sucursal ${title}`}</span>
             </div>
           </div>
         </Modal>
