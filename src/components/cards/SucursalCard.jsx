@@ -192,7 +192,7 @@ const SucursalCard = (props) => {
 
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[90vw] md:w-[60vw] lg:w-[50vw] z-50'>
+        <Modal width='w-[90vw] md:w-[80vw] lg:w-[60vw] z-50 mt-[110px]'>
           <div id='imagen-sucursal' className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
@@ -202,8 +202,11 @@ const SucursalCard = (props) => {
             </button>
             <Spacing distance='my-4' />
             <div className="flex flex-col items-center justify-center gap-4 pb-6">
-              <img src={image} alt={title} className="w-auto h-[50vh] object-cover shadow-2xl" />
-              <span className='text-lg font-bold uppercase'>{`Sucursal ${title}`}</span>
+              <img src={image} alt={title} className="w-auto h-[50vh] md:h-[30vh] lg:h-[40vh] object-cover shadow-2xl" />
+              <div className='flex flex-col gap-0 justify-center items-center'>
+                <span className='text-lg font-bold uppercase'>{`Sucursal ${title}`}</span>
+                {/* <span className='text-md font-bold uppercase'>{place}</span> */}
+              </div>
             </div>
           </div>
         </Modal>
@@ -215,6 +218,7 @@ const SucursalCard = (props) => {
 
 SucursalCard.propTypes = {
   title: PropTypes.string,
+  city: PropTypes.string,
   id: PropTypes.string,
   position: PropTypes.object,
   gmap: PropTypes.string,
