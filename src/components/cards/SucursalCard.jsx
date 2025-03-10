@@ -18,7 +18,7 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[240px] md:w-[280px] lg:w-[320px] -z-10",
+    WIDTH: "w-[80%] md:w-[280px] lg:w-[320px]",
   },
   ICON: {
     SIZE: '30',
