@@ -43,7 +43,6 @@ const NavLinksDesktop = () => {
               }}
               to={navlink.href}
               title={`navlink ${navlink.linkId}`}
-            // Spread the remaining props to avoid passing isActive
             >
               {navlink.name}
             </NavLink>

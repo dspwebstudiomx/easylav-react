@@ -36,9 +36,6 @@ const Contacto = () => {
         </Paragraph>
         <Spacing distance='h-4' />
         <Paragraph>
-        </Paragraph>
-        <Spacing distance='h-4' />
-        <Paragraph>
           Si requieres solicitar una factura puedes visitar nuestra sección
           <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
             <Link to="/facturacion" onClick={() =>
