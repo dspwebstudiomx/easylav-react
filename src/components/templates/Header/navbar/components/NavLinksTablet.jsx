@@ -15,7 +15,7 @@ const NavLinksTablet = () => {
             scroll={scrollWithOffset}
             key={navlink.id}
             id={`link-${navlink.linkId}`}
-            className="navlink text-xl font-bold uppercase text-light hover:text-secondary_light"
+            className="navlink md:text-sm lg:text-xl font-bold uppercase text-light hover:text-secondary_light"
             to={navlink.href}
           >
             {navlink.name}
@@ -27,7 +27,7 @@ const NavLinksTablet = () => {
           <NavLink
             key={navlink.id}
             id={`link-${navlink.linkId}`}
-            className="navlink text-xl font-bold uppercase text-light hover:text-secondary_light"
+            className="navlink md:text-sm lg:text-xl  font-bold uppercase text-light hover:text-secondary_light"
             to={navlink.href}
           >
             {navlink.name}

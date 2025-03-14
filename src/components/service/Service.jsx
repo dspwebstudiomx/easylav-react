@@ -43,7 +43,7 @@ const Service = ({ service }) => {
       </Link>
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[90vw] md:w-[60vw] lg:w-[60vw]' height='h-full md:h-[60vh]'>
+        <Modal width='w-[90vw] md:w-[60vw] lg:w-[60vw]' height='h-auto'>
           <div id="modal-servicio" className="z-40 mx-auto flex flex-col gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12 h-full justify-center">
             <button id="button-close" onClick={() => setShowModal(false)} className=''>
               <FaXmark

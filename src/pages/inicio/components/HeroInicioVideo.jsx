@@ -8,7 +8,7 @@ const HeroInicioVideo = () => {
 
   const HEROINICIO_UI = {
     HEIGHT:
-      "h-[85vh] sm:h-[100vh] md:h-[60vh] lg:h-[60vh] xl:h-[70vh]",
+      "h-[85vh] sm:h-[500px] xl:h-[70vh]",
     THEME: "dark",
     BACKGROUND: {
       OPACITY: "opacity-90",
@@ -20,7 +20,7 @@ const HeroInicioVideo = () => {
       PARAGRAPH: "hidden",
     },
     TITLE: {
-      FONT_SIZE: "text-3xl md:text-4xl",
+      FONT_SIZE: "text-2xl md:text-4xl",
       FONT_WEIGHT: "font-bold",
       FONT_FAMILY: "",
       LETTER_SPACING: "tracking-wider",
@@ -52,14 +52,14 @@ const HeroInicioVideo = () => {
     image: `absolute top-0 left-0 overflow-hidden object-cover object-center w-full`
   }
   return (
-    <section id='inicio' className={`relative overflow-hidden w-full ${HEROINICIO_UI.HEIGHT} -z-10`}>
+    <section id='inicio' className={`relative overflow-hidden w-full ${HEROINICIO_UI.HEIGHT}`}>
       <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${HEROINICIO_UI.HEIGHT}`}>
         <Video src={video} type='video/mp4' title='sucursal' className={styles.image} defaultImage={defaultImage} />
       </div>
       <div className={`absolute inset-0 z-10 w-full bg-dark opacity-70 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
-      <div className={`absolute inset-0 top-0 z-20 p-8 py-20 sm:p-20 ${HEROINICIO_UI.HEIGHT} w-full flex items-center`}>
+      <div className={`absolute inset-0  z-20 p-8 py-20 sm:p-20 ${HEROINICIO_UI.HEIGHT} w-full flex items-center`}>
         <Container>
-          <div className='w-full xl:w-2/3 flex flex-col gap-12 items-center sm:items-start justify-center'>
+          <div className='w-full xl:w-2/3 flex flex-col gap-12 items-center sm:items-start justify-center items-center'>
             <h1 className={styles.title}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </h1>
             <p className={styles.paragraph}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus in architecto, quibusdam earum placeat officiis ea molestias esse consequuntur aliquam culpa tempora ut dolorum nisi quaerat autem quisquam. Asperiores temporibus adipisci fugiat et sed incidunt maiores magnam iste voluptate sunt.</p>
             <ButtonContainer position={'items-center'}>
