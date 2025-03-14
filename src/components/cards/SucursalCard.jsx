@@ -192,7 +192,7 @@ const SucursalCard = (props) => {
 
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[90vw] md:w-[60vw] lg:w-[50vw] z-50'>
+        <Modal width='w-[90vw] md:w-[60vw] lg:w-auto z-50'>
           <div id='imagen-sucursal' className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
@@ -201,8 +201,9 @@ const SucursalCard = (props) => {
               />
             </button>
             <Spacing distance='my-4' />
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-8">
               <img src={image} alt={title} className="w-auto h-[50vh] object-cover" />
+              <TitleH3>{title}</TitleH3>
             </div>
           </div>
         </Modal>

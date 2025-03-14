@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 // Estilos
 const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[380px] w-auto shadow-xl",
+    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[380px] w-full shadow-xl",
   PARAGRAPH_CLASSNAME: "text-pretty text-lg sm:text-xl ",
   CONTAINER_CLASSNAME:
     "flex flex-row justify-between",

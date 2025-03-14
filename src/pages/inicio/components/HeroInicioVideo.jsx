@@ -20,7 +20,7 @@ const HeroInicioVideo = () => {
       PARAGRAPH: "hidden",
     },
     TITLE: {
-      FONT_SIZE: "text-2xl md:text-4xl",
+      FONT_SIZE: "text-3xl md:text-4xl",
       FONT_WEIGHT: "font-bold",
       FONT_FAMILY: "",
       LETTER_SPACING: "tracking-wider",

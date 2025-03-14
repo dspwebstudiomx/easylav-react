@@ -20,7 +20,7 @@
 export const GENERAL_UI = {
   TITLEH1: {
     FONT_FAMILY: "",
-    FONT_SIZE: "text-[26px] sm:text-2xl xl:text-4xl",
+    FONT_SIZE: "text-2xl xl:text-4xl",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-light",
     BACKGROUND_COLOR: "",

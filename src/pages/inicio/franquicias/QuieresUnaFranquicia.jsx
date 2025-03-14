@@ -37,8 +37,8 @@ const QUIERES_UNA_FRANQUICIA_UI = {
       SIZE: "xl",
       TRANSFORM: "",
     },
-    CONTAINER: "items-center justify-center",
   },
+  CONTAINER: " flex items-center justify-center px-8",
   TITLE: {
     H2: {
       CONTENT:
@@ -59,6 +59,7 @@ const QuieresUnaFranquicia = () => {
     paragraph: `text-${QUIERES_UNA_FRANQUICIA_UI.COLOR.PARAGRAPH} text-lg ${QUIERES_UNA_FRANQUICIA_UI.DISPLAY.PARAGRAPH}`,
     buttonContainer: QUIERES_UNA_FRANQUICIA_UI.BUTTON.CONTAINER,
     span: `text-${QUIERES_UNA_FRANQUICIA_UI.COLOR.TITLE} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.TRANSFORM} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.FONT_SIZE} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.FONT_WEIGHT} ${QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.JUSTIFY}`,
+    container: QUIERES_UNA_FRANQUICIA_UI.CONTAINER,
   }
   const images = {
     image_576: VistaLavanderiaDesdeEntrada_1_640,
@@ -68,7 +69,7 @@ const QuieresUnaFranquicia = () => {
   }
   return (
     <BackgroundImageSection height="h-[850px] sm:h-[650px] lg:h-[650px]" opacity={`bg-${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} ${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={QUIERES_UNA_FRANQUICIA_UI.DISPLAY.IMAGE} backgroundColor={QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920} align='items-center justify-center'>
-      <Container>
+      <Container className={styles.container}>
         <div id='hero-inicio_container' className={`grid md:grid-cols-1 gap-x-8`}>
           <div id='hero-inicio_info_container' className="flex flex-col gap-8 w-full mx-auto xl:w-2/3">
             <span className={styles.span}>

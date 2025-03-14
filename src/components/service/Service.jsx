@@ -16,11 +16,11 @@ import { Link } from 'react-router-dom';
 const SERVICE_UI = {
   ELEMENT: {
     CLASSNAME:
-      `flex flex-col gap-4 items-center justify-center shadow-2xl rounded-xl p-8 w-[80%] lg:w-[200px] bg-light dark:border-4 dark:border-primary`,
+      `flex flex-col gap-4 items-center justify-center shadow-2xl rounded-xl p-8 w-[100%] md:w-[180px] bg-light dark:border-4 dark:border-primary`,
     DIV_VIDEO: "mx-auto w-32 sm:w-22 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },
-  IMAGE: "p-2",
+  IMAGE: "p-2 w-28 mx-auto text-center",
   PARAGRAPH: "text-dark text-[16px] hidden",
 };
 
@@ -43,8 +43,8 @@ const Service = ({ service }) => {
       </Link>
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[90vw] md:w-[60vw] lg:w-[60vw]'>
-          <div id="modal-servicio" className="z-40 mx-auto flex flex-col gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12 h-[90vh] sm:h-auto justify-center">
+        <Modal width='w-[90vw] md:w-[60vw] lg:w-[60vw]' height='h-full md:h-[60vh]'>
+          <div id="modal-servicio" className="z-40 mx-auto flex flex-col gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12 h-full justify-center">
             <button id="button-close" onClick={() => setShowModal(false)} className=''>
               <FaXmark
                 size={36}
