@@ -11,7 +11,7 @@ import { Service } from 'components';
 import { services } from 'data';
 
 const SERVICES_UI = {
-  DIV: "w-full",
+  ARTICLE: "w-full",
   LIST: "grid md:grid-cols-3 lg:grid-cols-5 gap-y-8 items-center justify-center",
 }
 
@@ -23,7 +23,7 @@ const SERVICES_PROPS = {
 // Estructura
 const ServicesGenerator = () => {
   return (
-    <article id={SERVICES_PROPS.ID} className={SERVICES_UI.DIV}>
+    <article id={SERVICES_PROPS.ID} className={SERVICES_UI.ARTICLE}>
       <ul className={SERVICES_UI.LIST}>
         {services.map((service, key) => {
           return (
