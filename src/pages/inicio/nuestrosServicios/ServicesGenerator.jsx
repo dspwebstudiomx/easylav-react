@@ -12,7 +12,7 @@ import { services } from 'data';
 
 const SERVICES_UI = {
   ARTICLE: "w-full",
-  LIST: "grid md:grid-cols-3 lg:grid-cols-5 gap-y-8 items-center justify-center",
+  LIST: "grid md:grid-cols-3 lg:grid-cols-5 gap-y-8 items-center justify-center mx-auto",
 }
 
 // Estilos

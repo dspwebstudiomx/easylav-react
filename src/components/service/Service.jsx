@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 const SERVICE_UI = {
   ELEMENT: {
     CLASSNAME:
-      `flex flex-col gap-4 items-center justify-center shadow-2xl rounded-xl p-8 w-[100%] md:w-[180px] xl:w-[200px]  bg-light dark:border-4 dark:border-primary`,
+      `flex flex-col gap-4 items-center justify-center shadow-2xl rounded-xl p-8 w-[100%] md:w-[180px] xl:w-[200px]  bg-light dark:border-4 dark:border-primary mx-auto`,
     DIV_VIDEO: "mx-auto w-32 sm:w-22 md:w-40",
     DIV_TITLEH3: "mx-auto text-primary",
   },
