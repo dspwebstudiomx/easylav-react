@@ -7,7 +7,7 @@ const NavLinksTablet = () => {
   return (
     <ul
       id="navlinks-tablet"
-      className="fixed top-[100px] z-30 hidden w-full justify-evenly gap-4 bg-primary dark:bg-secondary_dark p-5 px-8 sm:relative sm:top-[0px] sm:flex xl:hidden"
+      className="sm:flex xl:hidden top-[100px] hidden w-full justify-evenly gap-4 bg-primary dark:bg-secondary_dark p-5 px-8 lg:relative lg:top-[0px] "
     >
       {navLinksSections.map((navlink) => {
         return (

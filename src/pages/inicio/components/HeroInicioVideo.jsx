@@ -52,7 +52,7 @@ const HeroInicioVideo = () => {
     image: `absolute top-0 left-0 overflow-hidden object-cover object-center w-full`
   }
   return (
-    <section id='inicio' className={`relative overflow-hidden w-full ${HEROINICIO_UI.HEIGHT}`}>
+    <section id='inicio' className={`relative overflow-hidden w-full ${HEROINICIO_UI.HEIGHT} -z-10`}>
       <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${HEROINICIO_UI.HEIGHT}`}>
         <Video src={video} type='video/mp4' title='sucursal' className={styles.image} defaultImage={defaultImage} />
       </div>

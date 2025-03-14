@@ -14,7 +14,7 @@ const SUCURSAL_CARD_UI = {
     COLOR: "text-dark",
     DISPLAY: "flex flex-col relative mx-auto",
     HEIGHT: "min-h-[360px]",
-    JUSTIFY: "justify-between",
+    JUSTIFY: "justify-center items-center",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
@@ -202,7 +202,7 @@ const SucursalCard = (props) => {
             </button>
             <Spacing distance='my-4' />
             <div className="flex flex-col items-center justify-center gap-8">
-              <img src={image} alt={title} className="w-auto h-[50vh] object-cover" />
+              <img src={image} alt={title} className="w-auto h-[30vh] object-cover" />
               <TitleH3>{title}</TitleH3>
             </div>
           </div>
