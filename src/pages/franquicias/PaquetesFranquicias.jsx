@@ -36,7 +36,7 @@ const PaquetesFranquicias = () => {
                     <span className="sr-only">Plan</span>
                   </h2>
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <ButtonContainer position='justify-center'>
+                  <ButtonContainer position='justify-center items-center'>
                     <ButtonSecondary
                       title={"Contactar"}
                       width={"w-[210px]"}
