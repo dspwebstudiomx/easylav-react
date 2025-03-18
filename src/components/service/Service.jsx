@@ -10,7 +10,6 @@ import {
   ButtonContainer,
   ButtonSecondary,
   Modal,
-  Paragraph,
   TitleH2,
   TitleH3,
 } from "components";
@@ -77,9 +76,8 @@ const Service = ({ service }) => {
                 <TitleH2 align="justify-center">{service.title}</TitleH2>
               </div>
             </div>
-            <Paragraph>
-              <span className="mt-4 text-dark">{service.description}</span>
-            </Paragraph>
+
+            <p className="text-dark">{service.description}</p>
             <ButtonContainer position="justify-center sm:justify-end items-center">
               <ButtonSecondary
                 title="Conócenos"
