@@ -79,7 +79,7 @@ const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => 
 
 // Function to render the open/closed badge
 const renderOpenClosedBadge = (isOpen) => (
-  <div className={`rounded-lg border-2 font-medium ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2 text-sm`}>
+  <div className={`rounded-lg border-2 text-xs ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2`}>
     <p>{isOpen ? 'Abierto' : 'Cerrado'}</p>
   </div>
 );
