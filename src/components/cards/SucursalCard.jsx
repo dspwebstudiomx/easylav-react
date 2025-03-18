@@ -18,7 +18,7 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[80%] md:w-[280px] lg:w-[320px]",
+    WIDTH: "w-[80%] md:w-[280px] lg:w-[220px]",
   },
   ICON: {
     SIZE: '30',
@@ -87,13 +87,13 @@ const renderOpenClosedBadge = (isOpen) => (
 // Function to render Waze and Google Maps links
 const renderMapLinks = (position, title, gmap) => (
   <div className='flex md:hidden'>
-    <a href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`} target='_blank' rel='noopener noreferrer' title={`Ir a ${title} en Waze`} className='flex w-auto w-full flex-col items-center justify-center gap-2 bg-secondary text-sm'>
+    <a href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`} target='_blank' rel='noopener noreferrer' title={`Ir a ${title} en Waze`} className='flex w-full flex-col items-center justify-center gap-2 bg-secondary text-sm'>
       <Badge flexDirection='flex-col'>
         <FaWaze size={24} />
         <span>Waze</span>
       </Badge>
     </a>
-    <a href={gmap} target='_blank' rel='noopener noreferrer' title={`Ir a ${title} en Google Maps`} className='flex w-auto w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-lg text-sm'>
+    <a href={gmap} target='_blank' rel='noopener noreferrer' title={`Ir a ${title} en Google Maps`} className='flex w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-lg sm:text-sm'>
       <Badge flexDirection='flex-col'>
         <FaMapMarkedAlt size={24} />
         <span>Google Maps</span>
@@ -122,7 +122,7 @@ const SucursalCard = (props) => {
         image_1024={image}
         image_1200={image}
         image_1920={image}
-        height='h-[210px]'
+        height='h-[140px]'
         opacity='opacity-30 hover:opacity-60'
         backgroundColor='bg-dark'
         className='p-3'>
