@@ -2,10 +2,8 @@
 
 //Importaciones
 import { VistaLavanderiaDesdeEntrada_2_640 } from 'assets';
-import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SectionBanner, SEOFriendly } from 'components';
-import { scrollWithOffset } from 'functions';
+import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
-import { NavHashLink } from 'react-router-hash-link';
 // const HeroInicio = lazy(() => import('./components/HeroInicio'));
 const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
@@ -47,7 +45,7 @@ const Inicio = () => (
         ogType={OG_TYPE} />
       {/* <HeroInicio /> */}
       <HeroInicioVideo />
-      <SectionBanner themeBackgroundColor='primary' themeTextColor='primary_darkcontrast' themeBackgroundDark='secondary_dark' themeTextColorDark='light'>
+      {/* <SectionBanner themeBackgroundColor='primary' themeTextColor='primary_darkcontrast' themeBackgroundDark='secondary_dark' themeTextColorDark='light'>
         <NavHashLink
           id={'navlink-to-iretiticateme'}
           to={'/sucursales/morelia/#sucursal-Iretiticateme'}
@@ -57,7 +55,7 @@ const Inicio = () => (
           <span className='block text-base'>Nueva sucursal</span>
           <span className='block text-2xl'>Iretiticateme</span>
         </NavHashLink>
-      </SectionBanner>
+      </SectionBanner> */}
       <NuestrosServicios />
       <PorqueElegirnos />
       <SobreNosotros />
