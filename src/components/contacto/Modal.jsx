@@ -4,7 +4,7 @@ const Modal = ({ children, height, width }) => {
   return (
     <div id='modal' className='fixed inset-0 animate__animated animate__fadeIn animate__slow grid place-items-center w-[100vw] h-[100vh]  mx-auto z-[999]'>
       <div id='modal-overlay' className='fixed inset-0 bg-dark opacity-80 z-40'></div>
-      <div id='modal-window' className={`${height} ${width} z-50`}>
+      <div id='modal-window' className={`${height} ${width} z-50 xl:mt-32`}>
         {children}
       </div>
     </div>

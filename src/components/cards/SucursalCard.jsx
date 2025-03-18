@@ -25,7 +25,7 @@ const SUCURSAL_CARD_UI = {
     COLOR: 'text-secondary'
   },
   TEXT: {
-    FONT_SIZE: "text-base",
+    FONT_SIZE: "text-xs",
     COLOR: "text-dark",
     LINE_HEIGHT: "leading-2",
   },
@@ -122,7 +122,7 @@ const SucursalCard = (props) => {
         image_1024={image}
         image_1200={image}
         image_1920={image}
-        height='h-[140px]'
+        height='h-full'
         opacity='opacity-30 hover:opacity-60'
         backgroundColor='bg-dark'
         className='p-3'>
@@ -139,10 +139,10 @@ const SucursalCard = (props) => {
       {/* Imagen */}
 
       {/* Descripción */}
-      <section className='flex flex-col gap-4 justify-between items-start min-h-[320px] '>
+      <section className='flex flex-col gap-4 justify-between items-center min-h-[210px] '>
         <div className='p-8 flex flex-col gap-4'>
           {/* Título */}
-          <TitleH3 justify='justify-center mb-4' color='text-dark'>
+          <TitleH3 justify='justify-center' color='text-dark'>
             {title}
           </TitleH3>
           {/* Título */}
@@ -165,11 +165,12 @@ const SucursalCard = (props) => {
           {/* Horario */}
         </div>
 
+      </section>
         {/* Advertisement */}
         {advertisement ? (
           <section className='w-full'>
             <Badge backgroundColor='bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary'>
-              <p className='text-base uppercase px-8'>{advertisement}</p>
+              <p className='text-sm uppercase px-8'>{advertisement}</p>
             </Badge>
             {renderMapLinks(position, title, gmap)}
           </section>
@@ -179,7 +180,6 @@ const SucursalCard = (props) => {
           </div>
         )}
         {/* Advertisement */}
-      </section>
       {/* Descripción */}
 
       {/* Badge*/}
@@ -192,7 +192,7 @@ const SucursalCard = (props) => {
 
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[90vw] md:w-[60vw] lg:w-auto z-50'>
+        <Modal width='w-[100vw] md:w-[60vw] lg:w-auto z-50'>
           <div id='imagen-sucursal' className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark
@@ -202,7 +202,7 @@ const SucursalCard = (props) => {
             </button>
             <Spacing distance='my-4' />
             <div className="flex flex-col items-center justify-center gap-8">
-              <img src={image} alt={title} className="w-auto h-[30vh] object-cover" />
+              <img src={image} alt={title} className="w-[340px] h-[280px] object-cover" />
               <TitleH3>{title}</TitleH3>
             </div>
           </div>

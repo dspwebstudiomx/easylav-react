@@ -41,7 +41,7 @@ export const GENERAL_UI = {
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-bold",
-    FONT_SIZE: "text-[18px]",
+    FONT_SIZE: "text-base",
     FONT_WEIGHT: "font-bold",
     COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
