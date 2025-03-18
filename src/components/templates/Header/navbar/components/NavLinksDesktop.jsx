@@ -13,7 +13,7 @@ const NavLinksDesktop = () => {
     <>
       <ul
         id="navlinks-desktop"
-        className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0 items-center"
+        className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0"
       >
         {navLinksSections.map((navlink) => {
           return (
