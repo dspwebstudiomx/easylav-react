@@ -10,46 +10,44 @@ const NavLinksDesktop = () => {
   const activeClasses = "text-dark uppercase"; // Add this line for active link styling
 
   return (
-    <>
-      <ul
-        id="navlinks-desktop"
-        className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0"
-      >
-        {navLinksSections.map((navlink) => {
-          return (
-            <NavHashLink
-              key={navlink.id}
-              id={`navlink ${navlink.name}`}
-              className={({ isActive }) => {
-                const classNames = `${isActive ? activeClasses : baseClasses}`;
-                return classNames;
-              }}
-              to={navlink.href}
-              scroll={scrollWithOffset}
-              title={`navlink ${navlink.linkId}`}
-            >
-              {navlink.name}
-            </NavHashLink>
-          );
-        })}
-        {navLinksPages.map((navlink) => {
-          return (
-            <NavLink
-              key={navlink.id}
-              id={`navlink-${navlink.name}`}
-              className={({ isActive }) => {
-                const classNames = `${baseClasses} ${isActive ? activeClasses : ''}`;
-                return classNames;
-              }}
-              to={navlink.href}
-              title={`navlink ${navlink.linkId}`}
-            >
-              {navlink.name}
-            </NavLink>
-          );
-        })}
-      </ul>
-    </>
+    <ul
+      id="navlinks-desktop"
+      className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0"
+    >
+      {navLinksSections.map((navlink) => {
+        return (
+          <NavHashLink
+            key={navlink.id}
+            id={`navlink ${navlink.name}`}
+            className={({ isActive }) => {
+              const classNames = `${isActive ? activeClasses : baseClasses}`;
+              return classNames;
+            }}
+            to={navlink.href}
+            scroll={scrollWithOffset}
+            title={`navlink ${navlink.linkId}`}
+          >
+            {navlink.name}
+          </NavHashLink>
+        );
+      })}
+      {navLinksPages.map((navlink) => {
+        return (
+          <NavLink
+            key={navlink.id}
+            id={`navlink-${navlink.name}`}
+            className={({ isActive }) => {
+              const classNames = `${baseClasses} ${isActive ? activeClasses : ''}`;
+              return classNames;
+            }}
+            to={navlink.href}
+            title={`navlink ${navlink.linkId}`}
+          >
+            {navlink.name}
+          </NavLink>
+        );
+      })}
+    </ul>
   );
 };
 
