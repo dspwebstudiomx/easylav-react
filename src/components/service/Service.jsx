@@ -56,7 +56,7 @@ const Service = ({ service }) => {
         <Modal width="w-[100vw] md:w-[60vw] lg:w-[40vw]" height="h-auto">
           <div
             id="modal-servicio"
-            className="z-40 mx-auto flex h-full flex-col justify-center gap-8 overflow-scroll rounded-xl border-4 border-primary bg-light p-8 sm:p-12"
+            className="z-40 mx-auto flex h-full flex-col justify-center gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12"
           >
             <button
               id="button-close"
