@@ -36,8 +36,8 @@ export const GENERAL_UI = {
     FONT_WEIGHT: "font-semibold",
     COLOR: "text-dark dark:text-primary",
     BACKGROUND_COLOR: "",
-    JUSTIFY: "mx-auto",
-    TEXT_TRANSFORM: "uppercase",
+    JUSTIFY: "ml-auto",
+    TEXT_TRANSFORM: "",
   },
   TITLEH3: {
     FONT_FAMILY: "font-din-bold",
