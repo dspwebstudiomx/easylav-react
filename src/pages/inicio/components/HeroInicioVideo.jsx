@@ -59,19 +59,12 @@ const HeroInicioVideo = () => {
       <div className={`absolute inset-0 z-10 w-full bg-dark opacity-70 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
       <div className={`absolute inset-0  z-20 p-8 py-20 sm:p-20 ${HEROINICIO_UI.HEIGHT} w-full flex items-center`}>
         <Container>
-          <div className='w-full xl:w-2/3 flex flex-col gap-12 items-center sm:items-start justify-center items-center'>
+          <div className='w-full xl:w-2/3 flex flex-col gap-12 items-center sm:items-start justify-center'>
             <h1 className={styles.title}>En <span className='mx-2 text-primary'>LAVANDERÍAS EASYLAV</span> no solo te brindamos soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus prendas luzcan siempre de la mejor manera. </h1>
             <p className={styles.paragraph}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus in architecto, quibusdam earum placeat officiis ea molestias esse consequuntur aliquam culpa tempora ut dolorum nisi quaerat autem quisquam. Asperiores temporibus adipisci fugiat et sed incidunt maiores magnam iste voluptate sunt.</p>
             <ButtonContainer position={'items-center'}>
-              <ButtonSecondary title='Nuestros servicios' href='/#servicios' width={"w-full sm:w-[340px]"} />
+              <ButtonSecondary title='Nuestros servicios' href='/#servicios' width={"w-full sm:w-[260px]"} />
             </ButtonContainer>
-          </div>
-          <div className="absolute bottom-6 left-52 animate-bounce sm:hidden">
-            <a href="#about" className="text-light z-20">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
           </div>
         </Container>
       </div>

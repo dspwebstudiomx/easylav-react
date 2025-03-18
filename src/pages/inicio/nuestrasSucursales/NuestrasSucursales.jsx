@@ -50,12 +50,12 @@ const NuestrasSucursales = () => {
               touchRatio: 1
             },
             1024: {
-              slidesPerView: 3,
-              spaceBetweenSlides: 60,
+              slidesPerView: 4,
+              spaceBetweenSlides: 20,
               touchRatio: 1
             },
             1920: {
-              slidesPerView: 3,
+              slidesPerView: 4,
               spaceBetweenSlides: 40,
               touchRatio: 1
             },

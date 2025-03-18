@@ -21,7 +21,7 @@ const NAVBAR_UI = {
   CONTAINER: {
     DISPLAY: "flex gap-12 justify-between items-center",
     MARGIN: "mx-auto",
-    PADDING: "p-6 sm:px-8 lg:px-16",
+    PADDING: "p-6 sm:px-8 lg:px-16 xl:px-0",
     WIDTH: "w-full",
     HEIGHT: "h-full"
   },
