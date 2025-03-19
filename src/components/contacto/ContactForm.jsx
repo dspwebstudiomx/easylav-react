@@ -10,9 +10,29 @@ import emailjs from '@emailjs/browser';
 import { ButtonContainer, SubmitButton } from 'components';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
+import * as Yup from 'yup';
 import EmailErrorModal from '../modals/EmailErrorModal';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
 
+// Esquema de validación con Yup
+const validationSchema = Yup.object().shape({
+  user_name: Yup.string()
+    .matches(/^[a-zA-ZÀ-ÿ\s]{1,40}$/, 'Solo debe de contener letras')
+    .min(2, 'Ingrese al menos 2 letras')
+    .required('Nombre requerido'),
+  user_city: Yup.string()
+    .matches(/^[a-zA-ZÀ-ÿ\s]{1,40}$/, 'Solo debe de contener letras')
+    .min(2, 'Ingrese al menos 2 letras')
+    .required('Ciudad requerida'),
+  user_email: Yup.string()
+    .email('Email no válido')
+    .required('Correo electrónico requerido'),
+  user_phone: Yup.string()
+    .matches(/^[+]+[0-9]+$/, 'Solo se aceptan números y símbolo + al comienzo')
+    .required('Número telefónico requerido'),
+  message: Yup.string()
+    .required('Mensaje requerido')
+});
 
 // Componente
 export default function ContactForm() {
@@ -22,24 +42,14 @@ export default function ContactForm() {
   const [showErrorModal, setShowErrorModal] = useState(false);
 
   useEffect(() => {
-    if (showModal) {
+    if (showModal || showErrorModal) {
       document.body.classList.add('modal-active');
-      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
+      document.body.style.overflow = 'hidden';
     } else {
       document.body.classList.remove('modal-active');
-      document.body.style.overflow = 'unset'; // Reset the overflow style
+      document.body.style.overflow = 'unset';
     }
-  }, [showModal]);
-
-  useEffect(() => {
-    if (showErrorModal) {
-      document.body.classList.add('modal-active');
-      document.body.style.overflow = 'hidden'; // Add this line to prevent scrolling
-    } else {
-      document.body.classList.remove('modal-active');
-      document.body.style.overflow = 'unset'; // Reset the overflow style
-    }
-  }, [showErrorModal]);
+  }, [showModal, showErrorModal]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -57,15 +67,9 @@ export default function ContactForm() {
         },
       );
   };
-  if (showModal) {
-    document.body.classList.add('modal-active')
-  } else {
-    document.body.classList.remove('modal-active')
-  }
-
 
   return (
-    <div id="formulario" className="relative border-4   border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full text-dark ">
+    <div id="formulario" className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full text-dark">
       <Formik
         initialValues={{
           user_name: '',
@@ -74,51 +78,8 @@ export default function ContactForm() {
           user_phone: '',
           message: ''
         }}
-        validate={
-          values => {
-            let errors = {};
-            if (!values.user_name) {
-              errors.user_name = 'Solo debe de contener letras'
-            } else if (values.user_name.length < 2) {
-              errors.user_name = 'Ingrese al menos 2 letras'
-            } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_name)) {
-              errors.user_name = 'No debe de contener números'
-            } else if (/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_name)) {
-              errors.user_name = 'Nombre Correcto'
-            }
-
-            if (!values.user_city) {
-              errors.user_city = 'Solo debe de contener letras'
-            } else if (values.user_city.length < 2) {
-              errors.user_city = 'Ingrese al menos 2 letras'
-            } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_city)) {
-              errors.user_city = 'No debe de contener números'
-            } else if (/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_city)) {
-              errors.user_city = 'Ciudad correcta '
-            }
-
-            if (!values.user_email) {
-              errors.user_email = 'Requerido';
-            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.user_email)) {
-              errors.user_email = 'Email no valido';
-            } else if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.user_email)) {
-              errors.user_email = 'Email correcto';
-            }
-            if (!values.user_phone) {
-              errors.user_phone = 'Solo se aceptan números y símbolo + al comienzo'
-            } else if (!/^[+]+[0-9]+$/.test(values.user_phone)) {
-              errors.user_phone = "Hace falta el simbolo de + al comienzo"
-            } else if (/^[+]+[0-9]+$/.test(values.user_phone)) {
-              errors.user_phone = "Número telefónico correcto"
-            }
-            if (!values.message) {
-              errors.message = 'Mensaje requerido'
-            }
-            return errors;
-          }
-        }
-        onSubmit={() => {
-        }}
+        validationSchema={validationSchema}
+        onSubmit={() => {}}
       >
         {({ errors, touched, resetForm }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm text-dark tracking-wider">
@@ -129,7 +90,7 @@ export default function ContactForm() {
                 <Field
                   id="user_name"
                   name="user_name"
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2  border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-2 outline-none"
                   type="text"
                   required
                 />
@@ -138,52 +99,48 @@ export default function ContactForm() {
               <div id='formField_ciudad' className="flex flex-col xl:w-[45%] w-full">
                 <label htmlFor='user_city' className="mb-2 text-sm">Ciudad<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2  border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-2 outline-none"
                   id="user_city"
                   name="user_city"
                   required
                 />
                 {touched.user_city && errors.user_city && <p className='mt-2 text-required text-xs'>*<span className='text-dark'>{errors.user_city}</span> </p>}
-
               </div>
             </div>
             <div className="flex flex-wrap justify-between gap-2">
               <div id='formField_email' className="flex flex-col xl:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2 text-sm">Correo Electrónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2  border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-2 outline-none"
                   id="user_email"
                   name="user_email"
                   type="email"
                   required
                 />
                 {touched.user_email && errors.user_email && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_email}</span></p>}
-
               </div>
               <div id='formField_ numerotelefonico' className="flex flex-col xl:w-[45%] w-full">
                 <label htmlFor="user_phone" className="mb-2 text-sm">Número Telefónico<span className='text-required ml-1'>*</span></label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 border-2  border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 border-2 border-secondary dark:border-primary p-2 outline-none"
                   type="text"
                   name="user_phone"
                   id="user_phone"
                   required
                 />
                 {touched.user_phone && errors.user_phone && <p className='mt-2 text-required text-xs'>* <span className='text-dark'>{errors.user_phone}</span></p>}
-
               </div>
             </div>
             <div id='formField_mensaje' className="flex flex-col w-full">
               <label htmlFor="message" className="mb-2">Mensaje<span className='text-required ml-1'>*</span></label>
-              <textarea
-                type="text"
+              <Field
+                as="textarea"
                 name="message"
                 id="message"
-                className="rounded-md bg-light text-slate-900 bg-slate-200 p-2 border-2  border-secondary dark:border-primary h-40 min-h-40 max-h-40 2xl:max-h-28 2xl:min-h-28 outline-none"
+                className="rounded-md bg-light text-slate-900 bg-slate-200 p-2 border-2 border-secondary dark:border-primary h-40 min-h-40 max-h-40 2xl:max-h-28 2xl:min-h-28 outline-none"
                 required
               />
-              {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
-
+              {touched.message && errors.message && <p className='mt-2 text-required text-xs'>* {errors.message}</p>}
             </div>
             {/* Fields */}
 
@@ -198,7 +155,7 @@ export default function ContactForm() {
               <EmailSuccessModal
                 onClick={() => {
                   setShowModal(false);
-                  resetForm()
+                  resetForm();
                 }}
               />
             }
@@ -211,9 +168,8 @@ export default function ContactForm() {
             }
             {/* Modals */}
           </Form>
-        )
-        }
-      </Formik >
+        )}
+      </Formik>
     </div>
-  )
+  );
 }
