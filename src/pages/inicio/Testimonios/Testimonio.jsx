@@ -11,16 +11,16 @@ import PropTypes from 'prop-types';
 // Estilos
 const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "p-10 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[380px] w-full shadow-xl",
-  PARAGRAPH_CLASSNAME: "text-pretty text-lg sm:text-xl ",
+    "pt-8 pb-2 px-12 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[260px] w-full shadow-xl w-80% md:w-full",
+  PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg md:text-sm",
   CONTAINER_CLASSNAME:
     "flex flex-row justify-between",
-  NAME_CLASSNAME: "font-semibold text-lg",
+  NAME_CLASSNAME: "font-semibold md:text-sm uppercase",
   NUMBER_STAR_CONTAINER_CLASSNAME:
     "text-dark justify-between flex mb-6",
   STARS_CONTAINER_CLASSNAME: "flex items-center justify-center",
   STARS_CLASSNAME: "text-secondary dark:text-primary",
-  QUALIFICATION_CLASSNAME: "font-semibold text-lg text-dark",
+  QUALIFICATION_CLASSNAME: "font-semibold md:text-sm text-dark",
 };
 
 //Estructura
