@@ -11,7 +11,7 @@ import { services } from 'data';
 
 const SERVICES_UI = {
   ARTICLE: "w-full",
-  LIST: "grid md:grid-cols-3 lg:grid-cols-5 gap-y-8 items-center justify-center mx-auto",
+  LIST: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center mx-auto",
 }
 
 // Estilos

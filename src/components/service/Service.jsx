@@ -53,7 +53,7 @@ const Service = ({ service }) => {
       </Link>
       {/* Modal */}
       {showModal && (
-        <Modal width="w-[100vw] md:w-[60vw] lg:w-[40vw]" height="h-auto">
+        <Modal width="w-[80vw] md:w-[60vw] lg:w-[40vw]" height="h-auto">
           <div
             id="modal-servicio"
             className="z-40 mx-auto flex h-full flex-col justify-center gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12"
@@ -77,7 +77,7 @@ const Service = ({ service }) => {
               </div>
             </div>
 
-            <p className="text-dark">{service.description}</p>
+            <p className="text-dark text-pretty">{service.description}</p>
             <ButtonContainer position="justify-center sm:justify-end items-center">
               <ButtonSecondary
                 title="Conócenos"

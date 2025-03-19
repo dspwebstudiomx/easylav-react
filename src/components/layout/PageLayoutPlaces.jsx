@@ -36,7 +36,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
           <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
         </BackgroundImageSection>
 
-        <Section id='sucursales-morelia' className={'flex flex-col gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
+        <Section id='sucursales-morelia' className={'flex flex-col items-center justify-center gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
           <Container className={''}>
             <SucursalCardPerCity city={city} />
             <ButtonContainer position='items-center justify-center' distance='mt-16'>

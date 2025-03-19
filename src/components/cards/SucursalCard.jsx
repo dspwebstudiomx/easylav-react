@@ -14,11 +14,11 @@ const SUCURSAL_CARD_UI = {
     COLOR: "text-dark",
     DISPLAY: "flex flex-col relative mx-auto",
     HEIGHT: "min-h-[360px]",
-    JUSTIFY: "justify-center items-center",
+    JUSTIFY: "justify-center items-center mx-auto",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
     SHADOW: "shadow-xl",
-    WIDTH: "w-[80%] md:w-[280px] lg:w-[220px]",
+    WIDTH: "w-[70%] md:w-[280px] lg:w-[220px]",
   },
   ICON: {
     SIZE: '30',
@@ -93,7 +93,7 @@ const renderMapLinks = (position, title, gmap) => (
         <span>Waze</span>
       </Badge>
     </a>
-    <a href={gmap} target='_blank' rel='noopener noreferrer' title={`Ir a ${title} en Google Maps`} className='flex w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-lg sm:text-sm'>
+    <a href={gmap} target='_blank' rel='noopener noreferrer' title={`Ir a ${title} en Google Maps`} className='flex w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-sm'>
       <Badge flexDirection='flex-col'>
         <FaMapMarkedAlt size={24} />
         <span>Google Maps</span>
@@ -122,7 +122,7 @@ const SucursalCard = (props) => {
         image_1024={image}
         image_1200={image}
         image_1920={image}
-        height='h-full'
+        height='h-[160px]'
         opacity='opacity-30 hover:opacity-60'
         backgroundColor='bg-dark'
         className='p-3'>
