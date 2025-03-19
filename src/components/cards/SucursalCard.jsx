@@ -21,7 +21,8 @@ const SUCURSAL_CARD_UI = {
     WIDTH: "w-[70%] md:w-[280px] lg:w-[220px]",
   },
   ICON: {
-    SIZE: '30',
+    SIZE_1: 30,
+    SIZE_2: 20,
     COLOR: 'text-secondary'
   },
   TEXT: {
@@ -50,7 +51,8 @@ const styles =
     section: SUCURSAL_CARD_UI.CONTENT.SECTION,
     title: SUCURSAL_CARD_UI.CONTENT.TITLE,
     icon: {
-      size: SUCURSAL_CARD_UI.ICON.SIZE,
+      size_1: SUCURSAL_CARD_UI.ICON.SIZE_1,
+      size_2: SUCURSAL_CARD_UI.ICON.SIZE_2,
       color: SUCURSAL_CARD_UI.ICON.COLOR
     },
     text: `${SUCURSAL_CARD_UI.TEXT.FONT_SIZE} ${SUCURSAL_CARD_UI.TEXT.COLOR} ${SUCURSAL_CARD_UI.TEXT.LINE_HEIGHT}`,
@@ -147,22 +149,25 @@ const SucursalCard = (props) => {
           </TitleH3>
           {/* Título */}
 
+          <div className='flex flex-col gap-4 items-start'>
           {/* Dirección */}
           <a className={styles.content.description.info} href={gmap} target='_blank' rel='noopener noreferrer' title={`Sucursal ${title}`}>
-            <FaMapMarkerAlt size={styles.content.icon.size} className={styles.content.icon.color} />
+            <FaMapMarkerAlt size={styles.content.icon.size_1} className={styles.content.icon.color} />
             <span className={styles.content.text}>{place}</span>
           </a>
           {/* Dirección */}
 
           {/* Horario */}
           <div className={styles.content.description.info}>
-            <FaRegClock size={styles.content.icon.size} className={styles.content.icon.color} />
-            <div className={styles.content.text}>
+            <FaRegClock size={styles.content.icon.size_2} className={styles.content.icon.color} />
+            <div className={`${styles.content.text} flex flex-col gap-1`}>
               <span>{serviceday1}</span>
               <span>{servicehour1}</span>
             </div>
           </div>
           {/* Horario */}
+          </div>
+
         </div>
 
       </section>
@@ -192,7 +197,7 @@ const SucursalCard = (props) => {
 
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[100vw] md:w-[60vw] lg:w-auto z-50'>
+        <Modal width='w-[80vw] md:w-[60vw] lg:w-auto z-50'>
           <div id='imagen-sucursal' className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark

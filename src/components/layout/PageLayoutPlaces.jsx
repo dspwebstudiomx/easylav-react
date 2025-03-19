@@ -45,7 +45,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
                 href='/sucursales'
                 distance=''
                 type='button'
-                width={"w-[340px]"}
+                width={"w-full sm:w-[320px]"}
               />
             </ButtonContainer>
             <Spacing distance={'mt-[10vh]'} />

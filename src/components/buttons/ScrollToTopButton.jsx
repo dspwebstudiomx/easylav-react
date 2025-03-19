@@ -32,7 +32,7 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={e => scrollToTop(e)}
-      className={`animate__animated animate__fadeIn animate__slow shadow-2xl rounded-full fixed bg-gradient-to-r from-secondary to-secondary_dark w-12 h-12 right-4 bottom-24 shadow-2xl sm:bottom-6 sm:right-6 z-10 grid place-content-center border-l-4 border-t-4 border-l-secondary border-t-secondary_light text-light ${visible ? 'block' : 'hidden'
+      className={`animate__animated animate__fadeIn animate__slow shadow-2xl rounded-full fixed bg-gradient-to-r from-secondary to-secondary_dark w-12 h-12 right-4 bottom-24 sm:bottom-6 sm:right-6 z-10 grid place-content-center border-l-4 border-t-4 border-l-secondary border-t-secondary_light text-light ${visible ? 'block' : 'hidden'
         }`}
     >
       <HiOutlineChevronDoubleUp className='text-primary_light' size={21} />
