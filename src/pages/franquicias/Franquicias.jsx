@@ -109,7 +109,7 @@ const Franquicias = () => {
                   return (
                     <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">
                       <Accordion
-                        height='h-[130px]'
+                        height='h-[120px]'
                         title={description.title}
                         description={description.description}
                       />
@@ -160,6 +160,7 @@ const Franquicias = () => {
       </div>
       <ScrollToTopButton />
       <Footer />
+
       {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
