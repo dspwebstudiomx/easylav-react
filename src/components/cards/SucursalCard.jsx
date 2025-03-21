@@ -141,7 +141,7 @@ const SucursalCard = (props) => {
       {/* Imagen */}
 
       {/* Descripción */}
-      <section className='flex flex-col gap-4 justify-between items-center min-h-[210px] '>
+      <section className='flex flex-col gap-4 justify-between items-center min-h-[240px] '>
         <div className='p-8 flex flex-col gap-4'>
           {/* Título */}
           <TitleH3 justify='justify-center' color='text-dark'>
