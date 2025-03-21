@@ -7,7 +7,7 @@
 
 // Importaciones
 import { woman as img } from 'assets';
-import { BorderLeft, Container, DescriptionWithBulletPoint, ImageResponsive, Section, TitleH2 } from 'components';
+import { Container, DescriptionWithBulletPoint, ImageResponsive, Section, TitleContainer} from 'components';
 import { porqueElegirnosDescripciones } from 'data';
 
 // Estilos
@@ -57,11 +57,8 @@ export default function PorqueElegirnos() {
       <Container className={PORQUE_ELEGIRNOS_UI.CONTAINER} id={PORQUE_ELEGIRNOS_PROPS.CONTAINER.ID}>
         <article className={PORQUE_ELEGIRNOS_UI.ARTICLE}>
           <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.CARACTERISTICAS.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_CARACTERISTICAS}>
-            <BorderLeft>
-              <TitleH2>
-                {PORQUE_ELEGIRNOS_PROPS.ARTICLE.CARACTERISTICAS.TITLEH2.TITLE}
-              </TitleH2>
-            </BorderLeft>
+            <TitleContainer title='¿Por qué elegirnos?' />
+         
             <div className={PORQUE_ELEGIRNOS_UI.CONTAINER_BULLET_DETAILS}>
               {porqueElegirnosDescripciones.map(descripcion => {
                 return (

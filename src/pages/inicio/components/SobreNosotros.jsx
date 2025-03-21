@@ -7,7 +7,7 @@
 
 // Importaciones
 import video from 'assets/video/video2.mp4';
-import { BorderLeft, Container, Paragraph, Section, TitleH2 } from 'components';
+import { Container, Paragraph, Section, TitleContainer } from 'components';
 import Video from 'components/video/Video';
 
 const ABOUT_UI = {
@@ -44,11 +44,7 @@ const SobreNosotros = () => {
       <Container className={ABOUT_UI.CONTAINER} id={ABOUT_PROPS.CONTAINER_ID}>
         <div id='sobrenosotros-doscolunmas' className={ABOUT_UI.TWOCOLUMNS_CONTAINER}>
           <div id='sobrenosotros-columna-1' className={ABOUT_UI.COLUMN1_CONTAINER}>
-            <BorderLeft>
-              <TitleH2>
-                {ABOUT_PROPS.TITLEH2}
-              </TitleH2>
-            </BorderLeft>
+          <TitleContainer title='Sobre Nosotros' />
             <Paragraph>
               En
               <span className={ABOUT_UI.SPAN}>

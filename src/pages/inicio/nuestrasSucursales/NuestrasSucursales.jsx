@@ -1,4 +1,4 @@
-import { BorderCenter, Container, Section, SucursalCard, TitleH2 } from 'components';
+import { Container, Section, Spacing, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
 import 'swiper/css';
@@ -23,11 +23,20 @@ const NuestrasSucursales = () => {
   });
 
   return (
-    <Section>
+    <Section className=''>
       <Container>
-        <BorderCenter >
+        {/* Títulos */}
+        <div className='md:hidden'>
+          <TitleContainer title='Nuestras Sucursales'/>
+        </div>
+        <div className='hidden md:block mx-auto'>
           <TitleH2>Nuestras Sucursales</TitleH2>
-        </BorderCenter>
+        </div>
+        {/* Títulos */}
+
+        <Spacing distance='mt-12' />
+
+        {/* Carousel de Tarjetas Sucursales */}
         <Swiper
           modules={[Navigation, Autoplay]}
           className="mySwiper"
@@ -67,6 +76,8 @@ const NuestrasSucursales = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        {/* Carousel de Tarjetas Sucursales */}
+
       </Container>
     </Section>
   )
