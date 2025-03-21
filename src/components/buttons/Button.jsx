@@ -14,10 +14,10 @@ import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs
 // Estilos
 const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
-  HEIGHT: "h-[80px]",
-  WIDTH: "min-w-[240px] max-w-[240px] sm:w-[340px] xl:min-w-[280px]",
+  HEIGHT: "min-h-[60px]",
+  WIDTH: "min-w-[240px] max-w-[240px] sm:w-[340px] md:max-w-[280px]",
   FONT_SIZE: "text-lg xl:text-lg",
-  PADDING: "px-6 py-4 sm:px-3 sm:py-4",
+  PADDING: "px-6 py-3",
   FONT_WEIGHT: "font-semibold",
   TEXT_TRANSFORM: "uppercase",
   ROUNDED: "rounded-lg",

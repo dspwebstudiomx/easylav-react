@@ -79,7 +79,7 @@ const QuieresUnaFranquicia = () => {
               Imagina ser parte de una franquicia de lavandería, un sector que nunca pasa de moda y siempre tiene demanda. Con nuestra marca, no solo obtendrás un modelo de negocio probado y exitoso, sino también el respaldo y la capacitación necesaria para triunfar. Nuestros sistemas innovadores y tecnología de vanguardia te permitirán ofrecer un servicio excepcional, atrayendo a clientes que buscan calidad y conveniencia. No dejes pasar esta oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
             </p>
             <ButtonContainer position={styles.buttonContainer} distance='mt-12'>
-              <ButtonPrimary title='Conoce más' href='/franquicias' width={'min-w-[340px]'} onClick={scrollToTop} />
+              <ButtonPrimary title='Conoce más' href='/franquicias' width={''} onClick={scrollToTop} />
             </ButtonContainer>
           </div>
         </div>

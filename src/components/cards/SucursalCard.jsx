@@ -13,7 +13,7 @@ const SUCURSAL_CARD_UI = {
     BACKGROUND: "bg-light",
     COLOR: "text-dark",
     DISPLAY: "flex flex-col relative mx-auto",
-    HEIGHT: "min-h-[360px]",
+    HEIGHT: "h-full",
     JUSTIFY: "justify-center items-center mx-auto",
     OVERFLOW: "overflow-hidden",
     ROUNDED: "rounded-xl",
@@ -107,7 +107,7 @@ const renderMapLinks = (position, title, gmap) => (
 // Estructura
 const SucursalCard = (props) => {
 
-  const { title, position, place, gmap, badge, advertisement, image, serviceday1, servicehour1, openHour, closeHour, openMinute, closeMinute } = props;
+  let { title, position, place, gmap, badge, advertisement, image, serviceday1, servicehour1, openHour, closeHour, openMinute, closeMinute } = props;
   const isOpen = useMemo(() => isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute), [openHour, openMinute, closeHour, closeMinute]);
   const { showModal, setShowModal } = useShowModal()
 
@@ -125,10 +125,10 @@ const SucursalCard = (props) => {
         image_1200={image}
         image_1920={image}
         height='h-[160px]'
-        opacity='opacity-30 hover:opacity-60'
+        opacity='opacity-30'
         backgroundColor='bg-dark'
-        className='p-3'>
-        <div id={`open-closed-zoom-${title}`} className='flex justify-end items-start h-full'>
+        className='p-4 rounded-t-xl'>
+        <div id={`open-closed-zoom-${title}`} className='flex justify-end items-start h-[160px] absolute top-0 right-0 p-4'>
           {/* Badge Horario Abierto/Cerrado */}
           {renderOpenClosedBadge(isOpen)}
         </div>

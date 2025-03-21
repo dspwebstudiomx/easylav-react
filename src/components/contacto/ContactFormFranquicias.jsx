@@ -114,7 +114,7 @@ export const ContactFormFranquicias = () => {
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm items-between">
             <h2 className='text-2xl font-semibold text-dark'>¿Estás interesado en adquirir una franquicia?</h2>
             <Fields errors={errors} touched={touched} />
-            <div className='mx-auto flex sm:flex-row gap-4 w-full px-20'>
+            <div className='mx-auto flex sm:flex-row gap-4 w-full'>
               <SubmitButton text="Enviar mensaje" />
               <HomeButton text="Ir a inicio" />
             </div>

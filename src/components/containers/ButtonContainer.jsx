@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 // Estructura
 const ButtonContainer = ({ children, position, distance }) => {
   return (
-    <div className={`flex flex-col sm:flex-row gap-8 ${position} ${distance}`}>
+    <div className={`flex flex-col sm:flex-row gap-8 ${position} ${distance} max-w-2/3`}>
       {children}
     </div>
   )

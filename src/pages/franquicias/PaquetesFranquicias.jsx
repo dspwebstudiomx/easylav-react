@@ -36,16 +36,7 @@ const PaquetesFranquicias = () => {
                     <span className="sr-only">Plan</span>
                   </h2>
                   <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <ButtonContainer position='justify-center items-center'>
-                    <ButtonSecondary
-                      title={"Contactar"}
-                      width={"w-[210px]"}
-                      onClick={() => setShowModal(true)}
-                      icon={''}
-                      distance='mx-1'
-                      id='boton-Contactar'
-                    />
-                  </ButtonContainer>
+               
                 </div>
                 {/* Primera Parte */}
 
@@ -60,6 +51,16 @@ const PaquetesFranquicias = () => {
                         <span>{caracteristica}</span></li>
                     ))}
                   </ul>
+                  <ButtonContainer position='justify-center items-center'>
+                    <ButtonSecondary
+                      title={"Contactar"}
+                      width={"w-full"}
+                      onClick={() => setShowModal(true)}
+                      icon={''}
+                      distance='mx-1'
+                      id='boton-Contactar'
+                    />
+                  </ButtonContainer>
                 </div>
                 {/* Segunda Parte */}
 

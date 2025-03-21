@@ -3,10 +3,10 @@ import { VistaDentroLavanderia_640 as image } from 'assets';
 import { Accordion, BorderLeft, ButtonContainer, ButtonPrimary, ButtonSecondary, ContactFormFranquicias, Container, Footer, ImageResponsive, Modal, Navbar, ScrollToTopButton, Section, SEOFriendly, Spacing, TitleH2 } from "components";
 import { franquiciaDescripciones, franquiciasImagenes } from "data";
 import { useShowModal } from 'hooks';
-import { FaInfoCircle } from 'react-icons/fa';
 import { FaRegBuilding, FaXmark } from 'react-icons/fa6';
 import { IoHomeOutline } from 'react-icons/io5';
 import PaquetesFranquicias from './PaquetesFranquicias';
+import { IoIosInformationCircleOutline } from 'react-icons/io';
 
 // Props
 
@@ -148,7 +148,7 @@ const Franquicias = () => {
               <ButtonSecondary title={"Más información"}
                 width={"w-[340px]"}
                 onClick={() => setShowModal(true)}
-                icon={<FaInfoCircle />}
+                icon={<IoIosInformationCircleOutline />}
                 distance='mx-1'
                 id='mas-informacion'
               />
