@@ -17,9 +17,9 @@ const BUTTON_UI = {
   HEIGHT: "min-h-[60px]",
   WIDTH: "min-w-[240px] max-w-[240px] sm:w-[240px] md:max-w-[240px]",
   FONT_SIZE: "text-lg xl:text-lg",
-  PADDING: "px-6 py-3",
+  PADDING: "px-6 py-6",
   FONT_WEIGHT: "font-semibold",
-  TEXT_TRANSFORM: "uppercase",
+  TEXT_TRANSFORM: "uppercase text-balance",
   ROUNDED: "rounded-lg",
   LETTER_SPACING: "tracking-wider sm:tracking-normal",
   ANIMATION:
