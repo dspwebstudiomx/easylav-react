@@ -26,7 +26,7 @@ const SUCURSAL_CARD_UI = {
     COLOR: 'text-secondary'
   },
   TEXT: {
-    FONT_SIZE: "text-[13px]",
+    FONT_SIZE: "text-[15px] sm:text-[12px]",
     COLOR: "text-dark",
     LINE_HEIGHT: "",
   },
