@@ -32,7 +32,7 @@ const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.HEIGHT} ${BUTTON_UI.WIDTH} ${
 const Button = ({ backgroundColor, title, border, icon, type, onClick, href, textColor, name, width }) => {
   return (
     <HashLink to={href} scroll={el => scrollWithOffset(el)}>
-      <button name={name} onClick={typeof onClick === 'function' ? onClick : undefined} type={type} className={`${backgroundColor} ${border} ${ButtonUI} ${textColor} flex gap-3 z-50`} href={href}>
+      <button name={name} onClick={typeof onClick === 'function' ? onClick : undefined} type={type} className={`${backgroundColor} ${border} ${ButtonUI} ${width ? width : ButtonUI.WIDTH} ${textColor} flex gap-3 z-50`} href={href}>
         {icon && <span>{icon}</span>}
         {title}
       </button>

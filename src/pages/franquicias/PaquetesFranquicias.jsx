@@ -54,7 +54,7 @@ const PaquetesFranquicias = () => {
                   <ButtonContainer position='justify-center items-center'>
                     <ButtonSecondary
                       title={"Contactar"}
-                      width={"w-full"}
+                      width={"w-2"}
                       onClick={() => setShowModal(true)}
                       icon={''}
                       distance='mx-1'

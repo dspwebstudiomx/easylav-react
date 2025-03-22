@@ -62,7 +62,7 @@ const Franquicias = () => {
       <div className='bg-light mt-[80px] sm:mt-0 xl:mt-[80px] dark:bg-dark'>
         {/* Banner */}
         <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
-          <div className="mx-auto max-w-screen-2xl px-4 py-32 lg:flex lg:h-2xl lg:items-center">
+          <div className="mx-auto max-w-screen-md px-4 py-32 lg:flex lg:h-2xl lg:items-center">
             <div className="mx-auto text-center">
               <h1
                 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
