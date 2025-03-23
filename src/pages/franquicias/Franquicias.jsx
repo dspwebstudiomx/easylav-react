@@ -10,11 +10,10 @@ import { IoIosInformationCircleOutline } from 'react-icons/io';
 
 // Props
 
-
-//Estilos
+// Estilos
 const FRANQUICIAS_UI = {
   TITLEH1: {
-    COLOR: "text- dark:text-light",
+    COLOR: "text-dark dark:text-light",
     FONT_SIZE: "text-3xl md:text-4xl",
     FONT_WEIGHT: "font-semibold",
     LETTER_SPACING: "tracking-wide",
@@ -44,8 +43,8 @@ const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SI
 
 // Estructura
 const Franquicias = () => {
+  const { showModal, setShowModal } = useShowModal();
 
-  const { showModal, setShowModal } = useShowModal()
   return (
     <>
       <SEOFriendly
@@ -64,17 +63,12 @@ const Franquicias = () => {
         <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
           <div className="mx-auto max-w-screen-md px-4 py-32 lg:flex lg:h-2xl lg:items-center">
             <div className="mx-auto text-center">
-              <h1
-                className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
-              >
-                <span className="sm:block">  ¿Estás interesado en adquirir una franquicia?</span>
+              <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+                <span className="sm:block">¿Estás interesado en adquirir una franquicia?</span>
               </h1>
-
               <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-                numquam ea!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
               </p>
-
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <ButtonPrimary title='Conoce lo que ofrecemos' href='#sobre-nuestras-franquicias' width={"w-[340px]"} />
               </div>
@@ -92,7 +86,7 @@ const Franquicias = () => {
           <Container>
             {/* Title */}
             <div className="w-full px-4 sm:px-0">
-              <div className="mx-auto mb-[60px] lg:mb-0 flex  flex-col gap-0">
+              <div className="mx-auto mb-[60px] lg:mb-0 flex flex-col gap-0">
                 <BorderLeft>
                   <TitleH2 className={styles} textColor="text-dark dark:text-light w-full">
                     SOBRE NUESTRAS FRANQUICIAS
@@ -105,58 +99,44 @@ const Franquicias = () => {
             <div className='lg:mt-12'>
               {/* Questions */}
               <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {franquiciaDescripciones.map(description => {
-                  return (
-                    <li key={description.id} id={`descripcion-${description.id}`} className=" text-dark">
-                      <Accordion
-                        height='h-[120px]'
-                        title={description.title}
-                        description={description.description}
-                      />
-                    </li>
-                  )
-                })}
+                {franquiciaDescripciones.map(description => (
+                  <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
+                    <Accordion
+                      height='h-[120px]'
+                      title={description.title}
+                      description={description.description}
+                    />
+                  </li>
+                ))}
               </ul>
-              <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}          >
+              <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}>
                 <ButtonSecondary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'min-w-[340px] sm:w-[140px]'} name='ver sucursales' />
               </ButtonContainer>
               {/* Questions */}
 
-              <div id="franquicias-columma-2" className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
-              >
-                {franquiciasImagenes.sort(() => Math.random() - 0.5).map(imagen => {
-                  return (
-                    <div key={imagen.id} className="h-auto rotate-[0deg]">
-                      <ImageResponsive
-                        src={imagen.image_640}
-                        className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
-                        imageAlt={imagen.image_640}
-                        image_640={imagen.image_640}
-                        image_1024={imagen.image_640}
-                        image_1920={imagen.image_640}
-                        width={380}
-                      />
-                    </div>
-                  )
-                }
-                )
-                }
+              <div id="franquicias-columma-2" className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}>
+                {franquiciasImagenes.sort(() => Math.random() - 0.5).map(imagen => (
+                  <div key={imagen.id} className="h-auto rotate-[0deg]">
+                    <ImageResponsive
+                      src={imagen.image_640}
+                      className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
+                      imageAlt={imagen.image_640}
+                      image_640={imagen.image_640}
+                      image_1024={imagen.image_640}
+                      image_1920={imagen.image_640}
+                      width={380}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
             <ButtonContainer position={'items-center sm:justify-center my-8'}>
-              <ButtonPrimary href={'/#inicio'} title={'Ir a inicio'} icon={<IoHomeOutline />} width={'min-w-[340px]'} name='Ir a inicio' />
-              <ButtonSecondary title={"Más información"}
-                width={"w-[340px]"}
-                onClick={() => setShowModal(true)}
-                icon={<IoIosInformationCircleOutline />}
-                distance='mx-1'
-                id='mas-informacion'
-              />
+              <ButtonPrimary href={'/#inicio'} title={'Ir a inicio'} icon={<IoHomeOutline />} width={"full"} name='Ir a inicio' />
+              <ButtonSecondary title={"Más información"} width={"w-full"} onClick={() => setShowModal(true)} icon={<IoIosInformationCircleOutline />} distance='mx-1' id='mas-informacion' />
             </ButtonContainer>
           </Container>
         </Section>
         {/* Contenido */}
-
       </div>
       <ScrollToTopButton />
       <Footer />
@@ -164,25 +144,19 @@ const Franquicias = () => {
       {/* Modal */}
       {showModal && (
         <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
-          <div
-            id="franquicias-formulario"
-            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
-          >
+          <div id="franquicias-formulario" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
-              <FaXmark
-                size={36}
-                className="z-30 ml-auto text-primary_dark"
-              />
+              <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
             <Spacing distance='my-4' />
             <ContactFormFranquicias />
           </div>
-        </Modal >
+        </Modal>
       )}
       {/* Modal */}
-
     </>
   );
 };
-export default Franquicias
+
+export default Franquicias;
 
