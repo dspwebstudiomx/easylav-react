@@ -29,6 +29,7 @@ const QUIERES_UNA_FRANQUICIA_UI = {
     TITLE: "light",
   },
   BUTTON: {
+    CONTAINER: "mx-auto",
     SIZE: "",
     HREF: "/franquicias",
     TEXT: {
