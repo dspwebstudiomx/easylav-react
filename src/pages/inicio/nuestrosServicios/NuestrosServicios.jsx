@@ -52,14 +52,14 @@ const NuestrosServicios = () => {
           <ButtonSecondary
             title={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.TITLE}
             href={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.HREF}
-            width=''
+            width={''}
             name={NUESTROS_SERVICIOS_PROPS.BUTTON_SECONDARY.NAME}
             onClick={() => scrollToTop()}
           />
           <ButtonPrimary
             title={NUESTROS_SERVICIOS_PROPS.BUTTON_PRIMARY.TITLE}
             href={NUESTROS_SERVICIOS_PROPS.BUTTON_PRIMARY.HREF}
-            width=''
+            width={''}
             name={NUESTROS_SERVICIOS_PROPS.BUTTON_PRIMARY.NAME}
             onClick={() => scrollToTop()}
           />

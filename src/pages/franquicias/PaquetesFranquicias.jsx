@@ -23,7 +23,7 @@ const PaquetesFranquicias = () => {
   return (
     <Section className={styles} id='paquetes-franquicias'>
       <Container>
-        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 2xl:grid-cols-4 md:gap-12 2xl:gap-6 max-w-screen-2xl mx-auto">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-12 2xl:gap-6 max-w-screen-2xl mx-auto">
 
           {paquetesFranquicias.map(paquete => {
             return (
@@ -31,22 +31,22 @@ const PaquetesFranquicias = () => {
 
                 {/* Primera Parte */}
                 <div className="p-8 flex flex-col gap-6">
-                  <h2 className="text-3xl text-dark uppercase font-bold text-center lg:text-left">
+                  <h2 className="text-2xl text-dark uppercase font-bold text-center lg:text-left">
                     {paquete.nombre}
                     <span className="sr-only">Plan</span>
                   </h2>
-                  <p className="mt-2 text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p className="mt-2 text-sm text-dark-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                
                 </div>
                 {/* Primera Parte */}
 
                 {/* Segunda Parte */}
                 <div className="p-8 flex flex-col gap-6">
-                  <p className="text-lg font-medium text-gray-900 sm:text-xl">Que incluye <span className='text-secondary_dark'>:</span></p>
+                  <p className="text-base font-medium text-dark">Que incluye <span className='text-secondary_dark'>:</span></p>
 
-                  <ul className="mt-2 space-y-2 sm:mt-4" id={`lista-caracteristica-${paquete.nombre}`}>
+                  <ul className="space-y-2" id={`lista-caracteristica-${paquete.nombre}`}>
                     {paquete.caracteristicas.map((caracteristica, index) => (
-                      <li key={index} className="text-gray-700 flex gap-4 ">
+                      <li key={index} className="text-dark flex gap-4 text-xs">
                         <FaCheck className='text-secondary_dark' />
                         <span>{caracteristica}</span></li>
                     ))}

@@ -14,7 +14,7 @@ import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs
 const BUTTON_UI = {
   DISPLAY: "flex items-center justify-center gap-0",
   HEIGHT: "min-h-[40px]",
-  WIDTH: "w-full md:w-[300px]",
+  WIDTH: "w-[290px]",
   FONT_SIZE: "text-lg xl:text-lg",
   PADDING: "px-6 py-4",
   FONT_WEIGHT: "font-semibold",
