@@ -58,7 +58,7 @@ const PaquetesFranquicias = () => {
                       onClick={() => setShowModal(true)}
                       icon={''}
                       distance='mx-1'
-                      id='boton-Contactar'
+                      id={`boton-Contactar-${paquete.nombre}`}
                     />
                   </ButtonContainer>
                 </div>
