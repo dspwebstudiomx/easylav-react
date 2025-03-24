@@ -70,7 +70,7 @@ const Franquicias = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <ButtonPrimary title='Conoce lo que ofrecemos' href='#sobre-nuestras-franquicias' width={"w-[340px]"} />
+                <ButtonPrimary title='Conoce lo que ofrecemos' href='#sobre-nuestras-franquicias' width={"w-full"} />
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Franquicias = () => {
                 ))}
               </ul>
               <ButtonContainer position={"justify-center sm:justify-center items-center my-20"}>
-                <ButtonSecondary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={'min-w-[340px] sm:w-[140px]'} name='ver sucursales' />
+                <ButtonSecondary href={'/sucursales'} title={'Ver Sucursales'} icon={<FaRegBuilding />} width={''} name='ver sucursales' />
               </ButtonContainer>
               {/* Questions */}
 
@@ -131,8 +131,8 @@ const Franquicias = () => {
               </div>
             </div>
             <ButtonContainer position={'items-center sm:justify-center my-8'}>
-              <ButtonPrimary href={'/#inicio'} title={'Ir a inicio'} icon={<IoHomeOutline />} width={"full"} name='Ir a inicio' />
-              <ButtonSecondary title={"Más información"} width={"w-full"} onClick={() => setShowModal(true)} icon={<IoIosInformationCircleOutline />} distance='mx-1' id='mas-informacion' />
+              <ButtonPrimary href={'/#inicio'} title={'Ir a inicio'} icon={<IoHomeOutline />} width={""} name='Ir a inicio' />
+              <ButtonSecondary title={"Más información"} width={""} onClick={() => setShowModal(true)} icon={<IoIosInformationCircleOutline />} distance='mx-1' id='mas-informacion' />
             </ButtonContainer>
           </Container>
         </Section>

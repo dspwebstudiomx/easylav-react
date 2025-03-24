@@ -33,7 +33,7 @@ export default function ButtonSecondary({ ...props }) {
       title={title}
       icon={icon}
       titleMailto={titleMailto}
-      width={width ? width : "w-2"}
+      width={width}
       distance={distance}
       name={name}
     />
