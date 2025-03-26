@@ -11,8 +11,8 @@ import PropTypes from 'prop-types';
 // Estilos
 const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "pt-8 pb-2 px-12 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[260px] w-full shadow-xl w-80% md:w-full",
-  PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg md:text-sm",
+    "pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[260px] w-[80%] sm:w-full shadow-xl mx-auto",
+  PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg md:text-sm" ,
   CONTAINER_CLASSNAME:
     "flex flex-row justify-between",
   NAME_CLASSNAME: "font-semibold md:text-sm uppercase",
