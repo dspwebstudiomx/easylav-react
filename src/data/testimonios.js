@@ -71,10 +71,10 @@ export const testimonios = [
       },
       {
         id: 4,
-        icon: FaStar,
+        icon: FaStarHalf,
       },
     ],
-    calificacion: 10,
+    calificacion: 8.5,
   },
   {
     id: 4,

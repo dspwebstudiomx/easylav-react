@@ -11,16 +11,16 @@ import PropTypes from 'prop-types';
 // Estilos
 const TESTIMONIAL_UI = {
   ARTICLE_CLASSNAME:
-    "pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[320px] sm:h-[260px] w-[80%] sm:w-full shadow-xl mx-auto",
+    "pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[360px] sm:h-[300px] w-[80%] sm:w-full shadow-xl mx-auto",
   PARAGRAPH_CLASSNAME: "text-pretty text-base text-lg md:text-sm" ,
   CONTAINER_CLASSNAME:
-    "flex flex-row justify-between",
-  NAME_CLASSNAME: "font-semibold md:text-sm uppercase",
+    "flex flex-col justify-center items-center gap-2 text-dark dark:text-primary mt-2",
+  NAME_CLASSNAME: "font-semibold md:text-sm uppercase mx-auto",
   NUMBER_STAR_CONTAINER_CLASSNAME:
-    "text-dark justify-between flex mb-6",
-  STARS_CONTAINER_CLASSNAME: "flex items-center justify-center",
-  STARS_CLASSNAME: "text-secondary dark:text-primary",
-  QUALIFICATION_CLASSNAME: "font-semibold md:text-sm text-dark",
+    "text-dark justify-between flex-col sm:flex-col mb-6",
+  STARS_CONTAINER_CLASSNAME: "flex items-center justify-center gap-1",
+  STARS_CLASSNAME: "text-secondary dark:text-primary text-base",
+  QUALIFICATION_CLASSNAME: "font-semibold md:text-sm text-dark text-base",
 };
 
 //Estructura
@@ -45,7 +45,7 @@ const Testimonio = ({ testimonio }) => {
           <div className='flex gap-2 text-secondary justify-center items-center'>
             {testimonio.estrellas.map((estrella) => (
               <span key={estrella.id} className={TESTIMONIAL_UI.STARS_CONTAINER_CLASSNAME}>
-                {estrella.icon && <estrella.icon size={12} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
+                {estrella.icon && <estrella.icon size={14} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
               </span>
             ))}
             <h4 className={TESTIMONIAL_UI.QUALIFICATION_CLASSNAME}>{TESTIMONY_QUALIFICATION}</h4>
