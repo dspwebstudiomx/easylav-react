@@ -50,7 +50,7 @@ const PaquetesFranquicias = () => {
                     {paquete.nombre}
                     <span className="sr-only">Plan</span>
                   </h2>
-                  <p className="mt-2 text-sm text-dark-700">
+                  <p className="mt-2 text-base text-dark-700">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </p>
                 </div>
@@ -58,7 +58,7 @@ const PaquetesFranquicias = () => {
 
                 {/* Segunda Parte */}
                 <div className="p-8 flex flex-col gap-6">
-                  <p className="text-base font-medium text-dark">
+                  <p className="text-lg font-medium text-dark">
                     Que incluye <span className="text-secondary_dark">:</span>
                   </p>
 
@@ -67,7 +67,7 @@ const PaquetesFranquicias = () => {
                     id={`lista-caracteristica-${paquete.nombre.replace(/\s+/g, "-").toLowerCase()}`}
                   >
                     {paquete.caracteristicas.map((caracteristica, index) => (
-                      <li key={`${paquete.id}-${index}`} className="text-dark flex gap-4 text-xs">
+                      <li key={`${paquete.id}-${index}`} className="text-dark flex gap-4 text-base">
                         <FaCheck className="text-secondary_dark" />
                         <span>{caracteristica}</span>
                       </li>

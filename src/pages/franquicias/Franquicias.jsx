@@ -48,13 +48,13 @@ const Franquicias = () => {
   return (
     <>
       <SEOFriendly
-        title="Franquicias | Easylav: Tu lavandería ideal"
+        title="Franquicias de Lavandería | Easylav - Tu Oportunidad de Negocio Ideal"
         url="easylav-react.netlify.app/franquicias"
-        description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
+        description="En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo puedes ser parte de nuestro éxito."
         author="dspwebstudio"
-        keywords="lavandería, planchado"
+        keywords="franquicias de lavandería, negocio de lavandería, Easylav, planchado, limpieza"
         ogImage={image}
-        ogImageAlt="canasta verde con ropa sucia"
+        ogImageAlt="Canasta verde con ropa sucia"
         ogType="website"
       />
       <Navbar />
