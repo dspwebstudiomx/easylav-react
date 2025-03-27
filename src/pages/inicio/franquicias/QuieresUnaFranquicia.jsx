@@ -1,8 +1,13 @@
 /*
-Hero Inicio
+QuieresUnaFranquicia.jsx - Componente de la sección "Quieres una franquicia" en la página de inicio.
 =====================================
 Creado por : Daniel Pérez
 Fecha: 2022-08-25
+Descripción: Este componente muestra información sobre la franquicia de lavandería, incluyendo un título, un párrafo descriptivo y un botón para obtener más información. Utiliza un fondo de imagen y estilos personalizados.
+==========================
+Fecha modificación: 2025-03-27
+Modificado por: Daniel Pérez
+Descripción: Se han realizado cambios en los estilos y la estructura del componente para mejorar la presentación y la legibilidad. Además, se ha optimizado el uso de imágenes y se han ajustado los colores y tamaños para una mejor experiencia de usuario.
 */
 
 // Importaciones
