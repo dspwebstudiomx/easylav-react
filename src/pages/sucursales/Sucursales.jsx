@@ -1,8 +1,12 @@
 /*
-  Sucursales - Página
+  Sucursales.jsx - Página de sucursales de Easylav
   =====================================
   Creado por : Daniel Pérez
   Fecha: 2024-09-26
+  Descripción: Página que muestra las sucursales de Easylav.
+  Incluye enlaces a las sucursales de León y Morelia.
+  Modificado por: Daniel Pérez
+  Fecha de modificación: 2025-03-27
 */
 
 // Importaciones

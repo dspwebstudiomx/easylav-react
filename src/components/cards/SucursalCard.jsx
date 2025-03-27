@@ -6,7 +6,7 @@
   Descripción: Componente que representa una tarjeta de sucursal con información relevante.
   Incluye una imagen de fondo, título, dirección, horario de atención y un botón para ver más detalles.
   Modificado por: Daniel Pérez
-  Fecha de modificación: 2024-09-26
+  Fecha de modificación: 2025-03-27
 */
 
 // Importaciones

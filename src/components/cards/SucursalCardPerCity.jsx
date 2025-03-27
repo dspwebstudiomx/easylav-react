@@ -4,6 +4,8 @@
   Creado por : Daniel Pérez
   Fecha: 2024-09-26
   Descripción: Componente que representa generador de tarjetas de sucursal con información relevante.
+  Modificado por: Daniel Pérez
+  Fecha de modificación: 2024-09-26
 */
 
 // Importaciones
