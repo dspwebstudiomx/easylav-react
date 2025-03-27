@@ -26,7 +26,7 @@ const BackgroundImageSection = ({ className, align, id, height, children, image_
       {/* Overlay */}
 
       {/* Content Container */}
-      <div className={`-z-30 grid ${height} ${align} ${className}`}>
+      <div className={`-z-30 grid ${height} ${align} ${className} absolute top-0 left-0 w-full h-full`}>
         {children}
       </div>
     </Section>

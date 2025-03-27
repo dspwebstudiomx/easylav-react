@@ -21,6 +21,8 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
     <>
       <Navbar />
       <main id={`sucursales-${city}`} className='mt-[100px] sm:mt-[60px] md:mt-0 xl:mt-[100px]'>
+
+        {/* Banner */}
         <BackgroundImageSection
           // image_768={image_768}
           image_576={image_576}
@@ -35,8 +37,10 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         >
           <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
         </BackgroundImageSection>
+        {/* Banner */}
 
-        <Section id='sucursales-morelia' className={'flex flex-col items-center justify-center gap-6'} height={'h-auto'} backgroundColor={'bg-light'}>
+        {/* Contenido */}
+        <Section id='sucursales-morelia' className={'flex flex-col items-center justify-center gap-6'} height={'h-full'} backgroundColor={'bg-light'}>
           <Container className={''}>
             <SucursalCardPerCity city={city} />
             <ButtonContainer position='items-center justify-center' distance='mt-16'>
@@ -52,6 +56,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
             <Contacto />
           </Container>
         </Section>
+        {/* Contenido */}
 
       </main >
       <Footer />
