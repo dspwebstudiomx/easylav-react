@@ -39,7 +39,7 @@ const QUIERES_UNA_FRANQUICIA_UI = {
       TRANSFORM: "",
     },
   },
-  CONTAINER: "flex items-center justify-center w-2/3 mx-auto",
+  CONTAINER: "flex items-center justify-center mx-auto w-[280px] sm:w-1/2",
   TITLE: {
     H2: {
       CONTENT:
@@ -69,7 +69,7 @@ const QuieresUnaFranquicia = () => {
     image_1920: VistaLavanderiaDesdeEntrada_1_640
   }
   return (
-    <BackgroundImageSection height="h-[1180px] sm:h-[850px] lg:h-[720px]" opacity={`bg-${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} ${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={QUIERES_UNA_FRANQUICIA_UI.DISPLAY.IMAGE} backgroundColor={QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920} align='items-center justify-center'>
+    <BackgroundImageSection height="h-full" opacity={`bg-${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} ${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.OPACITY}`} titleColor='text-primary' textColor='text-dark' image={QUIERES_UNA_FRANQUICIA_UI.DISPLAY.IMAGE} backgroundColor={QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} image_1024={images.image_1024} image_1200={images.image_1200} image_576={images.image_576} image_1920={images.image_1920} align='items-center justify-center'>
       <Container className={styles.container}>
         <div id='hero-inicio_container' className={`grid md:grid-cols-1 gap-x-8`}>
           <div id='hero-inicio_info_container' className="flex flex-col gap-8 w-full mx-auto">
