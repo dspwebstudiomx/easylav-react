@@ -140,12 +140,12 @@ const SucursalCard = (props) => {
         opacity='opacity-30'
         backgroundColor='bg-dark'
         className='p-4 rounded-t-xl'>
-        <div id={`open-closed-zoom-${title}`} className='flex justify-end items-start h-[160px] absolute top-0 right-0 p-4'>
+        <div id={`open-closed-zoom-${title}`} className='flex justify-end items-start h-full absolute top-0 right-0 p-4 w-full'>
           {/* Badge Horario Abierto/Cerrado */}
           {renderOpenClosedBadge(isOpen)}
         </div>
-        <div className='flex justify-end items-end h-full'>
-          <button onClick={() => setShowModal(true)} id='zoom' className='text-light rounded-full border-2 border-light p-2 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer'>
+        <div className='flex justify-end items-end h-full absolute top-0 right-0 p-4 w-full'>
+          <button onClick={() => setShowModal(true)} id='zoom' className='text-light rounded-full border-2 border-light p-3 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer'>
             <FaMagnifyingGlass />
           </button>
         </div>
