@@ -143,8 +143,8 @@ const Franquicias = () => {
 
       {/* Modal */}
       {showModal && (
-        <Modal width='w-[90vw] md:w-[60vw] lg:w-[40vw]'>
-          <div id="franquicias-formulario" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
+        <Modal width='w-[100vw] md:w-[60vw] lg:w-[40vw]'>
+          <div id="franquicias-formulario" className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 overflow-y-scroll">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>

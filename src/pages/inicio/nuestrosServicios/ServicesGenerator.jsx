@@ -10,8 +10,8 @@ import { Service } from 'components';
 import { services } from 'data';
 
 const SERVICES_UI = {
-  ARTICLE: "w-full",
-  LIST: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center mx-auto",
+  ARTICLE: "",
+  LIST: "grid md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center mx-auto",
 }
 
 // Estilos
