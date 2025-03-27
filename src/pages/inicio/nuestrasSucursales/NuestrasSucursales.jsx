@@ -1,3 +1,15 @@
+/*
+  Nuestras Sucursales.jsx - Componente de Carousel de Tarjetas de Sucursales
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-10-03
+  Descripción: Componente que representa carousel de tarjetas de sucursal con información relevante.
+  Incluye una imagen de fondo, título, dirección, horario de atención y un botón para ver más detalles.
+  Modificado por: Daniel Pérez
+  Fecha de modificación: 2025-03-27
+*/
+
+// Importaciones
 import { Container, Section, Spacing, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
@@ -9,7 +21,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
-
+// Estructura del componente
 const NuestrasSucursales = () => {
   // Ordenar localservices alfabéticamente por el título
   const sortedLocalServices = localservices.sort((a, b) => {
@@ -39,7 +51,7 @@ const NuestrasSucursales = () => {
         {/* Carousel de Tarjetas Sucursales */}
         <Swiper
           modules={[Navigation, Autoplay]}
-          className="mySwiper"
+          className={"mySwiper p-12"}
           spaceBetween={30}
           autoplay={{
             delay: 3000,
@@ -70,11 +82,13 @@ const NuestrasSucursales = () => {
             },
           }}
         >
-          {sortedLocalServices.map((localservice) => (
-            <SwiperSlide key={localservice.title}>
-              <SucursalCard key={localservice.title} {...localservice} />
-            </SwiperSlide>
-          ))}
+          <div className='p-12 hidden'>
+            {sortedLocalServices.map((localservice) => (
+              <SwiperSlide key={localservice.title}>
+                <SucursalCard key={localservice.title} {...localservice} />
+              </SwiperSlide>
+            ))}
+          </div>
         </Swiper>
         {/* Carousel de Tarjetas Sucursales */}
 
