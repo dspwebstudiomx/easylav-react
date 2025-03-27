@@ -18,7 +18,7 @@ const ABOUT_UI = {
   TWOCOLUMNS_CONTAINER: "grid gap-x-20 gap-y-16 sm:grid-cols-2 sm:gap-20",
   COLUMN1_CONTAINER: "grid place-content-center gap-8",
   COLUMN2_CONTAINER: "flex justify-end h-[320px]",
-  SPAN: "font-semibold text-secondary dark:text-primary ml-2",
+  SPAN: "font-extrabold uppercase text-secondary dark:text-primary ml-2",
 };
 const ABOUT_PROPS = {
   SECTION_ID: "nosotros",

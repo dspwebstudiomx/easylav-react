@@ -51,7 +51,7 @@ const NuestrasSucursales = () => {
         {/* Carousel de Tarjetas Sucursales */}
         <Swiper
           modules={[Navigation, Autoplay]}
-          className={"mySwiper p-12"}
+          className={"mySwiper"}
           spaceBetween={30}
           autoplay={{
             delay: 3000,
