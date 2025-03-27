@@ -1,3 +1,15 @@
+/*
+  CityCardGenerator - Generador de Tarjetas de Sucursal por Ciudad
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-26
+  Descripción: Componente que genera tarjetas de sucursal para una ciudad específica.
+  Utiliza el componente SucursalCard para mostrar la información de cada sucursal.
+  Modificado por: Daniel Pérez
+  Fecha de modificación: 2024-09-26
+*/
+
+// Importaciones
 import { SucursalCard } from 'components'
 import { localservices } from 'data'
 import PropTypes from 'prop-types'

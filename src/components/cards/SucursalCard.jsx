@@ -1,3 +1,15 @@
+/*
+  SucursalCard - Componente de Tarjeta de Sucursal
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-26
+  Descripción: Componente que representa una tarjeta de sucursal con información relevante.
+  Incluye una imagen de fondo, título, dirección, horario de atención y un botón para ver más detalles.
+  Modificado por: Daniel Pérez
+  Fecha de modificación: 2024-09-26
+*/
+
+// Importaciones
 import classNames from 'classnames';
 import { BackgroundImageSection, Badge, Modal, Spacing, TitleH3 } from 'components';
 import { useShowModal } from "hooks";
