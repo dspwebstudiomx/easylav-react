@@ -7,6 +7,9 @@ import { FaRegBuilding, FaXmark } from 'react-icons/fa6';
 import { IoHomeOutline } from 'react-icons/io5';
 import PaquetesFranquicias from './PaquetesFranquicias';
 import { IoIosInformationCircleOutline } from 'react-icons/io';
+import ModeloNegocio from './ModeloNegocio';
+import SoporteCapacitacion from './SoporteCapacitacion';
+import TestimoniosFranquicias from './TestimoniosFranquicias';
 
 // Props
 
@@ -145,6 +148,9 @@ const Franquicias = () => {
           </Container>
         </Section>
         {/* Contenido */}
+        <ModeloNegocio />
+        <SoporteCapacitacion />
+        <TestimoniosFranquicias />
       </section>
       <ScrollToTopButton />
       <Footer />
