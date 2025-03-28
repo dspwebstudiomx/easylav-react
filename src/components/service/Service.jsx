@@ -35,12 +35,12 @@ const Service = ({ service }) => {
 
   return (
     <li id={service.idLink} className={SERVICE_UI.ELEMENT.CLASSNAME}>
-      <Link onClick={() => setShowModal(true)}>
+      <Link onClick={() => setShowModal(true)} title={service.title} alt={service.alt}>
         <div className={SERVICE_UI.ELEMENT.DIV_VIDEO}>
           <img
             className={SERVICE_UI.IMAGE}
             src={service.image}
-            title={service.alt}
+            title={service.title}
             alt={service.alt}
           />
         </div>
@@ -69,7 +69,7 @@ const Service = ({ service }) => {
               <div className="flex flex-col items-center justify-start gap-4 sm:flex-row">
                 <img
                   src={service.image}
-                  title={service.alt}
+                  title={service.title}
                   alt={service.alt}
                   width={80}
                 />

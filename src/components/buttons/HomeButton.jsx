@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 const HomeButton = () => {
   return (
-    <Link to="/" type='information' className='uppercase font-semibold flex gap-2 justify-center items-center text-light text-base bg-primary_dark rounded w-full px-8 py-4'>
+    <Link to="/" type='information' className='uppercase font-semibold flex gap-2 justify-center items-center text-light text-base bg-primary_dark rounded w-full px-8 py-6'>
       <span>
-        <IoHomeOutline />
+        <IoHomeOutline size={28} />
       </span>
-      <span>Ir a inicio</span>
+      {/* <span>Ir a inicio</span> */}
     </Link>
   );
 };
