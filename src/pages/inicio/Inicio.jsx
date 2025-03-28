@@ -25,6 +25,7 @@ const DESCRIPTION = 'En Easylav, nos apasiona cuidar de tu ropa. Ofrecemos limpi
 const KEYWORDS = 'lavanderia en Morelia'
 const URL = 'easylav-react.netlify.app'
 const AUTHOR = 'dspwebstudio'
+const PUBLISHER = 'dspwebstudio.com'
 const OG_IMAGE = VistaLavanderiaDesdeEntrada_2_640
 const OG_IMAGE_ALT = 'canasta verde con ropa sucia'
 const OG_TYPE = 'website'
@@ -39,23 +40,24 @@ const Inicio = () => (
         url={URL}
         description={DESCRIPTION}
         author={AUTHOR}
+        publisher={PUBLISHER}
         keywords={KEYWORDS}
         ogImage={OG_IMAGE}
         ogImageAlt={OG_IMAGE_ALT}
         ogType={OG_TYPE} />
       {/* <HeroInicio /> */}
-      <HeroInicioVideo />
       {/* <SectionBanner themeBackgroundColor='primary' themeTextColor='primary_darkcontrast' themeBackgroundDark='secondary_dark' themeTextColorDark='light'>
         <NavHashLink
-          id={'navlink-to-iretiticateme'}
-          to={'/sucursales/morelia/#sucursal-Iretiticateme'}
-          scroll={scrollWithOffset}
-          title={`navlink-to-iretiticateme`}
+        id={'navlink-to-iretiticateme'}
+        to={'/sucursales/morelia/#sucursal-Iretiticateme'}
+        scroll={scrollWithOffset}
+        title={`navlink-to-iretiticateme`}
         >
-          <span className='block text-base'>Nueva sucursal</span>
-          <span className='block text-2xl'>Iretiticateme</span>
+        <span className='block text-base'>Nueva sucursal</span>
+        <span className='block text-2xl'>Iretiticateme</span>
         </NavHashLink>
-      </SectionBanner> */}
+        </SectionBanner> */}
+        <HeroInicioVideo />
       <NuestrosServicios />
       <PorqueElegirnos />
       <SobreNosotros />

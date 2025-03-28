@@ -52,6 +52,7 @@ const Franquicias = () => {
         url="easylav-react.netlify.app/franquicias"
         description="En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo puedes ser parte de nuestro éxito."
         author="dspwebstudio"
+        publisher="dspwebstudio.com"
         keywords="franquicias de lavandería, negocio de lavandería, Easylav, planchado, limpieza"
         ogImage={image}
         ogImageAlt="Canasta verde con ropa sucia"
@@ -126,7 +127,8 @@ const Franquicias = () => {
                     <ImageResponsive
                       src={imagen.image_640}
                       className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
-                      imageAlt={imagen.image_640}
+                      imageAlt={imagen.alt}
+                      imageTitle={imagen.title}
                       image_640={imagen.image_640}
                       image_1024={imagen.image_640}
                       image_1920={imagen.image_640}

@@ -46,9 +46,9 @@ const PaquetesFranquicias = () => {
               >
                 {/* Primera Parte */}
                 <div className="p-8 flex flex-col gap-6">
-                  <h2 className="text-2xl text-dark uppercase font-bold text-center lg:text-left">
+                  <h2 className="text-2xl text-dark uppercase font-bold text-center lg:text-left gap-3">
+                    <span className="sr-only">Plan </span>
                     {paquete.nombre}
-                    <span className="sr-only">Plan</span>
                   </h2>
                   <p className="mt-2 text-base text-dark-700">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

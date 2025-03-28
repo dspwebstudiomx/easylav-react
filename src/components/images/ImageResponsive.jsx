@@ -11,14 +11,14 @@ import PropTypes from 'prop-types'
 // Estructura
 const ImageResponsive = ({ ...props }) => {
 
-  const { image_640, image_1024, image_1920, imageAlt, className, width, height } = props
+  const { image_640, image_1024, image_1920, imageAlt,imageTitle, className, width, height } = props
   return (
     <picture>
       <source srcSet={image_640} media="(max-width: 767px)" />
       <source srcSet={image_1024} media="(max-width: 1024px) " />
       <source srcSet={image_1920} media="(min-width: 1025px) " />
       <img
-        title={imageAlt}
+        title={imageTitle}
         src={image_640}
         className={`${className}  ${width} ${height}`}
         alt={imageAlt}
@@ -33,6 +33,7 @@ ImageResponsive.propTypes = {
   width: PropTypes.any,
   height: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
+  imageTitle: PropTypes.string.isRequired,
   className: PropTypes.string
 }
 

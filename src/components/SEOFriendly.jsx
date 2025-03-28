@@ -10,6 +10,7 @@ const SEOFriendly = ({
   ogImage,
   ogImageAlt,
   ogType,
+  publisher,
 }) => {
   return (
     <Helmet>
@@ -18,6 +19,7 @@ const SEOFriendly = ({
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       <meta name="author" content={author} />
+      <meta name="publisher" content={publisher} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <meta property="og:type" content={ogType} />
@@ -48,6 +50,7 @@ SEOFriendly.propTypes = {
   description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  publisher: PropTypes.string.isRequired,
   keywords: PropTypes.string.isRequired,
   ogImage: PropTypes.string.isRequired,
   ogImageAlt: PropTypes.string.isRequired,
