@@ -71,6 +71,7 @@ export default function PorqueElegirnos() {
             <ImageResponsive
               src={img}
               imageAlt={'Mujer señalando hacia las caraterísticas de la empresa'}
+              imageTitle={'Mujer señalando hacia las caraterísticas de la empresa'}
               // className={'shadow-image'}
               image_640={img}
               image_1024={img}
