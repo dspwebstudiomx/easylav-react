@@ -1,61 +1,81 @@
+import { Container, Paragraph, Section, TitleH3, TitleContainer, Spacing } from "components";
+import { FaCheck } from "react-icons/fa6";
+
+
+const tarjetasModeloNegocio = [ 
+  {
+    id: 1,
+    titulo:'Inversión Inicial',
+    descripcion:'La inversión inicial incluye el canon de entrada, adecuación del local, equipamiento y stock inicial.',
+    caracteristicas: [
+      'Canon de entrada: $XX,XXX',
+      'Adecuación del local: $YY,YYY',
+      'Equipamiento: $ZZ,ZZZ',
+      'Stock inicial: $AA,AAA'
+    ]
+  },
+  {
+    id: 2,
+    titulo:'Costos Operativos',
+    descripcion:'Los costos operativos mensuales incluyen alquiler, servicios, personal, marketing y otros gastos.',
+    caracteristicas: [
+      'Alquiler: $BB,BBB',
+      'Servicios: $CC,CCC',
+      'Personal: $DD,DDD',
+      'Marketing: $EE,EEE'
+    ]
+  },
+  {
+    id: 3,
+    titulo:'Márgenes de Ganancia',
+    descripcion:'Easylav ofrece márgenes de ganancia atractivos gracias a su modelo de negocio eficiente y alta demanda de servicios.',
+    caracteristicas: [
+      'Margen bruto promedio: XX%',
+      'Retorno de inversión estimado: XX años'
+    ]
+  },
+  {
+    id: 4,
+    titulo:'Soporte de Easylav',
+    descripcion:'Easylav apoya a sus franquiciados con capacitación, marketing, tecnología y gestión.',
+    caracteristicas: [
+      'Capacitación inicial y continua',
+      'Soporte de marketing y publicidad',
+      'Plataforma tecnológica avanzada',
+      'Asesoramiento en gestión y operaciones'
+    ]
+  }
+]
+
 const ModeloNegocio = () => {
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">Modelo de Negocio Detallado</h2>
-        <p className="text-gray-700 mb-4">
+    <Section className="">
+      <Container className="flex flex-col gap-12">
+      <TitleContainer title='Modelo de Negocio Detallado'/>
+        <Paragraph>
           El modelo de franquicia de Easylav está diseñado para ofrecer una alta rentabilidad y sostenibilidad. Aquí te explicamos cómo funciona:
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Inversión Inicial</h3>
-            <p className="text-gray-700">
-              La inversión inicial incluye el canon de entrada, adecuación del local, equipamiento y stock inicial.
-            </p>
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>Canon de entrada: $XX,XXX</li>
-              <li>Adecuación del local: $YY,YYY</li>
-              <li>Equipamiento: $ZZ,ZZZ</li>
-              <li>Stock inicial: $AA,AAA</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Costos Operativos</h3>
-            <p className="text-gray-700">
-              Los costos operativos mensuales incluyen alquiler, servicios, personal, marketing y otros gastos.
-            </p>
-            <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>Alquiler: $BB,BBB</li>
-              <li>Servicios: $CC,CCC</li>
-              <li>Personal: $DD,DDD</li>
-              <li>Marketing: $EE,EEE</li>
-            </ul>
-          </div>
+        </Paragraph>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {tarjetasModeloNegocio.map((tarjeta)=>
+             <article key={tarjeta.id} className="shadow-2xl p-8 rounded-2xl bg-light">
+              <TitleH3 textTransform='base' fontSize='text-xl'>{tarjeta.titulo}</TitleH3>
+              <Spacing distance='h-4'/>
+              <p className="text-gray-700 text-dark">
+                {tarjeta.descripcion}
+              </p>
+              <ul className="flex flex-col gap-2 bg-light text-dark list-none border-2 border-primary rounded-2xl p-6 mt-10">
+                {tarjeta.caracteristicas.map((caracteristica, index) => (
+                  <li key={`${tarjeta.id}-${index}`} className="flex gap-3 text-base items-center">
+                    <FaCheck className="text-secondary_dark" />
+                    <span>{caracteristica}</span>
+                  </li>
+                ))}   
+              </ul>
+           </article>
+          )}
         </div>
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Márgenes de Ganancia</h3>
-          <p className="text-gray-700">
-            Easylav ofrece márgenes de ganancia atractivos gracias a su modelo de negocio eficiente y alta demanda de servicios.
-          </p>
-          <ul className="list-disc pl-5 mt-2 text-gray-700">
-            <li>Margen bruto promedio: XX%</li>
-            <li>Retorno de inversión estimado: XX años</li>
-          </ul>
-        </div>
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Soporte de Easylav</h3>
-          <p className="text-gray-700">
-            Easylav apoya a sus franquiciados con capacitación, marketing, tecnología y gestión.
-          </p>
-          <ul className="list-disc pl-5 mt-2 text-gray-700">
-            <li>Capacitación inicial y continua</li>
-            <li>Soporte de marketing y publicidad</li>
-            <li>Plataforma tecnológica avanzada</li>
-            <li>Asesoramiento en gestión y operaciones</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };
 

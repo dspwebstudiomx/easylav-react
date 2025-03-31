@@ -156,7 +156,7 @@ const SucursalCard = (props) => {
       <section className='flex flex-col gap-4 justify-between items-center min-h-[240px] '>
         <div className='p-8 flex flex-col gap-4'>
           {/* Título */}
-          <TitleH3 justify='justify-center' color='text-dark'>
+          <TitleH3 justify='justify-center' color='text-dark' fontSize='text-base' textTransform='uppercase'>
             {title}
           </TitleH3>
           {/* Título */}

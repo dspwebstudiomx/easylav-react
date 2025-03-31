@@ -45,7 +45,7 @@ const Service = ({ service }) => {
           />
         </div>
         <div className={`${SERVICE_UI.ELEMENT.DIV_TITLEH3} my-2`}>
-          <TitleH3 justify="justify-center" color="text-dark">
+          <TitleH3 justify="justify-center" color="text-secondary_dark" textTransform='uppercase'>
             {service.title}
           </TitleH3>
         </div>
