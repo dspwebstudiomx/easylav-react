@@ -26,7 +26,7 @@ const tarjetasModeloNegocio = [
       'Equipamiento: $ZZ,ZZZ',
       'Stock inicial: $AA,AAA',
     ],
-    icon: <MdAttachMoney />,
+    icon: <MdAttachMoney size={52} className="text-primary mx-auto" />,
     iconSize: 32,
   },
   {
@@ -68,17 +68,12 @@ const ModeloNegocio = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {tarjetasModeloNegocio.map((tarjeta) => (
             <article key={tarjeta.id} className="shadow-2xl p-8 rounded-2xl bg-light">
-              <img
-                className={'text-secondary'}
-                src="tarjeta.icon"
-                title={tarjeta.title}
-                alt={tarjeta.title}
-                size={tarjeta.iconSize}
-              />
+              {tarjeta.icon}
+              <Spacing distance="h-4" />
               <TitleH3 textTransform="base" fontSize="text-2xl" justify="justify-center">
                 {tarjeta.titulo}
               </TitleH3>
-              <Spacing distance="h-4" />
+              <Spacing distance="h-12" />
               <p className="text-gray-700 text-dark">{tarjeta.descripcion}</p>
               <ul className="flex flex-col gap-2 bg-light text-dark list-none border-2 border-primary rounded-2xl p-6 mt-10">
                 {tarjeta.caracteristicas.map((caracteristica, index) => (
