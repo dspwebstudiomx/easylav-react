@@ -20,14 +20,13 @@ const tarjetasModeloNegocio = [
     titulo: 'Inversión Inicial',
     descripcion:
       'La inversión inicial incluye el canon de entrada, adecuación del local, equipamiento y stock inicial.',
+    icon: <MdAttachMoney size={52} className="text-primary mx-auto" />,
     caracteristicas: [
       'Canon de entrada: $XX,XXX',
       'Adecuación del local: $YY,YYY',
       'Equipamiento: $ZZ,ZZZ',
       'Stock inicial: $AA,AAA',
     ],
-    icon: <MdAttachMoney size={52} className="text-primary mx-auto" />,
-    iconSize: 32,
   },
   {
     id: 2,
