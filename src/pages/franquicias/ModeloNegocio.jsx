@@ -1,7 +1,19 @@
+/*
+  ModeloNegocio.jsx - Componente de Sección en Franquicias
+  =====================================
+  Creado por : Daniel Pérez
+  Fecha: 2024-09-28
+  Descripción: 
+  Modificado por: Daniel Pérez
+  Fecha de modificación: 2025-03-31
+*/
+
+// Importaciones
 import { Container, Paragraph, Section, TitleH3, TitleContainer, Spacing } from 'components';
 import { FaCheck } from 'react-icons/fa6';
 import { MdAttachMoney } from 'react-icons/md';
 
+// Base de Datos
 const tarjetasModeloNegocio = [
   {
     id: 1,
@@ -43,6 +55,7 @@ const tarjetasModeloNegocio = [
   },
 ];
 
+// Estructura
 const ModeloNegocio = () => {
   return (
     <Section className="">
