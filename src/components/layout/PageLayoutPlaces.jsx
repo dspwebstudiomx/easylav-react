@@ -3,6 +3,16 @@
   =====================================
   Creado por : Daniel Pérez
   Fecha: 2024-09-26
+  Descripción: Este componente es un layout para las páginas de sucursales.
+  Contiene un banner con una imagen de fondo y un título, seguido de una sección
+  que muestra las sucursales de una ciudad específica. También incluye un botón
+  para regresar a la lista de sucursales y un componente de contacto.
+  ----------------------
+  Modificado por : Daniel Pérez
+  Fecha: 2025-04-01
+  Descripción: Refactoriza el componente PageLayoutPlaces para mejorar la estructura del código y la legibilidad, separando el banner y las tarjetas de contenido en componentes independientes.
+  ----------------------
+
 */
 
 // Importaciones
