@@ -3,7 +3,8 @@
   =====================================
   Creado por : Daniel Pérez
   Fecha: 2024-09-28
-  Descripción: 
+  Descripción: Este componente presenta el modelo de negocio de Easylav, destacando la inversión inicial, costos operativos, márgenes de ganancia y soporte ofrecido a los franquiciados.
+  Este componente es parte de la sección de franquicias del sitio web de Easylav, diseñado para atraer a potenciales franquiciados y proporcionarles información clara y concisa sobre el modelo de negocio.
   Modificado por: Daniel Pérez
   Fecha de modificación: 2025-03-31
 */
