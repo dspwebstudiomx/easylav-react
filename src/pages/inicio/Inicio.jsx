@@ -2,7 +2,7 @@
 
 //Importaciones
 import { VistaLavanderiaDesdeEntrada_2_640 } from 'assets';
-import { Container, HomeLayout, Loading, ScrollToTopButton, Section, SEOFriendly } from 'components';
+import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 
 // Constantes
@@ -45,7 +45,6 @@ const Inicio = () => (
           </Container>
         </Section>
       </HomeLayout>
-      <ScrollToTopButton />
     </Suspense>
   </>
 );
