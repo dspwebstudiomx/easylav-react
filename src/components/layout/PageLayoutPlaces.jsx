@@ -11,7 +11,7 @@ import {
   ButtonContainer,
   ButtonSecondary,
   Contacto,
-  Navbar,
+  Header,
   ScrollToTopButton,
   SucursalCardPerCity,
 } from 'components';
@@ -23,51 +23,57 @@ import Spacing from './Spacing';
 
 // Estructura
 const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 }) => {
+  const BannerPlaces = () => {
+    return (
+      <BackgroundImageSection
+        // image_768={image_768}
+        image_576={image_576}
+        // image_240={image_240}
+        image_1024={image_1024}
+        image_1200={image_1200}
+        image_1920={image_1920}
+        height="h-[210px] sm:h-[50vh] "
+        opacity="opacity-50 hover:opacity-60"
+        backgroundColor="bg-dark"
+        className="flex justify-center items-center"
+      >
+        <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
+      </BackgroundImageSection>
+    );
+  };
+  const ContentCards = () => {
+    return (
+      <Section
+        id="sucursales-morelia"
+        className={'flex flex-col items-center justify-center gap-6'}
+        height={'h-full'}
+        backgroundColor={'bg-light'}
+      >
+        <Container className={''}>
+          <SucursalCardPerCity city={city} />
+          <Spacing distance={'mt-[10vh]'} />
+          <ButtonContainer position="items-center justify-center" distance="mt-16">
+            <ButtonSecondary
+              title="Regresar a sucursales"
+              href="/sucursales"
+              distance=""
+              type="button"
+              width={'w-full sm:w-[320px]'}
+            />
+          </ButtonContainer>
+          <Spacing distance={'mt-[10vh]'} />
+        </Container>
+        <Contacto />
+      </Section>
+    );
+  };
+
   return (
     <>
-      <Navbar />
+      <Header />
       <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-[60px] md:mt-0 xl:mt-[100px]">
-        {/* Banner */}
-        <BackgroundImageSection
-          // image_768={image_768}
-          image_576={image_576}
-          // image_240={image_240}
-          image_1024={image_1024}
-          image_1200={image_1200}
-          image_1920={image_1920}
-          height="h-[210px] sm:h-[50vh] "
-          opacity="opacity-50 hover:opacity-60"
-          backgroundColor="bg-dark"
-          className="flex justify-center items-center"
-        >
-          <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
-        </BackgroundImageSection>
-        {/* Banner */}
-
-        {/* Contenido */}
-        <Section
-          id="sucursales-morelia"
-          className={'flex flex-col items-center justify-center gap-6'}
-          height={'h-full'}
-          backgroundColor={'bg-light'}
-        >
-          <Container className={''}>
-            <SucursalCardPerCity city={city} />
-            <Spacing distance={'mt-[10vh]'} />
-            <ButtonContainer position="items-center justify-center" distance="mt-16">
-              <ButtonSecondary
-                title="Regresar a sucursales"
-                href="/sucursales"
-                distance=""
-                type="button"
-                width={'w-full sm:w-[320px]'}
-              />
-            </ButtonContainer>
-            <Spacing distance={'mt-[10vh]'} />
-          </Container>
-          <Contacto />
-        </Section>
-        {/* Contenido */}
+        <BannerPlaces />
+        <ContentCards />
       </main>
       <Footer />
       <ScrollToTopButton />
