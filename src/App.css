@@ -16,6 +16,8 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-color: #fff;
+  color: #060639;
 }
 
 .text-border {
