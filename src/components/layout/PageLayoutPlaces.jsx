@@ -60,18 +60,24 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         backgroundColor={'bg-light'}
       >
         <Container className={''}>
-          <SucursalCardPerCity city={city} />
-          <Spacing distance={'mt-[10vh]'} />
-          <ButtonContainer position="items-center justify-center" distance="mt-16">
-            <ButtonSecondary
-              title="Regresar a sucursales"
-              href="/sucursales"
-              distance=""
-              type="button"
-              width={'w-full sm:w-[320px]'}
-            />
-          </ButtonContainer>
-          <Spacing distance={'mt-[10vh]'} />
+          {city ? (
+            <>
+              <SucursalCardPerCity city={city} />
+              <Spacing distance="mt-[10vh]" />
+              <ButtonContainer position="items-center justify-center" distance="mt-16">
+                <ButtonSecondary
+                  title="Regresar a sucursales"
+                  href="/sucursales"
+                  distance=""
+                  type="button"
+                  width="w-full sm:w-[320px]"
+                />
+              </ButtonContainer>
+              <Spacing distance="mt-[10vh]" />
+            </>
+          ) : (
+            <p className="text-center text-dark text-lg font-medium">No hay sucursales</p>
+          )}
         </Container>
         <Contacto />
       </Section>
