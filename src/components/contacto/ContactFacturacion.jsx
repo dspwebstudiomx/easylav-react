@@ -1,8 +1,10 @@
 /*
-Contact Form
+ContactFacturacion.jsx - Formulario de contacto para facturación
 =====================================
 Creado por : Daniel Pérez
-Fecha: 2022-08-25
+Fecha: 2024-08-25
+Descripción: Este componente es un formulario de contacto para la sección de facturación. Permite a los usuarios enviar sus datos y recibir una factura por correo electrónico. El formulario incluye validaciones y envía un correo electrónico utilizando EmailJS.
+El formulario incluye campos para el nombre, RFC, correo electrónico, número de teléfono, dirección, fecha del servicio, número de ticket, sucursal, CFDI, forma de pago y totales. También incluye un botón para enviar el formulario y otro para borrar los datos ingresados. Al enviar el formulario, se muestra un modal de éxito o error según el resultado del envío.
 */
 
 // Importaciones
