@@ -24,7 +24,7 @@ const ContactInfo = () => {
         <span className="">con las preguntas mas solicitadas. </span>
         Si gustas enviar felicitaciones y/o sugerencias no dudes en escribirnos a
         <span className="ml-2 font-semibold italic text-secondary dark:text-primary">
-          <Link to="mailto:atnclientes@easylav.mx">Atencion a clientes</Link>
+          <Link to="mailto:atnclientes@easylav.mx">Atención a clientes</Link>
         </span>
         .
       </Paragraph>

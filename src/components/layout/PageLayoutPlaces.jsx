@@ -73,13 +73,14 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
                   width="w-full sm:w-[320px]"
                 />
               </ButtonContainer>
-              <Spacing distance="mt-[10vh]" />
+              <Spacing distance="mt-[5vh]" />
             </>
           ) : (
             <p className="text-center text-dark text-lg font-medium">No hay sucursales</p>
           )}
+          <Spacing distance="mt-[10vh]" />
+          <Contacto />
         </Container>
-        <Contacto />
       </Section>
     );
   };

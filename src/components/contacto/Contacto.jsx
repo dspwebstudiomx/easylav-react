@@ -1,6 +1,6 @@
 import { VistaLavanderiaDesdeEntrada_1_640 as image } from 'assets';
 import ContactInfo from './components/ContactInfo';
-import { Container, Section, SEOFriendly } from 'components';
+import { SEOFriendly } from 'components';
 import ContactForm from './ContactForm';
 
 const Contacto = () => {
@@ -17,14 +17,11 @@ const Contacto = () => {
         ogImageAlt="Formulario de contacto de Easylav"
         ogType="website"
       />
-      <Section>
-        <Container>
-          <div className="flex gap-6">
-            <ContactInfo />
-            <ContactForm />
-          </div>
-        </Container>
-      </Section>
+
+      <div className="flex flex-col sm:flex-row gap-20">
+        <ContactInfo />
+        <ContactForm />
+      </div>
     </>
   );
 };
