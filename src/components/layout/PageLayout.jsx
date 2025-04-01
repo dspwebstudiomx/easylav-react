@@ -29,10 +29,8 @@ const PageLayout = ({ children, id }) => {
   );
 };
 
+// Propiedades
 PageLayout.propTypes = {
-  /**
-   * The content of the page.
-   */
   children: PropTypes.node,
   id: PropTypes.any,
 };

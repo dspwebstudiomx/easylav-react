@@ -81,7 +81,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   return (
     <>
       <Header />
-      <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-[60px] md:mt-0 xl:mt-[100px]">
+      <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-[60px] md:mt-0 xl:mt-[100px] py-20">
         <BannerPlaces />
         <ContentCards />
       </main>
@@ -90,6 +90,8 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
     </>
   );
 };
+
+// Propiedades
 PageLayoutPlaces.propTypes = {
   children: PropTypes.node,
   city: PropTypes.string,
