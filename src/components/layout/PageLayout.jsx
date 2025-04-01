@@ -8,7 +8,7 @@
   Modificado por: Daniel Pérez
   Fecha de modificación: 2025-04-01
   Descripción: Elimina el margen superior en el componente PageLayout para simplificar el diseño y mejorar la presentación del contenido.
-
+  ----------------------------
 */
 
 // Importaciones
