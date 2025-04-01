@@ -83,7 +83,7 @@ export default function ContactForm() {
         {({ errors, touched, resetForm }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm text-dark tracking-wider">
             {/* Fields */}
-            <div className="flex flex-wrap justify-between gap-3 text-sm">
+            <div className="flex flex-wrap justify-between gap-3 text-sm items-center justify-center">
               <div id="formField_nombre" className="flex flex-col xl:w-[50%] w-full text-sm">
                 <label htmlFor="user_name" className="mb-2">
                   Nombre Completo<span className="text-required ml-1">*</span>
@@ -170,7 +170,7 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position="items-center justify-center">
+            <ButtonContainer position="items-center justify-center" distance="mt-6">
               <SubmitButton title="Enviar mensaje" type="submit" />
             </ButtonContainer>
             {/* Submit Button */}
