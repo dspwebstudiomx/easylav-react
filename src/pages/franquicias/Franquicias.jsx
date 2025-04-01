@@ -5,6 +5,7 @@
   Fecha: 2024-07-15
   Descripción: Este proyecto es una plataforma web para la franquicia de lavandería Easylav, que ofrece servicios de lavandería y planchado a domicilio. El sitio web incluye información sobre la franquicia, paquetes, modelo de negocio, soporte y capacitación, así como testimonios de franquiciados.
   Este componente es parte de la sección de franquicias del sitio web de Easylav, diseñado para atraer a potenciales franquiciados y proporcionarles información clara y concisa sobre el modelo de negocio.
+  --------------------------
   Modificado por: Daniel Pérez
   Fecha de modificación: 2025-03-31
   -------------------------  
