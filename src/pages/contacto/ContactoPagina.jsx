@@ -2,7 +2,7 @@ import { scrollToTop } from 'functions';
 import { canastaderopa_640 as image } from 'assets';
 import Contacto from '../../components/contacto/Contacto';
 import PageLayout from '../../components/layout/PageLayout';
-import { Container, Section, SEOFriendly } from 'components';
+import { SEOFriendly } from 'components';
 
 const ContactoPagina = () => {
   scrollToTop();
@@ -20,11 +20,7 @@ const ContactoPagina = () => {
         ogType="website"
       />
       <PageLayout>
-        <Section>
-          <Container>
-            <Contacto />
-          </Container>
-        </Section>
+        <Contacto />
       </PageLayout>
     </>
   );

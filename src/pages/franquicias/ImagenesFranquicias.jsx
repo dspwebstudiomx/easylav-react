@@ -1,4 +1,4 @@
-import { Container, ImageResponsive } from 'components';
+import { Container, ImageResponsive, Section } from 'components';
 import { franquiciasImagenes } from 'data';
 
 const FRANQUICIAS_UI = {
@@ -16,29 +16,31 @@ const FRANQUICIAS_UI = {
 
 const ImagenesFranquicias = () => {
   return (
-    <Container>
-      <div
-        id="franquicias-columma-2"
-        className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
-      >
-        {franquiciasImagenes
-          .sort(() => Math.random() - 0.5)
-          .map((imagen) => (
-            <div key={imagen.id} className="h-auto rotate-[0deg]">
-              <ImageResponsive
-                src={imagen.image_640}
-                className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
-                imageAlt={imagen.alt}
-                imageTitle={imagen.title}
-                image_640={imagen.image_640}
-                image_1024={imagen.image_640}
-                image_1920={imagen.image_640}
-                width={380}
-              />
-            </div>
-          ))}
-      </div>
-    </Container>
+    <Section>
+      <Container>
+        <div
+          id="franquicias-columma-2"
+          className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
+        >
+          {franquiciasImagenes
+            .sort(() => Math.random() - 0.5)
+            .map((imagen) => (
+              <div key={imagen.id} className="h-auto rotate-[0deg]">
+                <ImageResponsive
+                  src={imagen.image_640}
+                  className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
+                  imageAlt={imagen.alt}
+                  imageTitle={imagen.title}
+                  image_640={imagen.image_640}
+                  image_1024={imagen.image_640}
+                  image_1920={imagen.image_640}
+                  width={380}
+                />
+              </div>
+            ))}
+        </div>
+      </Container>
+    </Section>
   );
 };
 

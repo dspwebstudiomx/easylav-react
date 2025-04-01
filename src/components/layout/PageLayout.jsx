@@ -12,7 +12,7 @@
 */
 
 // Importaciones
-import { Footer, Header, ScrollToTopButton } from 'components';
+import { Container, Footer, Header, ScrollToTopButton, Section } from 'components';
 import PropTypes from 'prop-types';
 
 // Estructura
@@ -21,7 +21,9 @@ const PageLayout = ({ children, id }) => {
     <>
       <Header />
       <main id={id} className="bg-light dark:bg-dark py-20">
-        {children}
+        <Section>
+          <Container className="">{children}</Container>
+        </Section>
       </main>
       <Footer />
       <ScrollToTopButton />

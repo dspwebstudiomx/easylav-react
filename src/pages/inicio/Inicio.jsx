@@ -20,7 +20,7 @@ const Inicio = () => (
   <>
     <SEOFriendly
       title="Inicio | Easylav: Tu lavandería ideal"
-      url={URL}
+      url="https://easylav.mx/"
       description="En Easylav, nos apasiona cuidar de tu ropa. Ofrecemos limpieza impecable y planchado perfecto para que tus prendas luzcan siempre como nuevas. Descubre nuestro servicio de lavandería de calidad superior, con atención a los detalles y resultados excepcionales. ¡Tu ropa merece lo mejor!"
       author="dspwebstudio"
       robots="index, follow"
