@@ -1,7 +1,7 @@
-import { Accordion, BorderLeft, ButtonContainer, ButtonSecondary, Container, Section, TitleH2 } from 'components';
-import { franquiciaDescripciones } from 'data';
-import { FaRegBuilding } from 'react-icons/fa6';
+import { BorderLeft, Container, Section, TitleH2 } from 'components';
+import PreguntasFranquicias from './PreguntasFranquicias';
 
+// Estilos
 const FRANQUICIAS_UI = {
   TITLEH1: {
     COLOR: 'text-dark dark:text-light',
@@ -23,11 +23,12 @@ const FRANQUICIAS_UI = {
 
 const styles = `${FRANQUICIAS_UI.TITLEH1.COLOR} ${FRANQUICIAS_UI.TITLEH1.FONT_SIZE} ${FRANQUICIAS_UI.TITLEH1.FONT_WEIGHT} ${FRANQUICIAS_UI.TITLEH1.LETTER_SPACING}`;
 
+// Estructura
 const SobreNuestrasFranquicias = () => {
   return (
     <Section className="flex flex-col sm:gap-12" id="sobre-nuestras-franquicias">
       <Container>
-        {/* Title */}
+        {/* Título y Descripción */}
         <div className="w-full px-4 sm:px-0">
           <div className="mx-auto mb-[60px] lg:mb-0 flex flex-col gap-0">
             <BorderLeft>
@@ -40,25 +41,11 @@ const SobreNuestrasFranquicias = () => {
             </h3>
           </div>
         </div>
-        {/* Title */}
-        {/* Questions */}
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {franquiciaDescripciones.map((description) => (
-            <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
-              <Accordion height="h-[120px]" title={description.title} description={description.description} />
-            </li>
-          ))}
-        </ul>
-        <ButtonContainer position={'justify-center sm:justify-center items-center my-20'}>
-          <ButtonSecondary
-            href={'/sucursales'}
-            title={'Ver Sucursales'}
-            icon={<FaRegBuilding />}
-            width={''}
-            name="ver sucursales"
-          />
-        </ButtonContainer>
-        {/* Questions */}
+        {/* Título y Descripción */}
+
+        {/* Preguntas Frecuentes */}
+        <PreguntasFranquicias />
+        {/* Preguntas Frecuentes */}
       </Container>
     </Section>
   );
