@@ -10,9 +10,9 @@
 */
 
 // Importaciones
-import { leon_card as leon, catedral_morelia_card as morelia } from 'assets';
-import { BackgroundCard, PageLayout, SEOFriendly } from "components";
-import { scrollToTop } from "functions";
+import { leon_card as leon, catedral_morelia_card as morelia, CentroGuadalajara as guadalajara } from 'assets';
+import { BackgroundCard, PageLayout, SEOFriendly } from 'components';
+import { scrollToTop } from 'functions';
 
 // Estructuracls
 const Sucursales = () => {
@@ -30,23 +30,36 @@ const Sucursales = () => {
         ogImageAlt="Sucursal de lavandería Easylav en Morelia"
         ogType="website"
       />
-      <PageLayout id={"Sucursales"}>
-        <div className="flex flex-wrap gap-8 place-items-center justify-center">
+      <PageLayout id={'Sucursales'}>
+        <div className="flex flex-wrap gap-8 place-items-center justify-center mt-20">
           <BackgroundCard
             image={morelia}
-            title='Morelia'
-            href='/sucursales/morelia'
-            height='h-[210px]'
-            rounded='rounded-lg'
-            width='w-[260px] xl:w-[320px]'
-            className='flex justify-center items-center'
+            title="Morelia"
+            href="/sucursales/morelia"
+            className="flex justify-center items-center"
+            rounded="rounded-lg"
+            width="w-[260px]"
+            height="h-[210px]"
           />
-          <BackgroundCard image={leon} title='León' href='/sucursales/leon' rounded='rounded-lg' height='h-[210px]' width='w-[260px] xl:w-[320px]' />
-          {/* <BackgroundCard image={guadalajara} title='Guadalajara' href='/sucursales/guadalajara' height='h-[280px]' rounded='rounded-lg' /> */}
+          <BackgroundCard
+            image={leon}
+            title="León"
+            href="/sucursales/leon"
+            rounded="rounded-lg"
+            width="w-[260px]"
+            height="h-[210px]"
+          />
+          <BackgroundCard
+            image={guadalajara}
+            title="Guadalajara"
+            href="/sucursales/guadalajara"
+            rounded="rounded-lg"
+            width="w-[260px]"
+            height="h-[210px]"
+          />
         </div>
       </PageLayout>
     </>
-
   );
 };
 export default Sucursales;
