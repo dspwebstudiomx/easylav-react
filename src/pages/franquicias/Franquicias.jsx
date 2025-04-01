@@ -43,10 +43,10 @@ const Franquicias = () => {
       />
       <PageLayout>
         <BannerFranquicias />
+        <SobreNuestrasFranquicias />
         <ModeloNegocio />
         <PaquetesFranquicias />
         <ImagenesFranquicias />
-        <SobreNuestrasFranquicias />
         <SoporteCapacitacion />
         <TestimoniosFranquicias />
       </PageLayout>
