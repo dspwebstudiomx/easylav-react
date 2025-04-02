@@ -21,7 +21,7 @@ const NavLinksDesktop = () => {
               return classNames;
             }}
             to={navlink.href}
-            scroll={(el) => scrollWithOffset(el)}
+            scroll={scrollWithOffset}
             title={`navlink ${navlink.linkId}`}
           >
             {navlink.name}
