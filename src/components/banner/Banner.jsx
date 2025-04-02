@@ -6,26 +6,27 @@
 */
 
 // Importaciones
-import { BANNER_UI } from 'constants/constants';
 import PropTypes from 'prop-types';
 
 // Estilos
-
+const BANNER_UI = {
+  BORDER: 'border-2',
+  COLOR: 'text-dark',
+  FONT_SIZE: 'text-xl',
+  PADDING: 'p-8',
+  ROUNDED: 'rounded-xl',
+  THEME: 'primary',
+};
 
 // Estructura
 const Banner = ({ children, themeColor }) => {
+  const classes = ` bg-${themeColor}_light border-${themeColor}_dark text-dark  animate__animated animate__flash ${BANNER_UI.BORDER} ${BANNER_UI.COLOR} ${BANNER_UI.FONT_SIZE} ${BANNER_UI.PADDING} ${BANNER_UI.ROUNDED}`;
 
-  const classes = ` bg-${themeColor}_light border-${themeColor}_dark text-dark ${BANNER_UI.BORDER} ${BANNER_UI.COLOR} ${BANNER_UI.FONT_SIZE}  ${BANNER_UI.PADDING} ${BANNER_UI.ROUNDED} animate__animated animate__flash`
-
-  return (
-    <div className={classes}>
-      {children}
-    </div>
-  )
-}
+  return <div className={classes}>{children}</div>;
+};
 Banner.propTypes = {
   children: PropTypes.node.isRequired,
-  themeColor: PropTypes.string.isRequired
-}
+  themeColor: PropTypes.string.isRequired,
+};
 
-export default Banner
+export default Banner;

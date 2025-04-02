@@ -7,20 +7,16 @@ const classes = `
   ${GENERAL_UI.TITLEH2.FONT_WEIGHT}
   ${GENERAL_UI.TITLEH2.COLOR}
   ${GENERAL_UI.TITLEH2.BACKGROUND_COLOR}
-  ${GENERAL_UI.TITLEH3.TEXT_TRANSFORM}
+  ${GENERAL_UI.TITLEH2.TEXT_TRANSFORM}
 `;
 
-const TitleH2 = ({ children, justify }) => {
-
-  return (
-    <h2 className={`${classes} ${justify}`}>
-      {children}
-    </h2>
-  )
-}
+const TitleH2 = ({ children, justify, className }) => {
+  return <h2 className={`${className} ${classes} ${justify}`}>{children}</h2>;
+};
 TitleH2.propTypes = {
   children: Proptypes.node.isRequired,
-  justify: Proptypes.string
-}
+  className: Proptypes.string,
+  justify: Proptypes.string,
+};
 
-export default TitleH2
+export default TitleH2;

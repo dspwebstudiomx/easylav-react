@@ -6,24 +6,23 @@
 */
 
 // Importaciones
-import { BorderLeft, TitleH2 } from 'components'
-import { GENERAL_UI } from 'constants/constants'
-import propTypes from 'prop-types'
+import { BorderLeft, TitleH2 } from 'components';
+import propTypes from 'prop-types';
 
 // Estructura
 const TitleContainer = ({ title }) => {
   return (
-    <div className='w-1/3'>
+    <div className="w-1/3">
       <BorderLeft>
-        <TitleH2 justify={GENERAL_UI.TITLEH2.JUSTIFY}>
+        <TitleH2 justify="justify-start" className="w-full">
           {title}
         </TitleH2>
       </BorderLeft>
     </div>
-  )
-}
+  );
+};
 TitleContainer.propTypes = {
-  title: propTypes.string.isRequired
-}
+  title: propTypes.string.isRequired,
+};
 
-export default TitleContainer
+export default TitleContainer;
