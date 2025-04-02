@@ -154,16 +154,16 @@ export default function ContactFacturacion() {
           <Form
             ref={form}
             onSubmit={sendEmail}
-            className="flex flex-col mx-auto gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-4/5 shadow-2xl p-12 rounded-2xl mt-20"
+            className="flex flex-col mx-auto gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-4/5 shadow-2xl p-0 rounded-2xl mt-12"
           >
             {/* Fields */}
 
             {/* Datos del Usuario */}
-            <div id="datos-usuario">
+            <div id="datos-usuario" className="p-8">
               <h2 className="text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12">
                 Datos del usuario
               </h2>
-              <div id="campos-datos-usuario" className="flex flex-col w-[280px] sm:w-full mx-auto text-left">
+              <div id="campos-datos-usuario" className="flex flex-col w-[210px] sm:w-full mx-auto text-left">
                 {/* Nombre Completo / Razón  - RFC  */}
                 <div className="grid sm:grid-cols-2 gap-8">
                   {/* Nombre o Razon Social */}
@@ -174,7 +174,7 @@ export default function ContactFacturacion() {
                     <Field
                       id="user_name"
                       name="user_name"
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       type="text"
                       required
                     />
@@ -192,7 +192,7 @@ export default function ContactFacturacion() {
                       RFC<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       type="text"
                       name="user_RFC"
                       id="user_RFC"
@@ -216,7 +216,7 @@ export default function ContactFacturacion() {
                       Correo Electrónico<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       id="user_email"
                       name="user_email"
                       type="email"
@@ -236,7 +236,7 @@ export default function ContactFacturacion() {
                       Número Telefónico<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       type="text"
                       name="user_phone"
                       id="user_phone"
@@ -260,7 +260,7 @@ export default function ContactFacturacion() {
                       Calle<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       id="user_street"
                       name="user_street"
                       required
@@ -278,7 +278,7 @@ export default function ContactFacturacion() {
                       Número<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       type="number"
                       name="user_number"
                       id="user_number"
@@ -298,7 +298,7 @@ export default function ContactFacturacion() {
                       Ciudad<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       id="user_city"
                       name="user_city"
                       required
@@ -321,7 +321,7 @@ export default function ContactFacturacion() {
                       Código Postal<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       id="user_zipcode"
                       name="user_zipcode"
                       required
@@ -340,7 +340,7 @@ export default function ContactFacturacion() {
                       Estado<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       id="user_state"
                       name="user_state"
                       required
@@ -361,7 +361,7 @@ export default function ContactFacturacion() {
             <Spacing distance="h-12" />
 
             {/* Datos de Compra */}
-            <div id="datos de compra" className="flex flex-col mx-auto w-[280px] sm:w-full">
+            <div id="datos de compra" className="flex flex-col mx-auto w-[210px] sm:w-full p-8">
               <h2 className="text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12">
                 Datos de Compra
               </h2>
@@ -374,7 +374,7 @@ export default function ContactFacturacion() {
                       Fecha del Servicio<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none text-dark w-[280px] md:w-auto"
+                      className="rounded-md bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none text-dark w-[210px] md:w-auto"
                       id="user_dateservice"
                       name="user_dateservice"
                       type="date"
@@ -393,7 +393,7 @@ export default function ContactFacturacion() {
                       Número de Ticket<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
                       id="user_ticketnumber"
                       name="user_ticketnumber"
                       type="number"
@@ -419,7 +419,7 @@ export default function ContactFacturacion() {
                     <Field
                       as="select"
                       name="user_sucursal"
-                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[210px] md:w-auto"
                     >
                       <option defaultValue={'Escoge tu sucursal'} selected>
                         Escoge tu sucursal
@@ -442,7 +442,7 @@ export default function ContactFacturacion() {
                     </label>
                     <select
                       name="user_CFDI"
-                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[280px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[210px] md:w-auto"
                     >
                       <option>G01 - Adquisición de mercancías</option>
                       <option>G02 - Devoluciones, descuentos o bonificaciones</option>
@@ -567,12 +567,13 @@ export default function ContactFacturacion() {
               </div>
             </div>
             {/* 
-            <form encType="multipart/form-data" method="post" onSubmit={sendEmail} className='flex flex-col  w-[280px] mx-auto mt-12'>
+            <form encType="multipart/form-data" method="post" onSubmit={sendEmail} className='flex flex-col  w-[210px] mx-auto mt-12'>
               <label htmlFor='user_total' className="mb-2">Añadir archivo</label>
               <input type="file" name="my_file" />
             </form> */}
             {/* Datos de Compra */}
 
+            {/* Datos de Tarjeta */}
             <div className="grid sm:grid-cols-2 gap-8">
               {/* Input para los últimos 4 dígitos de la tarjeta */}
               {showCardDigitsInput && (
@@ -598,11 +599,12 @@ export default function ContactFacturacion() {
                 </div>
               )}
             </div>
+            {/* Datos de Tarjeta */}
 
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position="items-center justify-center" distance="mt-12">
+            <ButtonContainer position="items-center justify-center" distance="mt-0">
               <button
                 type="submit"
                 value="Submit"
@@ -621,7 +623,6 @@ export default function ContactFacturacion() {
                 icon={<FaTrashAlt />}
               />
             </ButtonContainer>
-
             {/* Submit Button */}
 
             {/* Modals */}
