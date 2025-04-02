@@ -1,6 +1,8 @@
+// Importaciones
 import { GENERAL_UI } from 'constants/constants';
 import Proptypes from 'prop-types';
 
+// Estilos
 const classes = `
   ${GENERAL_UI.TITLEH2.FONT_FAMILY}
   ${GENERAL_UI.TITLEH2.FONT_SIZE}
@@ -10,9 +12,12 @@ const classes = `
   ${GENERAL_UI.TITLEH2.TEXT_TRANSFORM}
 `;
 
+// Estructura
 const TitleH2 = ({ children, justify, className }) => {
   return <h2 className={`${className} ${classes} ${justify}`}>{children}</h2>;
 };
+
+// Propiedades
 TitleH2.propTypes = {
   children: Proptypes.node.isRequired,
   className: Proptypes.string,

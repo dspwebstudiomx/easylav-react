@@ -265,9 +265,10 @@ const SucursalCard = (props) => {
   );
 };
 
+// Propiedades
 SucursalCard.propTypes = {
   title: PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.any,
   position: PropTypes.object,
   gmap: PropTypes.string,
   openHour: PropTypes.number,

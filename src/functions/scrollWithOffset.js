@@ -8,14 +8,12 @@ export default function scrollWithOffset(el) {
 
   const offsetMobile = isMobile && -80; // ajusta el offset para móviles
   const offsetTablet = isTablet && 0; // ajusta el offset para tabletas
-  const offsetDesktop = isDesktop ? -100 : 0; // ajusta el offset para desktop
+  const offsetDesktop = isDesktop && -100; // ajusta el offset para escritorio
 
-  const totalOffset =
-    yOffset +
-    (isMobile ? offsetMobile : isTablet ? offsetTablet : offsetDesktop);
+  const totalOffset = yOffset + (isMobile ? offsetMobile : isTablet ? offsetTablet : offsetDesktop);
 
   window.scrollTo({
     top: yCoordinate + totalOffset,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 }
