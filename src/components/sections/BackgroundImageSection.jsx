@@ -17,10 +17,7 @@ const BackgroundImageSection = ({
   rounded,
 }) => {
   return (
-    <Section
-      id={id}
-      className={`${height} relative flex items-center justify-center overflow-hidden w-full z-0 ${rounded}`}
-    >
+    <Section id={id} className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded}`}>
       {/* Background Image */}
       <img
         src={image_768}
@@ -42,15 +39,13 @@ const BackgroundImageSection = ({
       {/* Overlay */}
 
       {/* Container */}
-      <Container>{children}</Container>
+      <Container className="p-12">{children}</Container>
       {/* Container */}
     </Section>
   );
 };
 BackgroundImageSection.propTypes = {
   id: PropTypes.string,
-  className: PropTypes.string,
-  align: PropTypes.string,
   children: PropTypes.node,
   image_240: PropTypes.string,
   image_576: PropTypes.string,

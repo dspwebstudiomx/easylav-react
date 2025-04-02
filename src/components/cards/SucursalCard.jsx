@@ -171,12 +171,12 @@ const SucursalCard = (props) => {
       >
         <div
           id={`open-closed-zoom-${title}`}
-          className="flex justify-end items-start h-full absolute top-0 right-0 p-4 w-full"
+          className="flex justify-end items-start h-full absolute top-0 right-0 p-4 pr-8 w-full"
         >
           {/* Badge Horario Abierto/Cerrado */}
           {renderOpenClosedBadge(isOpen)}
         </div>
-        <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4 w-full">
+        <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4 pr-8 w-full">
           <button
             onClick={() => setShowModal(true)}
             id="zoom"
