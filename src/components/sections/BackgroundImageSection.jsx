@@ -1,10 +1,26 @@
-import { Section } from 'components'
-import PropTypes from 'prop-types'
+import { Container, Section } from 'components';
+import PropTypes from 'prop-types';
 
-const BackgroundImageSection = ({ className, align, id, height, children, image_768, image_576, image_240, image_1024, image_1200, image_1920, opacity, image, backgroundColor, rounded }) => {
+const BackgroundImageSection = ({
+  id,
+  height,
+  children,
+  image_768,
+  image_576,
+  image_240,
+  image_1024,
+  image_1200,
+  image_1920,
+  opacity,
+  image,
+  backgroundColor,
+  rounded,
+}) => {
   return (
-    <Section id={id} className={`${height} relative overflow-hidden w-full z-0 ${rounded}`}>
-
+    <Section
+      id={id}
+      className={`${height} relative flex items-center justify-center overflow-hidden w-full z-0 ${rounded}`}
+    >
       {/* Background Image */}
       <img
         src={image_768}
@@ -16,7 +32,7 @@ const BackgroundImageSection = ({ className, align, id, height, children, image_
           ${image_1920} 1920w,
                       `}
         alt={image_240}
-        className={`absolute inset-0 -z-50 h-full w-full object-cover object-center overflow-hidden ${image} ${height}`}
+        className={`absolute inset-0 -z-50 h-full w-full object-cover overflow-hidden ${image} ${height}`}
         title={image_240 || image_768}
       />
       {/* Background Image */}
@@ -25,13 +41,12 @@ const BackgroundImageSection = ({ className, align, id, height, children, image_
       <div className={`absolute top-0 left-0 -z-40 ${backgroundColor} ${opacity} ${height} w-[100vw]`}></div>
       {/* Overlay */}
 
-      {/* Content Container */}
-      <div className={`-z-30 grid ${height} ${align} ${className} absolute top-0 left-0 w-full h-full`}>
-        {children}
-      </div>
+      {/* Container */}
+      <Container>{children}</Container>
+      {/* Container */}
     </Section>
-  )
-}
+  );
+};
 BackgroundImageSection.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
@@ -47,6 +62,6 @@ BackgroundImageSection.propTypes = {
   height: PropTypes.string,
   opacity: PropTypes.string,
   backgroundColor: PropTypes.string,
-  rounded: PropTypes.string
-}
-export default BackgroundImageSection
+  rounded: PropTypes.string,
+};
+export default BackgroundImageSection;
