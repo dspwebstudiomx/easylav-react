@@ -204,6 +204,7 @@ const SucursalCard = (props) => {
             onClick={handleShowModal}
             id="zoom"
             className="text-light rounded-full border-2 border-light p-3 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer"
+            aria-label={`Abrir detalles de la sucursal ${props.title}`}
           >
             <FaMagnifyingGlass />
           </button>
