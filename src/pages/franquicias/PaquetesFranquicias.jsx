@@ -40,7 +40,7 @@ const PaquetesFranquicias = () => {
 
   return (
     <Section className={styles} id="paquetes-franquicias">
-      <Container>
+      <Container className="flex flex-col gap-12">
         <TituloYDescripcion
           title="¿Cómo son nuestras franquicias?"
           description="Conoce los diferentes paquetes de franquicias que ofrecemos y elige el que mejor se adapte a tus necesidades. Cada paquete incluye una variedad de características y beneficios diseñados para ayudarte a tener éxito en tu negocio."

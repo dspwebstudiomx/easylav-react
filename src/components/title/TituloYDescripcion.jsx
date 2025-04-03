@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const TituloYDescripcion = ({ title, description }) => {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 mb-12">
       <TitleContainer title={title} />
       <Paragraph>{description}</Paragraph>
     </div>

@@ -53,7 +53,7 @@ const tarjetasModelodelNegocio = [
 // Estructura
 const TarjetasModeloNegocio = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
       {tarjetasModelodelNegocio.map((tarjeta) => (
         <article
           key={tarjeta.id}
