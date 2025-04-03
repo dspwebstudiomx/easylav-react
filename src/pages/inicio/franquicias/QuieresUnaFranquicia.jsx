@@ -13,9 +13,9 @@ Descripción: Se han realizado cambios en los estilos y la estructura del compon
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets';
 import { BackgroundImageSection, ButtonContainer, ButtonPrimary } from 'components';
+import { memo } from 'react';
 
 // Estilos
-// Quieres una franquicia - Inicio - Sección
 const QUIERES_UNA_FRANQUICIA_UI = {
   THEME: 'dark',
   BACKGROUND: {
@@ -104,4 +104,5 @@ const QuieresUnaFranquicia = () => {
   );
 };
 
-export default QuieresUnaFranquicia;
+const MemoizedQuieresUnaFranquicia = memo(QuieresUnaFranquicia);
+export default MemoizedQuieresUnaFranquicia;
