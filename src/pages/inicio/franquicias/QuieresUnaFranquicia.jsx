@@ -96,7 +96,12 @@ const QuieresUnaFranquicia = () => {
             patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
           </p>
           <ButtonContainer position={styles.buttonContainer} distance="mt-12">
-            <ButtonPrimary title="Conoce más" href="/franquicias/#sobre-nuestras-franquicias" width={'min-w-[340px]'} />
+            <ButtonPrimary
+              title="Conoce más"
+              href="/franquicias/#sobre-nuestras-franquicias"
+              width={'min-w-[340px]'}
+              aria-label="Conocer más sobre nuestras franquicias"
+            />
           </ButtonContainer>
         </div>
       </div>
