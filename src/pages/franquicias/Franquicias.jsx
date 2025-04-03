@@ -13,18 +13,24 @@
   Modificación: Se han añadido nuevos componentes relacionados con la franquicia, incluyendo PreguntasFranquicias, BannerFranquicias, ImagenesFranquicias y SobreNuestrasFranquicias para mejorar la interacción del usuario y la presentación de información.
   Modificado por: Daniel Pérez
   --------------------------
+   Fecha de modificación: 2025-04-03
+   Modificación: Se han realizado ajustes en la estructura del componente para mejorar la legibilidad y el rendimiento. Se ha añadido un componente de carga para mejorar la experiencia del usuario mientras se cargan los componentes de forma diferida.
+   Modificado por: Daniel Pérez
 */
 
 // Importaciones
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { SEOFriendly, HomeLayout } from 'components';
-import PaquetesFranquicias from './PaquetesFranquicias';
-import ModeloNegocio from './ModeloNegocio';
-import SoporteCapacitacion from './SoporteCapacitacion';
-import TestimoniosFranquicias from './TestimoniosFranquicias';
-import ImagenesFranquicias from './ImagenesFranquicias';
-import SobreNuestrasFranquicias from './SobreNuestrasFranquicias';
-import QuieresUnaFranquicia from 'pages/inicio/franquicias/QuieresUnaFranquicia';
+import { SEOFriendly, HomeLayout, Loading } from 'components';
+import { lazy, Suspense } from 'react';
+
+// Constantes
+const PaquetesFranquicias = lazy(() => import('./PaquetesFranquicias'));
+const ImagenesFranquicias = lazy(() => import('./ImagenesFranquicias'));
+const ModeloNegocio = lazy(() => import('./ModeloNegocio'));
+const SobreNuestrasFranquicias = lazy(() => import('./SobreNuestrasFranquicias'));
+const TestimoniosFranquicias = lazy(() => import('./TestimoniosFranquicias'));
+const SoporteCapacitacion = lazy(() => import('./SoporteCapacitacion'));
+const QuieresUnaFranquicia = lazy(() => import('pages/inicio/franquicias/QuieresUnaFranquicia'));
 
 // Estructura
 const Franquicias = () => {
@@ -41,15 +47,17 @@ const Franquicias = () => {
         ogImageAlt="Canasta verde con ropa sucia"
         ogType="website"
       />
-      <HomeLayout>
-        <QuieresUnaFranquicia />
-        <SobreNuestrasFranquicias />
-        <ModeloNegocio />
-        <PaquetesFranquicias />
-        <ImagenesFranquicias />
-        <SoporteCapacitacion />
-        <TestimoniosFranquicias />
-      </HomeLayout>
+      <Suspense fallback={<Loading />}>
+        <HomeLayout>
+          <QuieresUnaFranquicia />
+          <SobreNuestrasFranquicias />
+          <ModeloNegocio />
+          <PaquetesFranquicias />
+          <ImagenesFranquicias />
+          <SoporteCapacitacion />
+          <TestimoniosFranquicias />
+        </HomeLayout>
+      </Suspense>
     </>
   );
 };
