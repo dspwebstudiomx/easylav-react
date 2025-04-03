@@ -71,6 +71,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
                   distance=""
                   type="button"
                   width="w-full sm:w-[320px]"
+                  aria-label="Regresar a la lista de sucursales"
                 />
               </ButtonContainer>
               <Spacing distance="mt-[5vh]" />
