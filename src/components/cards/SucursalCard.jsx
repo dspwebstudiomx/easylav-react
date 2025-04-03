@@ -79,10 +79,31 @@ const styles = {
   },
 };
 
-// Funciones
+// Lista de días festivos oficiales de México (formato MM-DD)
+const holidaysMexico = [
+  '01-01', // Año Nuevo
+  '02-03', // Día de la Constitución
+  '03-17', // Natalicio de Benito Juárez
+  '05-01', // Día del Trabajo
+  '09-16', // Día de la Independencia
+  '11-02', // Día de Muertos
+  '11-17', // Revolución Mexicana
+  '12-25', // Navidad
+];
+
+// Función para verificar si hoy es un día festivo
+const isHoliday = () => {
+  const today = new Date();
+  const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  return holidaysMexico.includes(formattedDate);
+};
 
 // Utility function to determine if the branch is open
 const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => {
+  if (isHoliday()) {
+    return false; // Cerrado en días festivos
+  }
+
   const currentTime = new Date();
   const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
   const openTime = openHour * 60 + openMinute;
@@ -255,7 +276,9 @@ const SucursalCard = (props) => {
             <Spacing distance="my-4" />
             <div className="flex flex-col items-center justify-center gap-8">
               <img src={image} alt={title} className="w-[340px] h-[280px] object-cover" />
-              <TitleH3>{title}</TitleH3>
+              <TitleH3 textTransform="uppercase" fontSize="text-xl">
+                {title}
+              </TitleH3>
             </div>
           </div>
         </Modal>

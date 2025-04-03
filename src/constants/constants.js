@@ -29,7 +29,7 @@ export const GENERAL_UI = {
     FONT_SIZE: 'text-3xl',
     FONT_WEIGHT: 'font-semibold',
     COLOR: 'text-dark dark:text-primary',
-    BACKGROUND_COLOR: 'bg-red_light',
+    BACKGROUND_COLOR: '',
     JUSTIFY: 'ml-auto',
     TEXT_TRANSFORM: 'uppercase',
   },
@@ -40,7 +40,7 @@ export const GENERAL_UI = {
     COLOR: 'text-dark  dark:text-primary',
     BACKGROUND_COLOR: '',
     CARD: 'text-base font-semibold',
-    TEXT_TRANSFORM: '',
+    TEXT_TRANSFORM: 'uppercase',
   },
   TITLEH4: {
     FONT_FAMILY: 'font-din-regular',
