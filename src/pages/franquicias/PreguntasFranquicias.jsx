@@ -7,7 +7,7 @@ const PreguntasFranquicias = () => {
     <div className="lg:mt-12">
       {/* Title */}
       {/* Questions */}
-      <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <ul className="grid sm:grid-cols-2 gap-8">
         {franquiciaDescripciones.map((description) => (
           <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
             <Accordion height="h-[120px]" title={description.title} description={description.description} />
