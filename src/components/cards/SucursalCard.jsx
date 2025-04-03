@@ -82,13 +82,14 @@ const styles = {
 // Lista de días festivos oficiales de México (formato MM-DD)
 const holidaysMexico = [
   '01-01', // Año Nuevo
-  '02-03', // Día de la Constitución
-  '03-17', // Natalicio de Benito Juárez
-  '05-01', // Día del Trabajo
-  '09-16', // Día de la Independencia
-  '11-02', // Día de Muertos
-  '11-17', // Revolución Mexicana
-  '12-25', // Navidad
+  '03-02', // Día de la Constitución
+  '04-03', // Prueba de verificación
+  '17-03', // Natalicio de Benito Juárez
+  '01-05', // Día del Trabajos
+  '16-09', // Día de la Independencia
+  '02-11', // Día de Muertos
+  '17-11', // Revolución Mexicana
+  '25-12', // Navidad
 ];
 
 // Función para verificar si hoy es un día festivo
@@ -102,13 +103,13 @@ const isHoliday = () => {
 const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => {
   if (isHoliday()) {
     return false; // Cerrado en días festivos
+  } else {
+    const currentTime = new Date();
+    const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
+    const openTime = openHour * 60 + openMinute;
+    const closeTime = closeHour * 60 + closeMinute;
+    return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
   }
-
-  const currentTime = new Date();
-  const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
-  const openTime = openHour * 60 + openMinute;
-  const closeTime = closeHour * 60 + closeMinute;
-  return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
 };
 
 // Function to render the open/closed badge
