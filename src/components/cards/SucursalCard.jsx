@@ -212,6 +212,7 @@ const SucursalCard = (props) => {
           </TitleH3>
           {/* Título */}
 
+          {/* Contenido */}
           <div className="flex flex-col gap-4 items-start">
             {/* Dirección */}
             <a
@@ -236,8 +237,10 @@ const SucursalCard = (props) => {
             </div>
             {/* Horario */}
           </div>
+          {/* Contenido */}
         </div>
       </section>
+
       {/* Advertisement */}
       {advertisement ? (
         <section className="w-full">
