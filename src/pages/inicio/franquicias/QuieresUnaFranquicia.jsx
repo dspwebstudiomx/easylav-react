@@ -72,7 +72,7 @@ const QuieresUnaFranquicia = () => {
   };
   return (
     <BackgroundImageSection
-      height="h-[1000px] xl:h-[600px]"
+      height="h-full"
       opacity={`bg-${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.COLOR} ${QUIERES_UNA_FRANQUICIA_UI.BACKGROUND.OPACITY}`}
       titleColor="text-primary"
       textColor="text-dark"
