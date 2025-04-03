@@ -1,7 +1,7 @@
+import { memo, useState, useCallback } from 'react';
 import { Accordion, ButtonContainer, ButtonSecondary } from 'components';
 import { franquiciaDescripciones } from 'data';
 import { FaRegBuilding } from 'react-icons/fa';
-import { useState, useCallback } from 'react';
 
 const PreguntasFranquicias = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -15,7 +15,7 @@ const PreguntasFranquicias = () => {
       <ul className="grid sm:grid-cols-2 gap-8">
         {franquiciaDescripciones.map((description) => (
           <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
-            <Accordion
+            <MemoizedAccordion
               height="h-[120px]"
               title={description.title}
               description={description.description}
@@ -37,5 +37,7 @@ const PreguntasFranquicias = () => {
     </div>
   );
 };
+
+const MemoizedAccordion = memo(Accordion);
 
 export default PreguntasFranquicias;
