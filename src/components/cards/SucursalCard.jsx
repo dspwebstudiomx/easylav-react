@@ -80,15 +80,8 @@ const styles = {
 };
 
 // Lista de días festivos oficiales de México (formato DD-)
-const holidaysMexico = [
+const holidays = [
   '01-01', // Año Nuevo
-  '03-02', // Día de la Constitución
-  '04-03', // Prueba de verificación
-  '17-03', // Natalicio de Benito Juárez
-  '01-05', // Día del Trabajos
-  '16-09', // Día de la Independencia
-  '02-11', // Día de Muertos
-  '17-11', // Revolución Mexicana
   '25-12', // Navidad
 ];
 
@@ -96,7 +89,7 @@ const holidaysMexico = [
 const isHoliday = () => {
   const today = new Date();
   const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-  return holidaysMexico.includes(formattedDate);
+  return holidays.includes(formattedDate);
 };
 
 // Utility function to determine if the branch is open
