@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /*
   SucursalCard - Componente de Tarjeta de Sucursal
   =====================================
@@ -14,7 +15,9 @@ import classNames from 'classnames';
 import { BackgroundImageSection, Badge, Modal, Spacing, TitleH3 } from 'components';
 import { useShowModal } from 'hooks';
 import PropTypes from 'prop-types';
-import { useMemo, useCallback } from 'react';
+import { memo } from 'react';
+import { useMemo } from 'react';
+import { useCallback } from 'react';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
@@ -312,4 +315,21 @@ SucursalCard.propTypes = {
   image: PropTypes.string,
 };
 
-export default SucursalCard;
+const memorizedSucursalCard = memo(SucursalCard, (prevProps, nextProps) => {
+  return (
+    prevProps.title === nextProps.title &&
+    prevProps.position.lat === nextProps.position.lat &&
+    prevProps.position.lng === nextProps.position.lng &&
+    prevProps.gmap === nextProps.gmap &&
+    prevProps.openHour === nextProps.openHour &&
+    prevProps.closeHour === nextProps.closeHour &&
+    prevProps.openMinute === nextProps.openMinute &&
+    prevProps.closeMinute === nextProps.closeMinute &&
+    prevProps.place === nextProps.place &&
+    prevProps.badge === nextProps.badge &&
+    prevProps.advertisement === nextProps.advertisement &&
+    prevProps.serviceday1 === nextProps.serviceday1 &&
+    prevProps.servicehour1 === nextProps.servicehour1
+  );
+});
+export default memorizedSucursalCard;
