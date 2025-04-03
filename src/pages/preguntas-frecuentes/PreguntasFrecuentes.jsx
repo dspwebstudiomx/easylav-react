@@ -21,15 +21,15 @@ import {
 import { frequentQuestions } from 'data';
 import { FaHome } from 'react-icons/fa';
 import { FaRegBuilding } from 'react-icons/fa6';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 // <Estructura></Estructura>
 const PreguntasFrecuentes = () => {
   const [activeAccordion, setActiveAccordion] = useState(null); // Estado para rastrear el acordeón abierto
 
-  const handleAccordionToggle = (id) => {
+  const handleAccordionToggle = useCallback((id) => {
     setActiveAccordion((prev) => (prev === id ? null : id)); // Alternar el estado del acordeón
-  };
+  }, []);
 
   return (
     <PageLayout>
@@ -49,7 +49,7 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <ul className="w-full grid sm:grid-cols-2 gap-8">
+        <ul className="w-full grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
           {frequentQuestions.map((question) => (
             <li key={question.id} id={`question-${question.id}`} className="text-dark">
               <Accordion
