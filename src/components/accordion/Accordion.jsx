@@ -3,22 +3,18 @@
   =====================================
   Creado por : Daniel Pérez
   Fecha: 2024-09-28
+  Descripción: Componente de acordeón reutilizable que permite expandir y contraer contenido.
+  Modificado por: Daniel Pérez
+  Fecha modificación: 2025-04-01
+  Descripción: Se eliminó el estado interno y se adaptó para recibir `isOpen` y `onToggle` desde el componente padre.
 */
 
 // Importaciones
 import { GENERAL_UI } from 'constants/constants';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
 // Estructura
-const Accordion = ({ description, title, height }) => {
-  const [active, setActive] = useState(false);
-
-  const handleToggle = () => {
-    event.preventDefault();
-    setActive(!active);
-  };
-
+const Accordion = ({ description, title, height, isOpen, onToggle }) => {
   const styles = {
     width: 'w-full h-full',
   };
@@ -26,13 +22,17 @@ const Accordion = ({ description, title, height }) => {
   return (
     <div className="w-auto rounded-lg mx-auto">
       <button
-        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark items-center justify-start ${!active ? 'rounded-2xl border-2 border-primary' : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'} border-r-2 border-r-primary mx-auto`}
-        onClick={() => handleToggle()}
+        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark items-center justify-start ${
+          !isOpen
+            ? 'rounded-2xl border-2 border-primary'
+            : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'
+        } border-r-2 border-r-primary mx-auto`}
+        onClick={onToggle}
       >
-        {/*  svg icon */}
+        {/* Icono SVG */}
         <div className={`mr-2 flex w-full max-w-[50px] items-center justify-center text-primary`}>
           <svg
-            className={`fill-primary stroke-primary duration-200 ease-in-out ${active ? 'rotate-180' : ''}`}
+            className={`fill-primary stroke-primary duration-200 ease-in-out ${isOpen ? 'rotate-180' : 'rotate-0'}`}
             width="17"
             height="10"
             viewBox="0 0 17 10"
@@ -45,24 +45,32 @@ const Accordion = ({ description, title, height }) => {
             />
           </svg>
         </div>
-        {/*  svg icon */}
-
-        {/* title */}
+        {/* Título */}
         <h4 className="text-lg xl:text-lg font-semibold text-dark dark:text-white">{title}</h4>
-        {/* title */}
       </button>
-
-      <div
-        className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light  text-dark ${active ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-full pb-8' : 'hidden'}`}
-      >
-        <p className={`${GENERAL_UI.PARAGRAPH} pt-8  dark:text-dark-6 w-full px-8 pb-4`}>{description}</p>
-      </div>
+      {/* Contenido del acordeón */}
+      {isOpen && (
+        <div
+          className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light text-dark ${
+            isOpen
+              ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-full pb-8'
+              : 'hidden'
+          }`}
+        >
+          <p className={`${GENERAL_UI.PARAGRAPH} pt-8 dark:text-dark-6 w-full px-8 pb-4`}>{description}</p>
+        </div>
+      )}
     </div>
   );
 };
+
+// PropTypes
 Accordion.propTypes = {
-  title: PropTypes.string,
-  height: PropTypes.string,
-  description: PropTypes.string,
+  isOpen: PropTypes.bool.isRequired, // Indica si el acordeón está abierto
+  onToggle: PropTypes.func.isRequired, // Función para manejar el evento de clic
+  title: PropTypes.string.isRequired, // Título del acordeón
+  height: PropTypes.string, // Altura del botón del acordeón
+  description: PropTypes.string.isRequired, // Contenido del acordeón
 };
+
 export default Accordion;

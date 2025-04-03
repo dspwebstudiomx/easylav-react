@@ -1,8 +1,15 @@
 import { Accordion, ButtonContainer, ButtonSecondary } from 'components';
 import { franquiciaDescripciones } from 'data';
 import { FaRegBuilding } from 'react-icons/fa';
+import { useState } from 'react';
 
 const PreguntasFranquicias = () => {
+  const [activeAccordion, setActiveAccordion] = useState(null);
+
+  const handleAccordionToggle = (id) => {
+    setActiveAccordion((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="lg:mt-12">
       {/* Title */}
@@ -10,7 +17,13 @@ const PreguntasFranquicias = () => {
       <ul className="grid sm:grid-cols-2 gap-8">
         {franquiciaDescripciones.map((description) => (
           <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
-            <Accordion height="h-[120px]" title={description.title} description={description.description} />
+            <Accordion
+              height="h-[120px]"
+              title={description.title}
+              description={description.description}
+              isOpen={activeAccordion === description.id}
+              onToggle={() => handleAccordionToggle(description.id)}
+            />
           </li>
         ))}
       </ul>
