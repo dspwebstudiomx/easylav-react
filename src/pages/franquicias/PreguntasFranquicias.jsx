@@ -32,6 +32,7 @@ const PreguntasFranquicias = () => {
           icon={<FaRegBuilding />}
           width={''}
           name="ver sucursales"
+          aria-label="Ver la lista de sucursales"
         />
       </ButtonContainer>
     </div>
