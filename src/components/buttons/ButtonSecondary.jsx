@@ -11,16 +11,15 @@ import PropTypes from 'prop-types';
 
 // Estilos
 const BUTTON_SECONDARY_UI = {
-  TEXT_COLOR: "text-light",
-  BACKGROUND_COLOR: "bg-secondary_dark",
+  TEXT_COLOR: 'text-light',
+  BACKGROUND_COLOR: 'bg-secondary_dark',
   BORDER:
-    "border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary",
+    'border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary',
 };
 
 // Estructura
 export default function ButtonSecondary({ ...props }) {
-
-  const { title, href, icon, type, titleMailto, distance, name, onClick, width } = props
+  const { title, href, icon, type, titleMailto, distance, name, onClick, width, arialabel } = props;
 
   return (
     <Button
@@ -36,8 +35,9 @@ export default function ButtonSecondary({ ...props }) {
       width={width}
       distance={distance}
       name={name}
+      arialabel={arialabel}
     />
-  )
+  );
 }
 
 ButtonSecondary.propTypes = {
@@ -51,5 +51,6 @@ ButtonSecondary.propTypes = {
   icon: PropTypes.any,
   onClick: PropTypes.func,
   titleMailto: PropTypes.string,
-  name: PropTypes.string
-}
+  name: PropTypes.string,
+  arialabel: PropTypes.string,
+};
