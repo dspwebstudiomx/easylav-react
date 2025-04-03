@@ -13,18 +13,29 @@
 import { Container, Paragraph, Section, TitleContainer } from 'components';
 import TarjetasModeloNegocio from './TarjetasModeloNegocio';
 
-// Base de Datos
+// Componentes internos
+
+const TituloYDescripcion = () => {
+  return (
+    <>
+      <TitleContainer title="Modelo de Negocio Detallado" />
+      <Paragraph>
+        El modelo de franquicia de Easylav está diseñado para ofrecer una alta rentabilidad y sostenibilidad. Aquí te
+        explicamos cómo funciona:
+      </Paragraph>
+    </>
+  );
+};
 
 // Estructura
 const ModeloNegocio = () => {
   return (
     <Section className="">
       <Container className="flex flex-col gap-12">
-        <TitleContainer title="Modelo de Negocio Detallado" />
-        <Paragraph>
-          El modelo de franquicia de Easylav está diseñado para ofrecer una alta rentabilidad y sostenibilidad. Aquí te
-          explicamos cómo funciona:
-        </Paragraph>
+        <TituloYDescripcion
+          title="Modelo de Negocio"
+          description=" El modelo de franquicia de Easylav está diseñado para ofrecer una alta rentabilidad y sostenibilidad. Aquí te explicamos cómo funciona:"
+        />
         <TarjetasModeloNegocio />
       </Container>
     </Section>

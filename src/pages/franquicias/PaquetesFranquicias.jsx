@@ -1,16 +1,25 @@
 // Importaciones
-import { ButtonContainer, ButtonSecondary, ContactFormFranquicias, Container, Modal, Section, Spacing } from "components";
-import { paquetesFranquicias } from "data";
-import { useShowModal } from "hooks";
-import { useState } from "react";
-import { FaCheck, FaXmark } from "react-icons/fa6";
+import {
+  ButtonContainer,
+  ButtonSecondary,
+  ContactFormFranquicias,
+  Container,
+  Modal,
+  Section,
+  Spacing,
+  TituloYDescripcion,
+} from 'components';
+import { paquetesFranquicias } from 'data';
+import { useShowModal } from 'hooks';
+import { useState } from 'react';
+import { FaCheck, FaXmark } from 'react-icons/fa6';
 
 // Estilos
 const PAQUETES_FRANQUICIAS_UI = {
-  PADDING: "px-8 py-12 sm:py-12 md:px-20 lg:p-24",
-  MARGIN: "m-auto",
-  BACKGROUND: "bg-light dark:bg-dark",
-  TEXT_COLOR: "text-dark",
+  PADDING: 'px-8 py-12 sm:py-12 md:px-20 lg:p-24',
+  MARGIN: 'm-auto',
+  BACKGROUND: 'bg-light dark:bg-dark',
+  TEXT_COLOR: 'text-dark',
 };
 const styles = `${PAQUETES_FRANQUICIAS_UI.PADDING} ${PAQUETES_FRANQUICIAS_UI.MARGIN} ${PAQUETES_FRANQUICIAS_UI.BACKGROUND} ${PAQUETES_FRANQUICIAS_UI.TEXT_COLOR}`;
 
@@ -32,6 +41,10 @@ const PaquetesFranquicias = () => {
   return (
     <Section className={styles} id="paquetes-franquicias">
       <Container>
+        <TituloYDescripcion
+          title="¿Cómo son nuestras franquicias?"
+          description="Conoce los diferentes paquetes de franquicias que ofrecemos y elige el que mejor se adapte a tus necesidades. Cada paquete incluye una variedad de características y beneficios diseñados para ayudarte a tener éxito en tu negocio."
+        />
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-12 2xl:gap-6 max-w-screen-2xl mx-auto">
           {paquetesFranquicias.map((paquete) => {
             // Validación de datos
@@ -64,7 +77,7 @@ const PaquetesFranquicias = () => {
 
                   <ul
                     className="space-y-2"
-                    id={`lista-caracteristica-${paquete.nombre.replace(/\s+/g, "-").toLowerCase()}`}
+                    id={`lista-caracteristica-${paquete.nombre.replace(/\s+/g, '-').toLowerCase()}`}
                   >
                     {paquete.caracteristicas.map((caracteristica, index) => (
                       <li key={`${paquete.id}-${index}`} className="text-dark flex gap-4 text-base">
@@ -75,11 +88,11 @@ const PaquetesFranquicias = () => {
                   </ul>
                   <ButtonContainer position="justify-center items-center">
                     <ButtonSecondary
-                      title={"Contactar"}
-                      width={"w-full"}
+                      title={'Contactar'}
+                      width={'w-full'}
                       onClick={() => handleOpenModal(paquete)}
                       distance="mx-1"
-                      id={`boton-contactar-${paquete.nombre.replace(/\s+/g, "-").toLowerCase()}`}
+                      id={`boton-contactar-${paquete.nombre.replace(/\s+/g, '-').toLowerCase()}`}
                       aria-label={`Contactar para el paquete ${paquete.nombre}`}
                     />
                   </ButtonContainer>
