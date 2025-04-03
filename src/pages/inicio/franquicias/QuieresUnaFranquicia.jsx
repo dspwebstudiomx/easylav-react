@@ -13,7 +13,6 @@ Descripción: Se han realizado cambios en los estilos y la estructura del compon
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets';
 import { BackgroundImageSection, ButtonContainer, ButtonPrimary } from 'components';
-import { scrollToTop } from 'functions';
 
 // Estilos
 // Quieres una franquicia - Inicio - Sección
@@ -97,7 +96,7 @@ const QuieresUnaFranquicia = () => {
             patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
           </p>
           <ButtonContainer position={styles.buttonContainer} distance="mt-12">
-            <ButtonPrimary title="Conoce más" href="/franquicias" width={'min-w-[340px]'} onClick={scrollToTop} />
+            <ButtonPrimary title="Conoce más" href="/franquicias/#sobre-nuestras-franquicias" width={'min-w-[340px]'} />
           </ButtonContainer>
         </div>
       </div>

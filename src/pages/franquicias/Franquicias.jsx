@@ -17,14 +17,14 @@
 
 // Importaciones
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { Header, SEOFriendly, Footer, ScrollToTopButton } from 'components';
+import { SEOFriendly, HomeLayout } from 'components';
 import PaquetesFranquicias from './PaquetesFranquicias';
 import ModeloNegocio from './ModeloNegocio';
 import SoporteCapacitacion from './SoporteCapacitacion';
 import TestimoniosFranquicias from './TestimoniosFranquicias';
 import ImagenesFranquicias from './ImagenesFranquicias';
-import BannerFranquicias from './BannerFranquicias';
 import SobreNuestrasFranquicias from './SobreNuestrasFranquicias';
+import QuieresUnaFranquicia from 'pages/inicio/franquicias/QuieresUnaFranquicia';
 
 // Estructura
 const Franquicias = () => {
@@ -41,18 +41,15 @@ const Franquicias = () => {
         ogImageAlt="Canasta verde con ropa sucia"
         ogType="website"
       />
-      <Header />
-      <main className="mt-[100px] sm:mt-0 lg:mt-[100px]">
-        <BannerFranquicias />
+      <HomeLayout>
+        <QuieresUnaFranquicia />
         <SobreNuestrasFranquicias />
         <ModeloNegocio />
         <PaquetesFranquicias />
         <ImagenesFranquicias />
         <SoporteCapacitacion />
         <TestimoniosFranquicias />
-      </main>
-      <Footer />
-      <ScrollToTopButton />
+      </HomeLayout>
     </>
   );
 };

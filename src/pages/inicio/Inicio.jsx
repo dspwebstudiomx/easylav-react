@@ -11,7 +11,6 @@ const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServici
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
 const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
 const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
-const QuieresUnaFranquicia = lazy(() => import('./franquicias/QuieresUnaFranquicia'));
 const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
 
@@ -38,7 +37,6 @@ const Inicio = () => (
         <SobreNosotros />
         <NuestrasSucursales />
         <CarouselTestimonios />
-        <QuieresUnaFranquicia />
         <Section backgroundColor="bg-light dark:bg-dark" className="">
           <Container className="">
             <Contacto />

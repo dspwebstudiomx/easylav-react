@@ -18,10 +18,10 @@ const Contacto = () => {
         ogType="website"
       />
 
-      <div className="flex flex-col sm:flex-row gap-20">
+      <article className="flex flex-col sm:flex-row gap-20">
         <ContactInfo />
         <ContactForm />
-      </div>
+      </article>
     </>
   );
 };

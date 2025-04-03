@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ContactInfo = () => {
   return (
-    <article className="animate__animated animate__bounceInLeft animate__slowest grid">
+    <section className="animate__animated animate__bounceInLeft animate__slowest grid">
       <div className="">
         <TitleH2>¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.</TitleH2>
       </div>
@@ -41,7 +41,7 @@ const ContactInfo = () => {
       <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0 2xl:mt-12">
         <SocialLinks color={'text-secondary dark:text-primary'} size={54} gap={'gap-4'} />
       </div>
-    </article>
+    </section>
   );
 };
 

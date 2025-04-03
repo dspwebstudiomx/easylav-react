@@ -65,7 +65,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div
+    <section
       id="formulario"
       className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest mx-auto"
     >
@@ -195,6 +195,6 @@ export default function ContactForm() {
           </Form>
         )}
       </Formik>
-    </div>
+    </section>
   );
 }
