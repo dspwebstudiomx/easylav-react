@@ -11,7 +11,7 @@ import {
 } from 'components';
 import { paquetesFranquicias } from 'data';
 import { useShowModal } from 'hooks';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { FaCheck, FaXmark } from 'react-icons/fa6';
 
 // Estilos
@@ -24,6 +24,7 @@ const PAQUETES_FRANQUICIAS_UI = {
 const styles = `${PAQUETES_FRANQUICIAS_UI.PADDING} ${PAQUETES_FRANQUICIAS_UI.MARGIN} ${PAQUETES_FRANQUICIAS_UI.BACKGROUND} ${PAQUETES_FRANQUICIAS_UI.TEXT_COLOR}`;
 
 // Estructura
+// eslint-disable-next-line react-refresh/only-export-components
 const PaquetesFranquicias = () => {
   const { showModal, setShowModal } = useShowModal();
   const [selectedPaquete, setSelectedPaquete] = useState(null);
@@ -123,5 +124,7 @@ const PaquetesFranquicias = () => {
     </Section>
   );
 };
-
-export default PaquetesFranquicias;
+const memorizedPaquetesFranquicias = memo(PaquetesFranquicias, (prevProps, nextProps) => {
+  return prevProps.paquete === nextProps.paquete;
+});
+export default memorizedPaquetesFranquicias;

@@ -104,5 +104,7 @@ const QuieresUnaFranquicia = () => {
   );
 };
 
-const MemoizedQuieresUnaFranquicia = memo(QuieresUnaFranquicia);
+const MemoizedQuieresUnaFranquicia = memo(QuieresUnaFranquicia, (prevProps, nextProps) => {
+  return prevProps.children === nextProps.children;
+});
 export default MemoizedQuieresUnaFranquicia;

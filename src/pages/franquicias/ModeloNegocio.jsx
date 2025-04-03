@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /*
   ModeloNegocio.jsx - Componente de Sección en Franquicias
   =====================================
@@ -10,22 +11,9 @@
 */
 
 // Importaciones
-import { Container, Paragraph, Section, TitleContainer } from 'components';
+import { Container, Section, TituloYDescripcion } from 'components';
 import TarjetasModeloNegocio from './TarjetasModeloNegocio';
-
-// Componentes internos
-
-const TituloYDescripcion = () => {
-  return (
-    <>
-      <TitleContainer title="Modelo de Negocio Detallado" />
-      <Paragraph>
-        El modelo de franquicia de Easylav está diseñado para ofrecer una alta rentabilidad y sostenibilidad. Aquí te
-        explicamos cómo funciona:
-      </Paragraph>
-    </>
-  );
-};
+import { memo } from 'react';
 
 // Estructura
 const ModeloNegocio = () => {
@@ -42,4 +30,8 @@ const ModeloNegocio = () => {
   );
 };
 
-export default ModeloNegocio;
+const memorizedModeloNegocio = memo(ModeloNegocio, (prevProps, nextProps) => {
+  return prevProps.children === nextProps.children;
+});
+
+export default memorizedModeloNegocio;

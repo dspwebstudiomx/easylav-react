@@ -1,5 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Container, Section, TituloYDescripcion } from 'components';
 import PreguntasFranquicias from './PreguntasFranquicias';
+import { memo } from 'react';
 
 // Estilos
 
@@ -19,4 +21,7 @@ const SobreNuestrasFranquicias = () => {
   );
 };
 
-export default SobreNuestrasFranquicias;
+const memorizedSobreNuestrasFranquicias = memo(SobreNuestrasFranquicias, (prevProps, nextProps) => {
+  return prevProps.children === nextProps.children;
+});
+export default memorizedSobreNuestrasFranquicias;

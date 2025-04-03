@@ -1,5 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Container, ImageResponsive, Section, TituloYDescripcion } from 'components';
 import { franquiciasImagenes } from 'data';
+import { memo } from 'react';
 
 const FRANQUICIAS_UI = {
   IMAGE: {
@@ -48,4 +50,7 @@ const ImagenesFranquicias = () => {
   );
 };
 
-export default ImagenesFranquicias;
+const memorizedImagenesFranquicias = memo(ImagenesFranquicias, (prevProps, nextProps) => {
+  return prevProps === nextProps;
+});
+export default memorizedImagenesFranquicias;

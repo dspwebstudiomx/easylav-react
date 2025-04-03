@@ -274,7 +274,7 @@ const SucursalCard = (props) => {
                 alt={title}
                 className="w-[340px] h-[280px] xl:w-[560px] xl:h-[480px]  object-cover shadow-2xl"
               />
-              <TitleH3 textTransform="uppercase" fontSize="text-xl">
+              <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
               </TitleH3>
             </div>
