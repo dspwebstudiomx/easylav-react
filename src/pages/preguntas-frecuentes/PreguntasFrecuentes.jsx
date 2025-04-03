@@ -8,6 +8,7 @@
 */
 
 // Importaciones
+import { memo, useState, useCallback } from 'react';
 import {
   Accordion,
   BorderLeft,
@@ -21,7 +22,6 @@ import {
 import { frequentQuestions } from 'data';
 import { FaHome } from 'react-icons/fa';
 import { FaRegBuilding } from 'react-icons/fa6';
-import { useState, useCallback } from 'react';
 
 // <Estructura></Estructura>
 const PreguntasFrecuentes = () => {
@@ -52,7 +52,7 @@ const PreguntasFrecuentes = () => {
         <ul className="w-full grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
           {frequentQuestions.map((question) => (
             <li key={question.id} id={`question-${question.id}`} className="text-dark">
-              <Accordion
+              <MemoizedAccordion
                 height={'h-[210px] sm:h-[140px]'}
                 title={question.question}
                 description={question.answer}
@@ -77,5 +77,7 @@ const PreguntasFrecuentes = () => {
     </PageLayout>
   );
 };
+
+const MemoizedAccordion = memo(Accordion);
 
 export default PreguntasFrecuentes;
