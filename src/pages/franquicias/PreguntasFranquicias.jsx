@@ -1,19 +1,17 @@
 import { Accordion, ButtonContainer, ButtonSecondary } from 'components';
 import { franquiciaDescripciones } from 'data';
 import { FaRegBuilding } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 const PreguntasFranquicias = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
-  const handleAccordionToggle = (id) => {
+  const handleAccordionToggle = useCallback((id) => {
     setActiveAccordion((prev) => (prev === id ? null : id));
-  };
+  }, []);
 
   return (
     <div className="lg:mt-12">
-      {/* Title */}
-      {/* Questions */}
       <ul className="grid sm:grid-cols-2 gap-8">
         {franquiciaDescripciones.map((description) => (
           <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
@@ -36,7 +34,6 @@ const PreguntasFranquicias = () => {
           name="ver sucursales"
         />
       </ButtonContainer>
-      {/* Questions */}
     </div>
   );
 };
