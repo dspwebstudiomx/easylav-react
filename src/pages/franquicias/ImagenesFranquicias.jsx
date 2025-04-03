@@ -1,14 +1,14 @@
-import { Container, ImageResponsive, Section } from 'components';
+import { Container, ImageResponsive, Section, TituloYDescripcion } from 'components';
 import { franquiciasImagenes } from 'data';
 
 const FRANQUICIAS_UI = {
   IMAGE: {
-    WIDTH: 'w-[280px] lg:w-[360px]',
+    WIDTH: 'w-[280px] lg:w-full',
   },
   COLUMNA_2: {
-    DISPLAY: 'grid justify-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-12',
+    DISPLAY: 'grid justify-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-6 lg:gap-12 2xl:gap-6',
     HEIGHT: 'lg:h-auto md:h-[500px]',
-    MARGIN: 'mx-auto mt-24 sm:mt-8 2xl:mt-40 mx-auto',
+    MARGIN: 'mx-auto mx-auto',
     PADDING: 'p-0',
     WIDTH: 'w-full',
   },
@@ -17,7 +17,11 @@ const FRANQUICIAS_UI = {
 const ImagenesFranquicias = () => {
   return (
     <Section>
-      <Container>
+      <Container className="flex flex-col gap-12">
+        <TituloYDescripcion
+          title="Galería de Imágenes"
+          description="Descubre la belleza y funcionalidad de nuestras franquicias a través de esta galería de imágenes. Cada imagen cuenta una historia de éxito y dedicación en el mundo de la lavandería."
+        />
         <div
           id="franquicias-columma-2"
           className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
