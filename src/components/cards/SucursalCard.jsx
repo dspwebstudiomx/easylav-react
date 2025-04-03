@@ -14,7 +14,7 @@ import classNames from 'classnames';
 import { BackgroundImageSection, Badge, Modal, Spacing, TitleH3 } from 'components';
 import { useShowModal } from 'hooks';
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
@@ -161,11 +161,16 @@ const SucursalCard = (props) => {
     openMinute,
     closeMinute,
   } = props;
+  const { showModal, setShowModal } = useShowModal();
+
+  const handleShowModal = useCallback(() => {
+    setShowModal(true);
+  }, [setShowModal]);
+
   const isOpen = useMemo(
     () => isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute),
     [openHour, openMinute, closeHour, closeMinute]
   );
-  const { showModal, setShowModal } = useShowModal();
 
   return (
     <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'z-10': showModal })}>
@@ -193,7 +198,7 @@ const SucursalCard = (props) => {
         </div>
         <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4 pr-8 w-full">
           <button
-            onClick={() => setShowModal(true)}
+            onClick={handleShowModal}
             id="zoom"
             className="text-light rounded-full border-2 border-light p-3 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer"
           >
