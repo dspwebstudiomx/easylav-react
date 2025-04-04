@@ -1,9 +1,11 @@
 import { navLinksPages, navLinksSections } from 'data/navlinks';
-import { scrollWithOffset } from 'functions';
-import { NavLink } from 'react-router-dom';
+import { scrollWithOffset, scrollToTop } from 'functions'; // Importamos scrollToTop
+import { NavLink, useLocation } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 const NavLinksDesktop = () => {
+  const location = useLocation();
+
   return (
     <ul
       id="navlinks-desktop"
@@ -18,6 +20,11 @@ const NavLinksDesktop = () => {
             to={navlink.href}
             scroll={scrollWithOffset}
             title={`Ir a ${navlink.linkId}`}
+            onClick={() => {
+              if (location.pathname === navlink.href) {
+                scrollToTop();
+              }
+            }}
           >
             {navlink.name}
           </NavHashLink>
@@ -32,7 +39,11 @@ const NavLinksDesktop = () => {
             to={navlink.href}
             title={`Ir a ${navlink.linkId}`}
             alt={navlink.linkId}
-            scroll={scrollWithOffset}
+            onClick={() => {
+              if (location.pathname === navlink.href) {
+                scrollToTop(); // Usamos tu función scrollToTop
+              }
+            }}
           >
             {navlink.name}
           </NavLink>
