@@ -1,25 +1,35 @@
 export const porqueElegirnosDescripciones = [
   {
     id: 1,
-    titulo: "Compromiso con la Calidad",
-    texto:
-      "Utilizamos solo productos y técnicas de lavado de primera categoría.",
+    titulo: 'Ambiente agradable',
+    texto: 'Contamos con un Precios competitivos y cómodo para dar un buen servicio.',
   },
   {
     id: 2,
-    titulo: "Experiencia y Profesionalismo",
+    titulo: 'Precios competitivos',
     texto:
-      " Nuestro equipo está altamente capacitado y comprometido con tu satisfacción.",
+      ' Precios competitivos, buena atención y contamos con dos opciones para su servicio; Autoservicio y Encargo.',
   },
   {
     id: 3,
-    titulo: "Conectividad WIFI",
-    texto: " Contamos con conectividad WIFI para su uso en la sucursal.",
+    titulo: 'Medio ambiente',
+    texto:
+      ' Comprometidos con el medio ambiente al ahorrar agua y producto, no es necesario mucho jabón o suavizante, ya que nuestros equipos lavan como si laváramos a mano.',
   },
   {
     id: 4,
-    titulo: "Horarios",
+    titulo: 'Productos de preferencia',
     texto:
-      " Contamos con un horario amplio para que pueda dejar sus prendas y recogerlas cuando usted lo requiera.",
+      'Permitimos el uso de productos de la preferencia de los clientes. (Aplican restricciones en cuanto a detergente en polvo y/o detergente de hojuelas)',
+  },
+  {
+    id: 5,
+    titulo: 'Horarios',
+    texto: 'Extenso horario para la comodidad de los clientes.',
+  },
+  {
+    id: 6,
+    titulo: 'Entrega el mismo día',
+    texto: 'Entregamos el mismo día siempre y cuando sea dentro del horario adecuado para el servicio completo.',
   },
 ];

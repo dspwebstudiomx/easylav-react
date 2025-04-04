@@ -39,8 +39,8 @@ const Inicio = () => (
         <NuestrosServicios />
         <ProgramasDeLealtad />
         <Equipamiento />
-        <PorqueElegirnos />
         <NuestrasSucursales />
+        <PorqueElegirnos />
         <CarouselTestimonios />
         <Section backgroundColor="bg-light dark:bg-dark" className="">
           <Container className="">

@@ -40,7 +40,7 @@ export const GENERAL_UI = {
     COLOR: 'text-dark  dark:text-primary',
     BACKGROUND_COLOR: '',
     CARD: 'text-base font-semibold',
-    TEXT_TRANSFORM: '',
+    TEXT_TRANSFORM: 'uppercase',
   },
   TITLEH4: {
     FONT_FAMILY: 'font-din-regular',
@@ -53,7 +53,7 @@ export const GENERAL_UI = {
   },
   PARAGRAPH: {
     FONT_FAMILY: 'font-din text-pretty',
-    FONT_SIZE: 'text-lg sm:text-base xl:text-xl mr-6 sm:mr-0',
+    FONT_SIZE: 'text-lg sm:text-base xl:text-lg mr-6 sm:mr-0',
     COLOR: 'text-dark dark:text-light',
     FONT_WEIGHT: '',
     LETTER_SPACING: 'tracking-normal',
