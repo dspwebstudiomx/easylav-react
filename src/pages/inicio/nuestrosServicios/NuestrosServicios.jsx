@@ -11,6 +11,7 @@ import {
   ButtonPrimary,
   ButtonSecondary,
   Container,
+  Paragraph,
   Section,
   Spacing,
   TitleContainer,
@@ -21,10 +22,13 @@ import ServicesGenerator from './ServicesGenerator';
 // Constantes Internos
 const Titulo = () => {
   return (
-    <>
+    <article id="nuestros-servicios-titulo" className="flex flex-col items-start justify-center gap-4">
       <TitleContainer title="Nuestros Servicios" />
+      <Paragraph>
+        Todos nuestros insumos son de calidad y de las mejores marcas para que tus prendas siempre estén impecables.
+      </Paragraph>
       <Spacing distance="mt-12" />
-    </>
+    </article>
   );
 };
 

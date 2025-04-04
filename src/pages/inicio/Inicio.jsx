@@ -10,7 +10,7 @@ const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
 const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
-const SobreNosotros = lazy(() => import('./components/SobreNosotros'));
+const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
 const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
 
@@ -32,9 +32,10 @@ const Inicio = () => (
     <Suspense fallback={<Loading />}>
       <HomeLayout>
         <HeroInicioVideo />
+        <QuienesSomos />
+        {/* <SobreNosotros /> */}
         <NuestrosServicios />
         <PorqueElegirnos />
-        <SobreNosotros />
         <NuestrasSucursales />
         <CarouselTestimonios />
         <Section backgroundColor="bg-light dark:bg-dark" className="">

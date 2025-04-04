@@ -40,7 +40,7 @@ export const GENERAL_UI = {
     COLOR: 'text-dark  dark:text-primary',
     BACKGROUND_COLOR: '',
     CARD: 'text-base font-semibold',
-    TEXT_TRANSFORM: 'uppercase',
+    TEXT_TRANSFORM: '',
   },
   TITLEH4: {
     FONT_FAMILY: 'font-din-regular',

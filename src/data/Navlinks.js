@@ -1,130 +1,117 @@
-import {
-  GrCoatCheck,
-  GrGroup,
-  GrHome,
-  GrIndicator,
-  GrMailOption,
-  GrUser,
-} from "react-icons/gr";
+import { GrCoatCheck, GrGroup, GrHome, GrIndicator, GrMailOption, GrUser } from 'react-icons/gr';
 
 const navLinksSections = [
   {
     id: 1,
-    name: "Inicio",
-    href: "/#inicio",
+    name: 'Inicio',
+    href: '/#inicio',
     icon: GrHome,
-    linkId: "inicio",
+    linkId: 'inicio',
   },
   {
     id: 2,
-    name: "Servicios",
-    href: "/#servicios",
-    icon: GrCoatCheck,
-    linkId: "servicios",
+    name: 'Quienes Somos',
+    href: '/#quienes-somos',
+    icon: GrUser,
+    linkId: 'Nosotros',
   },
   {
     id: 3,
-    name: "Quienes Somos",
-    href: "/#nosotros",
-    icon: GrUser,
-    linkId: "Nosotros",
+    name: 'Servicios',
+    href: '/#servicios',
+    icon: GrCoatCheck,
+    linkId: 'servicios',
   },
 ];
 const navLinksPages = [
   {
     id: 1,
-    name: "Sucursales",
-    href: "/sucursales",
+    name: 'Sucursales',
+    href: '/sucursales',
     icon: GrIndicator,
-    linkId: "sucursales",
+    linkId: 'sucursales',
   },
   {
     id: 2,
-    name: "Contacto",
-    href: "/contacto",
+    name: 'Contacto',
+    href: '/contacto',
     icon: GrMailOption,
-    linkId: "contacto",
+    linkId: 'contacto',
   },
   {
     id: 3,
-    name: "Franquicias",
-    href: "/franquicias",
+    name: 'Franquicias',
+    href: '/franquicias',
     icon: GrGroup,
-    linkId: "franquicias",
+    linkId: 'franquicias',
   },
 ];
 
 const linksServicios = [
   {
     id: 1,
-    name: "Lavado",
-    href: "/#lavado",
-    linkId: "lavado",
+    name: 'Lavado',
+    href: '/#lavado',
+    linkId: 'lavado',
   },
   {
     id: 2,
-    name: "Secado",
-    href: "/#secado",
-    linkId: "Secado",
+    name: 'Secado',
+    href: '/#secado',
+    linkId: 'Secado',
   },
   {
     id: 3,
-    name: "Encargo",
-    href: "/#por-encargo",
-    linkId: "Encargo",
+    name: 'Encargo',
+    href: '/#por-encargo',
+    linkId: 'Encargo',
   },
   {
     id: 4,
-    name: "Plegado",
-    href: "/#plegado",
-    linkId: "Plegado",
+    name: 'Plegado',
+    href: '/#plegado',
+    linkId: 'Plegado',
   },
   {
     id: 5,
-    name: "Tintorería",
-    href: "/#tintoreria",
-    linkId: "Tintoreria",
+    name: 'Tintorería',
+    href: '/#tintoreria',
+    linkId: 'Tintoreria',
   },
 ];
 
 const linksPoliticas = [
   {
     id: 1,
-    name: "Política de Privacidad",
-    href: "/politica-privacidad",
-    linkId: "politica-privacidad",
+    name: 'Política de Privacidad',
+    href: '/politica-privacidad',
+    linkId: 'politica-privacidad',
   },
   {
     id: 2,
-    name: "Política de Cookies",
-    href: "/politica-cookies",
-    linkId: "politica-cookies",
+    name: 'Política de Cookies',
+    href: '/politica-cookies',
+    linkId: 'politica-cookies',
   },
 ];
 const linksTerminos = [
   {
     id: 1,
-    name: "Términos y Condiciones",
-    href: "/terminos-condiciones",
-    linkId: "terminos-condiciones",
+    name: 'Términos y Condiciones',
+    href: '/terminos-condiciones',
+    linkId: 'terminos-condiciones',
   },
   {
     id: 2,
-    name: "Preguntas Frecuentes",
-    href: "/preguntas-frecuentes",
-    linkId: "preguntas-frecuentes",
+    name: 'Preguntas Frecuentes',
+    href: '/preguntas-frecuentes',
+    linkId: 'preguntas-frecuentes',
   },
   {
     id: 3,
-    name: "Facturación",
-    href: "/facturacion",
-    linkId: "facturacion",
+    name: 'Facturación',
+    href: '/facturacion',
+    linkId: 'facturacion',
   },
 ];
-export {
-  linksPoliticas,
-  linksServicios,
-  linksTerminos,
-  navLinksPages,
-  navLinksSections,
-};
+export { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections };
