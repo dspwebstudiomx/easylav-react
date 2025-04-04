@@ -2,6 +2,7 @@ import { BorderLeft, Container, Paragraph, Section, TitleContainer, TitleH3 } fr
 import { Placeholder } from 'assets';
 import PropTypes from 'prop-types';
 import { FaStar } from 'react-icons/fa6';
+import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
 
 //Biblioteca de datos
 const valores = [
@@ -155,6 +156,28 @@ const QuienesSomos = () => {
             <h3 className="text-2xl font-semibold uppercase">Nuestros Valores</h3>
           </BorderLeft>
           <NuestrosValoresGeneradorTarjetas />
+        </Card>
+        <Card>
+          <TwoColumnsContainer>
+            <div className="flex flex-col gap-12 items-start justify-center">
+              <BorderLeft>
+                <h3 className="text-2xl font-semibold uppercase">Servicios</h3>
+              </BorderLeft>
+              <div className="grid gap-3">
+                {serviciosOfrecidos.map((servicio, key) => {
+                  return (
+                    <article key={key} className="flex gap-4 items-center justify-start">
+                      <div className="w-8 h-8">
+                        <FaStar className="text-secondary" size={24} />
+                      </div>
+                      <h3 className="">{servicio.title}</h3>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+            <img src={image} alt="lavandería Easylav" className="shadow-2xl" />
+          </TwoColumnsContainer>
         </Card>
         <Card>
           <BorderLeft>
