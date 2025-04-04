@@ -100,7 +100,7 @@ const QuieresUnaFranquicia = () => {
               title="Conoce más"
               href="/franquicias/#sobre-nuestras-franquicias"
               width={'min-w-[340px]'}
-              aria-label="Conocer más sobre nuestras franquicias"
+              arialabel="Conocer más sobre nuestras franquicias"
             />
           </ButtonContainer>
         </div>

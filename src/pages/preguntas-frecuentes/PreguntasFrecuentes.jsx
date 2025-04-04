@@ -71,9 +71,16 @@ const PreguntasFrecuentes = () => {
           icon={<FaRegBuilding />}
           width={'w-[240px]'}
           name="Ver Sucursales"
-          aria-label="Ver la lista de sucursales"
+          arialabel="Ver la lista de sucursales"
         />
-        <ButtonSecondary href={'/'} title={'Inicio'} icon={<FaHome />} width={'w-[240px]'} name="Ir a inicio" />
+        <ButtonSecondary
+          href={'/'}
+          title={'Inicio'}
+          icon={<FaHome />}
+          width={'w-[240px]'}
+          name="Ir a inicio"
+          arialabel="Ir a la página de inicio"
+        />
       </ButtonContainer>
     </PageLayout>
   );
