@@ -31,7 +31,20 @@ const BUTTON_UI = {
 // Estructura
 const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.HEIGHT} ${BUTTON_UI.WIDTH}  ${BUTTON_UI.FONT_SIZE} ${BUTTON_UI.PADDING} ${BUTTON_UI.FONT_WEIGHT} ${BUTTON_UI.ROUNDED} ${BUTTON_UI.TEXT_TRANSFORM} ${BUTTON_UI.LETTER_SPACING} ${BUTTON_UI.ANIMATION} `;
 
-const Button = ({ backgroundColor, title, border, icon, type, onClick, href, textColor, name, width, height }) => {
+const Button = ({
+  backgroundColor,
+  title,
+  border,
+  icon,
+  type,
+  onClick,
+  href,
+  textColor,
+  name,
+  width,
+  height,
+  arialabel,
+}) => {
   const buttonWidth = width ? width : BUTTON_UI.WIDTH;
   const buttonHeight = height ? height : BUTTON_UI.WIDTH;
   return (
@@ -42,6 +55,7 @@ const Button = ({ backgroundColor, title, border, icon, type, onClick, href, tex
         type={type}
         className={`${backgroundColor} ${border} ${ButtonUI} ${buttonWidth} ${buttonHeight} ${textColor} flex gap-3 z-50`}
         href={href}
+        aria-label={arialabel}
       >
         {icon && <span>{icon}</span>}
         {title}
@@ -62,6 +76,7 @@ Button.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   name: PropTypes.string,
+  arialabel: PropTypes.string,
 };
 
 export default Button;
