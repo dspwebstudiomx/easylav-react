@@ -84,7 +84,9 @@ const ValorTarjeta = ({ valor }) => {
   return (
     <article id="nuestros-valores" className="flex flex-col gap-4 items-center justify-start text-center">
       <img width={64} src={valor.image} title={valor.title} alt={valor.alt} />
-      <TitleH3 color="text-dark font-medium">{valor.title}</TitleH3>
+      <TitleH3 color="text-dark" textTransform="uppercase">
+        {valor.title}
+      </TitleH3>
     </article>
   );
 };
