@@ -5,6 +5,7 @@ import { VistaLavanderiaDesdeEntrada_2_640 } from 'assets';
 import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import ProgramasDeLealtad from './components/ProgramasDeLealtad';
+import Equipamiento from './components/Equipamiento';
 
 // Constantes
 const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
@@ -37,6 +38,7 @@ const Inicio = () => (
         {/* <SobreNosotros /> */}
         <NuestrosServicios />
         <ProgramasDeLealtad />
+        <Equipamiento />
         <PorqueElegirnos />
         <NuestrasSucursales />
         <CarouselTestimonios />
