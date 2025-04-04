@@ -26,10 +26,7 @@ import { lazy, Suspense } from 'react';
 // Constantes
 const PaquetesFranquicias = lazy(() => import('./PaquetesFranquicias'));
 const ImagenesFranquicias = lazy(() => import('./ImagenesFranquicias'));
-const ModeloNegocio = lazy(() => import('./ModeloNegocio'));
 const SobreNuestrasFranquicias = lazy(() => import('./SobreNuestrasFranquicias'));
-const TestimoniosFranquicias = lazy(() => import('./TestimoniosFranquicias'));
-const SoporteCapacitacion = lazy(() => import('./SoporteCapacitacion'));
 const QuieresUnaFranquicia = lazy(() => import('pages/inicio/franquicias/QuieresUnaFranquicia'));
 
 // Estructura
@@ -51,11 +48,8 @@ const Franquicias = () => {
         <HomeLayout>
           <QuieresUnaFranquicia />
           <SobreNuestrasFranquicias />
-          <ModeloNegocio />
           <PaquetesFranquicias />
           <ImagenesFranquicias />
-          <SoporteCapacitacion />
-          <TestimoniosFranquicias />
         </HomeLayout>
       </Suspense>
     </>

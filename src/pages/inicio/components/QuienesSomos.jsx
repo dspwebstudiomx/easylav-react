@@ -169,7 +169,7 @@ const QuienesSomos = () => {
                       <div className="w-8 h-8">
                         <FaStar className="text-secondary" size={24} />
                       </div>
-                      <h3 className="">{servicio.title}</h3>
+                      <h3 className="text-xl">{servicio.title}</h3>
                     </article>
                   );
                 })}
@@ -177,23 +177,6 @@ const QuienesSomos = () => {
             </div>
             <img src={image} alt="lavandería Easylav" className="shadow-2xl" />
           </TwoColumnsContainer>
-        </Card>
-        <Card>
-          <BorderLeft>
-            <h3 className="text-2xl font-semibold uppercase">Servicios</h3>
-          </BorderLeft>
-          <ThreeColumnsContainer>
-            {serviciosOfrecidos.map((servicio, key) => {
-              return (
-                <article key={key} className="flex gap-4 items-center justify-start">
-                  <div className="w-8 h-8">
-                    <FaStar className="text-secondary" size={24} />
-                  </div>
-                  <h3 className="">{servicio.title}</h3>
-                </article>
-              );
-            })}
-          </ThreeColumnsContainer>
         </Card>
       </Container>
     </Section>
