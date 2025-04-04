@@ -1,4 +1,4 @@
-import { BorderLeft, Container, Paragraph, Section, TitleContainer, TitleH3 } from 'components';
+import { BorderLeft, Container, Paragraph, ParagraphContainer, Section, TitleContainer, TitleH3 } from 'components';
 import { Placeholder } from 'assets';
 import PropTypes from 'prop-types';
 import { FaStar } from 'react-icons/fa6';
@@ -62,9 +62,6 @@ const serviciosOfrecidos = [
 ];
 
 // Componentes Internos
-const ParagraphContainer = ({ children }) => {
-  return <div className="grid gap-8">{children}</div>;
-};
 const TwoColumnsContainer = ({ children }) => {
   return <div className="grid sm:grid-cols-2 gap-8">{children}</div>;
 };
@@ -204,9 +201,6 @@ const QuienesSomos = () => {
 };
 
 // PropTypes
-ParagraphContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 TwoColumnsContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
