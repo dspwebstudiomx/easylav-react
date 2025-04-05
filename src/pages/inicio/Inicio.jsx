@@ -1,7 +1,7 @@
 // Inicio.jsx //
 
 //Importaciones
-import { VistaLavanderiaDesdeEntrada_2_640 } from 'assets';
+import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
 import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import ProgramasDeLealtad from './components/ProgramasDeLealtad';
@@ -20,14 +20,13 @@ const Contacto = lazy(() => import('../../components/contacto/Contacto'));
 const Inicio = () => (
   <>
     <SEOFriendly
-      title="Inicio | Easylav: Tu lavandería ideal"
+      title="Inicio | Easylav - Lavandería a Domicilio"
       url="https://easylav.mx/"
       description="En Easylav, nos apasiona cuidar de tu ropa. Ofrecemos limpieza impecable y planchado perfecto para que tus prendas luzcan siempre como nuevas. Descubre nuestro servicio de lavandería de calidad superior, con atención a los detalles y resultados excepcionales. ¡Tu ropa merece lo mejor!"
       author="dspwebstudio"
-      robots="index, follow"
       publisher="dspwebstudio.com"
-      keywords="lavanderia en Morelia,"
-      ogImage={VistaLavanderiaDesdeEntrada_2_640}
+      keywords="lavanderia en Morelia, lavanderia en Leon, lavanderia en Guadalajara, lavanderia a domicilio, servicio de lavanderia, planchado de ropa, limpieza de ropa, Easylav"
+      ogImage={image}
       ogImageAlt="canasta verde con ropa sucia"
       ogType="website"
     />

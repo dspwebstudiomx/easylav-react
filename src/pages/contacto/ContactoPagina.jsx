@@ -9,14 +9,14 @@ const ContactoPagina = () => {
   return (
     <>
       <SEOFriendly
-        title="Franquicias de Lavandería | Easylav - Tu Oportunidad de Negocio Ideal"
-        url="easylav-react.netlify.app/franquicias"
-        description="En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo puedes ser parte de nuestro éxito."
+        title="Contacto | Easylav - Envíanos tus dudas y sugerencias"
+        url="easylav-react.netlify.app/contacto"
+        description="Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus dudas, recibir sugerencias y atender tus necesidades."
         author="dspwebstudio"
         publisher="dspwebstudio.com"
-        keywords="franquicias de lavandería, negocio de lavandería, Easylav, planchado, limpieza"
+        keywords="contacto Easylav, dudas Easylav, sugerencias Easylav, formulario de contacto, atención al cliente Easylav"
         ogImage={image}
-        ogImageAlt="Canasta verde con ropa sucia"
+        ogImageAlt="Formulario de contacto de Easylav"
         ogType="website"
       />
       <PageLayout>
