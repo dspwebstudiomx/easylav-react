@@ -39,7 +39,7 @@ const NuestrosServicios = () => {
       <Container className="mx-auto" id="nuestrosservicios-container">
         <Titulo />
         <ServicesGenerator />
-        <ButtonContainer position="justify-center items-center" distance="mt-20">
+        <ButtonContainer position="justify-center items-center w-full" distance="mt-20">
           <ButtonSecondary
             title="Sucursales en Morelia"
             href="/sucursales/morelia"

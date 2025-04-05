@@ -10,10 +10,9 @@ import { Service } from 'components';
 import { services } from 'data';
 
 const SERVICES_UI = {
-  ARTICLE: '',
+  ARTICLE: 'mx-auto',
   LIST: 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 items-center justify-center mx-auto',
 };
-
 // Estilos
 const SERVICES_PROPS = {
   ID: 'nuestros-servicios',
