@@ -13,12 +13,17 @@ const classes = `
 `;
 
 // Estructura
-const TitleH2 = ({ children, justify, className }) => {
-  return <h2 className={`${className} ${classes} ${justify}`}>{children}</h2>;
+const TitleH2 = ({ id, children, justify, className }) => {
+  return (
+    <h2 id={id} className={`${className} ${classes} ${justify}`}>
+      {children}
+    </h2>
+  );
 };
 
 // Propiedades
 TitleH2.propTypes = {
+  id: Proptypes.string,
   children: Proptypes.node.isRequired,
   className: Proptypes.string,
   justify: Proptypes.string,

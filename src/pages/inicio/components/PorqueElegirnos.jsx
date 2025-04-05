@@ -28,11 +28,6 @@ const PORQUE_ELEGIRNOS_PROPS = {
         TITLE: 'Por qué Elegirnos?',
       },
     },
-    IMAGE: {
-      CONTENEDOR: {
-        ID: 'contenedor-imagen',
-      },
-    },
   },
 };
 const PORQUE_ELEGIRNOS_UI = {
@@ -42,43 +37,31 @@ const PORQUE_ELEGIRNOS_UI = {
     HEIGHT: 'h-auto',
   },
   ARTICLE: 'mx-auto grid lg:grid-cols-2 gap-x-20 gap-y-16',
-  CONTAINER: 'mx-auto',
-  CONTAINER_CARACTERISTICAS: 'grid place-content-center gap-12',
+  CONTAINER: 'mx-auto grid place-content-center gap-12',
   CONTAINER_BULLET_DETAILS: 'grid lg:grid-cols-1 gap-8',
-  CONTAINER_IMAGE: 'items-center justify-center  mt-8',
+  CONTAINER_IMAGE: '',
 };
 
 // Estructura
 export default function PorqueElegirnos() {
   return (
-    <Section
-      id={PORQUE_ELEGIRNOS_PROPS.SECTION.ID}
-      backgroundColor={PORQUE_ELEGIRNOS_UI.SECTION.BACKGROUND_COLOR}
-      height={PORQUE_ELEGIRNOS_UI.HEIGHT}
-      className={PORQUE_ELEGIRNOS_UI.CLASSNAME}
-    >
+    <Section id="porque-elegirnos" backgroundColor="bg-light dark:bg-dark" height="h-auto" className="">
       <Container className={PORQUE_ELEGIRNOS_UI.CONTAINER} id={PORQUE_ELEGIRNOS_PROPS.CONTAINER.ID}>
+        <TitleContainer title="¿Por qué elegirnos?" />
         <article className={PORQUE_ELEGIRNOS_UI.ARTICLE}>
-          <div
-            id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.CARACTERISTICAS.ID}
-            className={PORQUE_ELEGIRNOS_UI.CONTAINER_CARACTERISTICAS}
-          >
-            <TitleContainer title="¿Por qué elegirnos?" />
-
-            <ul className={PORQUE_ELEGIRNOS_UI.CONTAINER_BULLET_DETAILS}>
-              {porqueElegirnosDescripciones.map((descripcion) => {
-                return (
-                  <DescriptionWithBulletPoint
-                    key={descripcion.id}
-                    id={descripcion.id}
-                    titulo={descripcion.titulo}
-                    texto={descripcion.texto}
-                  />
-                );
-              })}
-            </ul>
-          </div>
-          <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
+          <ul className={PORQUE_ELEGIRNOS_UI.CONTAINER_BULLET_DETAILS}>
+            {porqueElegirnosDescripciones.map((descripcion) => {
+              return (
+                <DescriptionWithBulletPoint
+                  key={descripcion.id}
+                  id={descripcion.id}
+                  titulo={descripcion.titulo}
+                  texto={descripcion.texto}
+                />
+              );
+            })}
+          </ul>
+          <div id="porque-elegirnos-contenedor-imagen" className="items-center justify-center  mt-8">
             <ImageResponsive
               src={img}
               imageAlt={'Mujer señalando hacia las caraterísticas de la empresa'}
