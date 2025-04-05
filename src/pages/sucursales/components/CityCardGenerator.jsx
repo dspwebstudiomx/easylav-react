@@ -10,30 +10,27 @@
 */
 
 // Importaciones
-import { SucursalCard } from 'components'
-import { localservices } from 'data'
-import PropTypes from 'prop-types'
-import { useMemo } from 'react'
+import { SucursalCard } from 'components';
+import { localservices } from 'data';
+import PropTypes from 'prop-types';
+import { useMemo } from 'react';
 
 const CityCardGenerator = ({ city }) => {
-
   const ciudad = useMemo(() => {
-    return localservices.filter(localservice => localservice.city === city)
-  }, [city])
+    return localservices.filter((localservice) => localservice.city === city);
+  }, [city]);
   ciudad.sort((a, b) => a.title.localeCompare(b.title));
 
   return (
-    <article className='grid sm:grid-cols-2 lg:grid-cols-4 gap-12 items-center justify-center z-0 mx-auto'>
-      {
-        ciudad.map((localservice) =>
-          <SucursalCard key={localservice.id} {...localservice} />
-        )
-      }
+    <article className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 items-center justify-center z-0 mx-auto overflow-hidden">
+      {ciudad.map((localservice) => (
+        <SucursalCard key={localservice.id} {...localservice} />
+      ))}
     </article>
-  )
-}
+  );
+};
 CityCardGenerator.propTypes = {
-  city: PropTypes.string
-}
+  city: PropTypes.string,
+};
 
-export default CityCardGenerator
+export default CityCardGenerator;

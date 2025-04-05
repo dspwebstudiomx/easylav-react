@@ -361,7 +361,7 @@ export default function ContactFacturacion() {
             <Spacing distance="h-12" />
 
             {/* Datos de Compra */}
-            <div id="datos de compra" className="flex flex-col mx-auto w-[210px] sm:w-full p-8">
+            <div id="datos de compra" className="flex flex-col mx-auto w-full p-8">
               <h2 className="text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12">
                 Datos de Compra
               </h2>
@@ -374,7 +374,7 @@ export default function ContactFacturacion() {
                       Fecha del Servicio<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none text-dark w-[210px] md:w-auto"
+                      className="rounded-md bg-light px-4 border-2  border-secondary dark:border-primary p-2 outline-none text-dark w-full"
                       id="user_dateservice"
                       name="user_dateservice"
                       type="date"
@@ -393,7 +393,7 @@ export default function ContactFacturacion() {
                       Número de Ticket<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-full"
                       id="user_ticketnumber"
                       name="user_ticketnumber"
                       type="number"
@@ -419,7 +419,7 @@ export default function ContactFacturacion() {
                     <Field
                       as="select"
                       name="user_sucursal"
-                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full"
                     >
                       <option defaultValue={'Escoge tu sucursal'} selected>
                         Escoge tu sucursal
@@ -442,7 +442,7 @@ export default function ContactFacturacion() {
                     </label>
                     <select
                       name="user_CFDI"
-                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full"
                     >
                       <option>G01 - Adquisición de mercancías</option>
                       <option>G02 - Devoluciones, descuentos o bonificaciones</option>
