@@ -48,7 +48,7 @@ const Franquicias = () => {
 
       {/* Layout principal */}
       <HomeLayout>
-        /{/* Carga prioritaria del componente principal */}
+        {/* Carga prioritaria del componente principal */}
         <Suspense fallback={<Loading />}>
           <QuieresUnaFranquicia />
         </Suspense>
