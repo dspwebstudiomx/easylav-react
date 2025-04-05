@@ -33,7 +33,7 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: 'overflow-hidden',
     ROUNDED: 'rounded-xl',
     SHADOW: 'shadow-xl',
-    WIDTH: 'w-[80%] md:w-[280px] lg:w-[220px]',
+    WIDTH: 'w-full',
   },
   ICON: {
     SIZE_1: 30,
@@ -46,7 +46,7 @@ const SUCURSAL_CARD_UI = {
     LINE_HEIGHT: '',
   },
   CONTENT: {
-    SECTION: 'flex flex-col justify-start gap-3 p-4 px-10',
+    SECTION: 'flex flex-col justify-start gap-3 p-4',
     TITLE: 'flex items-center justify-center mx-auto',
     DESCRIPTION: {
       CONTAINER: 'flex flex-col gap-4 my-4 justify-center',
@@ -187,19 +187,20 @@ const SucursalCard = (props) => {
         image_1024={image}
         image_1200={image}
         image_1920={image}
+        width="w-full"
         height="h-[160px]"
         opacity="opacity-30"
         backgroundColor="bg-dark"
-        className="p-4 rounded-t-xl"
+        className="rounded-t-xl"
       >
         <div
           id={`open-closed-zoom-${title}`}
-          className="flex justify-end items-start h-full absolute top-0 right-0 p-4 pr-8 w-full"
+          className="flex justify-end items-start h-full absolute top-0 right-0 pr-8 pt-4"
         >
           {/* Badge Horario Abierto/Cerrado */}
           {renderOpenClosedBadge(isOpen)}
         </div>
-        <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4 pr-8 w-full">
+        <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4 pr-8">
           <button
             onClick={handleShowModal}
             id="zoom"
