@@ -92,7 +92,8 @@ const QuienesSomos = () => {
             personalizado en nuestras sucursales con modernas instalaciones e imagen fresca, así como servicios que se
             adaptan a tus necesidades, sea lavado y secado por encargo o autoservicio y el cuidado de tu ropa de
             tintorería. Al entender tu dinámica cotidiana, uno de nuestros objetivos fundamentales es{' '}
-            <span className="text-secondary_dark font-bold">ahorrarte tiempo</span> y contribuir a tu calidad de vida.
+            <span className="text-secondary_dark dark:text-secondary_light font-bold">ahorrarte tiempo</span> y
+            contribuir a tu calidad de vida.
           </Paragraph>
           <Paragraph>
             {' '}
