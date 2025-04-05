@@ -608,7 +608,7 @@ export default function ContactFacturacion() {
               <button
                 type="submit"
                 value="Submit"
-                className="flex gap-2 justify-center items-center text-light text-xl bg-secondary_dark py-4 px-6 rounded border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary font-semibold"
+                className="flex gap-2 justify-center items-center text-light text-xl bg-secondary_dark py-4 px-6 rounded border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary font-semibold uppercase w-[260px]"
               >
                 <span>
                   <FaRegEnvelope />
@@ -616,7 +616,7 @@ export default function ContactFacturacion() {
                 <span>Enviar mensaje</span>
               </button>
               <ButtonPrimary
-                width="w-[230px]"
+                width=""
                 title="Borrar"
                 onClick={() => [resetForm(), scrollToTop()]}
                 type="button"
