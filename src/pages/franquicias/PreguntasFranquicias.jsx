@@ -11,11 +11,11 @@ const PreguntasFranquicias = () => {
   }, []);
 
   return (
-    <div className="lg:mt-12">
+    <article className="lg:mt-12 mx-auto w-full">
       <ul className="grid sm:grid-cols-2 gap-8">
         {franquiciaDescripciones.map((description) => (
           <li key={description.id} id={`descripcion-${description.id}`} className="text-dark">
-            <MemoizedAccordion
+            <MemorizedAccordion
               height="h-[120px]"
               title={description.title}
               description={description.description}
@@ -35,10 +35,10 @@ const PreguntasFranquicias = () => {
           aria-label="Ver la lista de sucursales"
         />
       </ButtonContainer>
-    </div>
+    </article>
   );
 };
 
-const MemoizedAccordion = memo(Accordion);
+const MemorizedAccordion = memo(Accordion);
 
 export default PreguntasFranquicias;
