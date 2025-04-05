@@ -1,7 +1,7 @@
-import { navLinksPages, navLinksSections } from "data/navlinks";
-import { scrollWithOffset } from "functions";
-import { NavLink } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import { navLinksPages, navLinksSections } from 'data/navlinks';
+import { scrollWithOffset } from 'functions';
+import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 const NavLinksTablet = () => {
   return (
@@ -9,29 +9,33 @@ const NavLinksTablet = () => {
       id="navlinks-tablet"
       className="sm:flex xl:hidden top-[100px] hidden w-full justify-evenly gap-4 bg-primary dark:bg-secondary_dark p-5 px-8 lg:relative lg:top-[0px] "
     >
-      {navLinksSections.map((navlink) => {
+      {navLinksSections.map((navlink, index) => {
         return (
-          <NavHashLink
-            scroll={scrollWithOffset}
-            key={navlink.id}
-            id={`link-${navlink.linkId}`}
-            className="navlink md:text-sm lg:text-xl font-bold uppercase text-light hover:text-secondary_light"
-            to={navlink.href}
-          >
-            {navlink.name}
-          </NavHashLink>
+          <li key={navlink.id} className="">
+            <NavHashLink
+              scroll={scrollWithOffset}
+              key={index.id}
+              id={`link-${navlink.linkId}`}
+              className="navlink md:text-sm lg:text-xl font-bold uppercase text-light hover:text-secondary_light"
+              to={navlink.href}
+            >
+              {navlink.name}
+            </NavHashLink>
+          </li>
         );
       })}
       {navLinksPages.map((navlink) => {
         return (
-          <NavLink
-            key={navlink.id}
-            id={`link-${navlink.linkId}`}
-            className="navlink md:text-sm lg:text-xl  font-bold uppercase text-light hover:text-secondary_light"
-            to={navlink.href}
-          >
-            {navlink.name}
-          </NavLink>
+          <li key={navlink.id} className="">
+            <NavLink
+              key={navlink.id}
+              id={`link-${navlink.linkId}`}
+              className="navlink md:text-sm lg:text-xl  font-bold uppercase text-light hover:text-secondary_light"
+              to={navlink.href}
+            >
+              {navlink.name}
+            </NavLink>
+          </li>
         );
       })}
     </ul>
