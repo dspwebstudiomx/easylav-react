@@ -14,7 +14,7 @@ const TitleContainer = ({ title, id }) => {
   return (
     <header>
       <BorderLeft>
-        <TitleH2 id={id} justify="justify-start" className="w-full">
+        <TitleH2 id={id} justify="justify-start" className="w-2/3 sm:w-full">
           {title}
         </TitleH2>
       </BorderLeft>
