@@ -1,4 +1,14 @@
-import { BorderLeft, Container, Paragraph, ParagraphContainer, Section, TitleContainer, TitleH3 } from 'components';
+import {
+  BorderLeft,
+  Container,
+  FourColumnnsContainer,
+  Paragraph,
+  ParagraphContainer,
+  Section,
+  TitleContainer,
+  TitleH3,
+  TwoColumnsContainer,
+} from 'components';
 import PropTypes from 'prop-types';
 import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
 import {
@@ -36,15 +46,7 @@ const serviciosOfrecidos = [
 ];
 
 // Componentes Internos
-const TwoColumnsContainer = ({ children }) => {
-  return <div className="grid lg:grid-cols-2 gap-8">{children}</div>;
-};
-const ThreeColumnsContainer = ({ children }) => {
-  return <div className="grid sm:grid-cols-3 sm:gap-0 items-center justify-center">{children}</div>;
-};
-const FourColumnsContainer = ({ children }) => {
-  return <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-8">{children}</div>;
-};
+
 const Card = ({ children }) => {
   return (
     <div className="flex flex-col justify-start p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8">{children}</div>
@@ -66,11 +68,11 @@ const ValorTarjeta = ({ valor }) => {
 const NuestrosValoresGeneradorTarjetas = () => {
   return (
     <article id="tarjetas-valores" className="mt-6">
-      <FourColumnsContainer>
+      <FourColumnnsContainer>
         {valores.map((valor, key) => {
           return <ValorTarjeta key={key} valor={valor} />;
         })}
-      </FourColumnsContainer>
+      </FourColumnnsContainer>
     </article>
   );
 };
@@ -177,16 +179,6 @@ const QuienesSomos = () => {
   );
 };
 
-// PropTypes
-TwoColumnsContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-ThreeColumnsContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-FourColumnsContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 Card.propTypes = {
   children: PropTypes.node.isRequired,
 };
