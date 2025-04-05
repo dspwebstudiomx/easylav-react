@@ -7,11 +7,13 @@ const ProgramasDeLealtad = () => {
         {/* <TitleContainer title="Programas de Lealtad" /> */}
         <ParagraphContainer>
           <Paragraph>
-            <div className="text-2xl">
-              <span className="text-secondary_dark text-3xl font-bold">¡Tu lealtad tiene recompensas!</span> Cada vez
-              que uses nuestros servicios, acumulas puntos que puedes canjear por productos o usos de máquinas. Además,
-              como cliente fiel, participas en nuestra tómbola especial, donde puedes ganar sorpresas y hasta servicios
-              gratis. ¡Únete y deja que te sorprendamos mientras lavas con nosotros!
+            <div className="text-xl flex flex-col gap-8 items-start justify-start">
+              <span className="text-secondary_dark text-2xl font-bold block">¡Tu lealtad tiene recompensas!</span>
+              <span>
+                Cada vez que uses nuestros servicios, acumulas puntos que puedes canjear por productos o usos de
+                máquinas. Además, como cliente fiel, participas en nuestra tómbola especial, donde puedes ganar
+                sorpresas y hasta servicios gratis. ¡Únete y deja que te sorprendamos mientras lavas con nosotros!
+              </span>
             </div>
           </Paragraph>
         </ParagraphContainer>

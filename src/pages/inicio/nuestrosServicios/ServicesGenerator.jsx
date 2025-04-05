@@ -10,29 +10,26 @@ import { Service } from 'components';
 import { services } from 'data';
 
 const SERVICES_UI = {
-  ARTICLE: "",
-  LIST: "grid md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center mx-auto",
-}
+  ARTICLE: '',
+  LIST: 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 items-center justify-center mx-auto',
+};
 
 // Estilos
 const SERVICES_PROPS = {
-  ID: "nuestros-servicios",
+  ID: 'nuestros-servicios',
 };
-8
+8;
 // Estructura
 const ServicesGenerator = () => {
   return (
     <article id={SERVICES_PROPS.ID} className={SERVICES_UI.ARTICLE}>
       <ul className={SERVICES_UI.LIST}>
         {services.map((service, key) => {
-          return (
-            <Service key={key} service={service} />
-          )
-        })
-        }
+          return <Service key={key} service={service} />;
+        })}
       </ul>
     </article>
-  )
-}
+  );
+};
 
-export default ServicesGenerator
+export default ServicesGenerator;

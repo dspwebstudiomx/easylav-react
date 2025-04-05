@@ -72,13 +72,13 @@ const serviciosOfrecidos = [
 
 // Componentes Internos
 const TwoColumnsContainer = ({ children }) => {
-  return <div className="grid sm:grid-cols-2 gap-8">{children}</div>;
+  return <div className="grid lg:grid-cols-2 gap-8">{children}</div>;
 };
 const ThreeColumnsContainer = ({ children }) => {
   return <div className="grid sm:grid-cols-3 sm:gap-0 items-center justify-center">{children}</div>;
 };
 const FourColumnsContainer = ({ children }) => {
-  return <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{children}</div>;
+  return <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">{children}</div>;
 };
 const Card = ({ children }) => {
   return (
@@ -101,7 +101,7 @@ const ValorTarjeta = ({ valor }) => {
 };
 const NuestrosValoresGeneradorTarjetas = () => {
   return (
-    <article id="tarjetas-valores" className="mt-12">
+    <article id="tarjetas-valores" className="mt-6">
       <FourColumnsContainer>
         {valores.map((valor, key) => {
           return <ValorTarjeta key={key} valor={valor} />;
