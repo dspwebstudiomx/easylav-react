@@ -10,7 +10,7 @@ const ContactoPagina = () => {
     <>
       <SEOFriendly
         title="Contacto | Easylav - Envíanos tus dudas y sugerencias"
-        url="easylav-react.netlify.app/contacto"
+        url="easylav.mx/contacto"
         description="Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus dudas, recibir sugerencias y atender tus necesidades."
         author="dspwebstudio"
         publisher="dspwebstudio.com"

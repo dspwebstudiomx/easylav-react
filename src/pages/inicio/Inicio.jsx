@@ -30,24 +30,39 @@ const Inicio = () => (
       ogImageAlt="canasta verde con ropa sucia"
       ogType="website"
     />
-    <Suspense fallback={<Loading />}>
-      <HomeLayout>
+    <HomeLayout>
+      <Suspense fallback={<Loading />}>
         <HeroInicioVideo />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <QuienesSomos />
-        {/* <SobreNosotros /> */}
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <NuestrosServicios />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <ProgramasDeLealtad />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <Equipamiento />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <NuestrasSucursales />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <PorqueElegirnos />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <CarouselTestimonios />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
         <Section backgroundColor="bg-light dark:bg-dark" className="">
           <Container className="">
             <Contacto />
           </Container>
         </Section>
-      </HomeLayout>
-    </Suspense>
+      </Suspense>
+    </HomeLayout>
   </>
 );
 

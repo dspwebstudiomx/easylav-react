@@ -33,9 +33,10 @@ const QuieresUnaFranquicia = lazy(() => import('pages/inicio/franquicias/Quieres
 const Franquicias = () => {
   return (
     <>
+      {/* Metadatos para SEO */}
       <SEOFriendly
         title="Franquicias de Lavandería | Easylav - Tu Oportunidad de Negocio Ideal"
-        url="easylav-react.netlify.app/franquicias"
+        url="https://easylav.mx/franquicias"
         description="En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo puedes ser parte de nuestro éxito."
         author="dspwebstudio"
         publisher="dspwebstudio.com"
@@ -44,14 +45,24 @@ const Franquicias = () => {
         ogImageAlt="Canasta verde con ropa sucia"
         ogType="website"
       />
-      <Suspense fallback={<Loading />}>
-        <HomeLayout>
+
+      {/* Layout principal */}
+      <HomeLayout>
+        /{/* Carga prioritaria del componente principal */}
+        <Suspense fallback={<Loading />}>
           <QuieresUnaFranquicia />
+        </Suspense>
+        {/* Carga diferida de otros componentes */}
+        <Suspense fallback={<Loading />}>
           <SobreNuestrasFranquicias />
+        </Suspense>
+        <Suspense fallback={<Loading />}>
           <PaquetesFranquicias />
+        </Suspense>
+        <Suspense fallback={<Loading />}>
           <ImagenesFranquicias />
-        </HomeLayout>
-      </Suspense>
+        </Suspense>
+      </HomeLayout>
     </>
   );
 };
