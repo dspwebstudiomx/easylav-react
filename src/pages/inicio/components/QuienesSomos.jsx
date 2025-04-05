@@ -15,53 +15,18 @@ import { FaCheck } from 'react-icons/fa6';
 
 //Biblioteca de datos
 const valores = [
-  {
-    id: 1,
-    icon: <FaRegListAlt size={36} className="text-secondary" />,
-    title: 'Orden',
-    alt: 'Orden',
-  },
-  {
-    id: 2,
-    icon: <FaSoap size={36} className="text-secondary" />,
-    title: 'Limpieza',
-    alt: 'Limpieza',
-  },
-  {
-    id: 3,
-    icon: <FaHandshake size={36} className="text-secondary" />,
-    title: 'Confianza',
-    alt: 'Confianza',
-  },
-  {
-    id: 4,
-    icon: <FaBalanceScale size={36} className="text-secondary" />,
-    title: 'Honestidad',
-    alt: 'Honestidad',
-  },
-  {
-    id: 5,
-    icon: <FaShieldAlt size={36} className="text-secondary" />,
-    title: 'Seguridad',
-    alt: 'Seguridad',
-  },
-  {
-    id: 6,
-    icon: <FaCouch size={36} className="text-secondary" />,
-    title: 'Comodidad',
-    alt: 'Comodidad',
-  },
-  {
-    id: 7,
-    icon: <FaUserCheck size={36} className="text-secondary" />,
-    title: 'Honradez',
-    alt: 'Honradez',
-  },
+  { id: 1, icon: <FaRegListAlt size={36} className="text-secondary" />, title: 'Orden', alt: 'Orden' },
+  { id: 2, icon: <FaSoap size={36} className="text-secondary" />, title: 'Limpieza', alt: 'Limpieza' },
+  { id: 3, icon: <FaHandshake size={36} className="text-secondary" />, title: 'Confianza', alt: 'Confianza' },
+  { id: 4, icon: <FaBalanceScale size={36} className="text-secondary" />, title: 'Honestidad', alt: 'Honestidad' },
+  { id: 5, icon: <FaShieldAlt size={36} className="text-secondary" />, title: 'Seguridad', alt: 'Seguridad' },
+  { id: 6, icon: <FaCouch size={36} className="text-secondary" />, title: 'Comodidad', alt: 'Comodidad' },
+  { id: 7, icon: <FaUserCheck size={36} className="text-secondary" />, title: 'Honradez', alt: 'Honradez' },
   {
     id: 8,
     icon: <FaHandsHelping size={36} className="text-secondary" />,
     title: 'Gratitud y Servicio',
-    alt: 'Gratitud y Servicio',
+    alt: 'Gratitud y Servicio ',
   },
 ];
 const serviciosOfrecidos = [
@@ -116,7 +81,7 @@ const QuienesSomos = () => {
   return (
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
-        <TitleContainer title="Quienes somos" />
+        <TitleContainer id="quienes-somos-titulo" title="Quienes somos" />
         <ParagraphContainer>
           <Paragraph>
             Somos una empresa de lavanderías y Tintorería, comprometida en darte las mejores soluciones para la limpieza
