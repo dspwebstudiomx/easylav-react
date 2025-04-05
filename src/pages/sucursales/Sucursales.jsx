@@ -31,7 +31,7 @@ const Sucursales = () => {
         ogType="website"
       />
       <PageLayout id={'Sucursales'}>
-        <div className="flex flex-wrap gap-8 place-items-center justify-center mt-20">
+        <div className="flex gap-8 place-items-center justify-center mt-20 mx-auto w-full">
           <BackgroundCard
             image={morelia}
             title="Morelia"
