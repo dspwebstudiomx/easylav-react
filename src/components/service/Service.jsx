@@ -34,7 +34,7 @@ const Service = ({ service }) => {
           <img className={SERVICE_UI.IMAGE} src={service.image} title={service.title} alt={service.alt} />
         </div>
         <div className={`${SERVICE_UI.ELEMENT.DIV_TITLEH3} my-2`}>
-          <TitleH3 justify="justify-center" color="text-secondary_dark" textTransform="uppercase">
+          <TitleH3 justify="justify-center" color="text-dark" textTransform="uppercase">
             {service.title}
           </TitleH3>
         </div>
