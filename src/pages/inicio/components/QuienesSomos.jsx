@@ -1,56 +1,65 @@
 import { BorderLeft, Container, Paragraph, ParagraphContainer, Section, TitleContainer, TitleH3 } from 'components';
-import { Placeholder } from 'assets';
 import PropTypes from 'prop-types';
-import { FaStar } from 'react-icons/fa6';
 import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
+import {
+  FaRegListAlt,
+  FaSoap,
+  FaHandshake,
+  FaBalanceScale,
+  FaShieldAlt,
+  FaCouch,
+  FaUserCheck,
+  FaHandsHelping,
+} from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa6';
 
 //Biblioteca de datos
 const valores = [
   {
     id: 1,
-    image: Placeholder,
+    icon: <FaRegListAlt size={36} className="text-secondary" />,
     title: 'Orden',
     alt: 'Orden',
   },
   {
     id: 2,
-    image: Placeholder,
+    icon: <FaSoap size={36} className="text-secondary" />,
     title: 'Limpieza',
     alt: 'Limpieza',
   },
   {
     id: 3,
-    image: Placeholder,
+    icon: <FaHandshake size={36} className="text-secondary" />,
     title: 'Confianza',
     alt: 'Confianza',
   },
   {
     id: 4,
-    image: Placeholder,
+    icon: <FaBalanceScale size={36} className="text-secondary" />,
     title: 'Honestidad',
     alt: 'Honestidad',
   },
   {
     id: 5,
-    image: Placeholder,
+    icon: <FaShieldAlt size={36} className="text-secondary" />,
     title: 'Seguridad',
     alt: 'Seguridad',
   },
   {
     id: 6,
-    image: Placeholder,
+    icon: <FaCouch size={36} className="text-secondary" />,
     title: 'Comodidad',
     alt: 'Comodidad',
   },
   {
     id: 7,
-    image: Placeholder,
+    icon: <FaUserCheck size={36} className="text-secondary" />,
     title: 'Honradez',
     alt: 'Honradez',
   },
   {
     id: 8,
-    image: Placeholder,
+    icon: <FaHandsHelping size={36} className="text-secondary" />,
     title: 'Gratitud y Servicio',
     alt: 'Gratitud y Servicio',
   },
@@ -69,18 +78,21 @@ const ThreeColumnsContainer = ({ children }) => {
   return <div className="grid sm:grid-cols-3 sm:gap-0 items-center justify-center">{children}</div>;
 };
 const FourColumnsContainer = ({ children }) => {
-  return <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-20">{children}</div>;
+  return <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{children}</div>;
 };
 const Card = ({ children }) => {
   return (
-    <div className="flex flex-col justify-start p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8 ">{children}</div>
+    <div className="flex flex-col justify-start p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8">{children}</div>
   );
 };
 
 const ValorTarjeta = ({ valor }) => {
   return (
-    <article id="nuestros-valores" className="flex flex-col gap-4 items-center justify-start text-center">
-      <img width={64} src={valor.image} title={valor.title} alt={valor.alt} />
+    <article
+      id="nuestros-valores"
+      className="flex flex-col items-center justify-center text-center p-6 py-12 shadow-xl rounded-2xl bg-light text-dark gap-4"
+    >
+      {valor.icon}
       <TitleH3 color="text-dark" textTransform="uppercase">
         {valor.title}
       </TitleH3>
@@ -167,7 +179,7 @@ const QuienesSomos = () => {
                   return (
                     <article key={key} className="flex gap-4 items-center justify-start">
                       <div className="w-8 h-8">
-                        <FaStar className="text-secondary" size={24} />
+                        <FaCheck className="text-secondary" size={28} />
                       </div>
                       <h3 className="text-xl">{servicio.title}</h3>
                     </article>
@@ -202,6 +214,7 @@ ValorTarjeta.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
+    icon: PropTypes.element.isRequired,
   }).isRequired,
 };
 NuestrosValoresGeneradorTarjetas.propTypes = {
@@ -211,6 +224,7 @@ NuestrosValoresGeneradorTarjetas.propTypes = {
     title: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }).isRequired,
+  icon: PropTypes.element.isRequired,
 };
 
 export default QuienesSomos;
