@@ -7,18 +7,16 @@
 */
 
 // Importaciones
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // Estilos
 const CONTAINER_UI = {
-  DISPLAY:
-    "flex flex-col md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg justify-center mx-auto ",
+  DISPLAY: 'flex flex-col md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg justify-center items-start mx-auto ',
 };
-
 
 // Estructura4
 export default function Container({ id, children, className }) {
-  const classes = `${className} ${CONTAINER_UI.DISPLAY} `
+  const classes = `${className} ${CONTAINER_UI.DISPLAY} `;
   return (
     <article id={`container-${id}`} className={classes}>
       {children}
@@ -31,4 +29,3 @@ Container.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 };
-

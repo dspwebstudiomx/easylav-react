@@ -6,6 +6,7 @@ import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components
 import { lazy, Suspense } from 'react';
 import ProgramasDeLealtad from './components/ProgramasDeLealtad';
 import Equipamiento from './components/Equipamiento';
+import Recomendaciones from './components/Recomendaciones';
 
 // Constantes
 const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
@@ -45,6 +46,9 @@ const Inicio = () => (
       </Suspense>
       <Suspense fallback={<Loading />}>
         <Equipamiento />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Recomendaciones />
       </Suspense>
       <Suspense fallback={<Loading />}>
         <NuestrasSucursales />
