@@ -1,0 +1,16 @@
+# robots.txt para easylav.mx
+
+# Bloquea el acceso a carpetas sensibles
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /api/
+
+# Permite el acceso a todo lo demás
+Allow: /
+
+# Especifica la ubicación del sitemap
+Sitemap: https://easylav.mx/sitemap.xml
