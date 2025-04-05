@@ -65,7 +65,7 @@ export default function PorqueElegirnos() {
           >
             <TitleContainer title="¿Por qué elegirnos?" />
 
-            <div className={PORQUE_ELEGIRNOS_UI.CONTAINER_BULLET_DETAILS}>
+            <ul className={PORQUE_ELEGIRNOS_UI.CONTAINER_BULLET_DETAILS}>
               {porqueElegirnosDescripciones.map((descripcion) => {
                 return (
                   <DescriptionWithBulletPoint
@@ -76,7 +76,7 @@ export default function PorqueElegirnos() {
                   />
                 );
               })}
-            </div>
+            </ul>
           </div>
           <div id={PORQUE_ELEGIRNOS_PROPS.ARTICLE.IMAGE.CONTENEDOR.ID} className={PORQUE_ELEGIRNOS_UI.CONTAINER_IMAGE}>
             <ImageResponsive
