@@ -59,8 +59,8 @@ export default function Footer() {
             {/* Footer Logo */}
           </Container>
         </div>
-        <div className="bg-primary text-light">
-          <Container className="h-16">
+        <div className="bg-primary text-light px-12 lg:px-0">
+          <Container className="bg-primary text-light h-16">
             <div className="flex justify-center sm:justify-start items-center gap-2">
               <FaRegCopyright />
               <h3>Derechos Reservados 2024</h3>
