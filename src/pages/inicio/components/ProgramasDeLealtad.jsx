@@ -8,7 +8,9 @@ const ProgramasDeLealtad = () => {
         <ParagraphContainer>
           <Paragraph>
             <div className="text-xl flex flex-col gap-8 items-start justify-start">
-              <span className="text-secondary_dark text-2xl font-bold block">¡Tu lealtad tiene recompensas!</span>
+              <span className="text-secondary_dark dark:text-secondary_light text-2xl font-bold block">
+                ¡Tu lealtad tiene recompensas!
+              </span>
               <span>
                 Cada vez que uses nuestros servicios, acumulas puntos que puedes canjear por productos o usos de
                 máquinas. Además, como cliente fiel, participas en nuestra tómbola especial, donde puedes ganar

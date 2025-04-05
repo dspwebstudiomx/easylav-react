@@ -17,7 +17,9 @@ const Equipamiento = () => {
             manteniéndola en perfectas condiciones por más tiempo.
           </Paragraph>
           <Paragraph>
-            <span className="text-secondary_dark font-bold mr-2">Tecnología que cuida tu ropa y el planeta.</span>
+            <span className="text-secondary_dark dark:text-secondary_light font-bold mr-2">
+              Tecnología que cuida tu ropa y el planeta.
+            </span>
             ¡Lava con confianza y tranquilidad!
           </Paragraph>
         </ParagraphContainer>
