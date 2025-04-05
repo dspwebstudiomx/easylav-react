@@ -111,8 +111,7 @@ const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => 
 // Function to render the open/closed badge
 const renderOpenClosedBadge = (isOpen) => (
   <div
-    className={`rounded-lg border-2 text-xs ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2`}
-  >
+    className={`rounded-lg border-2 text-xs ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2`}>
     <p>{isOpen ? 'Abierto' : 'Cerrado'}</p>
   </div>
 );
@@ -125,8 +124,7 @@ const renderMapLinks = (position, title, gmap) => (
       target="_blank"
       rel="noopener noreferrer"
       title={`Ir a ${title} en Waze`}
-      className="flex w-full flex-col items-center justify-center gap-2 bg-secondary text-sm"
-    >
+      className="flex w-full flex-col items-center justify-center gap-2 bg-secondary text-sm">
       <Badge flexDirection="flex-col">
         <FaWaze size={24} />
         <span>Waze</span>
@@ -137,8 +135,7 @@ const renderMapLinks = (position, title, gmap) => (
       target="_blank"
       rel="noopener noreferrer"
       title={`Ir a ${title} en Google Maps`}
-      className="flex w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-sm"
-    >
+      className="flex w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-sm">
       <Badge flexDirection="flex-col">
         <FaMapMarkedAlt size={24} />
         <span>Google Maps</span>
@@ -191,12 +188,10 @@ const SucursalCard = (props) => {
         height="h-[160px]"
         opacity="opacity-30"
         backgroundColor="bg-dark"
-        className="rounded-t-xl"
-      >
+        className="rounded-t-xl">
         <div
           id={`open-closed-zoom-${title}`}
-          className="flex justify-end items-start h-full absolute top-0 right-0 p-4"
-        >
+          className="flex justify-end items-start h-full absolute top-0 right-0 p-4">
           {/* Badge Horario Abierto/Cerrado */}
           {renderOpenClosedBadge(isOpen)}
         </div>
@@ -205,8 +200,7 @@ const SucursalCard = (props) => {
             onClick={handleShowModal}
             id="zoom"
             className="text-light rounded-full border-2 border-light p-3 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer"
-            aria-label={`Abrir detalles de la sucursal ${props.title}`}
-          >
+            aria-label={`Abrir detalles de la sucursal ${props.title}`}>
             <FaMagnifyingGlass />
           </button>
         </div>
@@ -230,8 +224,7 @@ const SucursalCard = (props) => {
               href={gmap}
               target="_blank"
               rel="noopener noreferrer"
-              title={`Sucursal ${title}`}
-            >
+              title={`Sucursal ${title}`}>
               <FaMapMarkerAlt size={styles.content.icon.size_1} className={styles.content.icon.color} />
               <span className={styles.content.text}>{place}</span>
             </a>
@@ -285,7 +278,10 @@ const SucursalCard = (props) => {
               <img
                 src={image}
                 alt={title}
-                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[220px]  object-cover shadow-2xl"
+                width={340}
+                height={280}
+                loading="lazy"
+                className="xl:w-[480px] xl:h-[320px]  object-cover shadow-2xl"
               />
               <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
