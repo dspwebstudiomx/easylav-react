@@ -37,7 +37,7 @@ export const GENERAL_UI = {
     FONT_FAMILY: 'font-din-bold',
     FONT_SIZE: 'text-2xl sm:text-2xl',
     FONT_WEIGHT: 'font-bold',
-    COLOR: 'text-dark  dark:text-primary',
+    COLOR: 'text-dark',
     BACKGROUND_COLOR: '',
     CARD: 'text-base font-semibold',
     TEXT_TRANSFORM: 'uppercase',
