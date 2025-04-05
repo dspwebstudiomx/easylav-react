@@ -59,7 +59,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         height={'h-full'}
         backgroundColor={'bg-light'}
       >
-        <Container className={''}>
+        <Container className={'p-6 mx-auto text-center'}>
           {city ? (
             <>
               <SucursalCardPerCity city={city} />

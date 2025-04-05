@@ -10,7 +10,7 @@
 */
 
 // Importaciones
-import { leon_card as leon, catedral_morelia_card as morelia, CentroGuadalajara as guadalajara } from 'assets';
+import { leon_card as leon, catedral_morelia_card as morelia } from 'assets';
 import { BackgroundCard, PageLayout, SEOFriendly } from 'components';
 import { scrollToTop } from 'functions';
 
@@ -38,7 +38,7 @@ const Sucursales = () => {
             href="/sucursales/morelia"
             className="flex justify-center items-center"
             rounded="rounded-lg"
-            width="w-[260px]"
+            width="w-[300px]"
             height="h-[210px]"
           />
           <BackgroundCard
@@ -46,15 +46,7 @@ const Sucursales = () => {
             title="León"
             href="/sucursales/leon"
             rounded="rounded-lg"
-            width="w-[260px]"
-            height="h-[210px]"
-          />
-          <BackgroundCard
-            image={guadalajara}
-            title="Guadalajara"
-            href="/sucursales/guadalajara"
-            rounded="rounded-lg"
-            width="w-[260px]"
+            width="w-[300px]"
             height="h-[210px]"
           />
         </div>
