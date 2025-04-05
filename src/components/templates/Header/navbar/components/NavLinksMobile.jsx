@@ -1,17 +1,14 @@
-import { SocialLinks } from "components";
-import { navLinksPages, navLinksSections } from "data/navlinks";
-import { scrollWithOffset } from "functions";
-import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import { SocialLinks } from 'components';
+import { navLinksPages, navLinksSections } from 'data/navlinks';
+import { scrollWithOffset } from 'functions';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 const NavLinksMobile = ({ onLinkClick }) => {
   return (
-    <div className="animate__animated animate__fadeInDown absolute left-0 top-[103px] z-20 z-30 flex h-[95vh] w-full flex-col items-center justify-start overflow-hidden border-t-4 border-t-primary bg-primary px-8 opacity-[99%]">
-      <ul
-        id="navlinks-mobile"
-        className="grid w-full grid-cols-2 gap-3 px-2 py-8 place-content-center"
-      >
+    <div className="animate__animated animate__fadeInDown absolute left-0 top-[103px] z-0 flex h-[95vh] w-full flex-col items-center justify-start overflow-hidden border-t-4 border-t-primary bg-primary px-8 opacity-[99%]">
+      <ul id="navlinks-mobile" className="grid w-full grid-cols-2 gap-3 px-2 py-8 place-content-center">
         {navLinksSections.map((navlink) => {
           return (
             <li
@@ -27,9 +24,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                 title={`link-${navlink.linkId}`}
               >
                 <div className="flex items-center justify-center">
-                  {navlink.icon && (
-                    <navlink.icon size={32} className="text-secondary_dark" />
-                  )}
+                  {navlink.icon && <navlink.icon size={32} className="text-secondary_dark" />}
                 </div>
                 <span className="text-base font-bold uppercase tracking-wide text-secondary_dark text-center">
                   {navlink.name}
@@ -49,15 +44,11 @@ const NavLinksMobile = ({ onLinkClick }) => {
                 id={`link-${navlink.linkId}`}
                 to={navlink.href}
                 className="flex h-full w-full flex-col items-center justify-center gap-4 py-2"
-                scroll={
-                  (el) => scrollWithOffset(el)
-                }
+                scroll={(el) => scrollWithOffset(el)}
                 title={`link-${navlink.linkId}`}
               >
                 <div className="flex items-center justify-center">
-                  {navlink.icon && (
-                    <navlink.icon size={32} className="text-secondary_dark" />
-                  )}
+                  {navlink.icon && <navlink.icon size={32} className="text-secondary_dark" />}
                 </div>
                 <span className="text-base font-bold uppercase tracking-wide text-secondary_dark text-center">
                   {navlink.name}
@@ -69,12 +60,12 @@ const NavLinksMobile = ({ onLinkClick }) => {
       </ul>
       <div className="mt-2">
         <SocialLinks
-          position={"justify-center md:0justify-end"}
-          color={"text-secondary_dark"}
+          position={'justify-center md:0justify-end'}
+          color={'text-secondary_dark'}
           size={41}
-          circleBorder={"border-2 rounded-[100px] border-primary_dark shadow-xl bg-light p-3"}
-          gap={"gap-3"}
-          hover={"hover:text-primary hover:border-primary"}
+          circleBorder={'border-2 rounded-[100px] border-primary_dark shadow-xl bg-light p-3'}
+          gap={'gap-3'}
+          hover={'hover:text-primary hover:border-primary'}
           onClick={onLinkClick}
         />
       </div>

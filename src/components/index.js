@@ -69,4 +69,4 @@ export { default as TituloYDescripcion } from 'components/title/TituloYDescripci
 export { default as ParagraphContainer } from 'components/text/ParagraphContainer';
 export { default as TwoColumsContainer } from 'components/containers/TwoColumsContainer';
 export { default as ThreeColumsContainer } from 'components/containers/ThreeColumsContainer';
-export { default as FourColumsContainer } from 'components/containers/FourColumsContainer';
+export { default as FourColumnsContainer } from 'components/containers/FourColumnsContainer';
