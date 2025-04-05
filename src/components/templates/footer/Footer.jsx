@@ -9,14 +9,14 @@ export default function Footer() {
       'mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 bg-secondary_dark gap-8',
     footerSections: 'flex flex-col',
     footerSectionsList: 'flex flex-col gap-0',
-    footerSectionsTitle: 'text-lg font-medium uppercase leading-6 xl:text-sm text-primary mb-6',
+    footerSectionsTitle: 'text-lg font-medium uppercase leading-6 xl:text-sm text-light mb-6',
   };
 
   return (
     <>
       <HeaderLine />
       <footer id="footer" className="text-base bg-secondary_dark">
-        <div id={'footer-sections'} className="bg-secondary_dark p-12">
+        <div id={'footer-sections'} className="p-12">
           <Container className={classes.container}>
             {/* Footer Sections */}
             <div id="footer-sections" className={classes.footerSections}>
