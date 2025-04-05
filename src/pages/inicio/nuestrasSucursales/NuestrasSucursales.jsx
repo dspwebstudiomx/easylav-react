@@ -20,7 +20,6 @@ import 'swiper/css/scrollbar';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 // Estructura del componente
 const NuestrasSucursales = () => {
   // Ordenar localservices alfabéticamente por el título
@@ -35,23 +34,23 @@ const NuestrasSucursales = () => {
   });
 
   return (
-    <Section className=''>
+    <Section className="">
       <Container>
         {/* Títulos */}
-        <div className='md:hidden'>
-          <TitleContainer title='Nuestras Sucursales'/>
+        <div className="md:hidden">
+          <TitleContainer title="Nuestras Sucursales" />
         </div>
-        <div className='hidden md:block mx-auto'>
+        <div className="hidden md:block mx-auto">
           <TitleH2>Nuestras Sucursales</TitleH2>
         </div>
         {/* Títulos */}
 
-        <Spacing distance='mt-12' />
+        <Spacing distance="mt-12" />
 
         {/* Carousel de Tarjetas Sucursales */}
         <Swiper
           modules={[Navigation, Autoplay]}
-          className={"mySwiper"}
+          className={'mySwiper'}
           spaceBetween={30}
           autoplay={{
             delay: 3000,
@@ -63,26 +62,25 @@ const NuestrasSucursales = () => {
             600: {
               slidesPerView: 1,
               spaceBetweenSlides: 20,
-              touchRatio: 1
+              touchRatio: 1,
             },
             768: {
               slidesPerView: 2,
               spaceBetweenSlides: 20,
-              touchRatio: 1
+              touchRatio: 1,
             },
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetweenSlides: 20,
-              touchRatio: 1
+              touchRatio: 1,
             },
             1920: {
-              slidesPerView: 4,
-              spaceBetweenSlides: 40,
-              touchRatio: 1
+              slidesPerView: 3,
+              spaceBetweenSlides: 20,
+              touchRatio: 1,
             },
-          }}
-        >
-          <div className='p-12 hidden'>
+          }}>
+          <div className="p-12 hidden">
             {sortedLocalServices.map((localservice) => (
               <SwiperSlide key={localservice.title}>
                 <SucursalCard key={localservice.title} {...localservice} />
@@ -91,14 +89,13 @@ const NuestrasSucursales = () => {
           </div>
         </Swiper>
         {/* Carousel de Tarjetas Sucursales */}
-
       </Container>
     </Section>
-  )
-}
+  );
+};
 
 NuestrasSucursales.propTypes = {
   title: PropTypes.string,
-}
+};
 
 export default NuestrasSucursales;
