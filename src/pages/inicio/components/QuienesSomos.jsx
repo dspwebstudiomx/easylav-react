@@ -50,7 +50,6 @@ const Card = ({ children }) => {
     <div className="flex flex-col justify-start p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8">{children}</div>
   );
 };
-
 const ValorTarjeta = ({ valor }) => {
   return (
     <article
@@ -82,6 +81,8 @@ const QuienesSomos = () => {
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
         <TitleContainer id="quienes-somos-titulo" title="Quienes somos" />
+
+        {/* Párrafos */}
         <ParagraphContainer>
           <Paragraph>
             Somos una empresa de lavanderías y Tintorería, comprometida en darte las mejores soluciones para la limpieza
@@ -102,7 +103,11 @@ const QuienesSomos = () => {
             contribuyendo al planeta en el cuidado del agua y optimización de recursos.{' '}
           </Paragraph>
         </ParagraphContainer>
+        {/* Párrafos */}
+
+        {/* Misión & Visión */}
         <TwoColumnsContainer>
+          {/* Misión */}
           <Card>
             <BorderLeft>
               <h3 className="text-2xl font-semibold uppercase">Misión</h3>
@@ -116,6 +121,9 @@ const QuienesSomos = () => {
               que puedas dedicar tu tiempo a lo que realmente importa.
             </p>
           </Card>
+          {/* Misión */}
+
+          {/* Visión */}
           <Card>
             <BorderLeft>
               <h3 className="text-2xl font-semibold uppercase">Visión</h3>
@@ -127,13 +135,20 @@ const QuienesSomos = () => {
               escalable, confiable y altamente rentable para nuestros franquiciatarios.
             </p>
           </Card>
+          {/* Visión */}
         </TwoColumnsContainer>
+        {/* Misión & Visión */}
+
+        {/* Nuestros Valores */}
         <Card>
           <BorderLeft>
             <h3 className="text-2xl font-semibold uppercase">Nuestros Valores</h3>
           </BorderLeft>
           <NuestrosValoresGeneradorTarjetas />
         </Card>
+        {/* Nuestros Valores */}
+
+        {/* Servicios */}
         <Card>
           <TwoColumnsContainer>
             <div className="flex flex-col gap-12 items-start justify-center">
@@ -156,6 +171,7 @@ const QuienesSomos = () => {
             <img src={image} alt="lavandería Easylav" className="shadow-2xl shadow-image" />
           </TwoColumnsContainer>
         </Card>
+        {/* Servicios */}
       </Container>
     </Section>
   );
