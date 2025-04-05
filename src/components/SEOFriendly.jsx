@@ -15,6 +15,18 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
 
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+      {/* Preconnect */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+
       {/* Open Graph (OG) para redes sociales */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={url} />
