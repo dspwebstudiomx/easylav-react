@@ -45,8 +45,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         height="h-[210px] sm:h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[35vh]"
         opacity="opacity-50 hover:opacity-60"
         backgroundColor="bg-dark"
-        className="flex justify-center items-center"
-      >
+        className="flex justify-center items-center">
         <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
       </BackgroundImageSection>
     );
@@ -57,14 +56,13 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         id="sucursales-morelia"
         className={'flex flex-col items-center justify-center gap-6'}
         height={'h-full'}
-        backgroundColor={'bg-light'}
-      >
+        backgroundColor={'bg-light'}>
         <Container className={'mx-auto text-center'}>
           {city ? (
             <>
               <SucursalCardPerCity city={city} />
               <Spacing distance="mt-[10vh]" />
-              <ButtonContainer position="items-center justify-center" distance="mt-16">
+              <ButtonContainer position="items-center justify-center w-full" distance="mt-16">
                 <ButtonSecondary
                   title="Regresar a sucursales"
                   href="/sucursales"
