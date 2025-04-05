@@ -12,13 +12,13 @@ import propTypes from 'prop-types';
 // Estructura
 const TitleContainer = ({ title, id }) => {
   return (
-    <div className="w-1/3">
+    <header className="w-full">
       <BorderLeft>
         <TitleH2 id={id} justify="justify-start" className="w-full">
           {title}
         </TitleH2>
       </BorderLeft>
-    </div>
+    </header>
   );
 };
 TitleContainer.propTypes = {
