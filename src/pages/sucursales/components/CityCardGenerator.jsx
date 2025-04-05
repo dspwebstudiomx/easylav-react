@@ -15,6 +15,7 @@ import { localservices } from 'data';
 import PropTypes from 'prop-types';
 import { useMemo } from 'react';
 
+// Estructura
 const CityCardGenerator = ({ city }) => {
   const ciudad = useMemo(() => {
     return localservices.filter((localservice) => localservice.city === city);
