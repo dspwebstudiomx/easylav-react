@@ -42,7 +42,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         image_1024={image_1024}
         image_1200={image_1200}
         image_1920={image_1920}
-        height="h-[210px] sm:h-[30vh] lg:h-[40vh] "
+        height="h-[210px] sm:h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[35vh]"
         opacity="opacity-50 hover:opacity-60"
         backgroundColor="bg-dark"
         className="flex justify-center items-center"
@@ -59,7 +59,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         height={'h-full'}
         backgroundColor={'bg-light'}
       >
-        <Container className={'p-6 mx-auto text-center'}>
+        <Container className={'mx-auto text-center'}>
           {city ? (
             <>
               <SucursalCardPerCity city={city} />

@@ -78,7 +78,7 @@ const ThreeColumnsContainer = ({ children }) => {
   return <div className="grid sm:grid-cols-3 sm:gap-0 items-center justify-center">{children}</div>;
 };
 const FourColumnsContainer = ({ children }) => {
-  return <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">{children}</div>;
+  return <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-8">{children}</div>;
 };
 const Card = ({ children }) => {
   return (
@@ -187,7 +187,7 @@ const QuienesSomos = () => {
                 })}
               </div>
             </div>
-            <img src={image} alt="lavandería Easylav" className="shadow-2xl" />
+            <img src={image} alt="lavandería Easylav" className="shadow-2xl shadow-image" />
           </TwoColumnsContainer>
         </Card>
       </Container>

@@ -33,7 +33,7 @@ const SUCURSAL_CARD_UI = {
     OVERFLOW: 'overflow-hidden',
     ROUNDED: 'rounded-xl',
     SHADOW: 'shadow-xl',
-    WIDTH: 'w-full',
+    WIDTH: 'w-[250px]  xl:w-full',
   },
   ICON: {
     SIZE_1: 30,
@@ -285,7 +285,7 @@ const SucursalCard = (props) => {
               <img
                 src={image}
                 alt={title}
-                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[480px]  object-cover shadow-2xl"
+                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[220px]  object-cover shadow-2xl"
               />
               <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
