@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const BackgroundImageSection = ({
   id,
+  width,
   height,
   children,
   image_768,
@@ -17,7 +18,10 @@ const BackgroundImageSection = ({
   rounded,
 }) => {
   return (
-    <Section id={id} className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded}`}>
+    <Section
+      id={id}
+      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} ${width}`}
+    >
       {/* Background Image */}
       <img
         src={image_768}
@@ -58,5 +62,6 @@ BackgroundImageSection.propTypes = {
   opacity: PropTypes.string,
   backgroundColor: PropTypes.string,
   rounded: PropTypes.string,
+  width: PropTypes.string,
 };
 export default BackgroundImageSection;
