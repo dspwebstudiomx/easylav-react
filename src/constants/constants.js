@@ -26,7 +26,7 @@ export const GENERAL_UI = {
   },
   TITLEH2: {
     FONT_FAMILY: 'font-bold',
-    FONT_SIZE: 'text-3xl',
+    FONT_SIZE: 'text-2xl sm:text-3xl',
     FONT_WEIGHT: 'font-semibold',
     COLOR: 'text-dark dark:text-primary',
     BACKGROUND_COLOR: '',
