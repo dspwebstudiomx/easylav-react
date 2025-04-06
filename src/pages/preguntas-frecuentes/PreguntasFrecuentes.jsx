@@ -49,7 +49,7 @@ const PreguntasFrecuentes = () => {
         {/* Title */}
 
         {/* Questions */}
-        <ul className="w-full grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
+        <ul className="w-full grid sm:grid-cols-2 gap-8">
           {frequentQuestions.map((question) => (
             <li key={question.id} id={`question-${question.id}`} className="text-dark">
               <MemoizedAccordion
