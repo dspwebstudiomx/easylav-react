@@ -29,6 +29,26 @@ const Titulo = () => {
     </article>
   );
 };
+const ButtonSection = () => {
+  return (
+    <ButtonContainer position="justify-center items-center w-full" distance="mt-28">
+      <ButtonSecondary
+        title="Sucursales en Morelia"
+        href="/sucursales/morelia"
+        name="Sucursales en Morelia"
+        width={''}
+        onClick={() => scrollToTop()}
+      />
+      <ButtonPrimary
+        title="Sucursales en León"
+        href="/sucursales/leon"
+        name="Sucursales en León"
+        width={''}
+        onClick={() => scrollToTop()}
+      />
+    </ButtonContainer>
+  );
+};
 
 // Estructura
 const NuestrosServicios = () => {
@@ -37,22 +57,7 @@ const NuestrosServicios = () => {
       <Container className="mx-auto" id="nuestrosservicios-container">
         <Titulo />
         <ServicesGenerator />
-        <ButtonContainer position="justify-center items-center w-full" distance="mt-28">
-          <ButtonSecondary
-            title="Sucursales en Morelia"
-            href="/sucursales/morelia"
-            name="Sucursales en Morelia"
-            width={''}
-            onClick={() => scrollToTop()}
-          />
-          <ButtonPrimary
-            title="Sucursales en León"
-            href="/sucursales/leon"
-            name="Sucursales en León"
-            width={''}
-            onClick={() => scrollToTop()}
-          />
-        </ButtonContainer>
+        <ButtonSection />
       </Container>
     </Section>
   );
