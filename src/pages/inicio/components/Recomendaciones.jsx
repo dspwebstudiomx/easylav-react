@@ -52,7 +52,7 @@ const Recomendacion = ({ title, description }) => {
 const Recomendaciones = () => {
   return (
     <Section>
-      <Container className="grid gap-4 md:gap-8">
+      <Container className="grid gap-4 md:gap-24">
         <TitleContainer title="Recomendaciones" />
         <ParagraphContainer>
           <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
@@ -64,7 +64,6 @@ const Recomendaciones = () => {
             <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
           ))}
         </ul>
-        <Spacing size="my-20" />
         <ParagraphContainer>
           <Paragraph>
             <span className="mr-2 font-semibold text-xl">Importante:</span>
@@ -73,9 +72,8 @@ const Recomendaciones = () => {
             La cantidad de ropa que laves y seques influye en el resultado final. Te recomendamos elegir el servicio
             adecuado para que tu ropa quede tal como la necesitas.
           </Paragraph>
-          <Spacing size="h-24" />
           <Paragraph>
-            <div className="text-center">
+            <div className="text-center mt-20">
               <span className="text-secondary_dark dark:text-secondary_light text-3xl font-semibold">
                 ¡Estamos aquí para ayudarte a cuidar tu ropa y facilitar tu día!
               </span>
