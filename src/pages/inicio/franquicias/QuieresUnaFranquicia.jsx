@@ -12,7 +12,7 @@ Descripción: Se han realizado cambios en los estilos y la estructura del compon
 
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets';
-import { BackgroundImageSection, ButtonContainer, ButtonPrimary } from 'components';
+import { BackgroundImageSection, ButtonContainer, ButtonPrimary, TitleH1 } from 'components';
 import { memo } from 'react';
 
 // Estilos
@@ -82,10 +82,13 @@ const QuieresUnaFranquicia = () => {
       image_1200={images.image_1200}
       image_576={images.image_576}
       image_1920={images.image_1920}
-      align="items-center justify-center"
-    >
+      align="items-center justify-center">
       <div id="hero-inicio_container" className={`grid md:grid-cols-1 gap-x-8`}>
         <div id="hero-inicio_info_container" className="flex flex-col gap-8 w-full mx-auto">
+          <TitleH1 attr="sr-only">
+            En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo
+            puedes ser parte de nuestro éxito.
+          </TitleH1>
           <span className={styles.span}>{QUIERES_UNA_FRANQUICIA_UI.TITLE.H2.CONTENT}</span>
           <p className={styles.paragraph}>
             Imagina ser parte de una franquicia de lavandería, un sector que nunca pasa de moda y siempre tiene demanda.

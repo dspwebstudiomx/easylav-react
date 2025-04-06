@@ -6,12 +6,11 @@
 */
 
 // Importaciones
-import { GENERAL_UI } from 'constants/constants'
-import PropTypes from 'prop-types'
+import { GENERAL_UI } from 'constants/constants';
+import PropTypes from 'prop-types';
 
 // Estructura
-const TitleH1 = ({ children, textColor, align }) => {
-
+const TitleH1 = ({ children, textColor, align, attr }) => {
   const styles = `
   ${GENERAL_UI.TITLEH1.FONT_FAMILY}
   ${GENERAL_UI.TITLEH1.COLOR}
@@ -19,17 +18,14 @@ const TitleH1 = ({ children, textColor, align }) => {
   ${GENERAL_UI.TITLEH1.FONT_WEIGHT}
   ${GENERAL_UI.TITLEH1.BACKGROUND_COLOR}
   ${GENERAL_UI.TITLEH1.TRANSFORM}
-  `
-  return (
-    <h1 className={`${styles} ${textColor} ${align}`}>
-      {children}
-    </h1>
-  )
-}
+  `;
+  return <h1 className={`${styles} ${textColor} ${align} ${attr}`}>{children}</h1>;
+};
 TitleH1.propTypes = {
   children: PropTypes.node.isRequired,
   align: PropTypes.string.isRequired,
-  textColor: PropTypes.string
-}
+  textColor: PropTypes.string,
+  attr: PropTypes.string,
+};
 
-export default TitleH1
+export default TitleH1;
