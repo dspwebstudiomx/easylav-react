@@ -188,3 +188,11 @@ input[type="file"] button {
   border: 1px solid #b91c1c;
   background-color: #fca5a5;
 }
+.warning{
+  border: 1px solid #857E31;
+  background-color: #FAF3AB;
+}
+.success{
+  border: 1px solid #4ade80;
+  background-color: #bbf7d0;
+}
