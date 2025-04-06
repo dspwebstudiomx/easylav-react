@@ -10,7 +10,7 @@
 */
 
 // Importaciones
-import { Container, Section, Spacing, SucursalCard, TitleContainer, TitleH2 } from 'components';
+import { Container, Section, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
 import 'swiper/css';
@@ -35,7 +35,7 @@ const NuestrasSucursales = () => {
 
   return (
     <Section className="">
-      <Container>
+      <Container className="grid gap-20">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -44,8 +44,6 @@ const NuestrasSucursales = () => {
           <TitleH2>Nuestras Sucursales</TitleH2>
         </div>
         {/* Títulos */}
-
-        <Spacing distance="mt-12" />
 
         {/* Carousel de Tarjetas Sucursales */}
         <Swiper
