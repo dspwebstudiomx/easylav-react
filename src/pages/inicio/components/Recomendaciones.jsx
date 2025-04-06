@@ -1,13 +1,5 @@
 // Importaciones
-import {
-  Container,
-  Paragraph,
-  ParagraphContainer,
-  Section,
-  Spacing,
-  TitleContainer,
-  TwoColumnsContainer,
-} from 'components';
+import { Container, Paragraph, ParagraphContainer, Section, TitleContainer, TwoColumnsContainer } from 'components';
 import { FaCheck } from 'react-icons/fa6';
 import PropTypes from 'prop-types';
 
@@ -53,12 +45,12 @@ const Recomendaciones = () => {
   return (
     <Section>
       <Container className="grid gap-4 md:gap-24">
-        <TitleContainer title="Recomendaciones" />
-        <ParagraphContainer>
-          <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
-        </ParagraphContainer>
-        <Spacing size="h-12" />
-
+        <div className="grid gap-6">
+          <TitleContainer title="Recomendaciones" />
+          <ParagraphContainer>
+            <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
+          </ParagraphContainer>
+        </div>
         <ul id="listado-de-recomendaciones" className="flex flex-col gap-12 items-start justify-start w-full">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
