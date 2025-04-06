@@ -59,21 +59,22 @@ const Recomendaciones = () => {
         </ParagraphContainer>
         <Spacing size="h-12" />
 
-        <ul id="listado-de-recomendaciones" className="flex flex-col gap-12 items-start justify-start w-4/5">
+        <ul id="listado-de-recomendaciones" className="flex flex-col gap-12 items-start justify-start md:w-4/5">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
           ))}
         </ul>
         <Spacing size="my-20" />
-        <Paragraph>
-          <span className="mr-2 font-semibold text-xl">Importante:</span>
-          <br />
-          <br />
-          La cantidad de ropa que laves y seques influye en el resultado final. Te recomendamos elegir el servicio
-          adecuado para que tu ropa quede tal como la necesitas.
-        </Paragraph>
-        <Spacing size="h-24" />
+
         <ParagraphContainer>
+          <Paragraph>
+            <span className="mr-2 font-semibold text-xl">Importante:</span>
+            <br />
+            <br />
+            La cantidad de ropa que laves y seques influye en el resultado final. Te recomendamos elegir el servicio
+            adecuado para que tu ropa quede tal como la necesitas.
+          </Paragraph>
+          <Spacing size="h-24" />
           <Paragraph>
             <div className="text-center">
               <span className="text-secondary_dark dark:text-secondary_light text-3xl font-semibold">
