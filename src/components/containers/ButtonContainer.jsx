@@ -12,9 +12,7 @@ import PropTypes from 'prop-types';
 
 // Estructura
 const ButtonContainer = ({ children, position, distance }) => {
-  return (
-    <div className={`flex flex-col sm:flex-row gap-8 justify-center ${position} ${distance} max-w-2/3`}>{children}</div>
-  );
+  return <div className={`flex flex-col sm:flex-row gap-8 justify-center w ${position} ${distance}`}>{children}</div>;
 };
 ButtonContainer.propTypes = {
   children: PropTypes.node,
