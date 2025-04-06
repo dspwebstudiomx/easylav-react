@@ -13,7 +13,6 @@ import {
   Container,
   Paragraph,
   Section,
-  Spacing,
   TitleContainer,
 } from 'components';
 import { scrollToTop } from 'functions';
@@ -22,12 +21,11 @@ import ServicesGenerator from './ServicesGenerator';
 // Constantes Internos
 const Titulo = () => {
   return (
-    <article id="nuestros-servicios-titulo" className="flex flex-col items-start justify-center gap-4">
+    <article id="nuestros-servicios-titulo" className="flex flex-col items-start justify-center gap-4 mb-20">
       <TitleContainer title="Nuestros Servicios" />
       <Paragraph>
         Todos nuestros insumos son de calidad y de las mejores marcas para que tus prendas siempre estén impecables.
       </Paragraph>
-      <Spacing distance="mt-12" />
     </article>
   );
 };
@@ -39,7 +37,7 @@ const NuestrosServicios = () => {
       <Container className="mx-auto" id="nuestrosservicios-container">
         <Titulo />
         <ServicesGenerator />
-        <ButtonContainer position="justify-center items-center w-full" distance="mt-20">
+        <ButtonContainer position="justify-center items-center w-full" distance="mt-28">
           <ButtonSecondary
             title="Sucursales en Morelia"
             href="/sucursales/morelia"
