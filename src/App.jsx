@@ -1,11 +1,12 @@
+// Importaciones
 import PoliticaCookies from 'pages/politica-cookies/PoliticaCookies';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../node_modules/animate.css/animate.css';
 import './App.css';
 import Loading from './components/Loading';
-import { SEOFriendly } from 'components';
 
+// Carga diferida de las páginas
 const Inicio = lazy(() => import('pages/inicio/Inicio'));
 const Sucursales = lazy(() => import('pages/sucursales/Sucursales'));
 const ContactoPagina = lazy(() => import('pages/contacto/ContactoPagina'));
@@ -21,45 +22,46 @@ const Morelia = lazy(() => import('pages/sucursales/Morelia/Morelia'));
 const Leon = lazy(() => import('pages/sucursales/Leon/Leon'));
 const Guadalajara = lazy(() => import('pages/sucursales/Guadalajara/Guadalajara'));
 
+/* Estructura principal 
+
+
+  Notas:
+
+  - Esta es la estructura principal de la aplicación. Aquí se definen las rutas y se carga el componente de carga mientras se espera la carga de los componentes.
+  - Se utiliza React Router para manejar la navegación entre las diferentes páginas de la aplicación.
+  - Se utiliza Suspense para mostrar un componente de carga mientras se cargan los componentes de las páginas.
+  - Se utiliza lazy para cargar los componentes de las páginas de forma diferida, lo que mejora el rendimiento de la aplicación al reducir el tamaño del paquete inicial.
+  - Se utiliza BrowserRouter para manejar la navegación en la aplicación.
+  - Se utiliza el componente Loading para mostrar un mensaje de carga mientras se cargan los componentes de las páginas.
+  - Se utiliza el componente NotFound para manejar las rutas no encontradas.
+  - Se utiliza el componente ContactoPagina para manejar la página de contacto.
+  - Se utiliza el componente Sucursales para manejar la página de sucursales.
+  - Se utiliza el componente PoliticaPrivacidad para manejar la página de política de privacidad.
+  - Se utiliza el componente PoliticaCookies para manejar la página de política de cookies.      
+*/
+
 export default function App() {
   return (
-    <>
-      <SEOFriendly>
-        <title>Easylav - Lavandería a Domicilio</title>
-        <meta
-          name="description"
-          content="Easylav es una lavandería a domicilio que ofrece servicios de lavandería y planchado. Contamos con sucursales en León, Guadalajara y Morelia."
-        />
-        <meta name="author" content="dspwebstudio" />
-        <meta name="publisher" content="dspwebstudio.com" />
-        <meta name="keywords" content="lavandería a domicilio, lavandería, planchado, Easylav, sucursales" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://easylav.mx" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://easylav.mx" />
-        <meta property="og:title" content="Easylav - Lavandería a Domicilio" />
-      </SEOFriendly>
-      <BrowserRouter>
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            <Route path="/" element={<Inicio />} />
-            <Route path="/contacto/" element={<ContactoPagina />} />
-            <Route path="/sucursales/" element={<Sucursales />} />
-            <Route path="/politica-privacidad/" element={<PoliticaPrivacidad />} />
-            <Route path="/politica-cookies/" element={<PoliticaCookies />} />
-            <Route path="/franquicias/" element={<Franquicias />} />
-            <Route path="/terminos-condiciones/" element={<TerminosCondiciones />} />
-            <Route path="/preguntas-frecuentes/" element={<PreguntasFrecuentes />} />
-            <Route path="/facturacion/" element={<Facturacion />} />
-            <Route path="/guia-estilos/" element={<GuiaEstilos />} />
-            <Route path="/sucursales/morelia" element={<Morelia />} />
-            <Route path="/sucursales/leon" element={<Leon />} />
-            <Route path="/sucursales/guadalajara" element={<Guadalajara />} />
-            <Route path="/test/" element={<Test />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/contacto/" element={<ContactoPagina />} />
+          <Route path="/sucursales/" element={<Sucursales />} />
+          <Route path="/politica-privacidad/" element={<PoliticaPrivacidad />} />
+          <Route path="/politica-cookies/" element={<PoliticaCookies />} />
+          <Route path="/franquicias/" element={<Franquicias />} />
+          <Route path="/terminos-condiciones/" element={<TerminosCondiciones />} />
+          <Route path="/preguntas-frecuentes/" element={<PreguntasFrecuentes />} />
+          <Route path="/facturacion/" element={<Facturacion />} />
+          <Route path="/guia-estilos/" element={<GuiaEstilos />} />
+          <Route path="/sucursales/morelia" element={<Morelia />} />
+          <Route path="/sucursales/leon" element={<Leon />} />
+          <Route path="/sucursales/guadalajara" element={<Guadalajara />} />
+          <Route path="/test/" element={<Test />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
