@@ -9,19 +9,21 @@
 */
 
 // Importaciones
-import CityCardGenerator from "pages/sucursales/components/CityCardGenerator"
-import PropTypes from 'prop-types'
+import CityCardGenerator from 'pages/sucursales/components/CityCardGenerator';
+import PropTypes from 'prop-types';
 
 // Estructura
 // Componente de tarjeta de sucursal por ciudad
 // Este componente utiliza el generador de tarjetas de sucursal para mostrar las sucursales de una ciudad específica
 const SucursalCardPerCity = ({ city }) => {
   return (
-    <CityCardGenerator city={city} />
-  )
-}
+    <div className="error w-full">
+      <CityCardGenerator city={city} />
+    </div>
+  );
+};
 SucursalCardPerCity.propTypes = {
-  city: PropTypes.string.isRequired
-}
+  city: PropTypes.string.isRequired,
+};
 
-export default SucursalCardPerCity
+export default SucursalCardPerCity;

@@ -4,6 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid #b91c1c;
+}
+
+section{
+  overflow-x: hidden;
 }
 
 .hola {
@@ -177,4 +182,9 @@ input[type="file"] button {
 
 .hidden-when-modal {
   display: none;
+}
+
+.error{
+  border: 1px solid #b91c1c;
+  background-color: #fca5a5;
 }

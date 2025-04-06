@@ -22,10 +22,10 @@ import { useState } from 'react';
 const NAVBAR_UI = {
   NAV: {
     BACKGROUND_COLOR: 'bg-light',
-    POSITION: 'fixed top-0 z-[990] sm:relative xl:fixed flex flex-col justify-center',
+    POSITION: 'absolute top-0 z-[990] sm:relative xl:fixed flex flex-col justify-center',
     SHADOW: 'shadow-xl',
-    WIDTH: 'w-[100vw]',
-    HEIGHT: 'h-[100px] sm:h-[150px] xl:h-[100px]',
+    WIDTH: 'w-full',
+    HEIGHT: 'h-[110px] sm:h-[150px] xl:h-[110px]',
   },
   CONTAINER: {
     DISPLAY: 'flex gap-12 justify-between items-center',

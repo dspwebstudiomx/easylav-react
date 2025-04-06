@@ -2,7 +2,7 @@ import { Container, Paragraph, ParagraphContainer, Section, TitleContainer } fro
 
 const Equipamiento = () => {
   return (
-    <Section>
+    <Section className="" id="equipamiento">
       <Container className="flex flex-col gap-4 md:gap-8 lg:gap-12">
         <TitleContainer title="Equipamiento" />
         <ParagraphContainer>
