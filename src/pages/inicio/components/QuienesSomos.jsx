@@ -49,7 +49,9 @@ const serviciosOfrecidos = [
 
 const Card = ({ children }) => {
   return (
-    <div className="flex flex-col justify-start p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8">{children}</div>
+    <div className="flex flex-col justify-start p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8">
+      {children}
+    </div>
   );
 };
 const ValorTarjeta = ({ valor }) => {
@@ -168,7 +170,7 @@ const QuienesSomos = () => {
                 })}
               </div>
             </div>
-            <img src={image} alt="lavandería Easylav" className="shadow-2xl shadow-image" />
+            <img src={image} alt="lavandería Easylav" className="shadow-2xl shadow-image" loading="lazy" />
           </TwoColumnsContainer>
         </Card>
         {/* Servicios */}
