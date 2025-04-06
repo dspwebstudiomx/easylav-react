@@ -1,4 +1,4 @@
-import { Paragraph, ParagraphContainer, SocialLinks, Spacing, TitleH2 } from 'components';
+import { Paragraph, ParagraphContainer, SocialLinks, TitleH2 } from 'components';
 import { scrollToTop } from 'functions';
 import { Link } from 'react-router-dom';
 
