@@ -56,8 +56,7 @@ const ValorTarjeta = ({ valor }) => {
   return (
     <article
       id="nuestros-valores"
-      className="flex flex-col items-center justify-center text-center p-6 py-12 shadow-xl rounded-2xl bg-light text-dark gap-4"
-    >
+      className="flex flex-col items-center justify-center text-center p-6 py-12 shadow-xl rounded-2xl bg-light text-dark gap-4">
       {valor.icon}
       <TitleH3 color="text-dark" textTransform="uppercase">
         {valor.title}
@@ -99,7 +98,6 @@ const QuienesSomos = () => {
             contribuir a tu calidad de vida.
           </Paragraph>
           <Paragraph>
-            {' '}
             Nuestra Visión de negocio nos exige seguir desarrollando e implementando nuevos y mejores procedimientos con
             tecnología de punta, con la cual ofrecemos costos bajos de operación brindándote el servicio que necesitas y
             contribuyendo al planeta en el cuidado del agua y optimización de recursos.{' '}
