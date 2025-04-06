@@ -196,3 +196,13 @@ input[type="file"] button {
   border: 1px solid #4ade80;
   background-color: #bbf7d0;
 }
+.info{
+  border: 1px solid #3b82f6;
+  background-color: #bfdbfe;
+}
+.border-blue{
+  border: 1px solid #3b82f6;
+}
+.border-green{
+  border: 1px solid #4ade80;
+}

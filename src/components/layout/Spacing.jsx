@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Spacing = ({ distance }) => {
-  return (
-    <div className={distance}></div>
-  )
-}
+  return <div className={`${distance} text-xs flex items-center justify-center info`}>{`spacing-${distance}`}</div>;
+};
 Spacing.propTypes = {
-  distance: PropTypes.string
-}
+  distance: PropTypes.string,
+};
 
-export default Spacing
+export default Spacing;
