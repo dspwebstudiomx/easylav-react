@@ -29,7 +29,6 @@ import PropTypes from 'prop-types';
 import Container from '../containers/Container';
 import Footer from '../templates/footer/Footer';
 import Section from '../templates/Section';
-import Spacing from './Spacing';
 
 // Estructura
 const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 }) => {
@@ -57,11 +56,10 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         className={'flex flex-col items-center justify-center gap-6'}
         height={'h-full'}
         backgroundColor={'bg-light'}>
-        <Container className={'mx-auto text-center'}>
+        <Container className={'mx-auto'}>
           {city ? (
             <>
               <SucursalCardPerCity city={city} />
-              <Spacing distance="mt-[10vh]" />
               <ButtonContainer position="items-center justify-center w-full" distance="mt-16">
                 <ButtonSecondary
                   title="Regresar a sucursales"
@@ -72,13 +70,13 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
                   arialabel="Regresar a la lista de sucursales"
                 />
               </ButtonContainer>
-              <Spacing distance="mt-[5vh]" />
             </>
           ) : (
             <p className="text-center text-dark text-lg font-medium">No hay sucursales</p>
           )}
-          <Spacing distance="mt-[10vh]" />
-          <Contacto />
+          <div className="mt-32">
+            <Contacto />
+          </div>
         </Container>
       </Section>
     );
