@@ -25,7 +25,7 @@ const PreguntasFranquicias = () => {
           </li>
         ))}
       </ul>
-      <ButtonContainer position={'justify-center sm:justify-center items-center my-20'}>
+      <ButtonContainer position={'justify-center sm:justify-center items-center mt-20'}>
         <ButtonSecondary
           href={'/sucursales'}
           title={'Ver Sucursales'}
