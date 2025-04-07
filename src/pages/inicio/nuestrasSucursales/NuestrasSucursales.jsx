@@ -10,16 +10,15 @@
 */
 
 // Importaciones
-import { Container, Section, Spacing, SucursalCard, TitleContainer, TitleH2 } from 'components';
+import { Container, Section, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { Swiper, SwiperSlide, Navigation, Pagination, Autoplay } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-// Estructura del componente
 const NuestrasSucursales = () => {
-  // Estado para el índice actual del carrusel
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   // Verifica si localservices tiene datos
   if (!localservices || localservices.length === 0) {
     return (
@@ -34,18 +33,9 @@ const NuestrasSucursales = () => {
   // Ordenar localservices alfabéticamente por el título
   const sortedLocalServices = localservices.sort((a, b) => a.title.localeCompare(b.title));
 
-  // Función para manejar el desplazamiento del carrusel
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? sortedLocalServices.length - 1 : prevIndex - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === sortedLocalServices.length - 1 ? 0 : prevIndex + 1));
-  };
-
   return (
-    <Section className="bg-light dark:bg-dark py-12">
-      <Container className="flex flex-col items-center justify-center">
+    <section className="bg-light dark:bg-dark py-12">
+      <div className="flex flex-col items-center justify-center">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -54,37 +44,29 @@ const NuestrasSucursales = () => {
           <TitleH2>Nuestras Sucursales</TitleH2>
         </div>
 
-        <Spacing distance="mt-12" />
-
         {/* Carousel de Tarjetas Sucursales */}
-        <div className="relative w-full max-w-4xl overflow-hidden">
-          <div
-            className="flex transition-transform duration-500"
-            style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-              width: `${sortedLocalServices.length * 100}%`,
-            }}>
-            {sortedLocalServices.map((localservice) => (
-              <div key={localservice.id} className="w-full flex-shrink-0">
-                <SucursalCard {...localservice} />
-              </div>
-            ))}
-          </div>
-
-          {/* Botones de navegación */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-full shadow-lg">
-            &#8592;
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-full shadow-lg">
-            &#8594;
-          </button>
-        </div>
-      </Container>
-    </Section>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="w-full">
+          {sortedLocalServices.map((localservice) => (
+            <SwiperSlide key={localservice.id}>
+              <SucursalCard {...localservice} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
   );
 };
 
