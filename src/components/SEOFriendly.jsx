@@ -59,14 +59,17 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
       <meta name="theme-color" content="#AF4DFA" />
 
-      {/* Seguridad
+      {/* Seguridad*/}
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="X-Permitted-Cross-Domain-Policies" content="none" />
+      <meta httpEquiv="X-Download-Options" content="noopen" />
       <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';" />
       <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload" />
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
 
       {/* Content Security Policy CSP */}
-      {/* <meta
+      <meta
         httpEquiv="Content-Security-Policy"
         content="
           default-src 'self'; 
@@ -79,7 +82,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
           frame-src 'none'; 
           object-src 'none';
         "
-      /> */}
+      />
     </Helmet>
   );
 };
