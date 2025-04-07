@@ -26,15 +26,14 @@ const ImagenesFranquicias = () => {
         />
         <div
           id="franquicias-columma-2"
-          className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}
-        >
+          className={`${FRANQUICIAS_UI.COLUMNA_2.DISPLAY} ${FRANQUICIAS_UI.COLUMNA_2.HEIGHT} ${FRANQUICIAS_UI.COLUMNA_2.MARGIN} ${FRANQUICIAS_UI.COLUMNA_2.PADDING} ${FRANQUICIAS_UI.COLUMNA_2.WIDTH}`}>
           {franquiciasImagenes
             .sort(() => Math.random() - 0.5)
             .map((imagen) => (
               <div key={imagen.id} className="h-auto rotate-[0deg]">
                 <ImageResponsive
                   src={imagen.image_640}
-                  className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-2xl`}
+                  className={`${FRANQUICIAS_UI.IMAGE.WIDTH} shadow-image`}
                   imageAlt={imagen.alt}
                   imageTitle={imagen.title}
                   image_640={imagen.image_640}

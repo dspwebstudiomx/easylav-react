@@ -10,9 +10,9 @@ import PropTypes from 'prop-types';
 
 // Clases
 const SECTION_UI = {
-  DISPLAY: 'block warning',
+  DISPLAY: 'block',
   PADDING: 'p-12 px-8 sm:p-20 2xl:py-18',
-  BACKGROUND_COLOR: 'bg-light dark:bg-dark',
+  BACKGROUND_COLOR: 'dark:bg-dark',
   TEXT_COLOR: '',
   BORDER_JUSTIFY: 'mx-auto',
 };

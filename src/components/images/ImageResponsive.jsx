@@ -6,12 +6,11 @@
 */
 
 // Importaciones
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 // Estructura
 const ImageResponsive = ({ ...props }) => {
-
-  const { image_640, image_1024, image_1920, imageAlt,imageTitle, className, width, height } = props
+  const { image_640, image_1024, image_1920, imageAlt, imageTitle, className, width, height } = props;
   return (
     <picture>
       <source srcSet={image_640} media="(max-width: 767px)" />
@@ -22,10 +21,11 @@ const ImageResponsive = ({ ...props }) => {
         src={image_640}
         className={`${className}  ${width} ${height}`}
         alt={imageAlt}
+        loading="lazy"
       />
     </picture>
-  )
-}
+  );
+};
 ImageResponsive.propTypes = {
   image_640: PropTypes.string.isRequired,
   image_1024: PropTypes.string,
@@ -34,7 +34,7 @@ ImageResponsive.propTypes = {
   height: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
   imageTitle: PropTypes.string.isRequired,
-  className: PropTypes.string
-}
+  className: PropTypes.string,
+};
 
-export default ImageResponsive
+export default ImageResponsive;
