@@ -51,7 +51,7 @@ const serviciosOfrecidos = [
 
 const Card = ({ children }) => {
   return (
-    <div className="flex flex-col justify-start p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8">
+    <div className="flex flex-col justify-center p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8 w-full">
       {children}
     </div>
   );

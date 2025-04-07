@@ -16,9 +16,9 @@ import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs
 
 // Estilos
 const BUTTON_UI = {
-  DISPLAY: 'flex items-center justify-center gap-0',
-  HEIGHT: 'min-h-[40px]',
-  WIDTH: 'w-[260px] sm:w-[300px]',
+  DISPLAY: 'flex items-center justify-center',
+  HEIGHT: 'min-h-[60px]',
+  WIDTH: 'w-[320px] sm:w-[300px]',
   FONT_SIZE: 'text-lg xl:text-lg',
   PADDING: 'px-6 py-4',
   FONT_WEIGHT: 'font-semibold',
@@ -55,8 +55,7 @@ const Button = ({
         type={type}
         className={`${backgroundColor} ${border} ${ButtonUI} ${buttonWidth} ${buttonHeight} ${textColor} flex gap-3 z-50`}
         href={href}
-        aria-label={arialabel}
-      >
+        aria-label={arialabel}>
         {icon && <span>{icon}</span>}
         {title}
       </button>
