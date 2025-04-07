@@ -6,7 +6,6 @@ import {
   Container,
   Modal,
   Section,
-  Spacing,
   TituloYDescripcion,
 } from 'components';
 import { paquetesFranquicias } from 'data';
@@ -56,8 +55,7 @@ const PaquetesFranquicias = () => {
             return (
               <li
                 key={paquete.id}
-                className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl dark:bg-light"
-              >
+                className="divide-y divide-primary_dark rounded-2xl border-primary_dark border-4 shadow-2xl dark:bg-light">
                 {/* Primera Parte */}
                 <div className="p-8 flex flex-col gap-6">
                   <h2 className="text-2xl text-dark uppercase font-bold text-center lg:text-left gap-3">
@@ -78,8 +76,7 @@ const PaquetesFranquicias = () => {
 
                   <ul
                     className="space-y-2"
-                    id={`lista-caracteristica-${paquete.nombre.replace(/\s+/g, '-').toLowerCase()}`}
-                  >
+                    id={`lista-caracteristica-${paquete.nombre.replace(/\s+/g, '-').toLowerCase()}`}>
                     {paquete.caracteristicas.map((caracteristica, index) => (
                       <li key={`${paquete.id}-${index}`} className="text-dark flex gap-4 text-base">
                         <FaCheck className="text-secondary_dark" />
@@ -110,12 +107,10 @@ const PaquetesFranquicias = () => {
         <Modal width="w-[90vw] md:w-[60vw] lg:w-[40vw]">
           <div
             id="franquicias-formulario"
-            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8"
-          >
+            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
             <button id="button-close" onClick={handleCloseModal}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
-            <Spacing distance="my-4" />
             <ContactFormFranquicias paquete={selectedPaquete} />
           </div>
         </Modal>
