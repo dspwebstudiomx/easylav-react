@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 
 // Estilos
 const CONTAINER_UI = {
-  DISPLAY: 'flex flex-col md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg justify-center items-start mx-auto ',
+  DISPLAY: 'flex flex-col md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl justify-center items-start mx-auto ',
 };
 
 // Estructura4

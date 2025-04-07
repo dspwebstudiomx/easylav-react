@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function FooterLinksGenerator({ links }) {
   const classes = {
-    footerSectionsList: 'flex flex-col gap-3 text-lg xl:text-sm justify-between',
+    footerSectionsList: 'grid gap-3 text-lg xl:text-sm text-light',
   };
   return (
     <ul className={classes.footerSectionsList}>

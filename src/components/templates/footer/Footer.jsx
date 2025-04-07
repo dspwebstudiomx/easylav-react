@@ -1,4 +1,4 @@
-import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, HeaderLine, Spacing } from 'components';
+import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, HeaderLine } from 'components';
 import { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from 'data';
 import { FaRegCopyright } from 'react-icons/fa6';
 import FooterLogoWithSocial from './FooterLogoWithSocial';
@@ -7,7 +7,7 @@ export default function Footer() {
   const classes = {
     container:
       'mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 bg-secondary_dark gap-8',
-    footerSections: 'flex flex-col',
+    footerSections: 'flex flex-col gap-3',
     footerSectionsList: 'flex flex-col gap-0',
     footerSectionsTitle: 'text-lg font-medium uppercase leading-6 xl:text-sm text-light mb-6',
   };
@@ -24,13 +24,12 @@ export default function Footer() {
                 Secciones
               </h3>
               <FooterNavHashLinksGenerator links={navLinksSections} />
-              <Spacing distance="h-2" />
               <FooterLinksGenerator links={navLinksPages} />
             </div>
             {/* Footer Sections */}
 
             {/* Footer Services */}
-            <div id="footer-services" className="flex flex-col">
+            <div id="footer-services" className={classes.footerSections}>
               <h3 className={classes.footerSectionsTitle}>Servicios</h3>
               <FooterNavHashLinksGenerator links={linksServicios} />
             </div>
