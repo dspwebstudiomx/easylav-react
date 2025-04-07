@@ -14,6 +14,13 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
+      <meta name="referrer" content="no-referrer-when-downgrade" />
+
+      {/* SEO adicional */}
+      <meta name="language" content="es" />
+      <meta name="geo.region" content="MX" />
+      <meta name="geo.placename" content="México" />
+      <meta name="copyright" content="© 2025 Easylav. Todos los derechos reservados." />
 
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -43,6 +50,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@easylav" />
 
       {/* Favicon y tema */}
       <link rel="icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico" />
@@ -50,6 +58,28 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
       <meta name="theme-color" content="#AF4DFA" />
+
+      {/* Seguridad */}
+      <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';" />
+      <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload" />
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+
+      {/* Content Security Policy CSP */}
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content="
+          default-src 'self'; 
+          script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.google-analytics.com; 
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+          font-src 'self' https://fonts.gstatic.com; 
+          img-src 'self' data: https://easylav.mx https://cdn.jsdelivr.net; 
+          connect-src 'self' https://api.easylav.mx https://www.google-analytics.com; 
+          media-src 'self'; 
+          frame-src 'none'; 
+          object-src 'none';
+        "
+      />
     </Helmet>
   );
 };
