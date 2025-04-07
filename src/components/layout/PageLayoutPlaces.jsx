@@ -41,7 +41,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         image_1024={image_1024}
         image_1200={image_1200}
         image_1920={image_1920}
-        height="h-[210px] sm:h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[35vh]"
+        height="h-[210px] sm:h-[30vh] lg:h-[40vh] xl:h-[35vh]"
         opacity="opacity-50 hover:opacity-60"
         backgroundColor="bg-dark"
         className="flex justify-center items-center">
@@ -85,7 +85,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   return (
     <>
       <Header />
-      <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-0 xl:mt-[100px]">
+      <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-0 md:mt-[150px]">
         <BannerPlaces />
         <ContentCards />
       </main>
