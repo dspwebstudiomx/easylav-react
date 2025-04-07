@@ -13,10 +13,11 @@
 import { Container, Section, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
-import { Swiper, SwiperSlide, Navigation, Pagination, Autoplay } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const NuestrasSucursales = () => {
   // Verifica si localservices tiene datos
@@ -34,8 +35,8 @@ const NuestrasSucursales = () => {
   const sortedLocalServices = localservices.sort((a, b) => a.title.localeCompare(b.title));
 
   return (
-    <section className="bg-light dark:bg-dark py-12">
-      <div className="flex flex-col items-center justify-center">
+    <Section className="bg-light dark:bg-dark py-12">
+      <Container className="flex flex-col items-center justify-center">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -45,28 +46,54 @@ const NuestrasSucursales = () => {
         </div>
 
         {/* Carousel de Tarjetas Sucursales */}
+
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={true}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+          modules={[Pagination, Autoplay]}
+          className="mySwiper"
+          keyboard={true}
+          spaceBetween={40}
+          navigation={true}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: true,
           }}
-          className="w-full">
+          loop={true}
+          pagination={{ clickable: true, draggable: true, dynamicBullets: true }}
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+              spaceBetweenSlides: 30,
+              touchRatio: 1,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetweenSlides: 30,
+              touchRatio: 1,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetweenSlides: 30,
+              touchRatio: 1,
+            },
+            1210: {
+              slidesPerView: 4,
+              spaceBetweenSlides: 30,
+              touchRatio: 1,
+            },
+            1920: {
+              slidesPerView: 4,
+              spaceBetweenSlides: 30,
+              touchRatio: 1,
+            },
+          }}>
           {sortedLocalServices.map((localservice) => (
             <SwiperSlide key={localservice.id}>
               <SucursalCard {...localservice} />
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };
 

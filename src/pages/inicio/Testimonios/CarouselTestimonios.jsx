@@ -19,8 +19,8 @@ import Testimonio from './Testimonio';
 
 // Estilos
 const styles = {
-  backgroundColor: 'bg-secondary_dark dark:bg-primary'
-}
+  backgroundColor: 'bg-secondary_dark dark:bg-primary',
+};
 
 // Estructura
 const CarouselTestimonios = () => {
@@ -42,46 +42,43 @@ const CarouselTestimonios = () => {
             600: {
               slidesPerView: 1,
               spaceBetweenSlides: 30,
-              touchRatio: 1
+              touchRatio: 1,
             },
             768: {
               slidesPerView: 3,
               spaceBetweenSlides: 30,
-              touchRatio: 1
+              touchRatio: 1,
             },
             1024: {
               slidesPerView: 3,
               spaceBetweenSlides: 30,
-              touchRatio: 1
+              touchRatio: 1,
             },
             1210: {
               slidesPerView: 4,
               spaceBetweenSlides: 30,
-              touchRatio: 1
+              touchRatio: 1,
             },
             1920: {
               slidesPerView: 4,
               spaceBetweenSlides: 30,
-              touchRatio: 1
+              touchRatio: 1,
             },
-          }
-          }
-        >
+          }}>
           {testimonios.map((testimonio) => (
             <SwiperSlide key={testimonio.id}>
               <Testimonio testimonio={testimonio} />
             </SwiperSlide>
-          )
-          )}
+          ))}
         </Swiper>
       </Container>
-    </Section >
-  )
-}
+    </Section>
+  );
+};
 
 // Propiedades
 CarouselTestimonios.propTypes = {
   title: PropTypes.string,
-}
+};
 
-export default CarouselTestimonios
+export default CarouselTestimonios;
