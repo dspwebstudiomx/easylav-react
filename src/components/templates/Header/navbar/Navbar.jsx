@@ -22,7 +22,7 @@ import { useState } from 'react';
 const NAVBAR_UI = {
   NAV: {
     BACKGROUND_COLOR: 'bg-light',
-    POSITION: 'z-40 fixed top-0 flex flex-col justify-center sm:absolute 2xl:fixed',
+    POSITION: 'z-40 fixed top-0 flex flex-col justify-center sm:absolute xl:fixed',
     SHADOW: 'shadow-xl',
     WIDTH: 'w-full',
     HEIGHT: 'h-[110px] sm:h-[150px] xl:h-[110px]',
@@ -30,7 +30,7 @@ const NAVBAR_UI = {
   CONTAINER: {
     DISPLAY: 'flex gap-12 justify-between items-center',
     MARGIN: 'mx-auto',
-    PADDING: 'p-6 sm:px-8 lg:px-0 2xl:px-12 2xl:px-0',
+    PADDING: 'p-6 sm:px-8 lg:px-12 2xl:px-0',
     WIDTH: 'w-full',
     HEIGHT: 'h-full',
   },

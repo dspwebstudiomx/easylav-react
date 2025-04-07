@@ -85,7 +85,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   return (
     <>
       <Header />
-      <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-0 md:mt-[150px]">
+      <main id={`sucursales-${city}`} className="mt-[100px] sm:mt-0 md:mt-[100px]">
         <BannerPlaces />
         <ContentCards />
       </main>

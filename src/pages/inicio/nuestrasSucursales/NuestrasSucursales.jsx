@@ -10,32 +10,42 @@
 */
 
 // Importaciones
-import { Container, Section, SucursalCard, TitleContainer, TitleH2 } from 'components';
+import { Container, Section, Spacing, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { Autoplay, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState } from 'react';
 
 // Estructura del componente
 const NuestrasSucursales = () => {
+  // Estado para el índice actual del carrusel
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Verifica si localservices tiene datos
+  if (!localservices || localservices.length === 0) {
+    return (
+      <Section className="bg-light dark:bg-dark py-12">
+        <Container className="flex flex-col items-center justify-center">
+          <TitleH2>No hay sucursales disponibles</TitleH2>
+        </Container>
+      </Section>
+    );
+  }
+
   // Ordenar localservices alfabéticamente por el título
-  const sortedLocalServices = localservices.sort((a, b) => {
-    if (a.title < b.title) {
-      return -1;
-    }
-    if (a.title > b.title) {
-      return 1;
-    }
-    return 0;
-  });
+  const sortedLocalServices = localservices.sort((a, b) => a.title.localeCompare(b.title));
+
+  // Función para manejar el desplazamiento del carrusel
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? sortedLocalServices.length - 1 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === sortedLocalServices.length - 1 ? 0 : prevIndex + 1));
+  };
 
   return (
-    <Section className="">
-      <Container className="grid gap-20">
+    <Section className="bg-light dark:bg-dark py-12">
+      <Container className="flex flex-col items-center justify-center">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -43,50 +53,36 @@ const NuestrasSucursales = () => {
         <div className="hidden md:block mx-auto">
           <TitleH2>Nuestras Sucursales</TitleH2>
         </div>
-        {/* Títulos */}
+
+        <Spacing distance="mt-12" />
 
         {/* Carousel de Tarjetas Sucursales */}
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          className={'mySwiper'}
-          spaceBetween={30}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: true,
-          }}
-          loop={true}
-          navigation={true}
-          breakpoints={{
-            600: {
-              slidesPerView: 1,
-              spaceBetweenSlides: 20,
-              touchRatio: 1,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetweenSlides: 20,
-              touchRatio: 1,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetweenSlides: 20,
-              touchRatio: 1,
-            },
-            1920: {
-              slidesPerView: 3,
-              spaceBetweenSlides: 20,
-              touchRatio: 1,
-            },
-          }}>
-          <div className="p-12 hidden">
+        <div className="relative w-full max-w-4xl overflow-hidden">
+          <div
+            className="flex transition-transform duration-500"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+              width: `${sortedLocalServices.length * 100}%`,
+            }}>
             {sortedLocalServices.map((localservice) => (
-              <SwiperSlide key={localservice.title}>
-                <SucursalCard key={localservice.title} {...localservice} />
-              </SwiperSlide>
+              <div key={localservice.id} className="w-full flex-shrink-0">
+                <SucursalCard {...localservice} />
+              </div>
             ))}
           </div>
-        </Swiper>
-        {/* Carousel de Tarjetas Sucursales */}
+
+          {/* Botones de navegación */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-full shadow-lg">
+            &#8592;
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-full shadow-lg">
+            &#8594;
+          </button>
+        </div>
       </Container>
     </Section>
   );

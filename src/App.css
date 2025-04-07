@@ -7,6 +7,7 @@
   border: 1px solid #b91c1c;
 }
 
+
 section{
   overflow-x: hidden;
   background-color: #fefefe;
@@ -207,3 +208,4 @@ input[type="file"] button {
 .border-green{
   border: 1px solid #4ade80;
 }
+
