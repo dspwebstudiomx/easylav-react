@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ContactInfo = () => {
   return (
-    <section className="animate__animated animate__bounceInLeft animate__slowest grid">
+    <section className="animate__animated animate__bounceInLeft animate__slowest grid dark:bg-dark">
       <div className="mb-12">
         <TitleH1 attr="sr-only">
           Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus
