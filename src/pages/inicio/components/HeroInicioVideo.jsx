@@ -24,7 +24,7 @@ const HEROINICIO_UI = {
 
 const styles = {
   button: 'bg-primary px-6 py-4 w-full text-xl rounded-lg block text-light',
-  title: 'text-2xl md:text-4xl font-semibold tracking-wider text-light',
+  title: 'text-2xl md:text-3xl font-semibold tracking-wider text-light',
   image: 'absolute top-0 left-0 overflow-hidden object-cover object-center w-full h-full',
 };
 
@@ -68,8 +68,8 @@ const HeroInicioVideo = () => {
       <div className={`absolute inset-0 z-10 w-full bg-dark opacity-70 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
 
       {/* Contenido */}
-      <Container className={`absolute inset-0 z-20 ${HEROINICIO_UI.HEIGHT}`}>
-        <div className="w-full flex md:w-2/3 flex-col gap-12 p-12 items-center sm:items-start justify-center">
+      <Container className={`absolute flex items-start justify-center inset-0 z-20 ${HEROINICIO_UI.HEIGHT}`}>
+        <div className="w-full flex lg:w-2/3 flex-col gap-12 p-12 items-center lg:items-start justify-center">
           <h1 className={styles.title}>
             En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
             soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
