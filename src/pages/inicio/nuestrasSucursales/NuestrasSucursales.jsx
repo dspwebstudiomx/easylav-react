@@ -36,7 +36,7 @@ const NuestrasSucursales = () => {
 
   return (
     <Section className="bg-light dark:bg-dark py-12">
-      <Container className="flex flex-col items-center justify-center">
+      <Container className="flex flex-col items-center justify-center w-3/4 mx-auto">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -49,10 +49,10 @@ const NuestrasSucursales = () => {
 
         <Swiper
           modules={[Pagination, Autoplay]}
-          className="mySwiper"
+          className={'mySwyper mt-20'}
           keyboard={true}
           spaceBetween={40}
-          navigation={true}
+          navigation={false}
           autoplay={{
             delay: 6000,
             disableOnInteraction: true,
@@ -82,7 +82,7 @@ const NuestrasSucursales = () => {
             },
             1920: {
               slidesPerView: 4,
-              spaceBetweenSlides: 30,
+              spaceBetweenSlides: 0,
               touchRatio: 1,
             },
           }}>
