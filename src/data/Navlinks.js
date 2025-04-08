@@ -50,9 +50,9 @@ const navLinksPages = [
 const linksServicios = [
   {
     id: 1,
-    name: 'Lavado',
-    href: '/#lavado',
-    linkId: 'lavado',
+    name: 'Autoservicio',
+    href: '/#autoservicio',
+    linkId: 'autoservicio',
   },
   {
     id: 2,

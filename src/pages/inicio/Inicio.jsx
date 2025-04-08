@@ -12,9 +12,9 @@ import Recomendaciones from './components/Recomendaciones';
 const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
-const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
+// const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
 const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
-const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
+// const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
 
 // Estructura
@@ -50,15 +50,11 @@ const Inicio = () => (
       <Suspense fallback={<Loading />}>
         <Recomendaciones />
       </Suspense>
-      <Suspense fallback={<Loading />}>
-        <NuestrasSucursales />
-      </Suspense>
+      <Suspense fallback={<Loading />}>{/* <NuestrasSucursales /> */}</Suspense>
       <Suspense fallback={<Loading />}>
         <PorqueElegirnos />
       </Suspense>
-      <Suspense fallback={<Loading />}>
-        <CarouselTestimonios />
-      </Suspense>
+      <Suspense fallback={<Loading />}>{/* <CarouselTestimonios /> */}</Suspense>
       <Suspense fallback={<Loading />}>
         <Section backgroundColor="bg-light dark:bg-dark" className="">
           <Container className="">

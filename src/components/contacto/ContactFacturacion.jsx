@@ -9,7 +9,7 @@ El formulario incluye campos para el nombre, RFC, correo electrónico, número d
 
 // Importaciones
 import emailjs from '@emailjs/browser';
-import { ButtonContainer, ButtonPrimary, Spacing } from 'components';
+import { ButtonContainer, ButtonPrimary } from 'components';
 import { localservices } from 'data';
 import { Field, Form, Formik } from 'formik';
 import { scrollToTop } from 'functions';
@@ -148,14 +148,12 @@ export default function ContactFacturacion() {
           }
           return errors;
         }}
-        onSubmit={() => {}}
-      >
+        onSubmit={() => {}}>
         {({ errors, touched, resetForm }) => (
           <Form
             ref={form}
             onSubmit={sendEmail}
-            className="flex flex-col mx-auto gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-4/5 shadow-2xl p-0 rounded-2xl mt-12"
-          >
+            className="flex flex-col mx-auto gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-4/5 shadow-2xl p-0 rounded-2xl mt-12">
             {/* Fields */}
 
             {/* Datos del Usuario */}
@@ -358,8 +356,6 @@ export default function ContactFacturacion() {
             </div>
             {/* Datos del Usuario */}
 
-            <Spacing distance="h-12" />
-
             {/* Datos de Compra */}
             <div id="datos de compra" className="flex flex-col mx-auto w-full p-8">
               <h2 className="text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12">
@@ -419,8 +415,7 @@ export default function ContactFacturacion() {
                     <Field
                       as="select"
                       name="user_sucursal"
-                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full"
-                    >
+                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full">
                       <option defaultValue={'Escoge tu sucursal'} selected>
                         Escoge tu sucursal
                       </option>
@@ -442,8 +437,7 @@ export default function ContactFacturacion() {
                     </label>
                     <select
                       name="user_CFDI"
-                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full"
-                    >
+                      className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full">
                       <option>G01 - Adquisición de mercancías</option>
                       <option>G02 - Devoluciones, descuentos o bonificaciones</option>
                       <option defaultValue={'G03 - Gastos en general'} selected>
@@ -488,8 +482,7 @@ export default function ContactFacturacion() {
                       as="select"
                       name="user_payment"
                       className="rounded-md bg-light text-dark px-4 p-2 border-2 border-secondary dark:border-primary outline-none"
-                      onChange={handlePaymentChange}
-                    >
+                      onChange={handlePaymentChange}>
                       <option value="" defaultValue={'Seleccione'}>
                         Seleccione
                       </option>
@@ -608,8 +601,7 @@ export default function ContactFacturacion() {
               <button
                 type="submit"
                 value="Submit"
-                className="flex gap-2 justify-center items-center text-light text-xl bg-secondary_dark py-4 px-6 rounded border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary font-semibold uppercase w-[260px]"
-              >
+                className="flex gap-2 justify-center items-center text-light text-xl bg-secondary_dark py-4 px-6 rounded border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary font-semibold uppercase w-[260px]">
                 <span>
                   <FaRegEnvelope />
                 </span>

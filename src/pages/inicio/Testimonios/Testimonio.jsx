@@ -14,7 +14,7 @@ const TESTIMONIAL_UI = {
     'pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[360px] sm:h-[300px] w-[80%] sm:w-full shadow-xl mx-auto',
   PARAGRAPH_CLASSNAME: 'text-pretty text-base',
   CONTAINER_CLASSNAME: 'flex flex-col justify-center items-center gap-2 text-dark dark:text-primary mt-2',
-  NAME_CLASSNAME: 'font-semibold text-base uppercase mx-auto',
+  NAME_CLASSNAME: 'font-semibold text-base uppercase mx-auto text-dark',
   NUMBER_STAR_CONTAINER_CLASSNAME: 'text-dark justify-between flex-col sm:flex-col mb-6',
   STARS_CONTAINER_CLASSNAME: 'flex items-center justify-center gap-1',
   STARS_CLASSNAME: 'text-secondary dark:text-primary text-base',
@@ -43,7 +43,7 @@ const Testimonio = ({ testimonio }) => {
         <div
           id={`contenedor-nombre_estrella-${TESTIMONY_ID}`}
           className={TESTIMONIAL_UI.NUMBER_STAR_CONTAINER_CLASSNAME}>
-          <div className="flex gap-2 text-secondary justify-center items-center">
+          <div className="flex gap-2 text-dark justify-center items-center">
             {testimonio.estrellas.map((estrella) => (
               <span key={estrella.id} className={TESTIMONIAL_UI.STARS_CONTAINER_CLASSNAME}>
                 {estrella.icon && <estrella.icon size={14} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
