@@ -14,7 +14,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
-      <meta name="referrer" content="no-referrer-when-downgrade" />
+      {/* <meta name="referrer" content="no-referrer-when-downgrade" /> */}
 
       {/* SEO adicional */}
       <meta name="language" content="es" />
