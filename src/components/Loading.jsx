@@ -11,7 +11,7 @@ import { LogoHorizontalBlanco } from 'assets';
 // Estilos
 const LOADING_UI = {
   CONTAINER: 'flex flex-col justify-center items-center h-[100svh] w-full sm:justify-center sm:pt-0',
-  BACKGROUND_COLOR: 'bg-secondary_dark',
+  BACKGROUND_COLOR: 'bg-dark opacity-90',
   SPINNER: 'loader mx-auto mt-8',
 };
 const styles = `${LOADING_UI.CONTAINER} ${LOADING_UI.BACKGROUND_COLOR}`;

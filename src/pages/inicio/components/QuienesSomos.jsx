@@ -175,7 +175,7 @@ const QuienesSomos = () => {
                 <ButtonSecondary title="Contáctanos" href="/contacto" width="w-full sm:w-[260px] scale-[0.8]" />
               </ButtonContainer>
             </div>
-            <img src={image} alt="lavandería Easylav" className="shadow-2xl shadow-image" loading="lazy" />
+            <img src={image} alt="lavandería Easylav" className="shadow-image" loading="lazy" />
           </TwoColumnsContainer>
         </Card>
         {/* Servicios */}

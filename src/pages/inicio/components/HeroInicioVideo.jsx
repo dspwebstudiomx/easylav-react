@@ -70,7 +70,7 @@ const HeroInicioVideo = () => {
       </div>
 
       {/* Capa de opacidad */}
-      <div className={`absolute inset-0 z-10 w-full bg-dark opacity-70 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
+      <div className={`absolute inset-0 z-10 w-full bg-dark opacity-90 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
 
       {/* Contenido */}
       <Container className={`absolute flex items-start justify-center inset-0 z-20 ${HEROINICIO_UI.HEIGHT}`}>
