@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 // Acceso a las variables de entorno
-const facebookPixelId = import.meta.env.REACT_APP_FACEBOOK_PIXEL_ID || '';
+const facebookPixelId = import.meta.env.VITE_FACEBOOK_PIXEL_ID || '';
 const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID || '';
 const googleTagManagerId = import.meta.env.VITE_GOOGLE_TAG_MANAGER_ID || '';
 const googleAdsId = import.meta.env.VITE_GOOGLE_ADS_ID || '';
@@ -90,11 +90,14 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
         `}
       </script>
       <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}></iframe>
+        {`
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        `}
       </noscript>
 
       {/* Google Analytics */}
