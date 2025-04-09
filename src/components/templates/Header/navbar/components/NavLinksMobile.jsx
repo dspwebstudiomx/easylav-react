@@ -18,15 +18,18 @@ const NavLinksMobile = ({ onLinkClick }) => {
               <NavHashLink
                 id={`link-${navlink.linkId}`}
                 to={navlink.href}
-                className="flex h-full w-full flex-col items-center justify-center gap-4 py-2"
+                className={({ isActive }) =>
+                  `flex h-full w-full flex-col items-center justify-center gap-4 py-2 ${
+                    isActive ? 'text-primary_dark' : 'text-secondary_dark'
+                  }`
+                }
+                scroll={scrollWithOffset}
                 onClick={onLinkClick}
                 title={`link-${navlink.linkId}`}>
                 <div className="flex items-center justify-center">
                   {navlink.icon && <navlink.icon size={32} className="text-secondary_dark" />}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wide text-secondary_dark text-center">
-                  {navlink.name}
-                </span>
+                <span className="text-base font-bold uppercase tracking-wide text-center">{navlink.name}</span>
               </NavHashLink>
             </li>
           );
@@ -40,15 +43,17 @@ const NavLinksMobile = ({ onLinkClick }) => {
               <NavLink
                 id={`link-${navlink.linkId}`}
                 to={navlink.href}
-                className="flex h-full w-full flex-col items-center justify-center gap-4 py-2"
-                scroll={(el) => scrollWithOffset(el)}
+                className={({ isActive }) =>
+                  `flex h-full w-full flex-col items-center justify-center gap-4 py-2 ${
+                    isActive ? 'text-primary_dark' : 'text-secondary_dark'
+                  }`
+                }
+                onClick={onLinkClick}
                 title={`link-${navlink.linkId}`}>
                 <div className="flex items-center justify-center">
                   {navlink.icon && <navlink.icon size={32} className="text-secondary_dark" />}
                 </div>
-                <span className="text-base font-bold uppercase tracking-wide text-secondary_dark text-center">
-                  {navlink.name}
-                </span>
+                <span className="text-base font-bold uppercase tracking-wide text-center">{navlink.name}</span>
               </NavLink>
             </li>
           );
