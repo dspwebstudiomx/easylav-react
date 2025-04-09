@@ -75,19 +75,17 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta httpEquiv="Cross-Origin-Embedder-Policy" content="require-corp" />
       <meta httpEquiv="Cross-Origin-Opener-Policy" content="same-origin" />
       <meta httpEquiv="Cross-Origin-Resource-Policy" content="same-origin" />
-      <meta httpEquiv="Cross-Origin-Embedder-Policy" content="unsafe-none" />
-      {/* Content Security Policy CSP */}
       <meta
         httpEquiv="Content-Security-Policy"
         content="
           default-src 'self'; 
-          script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.google-analytics.com; 
-          style-src 'self' 'unsafe-inline' ; 
+          script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; 
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
           font-src 'self' https://fonts.gstatic.com; 
-          img-src 'self' data: https://easylav.mx https://cdn.jsdelivr.net; 
-          connect-src 'self' https://api.easylav.mx https://www.google-analytics.com; 
+          img-src 'self' data: https://easylav.mx https://cdn.jsdelivr.net https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com; 
+          connect-src 'self' https://api.easylav.mx https://www.google-analytics.com https://www.googletagmanager.com https://www.googleapis.com; 
           media-src 'self'; 
-          frame-src 'none'; 
+          frame-src 'self' https://www.google.com; 
           object-src 'none';
         "
       />
