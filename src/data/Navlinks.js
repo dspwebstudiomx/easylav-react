@@ -109,7 +109,7 @@ const linksTerminos = [
   },
   {
     id: 3,
-    name: 'Facturacion',
+    name: 'Facturación',
     href: '/facturacion',
     linkId: 'facturacion',
   },
