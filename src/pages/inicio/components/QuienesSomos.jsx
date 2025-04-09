@@ -25,7 +25,7 @@ import {
 } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa6';
 
-//Biblioteca de datos
+// Biblioteca de datos
 const valores = [
   { id: 1, icon: <FaRegListAlt size={36} className="text-secondary" />, title: 'Orden', alt: 'Orden' },
   { id: 2, icon: <FaSoap size={36} className="text-secondary" />, title: 'Limpieza', alt: 'Limpieza' },
@@ -56,6 +56,11 @@ const Card = ({ children }) => {
     </div>
   );
 };
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 const ValorTarjeta = ({ valor }) => {
   return (
     <article
@@ -68,6 +73,16 @@ const ValorTarjeta = ({ valor }) => {
     </article>
   );
 };
+
+ValorTarjeta.propTypes = {
+  valor: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    icon: PropTypes.element.isRequired,
+  }).isRequired,
+};
+
 const NuestrosValoresGeneradorTarjetas = () => {
   return (
     <article id="tarjetas-valores" className="mt-6">
@@ -182,28 +197,6 @@ const QuienesSomos = () => {
       </Container>
     </Section>
   );
-};
-
-Card.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-ValorTarjeta.propTypes = {
-  valor: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-    icon: PropTypes.element.isRequired,
-  }).isRequired,
-};
-NuestrosValoresGeneradorTarjetas.propTypes = {
-  valor: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-  }).isRequired,
-  icon: PropTypes.element.isRequired,
 };
 
 export default QuienesSomos;

@@ -6,7 +6,7 @@ const ContactInfo = () => {
   return (
     <section className="animate__animated animate__bounceInLeft animate__slowest grid dark:bg-dark">
       <div className="mb-12">
-        <TitleH1 attr="sr-only">
+        <TitleH1 attr="sr-only" align="align">
           Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus
           dudas, recibir sugerencias y atender tus necesidades.
         </TitleH1>
