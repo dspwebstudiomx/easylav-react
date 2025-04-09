@@ -10,8 +10,7 @@
 */
 
 // Importaciones
-import { VistaLavanderiaDesdeEntrada_2_640 as defaultImage } from 'assets';
-import video from 'assets/video/video1.mp4';
+import { VistaLavanderiaDesdeEntrada_2_640 as defaultImage, HeroVideoLavadoras } from 'assets';
 import { ButtonContainer, ButtonSecondary, Container } from 'components';
 import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
@@ -51,10 +50,16 @@ const HeroInicioVideo = () => {
       {/* Fondo: Video o Imagen Estática */}
       <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${HEROINICIO_UI.HEIGHT}`}>
         {isMobile ? (
-          <img src={defaultImage} alt="Lavandería Easylav" className={styles.image} loading="lazy" />
+          <img
+            src={defaultImage}
+            alt="Vista de lavandería Easylav con máquinas modernas"
+            title="Lavandería Easylav - Soluciones de lavado y tintorería"
+            className={styles.image}
+            loading="lazy"
+          />
         ) : (
           <Video
-            src={video}
+            src={HeroVideoLavadoras}
             type="video/mp4"
             title="sucursal"
             className={styles.image}

@@ -50,3 +50,4 @@ export { default as pedregal } from '../assets/images/sucursales/pedregal.webp';
 export { default as periodismo } from '../assets/images/sucursales/periodismo.webp';
 export { default as sierradeveracruz } from '../assets/images/sucursales/sierradeveracruz.webp';
 export { default as solidaridad } from '../assets/images/sucursales/solidaridad.webp';
+export { default as HeroVideoLavadoras } from '../assets/video/herovideo_lavadoras.mp4';
