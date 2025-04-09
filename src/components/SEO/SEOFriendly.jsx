@@ -93,12 +93,12 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       />
       {/* Schema */}
       <script type="application/ld+json">
-        schema=
-        {{
+        {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'LocalBusiness',
           name: title,
           description: description,
+          url: url,
           telephone: '+524435200593',
           address: {
             '@type': 'PostalAddress',
@@ -110,7 +110,16 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
           image: ogImage,
           openingHours: 'Mo-Su 07:00-21:30',
           priceRange: '$$',
-        }}
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 19.70764,
+            longitude: -101.17192,
+          },
+          sameAs: [
+            'https://www.facebook.com/profile.php?id=61562871132158',
+            'https://www.instagram.com/lavanderiaseasylav/',
+          ],
+        })}
       </script>
     </Helmet>
   );
