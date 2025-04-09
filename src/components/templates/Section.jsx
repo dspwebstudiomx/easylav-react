@@ -18,8 +18,8 @@ const SECTION_UI = {
 };
 
 // Estructura
-export default function Section({ id, children, backgroundColor, height, className, backgroundImage }) {
-  const classes = `${SECTION_UI.DISPLAY} ${SECTION_UI.PADDING} ${SECTION_UI.BACKGROUND_COLOR} ${SECTION_UI.TEXT_COLOR} ${backgroundColor} ${height} ${className}  bg-[url("${backgroundImage}")] `;
+export default function Section({ id, children, backgroundColor, height, className }) {
+  const classes = `${SECTION_UI.DISPLAY} ${SECTION_UI.PADDING} ${SECTION_UI.BACKGROUND_COLOR} ${SECTION_UI.TEXT_COLOR} ${backgroundColor} ${height} ${className}")] `;
 
   return (
     <section id={id} className={classes}>

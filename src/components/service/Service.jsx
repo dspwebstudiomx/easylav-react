@@ -44,8 +44,7 @@ const Service = ({ service }) => {
         <Modal width="w-[80vw] md:w-[60vw] lg:w-[50vw]" height="h-auto">
           <div
             id="modal-servicio"
-            className="z-40 mx-auto flex h-full flex-col justify-center gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12"
-          >
+            className="z-40 mx-auto flex h-full flex-col justify-center gap-8 rounded-xl border-4 border-primary bg-light p-8 sm:p-12">
             <button id="button-close" onClick={() => setShowModal(false)} className="">
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
