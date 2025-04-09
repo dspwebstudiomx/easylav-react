@@ -85,7 +85,7 @@ const QuieresUnaFranquicia = () => {
       align="items-center justify-center">
       <div id="hero-inicio_container" className={`grid md:grid-cols-1 gap-x-8`}>
         <div id="hero-inicio_info_container" className="flex flex-col gap-8 w-full mx-auto">
-          <TitleH1 attr="sr-only">
+          <TitleH1 attr="sr-only" align="text-center">
             En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo
             puedes ser parte de nuestro éxito.
           </TitleH1>
