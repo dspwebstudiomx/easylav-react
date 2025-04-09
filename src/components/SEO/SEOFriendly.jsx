@@ -21,6 +21,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
       <meta name="referrer" content="no-referrer-when-downgrade" />
+      <link rel="manifest" href="/manifest.json"></link>
 
       {/* Open Graph (OG) para redes sociales */}
       <meta property="og:type" content={ogType} />
