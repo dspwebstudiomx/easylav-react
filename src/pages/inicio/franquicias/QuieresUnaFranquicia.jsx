@@ -53,7 +53,7 @@ const QuieresUnaFranquicia = () => {
             oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu
             patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
           </p>
-          <ButtonContainer position="mx-autoh" distance="mt-12">
+          <ButtonContainer position="mx-auto" distance="mt-12">
             <ButtonPrimary
               title="Conoce más"
               href="/franquicias/#sobre-nuestras-franquicias"
