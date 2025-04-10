@@ -16,7 +16,8 @@ import { BackgroundImageSection, Badge, Modal, TitleH3 } from 'components';
 import { useShowModal } from 'hooks';
 import PropTypes from 'prop-types';
 import { memo, useMemo, useCallback } from 'react';
-import { FaMapMarkedAlt, FaMapMarkerAlt, FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
+import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
 // Lista de días festivos oficiales de México
 const holidays = ['01-01', '25-12'];
