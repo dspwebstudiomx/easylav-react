@@ -52,7 +52,7 @@ const serviciosOfrecidos = [
 
 const Card = ({ children }) => {
   return (
-    <div className="flex flex-col justify-center p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark gap-8 w-full">
+    <div className="flex flex-col justify-center p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark dark:text-light gap-8 w-full">
       {children}
     </div>
   );
@@ -156,9 +156,9 @@ const QuienesSomos = () => {
           {/* Misión */}
           <Card>
             <BorderLeft>
-              <h3 className="text-2xl font-semibold uppercase">Misión</h3>
+              <h3 className="text-2xl font-semibold uppercase text-dark">Misión</h3>
             </BorderLeft>
-            <p className="text-base">
+            <p className="text-lg text-dark">
               En Lavanderías <span className="text-lg font-bold text-secondary_dark">EASYLAV</span>, nuestra misión es
               ser los aliados perfectos de tu tiempo, ofreciéndote un servicio de lavandería y tintorería de excelencia.
               Nos dedicamos a cuidar cada prenda como si fuera nuestra, utilizando tecnología de vanguardia y procesos
@@ -172,9 +172,9 @@ const QuienesSomos = () => {
           {/* Visión */}
           <Card>
             <BorderLeft>
-              <h3 className="text-2xl font-semibold uppercase">Visión</h3>
+              <h3 className="text-2xl font-semibold uppercase text-dark">Visión</h3>
             </BorderLeft>
-            <p className="text-base">
+            <p className="text-lg text-dark">
               Consolidar una red de franquicias de lavanderías a nivel nacional, respaldada por un modelo operativo
               eficiente, capacitación continua y un enfoque en la mejora constante de procesos. Nos distinguimos por la
               innovación tecnológica, la excelencia en el servicio y la optimización de costos, garantizando un negocio
@@ -188,7 +188,7 @@ const QuienesSomos = () => {
         {/* Nuestros Valores */}
         <Card>
           <BorderLeft>
-            <h3 className="text-2xl font-semibold uppercase">Nuestros Valores</h3>
+            <h3 className="text-2xl font-semibold uppercase text-dark">Nuestros Valores</h3>
           </BorderLeft>
           <NuestrosValoresGeneradorTarjetas />
         </Card>
@@ -197,7 +197,7 @@ const QuienesSomos = () => {
         {/* Servicios */}
         <Card>
           <TwoColumnsContainer>
-            <div className="flex flex-col gap-12 items-start justify-center">
+            <div className="flex flex-col gap-12 items-start justify-center text-dark">
               <BorderLeft>
                 <h3 className="text-2xl font-semibold uppercase">Servicios</h3>
               </BorderLeft>
@@ -211,7 +211,7 @@ const QuienesSomos = () => {
                       <div className="w-8 h-8">
                         <FaCheck className="text-secondary" size={28} />
                       </div>
-                      <h3 className="text-xl">{servicio.title}</h3>
+                      <span className="text-lg">{servicio.title}</span>
                     </article>
                   );
                 })}
