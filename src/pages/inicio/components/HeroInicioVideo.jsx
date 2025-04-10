@@ -11,7 +11,7 @@
 
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_2_640 as defaultImage, HeroVideoLavadoras } from 'assets';
-import { ButtonContainer, ButtonSecondary, Container } from 'components';
+import { Button, ButtonContainer, Container } from 'components';
 import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
@@ -70,7 +70,7 @@ const HeroInicioVideo = () => {
             prendas luzcan siempre de la mejor manera.
           </h1>
           <ButtonContainer position={'items-center sm:items-left'}>
-            <ButtonSecondary title="Nuestros servicios" href="/#servicios" width={'w-full sm:w-[260px]'} />
+            <Button title="Nuestros servicios" href="/#servicios" width={'w-full sm:w-[260px]'} variant="secondary" />
           </ButtonContainer>
         </div>
       </Container>

@@ -15,29 +15,47 @@ import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
 
 const Button = ({
-  backgroundColor,
   title,
-  border,
-  icon,
   type,
   onClick,
   href,
-  textColor,
   name,
   width,
   height,
   arialabel,
+  variant = 'primary', // Valor por defecto es 'primary'
+  icon,
 }) => {
   const buttonWidth = width ? width : 'w-[320px] sm:w-[300px]';
   const buttonHeight = height ? height : 'min-h-[60px]';
+
+  // Define los estilos base
+  let baseStyles =
+    'flex items-center justify-center min-h-[60px] text-lg xl:text-lg px-6 py-4 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex gap-3 z-50';
+
+  // Define los estilos específicos para cada variante
+  let variantStyles = '';
+  switch (variant) {
+    case 'primary':
+      variantStyles =
+        'bg-primary text-light hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light';
+      break;
+    case 'secondary':
+      variantStyles =
+        'bg-secondary text-light hover:bg-secondary_dark dark:text-dark dark:bg-primary_dark dark:hover:bg-primary_light';
+      break;
+    default:
+      variantStyles = 'bg-primary text-light';
+      break;
+  }
+
   return (
     <HashLink to={href} scroll={(el) => scrollWithOffset(el)}>
       <button
         name={name}
         onClick={typeof onClick === 'function' ? onClick : undefined}
         type={type}
-        className={`${backgroundColor} ${border} flex items-center justify-center min-h-[60px] w-[320px] sm:w-[300px] text-lg xl:text-lg px-6 py-4 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 ${buttonWidth} ${buttonHeight} ${textColor} flex gap-3 z-50`}
-        href={href}
+        className={`${baseStyles} ${variantStyles} ${buttonWidth} ${buttonHeight}`}
         aria-label={arialabel}>
         {icon && <span>{icon}</span>}
         {title}
@@ -47,18 +65,16 @@ const Button = ({
 };
 
 Button.propTypes = {
-  backgroundColor: PropTypes.string,
-  title: PropTypes.string,
-  textColor: PropTypes.string,
-  href: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
-  border: PropTypes.string,
-  icon: PropTypes.any,
+  title: PropTypes.string.isRequired,
   type: PropTypes.string,
   onClick: PropTypes.func,
+  href: PropTypes.string,
   name: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
   arialabel: PropTypes.string,
+  variant: PropTypes.oneOf(['primary', 'secondary']), // Define las variantes permitidas
+  icon: PropTypes.node,
 };
 
 export default Button;
