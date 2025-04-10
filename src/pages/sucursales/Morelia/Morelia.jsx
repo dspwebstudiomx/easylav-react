@@ -21,7 +21,7 @@ const Morelia = () => {
     <>
       <SEOFriendly
         title="Morelia | Sucursales EasyLav: Tu lavandería ideal"
-        url="easylav-react.netlify.app/sucursales/morelia"
+        url="https://easylav.mx/sucursales/morelia"
         description="Visita nuestras modernas sucursales de EasyLav en Morelia, Michoacán, y descubre servicios de lavandería, tintorería y planchado con la mejor calidad y atención. ¡Te esperamos!"
         author="dspwebstudio"
         keywords="lavandería Morelia, planchado Morelia"
