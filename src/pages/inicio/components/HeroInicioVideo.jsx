@@ -16,17 +16,6 @@ import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-// Estilos
-const HEROINICIO_UI = {
-  HEIGHT: 'h-[86vh] sm:h-[500px] xl:h-[70vh]',
-};
-
-const styles = {
-  button: 'bg-primary px-6 py-4 w-full text-xl rounded-lg block text-light',
-  title: 'text-2xl md:text-3xl font-semibold tracking-wider text-light',
-  image: 'absolute top-0 left-0 overflow-hidden object-cover object-center w-full h-full',
-};
-
 // Estructura
 const HeroInicioVideo = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -46,15 +35,15 @@ const HeroInicioVideo = () => {
   }, []);
 
   return (
-    <section id="inicio" className={`relative overflow-hidden w-full ${HEROINICIO_UI.HEIGHT}`}>
+    <section id="inicio" className="relative overflow-hidden w-full h-[86vh] sm:h-[500px] xl:h-[70vh]">
       {/* Fondo: Video o Imagen Estática */}
-      <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${HEROINICIO_UI.HEIGHT}`}>
+      <div className="absolute inset-0 z-0 w-full bg-dark left-0 h-[86vh] sm:h-[500px] xl:h-[70vh]">
         {isMobile ? (
           <img
             src={defaultImage}
             alt="Vista de lavandería Easylav con máquinas modernas"
             title="Lavandería Easylav - Soluciones de lavado y tintorería"
-            className={styles.image}
+            className="absolute top-0 left-0 overflow-hidden object-cover object-center w-full h-full"
             loading="lazy"
           />
         ) : (
@@ -62,7 +51,7 @@ const HeroInicioVideo = () => {
             src={HeroVideoLavadoras}
             type="video/mp4"
             title="sucursal"
-            className={styles.image}
+            className="absolute top-0 left-0 overflow-hidden object-cover object-center w-full h-full"
             defaultImage={defaultImage}
             alt="video sucursal"
           />
@@ -70,12 +59,12 @@ const HeroInicioVideo = () => {
       </div>
 
       {/* Capa de opacidad */}
-      <div className={`absolute inset-0 z-10 w-full bg-dark opacity-90 left-0 ${HEROINICIO_UI.HEIGHT}`}></div>
+      <div className="absolute inset-0 z-10 w-full bg-dark opacity-90 left-0 h-[86vh] sm:h-[500px] xl:h-[70vh]"></div>
 
       {/* Contenido */}
-      <Container className={`absolute flex items-start justify-center inset-0 z-20 ${HEROINICIO_UI.HEIGHT}`}>
+      <Container className="absolute flex items-start justify-center inset-0 z-20 h-[86vh] sm:h-[500px] xl:h-[70vh]">
         <div className="w-full flex lg:w-2/3 flex-col gap-12 p-12 items-center lg:items-start justify-center">
-          <h1 className={styles.title}>
+          <h1 className="text-2xl md:text-3xl font-semibold tracking-wider text-light">
             En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
             soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
             prendas luzcan siempre de la mejor manera.
