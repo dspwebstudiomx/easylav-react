@@ -38,11 +38,11 @@ const Facturacion = () => {
   return (
     <PageLayout>
       <SEOFriendly
-        title="Facturación | Easylav: Tu lavandería ideal"
-        url="easylav-react.netlify.app/facturacion"
-        description="En easylav tu ropa es nuestra pasión: limpieza impecable, planchado perfecto"
+        title="Facturación | Easylav: Lavanderías en Morelia y León"
+        url="https://easylav.mx/facturacion"
+        description="Solicita tu factura en Easylav, lavanderías en Morelia y León con servicios de lavado, planchado y tintorería de alta calidad."
         author="dspwebstudio"
-        keywords="lavandería, planchado"
+        keywords="lavandería en Morelia, lavandería en León, tintorería, lavado de ropa, planchado"
         ogImage={CatedralMorelia}
         ogImageAlt="canasta verde con ropa sucia"
         ogType="website"
