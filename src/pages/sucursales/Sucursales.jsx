@@ -7,6 +7,10 @@
   Incluye enlaces a las sucursales de León y Morelia.
   Modificado por: Daniel Pérez
   Fecha de modificación: 2025-03-27
+  --------------------------------------------------
+  Cambios realizados: Se ha añadido la función scrollToTop para mejorar la navegación.
+  --------------------------------------------------
+  
 */
 
 // Importaciones
