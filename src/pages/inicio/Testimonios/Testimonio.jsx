@@ -8,19 +8,6 @@
 // Importaciones
 import PropTypes from 'prop-types';
 
-// Estilos
-const TESTIMONIAL_UI = {
-  ARTICLE_CLASSNAME:
-    'pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[360px] sm:h-[300px] w-[80%] sm:w-full shadow-xl mx-auto',
-  PARAGRAPH_CLASSNAME: 'text-pretty text-base',
-  CONTAINER_CLASSNAME: 'flex flex-col justify-center items-center gap-2 text-dark dark:text-primary mt-2',
-  NAME_CLASSNAME: 'font-semibold text-base uppercase mx-auto text-dark',
-  NUMBER_STAR_CONTAINER_CLASSNAME: 'text-dark justify-between flex-col sm:flex-col mb-6',
-  STARS_CONTAINER_CLASSNAME: 'flex items-center justify-center gap-1',
-  STARS_CLASSNAME: 'text-secondary dark:text-primary text-base',
-  QUALIFICATION_CLASSNAME: 'font-semibold md:text-sm text-dark text-base',
-};
-
 //Estructura
 const Testimonio = ({ testimonio }) => {
   //Constantes de Datos
@@ -30,26 +17,31 @@ const Testimonio = ({ testimonio }) => {
   const TESTIMONY_QUALIFICATION = testimonio.calificacion;
 
   return (
-    <article id={`testimonio-${testimonio.nombre}`} className={TESTIMONIAL_UI.ARTICLE_CLASSNAME} key={TESTIMONY_ID}>
+    <article
+      id={`testimonio-${testimonio.nombre}`}
+      className="pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[360px] sm:h-[300px] w-[80%] sm:w-full shadow-xl mx-auto"
+      key={TESTIMONY_ID}>
       {/* Testimonio */}
-      <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className={TESTIMONIAL_UI.PARAGRAPH_CLASSNAME}>
+      <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className="text-pretty text-base">
         {TESTIMONY}
       </p>
       {/* Testimonio */}
 
       {/* Nombre & Estrella */}
-      <div id={`contenedor-testimonio-${TESTIMONY_ID}`} className={TESTIMONIAL_UI.CONTAINER_CLASSNAME}>
-        <h3 className={TESTIMONIAL_UI.NAME_CLASSNAME}>{PERSON_NAME_TESTIMONY}</h3>
+      <div
+        id={`contenedor-testimonio-${TESTIMONY_ID}`}
+        className="flex flex-col justify-center items-center gap-2 text-dark dark:text-primary mt-2">
+        <h3 className="font-semibold text-base uppercase mx-auto text-dark">{PERSON_NAME_TESTIMONY}</h3>
         <div
           id={`contenedor-nombre_estrella-${TESTIMONY_ID}`}
-          className={TESTIMONIAL_UI.NUMBER_STAR_CONTAINER_CLASSNAME}>
+          className="text-dark justify-between flex-col sm:flex-col mb-6">
           <div className="flex gap-2 text-dark justify-center items-center">
             {testimonio.estrellas.map((estrella) => (
-              <span key={estrella.id} className={TESTIMONIAL_UI.STARS_CONTAINER_CLASSNAME}>
-                {estrella.icon && <estrella.icon size={14} className={TESTIMONIAL_UI.STARS_CLASSNAME} />}
+              <span key={estrella.id} className="flex items-center justify-center gap-1">
+                {estrella.icon && <estrella.icon size={14} className="text-secondary dark:text-primary text-base" />}
               </span>
             ))}
-            <h4 className={TESTIMONIAL_UI.QUALIFICATION_CLASSNAME}>{TESTIMONY_QUALIFICATION}</h4>
+            <h4 className="font-semibold md:text-sm text-dark text-base">{TESTIMONY_QUALIFICATION}</h4>
           </div>
         </div>
       </div>

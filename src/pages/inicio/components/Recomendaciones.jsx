@@ -31,7 +31,7 @@ const Recomendacion = ({ title, description }) => {
     <li className="">
       <TwoColumnsContainer>
         <div className="flex  gap-6 w-full text-dark dark:text-light">
-          <FaCheck size={32} className="text-secondary_dark" />
+          <FaCheck size={32} className="text-secondary_dark dark:text-primary" />
           <span className="font-semibold block text-2xl">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
