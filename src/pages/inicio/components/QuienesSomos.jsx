@@ -65,7 +65,7 @@ Card.propTypes = {
 const ValorTarjeta = ({ valor }) => {
   return (
     <article
-      id="nuestros-valores"
+      id={`valor-${valor.id}`}
       className="flex flex-col items-center justify-center text-center p-6 py-12 shadow-xl rounded-2xl bg-light text-dark gap-4">
       {valor.icon}
       <TitleH3 color="text-dark" textTransform="uppercase">
@@ -88,8 +88,8 @@ const NuestrosValoresGeneradorTarjetas = () => {
   return (
     <article id="tarjetas-valores" className="mt-6">
       <FourColumnnsContainer>
-        {valores.map((valor, key) => {
-          return <ValorTarjeta key={key} valor={valor} />;
+        {valores.map((valor) => {
+          return <ValorTarjeta key={valor.id} valor={valor} />;
         })}
       </FourColumnnsContainer>
     </article>
@@ -202,9 +202,12 @@ const QuienesSomos = () => {
                 <h3 className="text-2xl font-semibold uppercase">Servicios</h3>
               </BorderLeft>
               <div className="grid gap-3">
-                {serviciosOfrecidos.map((servicio, key) => {
+                {serviciosOfrecidos.map((servicio) => {
                   return (
-                    <article key={key} className="flex gap-4 items-center justify-start">
+                    <article
+                      key={servicio.id}
+                      id={`servicio-${servicio.id}`}
+                      className="flex gap-4 items-center justify-start">
                       <div className="w-8 h-8">
                         <FaCheck className="text-secondary" size={28} />
                       </div>

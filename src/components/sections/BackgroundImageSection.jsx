@@ -20,8 +20,7 @@ const BackgroundImageSection = ({
   return (
     <Section
       id={id}
-      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} ${width}`}
-    >
+      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} ${width}`}>
       {/* Background Image */}
       <img
         src={image_768}
