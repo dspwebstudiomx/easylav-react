@@ -1,7 +1,7 @@
 import {
   BorderLeft,
+  Button,
   ButtonContainer,
-  ButtonSecondary,
   Container,
   FourColumnnsContainer,
   Paragraph,
@@ -217,7 +217,12 @@ const QuienesSomos = () => {
                 })}
               </div>
               <ButtonContainer position="items-center justify-start" distance="h-20">
-                <ButtonSecondary title="Contáctanos" href="/contacto" width="w-full sm:w-[260px] scale-[0.8]" />
+                <Button
+                  title="Contáctanos"
+                  href="/contacto"
+                  width="w-full sm:w-[260px] scale-[0.8]"
+                  variant="secondary"
+                />
               </ButtonContainer>
             </div>
             <img src={image} alt="lavandería Easylav" className="shadow-image" loading="lazy" />

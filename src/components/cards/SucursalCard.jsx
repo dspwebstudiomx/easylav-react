@@ -160,7 +160,9 @@ const SucursalCard = (props) => {
     closeHour,
     openMinute,
     closeMinute,
+    disableZoom, // Nueva prop para controlar el zoom
   } = props;
+
   const { showModal, setShowModal } = useShowModal();
 
   const handleShowModal = useCallback(() => {
@@ -195,15 +197,17 @@ const SucursalCard = (props) => {
           {/* Badge Horario Abierto/Cerrado */}
           {renderOpenClosedBadge(isOpen)}
         </div>
-        <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4">
-          <button
-            onClick={handleShowModal}
-            id="zoom"
-            className="text-light rounded-full border-2 border-light p-3 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer"
-            aria-label={`Abrir detalles de la sucursal ${props.title}`}>
-            <FaMagnifyingGlass />
-          </button>
-        </div>
+        {!disableZoom && ( // Condicional para mostrar el botón de zoom
+          <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4">
+            <button
+              onClick={handleShowModal}
+              id="zoom"
+              className="text-light rounded-full border-2 border-light p-3 opacity-40 bg-dark hover:bg-secondary hover:opacity-100 cursor-pointer"
+              aria-label={`Abrir detalles de la sucursal ${props.title}`}>
+              <FaMagnifyingGlass />
+            </button>
+          </div>
+        )}
       </BackgroundImageSection>
       {/* Imagen */}
 
@@ -312,6 +316,7 @@ SucursalCard.propTypes = {
   serviceday1: PropTypes.string,
   servicehour1: PropTypes.string,
   image: PropTypes.string,
+  disableZoom: PropTypes.bool, // Nueva prop para controlar el zoom
 };
 
 const memorizedSucursalCard = memo(SucursalCard, (prevProps, nextProps) => {

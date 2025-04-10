@@ -88,7 +88,7 @@ const NuestrasSucursales = () => {
           }}>
           {sortedLocalServices.map((localservice) => (
             <SwiperSlide key={localservice.id}>
-              <SucursalCard {...localservice} />
+              <SucursalCard {...localservice} disableZoom={true} />
             </SwiperSlide>
           ))}
         </Swiper>

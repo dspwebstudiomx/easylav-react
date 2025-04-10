@@ -7,15 +7,7 @@
 */
 
 // Importaciones
-import {
-  ButtonContainer,
-  ButtonPrimary,
-  ButtonSecondary,
-  Container,
-  Paragraph,
-  Section,
-  TitleContainer,
-} from 'components';
+import { Button, ButtonContainer, Container, Paragraph, Section, TitleContainer } from 'components';
 import { scrollToTop } from 'functions';
 import ServicesGenerator from './ServicesGenerator';
 
@@ -33,19 +25,21 @@ const Titulo = () => {
 const ButtonSection = () => {
   return (
     <ButtonContainer position="justify-center items-center w-full" distance="mt-28">
-      <ButtonSecondary
+      <Button
         title="Sucursales en Morelia"
         href="/sucursales/morelia"
         name="Sucursales en Morelia"
         width={''}
         onClick={() => scrollToTop()}
+        variant="secondary"
       />
-      <ButtonPrimary
+      <Button
         title="Sucursales en León"
         href="/sucursales/leon"
         name="Sucursales en León"
         width={''}
         onClick={() => scrollToTop()}
+        variant="primary"
       />
     </ButtonContainer>
   );
