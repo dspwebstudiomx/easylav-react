@@ -153,7 +153,7 @@ export default function ContactFacturacion() {
           <Form
             ref={form}
             onSubmit={sendEmail}
-            className="flex flex-col mx-auto gap-8 text-sm text-dark dark:text-light tracking-wider pb-20 xl:w-4/5 shadow-2xl p-0 rounded-2xl mt-12">
+            className="flex flex-col mx-auto gap-8 text-sm text-dark bg-light tracking-wider py-6 xl:w-4/5 shadow-2xl p-0 rounded-2xl mt-12">
             {/* Fields */}
 
             {/* Datos del Usuario */}
