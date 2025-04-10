@@ -26,7 +26,7 @@ const Morelia = () => {
         author="dspwebstudio"
         keywords="lavandería Morelia, planchado Morelia"
         ogImage={image[576]}
-        ogImageAlt="Calle Benito Juaréz con vista a la Catedral de Morelia"
+        ogImageAlt="Vista de la Catedral de Morelia entre calles."
         ogType="website"
       />
       <PageLayoutPlaces
