@@ -24,7 +24,7 @@ const Morelia = () => {
         url="https://easylav.mx/sucursales/morelia"
         description="Visita nuestras modernas sucursales de EasyLav en Morelia, Michoacán, y descubre servicios de lavandería, tintorería y planchado con la mejor calidad y atención. ¡Te esperamos!"
         author="dspwebstudio"
-        keywords="lavandería Morelia, planchado Morelia"
+        keywords="lavandería en Morelia, lavanderías en Morelia Michoacán, tintorería Morelia, planchado en Morelia, lavado de ropa Morelia, EasyLav Morelia, lavandería express Morelia, servicios de lavandería Morelia"
         ogImage={image[576]}
         ogImageAlt="Vista de la Catedral de Morelia entre calles."
         ogType="website"
