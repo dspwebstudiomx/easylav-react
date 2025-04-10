@@ -14,23 +14,6 @@ import { scrollWithOffset } from 'functions';
 import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
 
-// Estilos
-const BUTTON_UI = {
-  DISPLAY: 'flex items-center justify-center',
-  HEIGHT: 'min-h-[60px]',
-  WIDTH: 'w-[320px] sm:w-[300px]',
-  FONT_SIZE: 'text-lg xl:text-lg',
-  PADDING: 'px-6 py-4',
-  FONT_WEIGHT: 'font-semibold',
-  TEXT_TRANSFORM: 'uppercase text-balance',
-  ROUNDED: 'rounded-xl',
-  LETTER_SPACING: 'tracking-wider sm:tracking-normal',
-  ANIMATION: 'transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300',
-};
-
-// Estructura
-const ButtonUI = `${BUTTON_UI.DISPLAY} ${BUTTON_UI.HEIGHT} ${BUTTON_UI.WIDTH}  ${BUTTON_UI.FONT_SIZE} ${BUTTON_UI.PADDING} ${BUTTON_UI.FONT_WEIGHT} ${BUTTON_UI.ROUNDED} ${BUTTON_UI.TEXT_TRANSFORM} ${BUTTON_UI.LETTER_SPACING} ${BUTTON_UI.ANIMATION} `;
-
 const Button = ({
   backgroundColor,
   title,
@@ -45,15 +28,15 @@ const Button = ({
   height,
   arialabel,
 }) => {
-  const buttonWidth = width ? width : BUTTON_UI.WIDTH;
-  const buttonHeight = height ? height : BUTTON_UI.WIDTH;
+  const buttonWidth = width ? width : 'w-[320px] sm:w-[300px]';
+  const buttonHeight = height ? height : 'min-h-[60px]';
   return (
     <HashLink to={href} scroll={(el) => scrollWithOffset(el)}>
       <button
         name={name}
         onClick={typeof onClick === 'function' ? onClick : undefined}
         type={type}
-        className={`${backgroundColor} ${border} ${ButtonUI} ${buttonWidth} ${buttonHeight} ${textColor} flex gap-3 z-50`}
+        className={`${backgroundColor} ${border} flex items-center justify-center min-h-[60px] w-[320px] sm:w-[300px] text-lg xl:text-lg px-6 py-4 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300 ${buttonWidth} ${buttonHeight} ${textColor} flex gap-3 z-50`}
         href={href}
         aria-label={arialabel}>
         {icon && <span>{icon}</span>}
