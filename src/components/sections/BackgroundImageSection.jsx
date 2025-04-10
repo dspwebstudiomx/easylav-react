@@ -16,6 +16,8 @@ const BackgroundImageSection = ({
   image,
   backgroundColor,
   rounded,
+  alt,
+  title,
 }) => {
   return (
     <Section
@@ -25,15 +27,16 @@ const BackgroundImageSection = ({
       <img
         src={image_768}
         srcSet={`
+          ${image_240} 240w,
           ${image_576} 576w,
           ${image_768} 768w,
           ${image_1024} 1024w,
           ${image_1200} 1200w,
           ${image_1920} 1920w,
                       `}
-        alt={image_240}
+        alt={alt}
         className={`absolute inset-0 -z-50 h-full w-full object-cover overflow-hidden ${image} ${height}`}
-        title={image_240 || image_768}
+        title={title}
       />
       {/* Background Image */}
 
@@ -62,5 +65,7 @@ BackgroundImageSection.propTypes = {
   backgroundColor: PropTypes.string,
   rounded: PropTypes.string,
   width: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
 };
 export default BackgroundImageSection;

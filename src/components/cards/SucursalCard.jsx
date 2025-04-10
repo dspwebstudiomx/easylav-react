@@ -149,6 +149,7 @@ const SucursalCard = ({
   advertisement, // Added advertisement as a prop
   position, // Added position as a prop
   title,
+  city,
   image,
   place,
   gmap,
@@ -186,6 +187,8 @@ const SucursalCard = ({
         image_1024={image}
         image_1200={image}
         image_1920={image}
+        title={`Imagen de sucursal ${title} en ${city}`}
+        alt={`Vista externa de Sucursal  Easylav  ${title} en ${city}`}
         width="w-full"
         height="h-[160px]"
         opacity="opacity-30"
@@ -298,6 +301,7 @@ const SucursalCard = ({
 SucursalCard.propTypes = {
   advertisement: PropTypes.string, // Added advertisement to prop types
   title: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   place: PropTypes.string.isRequired,
   gmap: PropTypes.string.isRequired,
