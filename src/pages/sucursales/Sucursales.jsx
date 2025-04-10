@@ -20,8 +20,8 @@ const Sucursales = () => {
   return (
     <>
       <SEOFriendly
-        title="Sucursales Lavanderías en Morelia | Easylav - Lavado y Planchado"
-        url="easylav-react.netlify.app/sucursales"
+        title="Sucursales Lavanderías en Morelia y León | Easylav - Lavado y Planchado"
+        url="https://easylav.mx/sucursales"
         description="Descubre nuestras sucursales de lavandería en Morelia y León. En Easylav ofrecemos limpieza impecable, planchado perfecto y atención personalizada. ¡Visítanos hoy!"
         author="dspwebstudio"
         publisher="dspwebstudio.com"
