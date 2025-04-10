@@ -225,7 +225,13 @@ const QuienesSomos = () => {
                 />
               </ButtonContainer>
             </div>
-            <img src={image} alt="lavandería Easylav" className="shadow-image" loading="lazy" />
+            <img
+              src={image}
+              alt="vista interna de lavandería Easylav con persona"
+              title="lavandería Easylav"
+              className="shadow-image"
+              loading="lazy"
+            />
           </TwoColumnsContainer>
         </Card>
         {/* Servicios */}
