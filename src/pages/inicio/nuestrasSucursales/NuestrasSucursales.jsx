@@ -72,16 +72,16 @@ const NuestrasSucursales = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetweenSlides: 30,
+              spaceBetweenSlides: 0,
               touchRatio: 1,
             },
             1210: {
-              slidesPerView: 4,
-              spaceBetweenSlides: 30,
+              slidesPerView: 3,
+              spaceBetweenSlides: 0,
               touchRatio: 1,
             },
             1920: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetweenSlides: 0,
               touchRatio: 1,
             },

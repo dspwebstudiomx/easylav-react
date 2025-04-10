@@ -24,6 +24,7 @@ import {
   FaHandsHelping,
 } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa6';
+import { useEffect } from 'react';
 
 // Biblioteca de datos
 const valores = [
@@ -97,6 +98,32 @@ const NuestrosValoresGeneradorTarjetas = () => {
 
 // Estructura
 const QuienesSomos = () => {
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6, // Se activa cuando el 60% de la sección es visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const activeSection = entry.target.id;
+          const navLink = document.querySelector(`[href="#${activeSection}"]`);
+          if (navLink) {
+            document.querySelectorAll('.active').forEach((link) => link.classList.remove('active'));
+            navLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
