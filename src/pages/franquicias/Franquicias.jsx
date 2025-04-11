@@ -20,7 +20,7 @@
 
 // Importaciones
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { SEOFriendly, HomeLayout, Loading } from 'components';
+import { SEOFriendly, HomeLayout, Loading, Footer } from 'components';
 import { lazy, Suspense } from 'react';
 
 // Constantes
@@ -47,21 +47,23 @@ const Franquicias = () => {
       />
 
       {/* Layout principal */}
-      <HomeLayout>
-        {/* Carga prioritaria del componente principal */}
-        <Suspense fallback={<Loading />}>
-          <QuieresUnaFranquicia />
-        </Suspense>
-        {/* Carga diferida de otros componentes */}
-        <Suspense fallback={<Loading />}>
-          <SobreNuestrasFranquicias />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
-          <PaquetesFranquicias />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
-          <ImagenesFranquicias />
-        </Suspense>
+      <HomeLayout className="pb-16 sm:pb-20 lg:pb-24 min-h-screen">
+        <div className="flex flex-col gap-8">
+          {/* Contenido principal */}
+          <Suspense fallback={<Loading />}>
+            <QuieresUnaFranquicia />
+          </Suspense>
+          <Suspense fallback={<Loading />}>
+            <SobreNuestrasFranquicias />
+          </Suspense>
+          <Suspense fallback={<Loading />}>
+            <PaquetesFranquicias />
+          </Suspense>
+          <Suspense fallback={<Loading />}>
+            <ImagenesFranquicias />
+          </Suspense>
+        </div>
+        <Footer />
       </HomeLayout>
     </>
   );
