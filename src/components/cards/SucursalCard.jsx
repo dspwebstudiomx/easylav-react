@@ -15,78 +15,12 @@ import classNames from 'classnames';
 import { BackgroundImageSection, Badge, Modal, TitleH3 } from 'components';
 import { useShowModal } from 'hooks';
 import PropTypes from 'prop-types';
-import { memo } from 'react';
-import { useMemo } from 'react';
-import { useCallback } from 'react';
+import { memo, useMemo, useCallback } from 'react';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
-// Estilos
-const SUCURSAL_CARD_UI = {
-  ARTICLE: {
-    ANIMATION: 'animate__animated animate__fadeIn animate__slower ',
-    BACKGROUND: 'bg-light',
-    COLOR: 'text-dark',
-    DISPLAY: 'flex flex-col relative mx-auto',
-    HEIGHT: 'h-full',
-    JUSTIFY: 'justify-center items-center mx-auto',
-    OVERFLOW: 'overflow-hidden',
-    ROUNDED: 'rounded-xl',
-    SHADOW: 'shadow-xl',
-    WIDTH: 'w-[250px]  xl:w-full',
-  },
-  ICON: {
-    SIZE_1: 30,
-    SIZE_2: 20,
-    COLOR: 'text-secondary',
-  },
-  TEXT: {
-    FONT_SIZE: 'text-[15px] sm:text-[12px]',
-    COLOR: 'text-dark',
-    LINE_HEIGHT: '',
-  },
-  CONTENT: {
-    SECTION: 'flex flex-col justify-start gap-3 p-4',
-    TITLE: 'flex items-center justify-center mx-auto',
-    DESCRIPTION: {
-      CONTAINER: 'flex flex-col gap-4 my-4 justify-center',
-      INFO: 'flex gap-6 justify-center',
-    },
-    BADGE: {
-      CONTAINER:
-        'absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm',
-      PARAGRAPH: 'ml-8',
-    },
-  },
-};
-
-const styles = {
-  article: `${SUCURSAL_CARD_UI.ARTICLE.ANIMATION} ${SUCURSAL_CARD_UI.ARTICLE.BACKGROUND} ${SUCURSAL_CARD_UI.ARTICLE.COLOR} ${SUCURSAL_CARD_UI.ARTICLE.DISPLAY} ${SUCURSAL_CARD_UI.ARTICLE.HEIGHT} ${SUCURSAL_CARD_UI.ARTICLE.JUSTIFY} ${SUCURSAL_CARD_UI.ARTICLE.OVERFLOW} ${SUCURSAL_CARD_UI.ARTICLE.ROUNDED} ${SUCURSAL_CARD_UI.ARTICLE.SHADOW} ${SUCURSAL_CARD_UI.ARTICLE.WIDTH}`,
-  content: {
-    section: SUCURSAL_CARD_UI.CONTENT.SECTION,
-    title: SUCURSAL_CARD_UI.CONTENT.TITLE,
-    icon: {
-      size_1: SUCURSAL_CARD_UI.ICON.SIZE_1,
-      size_2: SUCURSAL_CARD_UI.ICON.SIZE_2,
-      color: SUCURSAL_CARD_UI.ICON.COLOR,
-    },
-    text: `${SUCURSAL_CARD_UI.TEXT.FONT_SIZE} ${SUCURSAL_CARD_UI.TEXT.COLOR} ${SUCURSAL_CARD_UI.TEXT.LINE_HEIGHT}`,
-    description: {
-      container: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.CONTAINER,
-      info: SUCURSAL_CARD_UI.CONTENT.DESCRIPTION.INFO,
-    },
-    badge: {
-      container: SUCURSAL_CARD_UI.CONTENT.BADGE.CONTAINER,
-      paragraph: SUCURSAL_CARD_UI.CONTENT.BADGE.PARAGRAPH,
-    },
-  },
-};
-
-// Lista de días festivos oficiales de México (formato DD-)
-const holidays = [
-  '01-01', // Año Nuevo
-  '25-12', // Navidad
-];
+// Lista de días festivos oficiales de México (formato DD-MM)
+const holidays = ['01-01', '25-12'];
 
 // Función para verificar si hoy es un día festivo
 const isHoliday = () => {
@@ -95,28 +29,29 @@ const isHoliday = () => {
   return holidays.includes(formattedDate);
 };
 
-// Utility function to determine if the branch is open
+// Función para determinar si la sucursal está abierta
 const isBranchCurrentlyOpen = (openHour, openMinute, closeHour, closeMinute) => {
-  if (isHoliday()) {
-    return false; // Cerrado en días festivos
-  } else {
-    const currentTime = new Date();
-    const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
-    const openTime = openHour * 60 + openMinute;
-    const closeTime = closeHour * 60 + closeMinute;
-    return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
-  }
+  if (isHoliday()) return false;
+  const currentTime = new Date();
+  const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
+  const openTime = openHour * 60 + openMinute;
+  const closeTime = closeHour * 60 + closeMinute;
+  return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
 };
 
-// Function to render the open/closed badge
+// Renderiza el badge de abierto/cerrado
 const renderOpenClosedBadge = (isOpen) => (
   <div
-    className={`rounded-lg border-2 text-xs ${isOpen ? ' border-primary_darkcontrast bg-primary text-primary_darkcontrast' : 'border-red_dark bg-red_light text-red'} px-4 py-2`}>
+    className={`rounded-lg border-2 text-xs ${
+      isOpen
+        ? 'border-primary_darkcontrast bg-primary text-primary_darkcontrast'
+        : 'border-red_dark bg-red_light text-red'
+    } px-4 py-2`}>
     <p>{isOpen ? 'Abierto' : 'Cerrado'}</p>
   </div>
 );
 
-// Function to render Waze and Google Maps links
+// Renderiza los enlaces de Waze y Google Maps
 const renderMapLinks = (position, title, gmap) => (
   <div className="flex md:hidden">
     <a
@@ -144,10 +79,10 @@ const renderMapLinks = (position, title, gmap) => (
   </div>
 );
 
-// Estructura
+// Componente principal
 const SucursalCard = ({
-  advertisement, // Added advertisement as a prop
-  position, // Added position as a prop
+  advertisement,
+  position,
   title,
   city,
   image,
@@ -159,8 +94,8 @@ const SucursalCard = ({
   closeHour,
   openMinute,
   closeMinute,
-  disableZoom, // Prop para deshabilitar el zoom
-  badge, // Added badge as a prop
+  disableZoom,
+  badge,
 }) => {
   const { showModal, setShowModal } = useShowModal();
 
@@ -176,7 +111,13 @@ const SucursalCard = ({
   );
 
   return (
-    <article id={`sucursal-${title}`} key={title} className={classNames(styles.article, { 'z-10': showModal })}>
+    <article
+      id={`sucursal-${title}`}
+      key={title}
+      className={classNames(
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center mx-auto overflow-hidden rounded-xl shadow-xl w-[250px] xl:w-full',
+        { 'z-10': showModal }
+      )}>
       {/* Imagen */}
       <BackgroundImageSection
         id={`sucursal-${title}`}
@@ -188,20 +129,17 @@ const SucursalCard = ({
         image_1200={image}
         image_1920={image}
         title={`Imagen de sucursal ${title} en ${city}`}
-        alt={`Vista externa de Sucursal  Easylav  ${title} en ${city}`}
+        alt={`Vista externa de Sucursal Easylav ${title} en ${city}`}
         width="w-full"
         height="h-[160px]"
-        opacity="opacity-30"
+        opacity="opacity-60"
         backgroundColor="bg-dark"
-        className="">
-        <div
-          id={`open-closed-zoom-${title}`}
-          className="flex justify-end items-start h-full absolute top-0 right-0 p-4">
-          {/* Badge Horario Abierto/Cerrado */}
+        className="rounded-t-xl">
+        <div className="flex justify-end items-start h-full absolute top-0 right-0 p-4">
           {renderOpenClosedBadge(isOpen)}
         </div>
-        <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4">
-          {!disableZoom && (
+        {!disableZoom && (
+          <div className="flex justify-end items-end h-full absolute top-0 right-0 p-4">
             <button
               onClick={handleShowModal}
               id="zoom"
@@ -209,45 +147,38 @@ const SucursalCard = ({
               aria-label={`Abrir detalles de la sucursal ${title}`}>
               <FaMagnifyingGlass />
             </button>
-          )}
-        </div>
+          </div>
+        )}
       </BackgroundImageSection>
-      {/* Imagen */}
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center min-h-[240px] ">
+      <section className="flex flex-col gap-4 justify-between items-center min-h-[240px]">
         <div className="p-8 flex flex-col gap-4">
-          {/* Título */}
           <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
             {title}
           </TitleH3>
-          {/* Título */}
-
-          {/* Contenido */}
           <div className="flex flex-col gap-4 items-start">
-            {/* Dirección */}
             <a
-              className={styles.content.description.info}
+              className="flex gap-6 justify-center"
               href={gmap}
               target="_blank"
               rel="noopener noreferrer"
               title={`Sucursal ${title}`}>
-              <FaMapMarkerAlt size={styles.content.icon.size_1} className={styles.content.icon.color} />
-              <span className={styles.content.text}>{place}</span>
+              <div className="w-10 h-10">
+                <FaMapMarkerAlt size={20} className="text-secondary" />
+              </div>
+              <span className="text-base text-dark">{place}</span>
             </a>
-            {/* Dirección */}
-
-            {/* Horario */}
-            <div className={styles.content.description.info}>
-              <FaRegClock size={styles.content.icon.size_2} className={styles.content.icon.color} />
-              <div className={`${styles.content.text} flex flex-col gap-1`}>
+            <div className="flex gap-2 justify-center items-center">
+              <div className="w-10 h-10">
+                <FaRegClock size={20} className="text-secondary" />
+              </div>
+              <div className="text-base text-dark flex flex-col gap-1">
                 <span>{serviceday1}</span>
                 <span>{servicehour1}</span>
               </div>
             </div>
-            {/* Horario */}
           </div>
-          {/* Contenido */}
         </div>
       </section>
 
@@ -262,23 +193,18 @@ const SucursalCard = ({
       ) : (
         <div className="w-full">{renderMapLinks(position, title, gmap)}</div>
       )}
-      {/* Advertisement */}
-      {/* Descripción */}
 
-      {/* Badge*/}
+      {/* Badge */}
       {badge && (
-        <section className={styles.content.badge.container}>
-          <p className={styles.content.badge.paragraph}>{badge}</p>
+        <section className="absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm">
+          <p className="ml-8">{badge}</p>
         </section>
       )}
-      {/* Badge*/}
 
       {/* Modal */}
       {showModal && (
         <Modal width="w-[80vw] md:w-[40vw] z-50">
-          <div
-            id="imagen-sucursal"
-            className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
+          <div className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
@@ -286,7 +212,7 @@ const SucursalCard = ({
               <img
                 src={image}
                 alt={title}
-                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[280px]  object-cover shadow-2xl"
+                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[280px] object-cover shadow-2xl"
               />
               <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
@@ -295,13 +221,12 @@ const SucursalCard = ({
           </div>
         </Modal>
       )}
-      {/* Modal */}
     </article>
   );
 };
 
 SucursalCard.propTypes = {
-  advertisement: PropTypes.string, // Added advertisement to prop types
+  advertisement: PropTypes.string,
   title: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
@@ -312,30 +237,13 @@ SucursalCard.propTypes = {
   openHour: PropTypes.number.isRequired,
   closeHour: PropTypes.number.isRequired,
   openMinute: PropTypes.number.isRequired,
-  disableZoom: PropTypes.bool, // Nueva prop para controlar el zoom
-  closeMinute: PropTypes.number.isRequired, // Added closeMinute to prop types
-  badge: PropTypes.string, // Added badge to prop types
+  closeMinute: PropTypes.number.isRequired,
+  disableZoom: PropTypes.bool,
+  badge: PropTypes.string,
   position: PropTypes.shape({
     lat: PropTypes.number.isRequired,
     lng: PropTypes.number.isRequired,
-  }).isRequired, // Added position to prop types
+  }).isRequired,
 };
 
-const memorizedSucursalCard = memo(SucursalCard, (prevProps, nextProps) => {
-  return (
-    prevProps.title === nextProps.title &&
-    prevProps.position.lat === nextProps.position.lat &&
-    prevProps.position.lng === nextProps.position.lng &&
-    prevProps.gmap === nextProps.gmap &&
-    prevProps.openHour === nextProps.openHour &&
-    prevProps.closeHour === nextProps.closeHour &&
-    prevProps.openMinute === nextProps.openMinute &&
-    prevProps.closeMinute === nextProps.closeMinute &&
-    prevProps.place === nextProps.place &&
-    prevProps.badge === nextProps.badge &&
-    prevProps.advertisement === nextProps.advertisement &&
-    prevProps.serviceday1 === nextProps.serviceday1 &&
-    prevProps.servicehour1 === nextProps.servicehour1
-  );
-});
-export default memorizedSucursalCard;
+export default memo(SucursalCard);

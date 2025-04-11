@@ -22,7 +22,7 @@ const BackgroundImageSection = ({
   return (
     <Section
       id={id}
-      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} ${width}`}>
+      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} w-full`}>
       {/* Background Image */}
       <img
         src={image_768}
@@ -35,7 +35,7 @@ const BackgroundImageSection = ({
           ${image_1920} 1920w,
                       `}
         alt={alt}
-        className={`absolute inset-0 -z-50 h-full w-full object-cover overflow-hidden ${image} ${height}`}
+        className={`absolute inset-0 -z-50 h-full w-full object-cover overflow-hidden ${image} ${height} ${width}`}
         title={title}
       />
       {/* Background Image */}
@@ -45,7 +45,7 @@ const BackgroundImageSection = ({
       {/* Overlay */}
 
       {/* Container */}
-      <Container className="p-12">{children}</Container>
+      <Container className="">{children}</Container>
       {/* Container */}
     </Section>
   );
