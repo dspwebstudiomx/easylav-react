@@ -44,6 +44,7 @@ const Sucursales = () => {
             rounded="rounded-lg"
             width="w-[300px]"
             height="h-[210px]"
+            alt="Tarjeta con la imagen de Catedral de Morelia"
           />
           <BackgroundCard
             image={leon}
@@ -52,6 +53,7 @@ const Sucursales = () => {
             rounded="rounded-lg"
             width="w-[300px]"
             height="h-[210px]"
+            alt="Tarjeta con la imagen del centro de León"
           />
         </div>
       </PageLayout>

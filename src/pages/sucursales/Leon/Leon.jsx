@@ -22,9 +22,12 @@ const Leon = () => {
     <>
       <SEOFriendly
         title="León | Sucursales EasyLav: Tu lavandería ideal"
-        url="easylav-react.netlify.app/sucursales/leon"
+        url="https://easylav.mx/sucursales/leon"
         description="Visita nuestras modernas sucursales de EasyLav en León, Guanajuato, y descubre servicios de lavandería, tintorería y planchado con la mejor calidad y atención. ¡Te esperamos!"
         author="dspwebstudio"
+        publisher="dspwebstudio.com"
+        robots="index, follow"
+        canonical="https://easylav.mx/sucursales/leon"
         keywords="lavandería en León, lavanderías en León Guanajuato, tintorería León, planchado en León, lavado de ropa León, EasyLav León, lavandería express León, servicios de lavandería León"
         ogImage={image[576]}
         ogImageAlt="Ceentro de León, Guanajuato"
