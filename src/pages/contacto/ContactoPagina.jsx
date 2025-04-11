@@ -20,7 +20,7 @@ const ContactoPagina = () => {
         ogType="website"
       />
       <PageLayout>
-        <TitleH1 attr="sr-only" align="align">
+        <TitleH1 attr="sr-only" align="">
           Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus
           dudas, recibir sugerencias y atender tus necesidades.
         </TitleH1>
