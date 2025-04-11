@@ -39,7 +39,7 @@ const Sucursales = () => {
           ¡Visita nuestras sucursales en Morelia y León! Descubre servicios de lavandería rápidos, económicos y de alta
           calidad con Easylav. ¡Estamos cerca de ti!
         </TitleH1>
-        <div className="flex flex-col sm:flex-row gap-8 place-items-center justify-center mt-20 mx-auto w-full">
+        <div className="flex flex-col sm:flex-row gap-8 place-items-center justify-center mx-auto w-full">
           <BackgroundCard
             image={morelia}
             title="Morelia"
