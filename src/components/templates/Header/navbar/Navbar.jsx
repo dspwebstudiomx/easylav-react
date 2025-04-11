@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
         </Container>
       </nav>
-      <HeaderLine className="fixed top-[100px]" />
+      <HeaderLine className="fixed top-[80px] sm:top-[100px]" />
     </>
   );
 };
