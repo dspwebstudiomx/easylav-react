@@ -31,7 +31,7 @@ const Inicio = () => (
       ogImageAlt="canasta verde con ropa sucia"
       ogType="website"
     />
-    <HomeLayout>
+    <HomeLayout id="inicio" className="dark:bg-dark">
       <Suspense fallback={<Loading />}>
         <HeroInicioVideo />
       </Suspense>

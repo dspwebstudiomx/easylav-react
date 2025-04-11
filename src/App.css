@@ -30,14 +30,6 @@ html {
   text-shadow: 0 0 1px #000;
 }
 
-/* *::selection {
-  background: none;
-} */
-
-/* *::-moz-selection {
-  background: none;
-} */
-
 .loader,
 .loader:before,
 .loader:after {
