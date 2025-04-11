@@ -22,7 +22,7 @@ const Testimonio = ({ testimonio }) => {
       className="pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-lg h-[360px] sm:h-[300px] w-[80%] sm:w-full shadow-xl mx-auto"
       key={TESTIMONY_ID}>
       {/* Testimonio */}
-      <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className="text-pretty text-base">
+      <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className="text-pretty text-lg">
         {TESTIMONY}
       </p>
       {/* Testimonio */}
