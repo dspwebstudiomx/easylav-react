@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="fixed shadow-md dark:shadow-none z-[9999] w-[100vw] h-[80px] sm:h-[90px] md:h-[100px] lg:h-[110px] flex justify-between items-center px-6 md:px-8 lg:px-12 xl:px-32 bg-light">
+      className="fixed top-0 left-0 z-50 flex w-full items-center justify-between shadow-lg px-4 py-2 transition-all duration-300 ease-in-out bg-light h-[110px]">
       <Logo />
       <div className="flex items-center justify-between w-auto">
         <NavLinksDesktop className="hidden lg:flex gap-6 text-sm md:text-base lg:text-lg font-semibold" />
