@@ -59,8 +59,8 @@ export default function Footer() {
           </Container>
         </div>
         <div className="bg-primary text-light px-12 lg:px-0">
-          <Container className="bg-primary text-primary_darkcontrast h-16">
-            <div className="flex justify-center sm:justify-start items-center w-full gap-2">
+          <Container className="bg-primary text-primary_darkcontrast h-16 w-full">
+            <div className="flex items-center justify-center sm:justify-start gap-2 h-full">
               <FaRegCopyright />
               <h3>Derechos Reservados 2024</h3>
             </div>
