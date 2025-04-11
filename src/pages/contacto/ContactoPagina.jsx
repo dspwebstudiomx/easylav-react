@@ -2,7 +2,7 @@ import { scrollToTop } from 'functions';
 import { canastaderopa_640 as image } from 'assets';
 import Contacto from '../../components/contacto/Contacto';
 import PageLayout from '../../components/layout/PageLayout';
-import { SEOFriendly } from 'components';
+import { SEOFriendly, TitleH1 } from 'components';
 
 const ContactoPagina = () => {
   scrollToTop();
@@ -20,6 +20,10 @@ const ContactoPagina = () => {
         ogType="website"
       />
       <PageLayout>
+        <TitleH1 attr="sr-only" align="align">
+          Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus
+          dudas, recibir sugerencias y atender tus necesidades.
+        </TitleH1>
         <Contacto />
       </PageLayout>
     </>

@@ -1,4 +1,4 @@
-import { Paragraph, ParagraphContainer, SocialLinks, TitleH1, TitleH2 } from 'components';
+import { Paragraph, ParagraphContainer, SocialLinks, TitleH2 } from 'components';
 import { scrollToTop } from 'functions';
 import { Link } from 'react-router-dom';
 
@@ -6,10 +6,6 @@ const ContactInfo = () => {
   return (
     <section className="animate__animated animate__bounceInLeft animate__slowest grid dark:bg-dark">
       <div className="mb-12">
-        <TitleH1 attr="sr-only" align="align">
-          Contáctanos fácilmente a través de nuestro formulario en línea. En Easylav estamos aquí para resolver tus
-          dudas, recibir sugerencias y atender tus necesidades.
-        </TitleH1>
         <TitleH2>¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.</TitleH2>
       </div>
       <ParagraphContainer>
