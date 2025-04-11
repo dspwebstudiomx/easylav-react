@@ -31,14 +31,14 @@ const Button = ({
 
   // Define los estilos base
   let baseStyles =
-    'flex items-center justify-center min-h-[60px] text-lg xl:text-lg px-6 py-4 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex gap-3 z-50';
+    'flex items-center justify-center min-h-[60px] text-lg xl:text-lg px-6 py-4 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 flex gap-3 z-50';
 
   // Define los estilos específicos para cada variante
   let variantStyles = '';
   switch (variant) {
     case 'primary':
       variantStyles =
-        'bg-primary text-light hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light';
+        'bg-primary text-primary_contrastDark hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light';
       break;
     case 'secondary':
       variantStyles =

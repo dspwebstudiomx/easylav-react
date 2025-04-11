@@ -18,8 +18,8 @@
 // Importaciones
 import {
   BackgroundImageSection,
+  Button,
   ButtonContainer,
-  ButtonSecondary,
   Contacto,
   Header,
   ScrollToTopButton,
@@ -61,13 +61,14 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
             <>
               <SucursalCardPerCity city={city} />
               <ButtonContainer position="items-center justify-center w-full" distance="mt-16">
-                <ButtonSecondary
+                <Button
                   title="Regresar a sucursales"
                   href="/sucursales"
                   distance=""
                   type="button"
                   width="w-full sm:w-[320px]"
                   arialabel="Regresar a la lista de sucursales"
+                  variant="primary"
                 />
               </ButtonContainer>
             </>
