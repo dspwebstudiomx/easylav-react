@@ -29,24 +29,28 @@ const Navbar = () => {
     toggleNav();
   };
 
-  const height = 'h-[80px] xl:h-[110px]';
+  const height = 'h-[80px] sm:h-[180px] md:h-[100px]';
 
   return (
-    <nav id="nav" className={`fixed top-0 left-0 w-full z-50 bg-light shadow-md ${height}`}>
-      <Container className="">
-        <div className={`flex flex-row items-center justify-between w-full ${height} gap-4 px-6`}>
-          <Logo />
-          <div className="flex flex-row items-center justify-end">
-            <NavLinksDesktop />
-            <DarkModeButton />
-            <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} className="flex lg:hidden" />
-            {navigationLinks && <NavLinksMobile onLinkClick={handleLinkClick} />}
+    <>
+      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-50 bg-light shadow-md ${height}`}>
+        <Container className="bg-light">
+          <div className={`flex sm:flex-col items-center justify-center w-full ${height} gap-2 px-6 xl:px-0`}>
+            <div className={`flex flex-row items-center justify-between w-full ${height} gap-6 `}>
+              <Logo />
+              <div className="flex items-center gap-4">
+                <NavLinksDesktop />
+                <DarkModeButton />
+                <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} className="flex lg:hidden" />
+                {navigationLinks && <NavLinksMobile onLinkClick={handleLinkClick} />}
+              </div>
+            </div>
+            <NavLinksTablet />
           </div>
-          <NavLinksTablet className="hidden sm:flex gap-4 text-sm md:text-base font-medium lg:hidden" />
-          <HeaderLine />
-        </div>
-      </Container>
-    </nav>
+        </Container>
+      </nav>
+      <HeaderLine className="fixed top-[100px]" />
+    </>
   );
 };
 

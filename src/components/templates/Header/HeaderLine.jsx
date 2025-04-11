@@ -2,14 +2,16 @@
 HeaderLine.jsx - Componente
 ----------------------------
 Creador por: Daniel Pérez
-
 */
+// Importaciones
+import PropTypes from 'prop-types';
 
 // Estructura
-const HeaderLine = () => {
-  return (
-    <div className="fixed z-10 h-1 w-full bg-gradient-to-r from-primary to-secondary sm:relative top-[80px] sm:top-0 2xl:fixed md:top-[110px] lg:top-0 2xl:top-[110px]"></div>
-  );
+const HeaderLine = ({ className }) => {
+  return <div className={`h-1 w-full bg-gradient-to-r from-primary to-secondary ${className}`}></div>;
 };
-
 export default HeaderLine;
+
+HeaderLine.propTypes = {
+  className: PropTypes.string,
+};

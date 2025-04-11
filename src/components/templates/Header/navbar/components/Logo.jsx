@@ -10,7 +10,7 @@ const Logo = () => {
       <img
         alt="logo easylav a color"
         src={LogoHorizontalColor}
-        className="w-[180px] 2xl:w-[240px] z-40"
+        className="w-[180px] z-40"
         title="logo easylav a color"
         aria-label="logo easylav"
       />
