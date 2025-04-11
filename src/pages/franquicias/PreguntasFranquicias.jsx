@@ -1,7 +1,6 @@
 import { memo, useState, useCallback } from 'react';
-import { Accordion, ButtonContainer, ButtonSecondary } from 'components';
+import { Accordion } from 'components';
 import { franquiciaDescripciones } from 'data';
-import { FaRegBuilding } from 'react-icons/fa';
 
 const PreguntasFranquicias = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -25,16 +24,6 @@ const PreguntasFranquicias = () => {
           </li>
         ))}
       </ul>
-      <ButtonContainer position={'justify-center sm:justify-center items-center mt-20'}>
-        <ButtonSecondary
-          href={'/sucursales'}
-          title={'Ver Sucursales'}
-          icon={<FaRegBuilding />}
-          width={''}
-          name="ver sucursales"
-          aria-label="Ver la lista de sucursales"
-        />
-      </ButtonContainer>
     </article>
   );
 };

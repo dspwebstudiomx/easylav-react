@@ -41,8 +41,7 @@ const Button = ({
         'bg-primary text-primary_contrastDark hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light';
       break;
     case 'secondary':
-      variantStyles =
-        'bg-secondary text-light hover:bg-secondary_dark dark:text-dark dark:bg-primary_dark dark:hover:bg-primary_light';
+      variantStyles = 'bg-secondary text-light dark:text-dark dark:bg-primary_dark dark:hover:bg-primary_light';
       break;
     default:
       variantStyles = 'bg-primary text-light';

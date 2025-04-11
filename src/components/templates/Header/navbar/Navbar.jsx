@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="bg-light z-[9999] fixed top-0 flex flex-col justify-center sm:absolute xl:fixed shadow-xl w-full h-[110px] sm:h-[150px] xl:h-[110px]">
+      className="bg-light z-[9999] fixed top-0 flex flex-col justify-center sm:absolute xl:fixed shadow-xl erroe w-full h-[110px] sm:h-[150px] xl:h-[110px]">
       <Container className="flex gap-12 justify-between items-center mx-auto p-6 sm:px-8 lg:px-12 2xl:px-0 w-full h-full z-[9999]">
         <div id="navbar" className="flex items-center justify-between gap-4 w-full h-full">
           <Logo />

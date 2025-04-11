@@ -1,7 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
-import { Container, Section, TituloYDescripcion } from 'components';
+import { Button, ButtonContainer, Container, Section, TituloYDescripcion } from 'components';
 import PreguntasFranquicias from './PreguntasFranquicias';
 import { memo } from 'react';
+import { FaRegBuilding } from 'react-icons/fa6';
 
 // Estilos
 
@@ -16,6 +17,16 @@ const SobreNuestrasFranquicias = () => {
           description="Conoce más sobre nuestras franquicias y cómo puedes formar parte de nuestro exitoso modelo de negocio. Aquí encontrarás información detallada sobre los diferentes paquetes de franquicias que ofrecemos, así como las características y beneficios de cada uno."
         />
         <PreguntasFranquicias />
+        <ButtonContainer position={'justify-center items-center mt-20'}>
+          <Button
+            href={'/sucursales'}
+            title={'Ver Sucursales'}
+            icon={<FaRegBuilding />}
+            width={''}
+            name="ver sucursales"
+            aria-label="Ver la lista de sucursales"
+          />
+        </ButtonContainer>
       </Container>
     </Section>
   );

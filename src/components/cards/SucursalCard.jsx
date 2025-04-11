@@ -193,7 +193,7 @@ const SucursalCard = ({
         height="h-[160px]"
         opacity="opacity-30"
         backgroundColor="bg-dark"
-        className="rounded-t-xl">
+        className="">
         <div
           id={`open-closed-zoom-${title}`}
           className="flex justify-end items-start h-full absolute top-0 right-0 p-4">
