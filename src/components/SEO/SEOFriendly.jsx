@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 // Acceso a las variables de entorno
-const facebookPixelId = import.meta.env.VITE_FACEBOOK_PIXEL_ID || '';
 const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID || '';
 const googleAdsId = import.meta.env.VITE_GOOGLE_ADS_ID || '';
 
@@ -52,32 +51,6 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
       <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
       <meta name="theme-color" content="#AF4DFA" />
       <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
-
-      {/* Facebook Pixel */}
-      <script>
-        {`
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '${facebookPixelId}');
-          fbq('track', 'PageView');
-        `}
-      </script>
-      <noscript>
-        {`
-          <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=${facebookPixelId}&ev=PageView&noscript=1"
-          />
-        `}
-      </noscript>
 
       {/* Google Analytics */}
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>

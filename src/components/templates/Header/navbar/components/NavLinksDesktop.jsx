@@ -7,7 +7,7 @@ const NavLinksDesktop = () => {
   return (
     <ul
       id="navlinks-desktop"
-      className="hidden items-center justify-between gap-8 px-6 xl:flex xl:gap-4 2xl:px-0 uppercase font-semibold text-bolder">
+      className="hidden items-center justify-end gap-8 px-6 xl:flex xl:gap-4 2xl:px-0 uppercase font-semibold">
       {navLinksSections.map((navlink) => {
         return (
           <NavHashLink
