@@ -13,7 +13,7 @@ const NavLinksDesktop = () => {
           <NavHashLink
             key={navlink.id}
             id={`navlink-${navlink.name}`}
-            className={`hover:text-secondary_dark cursor-pointer`}
+            className={`hover:text-secondary_dark`}
             to={navlink.href}
             scroll={scrollWithOffset}
             title={`Ir a ${navlink.linkId}`}>
@@ -26,7 +26,7 @@ const NavLinksDesktop = () => {
           <NavLink
             key={navlink.id}
             id={`navlink-${navlink.name}`}
-            className="hover:text-secondary_dark cursor-pointer text-dark"
+            className="hover:text-secondary_dark text-dark"
             to={navlink.href}
             title={`Ir a ${navlink.linkId}`}
             onClick={() => {
