@@ -1,7 +1,7 @@
 // Importaciones
 import {
+  Button,
   ButtonContainer,
-  ButtonSecondary,
   ContactFormFranquicias,
   Container,
   Modal,
@@ -85,13 +85,14 @@ const PaquetesFranquicias = () => {
                     ))}
                   </ul>
                   <ButtonContainer position="justify-center items-center">
-                    <ButtonSecondary
+                    <Button
                       title={'Contactar'}
-                      width={'w-full'}
+                      width={'w-full 2xl:w-[320px]'}
                       onClick={() => handleOpenModal(paquete)}
                       distance="mx-1"
                       id={`boton-contactar-${paquete.nombre.replace(/\s+/g, '-').toLowerCase()}`}
                       aria-label={`Contactar para el paquete ${paquete.nombre}`}
+                      variant="secondary"
                     />
                   </ButtonContainer>
                 </div>

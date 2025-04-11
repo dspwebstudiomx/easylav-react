@@ -276,7 +276,9 @@ const SucursalCard = ({
       {/* Modal */}
       {showModal && (
         <Modal width="w-[80vw] md:w-[40vw] z-50">
-          <div id="imagen-sucursal" className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8">
+          <div
+            id="imagen-sucursal"
+            className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
@@ -284,7 +286,7 @@ const SucursalCard = ({
               <img
                 src={image}
                 alt={title}
-                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[220px]  object-cover shadow-2xl"
+                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[280px]  object-cover shadow-2xl"
               />
               <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
