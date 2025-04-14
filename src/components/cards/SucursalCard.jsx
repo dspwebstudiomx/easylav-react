@@ -115,7 +115,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center overflow-hidden rounded-xl shadow-xl w-[250px]',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center overflow-hidden rounded-xl shadow-xl w-full',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
@@ -152,7 +152,7 @@ const SucursalCard = ({
       </BackgroundImageSection>
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center min-h-[240px]">
+      <section className="flex flex-col gap-4 justify-between items-center min-h-[320px]">
         <div className="p-8 flex flex-col gap-4">
           <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
             {title}
