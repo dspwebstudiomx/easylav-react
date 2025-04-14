@@ -59,7 +59,7 @@ const Navbar = () => {
           </div>
         </Container>
       </nav>
-      <ThemeLine className="fixed sm:relative top-[80px] sm:top-[0px] xl:top-[100px] xl:fixed" />
+      <ThemeLine className="fixed sm:relative top-[100px] sm:top-[0px] xl:top-[100px] xl:fixed" />
     </>
   );
 };
