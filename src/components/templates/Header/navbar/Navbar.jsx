@@ -39,7 +39,7 @@ const Navbar = () => {
     toggleNav();
   };
 
-  const height = 'h-[80px] sm:h-[180px] md:h-[160px] xl:h-[100px]';
+  const height = 'h-[100px] sm:h-[180px] md:h-[160px] xl:h-[100px]';
 
   return (
     <>
