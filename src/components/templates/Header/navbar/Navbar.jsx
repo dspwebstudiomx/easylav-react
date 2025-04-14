@@ -24,6 +24,7 @@ import {
   NavLinksDesktop,
   NavLinksMobile,
   NavLinksTablet,
+  ThemeLine,
 } from 'components';
 import { useState } from 'react';
 
@@ -58,6 +59,7 @@ const Navbar = () => {
           </div>
         </Container>
       </nav>
+      <ThemeLine className="fixed sm:relative top-[80px] sm:top-[0px] xl:top-[100px] xl:fixed" />
     </>
   );
 };
