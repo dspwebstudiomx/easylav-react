@@ -7,11 +7,11 @@ Creador por: Daniel Pérez
 import PropTypes from 'prop-types';
 
 // Estructura
-const HeaderLine = ({ className }) => {
+const ThemeLine = ({ className }) => {
   return <div className={`h-1 w-full bg-gradient-to-r from-primary to-secondary ${className}`}></div>;
 };
-export default HeaderLine;
+export default ThemeLine;
 
-HeaderLine.propTypes = {
+ThemeLine.propTypes = {
   className: PropTypes.string,
 };

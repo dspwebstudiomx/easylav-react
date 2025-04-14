@@ -52,7 +52,7 @@ export { default as Footer } from 'components/templates/footer/Footer';
 export { default as FooterLinksGenerator } from 'components/templates/footer/FooterLinksGenerator';
 export { default as FooterNavHashLinksGenerator } from 'components/templates/footer/FooterNavHashinksGenerator';
 export { default as Header } from 'components/templates/header/Header';
-export { default as HeaderLine } from 'components/templates/header/HeaderLine';
+export { default as ThemeLine } from 'components/layout/ThemeLine';
 export { default as Logo } from 'components/templates/header/navbar/components/Logo';
 export { default as MenuButton } from 'components/templates/header/navbar/components/MenuButton';
 export { default as NavLinksDesktop } from 'components/templates/header/navbar/components/NavLinksDesktop';
