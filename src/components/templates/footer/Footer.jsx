@@ -1,4 +1,4 @@
-import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, HeaderLine } from 'components';
+import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, ThemeLine } from 'components';
 import { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from 'data';
 import { FaRegCopyright } from 'react-icons/fa6';
 import FooterLogoWithSocial from './FooterLogoWithSocial';
@@ -13,60 +13,56 @@ export default function Footer() {
   };
 
   return (
-    <>
-      <HeaderLine />
-      <footer id="footer" className="text-base bg-secondary_dark">
-        <div id={'footer-sections'} className="p-12">
-          <Container className={classes.container}>
-            {/* Footer Sections */}
-            <div id="footer-sections" className={classes.footerSections}>
-              <h3 id="footer-sections-title" className={classes.footerSectionsTitle}>
-                Secciones
-              </h3>
-              <FooterNavHashLinksGenerator links={navLinksSections} />
-              <FooterLinksGenerator links={navLinksPages} />
-            </div>
-            {/* Footer Sections */}
+    <footer id="footer" className="text-base bg-secondary_dark">
+      <ThemeLine />
+      <div id={'footer-sections'} className="p-12">
+        <Container className={classes.container}>
+          {/* Footer Sections */}
+          <div id="footer-sections" className={classes.footerSections}>
+            <h3 id="footer-sections-title" className={classes.footerSectionsTitle}>
+              Secciones
+            </h3>
+            <FooterNavHashLinksGenerator links={navLinksSections} />
+            <FooterLinksGenerator links={navLinksPages} />
+          </div>
+          {/* Footer Sections */}
 
-            {/* Footer Services */}
-            <div id="footer-services" className={classes.footerSections}>
-              <h3 className={classes.footerSectionsTitle}>Servicios</h3>
-              <FooterNavHashLinksGenerator links={linksServicios} />
-            </div>
-            {/* Footer Services */}
+          {/* Footer Services */}
+          <div id="footer-services" className={classes.footerSections}>
+            <h3 className={classes.footerSectionsTitle}>Servicios</h3>
+            <FooterNavHashLinksGenerator links={linksServicios} />
+          </div>
+          {/* Footer Services */}
 
-            {/* Footer Privacy */}
-            <div className="flex flex-col">
-              <div id="footer-policies" className={classes.footerSections}>
-                <h3 className={classes.footerSectionsTitle}>Políticas de Privacidad, Política de Cookies</h3>
-                <FooterLinksGenerator links={linksPoliticas} />
-              </div>
+          {/* Footer Privacy */}
+          <div className="flex flex-col">
+            <div id="footer-policies" className={classes.footerSections}>
+              <h3 className={classes.footerSectionsTitle}>Políticas de Privacidad, Política de Cookies</h3>
+              <FooterLinksGenerator links={linksPoliticas} />
             </div>
-            {/* Footer Privacy */}
+          </div>
+          {/* Footer Privacy */}
 
-            {/* Footer Terms */}
-            <div id="footer-privacy-terms" className={classes.footerSections}>
-              <h3 className={classes.footerSectionsTitle}>
-                Términos y Condiciones, Preguntas Frecuentes y Facturación
-              </h3>
-              <FooterLinksGenerator links={linksTerminos} />
-            </div>
-            {/* Footer Terms */}
+          {/* Footer Terms */}
+          <div id="footer-privacy-terms" className={classes.footerSections}>
+            <h3 className={classes.footerSectionsTitle}>Términos y Condiciones, Preguntas Frecuentes y Facturación</h3>
+            <FooterLinksGenerator links={linksTerminos} />
+          </div>
+          {/* Footer Terms */}
 
-            {/* Footer Logo */}
-            <FooterLogoWithSocial />
-            {/* Footer Logo */}
-          </Container>
-        </div>
-        <div className="bg-primary text-light px-12 lg:px-0">
-          <Container className="bg-primary text-primary_darkcontrast h-16 w-full">
-            <div className="flex items-center justify-center sm:justify-start gap-2 h-full">
-              <FaRegCopyright />
-              <h3>Derechos Reservados 2024</h3>
-            </div>
-          </Container>
-        </div>
-      </footer>
-    </>
+          {/* Footer Logo */}
+          <FooterLogoWithSocial />
+          {/* Footer Logo */}
+        </Container>
+      </div>
+      <div className="bg-primary text-light px-12 lg:px-0">
+        <Container className="bg-primary text-primary_darkcontrast h-16 w-full">
+          <div className="flex items-center justify-center sm:justify-start gap-2 h-full">
+            <FaRegCopyright />
+            <h3>Derechos Reservados 2024</h3>
+          </div>
+        </Container>
+      </div>
+    </footer>
   );
 }
