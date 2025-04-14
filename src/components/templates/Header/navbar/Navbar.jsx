@@ -19,7 +19,6 @@
 import {
   Container,
   DarkModeButton,
-  HeaderLine,
   Logo,
   MenuButton,
   NavLinksDesktop,
@@ -59,7 +58,6 @@ const Navbar = () => {
           </div>
         </Container>
       </nav>
-      <HeaderLine className="fixed sm:relative top-[80px] sm:top-[10px] xl:top-[100px]" />
     </>
   );
 };

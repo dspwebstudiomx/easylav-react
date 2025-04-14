@@ -1,4 +1,4 @@
-import { Container, Section } from 'components';
+import { Container } from 'components';
 import PropTypes from 'prop-types';
 
 const BackgroundImageSection = ({
@@ -20,7 +20,7 @@ const BackgroundImageSection = ({
   title,
 }) => {
   return (
-    <Section
+    <div
       id={id}
       className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} w-full`}>
       {/* Background Image */}
@@ -47,7 +47,7 @@ const BackgroundImageSection = ({
       {/* Container */}
       <Container className="">{children}</Container>
       {/* Container */}
-    </Section>
+    </div>
   );
 };
 BackgroundImageSection.propTypes = {

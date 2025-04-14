@@ -115,7 +115,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center overflow-hidden rounded-xl shadow-xl w-[250px] xl:w-full',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center overflow-hidden rounded-xl shadow-xl w-[250px]',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
@@ -130,11 +130,11 @@ const SucursalCard = ({
         image_1920={image}
         title={`Imagen de sucursal ${title} en ${city}`}
         alt={`Vista externa de Sucursal Easylav ${title} en ${city}`}
-        width="w-full"
-        height="h-[160px]"
+        width="w-[250px]" /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+        height="h-[140px]" /* Ajusta la altura según sea necesario */
         opacity="opacity-60"
         backgroundColor="bg-dark"
-        className="rounded-t-xl">
+        className="rounded-t-xl overflow-hidden">
         <div className="flex justify-end items-start h-full absolute top-0 right-0 p-4">
           {renderOpenClosedBadge(isOpen)}
         </div>
@@ -212,7 +212,7 @@ const SucursalCard = ({
               <img
                 src={image}
                 alt={title}
-                className="w-[340px] h-[280px] xl:w-[560px] xl:h-[280px] object-cover shadow-2xl"
+                className="w-[340px] h-[280px] xl:w-[340px] xl:max-h-[280px] object-cover shadow-2xl"
               />
               <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
