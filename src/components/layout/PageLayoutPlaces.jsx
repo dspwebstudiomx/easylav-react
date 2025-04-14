@@ -24,6 +24,7 @@ import {
   Header,
   ScrollToTopButton,
   SucursalCardPerCity,
+  TitleH1,
 } from 'components';
 import PropTypes from 'prop-types';
 import Container from '../containers/Container';
@@ -87,6 +88,10 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
     <>
       <Header />
       <main id={`sucursales-${city}`} className="">
+        <TitleH1 attr="sr-only" align="text-center">
+          Conoces nuestras sucursales en {city}, donde ofrecemos servicios de lavandería, tintorería y planchado con la
+          mejor calidad y atención. ¡Te esperamos!
+        </TitleH1>
         <BannerPlaces />
         <ContentCards />
       </main>
