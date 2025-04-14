@@ -5,7 +5,7 @@ export default function MainLayout({ id, children }) {
   return (
     <>
       <Header />
-      <main id={id} className="mt-0 md:mt-[60px] w-full h-full dark:bg-dark">
+      <main id={id} className="mt-0 w-full h-full dark:bg-dark">
         {children}
       </main>
 
