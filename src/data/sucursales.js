@@ -1,5 +1,4 @@
 import {
-  Placeholder,
   cincodefebrero,
   delta,
   iretiticateme,
@@ -9,6 +8,8 @@ import {
   periodismo,
   sierradeveracruz,
   solidaridad,
+  venturapuente,
+  bonanza,
 } from 'assets';
 
 export const localservices = [
@@ -144,7 +145,7 @@ export const localservices = [
     titleMailto: 'Enviar correo a sucursal Ventura Puente',
     advertisement: '',
     badge: '',
-    image: Placeholder,
+    image: venturapuente,
     openHour: 7,
     openMinute: 0,
     closeHour: 21,
@@ -201,7 +202,7 @@ export const localservices = [
     titleMailto: 'Enviar correo a sucursal Bonanza',
     advertisement: '',
     badge: '',
-    image: Placeholder,
+    image: bonanza,
     openHour: 7,
     openMinute: 0,
     closeHour: 21,
