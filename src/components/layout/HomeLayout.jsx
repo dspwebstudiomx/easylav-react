@@ -1,4 +1,4 @@
-import { Header, ScrollToTopButton } from 'components';
+import { Footer, Header, ScrollToTopButton } from 'components';
 import PropTypes from 'prop-types';
 
 export default function MainLayout({ id, children }) {
@@ -8,7 +8,7 @@ export default function MainLayout({ id, children }) {
       <main id={id} className="mt-0 w-full h-full dark:bg-dark">
         {children}
       </main>
-
+      <Footer />
       <ScrollToTopButton />
     </>
   );

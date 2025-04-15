@@ -16,18 +16,20 @@
    Fecha de modificación: 2025-04-03
    Modificación: Se han realizado ajustes en la estructura del componente para mejorar la legibilidad y el rendimiento. Se ha añadido un componente de carga para mejorar la experiencia del usuario mientras se cargan los componentes de forma diferida.
    Modificado por: Daniel Pérez
+   --------------------------
+   Fecha de modificación: 2025-05-14
+   Modificación: Se han realizado optimizaciones adicionales en la carga de componentes y se han añadido nuevos elementos visuales para mejorar la presentación general de la sección de franquicias.
+   Modificado por: Daniel Pérez
 */
 
 // Importaciones
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { SEOFriendly, HomeLayout, Loading, Footer } from 'components';
+import { SEOFriendly, HomeLayout, Loading } from 'components';
 import { lazy, Suspense } from 'react';
 
 // Constantes
-const PaquetesFranquicias = lazy(() => import('./PaquetesFranquicias'));
-const ImagenesFranquicias = lazy(() => import('./ImagenesFranquicias'));
-const SobreNuestrasFranquicias = lazy(() => import('./SobreNuestrasFranquicias'));
 const QuieresUnaFranquicia = lazy(() => import('pages/inicio/franquicias/QuieresUnaFranquicia'));
+const ModeloNegocio = lazy(() => import('./ModeloNegocio'));
 
 // Estructura
 const Franquicias = () => {
@@ -47,23 +49,13 @@ const Franquicias = () => {
       />
 
       {/* Layout principal */}
-      <HomeLayout className="pb-16 sm:pb-20 lg:pb-24 min-h-screen">
-        <div className="flex flex-col gap-8">
-          {/* Contenido principal */}
-          <Suspense fallback={<Loading />}>
-            <QuieresUnaFranquicia />
-          </Suspense>
-          <Suspense fallback={<Loading />}>
-            <SobreNuestrasFranquicias />
-          </Suspense>
-          <Suspense fallback={<Loading />}>
-            <PaquetesFranquicias />
-          </Suspense>
-          <Suspense fallback={<Loading />}>
-            <ImagenesFranquicias />
-          </Suspense>
-        </div>
-        <Footer />
+      <HomeLayout id="franquicias" className="dark:bg-dark">
+        <Suspense fallback={<Loading />}>
+          <QuieresUnaFranquicia />
+        </Suspense>
+        <Suspense fallback={<Loading />}>
+          <ModeloNegocio />
+        </Suspense>
       </HomeLayout>
     </>
   );

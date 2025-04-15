@@ -2,7 +2,7 @@
 
 //Importaciones
 import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
-import { Container, Footer, HomeLayout, Loading, Section, SEOFriendly } from 'components';
+import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
 import ProgramasDeLealtad from './components/ProgramasDeLealtad';
 import Equipamiento from './components/Equipamiento';
@@ -66,7 +66,6 @@ const Inicio = () => (
           </Container>
         </Section>
       </Suspense>
-      <Footer />
     </HomeLayout>
   </>
 );

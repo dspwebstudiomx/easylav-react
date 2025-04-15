@@ -17,13 +17,8 @@ export default function FooterLinksGenerator({ links }) {
               to={link.href}
               className="text-white flex items-center hover:text-primary"
               onClick={scrollToTop}
-              title={link.name}>
-              <TbPoint
-                className="text-2xl text-primary"
-                size={20}
-                title={`Visita ${link.name}`}
-                onClick={scrollToTop}
-              />
+              title={`Visita ${link.name}`}>
+              <TbPoint className="text-2xl text-primary" size={20} onClick={scrollToTop} />
               <span className="ml-2">{link.name}</span>
             </Link>
           </li>

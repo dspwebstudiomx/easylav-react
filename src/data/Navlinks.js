@@ -86,12 +86,14 @@ const linksPoliticas = [
     name: 'Política de Privacidad',
     href: '/politica-privacidad',
     linkId: 'politica-privacidad',
+    title: 'Visitar la sección de Política de Privacidad',
   },
   {
     id: 2,
     name: 'Política de Cookies',
     href: '/politica-cookies',
     linkId: 'politica-cookies',
+    title: 'Visitar la sección de Política de Cookies',
   },
 ];
 const linksTerminos = [
@@ -100,18 +102,21 @@ const linksTerminos = [
     name: 'Términos y Condiciones',
     href: '/terminos-condiciones',
     linkId: 'terminos-condiciones',
+    title: 'Visitar la sección de Términos y Condiciones',
   },
   {
     id: 2,
     name: 'Preguntas Frecuentes',
     href: '/preguntas-frecuentes',
     linkId: 'preguntas-frecuentes',
+    title: 'Visitar la sección de Preguntas Frecuentes',
   },
   {
     id: 3,
     name: 'Facturación',
     href: '/facturacion',
     linkId: 'facturacion',
+    title: 'Visitar la sección de Facturación',
   },
 ];
 export { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections };
