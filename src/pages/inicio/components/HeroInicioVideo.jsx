@@ -35,9 +35,9 @@ const HeroInicioVideo = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative overflow-hidden w-full h-[86vh] sm:h-[500px] xl:h-[70vh]">
+    <section id="inicio" className="relative overflow-hidden w-full h-[780px] sm:h-[500px] xl:h-[70vh] warning">
       {/* Fondo: Video o Imagen Estática */}
-      <div className="absolute inset-0 z-0 w-full bg-dark left-0 h-[86vh] sm:h-[500px] xl:h-[70vh]">
+      <div className="absolute inset-0 z-0 w-full bg-dark left-0 h-[780px] sm:h-[500px] xl:h-[70vh]">
         {isMobile ? (
           <img
             src={defaultImage}
@@ -59,12 +59,12 @@ const HeroInicioVideo = () => {
       </div>
 
       {/* Capa de opacidad */}
-      <div className="absolute inset-0 z-10 w-full bg-dark opacity-90 left-0 h-[86vh] sm:h-[500px] xl:h-[70vh]"></div>
+      <div className="absolute inset-0 z-10 w-full bg-dark opacity-60 left-0 h-[800px] sm:h-[500px] xl:h-[70vh]"></div>
 
       {/* Contenido */}
-      <Container className="absolute flex items-start justify-center inset-0 z-20 h-[86vh] sm:h-[500px] xl:h-[70vh]">
-        <div className="w-full flex lg:w-2/3 flex-col gap-12 p-12 items-center lg:items-start justify-center">
-          <h1 className="text-2xl md:text-3xl font-semibold tracking-wider text-light">
+      <Container className="absolute flex items-center justify-center inset-0 z-20 h-[650px] sm:h-[500px] xl:h-[70vh] w-full mt-12">
+        <div className="w-full flex lg:w-2/3 flex-col gap-12 p-12 items-center justify-center  lg:items-start">
+          <h1 className="text-3xl md:text-3xl font-semibold tracking-wider text-light">
             En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
             soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
             prendas luzcan siempre de la mejor manera.
