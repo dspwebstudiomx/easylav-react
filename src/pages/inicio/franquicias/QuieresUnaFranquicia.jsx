@@ -12,7 +12,7 @@ Descripción: Se han realizado cambios en los estilos y la estructura del compon
 
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets';
-import { BackgroundImageSection, ButtonContainer, ButtonPrimary, TitleH1 } from 'components';
+import { BackgroundImageSection, Button, ButtonContainer, TitleH1 } from 'components';
 import { memo } from 'react';
 
 const QuieresUnaFranquicia = () => {
@@ -53,11 +53,13 @@ const QuieresUnaFranquicia = () => {
             oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu
             patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
           </p>
-          <ButtonContainer position="justify-center" distance="mt-12">
-            <ButtonPrimary
+          <ButtonContainer position="items-center" distance="mt-12">
+            <Button
+              variant="secondary"
               title="Conoce más"
               href="/franquicias/#sobre-nuestras-franquicias"
-              width="min-w-[340px]"
+              // width="min-w-[340px]"
+              width=""
               arialabel="Conocer más sobre nuestras franquicias"
             />
           </ButtonContainer>
