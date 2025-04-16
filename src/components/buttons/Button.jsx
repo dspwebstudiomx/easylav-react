@@ -48,7 +48,7 @@ const Button = ({
       break;
   }
 
-  return (
+  return href ? (
     <HashLink to={href} scroll={(el) => scrollWithOffset(el)}>
       <button
         name={name}
@@ -60,6 +60,16 @@ const Button = ({
         {title}
       </button>
     </HashLink>
+  ) : (
+    <button
+      name={name}
+      onClick={typeof onClick === 'function' ? onClick : undefined}
+      type={type}
+      className={`${baseStyles} ${variantStyles} ${buttonWidth} ${buttonHeight}`}
+      aria-label={arialabel}>
+      {icon && <span>{icon}</span>}
+      {title}
+    </button>
   );
 };
 

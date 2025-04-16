@@ -1,16 +1,8 @@
-
 import { FaRegEnvelope } from 'react-icons/fa6';
-
+import { Button } from 'components';
 
 const SubmitButton = () => {
-  return (
-    <button type='submit' className='flex gap-2 justify-center items-center text-light text-base bg-secondary_dark rounded w-full px-8 py-4 uppercase font-semibold'>
-      <span>
-        <FaRegEnvelope />
-      </span>
-      <span>Enviar mensaje</span>
-    </button>
-  );
+  return <Button type="submit" variant="secondary" icon={<FaRegEnvelope />} title="Enviar mensaje" />;
 };
-export default SubmitButton;
 
+export default SubmitButton;

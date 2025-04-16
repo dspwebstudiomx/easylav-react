@@ -4,7 +4,6 @@ import { Form, Formik } from 'formik';
 import React, { useEffect, useState } from 'react';
 import Fields from '../contacto/components/Form/Fields';
 
-
 export const ContactFormFranquicias = () => {
   const [showModal, setShowModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
@@ -44,7 +43,7 @@ export const ContactFormFranquicias = () => {
         (error) => {
           console.log('FAILED...', error.text);
           setShowErrorModal(true);
-        },
+        }
       );
   };
 
@@ -65,26 +64,26 @@ export const ContactFormFranquicias = () => {
           message: '',
         }}
         validate={() => {
-          values => {
+          (values) => {
             let errors = {};
             if (!values.user_name) {
-              errors.user_name = 'Solo debe de contener letras'
+              errors.user_name = 'Solo debe de contener letras';
             } else if (values.user_name.length < 2) {
-              errors.user_name = 'Ingrese al menos 2 letras'
+              errors.user_name = 'Ingrese al menos 2 letras';
             } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_name)) {
-              errors.user_name = 'No debe de contener números'
+              errors.user_name = 'No debe de contener números';
             } else if (/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_name)) {
-              errors.user_name = 'Nombre Correcto'
+              errors.user_name = 'Nombre Correcto';
             }
 
             if (!values.user_city) {
-              errors.user_city = 'Solo debe de contener letras'
+              errors.user_city = 'Solo debe de contener letras';
             } else if (values.user_city.length < 2) {
-              errors.user_city = 'Ingrese al menos 2 letras'
+              errors.user_city = 'Ingrese al menos 2 letras';
             } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_city)) {
-              errors.user_city = 'No debe de contener números'
+              errors.user_city = 'No debe de contener números';
             } else if (/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.user_city)) {
-              errors.user_city = 'Ciudad correcta '
+              errors.user_city = 'Ciudad correcta ';
             }
 
             if (!values.user_email) {
@@ -95,37 +94,37 @@ export const ContactFormFranquicias = () => {
               errors.user_email = 'Email correcto';
             }
             if (!values.user_phone) {
-              errors.user_phone = 'Solo se aceptan números y símbolo + al comienzo'
+              errors.user_phone = 'Solo se aceptan números y símbolo + al comienzo';
             } else if (!/^[+]+[0-9]+$/.test(values.user_phone)) {
-              errors.user_phone = 'Hace falta el simbolo de + al comienzo'
+              errors.user_phone = 'Hace falta el simbolo de + al comienzo';
             } else if (/^[+]+[0-9]+$/.test(values.user_phone)) {
-              errors.user_phone = 'Número telefónico correcto'
+              errors.user_phone = 'Número telefónico correcto';
             }
             if (!values.message) {
-              errors.message = 'Mensaje requerido'
+              errors.message = 'Mensaje requerido';
             }
             return errors;
-          }
-
+          };
         }}
-        onSubmit={() => { }}
-      >
+        onSubmit={() => {}}>
         {({ errors, touched, resetForm }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4 text-sm items-between">
-            <h2 className='text-xl font-semibold text-dark'>¿Estás interesado en adquirir una franquicia?</h2>
+            <h2 className="text-xl font-semibold text-dark">¿Estás interesado en adquirir una franquicia?</h2>
             <Fields errors={errors} touched={touched} />
-            <div className='mx-auto flex sm:flex-row gap-4 w-full'>
+            <div className="mx-auto flex sm:flex-row gap-4 w-full">
               <SubmitButton text="Enviar mensaje" />
-              <div className='hidden lg:block'>
+              <div className="hidden lg:block">
                 <HomeButton text="Ir a inicio" />
               </div>
             </div>
-            {showModal && <EmailSuccessModal
-              onClick={() => {
-                setShowModal(false);
-                resetForm()
-              }}
-            />}
+            {showModal && (
+              <EmailSuccessModal
+                onClick={() => {
+                  setShowModal(false);
+                  resetForm();
+                }}
+              />
+            )}
             {showErrorModal && <EmailErrorModal onClick={() => setShowErrorModal(false)} />}
           </Form>
         )}
