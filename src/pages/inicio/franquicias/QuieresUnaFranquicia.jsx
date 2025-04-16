@@ -12,8 +12,10 @@ Descripción: Se han realizado cambios en los estilos y la estructura del compon
 
 // Importaciones
 import { VistaLavanderiaDesdeEntrada_1_640 } from 'assets';
-import { BackgroundImageSection, Button, ButtonContainer, TitleH1 } from 'components';
-import { memo } from 'react';
+import { BackgroundImageSection, Button, ButtonContainer, ContactFormFranquicias, Modal, TitleH1 } from 'components';
+import { useShowModal } from 'hooks';
+import { memo, useState } from 'react';
+import { FaXmark } from 'react-icons/fa6';
 
 const QuieresUnaFranquicia = () => {
   const images = {
@@ -21,6 +23,19 @@ const QuieresUnaFranquicia = () => {
     image_1024: VistaLavanderiaDesdeEntrada_1_640,
     image_1200: VistaLavanderiaDesdeEntrada_1_640,
     image_1920: VistaLavanderiaDesdeEntrada_1_640,
+  };
+
+  const { showModal, setShowModal } = useShowModal();
+  const [selectedPaquete, setSelectedPaquete] = useState(null);
+
+  const handleOpenModal = (paquete) => {
+    setSelectedPaquete(paquete); // Establece el paquete seleccionado
+    setShowModal(true); // Muestra el modal
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPaquete(null); // Limpia el paquete seleccionado
+    setShowModal(false); // Oculta el modal
   };
 
   return (
@@ -53,18 +68,33 @@ const QuieresUnaFranquicia = () => {
             oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu
             patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
           </p>
-          <ButtonContainer position="items-center" distance="mt-12">
+          <ButtonContainer position="justify-center items-center">
             <Button
+              title={'Solicita más información'}
+              width={'w-full 2xl:w-[320px]'}
+              onClick={() => handleOpenModal({ nombre: 'Paquete Básico' })} // Pasa un paquete válido
+              distance="mx-1"
+              id="boton-contactar-paquete-basico" // ID estático para evitar errores
+              aria-label="Contactar para el paquete básico"
               variant="secondary"
-              title="Conoce más"
-              href="/franquicias/#sobre-nuestras-franquicias"
-              // width="min-w-[340px]"
-              width=""
-              arialabel="Conocer más sobre nuestras franquicias"
             />
           </ButtonContainer>
         </article>
       </section>
+      {/* Modal */}
+      {showModal && selectedPaquete && (
+        <Modal width="w-[90vw] md:w-[60vw] lg:w-[40vw]">
+          <div
+            id="franquicias-formulario"
+            className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
+            <button id="button-close" onClick={handleCloseModal}>
+              <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
+            </button>
+            <ContactFormFranquicias paquete={selectedPaquete} />
+          </div>
+        </Modal>
+      )}
+      {/* Modal */}
     </BackgroundImageSection>
   );
 };
