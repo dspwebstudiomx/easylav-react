@@ -43,7 +43,7 @@ const Navbar = () => {
     <>
       <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-20 bg-light shadow-md`}>
         <Container className="flex items-center justify-center gap-4">
-          <div className={`flex flex-row items-center justify-between w-full gap-6  h-[100px]`}>
+          <div className={`flex flex-row items-center justify-between w-full gap-6  h-[100px] error`}>
             <Logo />
             <NavLinksDesktop />
             <DarkModeButton />
