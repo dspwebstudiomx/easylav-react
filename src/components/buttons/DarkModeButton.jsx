@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FiMoon } from "react-icons/fi";
+import { FiMoon } from 'react-icons/fi';
 import { IoSunnyOutline } from 'react-icons/io5';
 
 export default function ThemeToggle() {
@@ -14,7 +14,7 @@ export default function ThemeToggle() {
   });
 
   const toggleTheme = () => {
-    setDarkMode(prevDarkMode => {
+    setDarkMode((prevDarkMode) => {
       const newDarkMode = !prevDarkMode;
       // Almacenar el nuevo estado del tema en localStorage
       localStorage.setItem('darkMode', newDarkMode);
@@ -29,12 +29,16 @@ export default function ThemeToggle() {
 
   return (
     <button
-      id='themeToggle'
-      title='Theme Toggle'
-      aria-label='The Toggle'
-      className="ml-5 w-12 h-12 mx-auto focus:outline-none"
+      id="themeToggle"
+      title="Theme Toggle"
+      aria-label="The Toggle"
+      className="ml-5 mx-auto focus:outline-none flex "
       onClick={toggleTheme}>
-      {darkMode ? <IoSunnyOutline className='w-8 h-8 text-secondary_dark' /> : <FiMoon className='w-8 h-8 text-secondary' />}
+      {darkMode ? (
+        <IoSunnyOutline className="w-8 h-8 text-secondary_dark" />
+      ) : (
+        <FiMoon className="w-8 h-8 text-secondary" />
+      )}
     </button>
   );
 }
