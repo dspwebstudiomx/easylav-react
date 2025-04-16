@@ -20,7 +20,7 @@ const PageLayout = ({ children, id }) => {
   return (
     <>
       <Header />
-      <main id={id} className="dark:bg-dark md:mt-[80px] lg:mt-0 xl:mt-0">
+      <main id={id} className="dark:bg-dark min-h-[55vh]">
         <Section>
           <Container className="">{children}</Container>
         </Section>

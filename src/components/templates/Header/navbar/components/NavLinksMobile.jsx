@@ -7,7 +7,7 @@ import { NavHashLink } from 'react-router-hash-link';
 
 const NavLinksMobile = ({ onLinkClick }) => {
   return (
-    <div className="animate__animated animate__fadeInDown absolute left-0 top-[104px] z-0 flex h-[95vh] w-full flex-col items-center justify-start overflow-hidden border-t-4 border-t-primary bg-primary dark:bg-secondary_dark px-8">
+    <div className="animate__animated animate__fadeInDown absolute left-0 top-[104px] z-10 flex h-[95vh] w-full flex-col items-center justify-start overflow-hidden border-t-4 border-t-primary bg-primary dark:bg-secondary_dark px-8">
       <ul id="navlinks-mobile" className="grid w-full grid-cols-2 gap-3 px-2 py-8 place-content-center">
         {navLinksSections.map((navlink) => {
           return (

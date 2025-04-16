@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-50 bg-light shadow-md ${height}`}>
+      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-20 bg-light shadow-md ${height}`}>
         <Container className="bg-light">
           <div className={`flex sm:flex-col items-center justify-center w-full ${height} gap-2 px-6 xl:px-0`}>
             <div className={`flex flex-row items-center justify-between w-full ${height} gap-6 `}>
