@@ -115,7 +115,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center overflow-hidden rounded-xl shadow-xl w-full',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto h-full justify-center items-center overflow-hidden rounded-xl shadow-xl w-[210px]',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
@@ -131,7 +131,7 @@ const SucursalCard = ({
         title={`Imagen de sucursal ${title} en ${city}`}
         alt={`Vista externa de Sucursal Easylav ${title} en ${city}`}
         width="w-[250px]" /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-        height="h-[140px]" /* Ajusta la altura según sea necesario */
+        height="h-[160px]" /* Ajusta la altura según sea necesario */
         opacity="opacity-60"
         backgroundColor="bg-dark"
         className="rounded-t-xl overflow-hidden">

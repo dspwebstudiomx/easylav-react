@@ -13,7 +13,7 @@ const navLinksSections = [
     name: 'Quienes Somos',
     href: '/#quienes-somos',
     icon: GrUser,
-    linkId: 'Nosotros',
+    linkId: 'quienes-somos', // Actualizado para coincidir con el ID en el DOM
   },
   {
     id: 3,
