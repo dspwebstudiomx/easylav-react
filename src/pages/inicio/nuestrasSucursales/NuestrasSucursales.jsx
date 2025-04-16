@@ -35,8 +35,8 @@ const NuestrasSucursales = () => {
   const sortedLocalServices = localservices.sort((a, b) => a.title.localeCompare(b.title));
 
   return (
-    <Section className="bg-light dark:bg-dark py-12">
-      <Container className="flex flex-col items-center justify-center w-3/4 mx-auto">
+    <Section className="dark:bg-dark py-12 success">
+      <Container className="flex flex-col items-center justify-center sm:w-full mx-auto ">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -49,7 +49,7 @@ const NuestrasSucursales = () => {
 
         <Swiper
           modules={[Pagination, Autoplay]}
-          className={'mySwyper mt-20'}
+          className={'mySwyper mt-20 w-5/6 sm:w-full'}
           keyboard={true}
           spaceBetween={40}
           navigation={false}
@@ -66,7 +66,7 @@ const NuestrasSucursales = () => {
               touchRatio: 1,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetweenSlides: 30,
               touchRatio: 1,
             },
