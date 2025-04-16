@@ -7,12 +7,14 @@ Fecha: 2022-08-25
 
 // Importaciones
 import emailjs from '@emailjs/browser';
-import { ButtonContainer, SubmitButton } from 'components';
+import { Button, HomeButton } from 'components';
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
 import * as Yup from 'yup';
 import EmailErrorModal from '../modals/EmailErrorModal';
 import EmailSuccessModal from '../modals/EmailSuccessModal';
+import { FaTrash } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa6';
 
 // Esquema de validación con Yup
 const validationSchema = Yup.object().shape({
@@ -67,8 +69,7 @@ export default function ContactForm() {
   return (
     <section
       id="formulario"
-      className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest mx-auto"
-    >
+      className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest mx-auto">
       <Formik
         initialValues={{
           user_name: '',
@@ -78,8 +79,7 @@ export default function ContactForm() {
           message: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={() => {}}
-      >
+        onSubmit={() => {}}>
         {({ errors, touched, resetForm }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm text-dark tracking-wider">
             {/* Fields */}
@@ -170,9 +170,24 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <ButtonContainer position="items-center justify-center" distance="mt-6">
-              <SubmitButton title="Enviar mensaje" type="submit" />
-            </ButtonContainer>
+            <div className="">
+              <div className="mx-auto">
+                <Button type="submit" variant="primary" title="Enviar mensaje" width="w-full" icon={<FaEnvelope />} />
+              </div>
+              <div className="flex gap-4 mt-5">
+                <Button
+                  type="button"
+                  variant="secondary"
+                  icon={<FaTrash size={24} />}
+                  title=""
+                  className="w-1/2"
+                  onClick={() => resetForm()}
+                />
+                <div className="hidden lg:block w-1/2">
+                  <HomeButton text="Ir a inicio" />
+                </div>
+              </div>
+            </div>
             {/* Submit Button */}
 
             {/* Modals */}
