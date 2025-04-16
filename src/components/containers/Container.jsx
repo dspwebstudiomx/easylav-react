@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 
 // Estilos
 const CONTAINER_UI = {
-  DISPLAY: 'md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg mx-auto',
+  DISPLAY: 'md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg',
 };
 // Estructura4
 export default function Container({ id, children, className }) {

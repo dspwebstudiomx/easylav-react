@@ -35,9 +35,11 @@ const HeroInicioVideo = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative overflow-hidden w-full h-[780px] sm:h-[500px] xl:h-[70vh] warning">
+    <section
+      id="inicio"
+      className="overflow-hidden w-full h-[650px] sm:h-[500px] xl:h-[60vh] flex items-center justify-center error">
       {/* Fondo: Video o Imagen Estática */}
-      <div className="absolute inset-0 z-0 w-full bg-dark left-0 h-[780px] sm:h-[500px] xl:h-[70vh]">
+      <div className="absolute inset-0 z-0 w-full bg-dark left-0 h-[750px] sm:h-[500px] xl:h-[70vh]">
         {isMobile ? (
           <img
             src={defaultImage}
@@ -59,20 +61,18 @@ const HeroInicioVideo = () => {
       </div>
 
       {/* Capa de opacidad */}
-      <div className="absolute inset-0 z-10 w-full bg-dark opacity-60 left-0 h-[800px] sm:h-[500px] xl:h-[70vh]"></div>
+      <div className="absolute inset-0 z-10 w-full bg-dark opacity-60 left-0 h-[750px] sm:h-[500px] xl:h-[70vh]"></div>
 
       {/* Contenido */}
-      <Container className="absolute flex items-center justify-center inset-0 z-20 h-[650px] sm:h-[500px] xl:h-[70vh] w-full mt-12 md:p-12 lg:p-0">
-        <div className="w-full flex flex-col gap-12 p-12 md:p-0 items-center justify-center  lg:items-start">
-          <h1 className="text-3xl md:text-3xl xl:text-4xl w-2/3 font-semibold tracking-wider text-light">
-            En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
-            soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
-            prendas luzcan siempre de la mejor manera.
-          </h1>
-          <ButtonContainer position={'items-center sm:items-left'}>
-            <Button title="Nuestros servicios" href="/#servicios" width={'w-full sm:w-[260px]'} variant="secondary" />
-          </ButtonContainer>
-        </div>
+      <Container className="relative z-20 flex flex-col gap-12 justify-center w-full h-full p-8 text-center sm:px-0">
+        <h1 className="text-2xl md:text-3xl xl:text-4xl w-full sm:w-2/3 font-semibold tracking-wider text-light text-left">
+          En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
+          soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
+          prendas luzcan siempre de la mejor manera.
+        </h1>
+        <ButtonContainer position={'items-center sm:items-left'}>
+          <Button title="Nuestros servicios" href="/#servicios" width={'w-full sm:w-[260px]'} variant="secondary" />
+        </ButtonContainer>
       </Container>
     </section>
   );
