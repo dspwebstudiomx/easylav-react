@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 const Contacto = () => {
   return (
-    <article className="flex flex-col sm:flex-row gap-20">
+    <article className="flex flex-col lg:flex-row gap-20">
       <ContactInfo />
       <ContactForm />
     </article>

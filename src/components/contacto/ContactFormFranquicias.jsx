@@ -114,6 +114,7 @@ export const ContactFormFranquicias = () => {
                 icon={<FaTrash size={28} />}
                 title=""
                 onClick={() => resetForm()}
+                arialabel="Limpiar formulario"
               />
               <div className="hidden lg:block">
                 <HomeButton text="Ir a inicio" />

@@ -69,7 +69,7 @@ export default function ContactForm() {
   return (
     <section
       id="formulario"
-      className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest mx-auto">
+      className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:p-8 bg-secondary_light/30 dark:bg-primary_light w-full overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest md:w-4/5 lg:w-full mx-auto">
       <Formik
         initialValues={{
           user_name: '',
