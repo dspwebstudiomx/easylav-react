@@ -35,8 +35,8 @@ const NuestrasSucursales = () => {
   const sortedLocalServices = localservices.sort((a, b) => a.title.localeCompare(b.title));
 
   return (
-    <Section className="dark:bg-dark py-12 success">
-      <Container className="flex flex-col items-center justify-center sm:w-full mx-auto ">
+    <Section className="dark:bg-dark py-12">
+      <Container className="flex flex-col items-center justify-center mx-auto ">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
