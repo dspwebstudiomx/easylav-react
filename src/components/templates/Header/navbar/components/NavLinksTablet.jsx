@@ -7,7 +7,7 @@ const NavLinksTablet = () => {
   return (
     <ul
       id="navlinks-tablet"
-      className="sm:flex xl:hidden top-[100px] hidden w-[100vw] justify-evenly gap-4 bg-primary dark:bg-secondary_dark p-5 px-8 lg:relative lg:top-[0px]">
+      className="sm:flex xl:hidden top-[100px] hidden w-full justify-evenly gap-4 bg-primary dark:bg-secondary_dark p-5 px-8 lg:relative lg:top-[0px]">
       {navLinksSections.map((navlink) => {
         return (
           <li key={navlink.id} className="">

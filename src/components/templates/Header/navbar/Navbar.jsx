@@ -17,7 +17,6 @@
 
 // Importaciones
 import {
-  Container,
   DarkModeButton,
   Logo,
   MenuButton,
@@ -25,6 +24,7 @@ import {
   NavLinksMobile,
   NavLinksTablet,
   ThemeLine,
+  Container,
 } from 'components';
 import { useState } from 'react';
 
@@ -39,24 +39,18 @@ const Navbar = () => {
     toggleNav();
   };
 
-  const height = 'h-[100px] sm:h-[180px] md:h-[160px] xl:h-[100px]';
-
   return (
     <>
-      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-20 bg-light shadow-md ${height}`}>
-        <Container className="bg-light">
-          <div className={`flex sm:flex-col items-center justify-center w-full ${height} gap-2 px-6 xl:px-0`}>
-            <div className={`flex flex-row items-center justify-between w-full ${height} gap-6 `}>
-              <Logo />
-              <div className="flex items-center gap-4">
-                <NavLinksDesktop />
-                <DarkModeButton />
-                <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} className="flex lg:hidden" />
-                {navigationLinks && <NavLinksMobile onLinkClick={handleLinkClick} />}
-              </div>
-            </div>
-            <NavLinksTablet />
+      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-20 bg-light shadow-md`}>
+        <Container className="flex items-center justify-center gap-4">
+          <div className={`flex flex-row items-center justify-between w-full gap-6  h-[100px]`}>
+            <Logo />
+            <NavLinksDesktop />
+            <DarkModeButton />
+            <MenuButton toggleNav={toggleNav} navigationLinks={navigationLinks} className="flex lg:hidden" />
+            {navigationLinks && <NavLinksMobile onLinkClick={handleLinkClick} />}
           </div>
+          <NavLinksTablet />
         </Container>
       </nav>
       <ThemeLine className="fixed sm:relative top-[100px] sm:top-[0px] xl:top-[100px] xl:fixed" />

@@ -61,16 +61,16 @@ export default function PorqueElegirnos() {
               );
             })}
           </ul>
-          <div id="porque-elegirnos-contenedor-imagen" className="items-center justify-center  mt-8">
+          <div id="porque-elegirnos-contenedor-imagen" className="">
             <ImageResponsive
               src={img}
               imageAlt={'Mujer señalando hacia las caraterísticas de la empresa'}
               imageTitle={'Mujer señalando hacia las caraterísticas de la empresa'}
-              // className={'shadow-image'}
+              // className={'}
               image_640={img}
               image_1024={img}
               image_1920={img}
-              width="full"
+              width="w-full sm:w-1/2 md:2/3 lg:w-full"
             />
           </div>
         </article>
