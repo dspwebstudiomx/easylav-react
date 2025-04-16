@@ -59,7 +59,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         className={'flex flex-col items-center justify-center gap-6'}
         height={'h-full'}
         backgroundColor={'bg-light'}>
-        <Container className={'mx-auto'}>
+        <Container className={'w-4/5 mx-auto'}>
           {city ? (
             <>
               <SucursalCardPerCity city={city} />
