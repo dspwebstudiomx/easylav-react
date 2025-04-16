@@ -115,7 +115,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl max-w-[240px] md:w-[310px]',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl max-w-[240px] md:w-[310px] xl:w-full',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
@@ -203,7 +203,7 @@ const SucursalCard = ({
 
       {/* Modal */}
       {showModal && (
-        <Modal width="w-[80vw] md:w-[40vw] z-50">
+        <Modal width="w-[80vw] md:w-[90vw] z-[10000]">
           <div className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
