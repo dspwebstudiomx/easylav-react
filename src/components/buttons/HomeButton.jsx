@@ -11,6 +11,8 @@ const HomeButton = () => {
       icon={<IoHomeOutline size={28} />}
       title=""
       onClick={() => window.scrollTo(0, 0)}
+      aria-label="Ir a inicio"
+      type="button"
     />
   );
 };
