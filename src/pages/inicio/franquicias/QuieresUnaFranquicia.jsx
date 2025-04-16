@@ -42,10 +42,10 @@ const QuieresUnaFranquicia = () => {
             En Easylav, ofrecemos franquicias de lavandería con limpieza impecable y planchado perfecto. Descubre cómo
             puedes ser parte de nuestro éxito.
           </TitleH1>
-          <span className="text-light uppercase text-xl sm:text-2xl lg:text-4xl font-semibold mx-auto">
+          <span className="text-light uppercase text-3xl lg:text-4xl font-semibold mx-auto">
             ¿Estás listo para emprender un negocio rentable y en crecimiento?
           </span>
-          <p className="text-light text-base sm:text-lg lg:text-2xl block">
+          <p className="text-light text-xl lg:text-2xl block">
             Imagina ser parte de una franquicia de lavandería, un sector que nunca pasa de moda y siempre tiene demanda.
             Con nuestra marca, no solo obtendrás un modelo de negocio probado y exitoso, sino también el respaldo y la
             capacitación necesaria para triunfar. Nuestros sistemas innovadores y tecnología de vanguardia te permitirán
