@@ -32,7 +32,7 @@ const Recomendacion = ({ title, description }) => {
       <TwoColumnsContainer>
         <div className="flex  gap-6 w-full text-dark dark:text-light">
           <FaCheck size={32} className="text-secondary_dark dark:text-primary" />
-          <span className="font-semibold block text-2xl">{title}</span>
+          <span className="font-semibold block text-xl uppercase">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
       </TwoColumnsContainer>
@@ -51,14 +51,16 @@ const Recomendaciones = () => {
             <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
           </ParagraphContainer>
         </div>
-        <ul id="listado-de-recomendaciones" className="flex flex-col gap-12 items-start justify-start w-full">
+        <ul
+          id="listado-de-recomendaciones"
+          className="flex flex-col md:gap-8 items-start justify-start w-full md:mt-0 xl:mt-12">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
           ))}
         </ul>
-        <ParagraphContainer>
-          <Paragraph>
-            <span className="mr-2 font-semibold text-xl">Importante:</span>
+        <ParagraphContainer distance="gap-12">
+          <Paragraph className="mt-12">
+            <span className="mr-2 font-semibold text-2xl">Importante:</span>
             <br />
             <br />
             La cantidad de ropa que laves y seques influye en el resultado final. Te recomendamos elegir el servicio
