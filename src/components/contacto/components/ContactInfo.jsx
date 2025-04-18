@@ -39,7 +39,7 @@ const ContactInfo = () => {
           , llenar los datos completos y mandar la información.
         </Paragraph>
       </ParagraphContainer>
-      <div className="mx-auto mb-24 mt-12 sm:mb-24 sm:mt-6 md:mb-0 lg:ml-0 2xl:mt-12 overflow-hidden">
+      <div className="mx-auto my-16  md:mb-0 lg:ml-0 2xl:mt-12 overflow-hidden">
         <SocialLinks color={'text-secondary dark:text-primary'} size={54} gap={'gap-4'} />
       </div>
     </section>
