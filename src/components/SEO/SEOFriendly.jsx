@@ -81,7 +81,7 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
           style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
           font-src 'self' https://fonts.gstatic.com;
           img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net https://www.google.com https://www.gstatic.com https://www.facebook.com https://i.ytimg.com;
-          connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net https://www.googleapis.com;
+          connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net https://www.googleapis.com https://api.emailjs.com;
           frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com;
           object-src 'none';
         "

@@ -6,15 +6,12 @@ Fecha: 2022-08-25
 */
 
 // Importaciones
+import PropTypes from 'prop-types';
 import emailjs from '@emailjs/browser';
-import { Button, HomeButton } from 'components';
+import { Button } from 'components';
 import { Field, Form, Formik } from 'formik';
-import { useEffect, useRef, useState } from 'react';
 import * as Yup from 'yup';
-import EmailErrorModal from '../modals/EmailErrorModal';
-import EmailSuccessModal from '../modals/EmailSuccessModal';
-import { FaTrash } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa6';
+import { FaTrash, FaEnvelope } from 'react-icons/fa6';
 
 // Esquema de validación con Yup
 const validationSchema = Yup.object().shape({
@@ -33,37 +30,27 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().required('Mensaje requerido'),
 });
 
+// Variables de entorno para EmailJS
+let serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+let templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+let publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 // Componente
-export default function ContactForm() {
-  const form = useRef();
-  const [showModal, setShowModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
-
-  useEffect(() => {
-    if (showModal || showErrorModal) {
-      document.body.classList.add('modal-active');
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.classList.remove('modal-active');
-      document.body.style.overflow = 'unset';
-    }
-  }, [showModal, showErrorModal]);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm('service_Contacto', 'template_contacto', form.current, {
-        publicKey: 'dO-yqTYETkfD9vvLv',
-      })
-      .then(
-        () => {
-          setShowModal(true);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setShowErrorModal(true);
-        }
-      );
+const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
+  const sendEmail = (values, { resetForm }) => {
+    console.log('Valores enviados:', values); // Verifica los valores enviados
+    emailjs.send(serviceID, templateID, values, publicKey).then(
+      () => {
+        console.log('Correo enviado exitosamente');
+        setShowModal(true); // Muestra el modal de éxito
+        resetForm(); // Limpia el formulario
+        if (onReset) onReset(); // Llama a la función de reinicio pasada como prop
+      },
+      (error) => {
+        console.error('Error al enviar el correo:', error.text);
+        setShowErrorModal(true); // Muestra el modal de error
+      }
+    );
   };
 
   return (
@@ -79,9 +66,9 @@ export default function ContactForm() {
           message: '',
         }}
         validationSchema={validationSchema}
-        onSubmit={() => {}}>
+        onSubmit={sendEmail}>
         {({ errors, touched, resetForm }) => (
-          <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 text-sm text-dark tracking-wider">
+          <Form className="flex flex-col gap-8 text-sm text-dark tracking-wider">
             {/* Fields */}
             <div className="flex flex-wrap gap-3 text-sm items-center justify-center">
               <div id="formField_nombre" className="flex flex-col xl:w-[50%] w-full text-sm">
@@ -170,46 +157,34 @@ export default function ContactForm() {
             {/* Fields */}
 
             {/* Submit Button */}
-            <div className="">
-              <div className="mx-auto">
-                <Button type="submit" variant="primary" title="Enviar mensaje" width="w-full" icon={<FaEnvelope />} />
-              </div>
-              <div className="flex gap-4 mt-5">
-                <Button
-                  type="button"
-                  variant="secondary"
-                  icon={<FaTrash size={24} />}
-                  title=""
-                  className="w-1/2"
-                  onClick={() => resetForm()}
-                />
-                <div className="hidden lg:block w-1/2">
-                  <HomeButton text="Ir a inicio" />
-                </div>
-              </div>
+            <div className="flex gap-4 mt-5">
+              <Button type="submit" variant="primary" title="Enviar mensaje" icon={<FaEnvelope />} />
+              <Button
+                width="w-20"
+                type="button"
+                variant="secondary"
+                icon={<FaTrash size={24} />}
+                title=""
+                className=""
+                onClick={() => {
+                  resetForm(); // Reinicia el formulario
+                  if (onReset) onReset(); // Llama a la función de reinicio pasada como prop
+                }}
+              />
             </div>
             {/* Submit Button */}
-
-            {/* Modals */}
-            {showModal && (
-              <EmailSuccessModal
-                onClick={() => {
-                  setShowModal(false);
-                  resetForm();
-                }}
-              />
-            )}
-            {showErrorModal && (
-              <EmailErrorModal
-                onClick={() => {
-                  setShowErrorModal(false);
-                }}
-              />
-            )}
-            {/* Modals */}
           </Form>
         )}
       </Formik>
     </section>
   );
-}
+};
+
+ContactForm.propTypes = {
+  showModal: PropTypes.bool,
+  setShowModal: PropTypes.func.isRequired,
+  setShowErrorModal: PropTypes.func.isRequired,
+  onReset: PropTypes.func,
+};
+
+export default ContactForm;
