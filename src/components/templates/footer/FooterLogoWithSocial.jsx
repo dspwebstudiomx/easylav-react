@@ -6,11 +6,11 @@ import { NavHashLink } from 'react-router-hash-link';
 export default function FooterLogoWithSocial() {
   return (
     <div className="ml-auto flex flex-col md:flex-row lg:flex-col items-center sm:items-start justify-start gap-8 w-[76vw] sm:w-full">
-      <NavHashLink to={'/#inicio'} scroll={scrollWithOffset}>
+      <NavHashLink to={'/'} scroll={scrollWithOffset}>
         <img
           alt="logo easylav a color"
           src={LogoHorizontalBlanco}
-          className="w-[180px] 2xl:w-[240px]"
+          width={240}
           title="logo easylav a color"
           aria-label="logo easylav"
         />
