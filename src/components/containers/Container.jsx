@@ -14,7 +14,9 @@ import PropTypes from 'prop-types';
 // Estructura
 export default function Container({ id, children, className }) {
   return (
-    <article id={`container-${id}`} className="md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg mx-auto">
+    <article
+      id={`container-${id}`}
+      className={`md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg mx-auto ${className}`}>
       {children}
     </article>
   );
