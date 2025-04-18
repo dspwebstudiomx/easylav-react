@@ -16,6 +16,8 @@ import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
+const height = 'h-[650px] sm:h-[100vh] md:h-[80vh] lg:h-[60vh]';
+
 // Estructura
 const HeroInicioVideo = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -35,11 +37,9 @@ const HeroInicioVideo = () => {
   }, []);
 
   return (
-    <section
-      id="inicio"
-      className="relative overflow-hidden w-full h-[650px] sm:h-[100vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center p-12">
+    <section id="inicio" className={`relative overflow-hidden w-full flex items-center justify-center ${height}`}>
       {/* Fondo: Video o Imagen Estática */}
-      <div className="absolute inset-0 z-0 w-full bg-dark left-0 h-[650px] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]">
+      <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${height}`}>
         {isMobile ? (
           <img
             src={defaultImage}
@@ -61,10 +61,10 @@ const HeroInicioVideo = () => {
       </div>
 
       {/* Capa de opacidad */}
-      <div className="absolute top-0 inset-0 z-10 w-full bg-dark opacity-60 left-0 h-[650px] sm:h-[100vh] md:h-[80vh] lg:h-[90vh]"></div>
+      <div className={`absolute top-0 inset-0 z-10 w-full bg-dark opacity-60 left-0 ${height}`}></div>
 
       {/* Contenido */}
-      <Container className="relative z-20 flex flex-col gap-12 justify-center w-full h-full text-center sm:p-12">
+      <Container className="relative z-20 flex flex-col justify-center w-full h-full text-center sm:p-12 md:px-0">
         <h1 className="text-2xl md:text-3xl xl:text-4xl w-full sm:w-2/3 font-semibold tracking-wider text-light text-left">
           En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
           soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
