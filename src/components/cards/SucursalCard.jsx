@@ -115,7 +115,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl max-w-[240px] md:w-[310px] xl:w-full',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[240px] md:w-[280px] xl:w-[280px]',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
