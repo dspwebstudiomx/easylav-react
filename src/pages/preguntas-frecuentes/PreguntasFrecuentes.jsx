@@ -32,7 +32,7 @@ const PreguntasFrecuentes = () => {
   }, []);
 
   return (
-    <PageLayout>
+    <PageLayout id="preguntas-frecuentes">
       <div className="flex flex-col sm:gap-0">
         {/* Title */}
         <div className="w-full px-4">
