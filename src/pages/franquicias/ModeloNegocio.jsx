@@ -95,30 +95,37 @@ const ModeloNegocio = () => {
         </BorderLeft>
         <ParagraphContainer className="">
           <Paragraph>
-            <span className="font-bold text-secondary_dark">EASYLAV</span> maneja varios modelos de negocio donde
-            podemos ajustarnos a tus necesidades.
+            <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span> maneja varios
+            modelos de negocio donde podemos ajustarnos a tus necesidades.
           </Paragraph>
           <Paragraph>
-            Las franquicias de <span className="font-bold text-secondary_dark">EASYLAV</span>, están dirigidos a
-            aquellas personas que desean invertir en un modelo probado y noble, ya que no se tiene productos perecederos
-            lo cual evita mermas por expiración.
+            Las franquicias de <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span>,
+            están dirigidos a aquellas personas que desean invertir en un modelo probado y noble, ya que no se tiene
+            productos perecederos lo cual evita mermas por expiración.
           </Paragraph>
 
           <article className="grid gap-12">
-            <h3 className="text-2xl uppercase text-secondary_dark mt-12 font-semibold">
+            <h3 className="text-2xl uppercase text-secondary_dark dark:text-secondary_light mt-12 font-semibold">
               Invierte en una franquicia rentable y automatizada.
             </h3>
             <Paragraph>
               Nuestras sucursales están diseñadas para alcanzar el{' '}
-              <span className="text-secondary_dark font-semibold">punto de equilibrio a partir del sexto mes</span>{' '}
+              <span className="text-secondary_dark dark:text-secondary_light font-semibold">
+                punto de equilibrio a partir del sexto mes
+              </span>{' '}
               (según nuestra experiencia), siempre que se lleve una administración eficiente y un buen manejo del
               negocio.
             </Paragraph>
             <Paragraph>
               Al adquirir una franquicia, obtienes un{' '}
-              <span className="text-secondary_dark font-semibold">modelo de negocio probado</span>, ideal para quienes
-              buscan invertir a <span className="text-secondary_dark font-semibold">corto, mediano o largo plazo</span>,
-              sin la necesidad de estar presentes diariamente.
+              <span className="text-secondary_dark dark:text-secondary_light font-semibold">
+                modelo de negocio probado
+              </span>
+              , ideal para quienes buscan invertir a{' '}
+              <span className="text-secondary_dark dark:text-secondary_light font-semibold">
+                corto, mediano o largo plazo
+              </span>
+              , sin la necesidad de estar presentes diariamente.
             </Paragraph>
             <Paragraph>
               <ul
@@ -136,7 +143,7 @@ const ModeloNegocio = () => {
           </article>
 
           <article className="grid gap-12">
-            <h3 className="text-2xl uppercase text-secondary_dark mt-12 font-semibold">
+            <h3 className="text-2xl uppercase text-secondary_dark dark:text-secondary_light mt-12 font-semibold">
               Factores clave al invertir en una franquicia EASYLAV
             </h3>
             <Paragraph>
@@ -160,7 +167,7 @@ const ModeloNegocio = () => {
           </Paragraph>
         </ParagraphContainer>
         <Paragraph>
-          <span className="text-2xl font-semibold text-secondary_dark text-center my-8 mx-auto">
+          <span className="text-2xl font-semibold text-secondary_dark dark:text-secondary_light text-center my-8 mx-auto">
             <blockquote>Invierte con confianza en un negocio rentable, automatizado y fácil de administrar.</blockquote>
           </span>
         </Paragraph>
