@@ -8,7 +8,7 @@ const ProgramasDeLealtad = () => {
         <ParagraphContainer>
           <Paragraph>
             <div className="text-xl flex flex-col gap-8 items-start justify-start">
-              <span className="text-secondary_dark dark:text-secondary_light text-2xl font-bold block">
+              <span className="text-secondary dark:text-secondary_light text-3xl font-bold block">
                 ¡Tu lealtad tiene recompensas!
               </span>
               <span>
