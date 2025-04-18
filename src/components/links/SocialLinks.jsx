@@ -7,7 +7,7 @@ const classes = {
   Link: 'text-blue-900  hover:scale-110 dark:text-blue-500 text-xl ',
 };
 
-const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick }) => {
+const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick, alt }) => {
   return (
     <ul className={`flex ${gap} ${position}`}>
       <SocialLink
@@ -19,6 +19,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick 
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
+        alt={alt}
       />
       <SocialLink
         href={'https://www.instagram.com/lavanderiaseasylav/'}
@@ -29,6 +30,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick 
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
+        alt={alt}
       />
       <SocialLink
         href={'mailto:contacto@easylav.mx'}
@@ -39,6 +41,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick 
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
+        alt={alt}
       />
       <SocialLink
         href={'tel:4435200593'}
@@ -49,12 +52,14 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick 
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
+        alt={alt}
       />
     </ul>
   );
 };
 SocialLinks.propTypes = {
   color: PropTypes.string,
+  alt: PropTypes.string,
   size: PropTypes.number,
   circleBorder: PropTypes.string,
   position: PropTypes.string,
