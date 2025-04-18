@@ -1,16 +1,26 @@
 # robots.txt para easylav.mx
 
-# Bloquea el acceso a carpetas sensibles
+# Bloquea el acceso a carpetas privadas o sensibles
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
-Disallow: /register/
-Disallow: /cart/
-Disallow: /checkout/
+Disallow: /private/
 Disallow: /api/
 
 # Permite el acceso a todo lo demás
 Allow: /
 
 # Especifica la ubicación del sitemap
-Sitemap: https://easylav.mx/sitemap.xml
+Sitemap: https://www.tusitio.com/sitemap.xml
+
+# Bloquea rastreadores específicos (opcional)
+User-agent: BadBot
+Disallow: /
+
+# Permite rastreadores específicos (opcional)
+User-agent: Googlebot
+Allow: /
+
+# Bloquea parámetros de URL innecesarios
+Disallow: /*?sessionid=
+Disallow: /*?ref=
