@@ -7,7 +7,7 @@ const classes = {
   Link: 'text-blue-900  hover:scale-110 dark:text-blue-500 text-xl ',
 };
 
-const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick, alt }) => {
+const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick }) => {
   return (
     <ul className={`flex ${gap} ${position}`}>
       <SocialLink
@@ -19,7 +19,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick,
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
-        alt={alt}
+        alt="icono de facebook"
       />
       <SocialLink
         href={'https://www.instagram.com/lavanderiaseasylav/'}
@@ -30,7 +30,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick,
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
-        alt={alt}
+        alt={'icono de instagram'}
       />
       <SocialLink
         href={'mailto:contacto@easylav.mx'}
@@ -41,7 +41,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick,
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
-        alt={alt}
+        alt={'icono de correo'}
       />
       <SocialLink
         href={'tel:4435200593'}
@@ -52,14 +52,13 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick,
         circleBorder={circleBorder}
         hover={hover}
         onClick={onClick}
-        alt={alt}
+        alt={'icono de teléfono'}
       />
     </ul>
   );
 };
 SocialLinks.propTypes = {
   color: PropTypes.string,
-  alt: PropTypes.string,
   size: PropTypes.number,
   circleBorder: PropTypes.string,
   position: PropTypes.string,
