@@ -61,17 +61,14 @@ const QuieresUnaFranquicia = () => {
             ¿Estás listo para emprender un negocio rentable y en crecimiento?
           </span>
           <p className="text-light text-xl lg:text-2xl block">
-            Imagina ser parte de una franquicia de lavandería, un sector que nunca pasa de moda y siempre tiene demanda.
-            Con nuestra marca, no solo obtendrás un modelo de negocio probado y exitoso, sino también el respaldo y la
-            capacitación necesaria para triunfar. Nuestros sistemas innovadores y tecnología de vanguardia te permitirán
-            ofrecer un servicio excepcional, atrayendo a clientes que buscan calidad y conveniencia. No dejes pasar esta
-            oportunidad de inversión segura que te brindará libertad financiera y la posibilidad de hacer crecer tu
-            patrimonio. ¡Únete a nosotros y forma parte de un futuro brillante en el mundo de la lavandería!
+            Únete a una franquicia de lavandería con alta demanda y un modelo de negocio probado. Con nuestro respaldo y
+            tecnología avanzada, podrás ofrecer un servicio excepcional que atrae clientes y asegura tu éxito. ¡Invierte
+            en tu futuro con Easylav!
           </p>
-          <ButtonContainer position="justify-center items-center">
+          <ButtonContainer position="justify-start items-center" distance="mt-12">
             <Button
               title={'Solicita más información'}
-              width={'w-full 2xl:w-[320px]'}
+              width={''}
               onClick={() => handleOpenModal({ nombre: 'Paquete Básico' })} // Pasa un paquete válido
               distance="mx-1"
               id="boton-contactar-paquete-basico" // ID estático para evitar errores

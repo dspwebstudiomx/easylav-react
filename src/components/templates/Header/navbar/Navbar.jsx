@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="nav" className={`fixed sm:relative md:fixed top-0 left-0 w-full z-20 bg-light shadow-md`}>
+      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-20 bg-light shadow-md`}>
         <div
           className={`flex flex-row items-center justify-between w-full gap-6  h-[100px] px-8 sm:px-12 lg:px-0 md:max-w-screen-md lg:max-w-screen-md xl:max-w-screen-lg mx-auto`}>
           <Logo />

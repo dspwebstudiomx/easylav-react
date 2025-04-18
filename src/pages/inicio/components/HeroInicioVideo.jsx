@@ -16,7 +16,7 @@ import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const height = 'h-[650px] sm:h-[100vh] md:h-[60vh] lg:h-[60vh]';
+const height = 'h-[87vh] md:h-[120vh] lg:h-[70vh] xl:h-[70vh] 2xl:h-[100vh]';
 
 // Estructura
 const HeroInicioVideo = () => {
@@ -37,7 +37,9 @@ const HeroInicioVideo = () => {
   }, []);
 
   return (
-    <section id="inicio" className={`relative overflow-hidden w-full flex items-center justify-center ${height}`}>
+    <section
+      id="inicio"
+      className={`relative overflow-hidden w-full flex items-center justify-center ${height} px-12 md:px-20 lg:px-0 xl:px-0 2xl:px-0`}>
       {/* Fondo: Video o Imagen Estática */}
       <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${height}`}>
         {isMobile ? (
@@ -65,7 +67,7 @@ const HeroInicioVideo = () => {
 
       {/* Contenido */}
       <Container className="relative z-20 flex flex-col justify-center items-center w-full h-full text-center sm:p-12 md:px-0">
-        <h1 className="text-2xl md:text-3xl xl:text-4xl w-full sm:w-2/3 font-semibold tracking-wider text-light text-left">
+        <h1 className="text-2xl md:text-3xl xl:text-4xl w-full lg:w-2/3 font-semibold tracking-wider text-light text-left">
           En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
           soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
           prendas luzcan siempre de la mejor manera.
