@@ -71,7 +71,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
           <Form className="flex flex-col gap-8 text-sm text-dark tracking-wider">
             {/* Fields */}
             <div className="flex flex-wrap gap-3 text-sm items-center justify-center">
-              <div id="formField_nombre" className="flex flex-col xl:w-[50%] w-full text-sm">
+              <div id="formField_nombre" className="flex flex-col sm:w-[50%] w-full text-sm">
                 <label htmlFor="user_name" className="mb-2">
                   Nombre Completo<span className="text-required ml-1">*</span>
                 </label>
@@ -88,7 +88,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                   </p>
                 )}
               </div>
-              <div id="formField_ciudad" className="flex flex-col xl:w-[45%] w-full">
+              <div id="formField_ciudad" className="flex flex-col sm:w-[45%] w-full">
                 <label htmlFor="user_city" className="mb-2 text-sm">
                   Ciudad<span className="text-required ml-1">*</span>
                 </label>
@@ -106,7 +106,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
               </div>
             </div>
             <div className="flex flex-wrap justify-between gap-2">
-              <div id="formField_email" className="flex flex-col xl:w-[50%] w-full">
+              <div id="formField_email" className="flex flex-col sm:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2 text-sm">
                   Correo Electrónico<span className="text-required ml-1">*</span>
                 </label>
@@ -123,7 +123,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                   </p>
                 )}
               </div>
-              <div id="formField_ numerotelefonico" className="flex flex-col xl:w-[45%] w-full">
+              <div id="formField_ numerotelefonico" className="flex flex-col sm:w-[45%] w-full">
                 <label htmlFor="user_phone" className="mb-2 text-sm">
                   Número Telefónico<span className="text-required ml-1">*</span>
                 </label>
@@ -157,15 +157,14 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
             {/* Fields */}
 
             {/* Submit Button */}
-            <div className="flex gap-4 mt-5">
-              <Button type="submit" variant="primary" title="Enviar mensaje" icon={<FaEnvelope />} />
+            <div className="flex flex-col sm:flex-row gap-4 mt-5">
+              <Button width="w-full sm:w-[50%]" type="submit" variant="primary" title="Enviar" icon={<FaEnvelope />} />
               <Button
-                width="w-20"
+                width="w-full sm:w-[50%]"
+                title="Reiniciar"
                 type="button"
                 variant="secondary"
                 icon={<FaTrash size={24} />}
-                title=""
-                className=""
                 onClick={() => {
                   resetForm(); // Reinicia el formulario
                   if (onReset) onReset(); // Llama a la función de reinicio pasada como prop

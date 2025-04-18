@@ -41,8 +41,7 @@ const Button = ({
         'bg-primary text-light dark:text-light hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light';
       break;
     case 'secondary':
-      variantStyles =
-        'bg-secondary text-light hover:bg-secondary_dark  dark:bg-primary_dark dark:hover:bg-primary_light';
+      variantStyles = 'bg-secondary text-light hover:bg-secondary_dark  dark:bg-primary_dark dark:hover:bg-primary';
       break;
     case 'warning':
       variantStyles = 'bg-red text-light hover:bg-warning_dark dark:bg-warning_dark dark:hover:bg-warning_light';
