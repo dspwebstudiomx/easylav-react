@@ -4,19 +4,19 @@
 import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
 import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
 import { lazy, Suspense } from 'react';
-import ProgramasDeLealtad from './components/ProgramasDeLealtad';
-import Equipamiento from './components/Equipamiento';
-import Recomendaciones from './components/Recomendaciones';
 
 // Constantes
-const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
-const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
-const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
-const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
-const PreguntasFrecuentes = lazy(() => import('./PreguntasFrecuentes/PreguntasFrecuentes'));
-const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
 const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
+const Equipamiento = lazy(() => import('./components/Equipamiento'));
+const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
+const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
+const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
+const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
+const PreguntasFrecuentes = lazy(() => import('./PreguntasFrecuentes/PreguntasFrecuentes'));
+const ProgramasDeLealtad = lazy(() => import('./components/ProgramasDeLealtad'));
+const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
+const Recomendaciones = lazy(() => import('./components/Recomendaciones'));
 
 // Estructura
 const Inicio = () => (
