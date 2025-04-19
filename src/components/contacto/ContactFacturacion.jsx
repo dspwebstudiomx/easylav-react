@@ -9,7 +9,7 @@ El formulario incluye campos para el nombre, RFC, correo electrónico, número d
 
 // Importaciones
 import emailjs from '@emailjs/browser';
-import { ButtonContainer, ButtonPrimary } from 'components';
+import { Button, ButtonContainer, ButtonPrimary } from 'components';
 import { localservices } from 'data';
 import { Field, Form, Formik } from 'formik';
 import { scrollToTop } from 'functions';
@@ -157,11 +157,11 @@ export default function ContactFacturacion() {
             {/* Fields */}
 
             {/* Datos del Usuario */}
-            <div id="datos-usuario" className="p-8">
+            <div id="datos-usuario" className="flex flex-col mx-auto w-full p-8">
               <h2 className="text-xl uppercase font-bold text-center text-dark dark:text-primary_dark mb-12">
                 Datos del usuario
               </h2>
-              <div id="campos-datos-usuario" className="flex flex-col w-[210px] sm:w-full mx-auto text-left">
+              <div id="campos-datos-usuario" className="flex flex-col w-full mx-auto">
                 {/* Nombre Completo / Razón  - RFC  */}
                 <div className="grid sm:grid-cols-2 gap-8">
                   {/* Nombre o Razon Social */}
@@ -172,7 +172,7 @@ export default function ContactFacturacion() {
                     <Field
                       id="user_name"
                       name="user_name"
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       type="text"
                       required
                     />
@@ -190,7 +190,7 @@ export default function ContactFacturacion() {
                       RFC<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       type="text"
                       name="user_RFC"
                       id="user_RFC"
@@ -214,7 +214,7 @@ export default function ContactFacturacion() {
                       Correo Electrónico<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       id="user_email"
                       name="user_email"
                       type="email"
@@ -234,7 +234,7 @@ export default function ContactFacturacion() {
                       Número Telefónico<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       type="text"
                       name="user_phone"
                       id="user_phone"
@@ -258,7 +258,7 @@ export default function ContactFacturacion() {
                       Calle<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       id="user_street"
                       name="user_street"
                       required
@@ -276,7 +276,7 @@ export default function ContactFacturacion() {
                       Número<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       type="number"
                       name="user_number"
                       id="user_number"
@@ -296,7 +296,7 @@ export default function ContactFacturacion() {
                       Ciudad<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       id="user_city"
                       name="user_city"
                       required
@@ -319,7 +319,7 @@ export default function ContactFacturacion() {
                       Código Postal<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       id="user_zipcode"
                       name="user_zipcode"
                       required
@@ -338,7 +338,7 @@ export default function ContactFacturacion() {
                       Estado<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-[210px] md:w-auto"
+                      className="rounded-md bg-light text-dark px-4 border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       id="user_state"
                       name="user_state"
                       required
@@ -598,17 +598,16 @@ export default function ContactFacturacion() {
 
             {/* Submit Button */}
             <ButtonContainer position="items-center justify-center" distance="mt-0">
-              <button
+              <Button
+                width="w-[260px]"
+                variant="secondary"
+                title="Enviar"
                 type="submit"
-                value="Submit"
-                className="flex gap-2 justify-center items-center text-light text-xl bg-secondary_dark py-4 px-6 rounded border-l-secondary_light border-l-4 border-t-secondary_light border-r-secondary_dark border-t-4 hover:border-t-secondary_light hover:border-l-secondary dark:border-l-primary dark:border-t-primary_light dark:hover:border-l-primary dark:bg-primary font-semibold uppercase w-[260px]">
-                <span>
-                  <FaRegEnvelope />
-                </span>
-                <span>Enviar mensaje</span>
-              </button>
+                icon={<FaRegEnvelope />}
+                onClick={() => [scrollToTop(), sendEmail()]}
+              />
               <ButtonPrimary
-                width=""
+                width="w-[260px]"
                 title="Borrar"
                 onClick={() => [resetForm(), scrollToTop()]}
                 type="button"

@@ -31,7 +31,7 @@ const Button = ({
 
   // Define los estilos base
   let baseStyles =
-    'flex items-center justify-center min-h-[60px] text-lg xl:text-lg px-6 py-6 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 flex gap-3 z-50';
+    'flex items-center justify-center min-h-[50px] text-lg xl:text-lg px-6 py-4 font-semibold rounded-xl uppercase text-balance tracking-wider sm:tracking-normal transition ease-in-out delay-150 flex gap-3 z-10';
 
   // Define los estilos específicos para cada variante
   let variantStyles = '';
