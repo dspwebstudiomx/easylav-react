@@ -29,7 +29,7 @@ const ButtonSection = () => {
         title="Sucursales en Morelia"
         href="/sucursales/morelia"
         name="Sucursales en Morelia"
-        width={''}
+        width={'w-[300px]'}
         onClick={() => scrollToTop()}
         variant="secondary"
       />
@@ -37,7 +37,7 @@ const ButtonSection = () => {
         title="Sucursales en León"
         href="/sucursales/leon"
         name="Sucursales en León"
-        width={''}
+        width={'w-[300px]'}
         onClick={() => scrollToTop()}
         variant="primary"
       />
