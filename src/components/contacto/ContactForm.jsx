@@ -56,7 +56,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
   return (
     <section
       id="formulario"
-      className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:py-8 bg-secondary_light/30 dark:bg-primary_light w-full h-auto overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest mx-auto flex flex-col justify-center  2xl:h-[600px]">
+      className="relative border-4 border-secondary dark:border-primary_dark rounded-2xl p-6 lg:py-8 bg-secondary_light/30 dark:bg-primary_light w-full h-auto overflow-hidden text-dark animate__animated animate__bounceInRight animate__slowest mx-auto flex flex-col justify-center">
       <Formik
         initialValues={{
           user_name: '',
@@ -71,7 +71,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
           <Form className="flex flex-col gap-8 text-sm text-dark tracking-wider">
             {/* Fields */}
             <div className="flex flex-wrap gap-3 text-sm items-center justify-center">
-              <div id="formField_nombre" className="flex flex-col sm:w-[50%] w-full text-sm">
+              <div id="formField_nombre" className="flex flex-col sm:w-[50%] md:w-full w-full text-sm">
                 <label htmlFor="user_name" className="mb-2">
                   Nombre Completo<span className="text-required ml-1">*</span>
                 </label>
@@ -88,7 +88,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                   </p>
                 )}
               </div>
-              <div id="formField_ciudad" className="flex flex-col sm:w-[45%] w-full">
+              <div id="formField_ciudad" className="flex flex-col sm:w-[45%] md:w-full w-full">
                 <label htmlFor="user_city" className="mb-2 text-sm">
                   Ciudad<span className="text-required ml-1">*</span>
                 </label>
@@ -106,7 +106,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
               </div>
             </div>
             <div className="flex flex-wrap justify-between gap-2">
-              <div id="formField_email" className="flex flex-col sm:w-[50%] w-full">
+              <div id="formField_email" className="flex flex-col sm:w-[50%] md:w-full w-full">
                 <label htmlFor="user_email" className="mb-2 text-sm">
                   Correo Electrónico<span className="text-required ml-1">*</span>
                 </label>
@@ -123,7 +123,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                   </p>
                 )}
               </div>
-              <div id="formField_ numerotelefonico" className="flex flex-col sm:w-[45%] w-full">
+              <div id="formField_ numerotelefonico" className="flex flex-col sm:w-[45%] md:w-full w-full">
                 <label htmlFor="user_phone" className="mb-2 text-sm">
                   Número Telefónico<span className="text-required ml-1">*</span>
                 </label>

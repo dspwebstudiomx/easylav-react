@@ -20,7 +20,7 @@ import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
 // Lista de días festivos oficiales de México (formato DD-MM)
-const holidays = ['01-01', '25-12'];
+const holidays = ['01-01', '12-25'];
 
 // Función para verificar si hoy es un día festivo
 const isHoliday = () => {
@@ -224,7 +224,9 @@ const SucursalCard = ({
     </article>
   );
 };
+export default memo(SucursalCard);
 
+// Propiedades del componente
 SucursalCard.propTypes = {
   advertisement: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -245,5 +247,3 @@ SucursalCard.propTypes = {
     lng: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-export default memo(SucursalCard);
