@@ -129,7 +129,7 @@ const QuienesSomos = () => {
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
         <TitleContainer id="quienes-somos-titulo" title="Quienes somos" />
 
-        <div className="flex flex-col gap-12 items-center justify-center mx-auto w-full h-full">
+        <div className="flex flex-col gap-20 items-center justify-center mx-auto w-full h-full">
           {/* Párrafos */}
           <ParagraphContainer>
             <Paragraph>
@@ -159,13 +159,15 @@ const QuienesSomos = () => {
               <BorderLeft>
                 <h3 className="text-2xl font-semibold uppercase text-dark">Misión</h3>
               </BorderLeft>
-              <p className="text-lg text-dark">
+              <p className="text-lg text-dark text-balance">
                 En Lavanderías <span className="text-lg font-bold text-secondary_dark">EASYLAV</span>, nuestra misión es
                 ser los aliados perfectos de tu tiempo, ofreciéndote un servicio de lavandería y tintorería de
                 excelencia. Nos dedicamos a cuidar cada prenda como si fuera nuestra, utilizando tecnología de
-                vanguardia y procesos especializados para garantizar resultados impecables. Con sucursales diseñadas
-                para tu comodidad y atención personalizada, transformamos el cuidado de tu ropa en una experiencia
-                práctica y confiable, para que puedas dedicar tu tiempo a lo que realmente importa.
+                vanguardia y procesos especializados para garantizar resultados impecables.
+              </p>
+              <p className="text-lg text-dark text-balance">
+                Con sucursales diseñadas para tu comodidad y atención personalizada, transformamos el cuidado de tu ropa
+                en una experiencia práctica y confiable, para que puedas dedicar tu tiempo a lo que realmente importa.
               </p>
             </Card>
             {/* Misión */}
