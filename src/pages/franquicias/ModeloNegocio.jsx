@@ -85,7 +85,7 @@ const Recomendacion = ({ title, description }) => {
 const ModeloNegocio = () => {
   return (
     <Section className="">
-      <Container className="grid gap-20">
+      <Container className="grid gap-20 mb-20">
         <BorderLeft>
           <TitleH2>
             Franquicias
@@ -147,8 +147,9 @@ const ModeloNegocio = () => {
               Factores clave al invertir en una franquicia EASYLAV
             </h3>
             <Paragraph>
-              Al adquirir una franquicia EASYLAV, es importante considerar los siguientes aspectos para asegurar el
-              éxito de tu negocio:
+              Al adquirir una franquicia{' '}
+              <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span>, es importante
+              considerar los siguientes aspectos para asegurar el éxito de tu negocio:
             </Paragraph>
             <Paragraph>
               <ul
@@ -162,13 +163,14 @@ const ModeloNegocio = () => {
           </article>
 
           <Paragraph>
-            Con EASYLAV, tu inversión está respaldada por un modelo de negocio sólido, automatizado y fácil de
-            gestionar. ¡Haz crecer tu futuro con nosotros!
+            Con <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span>, tu inversión
+            está respaldada por un modelo de negocio sólido, automatizado y fácil de gestionar. ¡Haz crecer tu futuro
+            con nosotros!
           </Paragraph>
         </ParagraphContainer>
         <Paragraph>
           <span className="text-3xl  mx-auto font-semibold text-secondary_dark dark:text-secondary_light text-center my-8">
-            <blockquote className="w-2/3 mx-auto">
+            <blockquote className="w-2/3 mx-auto mt-20">
               Invierte con confianza en un negocio rentable, automatizado y fácil de administrar.
             </blockquote>
           </span>
