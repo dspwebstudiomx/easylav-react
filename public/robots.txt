@@ -11,7 +11,7 @@ Disallow: /api/
 Allow: /
 
 # Especifica la ubicación del sitemap
-Sitemap: https://www.tusitio.com/sitemap.xml
+Sitemap: https://easylav.mx/sitemap.xml
 
 # Bloquea rastreadores específicos (opcional)
 User-agent: BadBot
