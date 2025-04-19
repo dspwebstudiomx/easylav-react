@@ -38,10 +38,11 @@ const Button = ({
   switch (variant) {
     case 'primary':
       variantStyles =
-        'bg-primary text-light dark:text-light hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light';
+        'bg-primary text-light dark:text-light hover:bg-primary_dark dark:bg-secondary_dark dark:hover:bg-secondary_light border-2 border-primary_light dark:border-secondary_light hover:border-primary_dark dark:hover:border-secondary_dark';
       break;
     case 'secondary':
-      variantStyles = 'bg-secondary text-light hover:bg-secondary_dark  dark:bg-primary_dark dark:hover:bg-primary';
+      variantStyles =
+        'bg-secondary text-light hover:bg-secondary_dark  dark:bg-primary_dark dark:hover:bg-primary border-2 border-secondary_light dark:border-primary_light hover:border-secondary_dark dark:hover:border-primary ';
       break;
     case 'warning':
       variantStyles = 'bg-red text-light hover:bg-warning_dark dark:bg-warning_dark dark:hover:bg-warning_light';
