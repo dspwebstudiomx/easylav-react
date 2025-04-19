@@ -9,17 +9,7 @@
 
 // Importaciones
 import { memo, useState, useCallback } from 'react';
-import {
-  Accordion,
-  BorderLeft,
-  Button,
-  ButtonContainer,
-  Container,
-  Section,
-  TitleH1,
-  TitleH2,
-  TitleH3,
-} from 'components';
+import { Accordion, BorderLeft, Button, ButtonContainer, Container, Section, TitleH2, TitleH3 } from 'components';
 import { frequentQuestions } from 'data';
 import { FaHome } from 'react-icons/fa';
 import { FaRegBuilding } from 'react-icons/fa6';
