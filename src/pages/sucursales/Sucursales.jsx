@@ -21,6 +21,17 @@ import { scrollToTop } from 'functions';
 // Estructuracls
 const Sucursales = () => {
   scrollToTop();
+
+  // Obtener la fecha actual
+  const today = new Date();
+  const currentMonth = today.getMonth() + 1; // Los meses en JavaScript son 0-indexados
+  const currentDay = today.getDate();
+
+  // Verificar si la fecha actual coincide con los días festivos
+  const isHoliday =
+    (currentMonth === 12 && (currentDay === 24 || currentDay === 25 || currentDay === 31)) ||
+    (currentMonth === 1 && currentDay === 1);
+
   return (
     <>
       <SEOFriendly
@@ -40,34 +51,42 @@ const Sucursales = () => {
           calidad con Easylav. ¡Estamos cerca de ti!
         </TitleH1>
 
-        <Banner variant="primary">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat obcaecati accusantium natus. Esse
-          natus quo reprehenderit nesciunt et rerum aperiam praesentium, pariatur accusamus est modi eaque error odio
-          iure deleniti atque a vero nostrum incidunt, numquam quos alias commodi.
-        </Banner>
-        <div className="flex flex-col sm:flex-row gap-8 items-center justify-center mx-auto w-full h-full">
-          <BackgroundCard
-            image={morelia}
-            title="Morelia"
-            href="/sucursales/morelia"
-            className="flex justify-center items-center"
-            rounded="rounded-lg"
-            width="w-[300px]"
-            height="h-[210px]"
-            alt="Tarjeta con la imagen de Catedral de Morelia"
-          />
-          <BackgroundCard
-            image={leon}
-            title="León"
-            href="/sucursales/leon"
-            rounded="rounded-lg"
-            width="w-[300px]"
-            height="h-[210px]"
-            alt="Tarjeta con la imagen del centro de León"
-          />
+        <div className="grid gap-20">
+          {/* Mostrar el Banner solo en días festivos */}
+          {isHoliday && (
+            <Banner variant="primary">
+              Queremos informarte que nuestras sucursales permanecerán cerradas los días{' '}
+              <strong className="text-primary_darkcontrast">24, 25 y 31 de Diciembre</strong> y{' '}
+              <strong className="text-primary_darkcontrast">1 de Enero</strong> por días festivos. Te invitamos a
+              visitarnos en otra fecha para disfrutar de nuestros servicios de lavandería de alta calidad.{' '}
+              <strong className="text-primary_darkcontrast text-2xl">¡Gracias por tu comprensión!</strong>
+            </Banner>
+          )}
+          <article className="flex flex-col sm:flex-row gap-8 items-center justify-center mx-auto w-auto h-auto">
+            <BackgroundCard
+              image={morelia}
+              title="Morelia"
+              href="/sucursales/morelia"
+              className="flex justify-center items-center"
+              rounded="rounded-lg"
+              width="w-[300px]"
+              height="h-[210px]"
+              alt="Tarjeta con la imagen de Catedral de Morelia"
+            />
+            <BackgroundCard
+              image={leon}
+              title="León"
+              href="/sucursales/leon"
+              rounded="rounded-lg"
+              width="w-[300px]"
+              height="h-[210px]"
+              alt="Tarjeta con la imagen del centro de León"
+            />
+          </article>
         </div>
       </PageLayout>
     </>
   );
 };
+
 export default Sucursales;
