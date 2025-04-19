@@ -44,16 +44,14 @@ const Recomendacion = ({ title, description }) => {
 const Recomendaciones = () => {
   return (
     <Section>
-      <Container className="grid gap-4 md:gap-24">
+      <Container className="grid">
         <div className="grid gap-6">
           <TitleContainer title="Recomendaciones" />
           <ParagraphContainer>
             <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
           </ParagraphContainer>
         </div>
-        <ul
-          id="listado-de-recomendaciones"
-          className="flex flex-col md:gap-8 items-start justify-start w-full md:mt-0 xl:mt-12">
+        <ul id="listado-de-recomendaciones" className="flex flex-col gap-14 items-start justify-start w-full mt-12">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
           ))}
@@ -67,7 +65,7 @@ const Recomendaciones = () => {
             adecuado para que tu ropa quede tal como la necesitas.
           </Paragraph>
           <Paragraph>
-            <div className="text-center mt-20">
+            <div className="text-center mt-12">
               <span className="text-secondary_dark dark:text-secondary_light text-3xl font-semibold">
                 ¡Estamos aquí para ayudarte a cuidar tu ropa y facilitar tu día!
               </span>
