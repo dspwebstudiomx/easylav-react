@@ -68,7 +68,7 @@ const QuieresUnaFranquicia = () => {
           <ButtonContainer position="justify-start items-center" distance="mt-12">
             <Button
               title={'Solicita más información'}
-              width={''}
+              width={'w-auto'}
               onClick={() => handleOpenModal({ nombre: 'Paquete Básico' })} // Pasa un paquete válido
               distance="mx-1"
               id="boton-contactar-paquete-basico" // ID estático para evitar errores
