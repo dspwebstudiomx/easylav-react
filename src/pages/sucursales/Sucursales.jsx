@@ -15,7 +15,7 @@
 
 // Importaciones
 import { leon_card as leon, catedral_morelia_card as morelia } from 'assets';
-import { BackgroundCard, PageLayout, SEOFriendly, TitleH1 } from 'components';
+import { BackgroundCard, Banner, PageLayout, SEOFriendly, TitleH1 } from 'components';
 import { scrollToTop } from 'functions';
 
 // Estructuracls
@@ -39,6 +39,12 @@ const Sucursales = () => {
           ¡Visita nuestras sucursales en Morelia y León! Descubre servicios de lavandería rápidos, económicos y de alta
           calidad con Easylav. ¡Estamos cerca de ti!
         </TitleH1>
+
+        <Banner variant="primary">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat obcaecati accusantium natus. Esse
+          natus quo reprehenderit nesciunt et rerum aperiam praesentium, pariatur accusamus est modi eaque error odio
+          iure deleniti atque a vero nostrum incidunt, numquam quos alias commodi.
+        </Banner>
         <div className="flex flex-col sm:flex-row gap-8 items-center justify-center mx-auto w-full h-full">
           <BackgroundCard
             image={morelia}

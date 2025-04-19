@@ -21,7 +21,7 @@ import { porqueElegirnosDescripciones } from 'data';
 // Estructura
 export default function PorqueElegirnos() {
   return (
-    <Section id="porque-elegirnos" backgroundColor="dark:bg-dark" height="h-full" className="error">
+    <Section id="porque-elegirnos" backgroundColor="dark:bg-dark" height="h-full" className="">
       <Container className="mx-auto grid gap-12" id="porque-elegirnos-container">
         <TitleContainer title="¿Por qué elegirnos?" />
         <article className="mx-auto grid lg:grid-cols-2 gap-x-20 gap-y-16">
