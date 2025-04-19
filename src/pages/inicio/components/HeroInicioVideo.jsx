@@ -16,7 +16,7 @@ import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const height = 'h-[87vh] md:h-[50vh] lg:h-[70vh] xl:h-[70vh] 2xl:h-[70vh]';
+const height = 'h-auto';
 
 // Estructura
 const HeroInicioVideo = () => {
@@ -39,7 +39,7 @@ const HeroInicioVideo = () => {
   return (
     <section
       id="inicio"
-      className={`relative overflow-hidden w-full flex items-center justify-center ${height} px-12 md:px-20 lg:px-0 xl:px-0 2xl:px-0`}>
+      className={`relative overflow-hidden w-full flex items-center justify-center ${height} py-20 sm:py-12 px-12 md:px-20 lg:px-0 xl:px-0 2xl:px-0`}>
       {/* Fondo: Video o Imagen Estática */}
       <div className={`absolute inset-0 z-0 w-full bg-dark left-0 ${height}`}>
         {isMobile ? (
