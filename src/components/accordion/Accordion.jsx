@@ -22,7 +22,7 @@ const Accordion = ({ description, title, height, isOpen, onToggle }) => {
   return (
     <div className="w-auto rounded-lg mx-auto">
       <button
-        className={`flex text-left ${styles.width} ${height} p-8 bg-light text-dark items-center justify-start ${
+        className={`flex text-left ${styles.width} ${height} p-4 lg:p-8 bg-light text-dark items-center justify-start ${
           !isOpen
             ? 'rounded-2xl border-2 border-primary'
             : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'
@@ -44,7 +44,7 @@ const Accordion = ({ description, title, height, isOpen, onToggle }) => {
           </svg>
         </div>
         {/* Título */}
-        <h4 className="text-lg xl:text-lg font-semibold text-dark dark:text-white">{title}</h4>
+        <h4 className="text-base xl:text-lg font-semibold text-dark dark:text-white">{title}</h4>
       </button>
       {/* Contenido del acordeón */}
       {isOpen && (

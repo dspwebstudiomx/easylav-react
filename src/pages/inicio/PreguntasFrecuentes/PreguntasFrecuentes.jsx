@@ -9,7 +9,17 @@
 
 // Importaciones
 import { memo, useState, useCallback } from 'react';
-import { Accordion, BorderLeft, Button, ButtonContainer, PageLayout, TitleH1, TitleH3 } from 'components';
+import {
+  Accordion,
+  BorderLeft,
+  Button,
+  ButtonContainer,
+  Container,
+  Section,
+  TitleH1,
+  TitleH2,
+  TitleH3,
+} from 'components';
 import { frequentQuestions } from 'data';
 import { FaHome } from 'react-icons/fa';
 import { FaRegBuilding } from 'react-icons/fa6';
@@ -23,16 +33,16 @@ const PreguntasFrecuentes = () => {
   }, []);
 
   return (
-    <PageLayout id="preguntas-frecuentes">
-      <div className="flex flex-col sm:gap-0">
+    <Section id="preguntas-frecuentes">
+      <Container className="flex flex-col sm:gap-0">
         {/* Title */}
         <div className="w-full px-4">
           <div className="mx-auto mb-[60px] lg:mb-20 flex flex-col gap-4">
             <span className="mb-2 block text-lg font-semibold text-primary">Preguntas Frecuentes</span>
             <BorderLeft>
-              <TitleH1 textColor="text-dark dark:text-light" align="items-left">
+              <TitleH2 textColor="text-dark dark:text-light" align="items-left">
                 Tienes alguna duda?
-              </TitleH1>
+              </TitleH2>
             </BorderLeft>
             <TitleH3>Puedes ver las preguntas más frecuentes</TitleH3>
           </div>
@@ -54,7 +64,7 @@ const PreguntasFrecuentes = () => {
           ))}
         </ul>
         {/* Questions */}
-      </div>
+      </Container>
       <ButtonContainer position={'items-center justify-center'} distance="mt-20">
         <Button
           variant="primary"
@@ -62,7 +72,7 @@ const PreguntasFrecuentes = () => {
           href={'/sucursales'}
           title={'Ver Sucursales'}
           icon={<FaRegBuilding />}
-          width={'w-full sm:w-[240px]'}
+          width={'w-[240px]'}
           name="Ver Sucursales"
           arialabel="Ver la lista de sucursales"
         />
@@ -72,12 +82,12 @@ const PreguntasFrecuentes = () => {
           href={'/#inicio'}
           title={'Inicio'}
           icon={<FaHome />}
-          width={'w-full sm:w-[240px]'}
+          width={'w-[240px]'}
           name="Ir a inicio"
           arialabel="Ir a la página de inicio"
         />
       </ButtonContainer>
-    </PageLayout>
+    </Section>
   );
 };
 

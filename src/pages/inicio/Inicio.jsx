@@ -13,6 +13,7 @@ const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
 const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
+const PreguntasFrecuentes = lazy(() => import('./PreguntasFrecuentes/PreguntasFrecuentes'));
 const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
 const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
 const Contacto = lazy(() => import('../../components/contacto/Contacto'));
@@ -32,14 +33,20 @@ const Inicio = () => (
       ogType="website"
     />
     <HomeLayout id="inicio" className="dark:bg-dark">
+      {/* Introducción */}
       <Suspense fallback={<Loading />}>
         <HeroInicioVideo />
       </Suspense>
       <Suspense fallback={<Loading />}>
         <QuienesSomos />
       </Suspense>
+
+      {/* Servicios y beneficios */}
       <Suspense fallback={<Loading />}>
         <NuestrosServicios />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <PorqueElegirnos />
       </Suspense>
       <Suspense fallback={<Loading />}>
         <ProgramasDeLealtad />
@@ -47,6 +54,8 @@ const Inicio = () => (
       <Suspense fallback={<Loading />}>
         <Equipamiento />
       </Suspense>
+
+      {/* Información adicional */}
       <Suspense fallback={<Loading />}>
         <Recomendaciones />
       </Suspense>
@@ -54,8 +63,10 @@ const Inicio = () => (
         <NuestrasSucursales />
       </Suspense>
       <Suspense fallback={<Loading />}>
-        <PorqueElegirnos />
+        <PreguntasFrecuentes />
       </Suspense>
+
+      {/* Testimonios y contacto */}
       <Suspense fallback={<Loading />}>
         <CarouselTestimonios />
       </Suspense>
