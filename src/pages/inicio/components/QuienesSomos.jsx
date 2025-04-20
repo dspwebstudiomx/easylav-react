@@ -52,7 +52,7 @@ const serviciosOfrecidos = [
 
 const Card = ({ children }) => {
   return (
-    <div className="flex flex-col justify-center p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark dark:text-light gap-8 w-full">
+    <div className="flex flex-col justify-start p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark dark:text-light gap-8 w-full h-full text-balance">
       {children}
     </div>
   );
