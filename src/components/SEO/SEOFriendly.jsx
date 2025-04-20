@@ -98,6 +98,82 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
           object-src 'none';
         "
       />
+
+      {/* Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: 'Lavanderías Easylav',
+          description: description,
+          url: url,
+          logo: ogImage,
+          image: ogImage,
+          telephone: '+52 443 520 0593',
+          email: 'contacto@easylav.mx',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Av Francisco I. Madero Ote 2162, Isaac Arriaga, 58210 Morelia, Mich.',
+            addressLocality: 'Morelia',
+            addressRegion: 'Michoacán',
+            postalCode: '58210',
+            addressCountry: 'MX',
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 19.70764,
+            longitude: -101.17192,
+          },
+          openingHours: ['Mo-Su 07:00-21:30'],
+          sameAs: [
+            'https://www.facebook.com/profile.php?id=61562871132158',
+            'https://https://instagram.com/lavanderiaseasylav/',
+          ],
+          hasMap: 'https://maps.app.goo.gl/uP2dnX8Rfjt53UQP6',
+          service: [
+            {
+              '@type': 'Service',
+              name: 'Autoservicio de lavandería',
+              description:
+                'Donde tú mismo realizas el proceso de lavado y/o secado con ayuda de nuestro personal capacitado, el cual siempre está para servirte y ayudarte en la cantidad de ropa y producto a utilizar.',
+            },
+            {
+              '@type': 'Service',
+              name: 'Secado de ropa',
+              description:
+                'Cuando solo requieren este servicio la ropa puede llegar más húmeda o mojada que lo normal evitando que se seque por completo. ',
+            },
+            {
+              '@type': 'Service',
+              name: 'Por encargo',
+              description:
+                'El personal en la sucursal se encarga del proceso de lavado, secado y plegado (Doblado) de tu ropa.',
+            },
+            {
+              '@type': 'Service',
+              name: 'Plegado de ropa',
+              description:
+                'El servicio de plegado es un servicio adicional que ofrecemos para que tu ropa esté lista para usar. Este servicio es ideal para quienes buscan una solución rápida y conveniente para mantener su ropa organizada y lista para usar.',
+            },
+            {
+              '@type': 'Service',
+              name: 'Tintorería',
+              description:
+                'Además de nuestro servicio de lavandería, contamos con tintorería profesional para el cuidado de tus prendas más delicadas. Ya sea un traje, vestido, abrigo o cualquier prenda especial, nuestro servicio garantiza limpieza profunda, protección de las telas y un acabado impecable.',
+            },
+          ],
+          areaServed: [
+            {
+              '@type': 'Place',
+              name: 'Morelia',
+            },
+            {
+              '@type': 'Place',
+              name: 'León',
+            },
+          ],
+        })}
+      </script>
     </Helmet>
   );
 };
