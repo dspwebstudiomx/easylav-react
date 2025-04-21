@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 const ParagraphContainer = ({ children, distance }) => {
-  return <div className={`grid gap-8 ${distance} text-balance`}>{children}</div>;
+  return <div className={`grid gap-8 ${distance} text-balance w-full`}>{children}</div>;
 };
 export default ParagraphContainer;
 

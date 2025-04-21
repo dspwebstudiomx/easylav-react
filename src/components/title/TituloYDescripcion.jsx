@@ -1,12 +1,12 @@
-import { Paragraph, TitleContainer } from 'components';
+import { ParagraphContainer, TitleH2 } from 'components';
 import PropTypes from 'prop-types';
 
-const TituloYDescripcion = ({ title, description }) => {
+const TituloYDescripcion = ({ title, children }) => {
   return (
-    <div className="flex flex-col gap-12 mb-12">
-      <TitleContainer title={title} />
-      <Paragraph>{description}</Paragraph>
-    </div>
+    <article id={title} className="flex flex-col gap-8 my-6 w-full">
+      <TitleH2>{title}</TitleH2>
+      <ParagraphContainer>{children}</ParagraphContainer>
+    </article>
   );
 };
 export default TituloYDescripcion;
@@ -14,5 +14,5 @@ export default TituloYDescripcion;
 // Propiedades
 TituloYDescripcion.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };

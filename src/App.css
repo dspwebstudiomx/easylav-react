@@ -6,6 +6,10 @@
   border: 1px solid #b91c1c;
 }
 
+strong {
+  font-weight: 600;
+  color:#622B8B
+}
 
 section{
   overflow-x: hidden;

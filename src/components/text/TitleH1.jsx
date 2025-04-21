@@ -22,7 +22,7 @@ const TitleH1 = ({ children, textColor, align, attr }) => {
   return <h1 className={`${styles} ${textColor} ${align} ${attr}`}>{children}</h1>;
 };
 TitleH1.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   align: PropTypes.string.isRequired,
   textColor: PropTypes.string,
   attr: PropTypes.string,
