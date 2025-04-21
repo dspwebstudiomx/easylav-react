@@ -1,4 +1,4 @@
-import { Lavadero, LavadoraInteligente, PilaToallas, Toalla, Detergente } from 'assets';
+import { Lavadero, LavadoraInteligente, PilaToallas, Toalla, LavarRopa } from 'assets';
 
 export const services = [
   {
@@ -49,7 +49,7 @@ export const services = [
     description_1:
       'Además de nuestro servicio de lavandería, contamos con tintorería profesional para el cuidado de tus prendas más delicadas. Ya sea un traje, vestido, abrigo o cualquier prenda especial, nuestro servicio garantiza limpieza profunda, protección de las telas y un acabado impecable.',
     description_2: 'Calidad y comodidad en un solo lugar.',
-    image: Detergente,
+    image: LavarRopa,
     idLink: 'tintoreria',
     alt: 'plancha sacando vapor',
   },
