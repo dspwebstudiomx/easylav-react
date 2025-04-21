@@ -223,7 +223,7 @@ const QuienesSomos = () => {
                   <Button
                     title="Contáctanos"
                     href="/contacto"
-                    width="w-full sm:w-[260px] scale-[0.8]"
+                    width="w-full sm:w-[260px] xl:scale-[0.8]"
                     variant="secondary"
                   />
                 </ButtonContainer>
@@ -234,6 +234,7 @@ const QuienesSomos = () => {
                 title="lavandería Easylav"
                 className="shadow-image"
                 loading="lazy"
+                width={650}
               />
             </TwoColumnsContainer>
           </Card>
