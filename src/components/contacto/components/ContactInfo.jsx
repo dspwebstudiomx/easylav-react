@@ -14,7 +14,7 @@ const ContactInfo = () => {
           pondremos en contacto contigo enseguida.
           <br />
           <br />
-          <strong className="text-xl">¡Esperamos saber de ti pronto!</strong>
+          <strong className="text-xl dark:text-secondary_light">¡Esperamos saber de ti pronto!</strong>
           <br />
           <br />
           <span className="ml-1">Puedes visitar nuestra sección de</span>

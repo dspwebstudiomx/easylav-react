@@ -118,7 +118,7 @@ const PoliticaCookies = () => {
               <a
                 href="https://tools.google.com/dlpage/gaoptout"
                 target="_blank"
-                className="text-secondary_dark font-semibold"
+                className="text-secondary_dark font-semibold dark:text-secondary_light"
                 rel="noopener noreferrer"
                 title="Deshabilitar Google Analytics">
                 aquí
