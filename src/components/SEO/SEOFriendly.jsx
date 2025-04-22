@@ -130,6 +130,8 @@ const SEOFriendly = ({ title, description, author, keywords, url, ogImage, ogIma
             'https://https://instagram.com/lavanderiaseasylav/',
           ],
           hasMap: 'https://maps.app.goo.gl/uP2dnX8Rfjt53UQP6',
+          priceRange: '$',
+          paymentAccepted: ['Cash', 'Credit Card', 'Debit Card'],
           service: [
             {
               '@type': 'Service',
