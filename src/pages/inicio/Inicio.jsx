@@ -13,7 +13,7 @@ const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
 const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
 const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
 const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
-const PreguntasFrecuentes = lazy(() => import('./PreguntasFrecuentes/PreguntasFrecuentes'));
+const PreguntasFrecuentes = lazy(() => import('../../components/templates/PreguntasFrecuentes/PreguntasFrecuentes'));
 const ProgramasDeLealtad = lazy(() => import('./components/ProgramasDeLealtad'));
 const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
 const Recomendaciones = lazy(() => import('./components/Recomendaciones'));
@@ -63,7 +63,11 @@ const Inicio = () => (
         <NuestrasSucursales />
       </Suspense>
       <Suspense fallback={<Loading />}>
-        <PreguntasFrecuentes />
+        <Section backgroundColor="dark:bg-dark" className="">
+          <Container className="">
+            <PreguntasFrecuentes />
+          </Container>
+        </Section>
       </Suspense>
 
       {/* Testimonios y contacto */}
@@ -71,7 +75,7 @@ const Inicio = () => (
         <CarouselTestimonios />
       </Suspense>
       <Suspense fallback={<Loading />}>
-        <Section backgroundColor="bg-light dark:bg-dark" className="">
+        <Section backgroundColor="dark:bg-dark" className="">
           <Container className="">
             <Contacto />
           </Container>

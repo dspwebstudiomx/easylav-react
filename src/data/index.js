@@ -1,16 +1,10 @@
-export { franquiciaDescripciones } from "data/franquiciaDescripciones";
-export { franquiciasImagenes } from "data/franquiciasImagenes";
-export { frequentQuestions } from "data/frequentQuestions";
-export {
-  linksPoliticas,
-  linksServicios,
-  linksTerminos,
-  navLinksPages,
-  navLinksSections,
-} from "data/navlinks";
-export { paquetesFranquicias } from "data/paquetesFranquicias";
-export { porqueElegirnosDescripciones } from "data/porqueElegirnosDescripciones";
-export { routes } from "data/routes";
-export { services } from "data/services";
-export { localservices } from "data/sucursales";
-export { testimonios } from "data/testimonios";
+export { franquiciaDescripciones } from 'data/franquiciaDescripciones';
+export { franquiciasImagenes } from 'data/franquiciasImagenes';
+export { frequentQuestions } from 'data/frequentQuestions';
+export { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from 'data/navlinks';
+export { paquetesFranquicias } from 'data/paquetesFranquicias';
+export { porqueElegirnosDescripciones } from 'data/porqueElegirnosDescripciones';
+export { routes } from 'data/routes';
+export { services } from 'data/services';
+export { localservices } from 'data/sucursales';
+export { testimonios } from 'data/testimonios';

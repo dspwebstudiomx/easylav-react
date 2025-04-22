@@ -10,11 +10,10 @@
 */
 
 // Importaciones
-import { GENERAL_UI } from 'constants/constants';
 import PropTypes from 'prop-types';
 
 // Estructura
-const Accordion = ({ description, title, height, isOpen, onToggle }) => {
+const Accordion = ({ children, question, height, isOpen, onToggle }) => {
   const styles = {
     width: 'w-full h-full',
   };
@@ -44,7 +43,7 @@ const Accordion = ({ description, title, height, isOpen, onToggle }) => {
           </svg>
         </div>
         {/* Título */}
-        <h4 className="text-base xl:text-lg font-semibold text-dark dark:text-white">{title}</h4>
+        <h4 className="text-base xl:text-lg font-semibold text-dark">{question}</h4>
       </button>
       {/* Contenido del acordeón */}
       {isOpen && (
@@ -54,7 +53,7 @@ const Accordion = ({ description, title, height, isOpen, onToggle }) => {
               ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-full pb-8'
               : 'hidden'
           }`}>
-          <p className={`${GENERAL_UI.PARAGRAPH} pt-8 dark:text-dark-6 w-full px-8 pb-4`}>{description}</p>
+          <p className={`pt-8 text-dark w-full px-8 pb-4`}>{children}</p>
         </div>
       )}
     </div>
@@ -64,10 +63,10 @@ const Accordion = ({ description, title, height, isOpen, onToggle }) => {
 // PropTypes
 Accordion.propTypes = {
   isOpen: PropTypes.bool.isRequired, // Indica si el acordeón está abierto
+  children: PropTypes.node.isRequired, // Contenido del acordeón
   onToggle: PropTypes.func.isRequired, // Función para manejar el evento de clic
-  title: PropTypes.string.isRequired, // Título del acordeón
+  question: PropTypes.string.isRequired, // Título del acordeón
   height: PropTypes.string, // Altura del botón del acordeón
-  description: PropTypes.string.isRequired, // Contenido del acordeón
 };
 
 export default Accordion;

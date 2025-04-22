@@ -220,7 +220,7 @@ const QuienesSomos = () => {
                   })}
                 </div>
                 <ButtonContainer position="items-center justify-start" distance="h-20">
-                  <Button title="Contáctanos" href="/contacto" width="w-full sm:w-[260px]" variant="secondary" />
+                  <Button title="Contáctanos" href="/contacto" width="w-full sm:w-[260px]ñ" variant="secondary" />
                 </ButtonContainer>
               </div>
               <img

@@ -15,7 +15,7 @@ const GuiaEstilos = lazy(() => import('pages/guia-estilos/GuiaEstilos'));
 const NotFound = lazy(() => import('pages/404/NotFound'));
 const Test = lazy(() => import('pages/test/Test'));
 const PoliticaPrivacidad = lazy(() => import('pages/politica-privacidad/PoliticaPrivacidad'));
-const PreguntasFrecuentes = lazy(() => import('pages/preguntas-frecuentes/PreguntasFrecuentes'));
+const PreguntasFrecuentes = lazy(() => import('pages/preguntas-frecuentes/PreguntasFrecuentesPage'));
 const TerminosCondiciones = lazy(() => import('pages/terminos-condiciones/TerminosCondiciones'));
 const Facturacion = lazy(() => import('pages/facturacion/Facturacion'));
 const Morelia = lazy(() => import('pages/sucursales/Morelia/Morelia'));
