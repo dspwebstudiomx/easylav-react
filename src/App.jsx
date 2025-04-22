@@ -15,7 +15,7 @@ const GuiaEstilos = lazy(() => import('pages/guia-estilos/GuiaEstilos'));
 const NotFound = lazy(() => import('pages/404/NotFound'));
 const Test = lazy(() => import('pages/test/Test'));
 const PoliticaPrivacidad = lazy(() => import('pages/politica-privacidad/PoliticaPrivacidad'));
-const PreguntasFrecuentes = lazy(() => import('pages/preguntas-frecuentes/PreguntasFrecuentesPage'));
+const PreguntasFrecuentesPage = lazy(() => import('pages/preguntas-frecuentes/PreguntasFrecuentesPage'));
 const TerminosCondiciones = lazy(() => import('pages/terminos-condiciones/TerminosCondiciones'));
 const Facturacion = lazy(() => import('pages/facturacion/Facturacion'));
 const Morelia = lazy(() => import('pages/sucursales/Morelia/Morelia'));
@@ -52,7 +52,7 @@ export default function App() {
           <Route path="/politica-cookies/" element={<PoliticaCookies />} />
           <Route path="/franquicias/" element={<Franquicias />} />
           <Route path="/terminos-condiciones/" element={<TerminosCondiciones />} />
-          <Route path="/preguntas-frecuentes/" element={<PreguntasFrecuentes />} />
+          <Route path="/preguntas-frecuentes/" element={<PreguntasFrecuentesPage />} />
           <Route path="/facturacion/" element={<Facturacion />} />
           <Route path="/guia-estilos/" element={<GuiaEstilos />} />
           <Route path="/sucursales/morelia" element={<Morelia />} />
