@@ -1,8 +1,10 @@
 /* 
-  Loading
+  Loading.jsx - Componente de carga
   =====================================
   Creado por : Daniel Pérez
   Fecha: 2022-08-28
+  Descripción: Este componente se utiliza para mostrar una pantalla de carga mientras se cargan los datos de la aplicación.
+  Se utiliza un logo y un spinner para indicar que la aplicación está en proceso de carga.
 */
 
 // Importaciones
