@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
 // Este componente utiliza el generador de tarjetas de sucursal para mostrar las sucursales de una ciudad específica
 const SucursalCardPerCity = ({ city }) => {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col items-center justify-center gap-4">
       <CityCardGenerator city={city} />
     </div>
   );
