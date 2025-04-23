@@ -53,3 +53,4 @@ export { default as solidaridad } from '../assets/images/sucursales/solidaridad.
 export { default as bonanza } from '../assets/images/sucursales/bonanza.webp';
 export { default as venturapuente } from '../assets/images/sucursales/venturapuente.webp';
 export { default as HeroVideoLavadoras } from '../assets/video/herovideo_lavadoras.mp4';
+export { default as haciendaLosOtates } from '../assets/images/sucursales/haciendalosotates.webp';

@@ -10,6 +10,7 @@ import {
   solidaridad,
   venturapuente,
   bonanza,
+  haciendaLosOtates,
 } from 'assets';
 
 export const localservices = [
@@ -203,6 +204,25 @@ export const localservices = [
     advertisement: '',
     badge: '',
     image: bonanza,
+    openHour: 7,
+    openMinute: 0,
+    closeHour: 21,
+    closeMinute: 30,
+  },
+  {
+    id: 14,
+    title: 'Hacienda Los Otates',
+    gmap: 'https://maps.app.goo.gl/3sGXZj6hZhpLcjVD6',
+    position: { lat: 21.101595, lng: -101.5795975 },
+    place: 'Blvrd Hacienda los Otates 201, Hacienda Los Otates, 37295 León de los Aldama, Gto.',
+    serviceday1: 'Lunes a Domingo:',
+    servicehour1: '7:00 a.m a 9:30 p.m',
+    city: 'León',
+    email: 'haciendalosotates@easylav.mx',
+    titleMailto: 'Enviar correo a sucursal Hacienda Los Otates',
+    advertisement: '',
+    badge: 'Nueva sucursal',
+    image: haciendaLosOtates,
     openHour: 7,
     openMinute: 0,
     closeHour: 21,

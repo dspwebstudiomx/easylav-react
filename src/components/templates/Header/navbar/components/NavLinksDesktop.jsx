@@ -51,7 +51,8 @@ const NavLinksDesktop = () => {
             className={`hover:text-secondary_dark ${isActive ? 'text-primary_dark font-bold' : 'text-dark'}`}
             to={navlink.href}
             scroll={scrollWithOffset}
-            title={`Ir a ${navlink.linkId}`}>
+            title={`Ir a ${navlink.linkId}`}
+            alt={navlink.alt}>
             {navlink.name}
           </NavHashLink>
         );
@@ -66,6 +67,7 @@ const NavLinksDesktop = () => {
             }
             to={navlink.href}
             title={`Ir a ${navlink.linkId}`}
+            alt={navlink.alt}
             onClick={() => {
               scrollToTop();
             }}>

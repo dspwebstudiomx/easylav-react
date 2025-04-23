@@ -1,5 +1,5 @@
-import { Button, ButtonContainer, ButtonPrimary, Container, PageLayout, Paragraph, TitleH1, TitleH2 } from "components"
-import { GENERAL_UI } from "constants/constants"
+import { Button, ButtonContainer, ButtonPrimary, Container, PageLayout, Paragraph, TitleH1, TitleH2 } from 'components';
+import { GENERAL_UI } from 'constants/constants';
 
 const GuiaEstilos = () => {
   return (
@@ -9,9 +9,7 @@ const GuiaEstilos = () => {
         <div className="border-2 mt-3 border-primary"></div>
       </div>
       <Container className="flex flex-col border-2 p-24 border-primary_dark rounded-2xl bg-[#fff] gap-28">
-
-
-        <div className="grid sm:grid-cols-2 grid gap-8 mx-auto text-dark">
+        <div className="grid sm:grid-cols-2 gap-8 mx-auto text-dark">
           {/* Color Primario */}
           <div className="grid gap-6">
             <Paragraph className="font-semibold">Color Primario</Paragraph>
@@ -37,7 +35,6 @@ const GuiaEstilos = () => {
                   <span className="text-center font-semibold">primary_light</span>
                 </div>
               </div>
-
             </div>
           </div>
           {/* Color Primario */}
@@ -107,7 +104,8 @@ const GuiaEstilos = () => {
           <div className="flex flex-col gap-5 text-dark">
             <Paragraph className="font-semibold">Titulo Principal (36px)</Paragraph>
             <TitleH1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vero quod blanditiis veniam rem sunt laboriosam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vero quod blanditiis veniam rem sunt
+              laboriosam.
             </TitleH1>
           </div>
           <div className="flex flex-col gap-5">
@@ -117,8 +115,11 @@ const GuiaEstilos = () => {
         </div>
         <div className="grid sm:grid-cols-2">
           <div className="flex flex-col gap-5">
-            <Paragraph className="font-semibold">Párrafo (16px)</Paragraph>
-            <p className={GENERAL_UI.PARAGRAPH}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, et!</p>
+            <p className={GENERAL_UI.PARAGRAPH}>Párrafo</p>
+            <Paragraph className="font-semibold">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi hic at nesciunt magni voluptatem
+              obcaecati dolorum totam amet culpa saepe!
+            </Paragraph>
           </div>
           <div className="flex flex-col gap-5">
             <Button border="border-2" title="Boton" />
@@ -128,12 +129,12 @@ const GuiaEstilos = () => {
 
         <div className="grid">
           <ButtonContainer>
-            <ButtonPrimary title='Hola' />
+            <ButtonPrimary title="Hola" />
           </ButtonContainer>
         </div>
       </Container>
-    </PageLayout >
-  )
-}
+    </PageLayout>
+  );
+};
 
-export default GuiaEstilos
+export default GuiaEstilos;

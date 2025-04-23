@@ -19,81 +19,14 @@ import { memo, useMemo, useCallback } from 'react';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
-// Lista de días festivos oficiales de México con horarios personalizados (formato MM-DD)
-const specialDates = [
-  { date: '01-01', openHour: 0, openMinute: 0, closeHour: 0, closeMinute: 0 }, // Año Nuevo (cerrado)
-  { date: '02-05', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Día de la Constitución
-  { date: '03-21', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Natalicio de Benito Juárez
-  // { date: '04-22', openHour: 7, openMinute: 0, closeHour: 13, closeMinute: 56 }, // Test
-  { date: '05-01', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Día del Trabajo
-  { date: '09-16', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Día de la Independencia
-  { date: '11-02', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Día de Muertos
-  { date: '11-20', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Revolución Mexicana
-  { date: '12-12', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Día de la Virgen de Guadalupe
-  { date: '12-24', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Nochebuena
-  { date: '12-25', openHour: 0, openMinute: 0, closeHour: 0, closeMinute: 0 }, // Navidad (cerrado)
-  { date: '12-31', openHour: 7, openMinute: 0, closeHour: 18, closeMinute: 0 }, // Fin de Año
-];
-
-// Función para verificar si hoy es un día festivo o especial
-const getSpecialDateHours = () => {
-  const today = new Date();
-  const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-  return specialDates.find((specialDate) => specialDate.date === formattedDate);
-};
-
 // Función para determinar si la sucursal está abierta
 const isBranchCurrentlyOpen = (defaultOpenHour, defaultOpenMinute, defaultCloseHour, defaultCloseMinute) => {
-  const specialDateHours = getSpecialDateHours();
-
-  // Si es un día especial y está cerrado (horarios 0:00 a 0:00)
-  if (specialDateHours && specialDateHours.openHour === 0 && specialDateHours.closeHour === 0) {
-    return false;
-  }
-
-  // Usar horarios especiales si existen, de lo contrario usar los horarios predeterminados
-  const openHour = specialDateHours ? specialDateHours.openHour : defaultOpenHour;
-  const openMinute = specialDateHours ? specialDateHours.openMinute : defaultOpenMinute;
-  const closeHour = specialDateHours ? specialDateHours.closeHour : defaultCloseHour;
-  const closeMinute = specialDateHours ? specialDateHours.closeMinute : defaultCloseMinute;
-
   const currentTime = new Date();
   const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
-  const openTime = openHour * 60 + openMinute;
-  const closeTime = closeHour * 60 + closeMinute;
+  const openTime = defaultOpenHour * 60 + defaultOpenMinute;
+  const closeTime = defaultCloseHour * 60 + defaultCloseMinute;
 
   return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
-};
-
-// Función para determinar si la sucursal está cerrada por día festivo o fuera del horario
-const getClosedMessage = (defaultOpenHour, defaultOpenMinute, defaultCloseHour, defaultCloseMinute) => {
-  const specialDateHours = getSpecialDateHours();
-
-  // Si es un día especial y está cerrado (horarios 0:00 a 0:00)
-  if (specialDateHours && specialDateHours.openHour === 0 && specialDateHours.closeHour === 0) {
-    return 'Cerrado por día Festivo';
-  }
-
-  // Usar horarios especiales si existen, de lo contrario usar los horarios predeterminados
-  const openHour = specialDateHours ? specialDateHours.openHour : defaultOpenHour;
-  const openMinute = specialDateHours ? specialDateHours.openMinute : defaultOpenMinute;
-  const closeHour = specialDateHours ? specialDateHours.closeHour : defaultCloseHour;
-  const closeMinute = specialDateHours ? specialDateHours.closeMinute : defaultCloseMinute;
-
-  const currentTime = new Date();
-  const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
-  const openTime = openHour * 60 + openMinute;
-  const closeTime = closeHour * 60 + closeMinute;
-
-  if (currentTimeInMinutes < openTime || currentTimeInMinutes >= closeTime) {
-    return (
-      <div className="bg-secondary_dark w-full p-2 rounded-lg">
-        <p className="text-light font-medium w-full">Cerrado por día festivo</p>
-      </div>
-    );
-  }
-
-  return null; // Está abierto
 };
 
 // Renderiza el badge de abierto/cerrado
@@ -167,11 +100,6 @@ const SucursalCard = ({
     [openHour, openMinute, closeHour, closeMinute]
   );
 
-  const closedMessage = useMemo(
-    () => getClosedMessage(openHour, openMinute, closeHour, closeMinute),
-    [openHour, openMinute, closeHour, closeMinute]
-  );
-
   return (
     <article
       id={`sucursal-${title}`}
@@ -192,8 +120,8 @@ const SucursalCard = ({
         image_1920={image}
         title={`Imagen de sucursal ${title} en ${city}`}
         alt={`Vista externa de Sucursal Easylav ${title} en ${city}`}
-        width="w-[250px]" /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-        height="h-[160px]" /* Ajusta la altura según sea necesario */
+        width="w-[250px]"
+        height="h-[160px]"
         opacity="opacity-40"
         backgroundColor="bg-dark"
         className="rounded-t-xl overflow-hidden">
@@ -245,22 +173,13 @@ const SucursalCard = ({
       </section>
 
       {/* Advertisement */}
-      {closedMessage ? (
-        <section className="w-full">
-          <Badge backgroundColor="bg-gradient-to-r from-red-500 to-red-700">
-            <p className="text-sm uppercase px-8">{closedMessage}</p>
-          </Badge>
-          {renderMapLinks(position, title, gmap)}
-        </section>
-      ) : advertisement ? (
+      {advertisement && (
         <section className="w-full">
           <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
             <p className="text-sm uppercase px-8">{advertisement}</p>
           </Badge>
           {renderMapLinks(position, title, gmap)}
         </section>
-      ) : (
-        <div className="w-full">{renderMapLinks(position, title, gmap)}</div>
       )}
 
       {/* Badge */}
@@ -293,6 +212,7 @@ const SucursalCard = ({
     </article>
   );
 };
+
 export default memo(SucursalCard);
 
 // Propiedades del componente
