@@ -19,8 +19,22 @@ import { memo, useMemo, useCallback } from 'react';
 import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
+// Lista de fechas específicas en las que la sucursal estará cerrada (formato MM-DD)
+const closedDates = ['01-01', '12-25']; // Año Nuevo, Navidad, Fin de Año
+
+// Función para verificar si la sucursal está cerrada por una fecha específica
+const isBranchClosedForDate = () => {
+  const today = new Date();
+  const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  return closedDates.includes(formattedDate);
+};
+
 // Función para determinar si la sucursal está abierta
 const isBranchCurrentlyOpen = (defaultOpenHour, defaultOpenMinute, defaultCloseHour, defaultCloseMinute) => {
+  if (isBranchClosedForDate()) {
+    return false; // Cerrado por fecha específica
+  }
+
   const currentTime = new Date();
   const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
   const openTime = defaultOpenHour * 60 + defaultOpenMinute;
