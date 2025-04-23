@@ -20,26 +20,41 @@ import { FaMapMarkedAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6';
 
 // Lista de fechas específicas en las que la sucursal estará cerrada (formato MM-DD)
-const closedDates = ['01-01', '12-25']; // Año Nuevo, Navidad, Fin de Año
+const closedDates = ['01-01', '12-25']; // Año Nuevo, Navidad
 
 // Lista de días festivos oficiales de México (formato MM-DD)
-const mexicanHolidays = ['02-05', '03-21', '05-01', '09-15', '11-18'];
+const mexicanHolidays = ['02-05', '03-21', '05-01', '09-15', '11-18']; // Ejemplo: Día de la Constitución, Benito Juárez, etc.
 
-// Función para verificar si la sucursal está cerrada por una fecha específica
+/**
+ * Verifica si la sucursal está cerrada por una fecha específica.
+ * @returns {boolean} `true` si la sucursal está cerrada, `false` en caso contrario.
+ */
 const isBranchClosedForDate = () => {
   const today = new Date();
   const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
   return closedDates.includes(formattedDate);
 };
 
-// Función para verificar si hoy es un día festivo
+/**
+ * Verifica si hoy es un día festivo oficial en México.
+ * @returns {boolean} `true` si hoy es un día festivo, `false` en caso contrario.
+ */
 const isMexicanHoliday = () => {
   const today = new Date();
   const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
   return mexicanHolidays.includes(formattedDate);
 };
 
-// Función para determinar si la sucursal está abierta
+/**
+ * Determina si la sucursal está abierta en función de la hora actual y las reglas de días festivos.
+ * - Si es un día festivo, la sucursal cierra a las 6 PM.
+ * - Si es una fecha específica de cierre, la sucursal estará cerrada todo el día.
+ * @param {number} defaultOpenHour - Hora de apertura predeterminada.
+ * @param {number} defaultOpenMinute - Minuto de apertura predeterminado.
+ * @param {number} defaultCloseHour - Hora de cierre predeterminada.
+ * @param {number} defaultCloseMinute - Minuto de cierre predeterminado.
+ * @returns {boolean} `true` si la sucursal está abierta, `false` en caso contrario.
+ */
 const isBranchCurrentlyOpen = (defaultOpenHour, defaultOpenMinute, defaultCloseHour, defaultCloseMinute) => {
   if (isBranchClosedForDate()) {
     return false; // Cerrado por fecha específica
@@ -59,7 +74,11 @@ const isBranchCurrentlyOpen = (defaultOpenHour, defaultOpenMinute, defaultCloseH
   return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
 };
 
-// Renderiza el badge de abierto/cerrado
+/**
+ * Renderiza el badge que indica si la sucursal está abierta o cerrada.
+ * @param {boolean} isOpen - Estado de apertura de la sucursal.
+ * @returns {JSX.Element} Badge con el estado de la sucursal.
+ */
 const renderOpenClosedBadge = (isOpen) => (
   <div
     className={`rounded-lg border-2 text-xs ${
@@ -71,7 +90,13 @@ const renderOpenClosedBadge = (isOpen) => (
   </div>
 );
 
-// Renderiza los enlaces de Waze y Google Maps
+/**
+ * Renderiza los enlaces de navegación para Waze y Google Maps.
+ * @param {Object} position - Coordenadas de la sucursal.
+ * @param {string} title - Título de la sucursal.
+ * @param {string} gmap - Enlace a Google Maps.
+ * @returns {JSX.Element} Enlaces de navegación.
+ */
 const renderMapLinks = (position, title, gmap) => (
   <div className="flex md:hidden">
     <a
@@ -119,12 +144,14 @@ const SucursalCard = ({
 }) => {
   const { showModal, setShowModal } = useShowModal();
 
+  // Maneja la apertura del modal
   const handleShowModal = useCallback(() => {
     if (!disableZoom) {
       setShowModal(true);
     }
   }, [disableZoom, setShowModal]);
 
+  // Determina si la sucursal está abierta
   const isOpen = useMemo(
     () => isBranchCurrentlyOpen(openHour, openMinute, closeHour, closeMinute),
     [openHour, openMinute, closeHour, closeMinute]
