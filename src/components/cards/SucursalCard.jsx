@@ -23,7 +23,7 @@ import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6'
 const closedDates = ['01-01', '12-25']; // Año Nuevo, Navidad, Fin de Año
 
 // Lista de días festivos oficiales de México (formato MM-DD)
-const mexicanHolidays = ['01-01', '02-05', '03-21', '05-01', '09-16', '11-02', '11-20', '12-25'];
+const mexicanHolidays = ['02-05', '03-21', '05-01', '09-15', '11-18'];
 
 // Función para verificar si la sucursal está cerrada por una fecha específica
 const isBranchClosedForDate = () => {
