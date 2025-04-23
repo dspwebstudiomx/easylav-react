@@ -22,11 +22,21 @@ import { FaMagnifyingGlass, FaRegClock, FaWaze, FaXmark } from 'react-icons/fa6'
 // Lista de fechas específicas en las que la sucursal estará cerrada (formato MM-DD)
 const closedDates = ['01-01', '12-25']; // Año Nuevo, Navidad, Fin de Año
 
+// Lista de días festivos oficiales de México (formato MM-DD)
+const mexicanHolidays = ['01-01', '02-05', '03-21', '05-01', '09-16', '11-02', '11-20', '12-25'];
+
 // Función para verificar si la sucursal está cerrada por una fecha específica
 const isBranchClosedForDate = () => {
   const today = new Date();
   const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
   return closedDates.includes(formattedDate);
+};
+
+// Función para verificar si hoy es un día festivo
+const isMexicanHoliday = () => {
+  const today = new Date();
+  const formattedDate = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  return mexicanHolidays.includes(formattedDate);
 };
 
 // Función para determinar si la sucursal está abierta
@@ -37,8 +47,13 @@ const isBranchCurrentlyOpen = (defaultOpenHour, defaultOpenMinute, defaultCloseH
 
   const currentTime = new Date();
   const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
+
+  // Si es un día festivo, ajustar el horario de cierre a las 6 PM
+  const adjustedCloseHour = isMexicanHoliday() ? 18 : defaultCloseHour;
+  const adjustedCloseMinute = isMexicanHoliday() ? 0 : defaultCloseMinute;
+
   const openTime = defaultOpenHour * 60 + defaultOpenMinute;
-  const closeTime = defaultCloseHour * 60 + defaultCloseMinute;
+  const closeTime = adjustedCloseHour * 60 + adjustedCloseMinute;
 
   return currentTimeInMinutes >= openTime && currentTimeInMinutes < closeTime;
 };
