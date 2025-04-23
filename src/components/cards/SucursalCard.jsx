@@ -45,6 +45,7 @@ const isBranchCurrentlyOpen = (defaultOpenHour, defaultOpenMinute, defaultCloseH
     return false; // Cerrado por fecha específica
   }
 
+  // Obtener la hora actual en minutos
   const currentTime = new Date();
   const currentTimeInMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
 
