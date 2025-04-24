@@ -270,16 +270,17 @@ export default function ContactFacturacion() {
                     )}
                   </div>
                   {/* Calle */}
-                  {/* Numero */}
+                  {/* Número */}
                   <div id="formField_number" className="flex flex-col">
                     <label htmlFor="user_number" className="mb-2">
                       Número<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark border-2  border-secondary dark:border-primary p-2 outline-none md:w-auto"
+                      className="rounded-md bg-light text-dark border-2 border-secondary dark:border-primary p-2 outline-none md:w-auto"
                       type="number"
                       name="user_number"
                       id="user_number"
+                      min="0" // Evita números negativos
                       required
                     />
                     {touched.user_number && errors.user_number && (
@@ -288,7 +289,7 @@ export default function ContactFacturacion() {
                       </p>
                     )}
                   </div>
-                  {/* Numero */}
+                  {/* Número */}
 
                   {/* Ciudad */}
                   <div id="formField_city" className="flex flex-col">
@@ -389,15 +390,16 @@ export default function ContactFacturacion() {
                       Número de Ticket<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none w-full"
+                      className="rounded-md bg-light text-dark text-right px-4 border-2 border-secondary dark:border-primary p-2 outline-none w-full"
                       id="user_ticketnumber"
                       name="user_ticketnumber"
                       type="number"
+                      min="0" // Evita números negativos
                       required
                     />
                     {touched.user_ticketnumber && errors.user_ticketnumber && (
                       <p className="mt-2 text-required text-xs">
-                        *<span className="text-dark">{errors.user_city}</span>{' '}
+                        *<span className="text-dark">{errors.user_ticketnumber}</span>{' '}
                       </p>
                     )}
                   </div>
@@ -499,10 +501,11 @@ export default function ContactFacturacion() {
                       Subtotal<span className="text-required">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none"
+                      className="rounded-md bg-light text-dark text-right px-4 border-2 border-secondary dark:border-primary p-2 outline-none"
                       id="user_subtotal"
                       name="user_subtotal"
                       type="number"
+                      min="0" // Evita números negativos
                       required
                     />
                     {touched.user_subtotal && errors.user_subtotal && (
@@ -523,10 +526,11 @@ export default function ContactFacturacion() {
                       I.V.A<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none"
+                      className="rounded-md bg-light text-dark text-right px-4 border-2 border-secondary dark:border-primary p-2 outline-none"
                       id="user_IVA"
                       name="user_IVA"
                       type="number"
+                      min="0" // Evita números negativos
                       required
                     />
                     {touched.user_IVA && errors.user_IVA && (
@@ -542,10 +546,11 @@ export default function ContactFacturacion() {
                       Total a pagar<span className="text-required ml-1">*</span>
                     </label>
                     <Field
-                      className="rounded-md bg-light text-dark text-right px-4 border-2  border-secondary dark:border-primary p-2 outline-none"
+                      className="rounded-md bg-light text-dark text-right px-4 border-2 border-secondary dark:border-primary p-2 outline-none"
                       id="user_total"
                       name="user_total"
                       type="number"
+                      min="0" // Evita números negativos
                       required
                     />
                     {touched.user_total && errors.user_total && (
@@ -558,41 +563,34 @@ export default function ContactFacturacion() {
                 </div>
                 {/* IVA - Total a Pagar */}
               </div>
+              {/* Datos de Tarjeta */}
+              <div className="grid sm:grid-cols-2 gap-8 mt-6">
+                {/* Input para los últimos 4 dígitos de la tarjeta */}
+                {showCardDigitsInput && (
+                  <div id="formField_lastFourDigitsCard" className="flex flex-col">
+                    <label htmlFor="user_lastFourDigitsCard" className="mb-2">
+                      Últimos 4 dígitos de la tarjeta<span className="text-required ml-1">*</span>
+                    </label>
+                    <Field
+                      className="rounded-md bg-light text-dark border-2 border-secondary dark:border-primary p-2 outline-none"
+                      id="user_lastFourDigitsCard"
+                      name="user_lastFourDigitsCard"
+                      type="number"
+                      maxLength="4"
+                      value={cardDigits} // Mantiene el valor del input
+                      onChange={handleCardDigitsChange} // Maneja el cambio del input
+                      required
+                    />
+                    {touched.user_lastFourDigitsCard && errors.user_lastFourDigitsCard && (
+                      <p className="mt-2 text-required text-xs">
+                        * <span className="text-dark dark:text-light">{errors.user_lastFourDigitsCard}</span>
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+              {/* Datos de Tarjeta */}
             </div>
-            {/* 
-            <form encType="multipart/form-data" method="post" onSubmit={sendEmail} className='flex flex-col  w-[210px] mx-auto mt-12'>
-              <label htmlFor='user_total' className="mb-2">Añadir archivo</label>
-              <input type="file" name="my_file" />
-            </form> */}
-            {/* Datos de Compra */}
-
-            {/* Datos de Tarjeta */}
-            <div className="grid sm:grid-cols-2 gap-8">
-              {/* Input para los últimos 4 dígitos de la tarjeta */}
-              {showCardDigitsInput && (
-                <div id="formField_lastFourDigitsCard" className="flex flex-col">
-                  <label htmlFor="user_lastFourDigitsCard" className="mb-2">
-                    Últimos 4 dígitos de la tarjeta<span className="text-required ml-1">*</span>
-                  </label>
-                  <Field
-                    className="rounded-md bg-light text-dark border-2 border-secondary dark:border-primary p-2 outline-none"
-                    id="user_lastFourDigitsCard"
-                    name="user_lastFourDigitsCard"
-                    type="number"
-                    maxLength="4"
-                    value={cardDigits} // Mantiene el valor del input
-                    onChange={handleCardDigitsChange} // Maneja el cambio del input
-                    required
-                  />
-                  {touched.user_lastFourDigitsCard && errors.user_lastFourDigitsCard && (
-                    <p className="mt-2 text-required text-xs">
-                      * <span className="text-dark dark:text-light">{errors.user_lastFourDigitsCard}</span>
-                    </p>
-                  )}
-                </div>
-              )}
-            </div>
-            {/* Datos de Tarjeta */}
 
             {/* Fields */}
 

@@ -70,7 +70,7 @@ const PoliticaPrivacidad = () => {
                 Nuestro sitio web utiliza tecnologías avanzadas para mejorar su experiencia y ayudarnos a entender mejor
                 sus necesidades:
               </Paragraph>
-              <article className="pl-20 flex flex-col gap-6">
+              <article className="xl:pl-20 flex flex-col gap-6">
                 <TitleH2>¿Qué es Google Analytics?</TitleH2>
                 <Paragraph>
                   Google Analytics es una herramienta proporcionada por Google que nos ayuda a entender cómo interactúan
@@ -87,13 +87,13 @@ const PoliticaPrivacidad = () => {
                   correo electrónico.
                 </Paragraph>
               </article>
-              <article className="pl-20 flex flex-col gap-6">
+              <article className="xl:pl-20 flex flex-col gap-6">
                 <TitleH2>¿Qué es Facebook Pixel?</TitleH2>
                 <Paragraph>
                   Facebook Pixel es otra herramienta, proporcionada por Meta (la empresa detrás de Facebook), que sirve
                   para analizar y optimizar nuestras campañas publicitarias. Funciona de la siguiente manera:
                 </Paragraph>
-                <ul className="list-disc pl-12 flex flex-col gap-4">
+                <ul className="list-disc pl-6 xl:pl-12 flex flex-col gap-4">
                   <li>
                     Rastrea si los usuarios interactúan con los anuncios que mostramos en plataformas como Facebook o
                     Instagram.
@@ -116,7 +116,7 @@ const PoliticaPrivacidad = () => {
             </Paragraph>
             <TituloYDescripcion title="4. Compartición de la información">
               <Paragraph>Solo compartimos su información en los siguientes casos:</Paragraph>
-              <ul className="list-disc pl-12 flex flex-col gap-4">
+              <ul className="list-disc pl-6 xl:pl-12 flex flex-col gap-4">
                 <li>
                   Con proveedores de servicios que nos ayudan en la operación de nuestro negocio, como herramientas de
                   marketing.
@@ -139,7 +139,7 @@ const PoliticaPrivacidad = () => {
             </TituloYDescripcion>
             <TituloYDescripcion title="6. Derechos de los usuarios">
               <Paragraph>Tienes derechos sobre tu información personal, incluyendo:</Paragraph>
-              <ul className="list-disc pl-12 flex flex-col gap-4">
+              <ul className="list-disc pl-6 xl:pl-12 flex flex-col gap-4">
                 <li>
                   {' '}
                   <strong className="dark:text-secondary_light">Acceso: </strong>Puedes solicitar una copia de la
