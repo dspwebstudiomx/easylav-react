@@ -98,7 +98,7 @@ const renderOpenClosedBadge = (isOpen) => (
  * @returns {JSX.Element} Enlaces de navegación.
  */
 const renderMapLinks = (position, title, gmap) => (
-  <div className="flex md:hidden">
+  <div className="flex md:hidden w-full">
     <a
       href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
       target="_blank"
@@ -235,9 +235,9 @@ const SucursalCard = ({
           <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
             <p className="text-sm uppercase px-8">{advertisement}</p>
           </Badge>
-          {renderMapLinks(position, title, gmap)}
         </section>
       )}
+      {renderMapLinks(position, title, gmap)}
 
       {/* Badge */}
       {badge && (
