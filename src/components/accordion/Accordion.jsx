@@ -14,14 +14,11 @@ import PropTypes from 'prop-types';
 
 // Estructura
 const Accordion = ({ children, question, height, isOpen, onToggle }) => {
-  const styles = {
-    width: 'w-full h-full',
-  };
-
+  const Height = height || 'min-h-[80px]';
   return (
     <div className="w-auto rounded-lg mx-auto">
       <button
-        className={`flex text-left ${styles.width} ${height} p-4 lg:p-8 bg-light text-dark items-center justify-start ${
+        className={`flex text-left w-full ${Height} p-4 lg:p-8 bg-light text-dark items-center justify-start ${
           !isOpen
             ? 'rounded-2xl border-2 border-primary'
             : 'rounded-t-2xl border-t-2 border-l-2 border-t-primary border-l-primary'
@@ -48,7 +45,7 @@ const Accordion = ({ children, question, height, isOpen, onToggle }) => {
       {/* Contenido del acordeón */}
       {isOpen && (
         <div
-          className={`${styles.width} pl-8 duration-200 ease-in-out bg-primary_light text-dark ${
+          className={`w-full pl-8 duration-200 ease-in-out bg-primary_light text-dark ${
             isOpen
               ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-full pb-8'
               : 'hidden'

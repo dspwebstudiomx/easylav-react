@@ -45,7 +45,7 @@ const PreguntasFrecuentes = () => {
           <li key={item.id}>
             <MemoizedAccordion
               question={item.question}
-              height="h-auto"
+              height=""
               isOpen={activeAccordion === item.id}
               onToggle={() => handleAccordionToggle(item.id)}>
               {item.answer}
