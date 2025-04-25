@@ -139,7 +139,7 @@ const TerminosCondiciones = () => {
               </Paragraph>
               <Paragraph>
                 En cualquier circunstancia, el TITULAR no será responsable de las opiniones expresadas por los USUARIOS
-                mediante comentarios o publicaciones realizadas por estos últimos. El
+                mediante comentarios o publicaciones realizadas por estos últimos.
               </Paragraph>
               <Paragraph>
                 El acceso al SITIO WEB no implica el establecimiento de ningún tipo de relación entre el TITULAR y el
