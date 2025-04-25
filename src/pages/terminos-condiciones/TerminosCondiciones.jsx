@@ -418,7 +418,94 @@ const TerminosCondiciones = () => {
               </Paragraph>
             </TituloYDescripcion>
             {/* OCTAVA. PROHIBICIONES DE USO DEL SITIO WEB. */}
+
+            {/* NOVENA. LIMITACIÓN DE RESPONSABILIDAD. */}
+            <TituloYDescripcion title="NOVENA. LIMITACIÓN DE RESPONSABILIDAD.">
+              <Paragraph>
+                El TITULAR y, en caso de que aplique, junto con sus directores, funcionarios, empleados, afiliados,
+                agentes, contratistas, pasantes, proveedores, proveedores de servicios o licenciantes, no asumirá
+                responsabilidad alguna por lesiones, pérdidas, reclamaciones o daños, sean directos, indirectos,
+                incidentales, punitivos, especiales o consecuentes de cualquier índole. Esta exención de responsabilidad
+                incluye, pero no se limita a, la pérdida de beneficios, ingresos, ahorros, datos, costos de reemplazo u
+                otros daños similares, sin importar la teoría legal en la que se sustenten, ya sea contractual,
+                extracontractual (incluida la negligencia), responsabilidad objetiva u otra.
+              </Paragraph>
+              <Paragraph>
+                En relación con el uso de los servicios o productos adquiridos a través del SITIO WEB, es importante
+                destacar que responsabilidad del TITULAR no se limita únicamente a dicho uso. También se extiende a
+                cualquier otro reclamo relacionado con el servicio o cualquier producto ofrecido. Esto incluye, entre
+                otros, cualquier error u omisión en cualquier contenido, así como cualquier pérdida o daño de cualquier
+                tipo que el USUARIO pueda experimentar debido al uso de nuestro servicio o al acceso a cualquier
+                contenido (o producto) publicado, transmitido o puesto a disposición a través del mismo, incluso si se
+                ha advertido sobre la posibilidad de dichos daños.
+              </Paragraph>
+              <Paragraph>
+                Es relevante tener en cuenta que en ciertos estados o jurisdicciones, puede no ser viable excluir o
+                limitar la responsabilidad por daños consecuentes o incidentales. En tales casos, la responsabilidad
+                estará limitada en la medida máxima permitida por la ley aplicable en esa jurisdicción particular. Sin
+                embargo, el TITULAR se compromete a brindar un servicio de calidad y esta siempre dispuesto a atender
+                cualquier inquietud o pregunta que pueda tener el USUARIO acerca de los servicios y productos.
+              </Paragraph>
+            </TituloYDescripcion>
+            {/* NOVENA. LIMITACIÓN DE RESPONSABILIDAD. */}
+
+            {/* DÉCIMA. INDEMNIZACIÓN. */}
+            <TituloYDescripcion title="DÉCIMA. INDEMNIZACIÓN.">
+              <Paragraph>
+                El USUARIO acepta y se compromete a mantener indemne al TITULAR y, en caso de aplicar, a su empresa
+                matriz, subsidiarias, afiliadas, asociados, funcionarios, directores, agentes, contratistas,
+                licenciantes, proveedores de servicios, subcontratistas, proveedores, pasantes y empleados, frente a
+                cualquier reclamación o demanda presentada por terceros, incluidos los honorarios razonables de
+                abogados, derivados de su incumplimiento de estos TÉRMINOS Y CONDICIONES o de cualquier otro documento
+                incorporado por referencia, así como por la violación de leyes o derechos de terceros.
+              </Paragraph>
+            </TituloYDescripcion>
+            {/* DÉCIMA. INDEMNIZACIÓN. */}
+
+            {/* DÉCIMO PRIMERA. LEGISLACIÓN Y JURISDICCIÓN APLICABLE. */}
+            <TituloYDescripcion title="DÉCIMO PRIMERA. LEGISLACIÓN Y JURISDICCIÓN APLICABLE.">
+              <Paragraph>
+                El TITULAR se reserva el derecho de ejercer las acciones civiles o penales que considere necesarias en
+                caso de un uso indebido del SITIO WEB, sus contenidos, productos o servicios, o en caso de
+                incumplimiento de los presentes TÉRMINOS Y CONDICIONES.
+              </Paragraph>
+              <Paragraph>
+                La relación entre el USUARIO y el TITULAR estará sujeta a la legislación vigente en México, en
+                particular en la Ciudad de México. En caso de surgir alguna controversia respecto a la interpretación
+                y/o aplicación de los presentes TÉRMINOS Y CONDICIONES, ambas partes se someterán a la jurisdicción
+                ordinaria de los tribunales correspondientes según lo establecido en la legislación del estado
+                mencionado.
+              </Paragraph>
+            </TituloYDescripcion>
+            {/* DÉCIMO PRIMERA. LEGISLACIÓN Y JURISDICCIÓN APLICABLE. */}
+
+            {/* DÉCIMO SEGUNDA. NULIDAD E INEFICACIA DE LAS CLÁUSULAS. */}
+            <TituloYDescripcion title="DÉCIMO SEGUNDA. NULIDAD E INEFICACIA DE LAS CLÁUSULAS.">
+              <Paragraph>
+                En caso de que alguna cláusula incluida en los presentes TÉRMINOS Y CONDICIONES sea declarada, total o
+                parcialmente, nula o ineficaz, dicha declaración de nulidad o ineficacia afectará únicamente a esa
+                disposición o a la parte de la misma que resulte afectada, manteniéndose vigentes los demás TÉRMINOS Y
+                CONDICIONES. La cláusula afectada se considerará como no escrita.
+              </Paragraph>
+            </TituloYDescripcion>
+            {/* DÉCIMO SEGUNDA. NULIDAD E INEFICACIA DE LAS CLÁUSULAS. */}
+
+            {/* DÉCIMO TERCERA. CONTACTO. */}
+            <Paragraph>
+              Si el USUARIO tiene alguna pregunta acerca de los TÉRMINOS Y CONDICIONES o desea realizar algún comentario
+              sobre el SITIO WEB, podrá comunicarse con nosotros mediante el correo electrónico proporcionado en el
+              SITIO WEB. Estaremos encantados de responder a sus inquietudes y comentarios.Una vez leídos estos TÉRMINOS
+              Y CONDICIONES, el USUARIO habrá sido informado acerca de sus implicaciones y las responsabilidades que le
+              conciernen. Si el USUARIO no está de acuerdo con estos términos, deberá abstenerse de utilizar el SITIO
+              WEB.
+            </Paragraph>
+            <Paragraph>
+              Es importante destacar que estos TÉRMINOS Y CONDICIONES están sujetos a cambios y actualizaciones, por lo
+              que se recomienda revisarlos periódicamente en el SITIO WEB.
+            </Paragraph>
+            {/* DÉCIMO TERCERA. CONTACTO. */}
           </ParagraphContainer>
+          <h4 className="text-center w-full mt-12">Última actualización: 24 de abril de 2025</h4>
         </article>
         {/* Columna 1 */}
       </PageLayout>
