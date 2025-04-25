@@ -1,10 +1,10 @@
-import { ParagraphContainer, TitleH2 } from 'components';
+import { ParagraphContainer, TitleH3 } from 'components';
 import PropTypes from 'prop-types';
 
 const TituloYDescripcion = ({ title, children }) => {
   return (
     <article id={title} className="flex flex-col gap-8 my-6 w-full">
-      <TitleH2>{title}</TitleH2>
+      <TitleH3 color="text-dark dark:text-primary_light">{title}</TitleH3>
       <ParagraphContainer>{children}</ParagraphContainer>
     </article>
   );
