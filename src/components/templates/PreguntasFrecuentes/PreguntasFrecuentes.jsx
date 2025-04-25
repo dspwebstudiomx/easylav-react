@@ -63,7 +63,7 @@ const PreguntasFrecuentes = () => {
           href={'/sucursales'}
           title={'Ver Sucursales'}
           icon={<FaRegBuilding />}
-          width={'w-[240px]'}
+          width={'w-[250px]'}
           name="Ver Sucursales"
           arialabel="Ver la lista de sucursales"
         />
@@ -73,7 +73,7 @@ const PreguntasFrecuentes = () => {
           href={'/#inicio'}
           title={'Inicio'}
           icon={<FaHome />}
-          width={'w-[240px]'}
+          width={'w-[250px]'}
           name="Ir a inicio"
           arialabel="Ir a la página de inicio"
         />
