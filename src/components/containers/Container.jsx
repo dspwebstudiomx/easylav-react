@@ -16,7 +16,7 @@ export default function Container({ id, children, className }) {
   return (
     <article
       id={`container-${id}`}
-      className={`md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg mx-auto grid gap-8 ${className}`}>
+      className={`container xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto grid gap-8 ${className}`}>
       {children}
     </article>
   );
