@@ -7,10 +7,10 @@
 
 strong {
   font-weight: 600;
-  color:#622B8B
+  color: #622b8b;
 }
 
-section{
+section {
   overflow-x: hidden;
 }
 
@@ -53,7 +53,7 @@ html {
 
 .loader:before,
 .loader:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
 }
@@ -68,7 +68,6 @@ html {
 }
 
 @keyframes bblFadInOut {
-
   0%,
   80%,
   100% {
@@ -94,8 +93,7 @@ html {
 .shadow-image {
   --tw-shadow: 10px 10px 0px 0px #35d5c4;
   --tw-shadow-colored: 10px 10px 0px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .modal-active {
@@ -133,7 +131,7 @@ input::-internal-datetime-container {
   align-items: center;
 }
 
-input[type="file"] button {
+input[type='file'] button {
   background-color: #2bac9f !important;
 }
 
@@ -171,7 +169,7 @@ input[type="file"] button {
   /* Asegura que el video esté sobre la imagen cuando esté listo */
 }
 
-.video-container video:playing+img {
+.video-container video:playing + img {
   display: none;
 }
 
@@ -179,26 +177,26 @@ input[type="file"] button {
   display: none;
 }
 
-.error{
+.error {
   border: 4px solid #b91c1c;
   background-color: #fca5a5;
 }
-.warning{
-  border: 4px solid #857E31;
-  background-color: #FAF3AB;
+.warning {
+  border: 4px solid #857e31;
+  background-color: #faf3ab;
 }
-.success{
+.success {
   border: 4px solid #4ade80;
   background-color: #bbf7d0;
 }
-.info{
+.info {
   border: 4px solid #3b82f6;
   background-color: #bfdbfe;
 }
-.border-blue{
+.border-blue {
   border: 2px solid #3b82f6;
 }
-.border-green{
+.border-green {
   border: 1px solid #4ade80;
 }
 
@@ -207,11 +205,11 @@ input[type="file"] button {
   width: 1px;
   height: 1px;
   margin: -1px;
-   padding: 0;
+  padding: 0;
   overflow: hidden;
-   clip: rect(0, 0, 0, 0);
-   border: 0;
-  }
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 /* Personalizar barra de desplazamiento */
 ::-webkit-scrollbar {
@@ -223,11 +221,10 @@ input[type="file"] button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #622B8B; /* Color del scroll */
+  background: #4a1b6d; /* Color del scroll */
   border-radius: 6px; /* Bordes redondeados */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #AF8CFA; /* Color al pasar el mouse */
+  background: #af8cfa; /* Color al pasar el mouse */
 }
-
