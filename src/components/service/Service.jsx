@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 // Estilos
 const SERVICE_UI = {
   ELEMENT: {
-    CLASSNAME: `grid grid-grow gap-4 items-center justify-center shadow-2xl rounded-xl p-4 w-full bg-light dark:border-4 dark:border-primary mx-auto`,
+    CLASSNAME: `grid grid-grow gap-4 items-center justify-center shadow-2xl rounded-xl p-4 w-full bg-light dark:border-4 dark:border-primary mx-auto transition-transform duration-300 ease-in-out hover:scale-110`,
     DIV_VIDEO: 'mx-auto w-32 sm:w-22 md:w-32',
     DIV_TITLEH3: 'mx-auto text-primary',
   },
