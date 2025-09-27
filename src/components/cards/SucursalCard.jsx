@@ -232,9 +232,11 @@ const SucursalCard = ({
       {/* Advertisement */}
       {advertisement && (
         <section className="w-full">
-          <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
-            <p className="text-sm uppercase px-8">{advertisement}</p>
-          </Badge>
+          {Badge ? (
+            <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
+              <p className="text-sm uppercase px-8">{advertisement}</p>
+            </Badge>
+          ) : null}
         </section>
       )}
       {renderMapLinks(position, title, gmap)}

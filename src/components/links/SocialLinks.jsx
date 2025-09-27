@@ -44,7 +44,7 @@ const SocialLinks = ({ color, size, circleBorder, gap, hover, position, onClick 
         alt={'icono de correo'}
       />
       <SocialLink
-        href={'tel:4435200593'}
+        href={'tel:+524438947493'}
         icono={<FiPhone size={(size = size - 1)} className={classes.Link} />}
         ariaLabel={'Realiza una llamada'}
         title="Realiza una llamada"

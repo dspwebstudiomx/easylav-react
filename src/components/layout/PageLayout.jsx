@@ -12,24 +12,19 @@
 */
 
 // Importaciones
-import { Container, Footer, Header, ScrollToTopButton, Section } from 'components';
+import { Container, Section } from 'components';
 import PropTypes from 'prop-types';
 
 // Estructura
 const PageLayout = ({ children, id }) => {
   return (
-    <>
-      <Header />
-      <main
-        id={id}
-        className="w-full h-full dark:bg-dark mt-0 md:mt-[60px] xl:mt-0 min-h-[52.2vh] flex flex-col justify-center items-center dark:text-light">
-        <Section>
-          <Container className="">{children}</Container>
-        </Section>
-      </main>
-      <Footer />
-      <ScrollToTopButton />
-    </>
+    <main
+      id={id}
+      className="w-full h-full dark:bg-dark mt-0 md:mt-[60px] xl:mt-0 min-h-[52.2vh] flex flex-col justify-center items-center dark:text-light">
+      <Section>
+        <Container className="">{children}</Container>
+      </Section>
+    </main>
   );
 };
 

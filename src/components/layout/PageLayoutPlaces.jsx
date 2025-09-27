@@ -16,19 +16,9 @@
 */
 
 // Importaciones
-import {
-  BackgroundImageSection,
-  Button,
-  ButtonContainer,
-  Contacto,
-  Header,
-  ScrollToTopButton,
-  SucursalCardPerCity,
-  TitleH1,
-} from 'components';
+import { BackgroundImageSection, Button, ButtonContainer, Contacto, SucursalCardPerCity, TitleH1 } from 'components';
 import PropTypes from 'prop-types';
 import Container from '../containers/Container';
-import Footer from '../templates/footer/Footer';
 import Section from '../templates/Section';
 
 // Estructura
@@ -36,9 +26,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   const BannerPlaces = () => {
     return (
       <BackgroundImageSection
-        // image_768={image_768}
         image_576={image_576}
-        // image_240={image_240}
         image_1024={image_1024}
         image_1200={image_1200}
         image_1920={image_1920}
@@ -87,19 +75,14 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   };
 
   return (
-    <>
-      <Header />
-      <main id={`sucursales-${city}`} className="">
-        <TitleH1 attr="sr-only" align="text-center">
-          Conoces nuestras sucursales en {city}, donde ofrecemos servicios de lavandería, tintorería y planchado con la
-          mejor calidad y atención. ¡Te esperamos!
-        </TitleH1>
-        <BannerPlaces />
-        <ContentCards />
-      </main>
-      <Footer />
-      <ScrollToTopButton />
-    </>
+    <main id={`sucursales-${city}`} className="">
+      <TitleH1 attr="sr-only" align="text-center">
+        Conoces nuestras sucursales en {city}, donde ofrecemos servicios de lavandería, tintorería y planchado con la
+        mejor calidad y atención. ¡Te esperamos!
+      </TitleH1>
+      <BannerPlaces />
+      <ContentCards />
+    </main>
   );
 };
 

@@ -1,5 +1,6 @@
 // Importaciones
 import PoliticaCookies from 'pages/politica-cookies/PoliticaCookies';
+import { Footer, Header, ScrollToTopButton } from 'components';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../node_modules/animate.css/animate.css';
@@ -43,6 +44,7 @@ const Guadalajara = lazy(() => import('pages/sucursales/Guadalajara/Guadalajara'
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -62,6 +64,8 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+      <Footer />
+      <ScrollToTopButton />
     </BrowserRouter>
   );
 }

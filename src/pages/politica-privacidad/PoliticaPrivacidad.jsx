@@ -180,8 +180,8 @@ const PoliticaPrivacidad = () => {
                 </li>
                 <li className="list-disc pl-2 text-secondary_dark dark:text-secondary_light">
                   <strong className="dark:text-secondary_light">Teléfono: </strong>
-                  <a href="tel:+524435200593" className="text-dark dark:text-light">
-                    +52 44 320 0593
+                  <a href="tel:+524438947493" className="text-dark dark:text-light">
+                    +52 443 894 7493
                   </a>
                 </li>
                 <li className="list-disc pl-2 text-secondary_dark dark:text-secondary_light">
