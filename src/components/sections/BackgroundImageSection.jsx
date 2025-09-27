@@ -45,7 +45,7 @@ const BackgroundImageSection = ({
       {/* Overlay */}
 
       {/* Container */}
-      <Container className="">{children}</Container>
+      <Container className="text-center">{children}</Container>
       {/* Container */}
     </div>
   );
