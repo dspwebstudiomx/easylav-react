@@ -77,11 +77,6 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   return (
     <main id={`sucursales-${city}`} className="">
       <BannerPlaces />
-
-      {/* <Paragraph align="text-center">
-        Conoces nuestras sucursales en {city}, donde ofrecemos servicios de lavandería, tintorería y planchado con la
-        mejor calidad y atención. ¡Te esperamos!
-      </Paragraph> */}
       <ContentCards />
     </main>
   );
