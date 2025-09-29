@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
 const mexicanHolidays = ['02-05', '03-21', '05-01', '09-16', '11-02', '11-20'];
 
 // Lista de fechas específicas en las que las sucursales estarán completamente cerradas (formato MM-DD)
-const closedDates = ['12-25', '01-01', '09-29'];
+const closedDates = ['12-25', '01-01'];
 
 /**
  * Verifica si hoy es un día festivo oficial en México.
