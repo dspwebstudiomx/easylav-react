@@ -65,7 +65,7 @@ const QuieresUnaFranquicia = () => {
             tecnología avanzada, podrás ofrecer un servicio excepcional que atrae clientes y asegura tu éxito. ¡Invierte
             en tu futuro con Easylav!
           </p>
-          <ButtonContainer position="justify-start items-center" distance="mt-12">
+          <ButtonContainer position="justify-center items-center" distance="mt-12">
             <Button
               title={'Solicita más información'}
               width={'sm:w-auto'}
@@ -80,7 +80,7 @@ const QuieresUnaFranquicia = () => {
       </section>
       {/* Modal */}
       {showModal && selectedPaquete && (
-        <Modal width="w-[90vw] md:w-[60vw] lg:w-[40vw]">
+        <Modal width="w-[90vw] md:w-[60vw]">
           <div
             id="franquicias-formulario"
             className="z-40 mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">

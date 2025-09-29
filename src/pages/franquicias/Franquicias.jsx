@@ -13,13 +13,17 @@
   Modificación: Se han añadido nuevos componentes relacionados con la franquicia, incluyendo PreguntasFranquicias, BannerFranquicias, ImagenesFranquicias y SobreNuestrasFranquicias para mejorar la interacción del usuario y la presentación de información.
   Modificado por: Daniel Pérez
   --------------------------
-   Fecha de modificación: 2025-04-03
-   Modificación: Se han realizado ajustes en la estructura del componente para mejorar la legibilidad y el rendimiento. Se ha añadido un componente de carga para mejorar la experiencia del usuario mientras se cargan los componentes de forma diferida.
-   Modificado por: Daniel Pérez
-   --------------------------
-   Fecha de modificación: 2025-05-14
-   Modificación: Se han realizado optimizaciones adicionales en la carga de componentes y se han añadido nuevos elementos visuales para mejorar la presentación general de la sección de franquicias.
-   Modificado por: Daniel Pérez
+  Fecha de modificación: 2025-04-03
+  Modificación: Se han realizado ajustes en la estructura del componente para mejorar la legibilidad y el rendimiento. Se ha añadido un componente de carga para mejorar la experiencia del usuario mientras se cargan los componentes de forma diferida.
+  Modificado por: Daniel Pérez
+  --------------------------
+  Fecha de modificación: 2025-05-14
+  Modificación: Se han realizado optimizaciones adicionales en la carga de componentes y se han añadido nuevos elementos visuales para mejorar la presentación general de la sección de franquicias.
+  Modificado por: Daniel Pérez
+  --------------------------
+  Fecha de modificación: 2025-09-27
+  Modificación: Actualización de metadatos SEO para mejorar la visibilidad en motores de búsqueda y optimización del rendimiento del componente.
+  Modificado por: Daniel Pérez
 */
 
 // Importaciones

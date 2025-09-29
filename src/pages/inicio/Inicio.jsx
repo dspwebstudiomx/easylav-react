@@ -2,21 +2,18 @@
 
 //Importaciones
 import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
-import { Container, HomeLayout, Loading, Section, SEOFriendly } from 'components';
-import { lazy, Suspense } from 'react';
+import { Contacto, Container, HomeLayout, PreguntasFrecuentes, Section, SEOFriendly } from 'components';
+import HeroInicioVideo from './components/HeroInicioVideo';
+import QuienesSomos from './components/QuienesSomos';
+import NuestrosServicios from './nuestrosServicios/NuestrosServicios';
+import PorqueElegirnos from './components/PorqueElegirnos';
+import ProgramasDeLealtad from './components/ProgramasDeLealtad';
+import Equipamiento from './components/Equipamiento';
+import Recomendaciones from './components/Recomendaciones';
+import NuestrasSucursales from './nuestrasSucursales/NuestrasSucursales';
+import CarouselTestimonios from './Testimonios/CarouselTestimonios';
 
 // Constantes
-const CarouselTestimonios = lazy(() => import('./Testimonios/CarouselTestimonios'));
-const Contacto = lazy(() => import('../../components/contacto/Contacto'));
-const Equipamiento = lazy(() => import('./components/Equipamiento'));
-const HeroInicioVideo = lazy(() => import('./components/HeroInicioVideo'));
-const NuestrasSucursales = lazy(() => import('./nuestrasSucursales/NuestrasSucursales'));
-const NuestrosServicios = lazy(() => import('./nuestrosServicios/NuestrosServicios'));
-const PorqueElegirnos = lazy(() => import('./components/PorqueElegirnos'));
-const PreguntasFrecuentes = lazy(() => import('../../components/templates/PreguntasFrecuentes/PreguntasFrecuentes'));
-const ProgramasDeLealtad = lazy(() => import('./components/ProgramasDeLealtad'));
-const QuienesSomos = lazy(() => import('./components/QuienesSomos'));
-const Recomendaciones = lazy(() => import('./components/Recomendaciones'));
 
 // Estructura
 const Inicio = () => (
@@ -34,53 +31,40 @@ const Inicio = () => (
     />
     <HomeLayout id="inicio" className="dark:bg-dark">
       {/* Introducción */}
-      <Suspense fallback={<Loading />}>
-        <HeroInicioVideo />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <QuienesSomos />
-      </Suspense>
+      <HeroInicioVideo />
 
+      {/* Quiénes somos */}
+      <QuienesSomos />
       {/* Servicios y beneficios */}
-      <Suspense fallback={<Loading />}>
-        <NuestrosServicios />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <PorqueElegirnos />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <ProgramasDeLealtad />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <Equipamiento />
-      </Suspense>
+      <NuestrosServicios />
+      {/* ¿Por qué elegirnos? */}
+      <PorqueElegirnos />
+
+      <ProgramasDeLealtad />
+
+      <Equipamiento />
 
       {/* Información adicional */}
-      <Suspense fallback={<Loading />}>
-        <Recomendaciones />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <NuestrasSucursales />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <Section backgroundColor="dark:bg-dark" className="">
-          <Container className="">
-            <PreguntasFrecuentes />
-          </Container>
-        </Section>
-      </Suspense>
+
+      <Recomendaciones />
+
+      <NuestrasSucursales />
+
+      <Section backgroundColor="dark:bg-dark" className="">
+        <Container className="">
+          <PreguntasFrecuentes />
+        </Container>
+      </Section>
 
       {/* Testimonios y contacto */}
-      <Suspense fallback={<Loading />}>
-        <CarouselTestimonios />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
-        <Section backgroundColor="dark:bg-dark" className="">
-          <Container className="">
-            <Contacto />
-          </Container>
-        </Section>
-      </Suspense>
+
+      <CarouselTestimonios />
+
+      <Section backgroundColor="dark:bg-dark" className="">
+        <Container className="">
+          <Contacto />
+        </Container>
+      </Section>
     </HomeLayout>
   </>
 );

@@ -31,8 +31,14 @@ const NuestrasSucursales = () => {
     );
   }
 
-  // Ordenar localservices alfabéticamente por el título
-  const sortedLocalServices = localservices.sort((a, b) => a.title.localeCompare(b.title));
+  // Ordenar: primero Morelia, luego el resto por ciudad y luego por título
+  const sortedLocalServices = [...localservices].sort((a, b) => {
+    if (a.city === 'Morelia' && b.city !== 'Morelia') return -1;
+    if (a.city !== 'Morelia' && b.city === 'Morelia') return 1;
+    const cityCompare = a.city.localeCompare(b.city);
+    if (cityCompare !== 0) return cityCompare;
+    return a.title.localeCompare(b.title);
+  });
 
   return (
     <Section className="dark:bg-dark py-12">

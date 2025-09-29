@@ -1,5 +1,3 @@
-//! Crear componente con video de fondo
-
 import {
   HeroInicioImage1_1024x500,
   HeroInicioImage1_1920x500,

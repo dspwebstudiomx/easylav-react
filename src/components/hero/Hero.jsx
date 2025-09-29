@@ -1,33 +1,40 @@
-import { Container, ImageResponsive, Section } from "components";
-import PropTypes from "prop-types";
+import { Container, ImageResponsive, Section } from 'components';
+import PropTypes from 'prop-types';
 
 function Hero({ ...props }) {
   const {
-    children, backgroundColor, backgroundImage_640, backgroundImage_1024, backgroundImage_1920, height, id, opacity, opacityColor, imageAlt,
+    children,
+    backgroundColor,
+    backgroundImage_640,
+    backgroundImage_1024,
+    backgroundImage_1920,
+    height,
+    id,
+    opacity,
+    opacityColor,
+    imageAlt,
   } = props;
 
   const classes = {
     section: `relative overflow-hidden z-0 flex`,
-    image: "absolute inset-0 h-full object-cover w-full z-0",
+    image: 'absolute inset-0 h-full object-cover w-full z-0',
     container: `absolute w-full h-full flex place-items-center`,
     opacity: `${opacity} absolute inset-0 z-1 ${opacityColor}`,
   };
 
-
   return (
-    <Section id={id} height={height} backgroundColor={backgroundColor} className={classes.section}    >
+    <Section id={id} height={height} backgroundColor={backgroundColor} className={classes.section}>
       <ImageResponsive
         src={backgroundImage_640}
         imageAlt={imageAlt}
         className={classes.image}
         image_640={backgroundImage_640}
         image_1024={backgroundImage_1024}
-        image_1920={backgroundImage_1920} />
+        image_1920={backgroundImage_1920}
+      />
       <div id={`opacidad-${id}`} className={classes.opacity} />
       <Container id={`contenido-${id}`} className={`${classes.container} ${height}`}>
-        <div className="flex place-items-center">
-          {children}
-        </div>
+        <div className="flex place-items-center">{children}</div>
       </Container>
     </Section>
   );

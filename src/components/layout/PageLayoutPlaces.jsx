@@ -16,7 +16,7 @@
 */
 
 // Importaciones
-import { BackgroundImageSection, Button, ButtonContainer, Contacto, SucursalCardPerCity, TitleH1 } from 'components';
+import { BackgroundImageSection, Button, ButtonContainer, Contacto, SucursalCardPerCity } from 'components';
 import PropTypes from 'prop-types';
 import Container from '../containers/Container';
 import Section from '../templates/Section';
@@ -47,7 +47,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         className={'flex flex-col items-center justify-center gap-6'}
         height={'h-full'}
         backgroundColor={'bg-light'}>
-        <Container className={'w-4/5 mx-auto'}>
+        <Container className={'mx-auto'}>
           {city ? (
             <>
               <SucursalCardPerCity city={city} />
@@ -76,11 +76,12 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
 
   return (
     <main id={`sucursales-${city}`} className="">
-      <TitleH1 attr="sr-only" align="text-center">
+      <BannerPlaces />
+
+      {/* <Paragraph align="text-center">
         Conoces nuestras sucursales en {city}, donde ofrecemos servicios de lavandería, tintorería y planchado con la
         mejor calidad y atención. ¡Te esperamos!
-      </TitleH1>
-      <BannerPlaces />
+      </Paragraph> */}
       <ContentCards />
     </main>
   );

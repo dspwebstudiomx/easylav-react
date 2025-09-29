@@ -16,7 +16,7 @@ import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const height = 'h-auto';
+const height = 'h-[60vh]';
 
 // Estructura
 const HeroInicioVideo = () => {
