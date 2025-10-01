@@ -67,7 +67,8 @@ const ProgramasDeLealtad = () => {
     const opacity = 0.45 - (dist / maxDist) * 0.35;
     setShine({ x: percentX, y: percentY, opacity });
     // Si el cursor está cerca del centro, mostrar la tarjeta plana
-    if (dist < Math.min(rect.width, rect.height) * 0.12) { // 12% del tamaño como radio central
+    if (dist < Math.min(rect.width, rect.height) * 0.12) {
+      // 12% del tamaño como radio central
       setCardTransform('perspective(1000px) translateZ(40px) rotateY(0deg) rotateX(0deg)');
       return;
     }
