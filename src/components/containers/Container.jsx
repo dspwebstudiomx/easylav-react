@@ -16,13 +16,13 @@ export default function Container({ id, children, className }) {
   return (
     <article
       id={`container-${id}`}
-      className={`container xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto grid gap-8 ${className}`}>
+      className={`container xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto grid gap-8 py-12 ${className}`}>
       {children}
     </article>
   );
 }
 
-// Propiedades
+// Propiedades del Componente
 Container.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
