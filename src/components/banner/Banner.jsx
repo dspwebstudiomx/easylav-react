@@ -14,7 +14,7 @@ const Banner = ({ id, children, variant = 'primary' }) => {
   const variants = {
     primary: 'bg-primary_light border-dark text-dark',
     secondary: 'bg-secondary_light border-secondary_dark text-dark',
-    warning: 'bg-warning_light border-warning_dark text-dark',
+    warning: 'bg-red_light border-red_dark text-red_dark',
   };
 
   // Clases base

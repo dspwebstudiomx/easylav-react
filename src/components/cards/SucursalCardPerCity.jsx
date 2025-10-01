@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
 const mexicanHolidays = ['02-05', '03-21', '05-01', '09-16', '11-02', '11-20'];
 
 // Lista de fechas específicas en las que las sucursales estarán completamente cerradas (formato MM-DD)
-const closedDates = ['12-25', '01-01'];
+const closedDates = ['12-25', '01-01', '02-14', '09-29'];
 
 /**
  * Verifica si hoy es un día festivo oficial en México.
@@ -48,11 +48,10 @@ const SucursalCardPerCity = ({ city }) => {
 
   return (
     <div className="w-full flex flex-col items-center justify-start gap-24">
-      <div className="flex flex-col items-center justify-start gap-4 w-4/5">
+      <div className="flex flex-col items-center justify-start gap-4 w-full">
         {/* Banner de día cerrado (solo aparece en fechas específicas: 25 de diciembre y 1 de enero) */}
         {isClosed && (
-          <Banner id="banner-dia-cerrado" variant="secondary">
-            <h1 className="text-2xl font-bold text-center text-dark block">Nota:</h1>
+          <Banner id="banner-dia-cerrado" variant="warning">
             <p className="text-gray-600 dark:text-gray-400">
               Las sucursales permanecerán cerradas durante este día. Muchas gracias de antemano!
             </p>
@@ -62,8 +61,7 @@ const SucursalCardPerCity = ({ city }) => {
         {/* Banner de día feriado (solo aparece si es un día feriado) */}
         {isHoliday && (
           <Banner id="banner-dia-feriado" variant="primary">
-            <h1 className="text-2xl font-bold text-center text-dark block">Nota:</h1>
-            <p className="text-dark text-pretty">
+            <p className="text-pretty">
               Las sucursales laboran el día de hoy en un horario de 8 a.m a 6 p.m durante este día.
             </p>
           </Banner>
