@@ -32,8 +32,8 @@ const ProgramasDeLealtad = () => {
     setIsDark(document.documentElement.classList.contains('dark'));
   }, []);
 
-  const handleMouseMove = (e) => {
-    setIsHovered(true);
+  // La tarjeta solo se transforma al hacer clic
+  const handleCardClick = (e) => {
     const card = cardRef.current;
     if (!card) return;
     const rect = card.getBoundingClientRect();
@@ -87,7 +87,7 @@ const ProgramasDeLealtad = () => {
                 transition:
                   'transform 1.2s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s, border 0.3s, background 0.3s',
               }}
-              onMouseMove={handleMouseMove}
+              onClick={handleCardClick}
               onMouseLeave={handleMouseLeave}>
               {/* Sombra dinámica */}
               <div
