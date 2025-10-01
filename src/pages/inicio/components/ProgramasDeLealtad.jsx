@@ -13,6 +13,7 @@ import { useRef, useEffect, useState } from 'react';
 import { FaRegEye } from 'react-icons/fa6';
 
 const ProgramasDeLealtad = () => {
+  const [isLeftPressed, setIsLeftPressed] = useState(false);
   const cardRef = useRef(null);
   const audioRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -35,13 +36,57 @@ const ProgramasDeLealtad = () => {
   // Flip animado
   const flipDuration = 700; // ms
   const [isFlipping, setIsFlipping] = useState(false);
+  const [cardTransform, setCardTransform] = useState(
+    'perspective(1000px) translateZ(40px) rotateY(45deg) rotateX(30deg)'
+  );
 
+  // Flip animado
   const handleFlip = () => {
     setIsFlipping(true);
     setTimeout(() => {
       setShowFront((prev) => !prev);
       setIsFlipping(false);
-    }, flipDuration / 2); // Cambia la cara a la mitad de la animación
+    }, flipDuration / 2);
+  };
+
+  // Movimiento 3D con mouse
+  const handleMouseMove = (e) => {
+    setIsHovered(true);
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    // Brillo siempre sigue al ratón
+    const percentX = (x / rect.width) * 100;
+    const percentY = (y / rect.height) * 100;
+    const dist = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
+    const maxDist = Math.sqrt(Math.pow(centerX, 2) + Math.pow(centerY, 2));
+    const opacity = 0.45 - (dist / maxDist) * 0.35;
+    setShine({ x: percentX, y: percentY, opacity });
+    // Si el cursor está cerca del centro, mostrar la tarjeta plana
+    if (dist < Math.min(rect.width, rect.height) * 0.12) { // 12% del tamaño como radio central
+      setCardTransform('perspective(1000px) translateZ(40px) rotateY(0deg) rotateX(0deg)');
+      return;
+    }
+    // Rotación solo si el botón izquierdo está presionado
+    if (isLeftPressed) {
+      const rotateY = ((x - centerX) / centerX) * 45;
+      const rotateX = -((y - centerY) / centerY) * 30;
+      setCardTransform(`perspective(1000px) translateZ(40px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`);
+    }
+  };
+
+  const handleMouseDown = (e) => {
+    if (e.button === 0) {
+      setIsLeftPressed(true);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsLeftPressed(false);
   };
 
   const handleMouseLeave = () => {
@@ -50,10 +95,7 @@ const ProgramasDeLealtad = () => {
       audioRef.current.currentTime = 0;
       audioRef.current.play();
     }
-    const card = cardRef.current;
-    if (card) {
-      card.style.transform = 'perspective(1000px) translateZ(40px) rotateY(45deg) rotateX(30deg)';
-    }
+    setCardTransform('perspective(1000px) translateZ(40px) rotateY(45deg) rotateX(30deg)');
     setShine({ x: 100, y: 0, opacity: 0.25 });
   };
 
@@ -73,8 +115,17 @@ const ProgramasDeLealtad = () => {
                   ? '0 12px 40px 0 rgba(0,255,255,0.25), 0 1px 12px 0 rgba(0,0,0,0.18)'
                   : '0 8px 32px 0 rgba(31,38,135,0.37), inset 0 1px 12px 0 rgba(0,0,0,0.18)',
                 perspective: '1000px',
+                transform: cardTransform,
+                transition:
+                  'transform 0.7s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s, border 0.3s, background 0.3s',
               }}
-              onMouseLeave={handleMouseLeave}>
+              onMouseMove={handleMouseMove}
+              onMouseDown={handleMouseDown}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={(e) => {
+                handleMouseLeave(e);
+                setIsLeftPressed(false);
+              }}>
               <div
                 className="absolute inset-0 w-full h-full rounded-[15px]"
                 style={{
