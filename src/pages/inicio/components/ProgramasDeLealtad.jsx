@@ -1,14 +1,28 @@
 import { Container, Paragraph, ParagraphContainer, Section, TwoColumnsContainer } from 'components';
 import imagen from 'assets/images/images/tarjetaBeneficios.jpg';
-
-import { useRef } from 'react';
-import { useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const ProgramasDeLealtad = () => {
   const cardRef = useRef(null);
+  const audioRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const [shine, setShine] = useState({ x: 50, y: 50, opacity: 0.45 });
 
+  useEffect(() => {
+    const card = cardRef.current;
+    if (card) {
+      card.style.transform = 'perspective(1000px) scale(0.8) rotateY(90deg)';
+      setTimeout(() => {
+        card.style.transition = 'transform 0.7s cubic-bezier(.68,-0.55,.27,1.55)';
+        card.style.transform = 'perspective(1000px) scale(1) rotateY(45deg) rotateX(30deg)';
+      }, 100);
+    }
+    setIsDark(document.documentElement.classList.contains('dark'));
+  }, []);
+
   const handleMouseMove = (e) => {
+    setIsHovered(true);
     const card = cardRef.current;
     if (!card) return;
     const rect = card.getBoundingClientRect();
@@ -16,15 +30,11 @@ const ProgramasDeLealtad = () => {
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    // Rango de rotación
     const rotateY = ((x - centerX) / centerX) * 45;
     const rotateX = -((y - centerY) / centerY) * 30;
     card.style.transform = `perspective(1000px) translateZ(40px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-
-    // Brillo dinámico
     const percentX = (x / rect.width) * 100;
     const percentY = (y / rect.height) * 100;
-    // Opacidad más fuerte cerca del centro
     const dist = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
     const maxDist = Math.sqrt(Math.pow(centerX, 2) + Math.pow(centerY, 2));
     const opacity = 0.45 - (dist / maxDist) * 0.35;
@@ -32,32 +42,50 @@ const ProgramasDeLealtad = () => {
   };
 
   const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play();
+    }
     const card = cardRef.current;
     if (card) {
       card.style.transform = 'perspective(1000px) translateZ(40px) rotateY(45deg) rotateX(30deg)';
     }
-    // Brillo en la esquina superior derecha
     setShine({ x: 100, y: 0, opacity: 0.25 });
   };
 
   return (
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
-        {/* <TitleContainer title="Programas de Lealtad" /> */}
-
         <TwoColumnsContainer gridOrder="grid-col-reverse">
           <div
             ref={cardRef}
-            className="relative w-[80vw] h-[220px] md:w-[450px] md:h-[280px] rounded-[15px] shadow-2xl transition-transform duration-300 overflow-hidden mb-16 ml-4 md:ml-0"
+            className={`relative w-[80vw] h-[220px] md:w-[450px] md:h-[280px] rounded-[15px] shadow-2xl overflow-hidden mb-16 ml-4 md:ml-0 transition-transform duration-300 ${isHovered ? 'scale-105' : ''}`}
             style={{
               willChange: 'transform',
-              background: `#ececec url(${imagen}) center/cover no-repeat`,
-              border: '1.5px solid #d1d5db',
-              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.37), inset 0 1px 12px 0 rgba(0,0,0,0.18)',
+              background: isDark
+                ? `#222 url(${imagen}) center/cover no-repeat`
+                : `#ececec url(${imagen}) center/cover no-repeat`,
+              border: isHovered ? '2.5px solid #00eaff' : '1.5px solid #d1d5db',
+              boxShadow: isHovered
+                ? '0 12px 40px 0 rgba(0,255,255,0.25), 0 1px 12px 0 rgba(0,0,0,0.18)'
+                : '0 8px 32px 0 rgba(31,38,135,0.37), inset 0 1px 12px 0 rgba(0,0,0,0.18)',
               transform: 'perspective(1000px) translateZ(40px) rotateY(45deg) rotateX(30deg)',
+              transition: 'box-shadow 0.3s, border 0.3s, background 0.3s',
             }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}>
+            {/* Sombra dinámica */}
+            <div
+              className="pointer-events-none absolute inset-0 rounded-[15px]"
+              style={{
+                boxShadow: isHovered
+                  ? `0 24px 60px 0 rgba(0,255,255,0.18), ${shine.x > 50 ? '24px' : '-24px'} 8px 32px 0 rgba(31,38,135,0.25)`
+                  : '0 8px 32px 0 rgba(31,38,135,0.37)',
+                opacity: 0.7,
+                zIndex: 1,
+              }}
+            />
             {/* Brillo dinámico */}
             <div
               className="pointer-events-none absolute inset-0 rounded-[15px]"
@@ -87,6 +115,13 @@ const ProgramasDeLealtad = () => {
                 background: 'linear-gradient(-60deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.01) 100%)',
                 borderBottomRightRadius: '15px',
               }}
+            />
+            {/* Sonido sutil */}
+            <audio
+              ref={audioRef}
+              src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b6b1b2b2.mp3"
+              preload="auto"
+              style={{ display: 'none' }}
             />
           </div>
           <ParagraphContainer>
