@@ -66,7 +66,7 @@ const CarouselTestimonios = () => {
           <div className="flex items-center justify-center w-full gap-2">
             <button
               onClick={prevSlide}
-              className="p-0 flex items-center justify-center w-14 h-14 text-center bg-primary w-50 h-50 rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300"
+              className="p-0 flex items-center justify-center w-14 h-14 text-center bg-primary w-50 h-50 rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
               aria-label="Anterior">
               <MdArrowBack className="text-2xl" />
             </button>
@@ -77,7 +77,7 @@ const CarouselTestimonios = () => {
             </div>
             <button
               onClick={nextSlide}
-              className="p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300"
+              className="p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
               aria-label="Siguiente">
               <MdArrowForward className="text-2xl" />
             </button>
