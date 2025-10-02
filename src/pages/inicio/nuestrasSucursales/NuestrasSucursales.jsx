@@ -10,16 +10,61 @@
 */
 
 // Importaciones
+import { useState, useEffect } from 'react';
+import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 import { Container, Section, SucursalCard, TitleContainer, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// ...existing code...
 
 const NuestrasSucursales = () => {
+  // Ordenar: primero Morelia, luego el resto por ciudad y luego por título
+  const sortedLocalServices = [...localservices].sort((a, b) => {
+    if (a.city === 'Morelia' && b.city !== 'Morelia') return -1;
+    if (a.city !== 'Morelia' && b.city === 'Morelia') return 1;
+    const cityCompare = a.city.localeCompare(b.city);
+    if (cityCompare !== 0) return cityCompare;
+    return a.title.localeCompare(b.title);
+  });
+
+  const [current, setCurrent] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+  const total = sortedLocalServices.length;
+
+  // Hook para adaptar la cantidad de sucursales visibles
+  useEffect(() => {
+    const updateSlidesToShow = () => {
+      const w = window.innerWidth;
+      if (w < 768) setSlidesToShow(1);
+      else if (w < 1024) setSlidesToShow(2);
+      else setSlidesToShow(3);
+    };
+    updateSlidesToShow();
+    window.addEventListener('resize', updateSlidesToShow);
+    return () => window.removeEventListener('resize', updateSlidesToShow);
+  }, []);
+
+  // Autoplay: avanzar cada 5 segundos
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % total);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [total]);
+
+  // Responsive: puedes usar window.innerWidth o un hook para ajustar slidesToShow
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % total);
+  const prevSlide = () => setCurrent((prev) => (prev - 1 + total) % total);
+
+  // Para mostrar los slides visibles
+  const getVisibleSlides = () => {
+    let slides = [];
+    for (let i = 0; i < slidesToShow; i++) {
+      slides.push(sortedLocalServices[(current + i) % total]);
+    }
+    return slides;
+  };
+
   // Verifica si localservices tiene datos
   if (!localservices || localservices.length === 0) {
     return (
@@ -31,18 +76,9 @@ const NuestrasSucursales = () => {
     );
   }
 
-  // Ordenar: primero Morelia, luego el resto por ciudad y luego por título
-  const sortedLocalServices = [...localservices].sort((a, b) => {
-    if (a.city === 'Morelia' && b.city !== 'Morelia') return -1;
-    if (a.city !== 'Morelia' && b.city === 'Morelia') return 1;
-    const cityCompare = a.city.localeCompare(b.city);
-    if (cityCompare !== 0) return cityCompare;
-    return a.title.localeCompare(b.title);
-  });
-
   return (
     <Section className="dark:bg-dark py-12">
-      <Container className="flex flex-col items-center justify-center mx-auto ">
+      <Container className="flex flex-col items-center justify-center w-full px-0 mx-auto ">
         {/* Títulos */}
         <div className="md:hidden">
           <TitleContainer title="Nuestras Sucursales" />
@@ -51,53 +87,42 @@ const NuestrasSucursales = () => {
           <TitleH2>Nuestras Sucursales</TitleH2>
         </div>
 
-        {/* Carousel de Tarjetas Sucursales */}
-
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          className={'mySwyper mt-20 w-5/6 sm:w-full'}
-          keyboard={true}
-          spaceBetween={40}
-          navigation={false}
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: true,
-          }}
-          loop={true}
-          pagination={{ clickable: true, draggable: true, dynamicBullets: true }}
-          breakpoints={{
-            600: {
-              slidesPerView: 1,
-              spaceBetweenSlides: 30,
-              touchRatio: 1,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetweenSlides: 30,
-              touchRatio: 1,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetweenSlides: 0,
-              touchRatio: 1,
-            },
-            1210: {
-              slidesPerView: 3,
-              spaceBetweenSlides: 0,
-              touchRatio: 1,
-            },
-            1920: {
-              slidesPerView: 4,
-              spaceBetweenSlides: 0,
-              touchRatio: 1,
-            },
-          }}>
-          {sortedLocalServices.map((localservice) => (
-            <SwiperSlide key={localservice.id}>
-              <SucursalCard {...localservice} disableZoom={true} />
-            </SwiperSlide>
+        {/* Carrusel TailwindCSS */}
+        <div className="relative w-full mt-20 px-4 md:px-12 xl:px-32">
+          <div className="flex items-center justify-center gap-8 w-full">
+            {getVisibleSlides().map((localservice) => (
+              <div
+                key={localservice.id}
+                className="transition-all duration-500 ease-in-out w-full max-w-[350px] flex-shrink-0 px-6">
+                <SucursalCard {...localservice} disableZoom={true} />
+              </div>
+            ))}
+          </div>
+          {/* Botones navegación */}
+          <button
+            className="absolute left-0 top-1/2 -translate-y-1/2 p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+            onClick={prevSlide}
+            aria-label="Anterior">
+            <MdArrowBack className="text-2xl" />
+          </button>
+          <button
+            className="absolute right-0 top-1/2 -translate-y-1/2 p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+            onClick={nextSlide}
+            aria-label="Siguiente">
+            <MdArrowForward className="text-2xl" />
+          </button>
+        </div>
+        {/* Indicadores */}
+        <div className="flex justify-center mt-4 gap-2">
+          {sortedLocalServices.map((_, idx) => (
+            <button
+              key={idx}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary' : 'bg-gray-400 dark:bg-gray-600'}`}
+              onClick={() => setCurrent(idx)}
+              aria-label={`Ir a la sucursal ${idx + 1}`}
+            />
           ))}
-        </Swiper>
+        </div>
       </Container>
     </Section>
   );

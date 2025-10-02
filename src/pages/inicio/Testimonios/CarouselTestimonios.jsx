@@ -16,7 +16,8 @@ import Testimonio from './Testimonio';
 
 // Estilos
 const styles = {
-  backgroundColor: 'bg-secondary_dark dark:bg-primary',
+  // backgroundColor: 'bg-primary_light dark:bg-primary',
+  // backgroundColor: 'bg-secondary_dark dark:bg-primary',
 };
 
 // Hook para detectar breakpoints
