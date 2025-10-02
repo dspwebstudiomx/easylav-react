@@ -1,7 +1,5 @@
 import {
   BorderLeft,
-  Button,
-  ButtonContainer,
   Container,
   FourColumnnsContainer,
   Paragraph,
@@ -12,7 +10,7 @@ import {
   TwoColumnsContainer,
 } from 'components';
 import PropTypes from 'prop-types';
-import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
+// import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
 import {
   FaRegListAlt,
   FaSoap,
@@ -23,7 +21,7 @@ import {
   FaUserCheck,
   FaHandsHelping,
 } from 'react-icons/fa';
-import { FaCheck } from 'react-icons/fa6';
+// import { FaCheck } from 'react-icons/fa6';
 import { useEffect } from 'react';
 
 // Biblioteca de datos
@@ -42,11 +40,11 @@ const valores = [
     alt: 'Gratitud y Servicio ',
   },
 ];
-const serviciosOfrecidos = [
-  { id: 1, title: 'Autoservicio de lavado y secado.', href: '/#autoservicio' },
-  { id: 2, title: 'Servicio de lavado y secado por encargo.', href: '/#encargo' },
-  { id: 3, title: 'Tintorería.', href: '/#tintoreria' },
-];
+// const serviciosOfrecidos = [
+//   { id: 1, title: 'Autoservicio de lavado y secado.', href: '/#autoservicio' },
+//   { id: 2, title: 'Servicio de lavado y secado por encargo.', href: '/#encargo' },
+//   { id: 3, title: 'Tintorería.', href: '/#tintoreria' },
+// ];
 
 // Componentes Internos
 
@@ -198,7 +196,7 @@ const QuienesSomos = () => {
           {/* Nuestros Valores */}
 
           {/* Servicios */}
-          <Card>
+          {/* <Card>
             <TwoColumnsContainer>
               <div className="flex flex-col gap-12 items-start justify-center text-dark">
                 <BorderLeft>
@@ -232,7 +230,7 @@ const QuienesSomos = () => {
                 width={650}
               />
             </TwoColumnsContainer>
-          </Card>
+          </Card> */}
           {/* Servicios */}
         </div>
       </Container>
