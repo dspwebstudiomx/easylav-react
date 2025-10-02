@@ -156,9 +156,9 @@ const ProgramasDeLealtad = () => {
                   <div
                     className="pointer-events-none absolute inset-0 rounded-[15px]"
                     style={{
-                      background: `radial-gradient(circle at ${shine.x}% ${shine.y}%, rgba(255,255,255,${shine.opacity}) 0%, rgba(255,255,255,0.01) 70%)`,
+                      background: `radial-gradient(circle at ${shine.x}% ${shine.y}%, rgba(255,255,255,${Math.max(shine.opacity * 0.35, 0.04)}) 0%, rgba(255,255,255,0.01) 70%)`,
                       mixBlendMode: 'screen',
-                      opacity: 1,
+                      opacity: 0.32,
                       filter: 'blur(1.5px)',
                       transition: 'background 0.2s',
                     }}
@@ -167,9 +167,9 @@ const ProgramasDeLealtad = () => {
                     className="pointer-events-none absolute inset-0 rounded-[15px]"
                     style={{
                       background:
-                        'linear-gradient(120deg, rgba(255,255,255,0.35) 10%, rgba(255,255,255,0.10) 40%, rgba(255,255,255,0.01) 80%)',
+                        'linear-gradient(120deg, rgba(255,255,255,0.09) 10%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.01) 80%)',
                       mixBlendMode: 'screen',
-                      opacity: 0.7,
+                      opacity: 0.22,
                       filter: 'blur(1.5px)',
                     }}
                   />
