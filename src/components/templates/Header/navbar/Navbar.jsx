@@ -42,7 +42,7 @@ const Navbar = () => {
     <>
       <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full z-20 bg-light shadow-md`}>
         <div
-          className={`flex flex-row items-center justify-between w-full gap-6  h-[100px] px-8 sm:px-12 lg:px-0 max-w-screen-xl mx-auto`}>
+          className={`flex flex-row items-center justify-between w-full gap-6  h-[100px] px-8 sm:px-12 xl:px-0 xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto`}>
           <Logo />
           <div className="flex w-1/3 sm:w-full items-center justify-end flex-row">
             <NavLinksDesktop />
