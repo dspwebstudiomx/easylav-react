@@ -83,13 +83,6 @@ html {
   overflow: hidden;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-  overflow-y: visible !important;
-  padding-bottom: 4rem !important;
-}
-
 .shadow-image {
   --tw-shadow: 10px 10px 0px 0px #35d5c4;
   --tw-shadow-colored: 10px 10px 0px 0px var(--tw-shadow-color);
@@ -108,10 +101,6 @@ html {
 
 .button-secondary {
   background: linear-gradient(45deg, #985da0, #392352);
-}
-
-.mySwiper {
-  width: 100%;
 }
 
 .button {
