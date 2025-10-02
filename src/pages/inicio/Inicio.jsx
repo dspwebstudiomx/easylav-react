@@ -31,7 +31,7 @@ const Inicio = () => (
     />
     <HomeLayout id="inicio" className="dark:bg-dark">
       {/* Introducción */}
-      <HeroInicioVideo />
+      <HeroInicioVideo height="h-auto" />
 
       {/* Quiénes somos */}
       <QuienesSomos />
