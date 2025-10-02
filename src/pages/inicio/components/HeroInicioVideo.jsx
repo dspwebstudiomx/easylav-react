@@ -16,10 +16,8 @@ import Video from 'components/video/Video';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
-const height = 'h-[60vh]';
-
 // Estructura
-const HeroInicioVideo = () => {
+const HeroInicioVideo = ({ height }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Detectar si es un dispositivo móvil
