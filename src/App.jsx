@@ -22,6 +22,7 @@ const Facturacion = lazy(() => import('pages/facturacion/Facturacion'));
 const Morelia = lazy(() => import('pages/sucursales/Morelia/Morelia'));
 const Leon = lazy(() => import('pages/sucursales/Leon/Leon'));
 const Guadalajara = lazy(() => import('pages/sucursales/Guadalajara/Guadalajara'));
+const UsosBeneficios = lazy(() => import('pages/usos-beneficios/UsosBeneficios'));
 
 /* Estructura principal 
 
@@ -38,7 +39,10 @@ const Guadalajara = lazy(() => import('pages/sucursales/Guadalajara/Guadalajara'
   - Se utiliza el componente ContactoPagina para manejar la página de contacto.
   - Se utiliza el componente Sucursales para manejar la página de sucursales.
   - Se utiliza el componente PoliticaPrivacidad para manejar la página de política de privacidad.
-  - Se utiliza el componente PoliticaCookies para manejar la página de política de cookies.      
+  - Se utiliza el componente PoliticaCookies para manejar la página de política de cookies. 
+  - Se utiliza el componente Franquicias para manejar la página de franquicias.
+  - Se utiliza el componente GuiaEstilos para manejar la página de guía de estilos.
+  - Se utiliza el componente TerminosCondiciones para manejar la página de términos y condiciones.     
 */
 
 export default function App() {
@@ -60,6 +64,7 @@ export default function App() {
           <Route path="/sucursales/morelia" element={<Morelia />} />
           <Route path="/sucursales/leon" element={<Leon />} />
           <Route path="/sucursales/guadalajara" element={<Guadalajara />} />
+          <Route path="/usos-y-beneficios" element={<UsosBeneficios />} />
           <Route path="/test/" element={<Test />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

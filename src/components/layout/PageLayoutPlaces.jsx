@@ -36,7 +36,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         className="flex justify-center items-center"
         alt={`Imagen representativa de la ciudad de ${city}`}
         title={`Imagen representativa de la ciudad de ${city}`}>
-        <h2 className="text-light uppercase text-3xl font-semibold tracking-wide">{city}</h2>
+        <h2 className="text-light uppercase text-3xl 2xl:text-5xl font-semibold tracking-wide">{city}</h2>
       </BackgroundImageSection>
     );
   };

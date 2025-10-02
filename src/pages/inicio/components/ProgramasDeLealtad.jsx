@@ -8,7 +8,7 @@ import {
   TwoColumnsContainer,
 } from 'components';
 import imagenFrontal from 'assets/images/images/tarjetaBeneficios.jpg';
-import { CatedralMorelia as imagenTrasera } from 'assets'; // Cambia el path si tu imagen trasera tiene otro nombre o ubicación
+import { CatedralMorelia as imagenTrasera } from 'assets';
 import { useRef, useEffect, useState } from 'react';
 import { FaRegEye } from 'react-icons/fa6';
 
@@ -107,6 +107,7 @@ const ProgramasDeLealtad = () => {
           {/* Tarjeta con botón para alternar */}
           <div className="flex flex-col items-center gap-4">
             <div
+              id="card-container"
               ref={cardRef}
               className={`relative w-[80vw] h-[220px] md:w-[450px] md:h-[280px] rounded-[15px] shadow-2xl overflow-hidden mb-4 ${isHovered ? 'scale-105' : ''}`}
               style={{
@@ -306,15 +307,15 @@ const ProgramasDeLealtad = () => {
               <Button
                 title={showFront ? 'Ver reverso' : 'Ver frente'}
                 name="Voltear tarjeta de lealtad"
-                width={'w-[200px]'}
+                width={'w-[210px]'}
                 onClick={handleFlip}
                 variant="secondary"
                 icon={<FaRegEye />}
               />
               <Button
-                title="Ver Usos y Beneficios"
-                name="Voltear tarjeta de lealtad"
-                width={'w-[320px]'}
+                title="Conoce Usos y Beneficios"
+                name="Conoce Usos y Beneficios"
+                width={'w-[380px]'}
                 href="/usos-y-beneficios"
                 onClick={() => window.scrollTo(0, 0)}
                 variant="primary"
