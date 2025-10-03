@@ -14,7 +14,7 @@
 */
 
 // Importaciones
-import { leon_card as leon, catedral_morelia_card as morelia } from 'assets';
+import { CentroGuadalajara, leon_card as leon, catedral_morelia_card as morelia } from 'assets';
 import { BackgroundCard, Banner, PageLayout, SEOFriendly, TitleH1 } from 'components';
 import { scrollToTop } from 'functions';
 
@@ -31,6 +31,10 @@ const Sucursales = () => {
   const isHoliday =
     (currentMonth === 12 && (currentDay === 24 || currentDay === 25 || currentDay === 31)) ||
     (currentMonth === 1 && currentDay === 1);
+
+  // Constante para width y height iguales
+  const cardWidth = 'w-[320px] 2xl:w-[400px]';
+  const cardHeight = 'h-[210px] 2xl:h-[260px]';
 
   return (
     <>
@@ -69,8 +73,8 @@ const Sucursales = () => {
               href="/sucursales/morelia"
               className="flex justify-center items-center"
               rounded="rounded-lg"
-              width="w-[300px]"
-              height="h-[210px]"
+              width={cardWidth}
+              height={cardHeight}
               alt="Tarjeta con la imagen de Catedral de Morelia"
             />
             <BackgroundCard
@@ -78,9 +82,18 @@ const Sucursales = () => {
               title="León"
               href="/sucursales/leon"
               rounded="rounded-lg"
-              width="w-[300px]"
-              height="h-[210px]"
+              width={cardWidth}
+              height={cardHeight}
               alt="Tarjeta con la imagen del centro de León"
+            />
+            <BackgroundCard
+              image={CentroGuadalajara}
+              title="Guadalajara"
+              href="/sucursales/guadalajara"
+              rounded="rounded-lg"
+              width={cardWidth}
+              height={cardHeight}
+              alt="Tarjeta con la imagen del centro de Guadalajara"
             />
           </article>
         </div>
