@@ -109,7 +109,7 @@ const ProgramasDeLealtad = () => {
             <div
               id="card-container"
               ref={cardRef}
-              className={`relative w-[80vw] h-[220px] md:w-[450px] md:h-[280px] rounded-[15px] shadow-2xl overflow-hidden mb-4 ${isHovered ? 'scale-105' : ''}`}
+              className={`relative w-[288px] h-[180px] md:w-[450px] md:h-[280px] rounded-[15px] shadow-2xl overflow-hidden mb-4 ${isHovered ? 'scale-105' : ''}`}
               style={{
                 willChange: 'transform',
                 border: isHovered ? '2.5px solid #38bdf8' : '1.5px solid #d1d5db',
@@ -140,8 +140,8 @@ const ProgramasDeLealtad = () => {
                     transform: isFlipping ? `rotateY(${showFront ? 180 : 0}deg)` : `rotateY(${showFront ? 0 : 180}deg)`,
                     zIndex: showFront ? 2 : 1,
                     background: isDark
-                      ? `#222 url(${imagenFrontal}) center/cover no-repeat`
-                      : `#ececec url(${imagenFrontal}) center/cover no-repeat`,
+                      ? `#222 url(${imagenFrontal}) center/contain no-repeat`
+                      : `#ececec url(${imagenFrontal}) center/contain no-repeat`,
                   }}>
                   {/* Sombra dinámica, brillo, reflejo, etc. */}
                   <div
@@ -180,12 +180,6 @@ const ProgramasDeLealtad = () => {
                       background: 'linear-gradient(-60deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.01) 100%)',
                       borderBottomRightRadius: '15px',
                     }}
-                  />
-                  <audio
-                    ref={audioRef}
-                    src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b6b1b2b2.mp3"
-                    preload="auto"
-                    style={{ display: 'none' }}
                   />
                 </div>
                 <div
@@ -281,18 +275,11 @@ const ProgramasDeLealtad = () => {
                   borderBottomRightRadius: '15px',
                 }}
               />
-              {/* Sonido sutil */}
-              <audio
-                ref={audioRef}
-                src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b6b1b2b2.mp3"
-                preload="auto"
-                style={{ display: 'none' }}
-              />
             </div>
           </div>
           <ParagraphContainer>
             <Paragraph>
-              <div className="text-xl flex flex-col gap-8 items-start justify-start">
+              <div className="md:text-xl flex flex-col gap-8 items-start justify-start">
                 <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-5xl font-bold block">
                   ¡Tu lealtad tiene recompensas!
                 </span>
@@ -307,7 +294,7 @@ const ProgramasDeLealtad = () => {
               <Button
                 title={showFront ? 'Ver reverso' : 'Ver frente'}
                 name="Voltear tarjeta de lealtad"
-                width={'w-[210px]'}
+                width={'w-full md:w-[210px]'}
                 onClick={handleFlip}
                 variant="secondary"
                 icon={<FaRegEye />}
@@ -315,7 +302,7 @@ const ProgramasDeLealtad = () => {
               <Button
                 title="Conoce Usos y Beneficios"
                 name="Conoce Usos y Beneficios"
-                width={'w-[380px]'}
+                width={'md:w-[380px]'}
                 href="/usos-y-beneficios"
                 onClick={() => window.scrollTo(0, 0)}
                 variant="primary"

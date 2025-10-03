@@ -162,7 +162,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[240px] md:w-[280px] xl:w-[280px] dark:border-4 dark:border-secondary_dark',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[270px] md:w-[280px] xl:w-[280px] dark:border-4 dark:border-secondary_dark',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
@@ -250,17 +250,13 @@ const SucursalCard = ({
 
       {/* Modal */}
       {showModal && (
-        <Modal width="w-[80vw] md:w-[90vw] z-[10000]">
-          <div className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8">
+        <Modal>
+          <div className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8 2xl:w-[50vw]">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
             <div className="flex flex-col items-center justify-center gap-8">
-              <img
-                src={image}
-                alt={title}
-                className="w-[340px] h-[280px] xl:w-[340px] xl:max-h-[280px] object-cover shadow-2xl"
-              />
+              <img src={image} alt={title} className="w-[180px] md:w-auto max-h-[420px] object-cover shadow-2xl" />
               <TitleH3 textTransform="uppercase" fontSize="text-xl" color="text-dark">
                 {title}
               </TitleH3>

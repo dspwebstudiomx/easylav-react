@@ -88,25 +88,25 @@ const NuestrasSucursales = () => {
         </div>
 
         {/* Carrusel TailwindCSS */}
-        <div className="relative w-full mt-20 px-4 md:px-12 xl:px-32">
-          <div className="flex items-center justify-center gap-8 w-full">
+        <div className="relative w-full mt-20 px-4 md:px-16">
+          <div className="flex items-center justify-center md:gap-0 w-full">
             {getVisibleSlides().map((localservice) => (
               <div
                 key={localservice.id}
-                className="transition-all duration-500 ease-in-out w-full max-w-[350px] flex-shrink-0 px-6">
+                className="transition-all duration-500 ease-in-out w-full max-w-[310px] flex-shrink-0 px-7 mx-auto">
                 <SucursalCard {...localservice} disableZoom={true} />
               </div>
             ))}
           </div>
           {/* Botones navegación */}
           <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+            className="hidden absolute left-0 top-1/2 -translate-y-1/2 p-0 sm:flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
             onClick={prevSlide}
             aria-label="Anterior">
             <MdArrowBack className="text-2xl" />
           </button>
           <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+            className="hidden absolute right-0 top-1/2 -translate-y-1/2 p-0 sm:flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light -mr-2"
             onClick={nextSlide}
             aria-label="Siguiente">
             <MdArrowForward className="text-2xl" />
