@@ -6,6 +6,7 @@ import {
   ParagraphContainer,
   Section,
   TitleContainer,
+  TitleH2,
   TitleH3,
   TwoColumnsContainer,
 } from 'components';
@@ -84,7 +85,7 @@ ValorTarjeta.propTypes = {
 
 const NuestrosValoresGeneradorTarjetas = () => {
   return (
-    <article id="tarjetas-valores" className="mt-6">
+    <article id="tarjetas-valores" className="mt-6 w-full">
       <FourColumnnsContainer>
         {valores.map((valor) => {
           return <ValorTarjeta key={valor.id} valor={valor} />;
@@ -187,12 +188,13 @@ const QuienesSomos = () => {
           {/* Misión & Visión */}
 
           {/* Nuestros Valores */}
-          <Card>
+          <div className="w-full mt-32">
             <BorderLeft>
-              <h3 className="text-2xl font-semibold uppercase text-dark">Nuestros Valores</h3>
+              <TitleH2 className="text-2xl font-semibold uppercase text-dark">Nuestros Valores</TitleH2>
             </BorderLeft>
             <NuestrosValoresGeneradorTarjetas />
-          </Card>
+          </div>
+
           {/* Nuestros Valores */}
 
           {/* Servicios */}
