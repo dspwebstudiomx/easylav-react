@@ -162,7 +162,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[270px] md:w-[280px] xl:w-[280px] dark:border-4 dark:border-secondary_dark',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[270px] md:w-[275px] dark:border-4 dark:border-secondary_dark',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
