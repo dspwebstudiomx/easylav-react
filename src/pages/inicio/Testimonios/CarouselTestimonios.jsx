@@ -83,6 +83,17 @@ const CarouselTestimonios = () => {
               <MdArrowForward className="text-2xl" />
             </button>
           </div>
+          {/* Indicadores adaptados del carousel de sucursales */}
+          <div className="flex justify-center mt-12 gap-2">
+            {testimonios.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark' : 'bg-primary_light dark:bg-secondary_light'}`}
+                onClick={() => setCurrent(idx)}
+                aria-label={`Ir al testimonio ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
