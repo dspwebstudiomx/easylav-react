@@ -14,7 +14,7 @@
 */
 
 // Importaciones
-import { CentroGuadalajara, leon_card as leon, catedral_morelia_card as morelia } from 'assets';
+import { leon_card as leon, catedral_morelia_card as morelia } from 'assets';
 import { BackgroundCard, Banner, PageLayout, SEOFriendly, TitleH1 } from 'components';
 import { scrollToTop } from 'functions';
 
@@ -33,8 +33,8 @@ const Sucursales = () => {
     (currentMonth === 1 && currentDay === 1);
 
   // Constante para width y height iguales
-  const cardWidth = 'w-[320px] 2xl:w-[400px]';
-  const cardHeight = 'h-[210px] 2xl:h-[260px]';
+  const cardWidth = 'w-[260px] md:w-[300px] 2xl:w-[400px]';
+  const cardHeight = 'h-[180px] md:h-[210px] 2xl:h-[260px]';
 
   return (
     <>
@@ -66,7 +66,7 @@ const Sucursales = () => {
               <strong className="text-primary_darkcontrast text-2xl">¡Gracias por tu comprensión!</strong>
             </Banner>
           )}
-          <article className="flex flex-col sm:flex-row gap-8 items-center justify-center mx-auto w-auto h-auto">
+          <article className="grid sm:grid-cols-2 gap-8 sm:gap-12 items-center justify-center mx-auto w-full h-auto">
             <BackgroundCard
               image={morelia}
               title="Morelia"
@@ -86,15 +86,7 @@ const Sucursales = () => {
               height={cardHeight}
               alt="Tarjeta con la imagen del centro de León"
             />
-            <BackgroundCard
-              image={CentroGuadalajara}
-              title="Guadalajara"
-              href="/sucursales/guadalajara"
-              rounded="rounded-lg"
-              width={cardWidth}
-              height={cardHeight}
-              alt="Tarjeta con la imagen del centro de Guadalajara"
-            />
+            {/* <BackgroundCard image={CentroGuadalajara} title="Guadalajara" href="/sucursales/guadalajara" rounded="rounded-lg"  width={cardWidth} height={cardHeight} alt="Tarjeta con la imagen del centro de Guadalajara"/> */}
           </article>
         </div>
       </PageLayout>
