@@ -42,16 +42,12 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
   };
   const ContentCards = () => {
     return (
-      <Section
-        id="sucursales-morelia"
-        className={'flex flex-col items-center justify-center gap-6'}
-        height={'h-full'}
-        backgroundColor={'bg-light'}>
-        <Container className={'mx-auto'}>
+      <Section id={`sucursales-${city}`} className={''} height={'h-full'} backgroundColor={'bg-light'}>
+        <Container>
           {city ? (
-            <>
+            <div className="w-full h-full flex flex-col items-center justify-start gap-24">
               <SucursalCardPerCity city={city} />
-              <ButtonContainer position="items-center justify-center w-full" distance="mt-16">
+              <ButtonContainer position="items-center justify-center w-full" distance="">
                 <Button
                   title="Regresar a sucursales"
                   href="/sucursales"
@@ -62,13 +58,11 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
                   variant="primary"
                 />
               </ButtonContainer>
-            </>
+              <Contacto />
+            </div>
           ) : (
             <p className="text-center text-dark text-lg font-medium">No hay sucursales</p>
           )}
-          <div className="mt-32">
-            <Contacto />
-          </div>
         </Container>
       </Section>
     );
