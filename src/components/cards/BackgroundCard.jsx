@@ -29,6 +29,7 @@ const BackgroundCard = ({ id, title, image, href, rounded, height, width, classN
         width={width}
         title={`Ciudad de ${title}`}
         alt={alt}
+        to={href}
         className={`flex justify-center items-center ${className}`}>
         <h2 className="text-light uppercase text-2xl font-semibold tracking-wide">{title}</h2>
       </BackgroundImageSection>

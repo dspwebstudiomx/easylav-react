@@ -20,9 +20,9 @@ const PageLayout = ({ children, id }) => {
   return (
     <main
       id={id}
-      className="w-full h-full dark:bg-dark mt-0 md:mt-[60px] xl:mt-0 min-h-[53.7vh] flex flex-col justify-center items-center dark:text-light">
+      className="w-full h-full dark:bg-dark mt-0 md:mt-[60px] 2xl:mt-0 min-h-[53.7vh] flex flex-col justify-center items-center dark:text-light">
       <Section>
-        <Container className="">{children}</Container>
+        <Container>{children}</Container>
       </Section>
     </main>
   );

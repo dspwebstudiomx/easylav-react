@@ -14,7 +14,7 @@ export default function Section({ id, children, backgroundColor, height, classNa
   return (
     <section
       id={id}
-      className={`block p-12 px-8 sm:p-20 2xl:py-32 dark:bg-dark mx-auto ${backgroundColor} ${height} ${className}`}>
+      className={`block p-12 px-8 sm:p-20 2xl:pb-32 2xl:pt-32 dark:bg-dark mx-auto ${backgroundColor} ${height} ${className}`}>
       {children}
     </section>
   );

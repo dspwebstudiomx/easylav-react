@@ -1,5 +1,6 @@
 import { Container } from 'components';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const BackgroundImageSection = ({
   id,
@@ -18,10 +19,14 @@ const BackgroundImageSection = ({
   rounded,
   alt,
   title,
+  to,
 }) => {
   return (
-    <div
+    <Link
+      to={to}
+      alt={alt}
       id={id}
+      title={title}
       className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} w-full`}>
       {/* Background Image */}
       <img
@@ -32,11 +37,9 @@ const BackgroundImageSection = ({
           ${image_768} 768w,
           ${image_1024} 1024w,
           ${image_1200} 1200w,
-          ${image_1920} 1920w,
-                      `}
-        alt={alt}
+          ${image_1920} 1920w
+        `}
         className={`absolute inset-0 -z-50 h-full w-full object-cover overflow-hidden ${image} ${height} ${width}`}
-        title={title}
       />
       {/* Background Image */}
 
@@ -47,7 +50,7 @@ const BackgroundImageSection = ({
       {/* Container */}
       <Container className="text-center">{children}</Container>
       {/* Container */}
-    </div>
+    </Link>
   );
 };
 BackgroundImageSection.propTypes = {
@@ -67,5 +70,6 @@ BackgroundImageSection.propTypes = {
   width: PropTypes.string,
   alt: PropTypes.string,
   title: PropTypes.string,
+  to: PropTypes.string,
 };
 export default BackgroundImageSection;
