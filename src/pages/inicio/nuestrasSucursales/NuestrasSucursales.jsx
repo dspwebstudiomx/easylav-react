@@ -113,11 +113,11 @@ const NuestrasSucursales = () => {
           </button>
         </div>
         {/* Indicadores */}
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-12 gap-2">
           {sortedLocalServices.map((_, idx) => (
             <button
               key={idx}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark' : 'bg-primary_light dark:bg-secondary_light'}`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark' : 'bg-primary_light border border-primary_dark dark:bg-secondary_light'}`}
               onClick={() => setCurrent(idx)}
               aria-label={`Ir a la sucursal ${idx + 1}`}
             />
