@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ContactInfo = () => {
   return (
     <section className="animate__animated animate__bounceInLeft animate__slowest grid dark:bg-dark">
-      <div className="mb-12">
+      <div className="mb-0">
         <TitleH2>¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.</TitleH2>
       </div>
       <ParagraphContainer>
@@ -40,7 +40,7 @@ const ContactInfo = () => {
         </Paragraph>
       </ParagraphContainer>
       <div className="mx-auto my-16  md:mb-0 lg:ml-0 2xl:mt-12 overflow-hidden">
-        <SocialLinks color={'text-secondary dark:text-primary'} size={54} gap={'gap-4'} />
+        <SocialLinks color={'text-secondary dark:text-primary'} size={60} gap={'gap-8'} />
       </div>
     </section>
   );

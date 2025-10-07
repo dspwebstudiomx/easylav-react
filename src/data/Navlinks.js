@@ -4,7 +4,7 @@ const navLinksSections = [
   {
     id: 1,
     name: 'Inicio',
-    href: '/#inicio',
+    href: '/',
     icon: GrHome,
     linkId: 'inicio',
     alt: 'Inicio',

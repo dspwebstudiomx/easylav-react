@@ -71,7 +71,7 @@ const PreguntasFrecuentes = () => {
           variant="secondary"
           type="button"
           href={'/#inicio'}
-          title={'Inicio'}
+          title={'Ir a Inicio'}
           icon={<FaHome />}
           width={'w-[250px]'}
           name="Ir a inicio"

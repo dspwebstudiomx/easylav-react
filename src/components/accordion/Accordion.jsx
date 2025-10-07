@@ -45,7 +45,7 @@ const Accordion = ({ children, question, height, isOpen, onToggle }) => {
       {/* Contenido del acordeón */}
       {isOpen && (
         <div
-          className={`w-full pl-8 duration-200 ease-in-out bg-primary_light text-dark ${
+          className={`w-full pl-8 duration-200 ease-in-out bg-primary_light/35 border-2 border-primary_dark text-dark ${
             isOpen
               ? 'block rounded-b-2xl border-l-2 border-l-primary border-b-2 border-b-primary border-r-2 border-r-primary mx-auto h-full pb-8'
               : 'hidden'

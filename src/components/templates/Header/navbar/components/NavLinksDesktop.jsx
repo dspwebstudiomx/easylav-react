@@ -52,7 +52,8 @@ const NavLinksDesktop = () => {
             to={navlink.href}
             scroll={scrollWithOffset}
             title={`Ir a ${navlink.linkId}`}
-            alt={navlink.alt}>
+            alt={navlink.alt}
+            onClick={navlink.name === 'Inicio' ? scrollToTop : undefined}>
             {navlink.name}
           </NavHashLink>
         );
@@ -69,7 +70,7 @@ const NavLinksDesktop = () => {
             title={`Ir a ${navlink.linkId}`}
             alt={navlink.alt}
             onClick={() => {
-              scrollToTop();
+              if (navlink.name === 'Inicio') scrollToTop();
             }}>
             {navlink.name}
           </NavLink>

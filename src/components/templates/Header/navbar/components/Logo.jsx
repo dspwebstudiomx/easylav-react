@@ -1,12 +1,16 @@
 // Importaciones
 import { LogoHorizontalColor } from 'assets';
-import { scrollWithOffset } from 'functions';
-import { NavHashLink } from 'react-router-hash-link';
+import { scrollToTop } from 'functions';
+import { NavLink } from 'react-router-dom';
 
 // Estructura
+
 const Logo = () => {
+  const handleClick = () => {
+    scrollToTop();
+  };
   return (
-    <NavHashLink to={'/#inicio'} scroll={scrollWithOffset}>
+    <NavLink to={'/'} onClick={handleClick}>
       <img
         alt="logo easylav a color"
         src={LogoHorizontalColor}
@@ -14,7 +18,7 @@ const Logo = () => {
         title="logo easylav a color"
         aria-label="logo easylav"
       />
-    </NavHashLink>
+    </NavLink>
   );
 };
 

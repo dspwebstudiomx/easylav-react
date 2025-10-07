@@ -286,7 +286,8 @@ const ProgramasDeLealtad = () => {
                 <span>
                   Cada vez que uses nuestros servicios, acumulas puntos que puedes canjear por productos o usos de
                   máquinas. Además, como cliente fiel, participas en nuestra tómbola especial, donde puedes ganar
-                  sorpresas y hasta servicios gratis. ¡Únete y deja que te sorprendamos mientras lavas con nosotros!
+                  sorpresas y hasta servicios gratis.{' '}
+                  <strong>¡Únete y deja que te sorprendamos mientras lavas con nosotros!</strong>
                 </span>
               </div>
             </Paragraph>

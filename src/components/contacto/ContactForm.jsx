@@ -78,7 +78,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                 <Field
                   id="user_name"
                   name="user_name"
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-4 outline-none"
                   type="text"
                   required
                 />
@@ -93,7 +93,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                   Ciudad<span className="text-required ml-1">*</span>
                 </label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-4 outline-none"
                   id="user_city"
                   name="user_city"
                   required
@@ -105,13 +105,13 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                 )}
               </div>
             </div>
-            <div className="flex flex-wrap justify-between gap-2">
+            <div className="flex flex-wrap justify-between gap-4">
               <div id="formField_email" className="flex flex-col sm:w-[50%] md:w-full w-full">
                 <label htmlFor="user_email" className="mb-2 text-sm">
                   Correo Electrónico<span className="text-required ml-1">*</span>
                 </label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 bg-slate-200 border-2 border-secondary dark:border-primary p-4 outline-none"
                   id="user_email"
                   name="user_email"
                   type="email"
@@ -128,7 +128,7 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                   Número Telefónico<span className="text-required ml-1">*</span>
                 </label>
                 <Field
-                  className="rounded-md bg-light text-slate-900 border-2 border-secondary dark:border-primary p-2 outline-none"
+                  className="rounded-md bg-light text-slate-900 border-2 border-secondary dark:border-primary p-4 outline-none"
                   type="text"
                   name="user_phone"
                   id="user_phone"
@@ -149,7 +149,8 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
                 as="textarea"
                 name="message"
                 id="message"
-                className="rounded-md bg-light text-slate-900 bg-slate-200 p-2 border-2 border-secondary dark:border-primary h-40 min-h-40 max-h-40 2xl:max-h-28 2xl:min-h-28 outline-none"
+                rows="8"
+                className="rounded-md bg-light text-slate-900 bg-slate-200 p-4 border-2 border-secondary dark:border-primary  outline-none"
                 required
               />
               {touched.message && errors.message && <p className="mt-2 text-required text-xs">* {errors.message}</p>}
