@@ -67,7 +67,7 @@ const CarouselTestimonios = () => {
           <div className="flex items-center justify-center w-full gap-2">
             <button
               onClick={prevSlide}
-              className="p-0 flex items-center justify-center w-14 h-14 text-center bg-primary w-50 h-50 rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+              className="p-0 flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary w-50 h-50 rounded-full shadow-lg hover:bg-gray-100 transition border border-primary_dark dark:bg-secondary dark:border-light dark:text-light"
               aria-label="Anterior">
               <MdArrowBack className="text-2xl" />
             </button>
@@ -78,7 +78,7 @@ const CarouselTestimonios = () => {
             </div>
             <button
               onClick={nextSlide}
-              className="p-0 flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+              className="p-0 flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-primary_dark dark:bg-secondary dark:border-light dark:text-light"
               aria-label="Siguiente">
               <MdArrowForward className="text-2xl" />
             </button>
@@ -88,7 +88,7 @@ const CarouselTestimonios = () => {
             {testimonios.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark' : 'bg-primary_light dark:bg-secondary_light'}`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark scale-90' : 'bg-primary_light border border-primary_dark dark:bg-secondary_light'}`}
                 onClick={() => setCurrent(idx)}
                 aria-label={`Ir al testimonio ${idx + 1}`}
               />
