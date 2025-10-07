@@ -70,7 +70,7 @@ const HeroInicioVideo = ({ height }) => {
           soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
           prendas luzcan siempre de la mejor manera.
         </h1>
-        <ButtonContainer position={'items-center sm:items-left'}>
+        <ButtonContainer position={'items-center sm:items-left'} distance="mt-16">
           <Button title="Nuestros servicios" href="/#servicios" width={'w-full sm:w-[260px]'} variant="secondary" />
         </ButtonContainer>
       </Container>
