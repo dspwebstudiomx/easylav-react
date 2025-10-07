@@ -1,6 +1,7 @@
 // Importaciones
 import { Container, Paragraph, ParagraphContainer, Section, TitleContainer, TwoColumnsContainer } from 'components';
 import { FaCheck } from 'react-icons/fa6';
+import { FaLayerGroup, FaClock, FaTshirt } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 // Constantes Internas
@@ -26,12 +27,20 @@ const recomendaciones = [
 ];
 
 // Componente para cada recomendación
+const getIconByTitle = (title) => {
+  if (title.toLowerCase().includes('separar')) return FaLayerGroup;
+  if (title.toLowerCase().includes('tiempo de secado')) return FaClock;
+  if (title.toLowerCase().includes('prendas especiales')) return FaTshirt;
+  return FaCheck;
+};
+
 const Recomendacion = ({ title, description }) => {
+  const Icon = getIconByTitle(title);
   return (
-    <li className="">
+    <li className="py-4">
       <TwoColumnsContainer>
-        <div className="flex  gap-6 w-full text-dark dark:text-light">
-          <FaCheck size={32} className="text-secondary_dark dark:text-primary" />
+        <div className="flex gap-6 w-full text-dark dark:text-light">
+          <Icon size={46} className="text-secondary_dark dark:text-primary" />
           <span className="font-semibold block text-xl uppercase">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
@@ -51,7 +60,7 @@ const Recomendaciones = () => {
             <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
           </ParagraphContainer>
         </div>
-        <ul id="listado-de-recomendaciones" className="flex flex-col gap-14 items-start justify-start w-full mt-12">
+        <ul id="listado-de-recomendaciones" className="flex flex-col gap-14 items-start justify-start w-full my-16">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
           ))}

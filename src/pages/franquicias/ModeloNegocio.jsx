@@ -21,7 +21,7 @@ import {
   TwoColumnsContainer,
 } from 'components';
 import { memo } from 'react';
-import { FaCheck } from 'react-icons/fa6';
+import { FaCheck, FaKey, FaLock, FaCloud, FaMapMarkerAlt, FaUserGraduate, FaCogs } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 const recomendaciones = [
@@ -39,7 +39,7 @@ const recomendaciones = [
   },
   {
     id: 3,
-    title: 'Monitoreo en la nube: ',
+    title: 'Monitoreo en la nube ',
     description:
       'Si lo deseas, los cortes de caja por turno o diarios pueden subirse a la nube, permitiéndote supervisar el rendimiento de tu negocio en cualquier momento y desde cualquier lugar.',
   },
@@ -67,12 +67,23 @@ const factores_clave = [
 ];
 
 // Componente para cada recomendación
+const getIconByTitle = (title) => {
+  if (title.includes('llave en mano')) return FaKey;
+  if (title.includes('automatizado')) return FaLock;
+  if (title.includes('nube')) return FaCloud;
+  if (title.includes('Ubicación')) return FaMapMarkerAlt;
+  if (title.includes('Capacitación')) return FaUserGraduate;
+  if (title.includes('Control eficiente')) return FaCogs;
+  return FaCheck;
+};
+
 const Recomendacion = ({ title, description }) => {
+  const Icon = getIconByTitle(title);
   return (
     <li className="">
       <TwoColumnsContainer>
-        <div className="flex  gap-6 w-full text-dark dark:text-light">
-          <FaCheck size={32} className="text-secondary_dark dark:text-primary" />
+        <div className="flex gap-6 w-full text-dark dark:text-light">
+          <Icon size={42} className="text-secondary_dark dark:text-primary" />
           <span className="font-semibold block text-2xl">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>

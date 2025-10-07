@@ -12,7 +12,6 @@
   Fecha: 2025-04-01
   Descripción: Refactoriza el componente PageLayoutPlaces para mejorar la estructura del código y la legibilidad, separando el banner y las tarjetas de contenido en componentes independientes.
   ----------------------
-
 */
 
 // Importaciones
@@ -30,7 +29,7 @@ const PageLayoutPlaces = ({ city, image_576, image_1024, image_1200, image_1920 
         image_1024={image_1024}
         image_1200={image_1200}
         image_1920={image_1920}
-        height="h-[210px] sm:h-[30vh] lg:h-[40vh] xl:h-[35vh]"
+        height="h-[210px] sm:h-[30vh] lg:h-[40vh] xl:h-[45vh]"
         opacity="opacity-40"
         backgroundColor="bg-dark"
         className="flex justify-center items-center"

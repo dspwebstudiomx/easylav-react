@@ -28,12 +28,10 @@
 
 // Importaciones
 import { VistaDentroLavanderia_640 as image } from 'assets';
-import { SEOFriendly, HomeLayout, Loading } from 'components';
-import { lazy, Suspense } from 'react';
-
+import { SEOFriendly, HomeLayout } from 'components';
+import QuieresUnaFranquicia from 'pages/inicio/franquicias/QuieresUnaFranquicia';
+import ModeloNegocio from 'pages/franquicias/ModeloNegocio';
 // Constantes
-const QuieresUnaFranquicia = lazy(() => import('pages/inicio/franquicias/QuieresUnaFranquicia'));
-const ModeloNegocio = lazy(() => import('./ModeloNegocio'));
 
 // Estructura
 const Franquicias = () => {
@@ -54,12 +52,8 @@ const Franquicias = () => {
 
       {/* Layout principal */}
       <HomeLayout id="franquicias" className="dark:bg-dark">
-        <Suspense fallback={<Loading />}>
-          <QuieresUnaFranquicia />
-        </Suspense>
-        <Suspense fallback={<Loading />}>
-          <ModeloNegocio />
-        </Suspense>
+        <QuieresUnaFranquicia />
+        <ModeloNegocio />
       </HomeLayout>
     </>
   );

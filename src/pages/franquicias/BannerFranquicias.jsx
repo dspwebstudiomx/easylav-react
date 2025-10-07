@@ -3,7 +3,7 @@ import { ButtonPrimary } from 'components';
 const BannerFranquicias = () => {
   return (
     <section className="bg-secondary_dark text-light px-8 dark:bg-primary_dark">
-      <article className="mx-auto max-w-screen-md px-4 py-32 lg:flex lg:h-2xl lg:items-center">
+      <article className="mx-auto max-w-screen-md px-4 py-32 lg:flex lg:h-2xl">
         <div className="mx-auto text-center">
           {/* Title */}
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
