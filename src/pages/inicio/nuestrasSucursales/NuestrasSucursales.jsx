@@ -100,13 +100,13 @@ const NuestrasSucursales = () => {
           </div>
           {/* Botones navegación */}
           <button
-            className="hidden absolute left-0 top-1/2 -translate-y-1/2 p-0 sm:flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
+            className="hidden absolute left-0 top-1/2 -translate-y-1/2 p-0 sm:flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light"
             onClick={prevSlide}
             aria-label="Anterior">
             <MdArrowBack className="text-2xl" />
           </button>
           <button
-            className="hidden absolute right-0 top-1/2 -translate-y-1/2 p-0 sm:flex items-center justify-center w-14 h-14 text-center bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light -mr-2"
+            className="hidden absolute right-0 top-1/2 -translate-y-1/2 p-0 sm:flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary rounded-full shadow-lg hover:bg-gray-100 transition border border-gray-300 dark:bg-secondary dark:border-light dark:text-light -mr-2"
             onClick={nextSlide}
             aria-label="Siguiente">
             <MdArrowForward className="text-2xl" />
