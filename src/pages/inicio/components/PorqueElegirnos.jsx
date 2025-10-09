@@ -41,9 +41,7 @@ export default function PorqueElegirnos() {
           {/* Listado */}
 
           {/* Imagen */}
-          <div
-            id="porque-elegirnos-contenedor-imagen"
-            className="w-full h-full flex items-end justify-end sm:items-end sm:justify-end md:items-center md:justify-center lg:items-end lg:justify-center">
+          <div id="porque-elegirnos-contenedor-imagen" className="w-full h-full flex items-end justify-end">
             <ImageResponsive
               src={img}
               imageAlt={'Mujer señalando hacia las características de la empresa'}
@@ -51,7 +49,7 @@ export default function PorqueElegirnos() {
               image_640={img}
               image_1024={img}
               image_1920={img}
-              width="w-full sm:w-1/2 md:2/3 lg:w-full"
+              width="w-full sm:w-1/2 lg:w-full hidden lg:block"
             />
           </div>
           {/* Imagen */}
