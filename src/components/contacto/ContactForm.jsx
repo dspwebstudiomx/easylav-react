@@ -158,10 +158,10 @@ const ContactForm = ({ setShowModal, setShowErrorModal, onReset }) => {
             {/* Fields */}
 
             {/* Submit Button */}
-            <div className="flex flex-col gap-4 mt-5">
+            <div className="flex flex-col md:flex-row gap-4 mt-5">
               <Button width="w-full" type="submit" variant="primary" title="Enviar" icon={<FaEnvelope />} />
               <Button
-                width="w-fullo"
+                width="w-full"
                 title="Reiniciar"
                 type="button"
                 variant="secondary"
