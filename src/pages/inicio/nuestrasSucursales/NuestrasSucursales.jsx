@@ -12,7 +12,7 @@
 // Importaciones
 import { useState, useEffect } from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
-import { Container, Section, SucursalCard, TitleContainer, TitleH2 } from 'components';
+import { BorderLeft, Container, Section, SucursalCard, TitleH2 } from 'components';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
 // ...existing code...
@@ -78,13 +78,13 @@ const NuestrasSucursales = () => {
 
   return (
     <Section className="dark:bg-dark py-12">
-      <Container className="flex flex-col items-center justify-center w-full px-0 mx-auto ">
+      <Container className="flex flex-col items-center justify-center w-full mx-auto ">
         {/* Títulos */}
-        <div className="md:hidden">
-          <TitleContainer title="Nuestras Sucursales" />
-        </div>
-        <div className="hidden md:block mx-auto">
-          <TitleH2>Nuestras Sucursales</TitleH2>
+
+        <div className="w-2/3 ml-12 sm:ml-8 md:mx-auto md:ml-20">
+          <BorderLeft>
+            <TitleH2>Nuestras Sucursales</TitleH2>
+          </BorderLeft>
         </div>
 
         {/* Carrusel TailwindCSS */}
