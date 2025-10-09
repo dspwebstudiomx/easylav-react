@@ -46,6 +46,32 @@ const CarouselTestimonios = () => {
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? maxIndex : prev - 1));
   const nextSlide = () => setCurrent((prev) => (prev >= maxIndex ? 0 : prev + 1));
 
+  // Swipe touch logic
+  const touchStartX = React.useRef(null);
+  const touchEndX = React.useRef(null);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const distance = touchStartX.current - touchEndX.current;
+      if (Math.abs(distance) > 50) {
+        // umbral mínimo para swipe
+        if (distance > 0) {
+          nextSlide(); // swipe izquierda
+        } else {
+          prevSlide(); // swipe derecha
+        }
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   // Autoplay: avanzar cada 5 segundos
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -64,21 +90,25 @@ const CarouselTestimonios = () => {
       <Container>
         <div className="relative w-full flex flex-col items-center py-8">
           {/* Botones de desplazamiento arriba y centrados */}
-          <div className="flex items-center justify-center w-full gap-2">
+          <div className="flex items-center justify-center w-full sm:gap-2">
             <button
               onClick={prevSlide}
-              className="p-0 flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary hover:bg-primary_dark w-50 h-50 rounded-full shadow-lg hover:bg-gray-100 transition border border-primary_dark dark:bg-secondary dark:border-light dark:text-light"
+              className="hidden p-0 sm:flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary hover:bg-primary_dark w-50 h-50 rounded-full shadow-lg hover:bg-gray-100 transition border border-primary_dark dark:bg-secondary dark:border-light dark:text-light"
               aria-label="Anterior">
               <MdArrowBack className="text-2xl" />
             </button>
-            <div className="flex flex-row justify-center items-stretch gap-6 w-full px-8">
+            <div
+              className="flex flex-row justify-center items-stretch gap-6 w-full px-8"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}>
               {visibles.map((testimonio, idx) => (
                 <Testimonio key={testimonio.id || idx} testimonio={testimonio} />
               ))}
             </div>
             <button
               onClick={nextSlide}
-              className="p-0 flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary hover:bg-primary_dark rounded-full shadow-lg hover:bg-gray-100 transition border border-primary_dark dark:bg-secondary dark:border-light dark:text-light"
+              className="hidden p-0 sm:flex items-center justify-center w-14 h-14 text-center text-primary_light bg-primary hover:bg-primary_dark rounded-full shadow-lg hover:bg-gray-100 transition border border-primary_dark dark:bg-secondary dark:border-light dark:text-light"
               aria-label="Siguiente">
               <MdArrowForward className="text-2xl" />
             </button>
@@ -88,7 +118,7 @@ const CarouselTestimonios = () => {
             {testimonios.map((_, idx) => (
               <button
                 key={idx}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark scale-90' : 'bg-primary_light border border-primary_dark dark:bg-secondary_light'}`}
+                className={`flex w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark scale-90' : 'bg-primary_light border border-primary_dark dark:bg-secondary_light'}`}
                 onClick={() => setCurrent(idx)}
                 aria-label={`Ir al testimonio ${idx + 1}`}
               />

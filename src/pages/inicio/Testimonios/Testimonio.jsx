@@ -19,7 +19,7 @@ const Testimonio = ({ testimonio }) => {
   return (
     <article
       id={`testimonio-${testimonio.nombre}`}
-      className="pt-8 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-xl h-[360px] sm:h-[300px] w-[80%] sm:w-full shadow-xl mx-auto "
+      className="pt-12 pb-2 px-8 flex flex-col justify-between bg-light text-dark rounded-xl h-[340px] sm:h-[300px] w-full shadow-xl mx-auto "
       key={TESTIMONY_ID}>
       {/* Testimonio */}
       <p id={`testimonio-parrafo-${PERSON_NAME_TESTIMONY}`} className="text-pretty text-lg">
