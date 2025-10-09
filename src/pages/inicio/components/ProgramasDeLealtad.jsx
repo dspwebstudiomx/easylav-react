@@ -9,7 +9,6 @@ import {
 } from 'components';
 import { useState } from 'react';
 import TarjetaBeneficios from './TarjetaBeneficios';
-
 // import { FaRegEye } from 'react-icons/fa6';
 
 const ProgramasDeLealtad = () => {
