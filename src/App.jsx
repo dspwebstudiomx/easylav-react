@@ -1,11 +1,12 @@
 // Importaciones
 import PoliticaCookies from 'pages/politica-cookies/PoliticaCookies';
 import { Footer, Header, ScrollToTopButton } from 'components';
-import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import '../node_modules/animate.css/animate.css';
 import './App.css';
-import Loading from './components/Loading';
+// import Loading from './components/Loading';
 
 // Carga diferida de las páginas
 const Inicio = lazy(() => import('pages/inicio/Inicio'));
@@ -49,26 +50,26 @@ export default function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/contacto/" element={<ContactoPagina />} />
-          <Route path="/sucursales/" element={<Sucursales />} />
-          <Route path="/politica-privacidad/" element={<PoliticaPrivacidad />} />
-          <Route path="/politica-cookies/" element={<PoliticaCookies />} />
-          <Route path="/franquicias/" element={<Franquicias />} />
-          <Route path="/terminos-condiciones/" element={<TerminosCondiciones />} />
-          <Route path="/preguntas-frecuentes/" element={<PreguntasFrecuentesPage />} />
-          <Route path="/facturacion/" element={<Facturacion />} />
-          <Route path="/guia-estilos/" element={<GuiaEstilos />} />
-          <Route path="/sucursales/morelia" element={<Morelia />} />
-          <Route path="/sucursales/leon" element={<Leon />} />
-          <Route path="/sucursales/guadalajara" element={<Guadalajara />} />
-          <Route path="/usos-y-beneficios" element={<UsosBeneficios />} />
-          <Route path="/test/" element={<Test />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      {/* <Suspense fallback={<Loading />}> */}
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/contacto/" element={<ContactoPagina />} />
+        <Route path="/sucursales/" element={<Sucursales />} />
+        <Route path="/politica-privacidad/" element={<PoliticaPrivacidad />} />
+        <Route path="/politica-cookies/" element={<PoliticaCookies />} />
+        <Route path="/franquicias/" element={<Franquicias />} />
+        <Route path="/terminos-condiciones/" element={<TerminosCondiciones />} />
+        <Route path="/preguntas-frecuentes/" element={<PreguntasFrecuentesPage />} />
+        <Route path="/facturacion/" element={<Facturacion />} />
+        <Route path="/guia-estilos/" element={<GuiaEstilos />} />
+        <Route path="/sucursales/morelia" element={<Morelia />} />
+        <Route path="/sucursales/leon" element={<Leon />} />
+        <Route path="/sucursales/guadalajara" element={<Guadalajara />} />
+        <Route path="/usos-y-condiciones" element={<UsosBeneficios />} />
+        <Route path="/test/" element={<Test />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      {/* </Suspense> */}
       <Footer />
       <ScrollToTopButton />
     </BrowserRouter>

@@ -27,7 +27,7 @@ export const frequentQuestions = [
         <p>
           Nuestros horarios son de 7:00am a 9:30 pm, toda la semana. (El último horario de lavado nocturno es a las 8:00
           pm para que alcanzar el ciclo de lavado y poder entregar antes de las 9:30 pm) <br />
-          <br /> Días festivos abrimos de 7:00 am y cerramos a las 6:00 pm.
+          <br /> Días festivos abrimos de 7:00 am y cerramos a las 6:00 pm.src/data/frequentQuestions.jsx
         </p>
         <br />
         <p>

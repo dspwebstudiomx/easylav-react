@@ -97,6 +97,7 @@ export const localservices = [
     city: 'Morelia',
     email: 'maderooriente@easylav.mx',
     titleMailto: 'Enviar correo a sucursal Madero Oriente',
+    advertisement: 'No aplica Recompensas',
     badge: '',
     image: madero,
   },

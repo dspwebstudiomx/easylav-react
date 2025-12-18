@@ -1,6 +1,5 @@
 // Importaciones
 import { Container, Paragraph, ParagraphContainer, Section, TitleContainer, TwoColumnsContainer } from 'components';
-import { FaCheck } from 'react-icons/fa6';
 import { FaLayerGroup, FaClock, FaTshirt } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
@@ -11,37 +10,31 @@ const recomendaciones = [
     title: 'Separar las prendas',
     description:
       'Por color, tamaño, tipo de tejido y nivel de suciedad. Esto evita decoloraciones y protege las telas más delicadas.',
+    icon: FaLayerGroup,
   },
   {
     id: 2,
     title: 'Considerar el tiempo de secado ',
     description:
       'Para ciertas prendas. Las toallas y los pantalones de mezclilla absorben mucha agua, por lo que en algunos casos podría ser necesario un tiempo extra de secado.',
+    icon: FaClock,
   },
   {
     id: 3,
     title: 'Secado adecuado para prendas especiales. ',
     description:
       'Algunas telas no quedan completamente secas con el ciclo regular. En estos casos, es mejor dejarlas secar al aire libre para evitar daños al exponerlas a un nuevo ciclo de calor.',
+    icon: FaTshirt,
   },
 ];
 
-// Componente para cada recomendación
-const getIconByTitle = (title) => {
-  if (title.toLowerCase().includes('separar')) return FaLayerGroup;
-  if (title.toLowerCase().includes('tiempo de secado')) return FaClock;
-  if (title.toLowerCase().includes('prendas especiales')) return FaTshirt;
-  return FaCheck;
-};
-
-const Recomendacion = ({ title, description }) => {
-  const Icon = getIconByTitle(title);
+const Recomendacion = ({ title, description, icon: Icon }) => {
   return (
     <li className="py-4">
       <TwoColumnsContainer>
-        <div className="flex gap-6 w-full text-dark dark:text-light">
-          <Icon size={46} className="text-secondary_dark dark:text-primary" />
-          <span className="font-semibold block text-xl uppercase">{title}</span>
+        <div className="flex gap-6 text-dark dark:text-light w-full items-center">
+          <Icon className="text-secondary_dark dark:text-primary w-12 h-12" />
+          <span className="font-semibold block text-base md:text-2xl uppercase">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
       </TwoColumnsContainer>
@@ -62,7 +55,12 @@ const Recomendaciones = () => {
         </div>
         <ul id="listado-de-recomendaciones" className="flex flex-col gap-14 items-start justify-start w-full my-16">
           {recomendaciones.map((recomendacion) => (
-            <Recomendacion key={recomendacion.id} title={recomendacion.title} description={recomendacion.description} />
+            <Recomendacion
+              key={recomendacion.id}
+              title={recomendacion.title}
+              icon={recomendacion.icon}
+              description={recomendacion.description}
+            />
           ))}
         </ul>
         <ParagraphContainer distance="gap-12">
@@ -92,4 +90,5 @@ export default Recomendaciones;
 Recomendacion.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  icon: PropTypes.elementType.isRequired,
 };
