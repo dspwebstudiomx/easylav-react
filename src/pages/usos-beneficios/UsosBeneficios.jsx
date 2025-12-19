@@ -21,6 +21,7 @@ import {
 import { Glosario } from './Glosario';
 import { RegistroPrograma } from './RegistroPrograma';
 import { Cuenta } from './Cuenta';
+import { UsoTarjetaFisica } from './UsoTarjetaFisica';
 
 // Estructura
 const TerminosCondiciones = () => {
@@ -84,6 +85,7 @@ const TerminosCondiciones = () => {
             <Glosario />
             <RegistroPrograma />
             <Cuenta />
+            <UsoTarjetaFisica />
             {/* Introducción */}
           </ParagraphContainer>
           <h4 className="text-center w-full mt-12">Última actualización: 24 de abril de 2025</h4>
