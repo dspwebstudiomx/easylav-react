@@ -25,6 +25,7 @@ import { UsoTarjetaFisica } from './UsoTarjetaFisica';
 import { CentroAtencion } from './CentroAtencion';
 import { MediosComunicacion } from './MediosComunicacion';
 import { Mecanicas } from './Mecanicas';
+import { VigenciaPuntos } from './VigenciaPuntos';
 
 // Estructura
 const TerminosCondiciones = () => {
@@ -92,6 +93,7 @@ const TerminosCondiciones = () => {
             <CentroAtencion />
             <MediosComunicacion />
             <Mecanicas />
+            <VigenciaPuntos />
             {/* Introducción */}
           </ParagraphContainer>
           <h4 className="text-center w-full mt-12">Última actualización: 24 de abril de 2025</h4>
