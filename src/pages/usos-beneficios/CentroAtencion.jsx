@@ -1,54 +1,26 @@
 import { Paragraph, ParagraphContainer } from 'components';
 
-export const RegistroPrograma = () => {
+export const CentroAtencion = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
         <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
-            2. REGISTRO AL PROGRAMA “TARJETA DE RECOMPENSA”.
-          </h2>
+          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">5. CENTRO DE ATENCIÓN.</h2>
         </Paragraph>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
-            2.1. Los canales actuales para registrarse al Programa son gratuitos y son los siguientes:
+            5.1. El Programa de “Tarjeta de Recompensa” pone a su disposición los siguientes medios de atención:
             <ul className="mt-6 ml-6 flex flex-col gap-4">
               <li>
-                a) En las sucursales de su preferencia es donde se le proporcionará la Tarjeta Física, sujeto a
-                disponibilidad. Dicha tarjeta deberá ser verificada para el uso de Puntos como método de pago siguiendo
-                el proceso que se establece en el rubro “USO DE LA TARJETA FÍSICA” de los presentes Términos y
-                Condiciones.
+                a) El WhatsApp 443 894 7493 de lunes a viernes de 7 a 21 horas, sábados, domingos, y días festivos de 8
+                a 20 horas, los 365 días del año para atender temas referentes a su registro, información general del
+                Programa, actualización de datos personales, aclaraciones y quejas.
               </li>
-              <li>b) A través de las Sucursales que tengan habilitado el registro en sus Canales de Venta.</li>
+              <li>
+                b) Redes sociales oficiales del Programa, para atender temas referentes a información general del
+                Programa de “Tarjeta de Recompensa”.
+              </li>
             </ul>{' '}
-          </Paragraph>
-          <Paragraph>
-            2.2. Al realizar su registro, se entiende que los Usuarios han leído y aceptan los presentes Términos y
-            Condiciones, así como el Aviso de Privacidad.
-          </Paragraph>
-          <Paragraph>
-            2.3. Para su registro al Programa, el Usuario deberá proporcionar los datos que se le soliciten de acuerdo
-            con el canal de registro, los cuales podrán ser:
-            <ul className="mt-6 ml-6 flex flex-col gap-4">
-              <li>a) Nombre.</li>
-              <li>b) Apellido Paterno y Materno</li>
-              <li>c) Número de teléfono celular.</li>
-              <li>d) Correo electrónico.</li>
-              <li>e) Fecha de nacimiento.</li>
-              <li>f) País y Estado de Nacimiento.</li>
-              <li>g) Género.</li>
-            </ul>
-          </Paragraph>
-          <Paragraph>
-            2.4. Impedimentos para su registro:
-            <ul className="mt-6 ml-6 flex flex-col gap-4">
-              <li>a) Ser menor de edad (-18 años).</li>
-              <li>
-                b) No proporcionar la información requerida para su registro o proporcionarla de forma incompleta o
-                incorrecta.
-              </li>
-              <li>c) Personas morales.</li>
-            </ul>
           </Paragraph>
         </div>
       </ParagraphContainer>
