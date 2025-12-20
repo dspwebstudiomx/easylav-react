@@ -16,7 +16,6 @@
     "animate.css": "^4.1.1",
     "classnames": "^2.5.1",
     "formik": "^2.4.6",
-    "lottie-react": "^2.4.0",
     "react": "19.2.3",
     "react-axios": "^2.0.6",
     "react-chatbotify": "^2.0.0-beta.3",

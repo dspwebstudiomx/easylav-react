@@ -12,10 +12,10 @@
 // Importaciones
 import { useState, useEffect } from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
-import { BorderLeft, Container, Section, SucursalCard, TitleH2 } from 'components';
+import { BorderLeft, Container, Section, TitleH2 } from 'components';
+import SucursalCard from 'components/cards/SucursalCard';
 import { localservices } from 'data';
 import PropTypes from 'prop-types';
-// ...existing code...
 
 const NuestrasSucursales = () => {
   // Ordenar: primero Morelia, luego el resto por ciudad y luego por título

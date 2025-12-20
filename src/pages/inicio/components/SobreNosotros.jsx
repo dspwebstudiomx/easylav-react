@@ -28,18 +28,12 @@ const ABOUT_PROPS = {
 
 // Estructura
 const SobreNosotros = () => {
-  // const theme = 'dark'
-  // const backgroundOpacity = 'opacity-0'
-  // const backgroundColor = `bg-${theme}`
-  // const imageDisplay = 'block'
-
   return (
     <Section
       id={ABOUT_PROPS.SECTION_ID}
       className={ABOUT_UI.SECTION}
       backgroundColor={ABOUT_UI.BACKGROUND_COLOR}
-      height={ABOUT_UI.HEIGHT}
-    >
+      height={ABOUT_UI.HEIGHT}>
       <Container className={ABOUT_UI.CONTAINER} id={ABOUT_PROPS.CONTAINER_ID}>
         <div id="sobrenosotros-doscolunmas" className={ABOUT_UI.TWOCOLUMNS_CONTAINER}>
           <div id="sobrenosotros-columna-1" className={ABOUT_UI.COLUMN1_CONTAINER}>
@@ -70,16 +64,6 @@ const SobreNosotros = () => {
             </Paragraph> */}
           </div>
           <div id="sobrenosotros-columna-2" className={ABOUT_UI.COLUMN2_CONTAINER}>
-            {/* <ImageResponsive
-              src={img}
-              // className={'shadow-image'}
-              imageAlt={'Placeholder'}
-              image_640={img}
-              image_1024={img}
-              image_1920={img}
-            /> */}
-            {/* <LottieAnimationImage lottieImage={lottieImage} /> */}
-            {/* <BackgroundImageSection height="h-[240px] sm:h-[320px]" opacity={backgroundOpacity} titleColor='text-primary' textColor='text-dark' image={`${imageDisplay}`} backgroundColor={`${backgroundColor}`} image_1024={img} image_1200={img} image_576={img} image_1920={img} /> */}
             <Video src={video} type="video/mp4" title="sucursal" className="shadow-image" height={ABOUT_UI.HEIGHT} />
           </div>
         </div>
