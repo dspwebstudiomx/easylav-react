@@ -8,7 +8,8 @@
       "data/*": ["./src/data/*"],
       "hooks/*": ["./src/hooks/*"],
       "pages/*": ["./src/pages/*"],
-      "constants/*": ["./src/constants/*"],
-    }
+      "constants/*": ["./src/constants/*"]
+    },
+    "ignoreDeprecations": "6.0"
   }
 }
