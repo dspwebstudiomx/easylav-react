@@ -33,6 +33,7 @@ import { ReposicionTarjeta } from './ReposicionTarjeta';
 import { IntroduccionTerminosCondiciones } from './IntroduccionTerminosCondiciones';
 import { ObligacionesUsuario } from './ObligacionesUsuario';
 import { BajaVoluntaria } from './BajaVoluntaria';
+import { SeguridadPrevencionFraudes } from './SeguridadPrevencionFraudes';
 
 // Estructura
 const TerminosCondiciones = () => {
@@ -74,6 +75,7 @@ const TerminosCondiciones = () => {
           <ReposicionTarjeta />
           <ObligacionesUsuario />
           <BajaVoluntaria />
+          <SeguridadPrevencionFraudes />
           <h4 className="text-center w-full mt-12 text-lg">Última actualización: 18 de diciembre de 2025</h4>
         </article>
         {/* Columna 1 */}
