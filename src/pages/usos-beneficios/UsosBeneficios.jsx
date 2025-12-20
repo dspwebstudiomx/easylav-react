@@ -100,7 +100,7 @@ const TerminosCondiciones = () => {
             <ReglasParticipacion />
             {/* Introducción */}
           </ParagraphContainer>
-          <h4 className="text-center w-full mt-12">Última actualización: 24 de abril de 2025</h4>
+          <h4 className="text-center w-full mt-12 text-lg">Última actualización: 18 de diciembre de 2025</h4>
         </article>
         {/* Columna 1 */}
       </PageLayout>
