@@ -50,7 +50,6 @@ export { default as Hero } from 'components/hero/Hero';
 
 // Images
 export { default as ImageResponsive } from 'components/images/ImageResponsive';
-export { default as LottieAnimationImage } from 'components/images/LottieAnimationImage';
 
 // Layout
 export { default as HomeLayout } from 'components/layout/HomeLayout';
