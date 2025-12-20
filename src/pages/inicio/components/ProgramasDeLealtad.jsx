@@ -82,10 +82,10 @@ const ProgramasDeLealtad = () => {
                 variant="secondary"
               /> */}
               <Button
-                title="Usos y Beneficios"
-                name="Usos y Beneficios"
-                width={'w-full md:w-[240px] lg:w-[280px]'}
-                href="/usos-y-beneficios"
+                title="Terminos y Condiciones del Programa de Lealtad"
+                name="Terminos y Condiciones del Programa de Lealtad"
+                width={'w-full md:w-[240px] lg:w-auto'}
+                href="/usos-y-condiciones"
                 onClick={() => window.scrollTo(0, 0)}
                 variant="primary"
                 // icon={<FaRegEye />}
