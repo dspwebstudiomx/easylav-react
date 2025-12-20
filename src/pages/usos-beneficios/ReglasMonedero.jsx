@@ -52,10 +52,15 @@ export const ReglasMonedero = () => {
                 Términos y Condiciones de cada Aliado y la legislación aplicable.
               </li>
               <li>
-                d) El Programa podrá realizar de tiempo en tiempo modificaciones y/o cambios sustanciales y/o generales
-                al valor y/o Mecánicas del monedero, sin que para esto sea necesario que notifique previamente al
-                Usuario. Será la responsabilidad de éste estar al pendiente del valor de los Puntos dentro de las
+                d) ) El Programa podrá realizar de tiempo en tiempo modificaciones y/o cambios sustanciales y/o
+                generales al valor y/o Mecánicas del monedero, sin que para esto sea necesario que notifique previamente
+                al Usuario. Será la responsabilidad de éste estar al pendiente del valor de los Puntos dentro de las
                 Plataformas.
+              </li>
+              <li>
+                e) El Usuario podrá ganar Puntos i) al realizar una compra de los Productos y/o Servicios participantes
+                y presentando su tarjeta física del Programa de “Tarjeta de recompensa” en los Canales de Venta de las
+                sucursales.
               </li>
             </ul>
           </Paragraph>
