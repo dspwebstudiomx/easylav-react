@@ -31,6 +31,7 @@ import { ReglasParticipacion } from './ReglasParticipacion';
 import { ReglasMonedero } from './ReglasMonedero';
 import { EliminacionCuentas } from './EliminacionCuentas';
 import { TransferenciaPuntos } from './TransferenciaPuntos';
+import { ReposicionTarjeta } from './ReposicionTarjeta';
 
 // Estructura
 const TerminosCondiciones = () => {
@@ -104,6 +105,7 @@ const TerminosCondiciones = () => {
             <ReglasMonedero />
             <EliminacionCuentas />
             <TransferenciaPuntos />
+            <ReposicionTarjeta />
             {/* Introducción */}
           </ParagraphContainer>
           <h4 className="text-center w-full mt-12 text-lg">Última actualización: 18 de diciembre de 2025</h4>
