@@ -26,7 +26,7 @@ export const loyaltyProgramQuestions = [
       <p>
         En la parte adversa de la “Tarjeta de recompensa” solo escanea el código QR y te dirigirá a la página WEB de
         EASYLAV.mx y en la sección de Programa de lealtad los encontrarás o da click{' '}
-        <a className="font-semibold text-secondary" href="/usos-y-condiciones" target="_blank">
+        <a className="font-semibold text-secondary" href="/usos-y-condiciones" rel="noopener noreferrer">
           aquí
         </a>
         .

@@ -145,5 +145,13 @@ const linksTerminos = [
     title: 'Visitar la sección de Facturación',
     alt: 'Facturación',
   },
+  {
+    id: 3,
+    name: 'Usos y Condiciones de la Tarjeta de Lealtad',
+    href: '/usos-y-condiciones',
+    linkId: 'usos-y-condiciones',
+    title: 'Visitar la sección de Usos y Condiciones de la Tarjeta de Lealtad',
+    alt: 'Usos y Condiciones de la Tarjeta de Lealtad',
+  },
 ];
 export { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections };
