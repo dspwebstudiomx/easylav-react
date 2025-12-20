@@ -34,6 +34,11 @@ import { IntroduccionTerminosCondiciones } from './IntroduccionTerminosCondicion
 import { ObligacionesUsuario } from './ObligacionesUsuario';
 import { BajaVoluntaria } from './BajaVoluntaria';
 import { SeguridadPrevencionFraudes } from './SeguridadPrevencionFraudes';
+import { TerminosCondicionesAdicionales } from './TerminosCondicionesAdicionales';
+import { AvisoPrivacidad } from './AvisoPrivacidad';
+import { DerechosAutorPropiedadIndustrial } from './DerechosAutorPropiedadIndustrial';
+import { DisposicionesGenerales } from './DisposicionesGenerales';
+import { CierreDocumento } from './CierreDocumento';
 
 // Estructura
 const TerminosCondiciones = () => {
@@ -76,6 +81,11 @@ const TerminosCondiciones = () => {
           <ObligacionesUsuario />
           <BajaVoluntaria />
           <SeguridadPrevencionFraudes />
+          <TerminosCondicionesAdicionales />
+          <AvisoPrivacidad />
+          <DerechosAutorPropiedadIndustrial />
+          <DisposicionesGenerales />
+          <CierreDocumento />
           <h4 className="text-center w-full mt-12 text-lg">Última actualización: 18 de diciembre de 2025</h4>
         </article>
         {/* Columna 1 */}
