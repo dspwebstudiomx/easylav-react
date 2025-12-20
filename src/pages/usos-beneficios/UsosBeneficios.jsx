@@ -28,6 +28,7 @@ import { Mecanicas } from './Mecanicas';
 import { VigenciaPuntos } from './VigenciaPuntos';
 import { FallecimientoUsuario } from './FallecimientoUsuario';
 import { ReglasParticipacion } from './ReglasParticipacion';
+import { ReglasMonedero } from './ReglasMonedero';
 
 // Estructura
 const TerminosCondiciones = () => {
@@ -98,6 +99,7 @@ const TerminosCondiciones = () => {
             <VigenciaPuntos />
             <FallecimientoUsuario />
             <ReglasParticipacion />
+            <ReglasMonedero />
             {/* Introducción */}
           </ParagraphContainer>
           <h4 className="text-center w-full mt-12 text-lg">Última actualización: 18 de diciembre de 2025</h4>
