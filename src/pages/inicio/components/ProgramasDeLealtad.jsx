@@ -49,7 +49,7 @@ const ProgramasDeLealtad = () => {
                 <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-5xl font-bold block">
                   ¡Tu lealtad tiene recompensas!
                 </span>
-                <span>
+                <span className="text-3xl">
                   <strong>EASYLAV® </strong>
                   recompensa tu lealtad y te regala tu “Tarjeta de Recompensas” para premiar tu preferencia y consumos
                   con puntos y beneficios especialmente para ti, Solo usa tu tarjeta física.
@@ -58,7 +58,7 @@ const ProgramasDeLealtad = () => {
             </Paragraph>
 
             {/* Preguntas Programa de Lealtad */}
-            <ul className="w-full grid gap-8">
+            <ul className="w-full grid gap-8 mt-12">
               {loyaltyProgramQuestions.map((item) => (
                 <li key={item.id}>
                   <MemoizedAccordion
@@ -80,7 +80,7 @@ const ProgramasDeLealtad = () => {
                 width={'w-full md:w-[210px]'}
                 onClick={handleFlip}
                 variant="secondary"
-              /> */}
+              /> 
               <Button
                 title="Terminos y Condiciones del Programa de Lealtad"
                 name="Terminos y Condiciones del Programa de Lealtad"
@@ -89,7 +89,7 @@ const ProgramasDeLealtad = () => {
                 onClick={() => window.scrollTo(0, 0)}
                 variant="primary"
                 // icon={<FaRegEye />}
-              />
+              />*/}
             </ButtonContainer>
           </ParagraphContainer>
         </TwoColumnsContainer>

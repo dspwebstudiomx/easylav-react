@@ -37,7 +37,7 @@ const TerminosCondiciones = () => {
       <PageLayout>
         <BorderLeft>
           <TitleH1 className={''} align="left">
-            Términos y Condiciones
+            Términos y Condiciones del Sitio Web
           </TitleH1>
         </BorderLeft>
         {/* Columna 1 */}
