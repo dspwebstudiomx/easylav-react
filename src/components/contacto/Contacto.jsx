@@ -13,7 +13,7 @@ const Contacto = () => {
   };
 
   return (
-    <article className="flex flex-col lg:flex-row gap-0 sm:gap-12 lg:gap-10 xl:gap-18 2xl:gap-24 w-full mx-auto mb-10 px-4 lg:px-0">
+    <article className="flex flex-col lg:flex-row gap-0 sm:gap-12 lg:gap-10 xl:gap-18 2xl:gap-24 w-full mx-auto mb-10 lg:px-0">
       <ContactInfo />
       <ContactForm
         showModal={showModal}

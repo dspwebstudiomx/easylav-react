@@ -12,9 +12,9 @@ import propTypes from 'prop-types';
 // Estructura
 const TitleContainer = ({ title, id }) => {
   return (
-    <header>
+    <header className="mb-6">
       <BorderLeft>
-        <TitleH2 id={id} justify="justify-start" className="w-2/3 sm:w-full">
+        <TitleH2 id={id} justify="justify-start" className="w-full">
           {title}
         </TitleH2>
       </BorderLeft>

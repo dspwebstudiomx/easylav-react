@@ -40,7 +40,7 @@ const ContactInfo = () => {
         </Paragraph>
       </ParagraphContainer>
       <div className="mx-auto my-16  md:mb-0 lg:ml-0 2xl:mt-12 overflow-hidden">
-        <SocialLinks color={'text-secondary dark:text-primary'} size={60} gap={'gap-8'} />
+        <SocialLinks color={'text-secondary dark:text-primary'} size={48} gap={'gap-4'} />
       </div>
     </section>
   );
