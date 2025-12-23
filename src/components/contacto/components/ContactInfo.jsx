@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ContactInfo = () => {
   return (
     <section className="animate__animated animate__bounceInLeft animate__slowest grid dark:bg-dark">
-      <div className="mb-0">
+      <div className="mb-8 md:mb-0">
         <TitleH2>¿Tienes alguna duda en la que te podemos ayudar? No dudes en llenar el formulario.</TitleH2>
       </div>
       <ParagraphContainer>

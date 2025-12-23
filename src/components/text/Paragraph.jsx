@@ -13,7 +13,9 @@ import PropTypes from 'prop-types';
 // Estructura
 const Paragraph = ({ children, className }) => {
   return (
-    <p className={`md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light ${className}`}>{children}</p>
+    <p className={`text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light ${className}`}>
+      {children}
+    </p>
   );
 };
 
