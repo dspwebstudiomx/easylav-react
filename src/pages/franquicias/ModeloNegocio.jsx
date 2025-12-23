@@ -180,8 +180,8 @@ const ModeloNegocio = () => {
           </Paragraph>
         </ParagraphContainer>
         <Paragraph>
-          <span className="text-3xl  mx-auto font-semibold text-secondary_dark dark:text-secondary_light text-center my-8">
-            <blockquote className="w-2/3 mx-auto mt-20">
+          <span className="text-2xl md:text-3xl  mx-auto font-semibold text-secondary_dark dark:text-secondary_light text-center my-8">
+            <blockquote className="md:w-2/3 mx-auto mt-12">
               Invierte con confianza en un negocio rentable, automatizado y fácil de administrar.
             </blockquote>
           </span>
