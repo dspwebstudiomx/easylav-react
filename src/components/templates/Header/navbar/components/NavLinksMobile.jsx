@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { useState } from 'react';
+import scrollToTop from 'functions/scrollToTop';
 
 const NavLinksMobile = ({ onLinkClick }) => {
   const [activeSection, setActiveSection] = useState('');
@@ -59,6 +60,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                 }}
                 onClick={() => {
                   setActiveSection('');
+                  scrollToTop();
                   if (onLinkClick) onLinkClick();
                 }}
                 title={`link-${navlink.linkId}`}>
