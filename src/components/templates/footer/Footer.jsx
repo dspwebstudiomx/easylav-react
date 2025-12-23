@@ -68,7 +68,9 @@ export default function Footer() {
           </Container>
         </div>
       </footer>
-      <div className="absolute bg-white h-20 w-full flex flex-col items-center justify-center">
+      <div
+        id="greetings"
+        className="absolute bg-gradient-to-b from-white to-secondary_dark h-20 w-full flex flex-col items-center justify-center">
         <p className="w-2/3  md:w-full flex md:items-center md:justify-center md:text-xl uppercase font-semibold text-secondary_dark">
           Felices Fiestas les desea la familia EasyLav®
         </p>

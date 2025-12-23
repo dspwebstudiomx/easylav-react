@@ -56,7 +56,7 @@ const factores_clave = [
     id: 2,
     title: 'Capacitación del personal',
     description:
-      'EASYLAV brinda una capacitación inicial a tu equipo para garantizar un servicio de calidad y una excelente atención al cliente.',
+      'EASYLAV® brinda una capacitación inicial a tu equipo para garantizar un servicio de calidad y una excelente atención al cliente.',
   },
   {
     id: 3,
@@ -106,13 +106,14 @@ const ModeloNegocio = () => {
         </BorderLeft>
         <ParagraphContainer className="">
           <Paragraph>
-            <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span> maneja varios
+            <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV®</span> maneja varios
             modelos de negocio donde podemos ajustarnos a tus necesidades.
           </Paragraph>
           <Paragraph>
-            Las franquicias de <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span>,
-            están dirigidos a aquellas personas que desean invertir en un modelo probado y noble, ya que no se tiene
-            productos perecederos lo cual evita mermas por expiración.
+            Las franquicias de{' '}
+            <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV®</span>, están dirigidos
+            a aquellas personas que desean invertir en un modelo probado y noble, ya que no se tiene productos
+            perecederos lo cual evita mermas por expiración.
           </Paragraph>
 
           <article className="grid gap-12">
@@ -159,7 +160,7 @@ const ModeloNegocio = () => {
             </h3>
             <Paragraph>
               Al adquirir una franquicia{' '}
-              <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span>, es importante
+              <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV®</span>, es importante
               considerar los siguientes aspectos para asegurar el éxito de tu negocio:
             </Paragraph>
             <Paragraph>
@@ -174,7 +175,7 @@ const ModeloNegocio = () => {
           </article>
 
           <Paragraph>
-            Con <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV</span>, tu inversión
+            Con <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV®</span>, tu inversión
             está respaldada por un modelo de negocio sólido, automatizado y fácil de gestionar. ¡Haz crecer tu futuro
             con nosotros!
           </Paragraph>
