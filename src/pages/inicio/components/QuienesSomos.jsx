@@ -159,8 +159,8 @@ const QuienesSomos = () => {
                 <h3 className="text-2xl font-semibold uppercase text-dark">Misión</h3>
               </BorderLeft>
               <p className="text-lg text-dark text-balance">
-                En Lavanderías <span className="text-lg font-bold text-secondary_dark">EASYLAV</span>, nuestra misión es
-                ser los aliados perfectos de tu tiempo, ofreciéndote un servicio de lavandería y tintorería de
+                En Lavanderías <span className="text-lg font-bold text-secondary_dark">EASYLAV®</span>, nuestra misión
+                es ser los aliados perfectos de tu tiempo, ofreciéndote un servicio de lavandería y tintorería de
                 excelencia. Nos dedicamos a cuidar cada prenda como si fuera nuestra, utilizando tecnología de
                 vanguardia y procesos especializados para garantizar resultados impecables.
               </p>

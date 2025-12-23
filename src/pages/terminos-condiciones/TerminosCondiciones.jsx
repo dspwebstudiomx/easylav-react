@@ -49,7 +49,7 @@ const TerminosCondiciones = () => {
               El presente documento regula los términos y condiciones generales (en adelante "TÉRMINOS Y CONDICIONES")
               aplicables al uso de los contenidos, productos y servicios ofrecidos a través del sitio web www.easylav.mx
               (en adelante "SITIO WEB"), cuyo titular es ADOLFO ARMANDO ALONZO OROZCO (en adelante "TITULAR") con nombre
-              comercial EASYLAV con actividad de lavado de ropa, con la siguiente dirección: Laguna de Parras 585 - A,
+              comercial EASYLAV® con actividad de lavado de ropa, con la siguiente dirección: Laguna de Parras 585 - A,
               C. P. 58020, Col. Ventura Puente en Morelia, Michoacán.
               `}
             </Paragraph>

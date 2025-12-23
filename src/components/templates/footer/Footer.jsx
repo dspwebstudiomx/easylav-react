@@ -1,6 +1,6 @@
 import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, ThemeLine } from 'components';
 import { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from 'data';
-import { FaRegCopyright } from 'react-icons/fa6';
+// import { FaRegCopyright } from 'react-icons/fa6';
 import FooterLogoWithSocial from './FooterLogoWithSocial';
 import snowboy from '../../../assets/images/snowboy.png';
 
@@ -61,8 +61,8 @@ export default function Footer() {
         </div>
         <div className="bg-primary text-light px-12 lg:px-0">
           <Container className="bg-primary text-primary_darkcontrast h-16 w-full">
-            <div className="flex items-center justify-center sm:justify-start gap-2 h-full">
-              <FaRegCopyright />
+            <div className="flex items-center justify-center sm:justify-start h-full">
+              <span className="text-2xl font-semibold">®</span>
               <h3>Derechos Reservados 2024</h3>
             </div>
           </Container>
@@ -70,7 +70,7 @@ export default function Footer() {
       </footer>
       <div className="absolute bg-white h-20 w-full flex flex-col items-center justify-center">
         <p className="w-2/3  md:w-full flex md:items-center md:justify-center md:text-xl uppercase font-semibold text-secondary_dark">
-          Felices Fiestas les desea la familia EasyLav
+          Felices Fiestas les desea la familia EasyLav®
         </p>
         <div className="absolute bottom-[62px] md:bottom-[54px] right-20 md:right-24 rounded-b-xl overflow-hidden">
           <img src={snowboy} alt="Snowboy" className="h-[100px] md:h-[120px] rounded-b-md overflow-hidden" />
