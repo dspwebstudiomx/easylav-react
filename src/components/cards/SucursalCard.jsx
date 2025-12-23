@@ -199,7 +199,7 @@ const SucursalCard = ({
       </BackgroundImageSection>
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center min-h-[280px]">
+      <section className="flex flex-col gap-4 justify-between items-center min-h-[300px]">
         <div className="p-8 flex flex-col gap-4 items-center h-full">
           <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
             {title}
@@ -227,19 +227,18 @@ const SucursalCard = ({
             </div>
           </div>
         </div>
+        {/* Advertisement */}
+        {advertisement && (
+          <section className="w-full">
+            {Badge ? (
+              <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
+                <p className="text-sm uppercase px-8">{advertisement}</p>
+              </Badge>
+            ) : null}
+          </section>
+        )}
+        {renderMapLinks(position, title, gmap)}
       </section>
-
-      {/* Advertisement */}
-      {advertisement && (
-        <section className="w-full">
-          {Badge ? (
-            <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
-              <p className="text-sm uppercase px-8">{advertisement}</p>
-            </Badge>
-          ) : null}
-        </section>
-      )}
-      {renderMapLinks(position, title, gmap)}
 
       {/* Badge */}
       {badge && (
