@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 
 // Estructura
 const Accordion = ({ children, question, height, isOpen, onToggle }) => {
-  const Height = height || 'min-h-[80px]';
+  const Height = height || 'min-h-[125px]';
   return (
     <div className="w-auto rounded-lg mx-auto">
       <button
