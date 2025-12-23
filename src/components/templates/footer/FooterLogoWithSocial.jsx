@@ -18,7 +18,7 @@ export default function FooterLogoWithSocial() {
       <SocialLinks
         position={'justify-center md:justify-end'}
         color={'text-light'}
-        size={21}
+        size={30}
         circleBorder={'border-2 rounded-[100px] border-light p-2'}
         gap={'gap-3'}
         hover={'hover:text-primary hover:border-primary'}

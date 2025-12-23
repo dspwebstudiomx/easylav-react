@@ -123,14 +123,22 @@ const linksPoliticas = [
 const linksTerminos = [
   {
     id: 1,
-    name: 'Términos y Condiciones',
+    name: 'Términos y Condiciones del sitio Web',
     href: '/terminos-condiciones',
     linkId: 'terminos-condiciones',
-    title: 'Visitar la sección de Términos y Condiciones',
-    alt: 'Términos y Condiciones',
+    title: 'Visitar la sección de Términos y Condiciones del sitio Web',
+    alt: 'Términos y Condiciones del sitio Web',
   },
   {
     id: 2,
+    name: 'Terminos y Condiciones de la Tarjeta de Lealtad',
+    href: '/usos-y-condiciones',
+    linkId: 'usos-y-condiciones',
+    title: 'Visitar la sección de Terminos y Condiciones de la Tarjeta de Lealtad',
+    alt: 'Terminos y Condiciones de la Tarjeta de Lealtad',
+  },
+  {
+    id: 3,
     name: 'Preguntas Frecuentes',
     href: '/preguntas-frecuentes',
     linkId: 'preguntas-frecuentes',
@@ -138,20 +146,12 @@ const linksTerminos = [
     alt: 'Preguntas Frecuentes',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Facturación',
     href: '/facturacion',
     linkId: 'facturacion',
     title: 'Visitar la sección de Facturación',
     alt: 'Facturación',
-  },
-  {
-    id: 3,
-    name: 'Usos y Condiciones de la Tarjeta de Lealtad',
-    href: '/usos-y-condiciones',
-    linkId: 'usos-y-condiciones',
-    title: 'Visitar la sección de Usos y Condiciones de la Tarjeta de Lealtad',
-    alt: 'Usos y Condiciones de la Tarjeta de Lealtad',
   },
 ];
 export { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections };
