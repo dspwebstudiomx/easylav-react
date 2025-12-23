@@ -82,7 +82,8 @@ const NavLinksDesktop = () => {
             title={`Ir a ${navlink.linkId}`}
             alt={navlink.alt}
             onClick={() => {
-              setActiveSection(''); // Solo desactiva temporalmente, el observer lo volverá a activar si corresponde
+              setActiveSection('');
+              scrollToTop(); // Solo desactiva temporalmente, el observer lo volverá a activar si corresponde
               if (navlink.name === 'Inicio') scrollToTop();
             }}>
             {navlink.name}
