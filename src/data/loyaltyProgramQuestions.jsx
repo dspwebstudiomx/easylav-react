@@ -1,3 +1,6 @@
+import scrollToTop from 'functions/scrollToTop';
+import { NavLink } from 'react-router-dom';
+
 export const loyaltyProgramQuestions = [
   {
     id: 0,
@@ -26,9 +29,13 @@ export const loyaltyProgramQuestions = [
       <p>
         En la parte adversa de la “Tarjeta de recompensa” solo escanea el código QR y te dirigirá a la página WEB de
         EASYLAV.mx y en la sección de Programa de lealtad los encontrarás o da click{' '}
-        <a className="font-semibold text-secondary" href="/usos-y-condiciones" rel="noopener noreferrer">
+        <NavLink
+          onClick={scrollToTop}
+          className="font-semibold text-secondary"
+          to="/usos-y-condiciones"
+          rel="noopener noreferrer">
           aquí
-        </a>
+        </NavLink>
         .
       </p>
     ),

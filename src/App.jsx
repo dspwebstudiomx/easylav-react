@@ -2,11 +2,9 @@
 import PoliticaCookies from 'pages/politica-cookies/PoliticaCookies';
 import { Footer, Header, ScrollToTopButton } from 'components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import { lazy, Suspense } from 'react';
 import { lazy } from 'react';
 import '../node_modules/animate.css/animate.css';
 import './App.css';
-// import Loading from './components/Loading';
 
 // Carga diferida de las páginas
 const Inicio = lazy(() => import('pages/inicio/Inicio'));
@@ -15,7 +13,6 @@ const ContactoPagina = lazy(() => import('pages/contacto/ContactoPagina'));
 const Franquicias = lazy(() => import('pages/franquicias/Franquicias'));
 const GuiaEstilos = lazy(() => import('pages/guia-estilos/GuiaEstilos'));
 const NotFound = lazy(() => import('pages/404/NotFound'));
-const Test = lazy(() => import('pages/test/Test'));
 const PoliticaPrivacidad = lazy(() => import('pages/politica-privacidad/PoliticaPrivacidad'));
 const PreguntasFrecuentesPage = lazy(() => import('pages/preguntas-frecuentes/PreguntasFrecuentesPage'));
 const TerminosCondiciones = lazy(() => import('pages/terminos-condiciones/TerminosCondiciones'));
@@ -66,8 +63,7 @@ export default function App() {
         <Route path="/sucursales/leon" element={<Leon />} />
         <Route path="/sucursales/guadalajara" element={<Guadalajara />} />
         <Route path="/usos-y-condiciones" element={<UsosBeneficios />} />
-        <Route path="/test/" element={<Test />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       {/* </Suspense> */}
       <Footer />
