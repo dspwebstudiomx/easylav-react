@@ -1,4 +1,6 @@
 import { Paragraph, ParagraphContainer } from 'components';
+import { scrollToTop } from 'functions';
+import { NavLink } from 'react-router-dom';
 
 export const IntroduccionTerminosCondiciones = () => {
   return (
@@ -23,12 +25,12 @@ export const IntroduccionTerminosCondiciones = () => {
         incluyen, pero no se limitan a realizar correcciones, adiciones, mejoras o modificaciones al contenido,
         presentación, información, bases de datos y demás elementos del Programa de lealtad, por mencionar algunos (en
         adelante las “Actualizaciones”), siendo aplicables los Términos y Condiciones publicados en el sitio web{' '}
-        <a
+        <NavLink
+          onClick={scrollToTop}
           className="font-semibold text-secondary_dark dark:text-secondary"
-          href="/terminos-condiciones"
-          target="_blank">
+          to="/terminos-condiciones">
           www.easylav.mx/terminos-condiciones
-        </a>
+        </NavLink>
       </Paragraph>
       <Paragraph>
         Usted está de acuerdo que aceptará las Actualizaciones, siempre que continúe participando en el Programa

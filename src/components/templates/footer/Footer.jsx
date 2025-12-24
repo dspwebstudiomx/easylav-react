@@ -6,8 +6,7 @@ import snowboy from '../../../assets/images/snowboy.png';
 
 export default function Footer() {
   const classes = {
-    container:
-      'mx-auto grid grid-cols-2 text-light sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 bg-secondary_dark gap-8 sm:gap-0',
+    container: 'grid gap-y-12 md:grid-cols-3',
     footerSections: 'flex flex-col gap-3',
     footerSectionsList: 'flex flex-col gap-0',
     footerSectionsTitle: 'text-lg font-medium uppercase leading-6 xl:text-sm text-light mb-6',
@@ -19,40 +18,44 @@ export default function Footer() {
         <ThemeLine />
         <div id={'footer-sections'} className="p-12">
           <Container className={classes.container}>
-            {/* Footer Sections */}
-            <div id="footer-sections" className={classes.footerSections}>
-              <h3 id="footer-sections-title" className={classes.footerSectionsTitle}>
-                Secciones
-              </h3>
-              <FooterNavHashLinksGenerator links={navLinksSections} />
-              <FooterLinksGenerator links={navLinksPages} />
-            </div>
-            {/* Footer Sections */}
-
-            {/* Footer Services */}
-            <div id="footer-services" className={classes.footerSections}>
-              <h3 className={classes.footerSectionsTitle}>Servicios</h3>
-              <FooterNavHashLinksGenerator links={linksServicios} />
-            </div>
-            {/* Footer Services */}
-
-            {/* Footer Privacy */}
-            <div className="flex flex-col">
-              <div id="footer-policies" className={classes.footerSections}>
-                <h3 className={classes.footerSectionsTitle}>Políticas de Privacidad, Política de Cookies</h3>
-                <FooterLinksGenerator links={linksPoliticas} />
+            <div className="grid grid-cols-2 gap-4">
+              {/* Footer Sections */}
+              <div id="footer-sections" className={classes.footerSections}>
+                <h3 id="footer-sections-title" className={classes.footerSectionsTitle}>
+                  Secciones
+                </h3>
+                <FooterNavHashLinksGenerator links={navLinksSections} />
+                <FooterLinksGenerator links={navLinksPages} />
               </div>
-            </div>
-            {/* Footer Privacy */}
+              {/* Footer Sections */}
 
-            {/* Footer Terms */}
-            <div id="footer-privacy-terms" className={classes.footerSections}>
-              <h3 className={classes.footerSectionsTitle}>
-                Términos y Condiciones, Preguntas Frecuentes y Facturación
-              </h3>
-              <FooterLinksGenerator links={linksTerminos} />
+              {/* Footer Services */}
+              <div id="footer-services" className={classes.footerSections}>
+                <h3 className={classes.footerSectionsTitle}>Servicios</h3>
+                <FooterNavHashLinksGenerator links={linksServicios} />
+              </div>
+              {/* Footer Services */}
             </div>
-            {/* Footer Terms */}
+
+            <div className="w-full flex flex-col gap-12">
+              {/* Footer Privacy */}
+              <div className="flex flex-col">
+                <div id="footer-policies" className={classes.footerSections}>
+                  <h3 className={classes.footerSectionsTitle}>Políticas de Privacidad, Política de Cookies</h3>
+                  <FooterLinksGenerator links={linksPoliticas} />
+                </div>
+              </div>
+              {/* Footer Privacy */}
+
+              {/* Footer Terms */}
+              <div id="footer-privacy-terms" className={classes.footerSections}>
+                <h3 className={classes.footerSectionsTitle}>
+                  Términos y Condiciones, Preguntas Frecuentes y Facturación
+                </h3>
+                <FooterLinksGenerator links={linksTerminos} />
+              </div>
+              {/* Footer Terms */}
+            </div>
 
             {/* Footer Logo */}
             <FooterLogoWithSocial />

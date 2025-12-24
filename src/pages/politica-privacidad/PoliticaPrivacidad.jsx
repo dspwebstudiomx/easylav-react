@@ -18,7 +18,7 @@ const PoliticaPrivacidad = () => {
         ogType="article"
       />
       <PageLayout>
-        <div className="mx-auto mb-20 flex gap-6 flex-col dark:text-light text-lg text-balance">
+        <div className="mx-auto mb-20 flex gap-12 flex-col dark:text-light text-lg text-balance">
           <BorderLeft>
             <TitleH1 align="justify-start">Política de Privacidad</TitleH1>
           </BorderLeft>
