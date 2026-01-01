@@ -19,7 +19,7 @@ const Banner = ({ id, children, variant = 'primary' }) => {
 
   // Clases base
   const baseClasses =
-    'border-2 text-xl p-8 xl:p-12 rounded-xl animate__animated animate__flash w-auto flex flex-col items-start justify-center gap-4';
+    'border-2 md:text-xl p-8 xl:p-12 rounded-xl animate__animated animate__flash w-auto flex flex-col items-start justify-center gap-4';
 
   // Combinar clases base con la variante seleccionada
   const classes = `${baseClasses} ${variants[variant]}`;

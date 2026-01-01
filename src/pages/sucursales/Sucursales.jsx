@@ -88,7 +88,9 @@ const Sucursales = () => {
                 visitarnos en otra fecha para disfrutar de nuestros servicios de lavandería de alta calidad. <br />
                 <br />
                 <div className="mx-auto text-center mt-12">
-                  <strong className="text-primary_darkcontrast text-2xl">¡Gracias por tu comprensión!</strong>
+                  <strong className="text-primary_darkcontrast text-lg md:text-2xl">
+                    ¡Gracias por tu comprensión!
+                  </strong>
                 </div>
               </div>
             </Banner>
