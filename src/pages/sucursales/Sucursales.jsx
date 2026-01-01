@@ -87,8 +87,8 @@ const Sucursales = () => {
                 <strong className="text-primary_darkcontrast">1 de Enero</strong> por días festivos. Te invitamos a
                 visitarnos en otra fecha para disfrutar de nuestros servicios de lavandería de alta calidad. <br />
                 <br />
-                <div className="mx-auto text-center mt-12">
-                  <strong className="text-primary_darkcontrast text-lg md:text-2xl">
+                <div className="mx-auto text-center mt-4 md:mt-12">
+                  <strong className="text-primary_darkcontrast text-base md:text-2xl">
                     ¡Gracias por tu comprensión!
                   </strong>
                 </div>
