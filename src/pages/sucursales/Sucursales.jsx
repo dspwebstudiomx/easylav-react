@@ -56,7 +56,7 @@ const Sucursales = () => {
         </TitleH1>
 
         <div className="grid gap-20">
-          <article className="flex gap-8 sm:gap-12 items-center justify-center mx-auto w-full h-auto">
+          <article className="flex flex-col md:flex-row gap-8 sm:gap-12 items-center justify-center mx-auto w-full h-auto">
             <BackgroundCard
               image={morelia}
               title="Morelia"
