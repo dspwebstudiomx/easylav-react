@@ -56,17 +56,7 @@ const Sucursales = () => {
         </TitleH1>
 
         <div className="grid gap-20">
-          {/* Mostrar el Banner solo en días festivos */}
-          {isHoliday && (
-            <Banner variant="primary">
-              Queremos informarte que nuestras sucursales permanecerán cerradas los días{' '}
-              <strong className="text-primary_darkcontrast">24, 25 y 31 de Diciembre</strong> y{' '}
-              <strong className="text-primary_darkcontrast">1 de Enero</strong> por días festivos. Te invitamos a
-              visitarnos en otra fecha para disfrutar de nuestros servicios de lavandería de alta calidad.{' '}
-              <strong className="text-primary_darkcontrast text-2xl">¡Gracias por tu comprensión!</strong>
-            </Banner>
-          )}
-          <article className="grid sm:grid-cols-2 gap-8 sm:gap-12 items-center justify-center mx-auto w-full h-auto">
+          <article className="flex gap-8 sm:gap-12 items-center justify-center mx-auto w-full h-auto">
             <BackgroundCard
               image={morelia}
               title="Morelia"
@@ -88,6 +78,21 @@ const Sucursales = () => {
             />
             {/* <BackgroundCard image={CentroGuadalajara} title="Guadalajara" href="/sucursales/guadalajara" rounded="rounded-lg"  width={cardWidth} height={cardHeight} alt="Tarjeta con la imagen del centro de Guadalajara"/> */}
           </article>
+          {/* Mostrar el Banner solo en días festivos */}
+          {isHoliday && (
+            <Banner variant="primary">
+              <div className="">
+                Queremos informarte que nuestras sucursales permanecerán cerradas los días{' '}
+                <strong className="text-primary_darkcontrast">25 de Diciembre </strong> y el {''}
+                <strong className="text-primary_darkcontrast">1 de Enero</strong> por días festivos. Te invitamos a
+                visitarnos en otra fecha para disfrutar de nuestros servicios de lavandería de alta calidad. <br />
+                <br />
+                <div className="mx-auto text-center mt-12">
+                  <strong className="text-primary_darkcontrast text-2xl">¡Gracias por tu comprensión!</strong>
+                </div>
+              </div>
+            </Banner>
+          )}
         </div>
       </PageLayout>
     </>
