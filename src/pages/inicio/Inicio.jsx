@@ -39,25 +39,20 @@ const Inicio = () => (
       <NuestrosServicios />
       {/* ¿Por qué elegirnos? */}
       <PorqueElegirnos />
-
+      {/* Programas de lealtad */}
       <ProgramasDeLealtad />
-
+      {/* Equipamiento */}
       <Equipamiento />
-
       {/* Información adicional */}
-
       <Recomendaciones />
-
       <NuestrasSucursales />
-
+      {/* Preguntas frecuentes */}
       <Section backgroundColor="dark:bg-dark" className="">
         <Container className="">
           <PreguntasFrecuentes />
         </Container>
       </Section>
-
       {/* Testimonios y contacto */}
-
       <CarouselTestimonios />
 
       <Section backgroundColor="dark:bg-dark" className="">
