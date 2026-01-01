@@ -11,7 +11,8 @@ import {
   venturapuente,
   bonanza,
   haciendaLosOtates,
-  Placeholder,
+  // Placeholder,
+  margarita,
 } from 'assets';
 
 export const localservices = [
@@ -243,7 +244,7 @@ export const localservices = [
     titleMailto: 'Enviar correo a sucursal Margarita',
     advertisement: '',
     // badge: 'Nueva sucursal',
-    image: Placeholder,
+    image: margarita,
     openHour: 7,
     openMinute: 0,
     closeHour: 21,
