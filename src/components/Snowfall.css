@@ -1,0 +1,20 @@
+/* Snowfall.css */
+
+.snowflake {
+  position: fixed;
+  top: 0;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
