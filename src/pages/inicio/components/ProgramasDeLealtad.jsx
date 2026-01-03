@@ -1,5 +1,6 @@
 import {
   Accordion,
+  Button,
   // Button,
   ButtonContainer,
   Container,
@@ -34,13 +35,25 @@ const ProgramasDeLealtad = () => {
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
         <TwoColumnsContainer gridOrder="grid-col-reverse">
+          <div>
+            <TarjetaBeneficios
+              handleFlip={handleFlip}
+              showFront={showFront}
+              isFlipping={isFlipping}
+              flipDuration={flipDuration}
+            />
+
+            <ButtonContainer position="justify-center w-full" distance="mt-12">
+              <Button
+                title={showFront ? 'Ver reverso' : 'Ver frente'}
+                name="Voltear tarjeta de lealtad"
+                width={'w-full md:w-[210px]'}
+                onClick={handleFlip}
+                variant="secondary"
+              />
+            </ButtonContainer>
+          </div>
           {/* Tarjeta con botón para alternar */}
-          <TarjetaBeneficios
-            handleFlip={handleFlip}
-            showFront={showFront}
-            isFlipping={isFlipping}
-            flipDuration={flipDuration}
-          />
 
           <ParagraphContainer>
             {/* Descripción corta */}
@@ -72,25 +85,6 @@ const ProgramasDeLealtad = () => {
               ))}
             </ul>
             {/* Questions */}
-
-            <ButtonContainer position="justify-start w-full" distance="mt-12">
-              {/* <Button
-                title={showFront ? 'Ver reverso' : 'Ver frente'}
-                name="Voltear tarjeta de lealtad"
-                width={'w-full md:w-[210px]'}
-                onClick={handleFlip}
-                variant="secondary"
-              /> 
-              <Button
-                title="Terminos y Condiciones del Programa de Lealtad"
-                name="Terminos y Condiciones del Programa de Lealtad"
-                width={'w-full md:w-[240px] lg:w-auto'}
-                href="/usos-y-condiciones"
-                onClick={() => window.scrollTo(0, 0)}
-                variant="primary"
-                // icon={<FaRegEye />}
-              />*/}
-            </ButtonContainer>
           </ParagraphContainer>
         </TwoColumnsContainer>
       </Container>
