@@ -1,8 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './Snowfall.css';
 
 const Snowfall = () => {
+  const [isHolidaySeason, setIsHolidaySeason] = useState(false);
+
   useEffect(() => {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const startHoliday = new Date(currentYear, 11, 15); // 15 de diciembre
+    const endHoliday = new Date(currentYear + 1, 0, 7); // 7 de enero del siguiente año
+
+    if (today >= startHoliday || today <= endHoliday) {
+      setIsHolidaySeason(true);
+    } else {
+      setIsHolidaySeason(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isHolidaySeason) return;
+
     const createSnowflake = () => {
       const snowflake = document.createElement('div');
       snowflake.classList.add('snowflake');
@@ -21,7 +38,9 @@ const Snowfall = () => {
 
     const interval = setInterval(createSnowflake, 200);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHolidaySeason]);
+
+  if (!isHolidaySeason) return null;
 
   return null;
 };

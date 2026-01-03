@@ -1,8 +1,7 @@
 import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, ThemeLine } from 'components';
 import { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from 'data';
-// import { FaRegCopyright } from 'react-icons/fa6';
 import FooterLogoWithSocial from './FooterLogoWithSocial';
-import snowboy from '../../../assets/images/snowboy.png';
+import FooterHolidays from './FooterHolidays';
 
 export default function Footer() {
   const classes = {
@@ -71,16 +70,9 @@ export default function Footer() {
           </Container>
         </div>
       </footer>
-      <div
-        id="greetings"
-        className="absolute bg-gradient-to-b from-white to-secondary_dark h-20 w-full flex flex-col items-center justify-center">
-        <p className="w-2/3  md:w-full flex md:items-center md:justify-center md:text-xl uppercase font-semibold text-secondary_dark">
-          Felices Fiestas les desea la familia EasyLav®
-        </p>
-        <div className="absolute bottom-[62px] md:bottom-[54px] right-20 md:right-24 rounded-b-xl overflow-hidden">
-          <img src={snowboy} alt="Snowboy" className="h-[100px] md:h-[120px] rounded-b-md overflow-hidden" />
-        </div>
-      </div>
+      {
+        <FooterHolidays /> //Solo se muestra en temporada festiva
+      }
     </>
   );
 }
