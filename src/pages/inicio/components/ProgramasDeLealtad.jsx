@@ -57,17 +57,15 @@ const ProgramasDeLealtad = () => {
 
           <ParagraphContainer>
             {/* Descripción corta */}
-            <Paragraph>
-              <div className="md:text-xl flex flex-col gap-8 items-start justify-start">
-                <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-5xl font-bold block">
-                  ¡Tu lealtad tiene recompensas!
-                </span>
-                <span className="text-xl md:text-2xl lg:text-3xl">
-                  <strong className="dark:text-secondary_light">EASYLAV® </strong>
-                  recompensa tu lealtad y te regala tu “Tarjeta de Recompensas” para premiar tu preferencia y consumos
-                  con puntos y beneficios especialmente para ti, Solo usa tu tarjeta física.
-                </span>
-              </div>
+            <Paragraph className="md:text-xl flex flex-col gap-8 items-start justify-start">
+              <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-5xl font-bold block">
+                ¡Tu lealtad tiene recompensas!
+              </span>
+              <span className="text-xl md:text-2xl lg:text-3xl">
+                <strong className="dark:text-secondary_light">EASYLAV® </strong>
+                recompensa tu lealtad y te regala tu “Tarjeta de Recompensas” para premiar tu preferencia y consumos con
+                puntos y beneficios especialmente para ti, Solo usa tu tarjeta física.
+              </span>
             </Paragraph>
 
             {/* Preguntas Programa de Lealtad */}

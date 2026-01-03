@@ -71,12 +71,10 @@ const Recomendaciones = () => {
             La cantidad de ropa que laves y seques influye en el resultado final. Te recomendamos elegir el servicio
             adecuado para que tu ropa quede tal como la necesitas.
           </Paragraph>
-          <Paragraph>
-            <div className="text-center mt-12">
-              <span className="text-secondary_dark dark:text-secondary_light text-3xl font-semibold">
-                ¡Estamos aquí para ayudarte a cuidar tu ropa y facilitar tu día!
-              </span>
-            </div>
+          <Paragraph className="text-center mt-12">
+            <span className="text-secondary_dark dark:text-secondary_light text-3xl font-semibold">
+              ¡Estamos aquí para ayudarte a cuidar tu ropa y facilitar tu día!
+            </span>
           </Paragraph>
         </ParagraphContainer>
       </Container>
