@@ -10,7 +10,7 @@
 */
 
 // Importaciones
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 import { BorderLeft, Container, Section, TitleH2 } from 'components';
 import SucursalCard from 'components/cards/SucursalCard';
@@ -52,6 +52,43 @@ const NuestrasSucursales = () => {
     return () => clearInterval(timer);
   }, [total]);
 
+  const carouselRef = useRef(null); // Referencia para el contenedor del carrusel
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handleTouchStart = (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      nextSlide(); // Deslizar a la izquierda
+    }
+    if (touchEndX - touchStartX > 50) {
+      prevSlide(); // Deslizar a la derecha
+    }
+  };
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      carousel.addEventListener('touchstart', handleTouchStart);
+      carousel.addEventListener('touchmove', handleTouchMove);
+      carousel.addEventListener('touchend', handleTouchEnd);
+    }
+    return () => {
+      if (carousel) {
+        carousel.removeEventListener('touchstart', handleTouchStart);
+        carousel.removeEventListener('touchmove', handleTouchMove);
+        carousel.removeEventListener('touchend', handleTouchEnd);
+      }
+    };
+  }, []);
+
   // Responsive: puedes usar window.innerWidth o un hook para ajustar slidesToShow
   const nextSlide = () => setCurrent((prev) => (prev + 1) % total);
   const prevSlide = () => setCurrent((prev) => (prev - 1 + total) % total);
@@ -81,14 +118,18 @@ const NuestrasSucursales = () => {
       <Container className="flex flex-col items-center justify-center w-full mx-auto ">
         {/* Títulos */}
 
-        <div className="w-2/3 ml-12 sm:ml-8 md:mx-auto md:ml-20">
+        <header className="w-2/3 ml-12 sm:ml-8 md:mx-auto md:ml-20">
           <BorderLeft>
             <TitleH2>Nuestras Sucursales</TitleH2>
           </BorderLeft>
-        </div>
+        </header>
 
         {/* Carrusel TailwindCSS */}
-        <div className="relative w-full mt-20 px-4 md:px-16">
+        <article
+          id="carousel-sucursales"
+          className="relative w-full mt-20 px-4 md:px-16"
+          ref={carouselRef} // Asignar la referencia al contenedor del carrusel
+        >
           <div className="flex items-center justify-center md:gap-0 w-full">
             {getVisibleSlides().map((localservice) => (
               <div
@@ -111,7 +152,7 @@ const NuestrasSucursales = () => {
             aria-label="Siguiente">
             <MdArrowForward className="text-2xl" />
           </button>
-        </div>
+        </article>
         {/* Indicadores */}
         <div className="flex justify-center mt-12 gap-2">
           {sortedLocalServices.map((_, idx) => (
