@@ -8,9 +8,9 @@ const Snowfall = () => {
     const today = new Date();
     const currentYear = today.getFullYear();
     const startHoliday = new Date(currentYear, 11, 15); // 15 de diciembre
-    const endHoliday = new Date(currentYear + 1, 0, 7); // 7 de enero del siguiente año
+    const endHoliday = new Date(currentYear, 0, 7); // 7 de enero del mismo año
 
-    if (today >= startHoliday || today <= endHoliday) {
+    if (today >= startHoliday && today <= endHoliday) {
       setIsHolidaySeason(true);
     } else {
       setIsHolidaySeason(false);

@@ -8,9 +8,9 @@ const FooterHolidays = () => {
     const today = new Date();
     const currentYear = today.getFullYear();
     const startHoliday = new Date(currentYear, 11, 15); // December 15
-    const endHoliday = new Date(currentYear + 1, 0, 7); // January 7 of the next year
+    const endHoliday = new Date(currentYear, 0, 7); // January 7
 
-    if (today >= startHoliday || today <= endHoliday) {
+    if (today >= startHoliday && today <= endHoliday) {
       setIsHolidaySeason(true);
     } else {
       setIsHolidaySeason(false);
