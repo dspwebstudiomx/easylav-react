@@ -32,16 +32,19 @@ const NavLinksTablet = () => {
           <li key={navlink.id} className="">
             <NavLink
               id={`link-${navlink.linkId}`}
-              className={({ isActive }) => {
-                const colorClass = isActive ? 'text-secondary_light' : 'text-primary_darkcontrast dark:text-light';
-                return `text-sm md:text-base font-bold uppercase hover:text-secondary_light ${colorClass}`;
-              }}
               to={navlink.href}
               onClick={() => {
                 setActiveSection('');
                 if (navlink.name === 'Inicio') scrollToTop();
               }}>
-              {navlink.name}
+              {({ isActive }) => {
+                const colorClass = isActive ? 'text-secondary_light' : 'text-primary_darkcontrast dark:text-light';
+                return (
+                  <span className={`text-sm md:text-base font-bold uppercase hover:text-secondary_light ${colorClass}`}>
+                    {navlink.name}
+                  </span>
+                );
+              }}
             </NavLink>
           </li>
         );

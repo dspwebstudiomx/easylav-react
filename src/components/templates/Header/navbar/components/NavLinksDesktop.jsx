@@ -73,11 +73,6 @@ const NavLinksDesktop = () => {
           <NavLink
             key={navlink.id}
             id={`navlink-${navlink.name}`}
-            className={({ isActive }) => {
-              const colorClass =
-                isActive && scrolled ? 'text-primary font-bold' : isActive ? 'text-secondary font-bold' : 'text-dark';
-              return `hover:text-secondary_dark ${colorClass}`;
-            }}
             to={navlink.href}
             title={`Ir a ${navlink.linkId}`}
             alt={navlink.alt}
@@ -86,7 +81,11 @@ const NavLinksDesktop = () => {
               scrollToTop(); // Solo desactiva temporalmente, el observer lo volverá a activar si corresponde
               if (navlink.name === 'Inicio') scrollToTop();
             }}>
-            {navlink.name}
+            {({ isActive }) => {
+              const colorClass =
+                isActive && scrolled ? 'text-primary font-bold' : isActive ? 'text-secondary font-bold' : 'text-dark';
+              return <span className={`hover:text-secondary_dark ${colorClass}`}>{navlink.name}</span>;
+            }}
           </NavLink>
         );
       })}
