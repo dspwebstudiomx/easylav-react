@@ -30,6 +30,8 @@ const BackgroundImageSection = ({
       className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} w-full`}>
       {/* Background Image */}
       <img
+        alt={title}
+        title={title}
         src={image_768}
         srcSet={`
           ${image_240} 240w,
