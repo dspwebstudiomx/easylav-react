@@ -98,7 +98,7 @@ const renderOpenClosedBadge = (isOpen) => (
  * @returns {JSX.Element} Enlaces de navegación.
  */
 const renderMapLinks = (position, title, gmap) => (
-  <div className="flex md:hidden w-full">
+  <div className="flex xl:hidden w-full">
     <a
       href={`https://waze.com/ul?ll=${position.lat},${position.lng}&navigate=yes`}
       target="_blank"
@@ -106,8 +106,7 @@ const renderMapLinks = (position, title, gmap) => (
       title={`Ir a ${title} en Waze`}
       className="flex w-full flex-col items-center justify-center gap-2 bg-secondary text-sm">
       <Badge flexDirection="flex-col">
-        <FaWaze size={24} />
-        <span>Waze</span>
+        <FaWaze size={28} />
       </Badge>
     </a>
     <a
@@ -117,8 +116,7 @@ const renderMapLinks = (position, title, gmap) => (
       title={`Ir a ${title} en Google Maps`}
       className="flex w-full flex-col items-center justify-center gap-2 bg-secondary_dark text-sm">
       <Badge flexDirection="flex-col">
-        <FaMapMarkedAlt size={24} />
-        <span>Google Maps</span>
+        <FaMapMarkedAlt size={28} />
       </Badge>
     </a>
   </div>
@@ -199,14 +197,14 @@ const SucursalCard = ({
       </BackgroundImageSection>
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center min-h-[300px]">
+      <section className="flex flex-col gap-4 justify-between items-center min-h-[410px]">
         <div className="p-8 flex flex-col gap-4 items-center h-full">
           <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
             {title}
           </TitleH3>
           <div className="flex flex-col gap-4 items-start">
             <a
-              className="flex gap-6 justify-center"
+              className="flex gap-6 justify-between items-center"
               href={gmap}
               target="_blank"
               alt={`Ir a Sucursal ${title} en Google Maps`}
@@ -230,7 +228,7 @@ const SucursalCard = ({
         </div>
         {/* Advertisement */}
         {advertisement && (
-          <section className="w-full">
+          <section className="w-full -mb-[16px]">
             {Badge ? (
               <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
                 <p className="text-sm uppercase px-8">{advertisement}</p>
