@@ -64,15 +64,19 @@ const NavLinksMobile = ({ onLinkClick }) => {
                   if (onLinkClick) onLinkClick();
                 }}
                 title={`link-${navlink.linkId}`}>
-                <div className="flex items-center justify-center">
-                  {navlink.icon && (
-                    <navlink.icon
-                      size={32}
-                      className={({ isActive }) => (isActive ? 'text-primary_dark' : 'text-secondary_dark')}
-                    />
-                  )}
-                </div>
-                <span className="text-base uppercase tracking-wide text-center">{navlink.name}</span>
+                {({ isActive }) => (
+                  <>
+                    <div className="flex items-center justify-center">
+                      {navlink.icon && (
+                        <navlink.icon
+                          size={32}
+                          className={isActive ? 'text-primary_dark' : 'text-secondary_dark'}
+                        />
+                      )}
+                    </div>
+                    <span className="text-base uppercase tracking-wide text-center">{navlink.name}</span>
+                  </>
+                )}
               </NavLink>
             </li>
           );
