@@ -95,7 +95,7 @@ const Recomendacion = ({ title, description }) => {
 // Estructura
 const ModeloNegocio = () => {
   return (
-    <Section className="">
+    <Section id="ModeloNegocio">
       <Container className="grid gap-20 mb-20">
         <BorderLeft>
           <TitleH2>
@@ -139,19 +139,17 @@ const ModeloNegocio = () => {
               </span>
               , sin la necesidad de estar presentes diariamente.
             </Paragraph>
-            <Paragraph>
-              <ul
-                id="listado-de-recomendaciones"
-                className="flex flex-col gap-12 items-start justify-start w-5/6 mx-auto py-9">
-                {recomendaciones.map((recomendacion) => (
-                  <Recomendacion
-                    key={recomendacion.id}
-                    title={recomendacion.title}
-                    description={recomendacion.description}
-                  />
-                ))}
-              </ul>
-            </Paragraph>
+            <ul
+              id="listado-de-recomendaciones"
+              className="flex flex-col gap-12 items-start justify-start w-5/6 mx-auto py-9">
+              {recomendaciones.map((recomendacion) => (
+                <Recomendacion
+                  key={recomendacion.id}
+                  title={recomendacion.title}
+                  description={recomendacion.description}
+                />
+              ))}
+            </ul>
           </article>
 
           <article className="grid gap-12">
@@ -163,15 +161,14 @@ const ModeloNegocio = () => {
               <span className="font-bold text-secondary_dark dark:text-secondary_light">EASYLAV®</span>, es importante
               considerar los siguientes aspectos para asegurar el éxito de tu negocio:
             </Paragraph>
-            <Paragraph>
-              <ul
-                id="listado-de-recomendaciones"
-                className="flex flex-col gap-12 items-start justify-start w-5/6 mx-auto py-9">
-                {factores_clave.map((factor) => (
-                  <Recomendacion key={factor.id} title={factor.title} description={factor.description} />
-                ))}
-              </ul>
-            </Paragraph>
+
+            <ul
+              id="listado-de-recomendaciones"
+              className="flex flex-col gap-12 items-start justify-start w-5/6 mx-auto py-9">
+              {factores_clave.map((factor) => (
+                <Recomendacion key={factor.id} title={factor.title} description={factor.description} />
+              ))}
+            </ul>
           </article>
 
           <Paragraph>
@@ -180,13 +177,11 @@ const ModeloNegocio = () => {
             con nosotros!
           </Paragraph>
         </ParagraphContainer>
-        <Paragraph>
-          <span className="text-2xl md:text-3xl  mx-auto font-semibold text-secondary_dark dark:text-secondary_light text-center my-8">
-            <blockquote className="md:w-2/3 mx-auto mt-12">
-              Invierte con confianza en un negocio rentable, automatizado y fácil de administrar.
-            </blockquote>
-          </span>
-        </Paragraph>
+        <span className="text-2xl md:text-3xl  mx-auto font-semibold text-secondary_dark dark:text-secondary_light text-center my-8">
+          <blockquote className="md:w-2/3 mx-auto mt-12">
+            Invierte con confianza en un negocio rentable, automatizado y fácil de administrar.
+          </blockquote>
+        </span>
       </Container>
     </Section>
   );
