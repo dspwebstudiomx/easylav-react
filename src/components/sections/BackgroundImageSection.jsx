@@ -27,7 +27,7 @@ const BackgroundImageSection = ({
       alt={alt}
       id={id}
       title={title}
-      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} w-full`}>
+      className={`${height} relative flex items-center justify-center overflow-hidden z-0 ${rounded} ${width}`}>
       {/* Background Image */}
       <img
         alt={title}
