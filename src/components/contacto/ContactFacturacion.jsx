@@ -98,8 +98,8 @@ export default function ContactFacturacion() {
           user_city: '',
           user_dateservice: '',
           user_ticketnumber: '',
-          user_sucursal: '',
-          user_CFDI: '',
+          user_sucursal: 'Escoge tu sucursal',
+          user_CFDI: 'G03 - Gastos en general',
           user_payment: paymentMethod,
           user_subtotal: '',
           user_IVA: '',
@@ -418,11 +418,13 @@ export default function ContactFacturacion() {
                       as="select"
                       name="user_sucursal"
                       className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full">
-                      <option defaultValue={'Escoge tu sucursal'} selected>
-                        Escoge tu sucursal
-                      </option>
+                      <option value="Escoge tu sucursal">Escoge tu sucursal</option>
                       {sortedLocalServices.map((localservice) => {
-                        return <option key={localservice.id}>{localservice.title}</option>;
+                        return (
+                          <option key={localservice.id} value={localservice.title}>
+                            {localservice.title}
+                          </option>
+                        );
                       })}
                     </Field>
                     {touched.user_sucursal && errors.user_sucursal && (
@@ -437,37 +439,52 @@ export default function ContactFacturacion() {
                     <label htmlFor="user_CFDI" className="mb-2">
                       Comprobante Fiscal Digital por Internet (CFDI)<span className="text-required ml-1">*</span>
                     </label>
-                    <select
+                    <Field
+                      as="select"
                       name="user_CFDI"
                       className="rounded-md bg-light text-dark px-4 p-2 border-2  border-secondary dark:border-primary outline-none w-full">
-                      <option>G01 - Adquisición de mercancías</option>
-                      <option>G02 - Devoluciones, descuentos o bonificaciones</option>
-                      <option defaultValue={'G03 - Gastos en general'} selected>
-                        G03 - Gastos en general
+                      <option value="G01 - Adquisición de mercancías">G01 - Adquisición de mercancías</option>
+                      <option value="G02 - Devoluciones, descuentos o bonificaciones">
+                        G02 - Devoluciones, descuentos o bonificaciones
                       </option>
-                      <option>I01 - Construcciones</option>
-                      <option>I02 - Mobilario y equipo de oficina por inversiones</option>
-                      <option>I03 - Equipo de transporte</option>
-                      <option>I04 - Equipo de computo y accesorios</option>
-                      <option>I05 - Dados, troqueles, moldes, matrices y herramental</option>
-                      <option>I06 - Comunicaciones telefónicas</option>
-                      <option>I07 - Comunicaciones satelitales</option>
-                      <option>I08 - Otra maquinaria y equipo</option>
-                      <option>D01 - Honorarios médicos, dentales y gastos hospitalarios</option>
-                      <option>D03 - Gastos funerales</option>
-                      <option>D04 - Donativos</option>
-                      <option>
+                      <option value="G03 - Gastos en general">G03 - Gastos en general</option>
+                      <option value="I01 - Construcciones">I01 - Construcciones</option>
+                      <option value="I02 - Mobilario y equipo de oficina por inversiones">
+                        I02 - Mobilario y equipo de oficina por inversiones
+                      </option>
+                      <option value="I03 - Equipo de transporte">I03 - Equipo de transporte</option>
+                      <option value="I04 - Equipo de computo y accesorios">I04 - Equipo de computo y accesorios</option>
+                      <option value="I05 - Dados, troqueles, moldes, matrices y herramental">
+                        I05 - Dados, troqueles, moldes, matrices y herramental
+                      </option>
+                      <option value="I06 - Comunicaciones telefónicas">I06 - Comunicaciones telefónicas</option>
+                      <option value="I07 - Comunicaciones satelitales">I07 - Comunicaciones satelitales</option>
+                      <option value="I08 - Otra maquinaria y equipo">I08 - Otra maquinaria y equipo</option>
+                      <option value="D01 - Honorarios médicos, dentales y gastos hospitalarios">
+                        D01 - Honorarios médicos, dentales y gastos hospitalarios
+                      </option>
+                      <option value="D03 - Gastos funerales">D03 - Gastos funerales</option>
+                      <option value="D04 - Donativos">D04 - Donativos</option>
+                      <option value="D05 - Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)">
                         D05 - Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)
                       </option>
-                      <option>D06 - Aportaciones voluntarias al SAR</option>
-                      <option>D07 - Primas por seguros de gastos médicos</option>
-                      <option>D08 - Gastos de transportación escolar obligatoria</option>
-                      <option>
+                      <option value="D06 - Aportaciones voluntarias al SAR">
+                        D06 - Aportaciones voluntarias al SAR
+                      </option>
+                      <option value="D07 - Primas por seguros de gastos médicos">
+                        D07 - Primas por seguros de gastos médicos
+                      </option>
+                      <option value="D08 - Gastos de transportación escolar obligatoria">
+                        D08 - Gastos de transportación escolar obligatoria
+                      </option>
+                      <option value="D09 - Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones">
                         D09 - Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones
                       </option>
-                      <option>D10 - Pagos por servicios educativos (colegiaturas)</option>
-                      <option>P01 - Por definir</option>
-                    </select>
+                      <option value="D10 - Pagos por servicios educativos (colegiaturas)">
+                        D10 - Pagos por servicios educativos (colegiaturas)
+                      </option>
+                      <option value="P01 - Por definir">P01 - Por definir</option>
+                    </Field>
                   </div>
                   {/* Selector CFDI */}
                 </div>
@@ -485,9 +502,7 @@ export default function ContactFacturacion() {
                       name="user_payment"
                       className="rounded-md bg-light text-dark px-4 p-2 border-2 border-secondary dark:border-primary outline-none"
                       onChange={handlePaymentChange}>
-                      <option value="" defaultValue={'Seleccione'}>
-                        Seleccione
-                      </option>
+                      <option value="">Seleccione</option>
                       <option value="Efectivo">Efectivo</option>
                       <option value="Tarjeta Crédito">Tarjeta Crédito</option>
                       <option value="Tarjeta Débito">Tarjeta Débito</option>
