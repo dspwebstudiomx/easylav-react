@@ -209,8 +209,9 @@ const SucursalCard = ({
               className="flex gap-6 justify-center"
               href={gmap}
               target="_blank"
+              alt={`Ir a Sucursal ${title} en Google Maps`}
               rel="noopener noreferrer"
-              title={`Sucursal ${title}`}>
+              title={`Ir a Sucursal ${title} en Google Maps`}>
               <div className="w-10 h-10">
                 <FaMapMarkerAlt size={20} className="text-secondary" />
               </div>
@@ -250,7 +251,7 @@ const SucursalCard = ({
       {/* Modal */}
       {showModal && (
         <Modal>
-          <div className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8 2xl:w-[50vw]">
+          <div className="mx-auto flex flex-col rounded-xl border-4 border-primary bg-light p-8 gap-8 2xl:w-[25vw]">
             <button id="button-close" onClick={() => setShowModal(false)}>
               <FaXmark size={36} className="z-30 ml-auto text-primary_dark" />
             </button>
