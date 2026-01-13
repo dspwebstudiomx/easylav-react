@@ -51,9 +51,9 @@ const NavLinksDesktop = () => {
       id="navlinks-desktop"
       className="hidden items-center justify-end gap-8 px-6 xl:flex xl:gap-4 2xl:px-0 uppercase font-semibold">
       {navLinksSections.map((navlink) => {
-        const isActive = activeSection === navlink.linkId;
+        const isactive = activeSection === navlink.linkId;
         const colorClass =
-          isActive && scrolled ? 'text-primary font-bold' : isActive ? 'text-secondary font-bold' : 'text-dark';
+          isactive && scrolled ? 'text-primary font-bold' : isactive ? 'text-secondary font-bold' : 'text-dark';
         return (
           <NavHashLink
             key={navlink.id}
@@ -81,9 +81,9 @@ const NavLinksDesktop = () => {
               scrollToTop(); // Solo desactiva temporalmente, el observer lo volverá a activar si corresponde
               if (navlink.name === 'Inicio') scrollToTop();
             }}>
-            {({ isActive }) => {
+            {({ isactive }) => {
               const colorClass =
-                isActive && scrolled ? 'text-primary font-bold' : isActive ? 'text-secondary font-bold' : 'text-dark';
+                isactive && scrolled ? 'text-primary font-bold' : isactive ? 'text-secondary font-bold' : 'text-dark';
               return <span className={`hover:text-secondary_dark ${colorClass}`}>{navlink.name}</span>;
             }}
           </NavLink>
