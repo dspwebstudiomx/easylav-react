@@ -43,11 +43,11 @@ const ProgramasDeLealtad = () => {
               flipDuration={flipDuration}
             />
 
-            <ButtonContainer position="justify-center w-full" distance="mt-12">
+            <ButtonContainer position="justify-center items-center md:items-start w-full" distance="my-12">
               <Button
                 title={showFront ? 'Ver reverso' : 'Ver frente'}
                 name="Voltear tarjeta de lealtad"
-                width={'w-full md:w-[210px]'}
+                width={'w-2/3 md:w-[210px]'}
                 onClick={handleFlip}
                 variant="secondary"
               />
