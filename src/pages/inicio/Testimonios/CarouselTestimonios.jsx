@@ -89,7 +89,7 @@ const CarouselTestimonios = () => {
     <Section backgroundColor={styles.backgroundColor}>
       <Container className="">
         <div className="relative w-full flex flex-col items-center md:py-8">
-          <article id="nuestros-servicios-titulo" className="flex flex-col items-start justify-center mb-16">
+          <article id="nuestros-servicios-titulo" className="flex flex-col items-start justify-center mb-12 md:mb-16">
             <TitleContainer title="Nuestros clientes nos recomiendan" />
           </article>
           <article>
