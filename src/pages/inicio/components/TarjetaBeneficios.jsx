@@ -168,7 +168,11 @@ const TarjetaBeneficios = ({ showFront, isFlipping, flipDuration }) => {
               }}>
               {/* Código QR en la esquina inferior derecha */}
               <div className="absolute inset-0">
-                <img src={qrRecompensas} alt="Código QR" className="absolute bottom-8 right-8 w-24 h-24" />
+                <img
+                  src={qrRecompensas}
+                  alt="Código QR"
+                  className="absolute bottom-8 right-8 w-16 h-16 md:w-24 md:h-24"
+                />
               </div>
               {/* Sombra dinámica, brillo, reflejo, etc. */}
               <div
