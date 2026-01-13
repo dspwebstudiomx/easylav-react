@@ -4,13 +4,11 @@ export const ObligacionesUsuario = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
-            {`15. OBLIGACIONES DEL USUARIO DEL PROGRAMA DE “TARJETA DE RECOMPENSA".`}
-          </h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
+          {`15. OBLIGACIONES DEL USUARIO DEL PROGRAMA DE “TARJETA DE RECOMPENSA".`}
+        </h2>
         <div className="flex flex-col gap-8 ml-6">
-          <Paragraph>
+          <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
             15.1. El Usuario se obliga a:
             <ul className="mt-6 ml-6 flex flex-col gap-4">
               <li>a) Utilizar el Programa de conformidad con los presentes Términos y Condiciones.</li>
@@ -32,7 +30,7 @@ export const ObligacionesUsuario = () => {
                 legales aplicables.
               </li>
             </ul>
-          </Paragraph>
+          </article>
           <Paragraph>
             15.2. Cualquier comportamiento y/o actividad que el Programa detecte y considere irregular o sospechosa,
             dará al Programa la facultad de: (i) suspender o bloquear al Usuario que realice dicho comportamiento y/o

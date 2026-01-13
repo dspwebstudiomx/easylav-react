@@ -4,9 +4,7 @@ export const Cuenta = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">3. CUENTA.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">3. CUENTA.</h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             3.1. El uso de su Cuenta y datos que proporcione para la participación en las Mecánicas es responsabilidad

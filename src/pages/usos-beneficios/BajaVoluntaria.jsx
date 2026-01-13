@@ -1,14 +1,12 @@
-import { Paragraph, ParagraphContainer } from 'components';
+import { ParagraphContainer } from 'components';
 
 export const BajaVoluntaria = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">16. BAJA VOLUNTARIA.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">16. BAJA VOLUNTARIA.</h2>
         <div className="flex flex-col gap-8 ml-6">
-          <Paragraph>
+          <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
             16.1. En caso de que el Usuario desee dar de baja su Cuenta del Programa, podrá hacerlo por cualquiera de
             las siguientes opciones:
             <ul className="mt-6 ml-6 flex flex-col gap-4">
@@ -22,7 +20,7 @@ export const BajaVoluntaria = () => {
                 la atención de sus derechos.
               </li>
             </ul>
-          </Paragraph>
+          </article>
         </div>
       </ParagraphContainer>
     </div>

@@ -4,9 +4,7 @@ export const UsoTarjetaFisica = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">4. USO DE LA TARJETA FÍSICA.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">4. USO DE LA TARJETA FÍSICA.</h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             4.1. Las Tarjetas Físicas son gratuitas solo en la primera ocasión y se proporcionan posterior al registro
@@ -17,7 +15,7 @@ export const UsoTarjetaFisica = () => {
             4.2. El Usuario podrá tener una Tarjeta Física, la cuales estará vinculada siempre y cuando coincidan los
             datos proporcionados en el registro correspondiente.
           </Paragraph>
-          <Paragraph>
+          <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
             4.3. Para poder usar Puntos a través de las Tarjetas, el Usuario debe cumplir con un proceso de verificación
             a través de los canales de atención siguientes:
             <ul className="mt-6 ml-12 flex flex-col gap-4">
@@ -35,7 +33,7 @@ export const UsoTarjetaFisica = () => {
             <span className="ml-6">
               La verificación aplicará tanto para registro de nuevo usuario como para el reemplazo de Tarjeta.
             </span>
-          </Paragraph>
+          </article>
           <Paragraph>
             4.4. Las Tarjetas son personales e intransferibles, su uso es responsabilidad del Usuario del Programa de
             lealtad.

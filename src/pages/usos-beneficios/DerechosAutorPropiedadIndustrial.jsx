@@ -4,11 +4,9 @@ export const DerechosAutorPropiedadIndustrial = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
-            20. DERECHOS DE AUTOR Y PROPIEDAD INDUSTRIAL.
-          </h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
+          20. DERECHOS DE AUTOR Y PROPIEDAD INDUSTRIAL.
+        </h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             20.1. El Programa de “Tarjeta de Recompensa”, sus sucursales, sus logotipos, así como todo el material de la

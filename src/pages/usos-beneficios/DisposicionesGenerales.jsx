@@ -4,9 +4,7 @@ export const DisposicionesGenerales = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">21. DISPOSICIONES GENERALES.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">21. DISPOSICIONES GENERALES.</h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             21.1. El programa de “Tarjeta de Recompensa” se obliga a cumplir con sus compromisos y obligaciones asumidas

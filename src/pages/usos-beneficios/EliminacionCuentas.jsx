@@ -1,14 +1,12 @@
-import { Paragraph, ParagraphContainer } from 'components';
+import { ParagraphContainer } from 'components';
 
 export const EliminacionCuentas = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">12. ELIMINACIÓN DE CUENTAS.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">12. ELIMINACIÓN DE CUENTAS.</h2>
         <div className="flex flex-col gap-8 ml-6">
-          <Paragraph>
+          <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
             12.1. De Usuarios del Programa.
             <ul className="mt-6 ml-6 flex flex-col gap-4">
               <li>
@@ -25,8 +23,8 @@ export const EliminacionCuentas = () => {
                 doce meses.
               </li>
             </ul>
-          </Paragraph>
-          <Paragraph>
+          </article>
+          <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
             12.2. Usuarios con registros repetidos.
             <br />
             <br />
@@ -47,7 +45,7 @@ export const EliminacionCuentas = () => {
                 verificables.
               </li>
             </ul>
-          </Paragraph>
+          </article>
         </div>
       </ParagraphContainer>
     </div>

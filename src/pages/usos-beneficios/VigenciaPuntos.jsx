@@ -4,9 +4,7 @@ export const VigenciaPuntos = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">8. VIGENCIA DE LOS PUNTOS.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">8. VIGENCIA DE LOS PUNTOS.</h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             8.1. Los Puntos ganados tendrán una vigencia de 1 (un) año contado a partir del día en el que el Usuario los

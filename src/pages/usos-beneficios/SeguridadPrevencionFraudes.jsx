@@ -4,11 +4,9 @@ export const SeguridadPrevencionFraudes = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
-            17. SEGURIDAD Y PREVENCIÓN DE FRAUDES.
-          </h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
+          17. SEGURIDAD Y PREVENCIÓN DE FRAUDES.
+        </h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             17.1. Todas las transacciones realizadas en el Programa de “Tarjeta de recompensa” son monitoreadas los
@@ -70,7 +68,7 @@ export const SeguridadPrevencionFraudes = () => {
             17.11. Queda estrictamente prohibido el uso de múltiples cuentas con fines fraudulentos, abusivos o para
             manipular el sistema de cualquier manera.
           </Paragraph>
-          <Paragraph>
+          <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
             17.12. El comportamiento que conlleva a la suspensión o bloqueo de cuentas incluye, pero no se limita a:
             <ul className="mt-6 ml-6 flex flex-col gap-4 mb-6">
               <li>a)La creación de cuentas con información parcial, falsa o engañosa.</li>
@@ -91,7 +89,7 @@ export const SeguridadPrevencionFraudes = () => {
               medidas de seguridad y legales necesarias, que pueden incluir la suspensión permanente de todas las
               cuentas involucradas, así como hacerlo responsable del pago de daños y perjuicios ocasionados.
             </span>
-          </Paragraph>
+          </article>
         </div>
       </ParagraphContainer>
     </div>

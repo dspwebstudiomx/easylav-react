@@ -278,7 +278,7 @@ const TerminosCondiciones = () => {
                 acceso o uso, de los contenidos, productos o servicios disponibles en los sitios web no gestionados por
                 el TITULAR a los que se pueda acceder mediante el SITIO WEB.
               </Paragraph>
-              <Paragraph>
+              <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
                 <span className="">
                   Los USUARIOS o terceros que deseen realizar o publicar un enlace web desde una página web externa a
                   este SITIO WEB deben tener en cuenta lo siguiente: Queda prohibida la reproducción total o parcial de
@@ -296,7 +296,7 @@ const TerminosCondiciones = () => {
                     incurran en este tipo de actos.
                   </li>
                 </ul>
-              </Paragraph>
+              </article>
               <Paragraph>
                 El establecimiento de un enlace al SITIO WEB desde cualquier sitio externo no implicará la existencia de
                 una relación entre el TITULAR y el titular del sitio web desde el cual se realiza el enlace. Además,
@@ -327,7 +327,7 @@ const TerminosCondiciones = () => {
                 de los archivos o bases de datos protegidos, ya sea mediante acceso restringido con usuario y contraseña
                 o por falta de permisos adecuados.
               </Paragraph>
-              <Paragraph>
+              <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
                 <span>
                   Si el USUARIO o algún tercero considera que algún contenido del SITIO WEB vulnera sus derechos de
                   propiedad industrial o intelectual, deberá comunicarlo de manera inmediata al TITULAR utilizando los
@@ -348,7 +348,7 @@ const TerminosCondiciones = () => {
                     </a>
                   </li>
                 </ul>
-              </Paragraph>
+              </article>
             </TituloYDescripcion>
             {/* SEXTA. PROTECCIÓN DE DERECHOS DE PROPIEDAD INTELECTUAL E INDUSTRIAL. */}
 
@@ -376,7 +376,7 @@ const TerminosCondiciones = () => {
 
             {/* OCTAVA. PROHIBICIONES DE USO DEL SITIO WEB. */}
             <TituloYDescripcion title="OCTAVA. PROHIBICIONES DE USO DEL SITIO WEB.">
-              <Paragraph>
+              <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
                 El USUARIO reconoce y acepta que está estrictamente prohibido utilizar el sitio web y su contenido para
                 los siguientes fines, en adición a las restricciones establecidas en los TÉRMINOS Y CONDICIONES:
                 <ul className="list-none pl-6 xl:pl-12 my-6">
@@ -415,7 +415,7 @@ const TerminosCondiciones = () => {
                 El USUARIO comprende y acepta que, en caso de contravenir cualquiera de las prohibiciones mencionadas,
                 nos reservamos el derecho de dar por terminado su uso del servicio o de cualquier sitio web relacionado
                 sin previo aviso.
-              </Paragraph>
+              </article>
             </TituloYDescripcion>
             {/* OCTAVA. PROHIBICIONES DE USO DEL SITIO WEB. */}
 

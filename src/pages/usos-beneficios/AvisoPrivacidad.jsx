@@ -4,9 +4,7 @@ export const AvisoPrivacidad = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">19. AVISO DE PRIVACIDAD.</h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">19. AVISO DE PRIVACIDAD.</h2>
         <div className="flex flex-col gap-8 ml-6">
           <Paragraph>
             19.1. Para mayor información sobre el tratamiento de sus datos personales, el programa de “tarjeta de

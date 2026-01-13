@@ -1,5 +1,3 @@
-import { Paragraph } from 'components';
-
 const definitions = [
   {
     term: 'Cuenta',
@@ -55,7 +53,7 @@ const definitions = [
 
 export const Glosario = () => {
   return (
-    <Paragraph>
+    <article className="text-lg md:text-xl leading-relaxed text-wrap w-full text-dark dark:text-light">
       <span className="font-semibold text-secondary_dark dark:text-secondary_light">1. GLOSARIO.</span> Para efectos de
       los presentes Términos y Condiciones, los siguientes vocablos tendrán los significados aquí atribuidos, mismos que
       podrán utilizarse en singular o plural indistintamente:
@@ -69,6 +67,6 @@ export const Glosario = () => {
           ))}
         </ul>
       </div>
-    </Paragraph>
+    </article>
   );
 };

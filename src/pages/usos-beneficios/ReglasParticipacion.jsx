@@ -32,11 +32,9 @@ export const ReglasParticipacion = () => {
   return (
     <div className="mt-12">
       <ParagraphContainer>
-        <Paragraph>
-          <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
-            10. REGLAS DE PARTICIPACIÓN EN EL PROGRAMA DE LEALTAD.
-          </h2>
-        </Paragraph>
+        <h2 className="font-semibold text-secondary_dark dark:text-secondary_light">
+          10. REGLAS DE PARTICIPACIÓN EN EL PROGRAMA DE LEALTAD.
+        </h2>
         <div id="puntos-reglas-participacion" className="flex flex-col gap-8 ml-6">
           {puntosReglas.map((punto) => (
             <Paragraph key={punto.id}>{punto.texto}</Paragraph>
