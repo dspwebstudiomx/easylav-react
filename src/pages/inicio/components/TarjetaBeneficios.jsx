@@ -1,8 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { useState } from 'react';
 import imagenFrontal from 'assets/images/images/tarjetaBeneficios.jpg';
-import { CatedralMorelia as imagenTrasera } from 'assets';
 import PropTypes from 'prop-types';
+import { qrRecompensas } from 'assets';
 
 const TarjetaBeneficios = ({ showFront, isFlipping, flipDuration }) => {
   const [isLeftPressed, setIsLeftPressed] = useState(false);
@@ -162,10 +162,14 @@ const TarjetaBeneficios = ({ showFront, isFlipping, flipDuration }) => {
                 backfaceVisibility: 'hidden',
                 transform: isFlipping ? `rotateY(${showFront ? 0 : -180}deg)` : `rotateY(${showFront ? -180 : 0}deg)`,
                 zIndex: showFront ? 1 : 2,
-                background: isDark
-                  ? `#222 url(${imagenTrasera}) center/cover no-repeat`
-                  : `#ececec url(${imagenTrasera}) center/cover no-repeat`,
+                // background: isDark
+                //   ? `#222 url(${imagenTrasera}) center/cover no-repeat`
+                //   : `#ececec url(${imagenTrasera}) center/cover no-repeat`,
               }}>
+              {/* Código QR en la esquina inferior derecha */}
+              <div className="absolute inset-0">
+                <img src={qrRecompensas} alt="Código QR" className="absolute bottom-8 right-8 w-24 h-24" />
+              </div>
               {/* Sombra dinámica, brillo, reflejo, etc. */}
               <div
                 className="pointer-events-none absolute inset-0 rounded-[15px]"
@@ -198,7 +202,7 @@ const TarjetaBeneficios = ({ showFront, isFlipping, flipDuration }) => {
                 }}
               />
               <div
-                className="absolute right-0 bottom-0 w-2/3 h-1/3 pointer-events-none"
+                className="absolute right-0 bottom-0 w-full h-full pointer-events-none"
                 style={{
                   background: 'linear-gradient(-60deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.01) 100%)',
                   borderBottomRightRadius: '15px',
@@ -241,7 +245,7 @@ const TarjetaBeneficios = ({ showFront, isFlipping, flipDuration }) => {
           />
           {/* Sombra inferior derecha */}
           <div
-            className="absolute right-0 bottom-0 w-2/3 h-1/3 pointer-events-none"
+            className="absolute right-0 bottom-0 w-full h-full pointer-events-none"
             style={{
               background: 'linear-gradient(-60deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.01) 100%)',
               borderBottomRightRadius: '15px',
