@@ -160,7 +160,7 @@ const SucursalCard = ({
       id={`sucursal-${title}`}
       key={title}
       className={classNames(
-        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[270px] md:w-[275px] dark:border-4 dark:border-secondary_dark',
+        'animate__animated animate__fadeIn animate__slower bg-light text-dark flex flex-col relative mx-auto justify-center items-center overflow-hidden rounded-xl shadow-xl w-[270px] md:w-[275px] dark:border-2 dark:border-x-secondary_light',
         { 'z-10': showModal }
       )}>
       {/* Imagen */}
@@ -197,44 +197,42 @@ const SucursalCard = ({
       </BackgroundImageSection>
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center min-h-[410px]">
-        <div className="p-8 flex flex-col gap-4 items-center h-full">
+      <section className="flex flex-col gap-4 justify-between items-center w-full min-h-[310px]">
+        <div className="flex flex-col gap-4 p-8 bg-gray-300">
           <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
             {title}
           </TitleH3>
-          <div className="flex flex-col gap-4 items-start">
-            <a
-              className="flex gap-6 justify-between items-center"
-              href={gmap}
-              target="_blank"
-              alt={`Ir a Sucursal ${title} en Google Maps`}
-              rel="noopener noreferrer"
-              title={`Ir a Sucursal ${title} en Google Maps`}>
-              <div className="w-10 h-10">
-                <FaMapMarkerAlt size={20} className="text-secondary" />
-              </div>
-              <span className="text-base text-dark">{place}</span>
-            </a>
-            <div className="flex gap-2 justify-center items-center">
-              <div className="w-10 h-10">
-                <FaRegClock size={20} className="text-secondary" />
-              </div>
-              <div className="text-base text-dark flex flex-col gap-1">
-                <span>{serviceday1}</span>
-                <span>{servicehour1}</span>
-              </div>
+          <a
+            className="flex gap-6 justify-between items-start"
+            href={gmap}
+            target="_blank"
+            alt={`Ir a Sucursal ${title} en Google Maps`}
+            rel="noopener noreferrer"
+            title={`Ir a Sucursal ${title} en Google Maps`}>
+            <div className="w-10 h-10">
+              <FaMapMarkerAlt size={20} className="text-secondary" />
+            </div>
+            <span className="text-base text-dark">{place}</span>
+          </a>
+          <div className="flex gap-2 justify-center items-center">
+            <div className="w-10 h-10">
+              <FaRegClock size={20} className="text-secondary" />
+            </div>
+            <div className="text-base text-dark flex flex-col gap-1">
+              <span>{serviceday1}</span>
+              <span>{servicehour1}</span>
             </div>
           </div>
         </div>
         {/* Advertisement */}
         {advertisement && (
-          <section className="w-full -mb-[16px]">
+          <article className="w-full -mb-4 xl:mb-0">
             {Badge ? (
               <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
                 <p className="text-sm uppercase px-8">{advertisement}</p>
               </Badge>
             ) : null}
-          </section>
+          </article>
         )}
         {renderMapLinks(position, title, gmap)}
       </section>

@@ -172,6 +172,7 @@ const TarjetaBeneficios = ({ showFront, isFlipping, flipDuration }) => {
                   src={qrRecompensas}
                   alt="Código QR"
                   className="absolute bottom-8 right-8 w-16 h-16 md:w-24 md:h-24"
+                  title="codigo QR Tarjeta Beneficios"
                 />
               </div>
               {/* Sombra dinámica, brillo, reflejo, etc. */}
