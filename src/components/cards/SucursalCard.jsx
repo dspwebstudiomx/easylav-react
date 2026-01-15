@@ -197,7 +197,7 @@ const SucursalCard = ({
       </BackgroundImageSection>
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center w-full min-h-[310px]">
+      <section className="flex flex-col gap-4 justify-between items-center w-full min-h-[330px]">
         <div className="flex flex-col gap-4 p-8 bg-gray-300">
           <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
             {title}

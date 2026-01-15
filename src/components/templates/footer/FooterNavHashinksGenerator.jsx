@@ -17,7 +17,8 @@ export default function FooterNavHashLinksGenerator({ links }) {
               to={link.href}
               className="text-white flex items-center hover:text-primary"
               scroll={(el) => scrollWithOffset(el)}
-              title={`Visita ${link.name}`}>
+              title={`Visita ${link.name}`}
+              alt={link.alt}>
               <TbPoint className="text-2xl text-primary" size={20} />
               <span className="ml-2">{link.name}</span>
             </NavHashLink>

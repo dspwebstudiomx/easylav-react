@@ -4,7 +4,13 @@ import { FaBars } from 'react-icons/fa';
 import { FaXmark } from 'react-icons/fa6';
 
 const MenuButton = ({ navigationLinks, toggleNav }) => (
-  <button id="menu-button" onClick={toggleNav} className="flex w-[32px] items-center gap-8 sm:hidden" type="button">
+  <button
+    name="monstrar menú"
+    title="mostrar menu"
+    id="menu-button"
+    onClick={toggleNav}
+    className="flex w-[32px] items-center gap-8 sm:hidden"
+    type="button">
     {!navigationLinks ? (
       <FaBars size={30} className=" text-secondary" />
     ) : (

@@ -61,7 +61,7 @@ const NavLinksDesktop = () => {
             className={`hover:text-secondary_dark ${colorClass}`}
             to={navlink.href}
             scroll={scrollWithOffset}
-            title={`Ir a ${navlink.linkId}`}
+            title={`Ir a ${navlink.name}`}
             alt={navlink.alt}
             onClick={navlink.name === 'Inicio' ? scrollToTop : () => setActiveSection(navlink.linkId)}>
             {navlink.name}
@@ -74,7 +74,7 @@ const NavLinksDesktop = () => {
             key={navlink.id}
             id={`navlink-${navlink.name}`}
             to={navlink.href}
-            title={`Ir a ${navlink.linkId}`}
+            title={`Ir a ${navlink.name}`}
             alt={navlink.alt}
             onClick={() => {
               setActiveSection('');

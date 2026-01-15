@@ -42,7 +42,11 @@ const Button = ({
       break;
     case 'secondary':
       variantStyles =
-        'bg-secondary text-light hover:bg-secondary_dark  dark:bg-primary_dark dark:hover:bg-primary border-2 border-secondary_light dark:border-primary_light hover:border-secondary_dark dark:hover:border-primary ';
+        'bg-secondary text-light hover:bg-secondary_dark  dark:bg-secondary_light dark:hover:bg-primary border-2 border-secondary_light dark:border-primary_light hover:border-secondary_dark dark:hover:border-primary ';
+      break;
+    case 'secondary_light':
+      variantStyles =
+        'bg-secondary_light text-light hover:bg-secondary_dark  dark:bg-primary_dark dark:hover:bg-primary border-2 border-secondary_light dark:border-primary_light hover:border-secondary_dark dark:hover:border-primary ';
       break;
     case 'warning':
       variantStyles = 'bg-red text-light hover:bg-warning_dark dark:bg-warning_dark dark:hover:bg-warning_light';
@@ -55,6 +59,7 @@ const Button = ({
   return href ? (
     <HashLink to={href} scroll={(el) => scrollWithOffset(el)}>
       <button
+        title={name}
         name={name}
         onClick={typeof onClick === 'function' ? onClick : undefined}
         type={type}
@@ -66,6 +71,7 @@ const Button = ({
     </HashLink>
   ) : (
     <button
+      title={name}
       name={name}
       onClick={typeof onClick === 'function' ? onClick : undefined}
       type={type}
