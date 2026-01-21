@@ -33,8 +33,8 @@ const ProgramasDeLealtad = () => {
   return (
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
-        <TwoColumnsContainer gridOrder="grid-col-reverse">
-          <div>
+        <TwoColumnsContainer gridOrder="flex-col-reverse lg:flex-row">
+          <div className="mt-20 lg:mt-0">
             <TarjetaBeneficios
               handleFlip={handleFlip}
               showFront={showFront}
@@ -62,7 +62,7 @@ const ProgramasDeLealtad = () => {
                   ¡Tu lealtad tiene recompensas! <br />
                 </span>
                 <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
-                  ¡Todos tus cosumos generan recompensas! <br />
+                  ¡Todos tus consumos generan recompensas! <br />
                 </span>
                 <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
                   ¡Entre mas consumas mas ahorras! <br />
