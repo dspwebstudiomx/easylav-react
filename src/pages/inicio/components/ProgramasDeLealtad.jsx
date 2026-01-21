@@ -4,7 +4,6 @@ import {
   // Button,
   ButtonContainer,
   Container,
-  Paragraph,
   ParagraphContainer,
   Section,
   TwoColumnsContainer,
@@ -57,16 +56,25 @@ const ProgramasDeLealtad = () => {
 
           <ParagraphContainer>
             {/* Descripción corta */}
-            <Paragraph className="md:text-xl flex flex-col gap-8 items-start justify-start">
-              <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-5xl font-bold block">
-                ¡Tu lealtad tiene recompensas!
-              </span>
-              <span className="text-xl md:text-2xl lg:text-3xl">
+            <div className="md:text-xl flex flex-col gap-8 items-start justify-start">
+              <div className="flex flex-col gap-4">
+                <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
+                  ¡Tu lealtad tiene recompensas! <br />
+                </span>
+                <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
+                  ¡Todos tus cosumos generan recompensas! <br />
+                </span>
+                <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
+                  ¡Entre mas consumas mas ahorras! <br />
+                </span>
+              </div>
+              <span className="text-xl md:text-2xl lg:text-2xl">
                 <strong className="dark:text-secondary_light">EASYLAV® </strong>
                 recompensa tu lealtad y te regala tu “Tarjeta de Recompensas” para premiar tu preferencia y consumos con
                 puntos y beneficios especialmente para ti, Solo usa tu tarjeta física.
               </span>
-            </Paragraph>
+              <span className="md:mr-6">* Aplican restricciones</span>
+            </div>
 
             {/* Preguntas Programa de Lealtad */}
             <ul className="w-full grid gap-8 mt-12">
