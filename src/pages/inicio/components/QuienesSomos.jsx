@@ -11,44 +11,33 @@ import {
   TwoColumnsContainer,
 } from 'components';
 import PropTypes from 'prop-types';
-// import { VistaLavanderiaDesdeEntrada_2_640 as image } from 'assets';
-import {
-  FaRegListAlt,
-  FaSoap,
-  FaHandshake,
-  FaBalanceScale,
-  FaShieldAlt,
-  FaCouch,
-  FaUserCheck,
-  FaHandsHelping,
-} from 'react-icons/fa';
-// import { FaCheck } from 'react-icons/fa6';
+import { FaBalanceScale } from 'react-icons/fa';
+import { VscWorkspaceTrusted, VscShield } from 'react-icons/vsc';
+import { IoIosList } from 'react-icons/io';
 import { useEffect } from 'react';
+import { PiCouch } from 'react-icons/pi';
+import { FiUserCheck } from 'react-icons/fi';
+import { LuHeartHandshake } from 'react-icons/lu';
+import { BsBucket } from 'react-icons/bs';
 
 // Biblioteca de datos
 const valores = [
-  { id: 1, icon: <FaRegListAlt size={36} className="text-secondary" />, title: 'Orden', alt: 'Orden' },
-  { id: 2, icon: <FaSoap size={36} className="text-secondary" />, title: 'Limpieza', alt: 'Limpieza' },
-  { id: 3, icon: <FaHandshake size={36} className="text-secondary" />, title: 'Confianza', alt: 'Confianza' },
-  { id: 4, icon: <FaBalanceScale size={36} className="text-secondary" />, title: 'Honestidad', alt: 'Honestidad' },
-  { id: 5, icon: <FaShieldAlt size={36} className="text-secondary" />, title: 'Seguridad', alt: 'Seguridad' },
-  { id: 6, icon: <FaCouch size={36} className="text-secondary" />, title: 'Comodidad', alt: 'Comodidad' },
-  { id: 7, icon: <FaUserCheck size={36} className="text-secondary" />, title: 'Honradez', alt: 'Honradez' },
+  { id: 1, icon: <IoIosList size={36} className="text-primary" />, title: 'Orden', alt: 'Orden' },
+  { id: 2, icon: <BsBucket size={36} className="text-primary" />, title: 'Limpieza', alt: 'Limpieza' },
+  { id: 3, icon: <VscWorkspaceTrusted size={36} className="text-primary" />, title: 'Confianza', alt: 'Confianza' },
+  { id: 4, icon: <FaBalanceScale size={36} className="text-primary" />, title: 'Honestidad', alt: 'Honestidad' },
+  { id: 5, icon: <VscShield size={42} className="text-primary" />, title: 'Seguridad', alt: 'Seguridad' },
+  { id: 6, icon: <PiCouch size={48} className="text-primary" />, title: 'Comodidad', alt: 'Comodidad' },
+  { id: 7, icon: <FiUserCheck size={36} className="text-primary" />, title: 'Honradez', alt: 'Honradez' },
   {
     id: 8,
-    icon: <FaHandsHelping size={36} className="text-secondary" />,
+    icon: <LuHeartHandshake size={36} className="text-primary" />,
     title: 'Gratitud y Servicio',
     alt: 'Gratitud y Servicio ',
   },
 ];
-// const serviciosOfrecidos = [
-//   { id: 1, title: 'Autoservicio de lavado y secado.', href: '/#autoservicio' },
-//   { id: 2, title: 'Servicio de lavado y secado por encargo.', href: '/#encargo' },
-//   { id: 3, title: 'Tintorería.', href: '/#tintoreria' },
-// ];
 
 // Componentes Internos
-
 const Card = ({ children }) => {
   return (
     <div className="flex flex-col justify-start p-8 py-12 sm:p-12 shadow-2xl rounded-2xl bg-light text-dark dark:text-light gap-8 w-full h-full text-balance">
@@ -188,7 +177,7 @@ const QuienesSomos = () => {
           {/* Misión & Visión */}
 
           {/* Nuestros Valores */}
-          <div className="w-full mt-32">
+          <div className="w-full mt-32 flex flex-col items-center justify-center gap-12">
             <BorderLeft>
               <TitleH2 className="text-2xl font-semibold uppercase text-dark">Nuestros Valores</TitleH2>
             </BorderLeft>

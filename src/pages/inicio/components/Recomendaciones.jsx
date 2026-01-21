@@ -1,6 +1,9 @@
 // Importaciones
 import { Container, Paragraph, ParagraphContainer, Section, TitleContainer, TwoColumnsContainer } from 'components';
-import { FaLayerGroup, FaClock, FaTshirt } from 'react-icons/fa';
+// import { FaRegClock } from 'react-icons/fa';
+import { IoShirtOutline } from 'react-icons/io5';
+import { IoWarningOutline } from 'react-icons/io5';
+import { HiOutlineClock } from 'react-icons/hi2';
 import PropTypes from 'prop-types';
 
 // Constantes Internas
@@ -10,21 +13,21 @@ const recomendaciones = [
     title: 'Separar las prendas',
     description:
       'Por color, tamaño, tipo de tejido y nivel de suciedad. Esto evita decoloraciones y protege las telas más delicadas.',
-    icon: FaLayerGroup,
+    icon: IoWarningOutline,
   },
   {
     id: 2,
     title: 'Considerar el tiempo de secado ',
     description:
       'Para ciertas prendas. Las toallas y los pantalones de mezclilla absorben mucha agua, por lo que en algunos casos podría ser necesario un tiempo extra de secado.',
-    icon: FaClock,
+    icon: HiOutlineClock,
   },
   {
     id: 3,
     title: 'Secado adecuado para prendas especiales. ',
     description:
       'Algunas telas no quedan completamente secas con el ciclo regular. En estos casos, es mejor dejarlas secar al aire libre para evitar daños al exponerlas a un nuevo ciclo de calor.',
-    icon: FaTshirt,
+    icon: IoShirtOutline,
   },
 ];
 
@@ -33,7 +36,7 @@ const Recomendacion = ({ title, description, icon: Icon }) => {
     <li className="p-12 border-1 shadow-xl rounded-2xl min-h-[460px]">
       <TwoColumnsContainer gridOrder="flex-col">
         <div className="flex flex-col gap-6 text-dark dark:text-light w-full items-center">
-          <Icon className="text-secondary_dark dark:text-primary w-12 h-12" />
+          <Icon className="text-primary w-12 h-12" />
           <span className="font-semibold block text-base md:text-xl uppercase">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
