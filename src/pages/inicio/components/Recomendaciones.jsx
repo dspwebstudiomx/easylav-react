@@ -30,11 +30,11 @@ const recomendaciones = [
 
 const Recomendacion = ({ title, description, icon: Icon }) => {
   return (
-    <li className="p-12 border-1 shadow-xl rounded-2xl min-h-[420px]">
+    <li className="p-12 border-1 shadow-xl rounded-2xl min-h-[460px]">
       <TwoColumnsContainer gridOrder="flex-col">
         <div className="flex flex-col gap-6 text-dark dark:text-light w-full items-center">
           <Icon className="text-secondary_dark dark:text-primary w-12 h-12" />
-          <span className="font-semibold block text-base md:text-2xl uppercase">{title}</span>
+          <span className="font-semibold block text-base md:text-xl uppercase">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
       </TwoColumnsContainer>
