@@ -30,9 +30,9 @@ const recomendaciones = [
 
 const Recomendacion = ({ title, description, icon: Icon }) => {
   return (
-    <li className="py-4">
-      <TwoColumnsContainer>
-        <div className="flex gap-6 text-dark dark:text-light w-full items-center">
+    <li className="p-12 border-1 shadow-xl rounded-2xl min-h-[420px]">
+      <TwoColumnsContainer gridOrder="flex-col">
+        <div className="flex flex-col gap-6 text-dark dark:text-light w-full items-center">
           <Icon className="text-secondary_dark dark:text-primary w-12 h-12" />
           <span className="font-semibold block text-base md:text-2xl uppercase">{title}</span>
         </div>
@@ -53,7 +53,9 @@ const Recomendaciones = () => {
             <Paragraph>Para cuidar mejor tu ropa y garantizar los mejores resultados, te recomendamos:</Paragraph>
           </ParagraphContainer>
         </div>
-        <ul id="listado-de-recomendaciones" className="flex flex-col gap-14 items-start justify-start w-full my-16">
+        <ul
+          id="listado-de-recomendaciones"
+          className="grid lg:grid-cols-3 gap-14 items-start justify-start w-full my-16">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion
               key={recomendacion.id}
@@ -72,7 +74,7 @@ const Recomendaciones = () => {
             adecuado para que tu ropa quede tal como la necesitas.
           </Paragraph>
           <Paragraph className="text-center mt-12">
-            <span className="text-secondary_dark dark:text-secondary_light text-3xl font-semibold">
+            <span className="text-secondary_dark dark:text-secondary_light text-xl md:text-3xl font-semibold">
               ¡Estamos aquí para ayudarte a cuidar tu ropa y facilitar tu día!
             </span>
           </Paragraph>

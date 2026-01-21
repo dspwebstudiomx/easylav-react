@@ -35,12 +35,14 @@ const ProgramasDeLealtad = () => {
       <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
         <TwoColumnsContainer gridOrder="flex-col-reverse lg:flex-row">
           <div className="mt-20 lg:mt-0">
-            <TarjetaBeneficios
-              handleFlip={handleFlip}
-              showFront={showFront}
-              isFlipping={isFlipping}
-              flipDuration={flipDuration}
-            />
+            <article className="ml-3">
+              <TarjetaBeneficios
+                handleFlip={handleFlip}
+                showFront={showFront}
+                isFlipping={isFlipping}
+                flipDuration={flipDuration}
+              />
+            </article>
 
             <ButtonContainer position="justify-center items-center md:items-start w-full" distance="my-12">
               <Button
