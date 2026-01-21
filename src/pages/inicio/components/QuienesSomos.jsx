@@ -125,7 +125,7 @@ const QuienesSomos = () => {
 
   return (
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
-      <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
+      <Container className="mx-auto flex-col gap-8" id="quienes-somos-contenedor">
         <TitleContainer id="quienes-somos-titulo" title="Quienes somos" />
 
         <div className="flex flex-col gap-20 items-center justify-center mx-auto w-full h-full">
@@ -152,7 +152,7 @@ const QuienesSomos = () => {
           {/* Párrafos */}
 
           {/* Misión & Visión */}
-          <TwoColumnsContainer>
+          <TwoColumnsContainer gridOrder="flex-col lg:flex-row">
             {/* Misión */}
             <Card>
               <BorderLeft>
