@@ -197,52 +197,53 @@ const SucursalCard = ({
       </BackgroundImageSection>
 
       {/* Descripción */}
-      <section className="flex flex-col gap-4 justify-between items-center w-full min-h-[330px]">
-        <div className="flex flex-col gap-4 p-8 bg-gray-300">
-          <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
-            {title}
-          </TitleH3>
-          <a
-            className="flex gap-6 justify-between items-start"
-            href={gmap}
-            target="_blank"
-            alt={`Ir a Sucursal ${title} en Google Maps`}
-            rel="noopener noreferrer"
-            title={`Ir a Sucursal ${title} en Google Maps`}>
-            <div className="w-10 h-10">
-              <FaMapMarkerAlt size={20} className="text-secondary" />
-            </div>
-            <span className="text-base text-dark">{place}</span>
-          </a>
-          <div className="flex gap-2 justify-center items-center">
-            <div className="w-10 h-10">
-              <FaRegClock size={20} className="text-secondary" />
-            </div>
-            <div className="text-base text-dark flex flex-col gap-1">
-              <span>{serviceday1}</span>
-              <span>{servicehour1}</span>
+      <section className="flex flex-col gap-4 justify-start items-center w-full min-h-[300px]">
+        <div className="relative w-full">
+          <div className={'flex flex-col gap-4 p-8 w-full'}>
+            <TitleH3 justify="justify-center" color="text-dark" fontSize="text-lg" textTransform="uppercase">
+              {title}
+            </TitleH3>
+            <a
+              className="flex gap-6 justify-start items-start"
+              href={gmap}
+              target="_blank"
+              alt={`Ir a Sucursal ${title} en Google Maps`}
+              rel="noopener noreferrer"
+              title={`Ir a Sucursal ${title} en Google Maps`}>
+              <div className="w-10 h-10">
+                <FaMapMarkerAlt size={20} className="text-secondary" />
+              </div>
+              <span className="text-base text-dark">{place}</span>
+            </a>
+            <div className="flex gap-2 justify-start items-start">
+              <div className="w-10 h-10">
+                <FaRegClock size={20} className="text-secondary" />
+              </div>
+              <div className="text-base text-dark flex flex-col gap-1">
+                <span>{serviceday1}</span>
+                <span>{servicehour1}</span>
+              </div>
             </div>
           </div>
+          {advertisement && (
+            <article className="w-full mb-0">
+              {Badge ? (
+                <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
+                  <p className="text-sm uppercase px-8">{advertisement}</p>
+                </Badge>
+              ) : null}
+            </article>
+          )}
+          {renderMapLinks(position, title, gmap)}
+          {/* Badge */}
+          {badge && (
+            <article className="absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 text-light flex items-center text-sm">
+              <p className="ml-8">{badge}</p>
+            </article>
+          )}
+          {/* Advertisement */}
         </div>
-        {/* Advertisement */}
-        {advertisement && (
-          <article className="w-full -mb-4 xl:mb-0">
-            {Badge ? (
-              <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
-                <p className="text-sm uppercase px-8">{advertisement}</p>
-              </Badge>
-            ) : null}
-          </article>
-        )}
-        {renderMapLinks(position, title, gmap)}
       </section>
-
-      {/* Badge */}
-      {badge && (
-        <section className="absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 py-1 text-light flex items-center text-sm">
-          <p className="ml-8">{badge}</p>
-        </section>
-      )}
 
       {/* Modal */}
       {showModal && (

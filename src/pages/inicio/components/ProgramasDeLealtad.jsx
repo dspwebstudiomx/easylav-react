@@ -32,7 +32,7 @@ const ProgramasDeLealtad = () => {
 
   return (
     <Section id="quienes-somos" className="bg-light dark:bg-dark h-auto">
-      <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor">
+      <Container className="mx-auto flex-col gap-20" id="quienes-somos-contenedor ">
         <TwoColumnsContainer gridOrder="flex-col-reverse lg:flex-row">
           <div className="mt-20 lg:mt-0">
             <article className="ml-3">
@@ -59,11 +59,11 @@ const ProgramasDeLealtad = () => {
           <ParagraphContainer>
             {/* Descripción corta */}
             <div className="md:text-xl flex flex-col gap-8 items-start justify-start">
-              <div className="flex flex-col gap-4">
-                <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
+              <div className="flex flex-col gap-8 mb-8">
+                <span className=" text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
                   ¡Tu lealtad tiene recompensas! <br />
                 </span>
-                <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
+                <span className="ml-7 text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
                   ¡Todos tus consumos generan recompensas! <br />
                 </span>
                 <span className="text-secondary_dark dark:text-secondary_light text-3xl md:text-4xl font-bold block">
