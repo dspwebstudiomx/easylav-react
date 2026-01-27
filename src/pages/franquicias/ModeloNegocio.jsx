@@ -21,7 +21,13 @@ import {
   TwoColumnsContainer,
 } from 'components';
 import { memo } from 'react';
-import { FaCheck, FaKey, FaLock, FaCloud, FaMapMarkerAlt, FaUserGraduate, FaCogs } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
+import { LuKeyRound } from 'react-icons/lu';
+import { MdOutlineLock } from 'react-icons/md';
+import { IoCloudUploadOutline } from 'react-icons/io5';
+import { GrMap } from 'react-icons/gr';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { LiaCogSolid } from 'react-icons/lia';
 import PropTypes from 'prop-types';
 
 const recomendaciones = [
@@ -68,12 +74,12 @@ const factores_clave = [
 
 // Componente para cada recomendación
 const getIconByTitle = (title) => {
-  if (title.includes('llave en mano')) return FaKey;
-  if (title.includes('automatizado')) return FaLock;
-  if (title.includes('nube')) return FaCloud;
-  if (title.includes('Ubicación')) return FaMapMarkerAlt;
-  if (title.includes('Capacitación')) return FaUserGraduate;
-  if (title.includes('Control eficiente')) return FaCogs;
+  if (title.includes('llave en mano')) return LuKeyRound;
+  if (title.includes('automatizado')) return MdOutlineLock;
+  if (title.includes('nube')) return IoCloudUploadOutline;
+  if (title.includes('Ubicación')) return GrMap;
+  if (title.includes('Capacitación')) return BsPersonWorkspace;
+  if (title.includes('Control eficiente')) return LiaCogSolid;
   return FaCheck;
 };
 
@@ -82,9 +88,9 @@ const Recomendacion = ({ title, description }) => {
   return (
     <li className="">
       <TwoColumnsContainer>
-        <div className="flex gap-6 w-full text-dark dark:text-light">
-          <Icon size={42} className="text-secondary_dark dark:text-primary" />
-          <span className="font-semibold block text-2xl">{title}</span>
+        <div className="flex flex-col md:flex-row gap-6 w-full items-center justify-center text-dark dark:text-light">
+          <Icon size={48} className="text-primary" />
+          <span className="font-semibold block text-xl md:text-2xl">{title}</span>
         </div>
         <Paragraph>{description}</Paragraph>
       </TwoColumnsContainer>
