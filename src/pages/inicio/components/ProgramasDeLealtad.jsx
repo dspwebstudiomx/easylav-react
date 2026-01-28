@@ -71,12 +71,12 @@ const ProgramasDeLealtad = () => {
                     ¡Entre mas consumas mas ahorras! <br />
                   </span>
                 </div>
-                <span className="text-xl md:text-2xl lg:text-2xl">
+                <span className="text-xl md:text-2xl lg:text-2xl dark:text-light">
                   <strong className="dark:text-secondary_light">EASYLAV® </strong>
                   recompensa tu lealtad y te regala tu “Tarjeta de Recompensas” para premiar tu preferencia y consumos
                   con puntos y beneficios especialmente para ti, Solo usa tu tarjeta física.
                 </span>
-                <span className="md:mr-6">* Aplican restricciones</span>
+                <span className="md:mr-6 dark:text-light">* Aplican restricciones</span>
               </div>
             </ParagraphContainer>
           </div>

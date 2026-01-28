@@ -141,7 +141,7 @@ const QuienesSomos = () => {
           {/* Párrafos */}
 
           {/* Misión & Visión */}
-          <TwoColumnsContainer gridOrder="flex-col lg:flex-row">
+          <TwoColumnsContainer gridOrder="grid-cols-1 md:grid-cols-2">
             {/* Misión */}
             <Card>
               <BorderLeft>
