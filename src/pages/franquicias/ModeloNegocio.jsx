@@ -86,9 +86,9 @@ const getIconByTitle = (title) => {
 const Recomendacion = ({ title, description }) => {
   const Icon = getIconByTitle(title);
   return (
-    <li className="">
-      <TwoColumnsContainer>
-        <div className="flex flex-col md:flex-row gap-6 w-full items-center justify-center text-dark dark:text-light">
+    <li>
+      <TwoColumnsContainer gridOrder="md:grid-cols-2 items-start justify-start gap-6">
+        <div className="flex flex-col md:flex-row gap-6 w-full items-center justify-start text-dark dark:text-light">
           <Icon size={48} className="text-primary" />
           <span className="font-semibold block text-xl md:text-2xl">{title}</span>
         </div>

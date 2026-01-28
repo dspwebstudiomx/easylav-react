@@ -33,13 +33,13 @@ const recomendaciones = [
 
 const Recomendacion = ({ title, description, icon: Icon }) => {
   return (
-    <li className="p-12 border-1 shadow-xl rounded-2xl min-h-[460px]">
-      <TwoColumnsContainer gridOrder="flex-col">
-        <div className="flex flex-col gap-6 text-dark dark:text-light w-full items-center">
+    <li className="p-12 border-1 shadow-xl rounded-2xl md:min-h-[460px] dark:bg-light">
+      <TwoColumnsContainer gridOrder="gap-6 justify-start items-start">
+        <div className="flex flex-col gap-6 text-dark w-full items-center">
           <Icon className="text-primary w-12 h-12" />
-          <span className="font-semibold block text-base md:text-xl uppercase">{title}</span>
+          <span className="font-semibold block text-center md:text-left text-base md:text-xl uppercase">{title}</span>
         </div>
-        <Paragraph>{description}</Paragraph>
+        <p className="text-base md:text-lg leading-relaxed text-wrap w-full text-dark">{description}</p>
       </TwoColumnsContainer>
     </li>
   );
@@ -58,7 +58,7 @@ const Recomendaciones = () => {
         </div>
         <ul
           id="listado-de-recomendaciones"
-          className="grid lg:grid-cols-3 gap-14 items-start justify-start w-full my-16">
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 items-start justify-start w-full my-16">
           {recomendaciones.map((recomendacion) => (
             <Recomendacion
               key={recomendacion.id}
