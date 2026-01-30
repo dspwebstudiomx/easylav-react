@@ -20,7 +20,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
             <li
               id={`navlink-${navlink.linkId}`}
               key={navlink.id}
-              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-2xl">
+              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 shadow-2xl">
               <NavHashLink
                 id={`link-${navlink.linkId}`}
                 to={navlink.href}
@@ -40,7 +40,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                     <navlink.icon size={32} className={isActive ? 'text-primary_dark' : 'text-secondary_dark'} />
                   )}
                 </div>
-                <span className="text-base uppercase tracking-wide text-center">{navlink.name}</span>
+                <span className="text-sm uppercase tracking-wide text-center">{navlink.name}</span>
               </NavHashLink>
             </li>
           );
@@ -50,7 +50,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
             <li
               id={`navlink-${navlink.linkId}`}
               key={navlink.id}
-              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 text-base shadow-xl">
+              className="flex h-[140px] items-center justify-center rounded-2xl border-4 border-primary_dark bg-light p-4 shadow-xl">
               <NavLink
                 id={`link-${navlink.linkId}`}
                 to={navlink.href}
@@ -68,10 +68,7 @@ const NavLinksMobile = ({ onLinkClick }) => {
                   <>
                     <div className="flex items-center justify-center">
                       {navlink.icon && (
-                        <navlink.icon
-                          size={32}
-                          className={isActive ? 'text-primary_dark' : 'text-secondary_dark'}
-                        />
+                        <navlink.icon size={32} className={isActive ? 'text-primary_dark' : 'text-secondary_dark'} />
                       )}
                     </div>
                     <span className="text-base uppercase tracking-wide text-center">{navlink.name}</span>
