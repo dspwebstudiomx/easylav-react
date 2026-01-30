@@ -65,7 +65,7 @@ const HeroInicioVideo = ({ height }) => {
 
       {/* Contenido */}
       <Container className="relative z-20 flex flex-col justify-center items-center w-full h-full text-center sm:p-12 md:px-0">
-        <h1 className="text-2xl md:text-3xl xl:text-4xl w-full lg:w-2/3 font-semibold tracking-wider text-light text-left">
+        <h1 className="text-xl md:text-2xl xl:text-3xl w-full lg:w-2/3 font-semibold tracking-wider text-light text-left">
           En <span className="mx-2 text-primary font-semibold">LAVANDERÍAS EASYLAV</span> no solo te brindamos
           soluciones para el lavado, secado y doblado de tu ropa, también tenemos servicio de tintorería para que tus
           prendas luzcan siempre de la mejor manera.
