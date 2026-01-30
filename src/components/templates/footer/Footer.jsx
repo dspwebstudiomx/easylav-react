@@ -63,9 +63,28 @@ export default function Footer() {
         </div>
         <div className="bg-primary text-light px-12 lg:px-0">
           <Container className="bg-primary text-primary_darkcontrast h-16 w-full">
-            <div className="flex items-center justify-center sm:justify-start h-full">
-              <span className="text-2xl font-semibold">®</span>
-              <h3>Derechos Reservados 2024</h3>
+            <div className="flex flex-col md:flex-row items-center justify-between h-full">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-semibold">®</span>
+                <h3>Derechos Reservados 2024</h3>
+              </div>
+              <div className="flex items-center gap-2 md:ml-4 lg:ml-0">
+                <h3>Diseñado y Desarrollado por:</h3>
+                <span className="text-2xl font-semibold">
+                  <a
+                    href="https://dspwebstudio.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80">
+                    <img
+                      src="/src/assets/images/logos/dsp-mixed.png"
+                      alt="dspwebstudio logo"
+                      width={32}
+                      title="dspwebstudio"
+                    />
+                  </a>
+                </span>
+              </div>
             </div>
           </Container>
         </div>
