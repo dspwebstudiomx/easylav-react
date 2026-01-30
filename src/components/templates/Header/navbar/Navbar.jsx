@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="nav" className={`fixed sm:relative xl:fixed top-0 left-0 w-full bg-light shadow-md`}>
+      <nav id="nav" className={`w-full bg-light shadow-md z-40`}>
         <div
           className={`flex flex-row items-center justify-between w-full gap-6  h-[100px] px-8 sm:px-12 xl:px-0 xl:max-w-screen-lg 2xl:max-w-screen-xl mx-auto`}>
           <Logo />
@@ -54,8 +54,8 @@ const Navbar = () => {
           </div>
         </div>
         <NavLinksTablet />
+        <ThemeLine className="" />
       </nav>
-      <ThemeLine className="fixed sm:relative top-[100px] sm:top-[0px] xl:top-[100px] xl:fixed" />
     </>
   );
 };
