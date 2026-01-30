@@ -55,38 +55,42 @@ const NavLinksDesktop = () => {
         const colorClass =
           isactive && scrolled ? 'text-primary font-bold' : isactive ? 'text-secondary font-bold' : 'text-dark';
         return (
-          <NavHashLink
-            key={navlink.id}
-            id={`navlink-${navlink.name}`}
-            className={`hover:text-secondary_dark ${colorClass}`}
-            to={navlink.href}
-            scroll={scrollWithOffset}
-            title={`Ir a ${navlink.name}`}
-            alt={navlink.alt}
-            onClick={navlink.name === 'Inicio' ? scrollToTop : () => setActiveSection(navlink.linkId)}>
-            {navlink.name}
-          </NavHashLink>
+          <li key={navlink.id}>
+            <NavHashLink
+              key={navlink.id}
+              id={`navlink-${navlink.name}`}
+              className={`hover:text-secondary_dark ${colorClass}`}
+              to={navlink.href}
+              scroll={scrollWithOffset}
+              title={`Ir a ${navlink.name}`}
+              alt={navlink.alt}
+              onClick={navlink.name === 'Inicio' ? scrollToTop : () => setActiveSection(navlink.linkId)}>
+              {navlink.name}
+            </NavHashLink>
+          </li>
         );
       })}
       {navLinksPages.map((navlink) => {
         return (
-          <NavLink
-            key={navlink.id}
-            id={`navlink-${navlink.name}`}
-            to={navlink.href}
-            title={`Ir a ${navlink.name}`}
-            alt={navlink.alt}
-            onClick={() => {
-              setActiveSection('');
-              scrollToTop(); // Solo desactiva temporalmente, el observer lo volverá a activar si corresponde
-              if (navlink.name === 'Inicio') scrollToTop();
-            }}>
-            {({ isactive }) => {
-              const colorClass =
-                isactive && scrolled ? 'text-primary font-bold' : isactive ? 'text-secondary font-bold' : 'text-dark';
-              return <span className={`hover:text-secondary_dark ${colorClass}`}>{navlink.name}</span>;
-            }}
-          </NavLink>
+          <li key={navlink.id}>
+            <NavLink
+              key={navlink.id}
+              id={`navlink-${navlink.name}`}
+              to={navlink.href}
+              title={`Ir a ${navlink.name}`}
+              alt={navlink.alt}
+              onClick={() => {
+                setActiveSection('');
+                scrollToTop(); // Solo desactiva temporalmente, el observer lo volverá a activar si corresponde
+                if (navlink.name === 'Inicio') scrollToTop();
+              }}>
+              {({ isactive }) => {
+                const colorClass =
+                  isactive && scrolled ? 'text-primary font-bold' : isactive ? 'text-secondary font-bold' : 'text-dark';
+                return <span className={`hover:text-secondary_dark ${colorClass}`}>{navlink.name}</span>;
+              }}
+            </NavLink>
+          </li>
         );
       })}
     </ul>
