@@ -2,6 +2,7 @@ import { Container, FooterLinksGenerator, FooterNavHashLinksGenerator, ThemeLine
 import { linksPoliticas, linksServicios, linksTerminos, navLinksPages, navLinksSections } from 'data';
 import FooterLogoWithSocial from './FooterLogoWithSocial';
 import FooterHolidays from './FooterHolidays';
+import dspwebstudioLogo from 'assets/images/logos/dsp-mixed.png';
 
 export default function Footer() {
   const classes = {
@@ -76,12 +77,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-80">
-                  <img
-                    src="/src/assets/images/logos/dsp-mixed.png"
-                    alt="dspwebstudio logo"
-                    width={32}
-                    title="dspwebstudio"
-                  />
+                  <img src={dspwebstudioLogo} alt="dspwebstudio logo" width={32} title="dspwebstudio" />
                 </a>
               </div>
             </div>

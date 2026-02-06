@@ -158,7 +158,7 @@ const NuestrasSucursales = () => {
           {sortedLocalServices.map((_, idx) => (
             <button
               key={idx}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark scale-90' : 'bg-primary_light border border-primary_dark dark:bg-secondary_light'}`}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary dark:bg-secondary_dark scale-90' : 'bg-primary_light border border-primary_dark dark:bg-secondary_light'}`}
               onClick={() => setCurrent(idx)}
               aria-label={`Ir a la sucursal ${idx + 1}`}
             />
