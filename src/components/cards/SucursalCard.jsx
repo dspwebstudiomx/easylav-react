@@ -225,24 +225,24 @@ const SucursalCard = ({
               </div>
             </div>
           </div>
-          {advertisement && (
-            <article className="w-full mb-0">
-              {Badge ? (
-                <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
-                  <p className="text-sm uppercase px-8">{advertisement}</p>
-                </Badge>
-              ) : null}
-            </article>
-          )}
-          {renderMapLinks(position, title, gmap)}
-          {/* Badge */}
-          {badge && (
-            <article className="absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 text-light flex items-center text-sm">
-              <p className="ml-8">{badge}</p>
-            </article>
-          )}
-          {/* Advertisement */}
         </div>
+        {advertisement && (
+          <article className="w-full mb-0">
+            {Badge ? (
+              <Badge backgroundColor="bg-gradient-to-r from-secondary_dark to-secondary_light md:bg-secondary">
+                <p className="text-sm uppercase px-8">{advertisement}</p>
+              </Badge>
+            ) : null}
+          </article>
+        )}
+        {renderMapLinks(position, title, gmap)}
+        {/* Badge */}
+        {badge && (
+          <article className="absolute -left-14 top-0 w-[280px] rotate-[320deg] rounded-lg border-2 border-secondary bg-secondary_light px-4 text-light flex items-center text-sm">
+            <p className="ml-8">{badge}</p>
+          </article>
+        )}
+        {/* Advertisement */}
       </section>
 
       {/* Modal */}

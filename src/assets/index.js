@@ -54,5 +54,5 @@ export { default as bonanza } from '../assets/images/sucursales/bonanza.webp';
 export { default as venturapuente } from '../assets/images/sucursales/venturapuente.webp';
 export { default as HeroVideoLavadoras } from '../assets/video/herovideo_lavadoras.mp4';
 export { default as haciendaLosOtates } from '../assets/images/sucursales/haciendalosotates.webp';
-export { default as margarita } from '../assets/images/sucursales/margarita.webp';
+export { default as ilustresNovohispanos } from '../assets/images/sucursales/margarita.webp';
 export { default as qrRecompensas } from '../assets/images/QR/qr-recompensas.png';
